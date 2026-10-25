@@ -22,7 +22,7 @@
 - Activities link out to Google Maps instead of booking for the user: no revenue and no availability check, but no accounts, payments or legal risk.
 
 **security check:**
-- No API keys or secrets in the repo; the Claude key lives only in the user's terminal. Two keys that were accidentally pasted in a chat were revoked.
+- No API keys or secrets in the repo; the Claude key lives only in the user's terminal.
 - Leaflet is loaded from a CDN with integrity (SRI) hashes, so a modified file would be blocked.
 - The page only shows our own data (no user input is stored or displayed), no cookies, no tracking, no personal data collected.
 - External links open with `rel="noopener"`.
