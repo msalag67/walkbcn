@@ -1,0 +1,7 @@
+**name:** WalkBCN. It is a travel agent that can guide you around the city with tips and recommendations adapted to your interests  
+**architectural principles:** Try to always respect citizens, try to make the best possible experience for the tourist, try to improve quality of tourism   
+**stack and why:** AI website developer, data base tools (like supabase), flutterflow, ai, maps… etc  
+**dependencies to avoid:** depending too much on just one tool or API, or on data we can not control  
+**tradeoffs consciously accepted:** maybe some local people prefer to concentrate tourism in a specific area rather than diversified around the city and we may face some complains, speed over technical perfection, and free/low-cost MVP over monetisation, initially, we focus on validating the problem before investing in complex payment features.  
+**open assumptions:** we assume that it will benefit the city for both sides, locals and tourists  
+**Session log:** Defined the venture as a personalised virtual travel guide for Barcelona to improve both citizens’ and tourists experience. selected name. Decided to build a mobile-friendly web MVP rather than a native app. Defined the initial product around personalised routes, an interactive map, GPS-based audio stories and an AI chatbot. Chose a low-cost technology stack. Agreed to prioritise testing the core value proposition before adding payments or complex features. Identified the main assumptions that need to be validated with potential users.  

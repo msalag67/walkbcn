@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WalkBCN</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%23c4502b%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2216%22 font-family=%22Georgia%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22%3EW%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f1ea;
+    --card: #fffdf9;
+    --ink: #1f1b16;
+    --muted: #6d655b;
+    --line: #e4dbcf;
+    --accent: #c4502b;
+    --accent-ink: #fff;
+    --accent-soft: #f6e0d6;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 48px; }
+  header { padding: 28px 0 8px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .logo { font: 700 26px/1 Fraunces, Georgia, serif; letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  .tag { color: var(--muted); font-size: 14px; }
+  h1 { font: 700 clamp(30px, 7vw, 44px)/1.08 Fraunces, Georgia, serif; letter-spacing: -0.02em; margin: 24px 0 10px; }
+  h2 { font: 600 20px/1.2 Fraunces, Georgia, serif; margin: 28px 0 12px; }
+  p.lead { color: var(--muted); margin: 0 0 8px; max-width: 52ch; }
+
+  .hero { position: relative; margin-top: 16px; border-radius: 20px; overflow: hidden; background: #3a2f28; aspect-ratio: 4 / 3.4; max-height: 440px; width: 100%; }
+  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,14,10,.85) 10%, rgba(20,14,10,.15) 60%, transparent); }
+  .hero-text { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px; color: #fff; z-index: 1; }
+  .hero-text h1 { margin: 0 0 8px; }
+  .hero-text p { margin: 0; max-width: 46ch; opacity: .9; }
+
+  .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  @media (min-width: 560px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
+  .tile {
+    position: relative; aspect-ratio: 4 / 3; border: 0; padding: 0; border-radius: 14px; overflow: hidden;
+    background: #3a2f28; cursor: pointer; outline: 3px solid transparent; outline-offset: -3px;
+    transition: transform .12s, outline-color .15s;
+  }
+  .tile:active { transform: scale(.97); }
+  .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,14,10,.75), transparent 60%); }
+  .tile span { position: absolute; left: 12px; bottom: 10px; z-index: 1; color: #fff; font: 600 15px Inter, sans-serif; text-align: left; }
+  .tile .check {
+    position: absolute; top: 8px; right: 8px; z-index: 1; width: 26px; height: 26px; border-radius: 50%;
+    display: grid; place-items: center; font: 700 14px Inter, sans-serif; font-style: normal;
+    background: rgba(255,255,255,.85); color: transparent; transition: background .15s, color .15s;
+  }
+  .tile[aria-pressed="true"] { outline-color: var(--accent); }
+  .tile[aria-pressed="true"] img { transform: scale(1.05); }
+  .tile[aria-pressed="true"] .check { background: var(--accent); color: #fff; }
+
+  .seg { display: inline-flex; border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--card); }
+  .seg button { border: 0; background: transparent; padding: 10px 16px; font: 500 15px Inter, sans-serif; cursor: pointer; color: var(--ink); }
+  .seg button + button { border-left: 1.5px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
+
+  .primary {
+    display: block; width: 100%; margin-top: 28px; border: 0; border-radius: 14px;
+    background: var(--accent); color: var(--accent-ink); padding: 16px; font: 600 17px Inter, sans-serif; cursor: pointer;
+  }
+  .primary:disabled { opacity: .4; cursor: not-allowed; }
+  .ghost { border: 0; background: none; color: var(--accent); font: 600 15px Inter, sans-serif; cursor: pointer; padding: 8px 0; }
+
+  [hidden] { display: none !important; }
+
+  .tabs { display: flex; gap: 4px; padding: 4px; margin-top: 16px; background: #ece4d9; border-radius: 14px; }
+  .tabs button { flex: 1; border: 0; border-radius: 10px; padding: 11px 8px; background: transparent; color: var(--muted); font: 600 15px Inter, sans-serif; cursor: pointer; }
+  .tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+
+  .cat-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; }
+  .cat-tiles .tile { aspect-ratio: 4 / 3.4; }
+  .cat-tiles .tile span { font-size: 18px; font-family: Fraunces, Georgia, serif; }
+  .filter-group { margin-top: 22px; }
+  .filter-group h3 { margin: 0 0 10px; font: 600 15px Inter, sans-serif; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { border: 1.5px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 8px 14px; font: 500 14px Inter, sans-serif; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .hint { color: var(--muted); font-size: 13px; margin: 6px 0 0; }
+
+  .results-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-top: 30px; }
+  .results-head h2 { margin: 0; }
+  .results-head span { color: var(--muted); font-size: 14px; }
+  .place { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-top: 12px; }
+  .place h3 { margin: 0; font: 600 19px/1.2 Fraunces, Georgia, serif; }
+  .place .meta { color: var(--muted); font-size: 13px; margin-top: 3px; }
+  .place p { margin: 10px 0 0; font-size: 15px; }
+  .place .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .place .tags span { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 2px 9px; font-size: 12px; font-weight: 600; }
+  .book { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; border-radius: 999px; background: var(--ink); color: #fff; padding: 10px 16px; font: 600 14px Inter, sans-serif; text-decoration: none; }
+  .near-title { margin: 26px 0 0; color: var(--muted); font: 600 14px Inter, sans-serif; }
+  .empty { margin-top: 16px; color: var(--muted); }
+  .summary { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+  .summary b { color: var(--ink); font-weight: 600; }
+  #map { height: 46vh; min-height: 300px; border-radius: 16px; border: 1px solid var(--line); z-index: 0; }
+
+  .pin {
+    width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff;
+    display: grid; place-items: center; font: 600 14px Inter, sans-serif; border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  }
+  .pin.active { background: var(--accent); transform: scale(1.15); }
+
+  .stop-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin-top: 14px; overflow: hidden; }
+  .stop-photo { position: relative; margin: -18px -18px 16px; aspect-ratio: 16 / 10; background: #3a2f28; }
+  .stop-photo img { width: 100%; height: 100%; object-fit: cover; display: block; animation: fade .4s ease; }
+  @keyframes fade { from { opacity: 0; } }
+  .credit { position: absolute; right: 8px; bottom: 6px; font-size: 11px; color: #fff; background: rgba(0,0,0,.45); padding: 2px 6px; border-radius: 4px; text-decoration: none; }
+  .stop-head { display: flex; align-items: center; gap: 12px; }
+  .stop-num { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 600; }
+  .stop-title { font: 600 20px/1.2 Fraunces, Georgia, serif; margin: 0; }
+  .stop-area { color: var(--muted); font-size: 13px; }
+  .story { margin: 14px 0 0; }
+  .angle { display: inline-block; margin: 14px 0 0; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; }
+  .angle + .story { margin-top: 10px; }
+  .tip { margin-top: 10px; font-size: 14px; color: var(--muted); }
+  .controls { display: flex; align-items: center; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+  .play {
+    display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px;
+    background: var(--ink); color: #fff; padding: 11px 18px; font: 600 15px Inter, sans-serif; cursor: pointer;
+  }
+  .play svg { width: 16px; height: 16px; fill: currentColor; }
+  .nav { margin-left: auto; display: flex; gap: 8px; }
+  .nav button { border: 1.5px solid var(--line); background: var(--card); border-radius: 999px; padding: 9px 14px; font: 500 14px Inter, sans-serif; cursor: pointer; color: var(--ink); }
+  .nav button:disabled { opacity: .35; cursor: default; }
+
+  ol.stops { list-style: none; padding: 0; margin: 18px 0 0; }
+  ol.stops li button {
+    width: 100%; text-align: left; display: flex; gap: 12px; align-items: center; background: none; border: 0;
+    border-bottom: 1px solid var(--line); padding: 12px 0; font: 500 15px Inter, sans-serif; color: var(--ink); cursor: pointer;
+  }
+  ol.stops .thumb { position: relative; flex: none; width: 52px; height: 52px; border-radius: 12px; overflow: hidden; background: #3a2f28; }
+  ol.stops .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  ol.stops li button .n {
+    position: absolute; left: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 11px; font-weight: 600;
+  }
+  ol.stops li button.current .n { background: var(--accent); }
+  ol.stops li button.current .thumb { outline: 2.5px solid var(--accent); outline-offset: -2.5px; }
+  ol.stops li button .d { margin-left: auto; color: var(--muted); font-size: 13px; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Walk<span>BCN</span></div>
+    <div class="tag">Your personal walking guide</div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button type="button" role="tab" id="tabWalk" aria-selected="true">Walking routes</button>
+    <button type="button" role="tab" id="tabAct" aria-selected="false">Activities</button>
+  </nav>
+
+  <div id="walkView">
+
+  <!-- Step 1: interests -->
+  <section id="pick">
+    <div class="hero">
+      <img id="heroImg" alt="Barcelona rooftops at sunset">
+      <div class="hero-text">
+        <h1>Barcelona, walked your way.</h1>
+        <p>Tell us what you're into. We'll build a short walking route with audio stories at every stop.</p>
+      </div>
+    </div>
+
+    <h2>What are you interested in?</h2>
+    <div class="tiles" id="interests"></div>
+
+    <h2>How long a walk?</h2>
+    <div class="seg" id="length">
+      <button type="button" data-n="4" aria-pressed="false">4 stops</button>
+      <button type="button" data-n="5" aria-pressed="true">5 stops</button>
+      <button type="button" data-n="6" aria-pressed="false">6 stops</button>
+    </div>
+
+    <button class="primary" id="build" disabled>Create my route</button>
+  </section>
+
+  <!-- Step 2: route -->
+  <section id="route" hidden>
+    <h1 id="routeTitle">Your route</h1>
+    <div class="summary" id="summary"></div>
+    <div id="map" role="region" aria-label="Route map"></div>
+
+    <div class="stop-card" id="stopCard" aria-live="polite"></div>
+
+    <ol class="stops" id="stopList"></ol>
+    <button class="ghost" id="restart">← Change interests</button>
+  </section>
+
+  </div>
+
+  <!-- Activities: pick a category + preferences, get hand-picked places -->
+  <section id="actView" hidden>
+    <div id="actPick">
+      <h1>Eat, drink, go out.</h1>
+      <p class="lead">Choose what you're in the mood for and we'll suggest places worth your evening.</p>
+      <div class="cat-tiles tiles" id="actCats"></div>
+    </div>
+
+    <div id="actFilters" hidden>
+      <button class="ghost" id="actBack">← All activities</button>
+      <h1 id="actTitle"></h1>
+      <p class="lead" id="actIntro"></p>
+      <div id="actGroups"></div>
+      <p class="hint">Pick as many as you like, or none to see everything.</p>
+      <div class="results-head"><h2>Our picks</h2><span id="actCount"></span></div>
+      <div id="actResults"></div>
+      <p class="hint" style="margin-top:18px">Hand-picked by WalkBCN. Opening times change, so check before you go.</p>
+    </div>
+  </section>
+
+  <footer>WalkBCN MVP · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop)</footer>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="data/stops.js"></script>
+<script src="data/activities.js"></script>
+<!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
+<script src="content/stories.js"></script>
+<script>
+// Photos come from Wikimedia Commons (free licences); credit links point to each file page.
+const photo = (file, w = 800) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
+const credit = file => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, '_'))}`;
+
+const INTERESTS = [
+  { id: 'architecture', label: 'Architecture',   img: 'Casa Batllo Overview Barcelona Spain cut.jpg' },
+  { id: 'history',      label: 'History',        img: 'Barcelona - Carrer del Bisbe.jpg' },
+  { id: 'food',         label: 'Food & markets', img: 'Mercat de Santa Caterina (Barcelona).jpg' },
+  { id: 'art',          label: 'Art',            img: '22 11 01 Palau DSCF2611 52502512616 cc1e7db845 k.jpg' },
+  { id: 'local',        label: 'Local life',     img: 'Young adults sit and talk in Plaza del Sol in Barcelona.jpg' },
+  { id: 'outdoors',     label: 'Parks & sea',    img: 'Platja de la Barceloneta 02.jpg' },
+];
+const HERO_IMG = 'Evening light over Barcelona.jpg';
+
+const STOPS = window.WALKBCN_STOPS;
+const STORIES = window.WALKBCN_STORIES || {};
+
+// Pick the version of a stop's story that matches what this user chose.
+// Falls back to the hand-written base story if nothing was generated.
+function storyFor(s) {
+  const gen = STORIES[s.id] || {};
+  const angle = [...selected].find(t => s.tags.includes(t) && gen.variants?.[t]);
+  if (angle) return { text: gen.variants[angle].story, audio: gen.variants[angle].audio, angle };
+  return { text: s.story, audio: gen.base?.audio, angle: null };
+}
+
+let selected = new Set();
+let stopsCount = 5;
+let route = [];
+let current = 0;
+let map, markers = [], line;
+
+// ---- Step 1 UI ----
+document.getElementById('heroImg').src = photo(HERO_IMG, 1200);
+const chipsEl = document.getElementById('interests');
+INTERESTS.forEach(i => {
+  const b = document.createElement('button');
+  b.className = 'tile'; b.type = 'button';
+  b.innerHTML = `<img src="${photo(i.img, 500)}" alt="" loading="lazy"><span>${i.label}</span><i class="check" aria-hidden="true">✓</i>`;
+  b.setAttribute('aria-pressed', 'false');
+  b.onclick = () => {
+    selected.has(i.id) ? selected.delete(i.id) : selected.add(i.id);
+    b.setAttribute('aria-pressed', selected.has(i.id));
+    document.getElementById('build').disabled = selected.size === 0;
+  };
+  chipsEl.appendChild(b);
+});
+document.querySelectorAll('#length button').forEach(b => {
+  b.onclick = () => {
+    stopsCount = +b.dataset.n;
+    document.querySelectorAll('#length button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  };
+});
+
+// ---- Route building ----
+function dist(a, b) { // km, haversine
+  const R = 6371, r = Math.PI / 180;
+  const dLat = (b.lat - a.lat) * r, dLng = (b.lng - a.lng) * r;
+  const h = Math.sin(dLat/2)**2 + Math.cos(a.lat*r) * Math.cos(b.lat*r) * Math.sin(dLng/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+const score = s => s.tags.filter(t => selected.has(t)).length;
+
+// Try each matching stop as a start; greedily add the next stop that best balances
+// interest match vs walking distance. Keep the best overall route.
+function buildRoute(n) {
+  const W = 1.2; // how many "interest points" one km of walking costs
+  let best = null;
+  for (const seed of STOPS.filter(s => score(s) > 0)) {
+    const path = [seed];
+    const left = STOPS.filter(s => s !== seed);
+    while (path.length < n && left.length) {
+      const last = path[path.length - 1];
+      let bi = 0, bv = -Infinity;
+      left.forEach((s, i) => {
+        const v = score(s) * 1.5 - W * dist(last, s);
+        if (v > bv) { bv = v; bi = i; }
+      });
+      path.push(left.splice(bi, 1)[0]);
+    }
+    let km = 0;
+    for (let i = 1; i < path.length; i++) km += dist(path[i-1], path[i]);
+    const value = path.reduce((a, s) => a + score(s), 0) * 1.5 - W * km;
+    if (!best || value > best.value) best = { path, km, value };
+  }
+  return best;
+}
+
+// ---- Step 2 UI ----
+function showRoute() {
+  const r = buildRoute(stopsCount);
+  route = r.path; current = 0;
+  const walkKm = r.km * 1.3; // streets aren't straight lines
+  const mins = Math.round(walkKm / 4.5 * 60 / 5) * 5;
+  const labels = INTERESTS.filter(i => selected.has(i.id)).map(i => i.label.toLowerCase());
+  document.getElementById('routeTitle').textContent = 'Your ' + listJoin(labels) + ' walk';
+  document.getElementById('summary').innerHTML =
+    `<span><b>${route.length}</b> stops</span><span>≈ <b>${walkKm.toFixed(1)} km</b></span><span>≈ <b>${mins} min</b> walking</span>`;
+
+  document.getElementById('pick').hidden = true;
+  document.getElementById('route').hidden = false;
+  window.scrollTo(0, 0);
+
+  if (!map) {
+    map = L.map('map', { zoomControl: true, scrollWheelZoom: false });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+  }
+  map.invalidateSize();
+  markers.forEach(m => m.remove()); markers = [];
+  if (line) line.remove();
+
+  line = L.polyline(route.map(s => [s.lat, s.lng]), { color: '#c4502b', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
+  route.forEach((s, i) => {
+    const m = L.marker([s.lat, s.lng], {
+      icon: L.divIcon({ className: '', html: `<div class="pin">${i+1}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] })
+    }).addTo(map).on('click', () => goTo(i));
+    markers.push(m);
+  });
+  map.fitBounds(line.getBounds(), { padding: [30, 30] });
+
+  const list = document.getElementById('stopList');
+  list.innerHTML = '';
+  route.forEach((s, i) => {
+    const li = document.createElement('li');
+    const leg = i === 0 ? 'Start' : `${Math.round(dist(route[i-1], s) * 1.3 / 4.5 * 60)} min walk`;
+    li.innerHTML = `<button type="button"><span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><span class="n">${i+1}</span></span>${s.name}<span class="d">${leg}</span></button>`;
+    li.firstChild.onclick = () => { goTo(i); document.getElementById('map').scrollIntoView({ behavior: 'smooth' }); };
+    list.appendChild(li);
+  });
+  goTo(0, false);
+}
+
+function goTo(i, pan = true) {
+  stopAudio();
+  current = i;
+  const s = route[i];
+  const st = storyFor(s);
+  const angleLabel = st.angle && INTERESTS.find(x => x.id === st.angle).label.toLowerCase();
+  markers.forEach((m, j) => m.getElement()?.firstChild?.classList.toggle('active', j === i));
+  document.querySelectorAll('#stopList button').forEach((b, j) => b.classList.toggle('current', j === i));
+  if (pan) map.panTo([s.lat, s.lng]);
+
+  document.getElementById('stopCard').innerHTML = `
+    <figure class="stop-photo">
+      <img src="${photo(s.img, 900)}" alt="${s.name}">
+      <a class="credit" href="${credit(s.img)}" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>
+    </figure>
+    <div class="stop-head">
+      <div class="stop-num">${i+1}</div>
+      <div><h3 class="stop-title">${s.name}</h3><div class="stop-area">${s.area}</div></div>
+    </div>
+    ${angleLabel ? `<p class="angle">Told for ${angleLabel} lovers</p>` : ''}
+    <p class="story">${st.text}</p>
+    <p class="tip"><b>Tip:</b> ${s.tip}</p>
+    <div class="controls">
+      <button class="play" id="play" type="button">${playIcon()} Listen to the story</button>
+      <div class="nav">
+        <button type="button" id="prev" ${i === 0 ? 'disabled' : ''}>← Prev</button>
+        <button type="button" id="next" ${i === route.length - 1 ? 'disabled' : ''}>Next stop →</button>
+      </div>
+    </div>`;
+  document.getElementById('play').onclick = toggleAudio;
+  document.getElementById('prev').onclick = () => goTo(current - 1);
+  document.getElementById('next').onclick = () => goTo(current + 1);
+}
+
+// ---- Audio stories ----
+// Plays the pre-recorded file when there is one; otherwise uses the browser's voice.
+let speaking = false;
+let player = null;
+function pickVoice() {
+  const vs = speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+  return vs.find(v => /Daniel|Google UK English|Serena|Samantha/.test(v.name)) || vs[0] || null;
+}
+function toggleAudio() {
+  if (speaking) { stopAudio(); return; }
+  const s = route[current];
+  const st = storyFor(s);
+  if (st.audio) {
+    player = new Audio(st.audio);
+    player.onended = () => setPlaying(false);
+    player.onerror = () => { player = null; speakText(`${s.name}. ${st.text}`); };
+    player.play().then(() => setPlaying(true)).catch(() => player?.onerror());
+    return;
+  }
+  speakText(`${s.name}. ${st.text}`);
+}
+function speakText(text) {
+  if (!('speechSynthesis' in window)) { alert('Audio is not supported in this browser.'); setPlaying(false); return; }
+  const u = new SpeechSynthesisUtterance(text);
+  const v = pickVoice(); if (v) { u.voice = v; u.lang = v.lang; } else u.lang = 'en-GB';
+  u.rate = 0.97;
+  u.onend = u.onerror = () => setPlaying(false);
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+  setPlaying(true);
+}
+function stopAudio() {
+  if (player) { player.pause(); player = null; }
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  setPlaying(false);
+}
+function setPlaying(on) {
+  speaking = on;
+  const b = document.getElementById('play');
+  if (b) b.innerHTML = on ? `${stopIcon()} Stop` : `${playIcon()} Listen to the story`;
+}
+const playIcon = () => '<svg viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z"/></svg>';
+const stopIcon = () => '<svg viewBox="0 0 16 16"><rect x="3.5" y="3.5" width="9" height="9" rx="1"/></svg>';
+if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
+
+function listJoin(a) { return a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' & ' + a[a.length - 1]; }
+
+// ---- Tabs ----
+function showTab(name) {
+  stopAudio();
+  document.getElementById('walkView').hidden = name !== 'walk';
+  document.getElementById('actView').hidden = name !== 'act';
+  document.getElementById('tabWalk').setAttribute('aria-selected', name === 'walk');
+  document.getElementById('tabAct').setAttribute('aria-selected', name === 'act');
+  if (name === 'walk' && map) map.invalidateSize();
+  window.scrollTo(0, 0);
+}
+document.getElementById('tabWalk').onclick = () => showTab('walk');
+document.getElementById('tabAct').onclick = () => { showTab('act'); track('Activities opened'); };
+
+// ---- Activities ----
+// Hook for analytics once the site is deployed (e.g. Plausible). Does nothing until then.
+function track(event, props) { try { window.plausible?.(event, { props }); } catch (e) {} }
+
+const ACTIVITIES = window.WALKBCN_ACTIVITIES;
+let actCat = null;
+let actSel = {};
+
+const catsEl = document.getElementById('actCats');
+Object.entries(ACTIVITIES).forEach(([id, cat]) => {
+  const b = document.createElement('button');
+  b.className = 'tile'; b.type = 'button';
+  b.innerHTML = `<img src="${photo(cat.img, 600)}" alt="" loading="lazy"><span>${cat.label}</span>`;
+  b.onclick = () => openCategory(id);
+  catsEl.appendChild(b);
+});
+
+function openCategory(id) {
+  actCat = id; actSel = {};
+  const cat = ACTIVITIES[id];
+  track('Activity category', { category: id });
+  document.getElementById('actTitle').textContent = cat.label;
+  document.getElementById('actIntro').textContent = cat.intro;
+  const groups = document.getElementById('actGroups');
+  groups.innerHTML = '';
+  cat.filters.forEach(f => {
+    actSel[f.id] = new Set();
+    const g = document.createElement('div');
+    g.className = 'filter-group';
+    g.innerHTML = `<h3>${f.label}</h3><div class="chips"></div>`;
+    f.options.forEach(o => {
+      const c = document.createElement('button');
+      c.className = 'chip'; c.type = 'button'; c.textContent = o.label;
+      c.setAttribute('aria-pressed', 'false');
+      c.onclick = () => {
+        const set = actSel[f.id];
+        set.has(o.id) ? set.delete(o.id) : set.add(o.id);
+        c.setAttribute('aria-pressed', set.has(o.id));
+        renderPlaces();
+      };
+      g.lastChild.appendChild(c);
+    });
+    groups.appendChild(g);
+  });
+  document.getElementById('actPick').hidden = true;
+  document.getElementById('actFilters').hidden = false;
+  renderPlaces();
+  window.scrollTo(0, 0);
+}
+document.getElementById('actBack').onclick = () => {
+  document.getElementById('actPick').hidden = false;
+  document.getElementById('actFilters').hidden = true;
+  window.scrollTo(0, 0);
+};
+
+// A place matches a filter group if it has any of the chosen options in it.
+// Exact = matches every group the user touched; "close" = misses just one.
+function renderPlaces() {
+  const cat = ACTIVITIES[actCat];
+  const active = cat.filters.filter(f => actSel[f.id].size);
+  const scored = cat.places.map(p => {
+    const hits = active.filter(f => [].concat(p[f.id]).some(v => actSel[f.id].has(v))).length;
+    return { p, missed: active.length - hits };
+  });
+  const exact = scored.filter(x => x.missed === 0).map(x => x.p);
+  const close = active.length > 1 ? scored.filter(x => x.missed === 1).map(x => x.p).slice(0, 3) : [];
+
+  document.getElementById('actCount').textContent = `${exact.length} ${exact.length === 1 ? 'place' : 'places'}`;
+  const el = document.getElementById('actResults');
+  el.innerHTML = exact.map(p => placeCard(cat, p)).join('') +
+    (!exact.length ? '<p class="empty">Nothing matches all of that — try removing a filter.</p>' : '') +
+    (close.length && exact.length < 3 ? `<p class="near-title">Also worth a look</p>${close.map(p => placeCard(cat, p)).join('')}` : '');
+  el.querySelectorAll('.book').forEach(a => a.onclick = () => track('Book click', { category: actCat, place: a.dataset.place }));
+}
+
+function optionLabel(cat, filterId, value) {
+  return cat.filters.find(f => f.id === filterId)?.options.find(o => o.id === value)?.label;
+}
+
+function placeCard(cat, p) {
+  const area = optionLabel(cat, 'area', p.area);
+  const price = p.price ? ' · ' + optionLabel(cat, 'price', p.price) : '';
+  const tags = cat.filters.filter(f => f.id !== 'area' && f.id !== 'price')
+    .flatMap(f => [].concat(p[f.id] || []).map(v => optionLabel(cat, f.id, v)));
+  const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ', Barcelona')}`;
+  return `<article class="place">
+    <h3>${p.name}</h3>
+    <div class="meta">${area}${price}</div>
+    <div class="tags">${tags.map(t => `<span>${t}</span>`).join('')}</div>
+    <p>${p.desc}</p>
+    <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${p.name}">See &amp; book ↗</a>
+  </article>`;
+}
+
+document.getElementById('build').onclick = showRoute;
+document.getElementById('restart').onclick = () => {
+  stopAudio();
+  document.getElementById('route').hidden = true;
+  document.getElementById('pick').hidden = false;
+  window.scrollTo(0, 0);
+};
+</script>
+</body>
+</html>
