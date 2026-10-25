@@ -21,7 +21,7 @@
 - macOS voice instead of a natural AI voice: free, but sounds more robotic.
 - Activities link out to Google Maps instead of booking for the user: no revenue and no availability check, but no accounts, payments or legal risk.
 
-**security check (done 25 Oct, after class):**
+**security check:**
 - No API keys or secrets in the repo; the Claude key lives only in the user's terminal. Two keys that were accidentally pasted in a chat were revoked.
 - Leaflet is loaded from a CDN with integrity (SRI) hashes, so a modified file would be blocked.
 - The page only shows our own data (no user input is stored or displayed), no cookies, no tracking, no personal data collected.
@@ -35,5 +35,5 @@
 
 **Session log:**
 - *Sessions 1–5:* Defined the venture as a personalised virtual travel guide for Barcelona to improve both citizens' and tourists' experience. Selected the name. Decided to build a mobile-friendly web MVP rather than a native app. Defined the initial product around personalised routes, an interactive map, GPS-based audio stories and an AI chatbot. Chose a low-cost stack. Agreed to test the core value proposition before adding payments or complex features. Identified the main assumptions to validate.
-- *Session 6 (hackathon, 13 Oct):* Planned goal was to deepen personalisation inside the route (a "Start Route" progress feature or a choice of explanation style). What we built instead: story versions adapted to each user's interests (generated with Claude ahead of time, with recorded audio) and an Activities tab (restaurants and nightlife). We changed plan because personalising *what the story says* was the most direct way to test our main assumption, and we added Activities without a clear test behind it — that was a distraction. We cut natural AI voices and AI reservations (need paid external services, accounts and payments).
-- *After class (by 25 Oct):* Verified the full flow end to end (choose interests → route → map → story version → audio; Activities → filters → Google Maps link). Put the project in a Git repository and published it on GitHub Pages. Did the security check above. Updated this document and the scope. Next: competitor map, choose one buyer and talk to five of them.
+- *Session 6 (hackathon):* Planned goal was to deepen personalisation inside the route (a "Start Route" progress feature or a choice of explanation style). What we built instead: story versions adapted to each user's interests (generated with Claude ahead of time, with recorded audio) and an Activities tab (restaurants and nightlife). We changed plan because personalising *what the story says* was the most direct way to test our main assumption, and we added Activities without a clear test behind it — that was a distraction. We cut natural AI voices and AI reservations (need paid external services, accounts and payments).
+- *Current state:* Verified the full flow end to end (choose interests → route → map → story version → audio; Activities → filters → Google Maps link). Put the project in a Git repository and published it on GitHub Pages. Did the security check above. Updated this document and the scope. Next: competitor map, choose one buyer and talk to five of them.
