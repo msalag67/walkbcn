@@ -152,6 +152,19 @@
   ol.stops li button.current .thumb { outline: 2.5px solid var(--accent); outline-offset: -2.5px; }
   ol.stops li button .d { margin-left: auto; color: var(--muted); font-size: 13px; }
   footer { margin-top: 36px; color: var(--muted); font-size: 13px; }
+  .link-btn { border: 0; background: none; padding: 0; color: var(--accent); font: 600 13px Inter, sans-serif; cursor: pointer; text-decoration: underline; }
+  .feedback { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14px; color: var(--muted); }
+  .feedback button { border: 1.5px solid var(--line); background: var(--card); border-radius: 999px; padding: 5px 12px; font-size: 16px; cursor: pointer; }
+  .feedback button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+  .learned { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+  dialog { width: min(520px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); border: 1px solid var(--line); border-radius: 16px; padding: 20px; background: var(--card); color: var(--ink); }
+  dialog::backdrop { background: rgba(31,27,22,.5); }
+  dialog h2 { margin: 0 0 10px; }
+  dialog p { margin: 10px 0; font-size: 14px; }
+  dialog label { display: flex; gap: 8px; align-items: flex-start; margin: 14px 0; font-size: 14px; font-weight: 500; }
+  .privacy-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 16px; }
+  .privacy-actions button { border: 1.5px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 9px 14px; font: 600 14px Inter, sans-serif; cursor: pointer; }
+  .privacy-actions .close { background: var(--ink); border-color: var(--ink); color: #fff; }
 </style>
 </head>
 <body>
@@ -225,7 +238,20 @@
     </div>
   </section>
 
-  <footer>WalkBCN MVP · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop)</footer>
+  <footer>WalkBCN MVP · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop) · <button class="link-btn" id="privacyOpen" type="button">Your data &amp; privacy</button></footer>
+
+  <dialog id="privacy" aria-labelledby="privacyTitle">
+    <h2 id="privacyTitle">Your data &amp; privacy</h2>
+    <p>WalkBCN learns from how you use it, so it can pick the stories you enjoy. It remembers the interests you pick, the stories you play and finish, and your 👍/👎.</p>
+    <p><b>All of this stays in this browser.</b> It is never sent to us or anyone else, and there is no account.</p>
+    <p id="privacySummary"></p>
+    <label><input type="checkbox" id="learningOptOut"> Don't learn from what I do</label>
+    <p>Learning only changes the order and choice of stories already in the app. It never writes or publishes new ones, and it must never put engagement or commercial interests above historical accuracy, your privacy or respect for local residents.</p>
+    <div class="privacy-actions">
+      <button type="button" id="learningErase">Erase my data</button>
+      <button type="button" class="close" id="privacyClose">Close</button>
+    </div>
+  </dialog>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -251,13 +277,58 @@ const HERO_IMG = 'Evening light over Barcelona.jpg';
 const STOPS = window.WALKBCN_STOPS;
 const STORIES = window.WALKBCN_STORIES || {};
 
-// Pick the version of a stop's story that matches what this user chose.
-// Falls back to the hand-written base story if nothing was generated.
+// ---- Learning loop ----
+// Remembers, in this browser only, what the visitor picks, finishes and rates,
+// and uses it to rank stories already in the app. Nothing is sent anywhere.
+const LEARNING_KEY = 'walkbcn_learning_v1';
+const emptyLearning = () => ({ optOut: false, picks: {}, stories: {} });
+function loadLearning() {
+  try { return { ...emptyLearning(), ...JSON.parse(localStorage.getItem(LEARNING_KEY)) }; }
+  catch (e) { return emptyLearning(); }
+}
+let learning = loadLearning();
+function saveLearning() {
+  try { localStorage.setItem(LEARNING_KEY, JSON.stringify(learning)); } catch (e) {}
+}
+const storyKey = (stopId, angle) => `${stopId}|${angle || 'base'}`;
+function storyRecord(stopId, angle) {
+  return learning.stories[storyKey(stopId, angle)] ||= { played: 0, finished: 0, rating: 0 };
+}
+// Finishing a story counts once; a rating counts double, in either direction.
+const engagement = r => (r.finished ? 1 : 0) + 2 * (r.rating || 0);
+function recordLearning(update) {
+  if (learning.optOut) return;
+  update();
+  saveLearning();
+}
+function angleScore(angle) {
+  if (learning.optOut) return 0;
+  return Object.entries(learning.stories)
+    .filter(([key]) => key.endsWith(`|${angle}`))
+    .reduce((sum, [, r]) => sum + engagement(r), 0);
+}
+// A small nudge, so learning can reorder a route but never outweighs the interests chosen.
+function learningNudge(s) {
+  if (learning.optOut) return 0;
+  const angles = s.tags.filter(t => selected.has(t));
+  const own = angles.reduce((sum, t) => sum + engagement(learning.stories[storyKey(s.id, t)] || {}), 0);
+  const similar = angles.reduce((sum, t) => sum + angleScore(t), 0);
+  return Math.max(-0.4, Math.min(0.4, 0.1 * (own + 0.25 * similar)));
+}
+
+// Pick the version of a stop's story that matches what this user chose. When several
+// fit, prefer the angle they engage with most. Falls back to the base story.
+let routeAngles = {};
 function storyFor(s) {
   const gen = STORIES[s.id] || {};
-  const angle = [...selected].find(t => s.tags.includes(t) && gen.variants?.[t]);
-  if (angle) return { text: gen.variants[angle].story, audio: gen.variants[angle].audio, angle };
-  return { text: s.story, audio: gen.base?.audio, angle: null };
+  if (!(s.id in routeAngles)) {
+    const options = [...selected].filter(t => s.tags.includes(t) && gen.variants?.[t]);
+    routeAngles[s.id] = options.reduce((best, t) => (best === null || angleScore(t) > angleScore(best) ? t : best), null);
+  }
+  const angle = routeAngles[s.id];
+  const first = [...selected].find(t => s.tags.includes(t) && gen.variants?.[t]);
+  if (angle) return { text: gen.variants[angle].story, audio: gen.variants[angle].audio, angle, learned: angle !== first };
+  return { text: s.story, audio: gen.base?.audio, angle: null, learned: false };
 }
 
 let selected = new Set();
@@ -295,7 +366,10 @@ function dist(a, b) { // km, haversine
   const h = Math.sin(dLat/2)**2 + Math.cos(a.lat*r) * Math.cos(b.lat*r) * Math.sin(dLng/2)**2;
   return 2 * R * Math.asin(Math.sqrt(h));
 }
-const score = s => s.tags.filter(t => selected.has(t)).length;
+function score(s) {
+  const matches = s.tags.filter(t => selected.has(t)).length;
+  return matches ? matches + learningNudge(s) : 0;
+}
 
 // Try each matching stop as a start; greedily add the next stop that best balances
 // interest match vs walking distance. Keep the best overall route.
@@ -324,6 +398,8 @@ function buildRoute(n) {
 
 // ---- Step 2 UI ----
 function showRoute() {
+  routeAngles = {};
+  recordLearning(() => selected.forEach(t => { learning.picks[t] = (learning.picks[t] || 0) + 1; }));
   const r = buildRoute(stopsCount);
   route = r.path; current = 0;
   const walkKm = r.km * 1.3; // streets aren't straight lines
@@ -388,6 +464,7 @@ function goTo(i, pan = true) {
       <div><h3 class="stop-title">${s.name}</h3><div class="stop-area">${s.area}</div></div>
     </div>
     ${angleLabel ? `<p class="angle">Told for ${angleLabel} lovers</p>` : ''}
+    ${st.learned ? '<p class="learned">Chosen from how you listened to and rated earlier stories.</p>' : ''}
     <p class="story">${st.text}</p>
     <p class="tip"><b>Tip:</b> ${s.tip}</p>
     <div class="controls">
@@ -396,10 +473,32 @@ function goTo(i, pan = true) {
         <button type="button" id="prev" ${i === 0 ? 'disabled' : ''}>← Prev</button>
         <button type="button" id="next" ${i === route.length - 1 ? 'disabled' : ''}>Next stop →</button>
       </div>
-    </div>`;
+    </div>
+    ${learning.optOut ? '' : `<div class="feedback" role="group" aria-label="Rate this story">
+      <span>Enjoy this story?</span>
+      <button type="button" data-rating="1" aria-label="Yes" aria-pressed="false">👍</button>
+      <button type="button" data-rating="-1" aria-label="No" aria-pressed="false">👎</button>
+    </div>`}`;
+  renderRating();
+  document.querySelectorAll('.feedback button').forEach(b => b.onclick = () => rateStory(+b.dataset.rating));
   document.getElementById('play').onclick = toggleAudio;
   document.getElementById('prev').onclick = () => goTo(current - 1);
   document.getElementById('next').onclick = () => goTo(current + 1);
+}
+
+function renderRating() {
+  const st = storyFor(route[current]);
+  const rating = learning.stories[storyKey(route[current].id, st.angle)]?.rating || 0;
+  document.querySelectorAll('.feedback button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.rating === rating));
+}
+function rateStory(value) {
+  const s = route[current], st = storyFor(s);
+  recordLearning(() => {
+    const r = storyRecord(s.id, st.angle);
+    r.rating = r.rating === value ? 0 : value;
+    track('Story rated', { stop: s.id, angle: st.angle || 'base', rating: r.rating });
+  });
+  renderRating();
 }
 
 // ---- Audio stories ----
@@ -414,26 +513,42 @@ function toggleAudio() {
   if (speaking) { stopAudio(); return; }
   const s = route[current];
   const st = storyFor(s);
+  const key = { stop: s.id, angle: st.angle };
+  recordLearning(() => {
+    storyRecord(key.stop, key.angle).played++;
+    track('Story played', { stop: key.stop, angle: key.angle || 'base' });
+  });
   if (st.audio) {
     player = new Audio(st.audio);
-    player.onended = () => setPlaying(false);
-    player.onerror = () => { player = null; speakText(`${s.name}. ${st.text}`); };
+    player.onended = () => { markFinished(key); setPlaying(false); };
+    player.onerror = () => { player = null; speakText(`${s.name}. ${st.text}`, key); };
     player.play().then(() => setPlaying(true)).catch(() => player?.onerror());
     return;
   }
-  speakText(`${s.name}. ${st.text}`);
+  speakText(`${s.name}. ${st.text}`, key);
 }
-function speakText(text) {
+// Only a story that plays to its natural end counts as finished, not one the user stopped.
+let speechRun = 0;
+function markFinished(key) {
+  recordLearning(() => {
+    storyRecord(key.stop, key.angle).finished++;
+    track('Story finished', { stop: key.stop, angle: key.angle || 'base' });
+  });
+}
+function speakText(text, key) {
   if (!('speechSynthesis' in window)) { alert('Audio is not supported in this browser.'); setPlaying(false); return; }
   const u = new SpeechSynthesisUtterance(text);
   const v = pickVoice(); if (v) { u.voice = v; u.lang = v.lang; } else u.lang = 'en-GB';
   u.rate = 0.97;
-  u.onend = u.onerror = () => setPlaying(false);
+  const run = ++speechRun;
+  u.onend = () => { if (run === speechRun) { markFinished(key); setPlaying(false); } };
+  u.onerror = () => { if (run === speechRun) setPlaying(false); };
   speechSynthesis.cancel();
   speechSynthesis.speak(u);
   setPlaying(true);
 }
 function stopAudio() {
+  speechRun++;
   if (player) { player.pause(); player = null; }
   if ('speechSynthesis' in window) speechSynthesis.cancel();
   setPlaying(false);
@@ -464,7 +579,7 @@ document.getElementById('tabAct').onclick = () => { showTab('act'); track('Activ
 
 // ---- Activities ----
 // Hook for analytics once the site is deployed (e.g. Plausible). Does nothing until then.
-function track(event, props) { try { window.plausible?.(event, { props }); } catch (e) {} }
+function track(event, props) { if (learning.optOut) return; try { window.plausible?.(event, { props }); } catch (e) {} }
 
 const ACTIVITIES = window.WALKBCN_ACTIVITIES;
 let actCat = null;
@@ -555,6 +670,34 @@ function placeCard(cat, p) {
     <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${p.name}">See &amp; book ↗</a>
   </article>`;
 }
+
+// ---- Your data & privacy ----
+const privacy = document.getElementById('privacy');
+function renderPrivacy() {
+  const records = Object.values(learning.stories);
+  const played = records.reduce((n, r) => n + r.played, 0);
+  const finished = records.reduce((n, r) => n + r.finished, 0);
+  const rated = records.filter(r => r.rating).length;
+  document.getElementById('privacySummary').textContent = `Stored here now: ${played} plays, ${finished} finished, ${rated} rated.`;
+  document.getElementById('learningOptOut').checked = learning.optOut;
+}
+function refreshStoryCard() {
+  if (!document.getElementById('route').hidden) { routeAngles = {}; goTo(current, false); }
+}
+document.getElementById('privacyOpen').onclick = () => { renderPrivacy(); privacy.showModal(); };
+document.getElementById('privacyClose').onclick = () => privacy.close();
+document.getElementById('learningOptOut').onchange = e => {
+  learning.optOut = e.target.checked;
+  saveLearning();
+  refreshStoryCard();
+};
+document.getElementById('learningErase').onclick = () => {
+  learning = { ...emptyLearning(), optOut: learning.optOut };
+  try { localStorage.removeItem(LEARNING_KEY); } catch (e) {}
+  if (learning.optOut) saveLearning();
+  renderPrivacy();
+  refreshStoryCard();
+};
 
 document.getElementById('build').onclick = showRoute;
 document.getElementById('restart').onclick = () => {

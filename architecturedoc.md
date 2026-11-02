@@ -10,7 +10,10 @@
 - **AI (offline, never at runtime):** `scripts/generate.mjs` calls the Claude API (model `claude-opus-5-5`) once to write one version of each stop's story per interest (37 versions), plus a review sheet listing facts to check. Results are saved as files (`content/stories.json`), so the website never calls an AI while people use it.
 - **Audio:** pre-recorded files generated with the free macOS voice (56 files). The browser's own voice is the fallback if a file is missing. ElevenLabs (natural voices) is supported but not used yet.
 - **Activities:** hand-picked list of restaurants and nightlife places in `data/activities.js`; "See & book" opens the place on Google Maps (no booking or payment inside WalkBCN).
-- **Not used (yet):** Supabase / database, FlutterFlow, user accounts. Not needed until we have real users to store data about.
+- **Learning loop:** stored only in the visitor's browser (`localStorage`). Records interests picked, stories played and finished, and 👍/👎, then uses them to choose the story angle when several fit a stop and to slightly adjust route ranking. It only ranks stories already in the app and never writes new ones.
+- **Privacy controls:** a "Your data & privacy" dialog explains what is stored, shows the current counts, and offers opt-out and erase.
+- **Analytics:** a `track()` hook for a cookieless tool such as Plausible. No analytics tool is installed, so nothing is sent; it also does nothing after opt-out.
+- **Not used (yet):** Supabase / database, FlutterFlow, user accounts, server-side analytics. If we add a backend, we must define consent and data retention first.
 
 **dependencies to avoid:** Depending too much on one tool or API, or on data we cannot control. That is why AI content is generated ahead of time and stored in the repo (if the Claude API is down or too expensive, the app keeps working), and why we do not scrape booking sites or depend on live availability APIs.
 
@@ -24,7 +27,7 @@
 **security check:**
 - No API keys or secrets in the repo; the Claude key lives only in the user's terminal.
 - Leaflet is loaded from a CDN with integrity (SRI) hashes, so a modified file would be blocked.
-- The page only shows our own data (no user input is stored or displayed), no cookies, no tracking, no personal data collected.
+- No cookies and no accounts. Usage data for the learning loop stays in the visitor's browser and is never sent anywhere; visitors can opt out or erase it.
 - External links open with `rel="noopener"`.
 - Content risk: AI-written stories can contain wrong facts → every version lists "facts to verify" in `content/review.md` for a human to check before real users hear it.
 
@@ -38,9 +41,10 @@
 - *Sessions 1–5:* Defined the venture as a personalised virtual travel guide for Barcelona to improve both citizens' and tourists' experience. Selected the name. Decided to build a mobile-friendly web MVP rather than a native app. Defined the initial product around personalised routes, an interactive map, GPS-based audio stories and an AI chatbot. Chose a low-cost stack. Agreed to test the core value proposition before adding payments or complex features. Identified the main assumptions to validate.
 - *Session 6 (hackathon):* Planned goal was to deepen personalisation inside the route (a "Start Route" progress feature or a choice of explanation style). What we built instead: story versions adapted to each user's interests (generated with Claude ahead of time, with recorded audio) and an Activities tab (restaurants and nightlife). We changed plan because personalising *what the story says* was the most direct way to test our main assumption, and we added Activities without a clear test behind it — that was a distraction. We cut natural AI voices and AI reservations (need paid external services, accounts and payments).
 - *Current state:* Verified the full flow end to end (choose interests → route → map → story version → audio; Activities → filters → Google Maps link). Put the project in a Git repository and published it on GitHub Pages. Did the security check above. Updated this document and the scope.
-- *Session 7 (products that learn):* Mapped competitors: direct (VoiceMap, SmartGuide), substitutes (Google Maps, TikTok and travel blogs), general AI (ChatGPT) and fast copycats (developers using AI coding agents). Strongest competitor: VoiceMap. Chose **audio completion** as the single behaviour for our learning loop.
-  - **Learning loop design:** track selected interests, stories played and whether they are finished, plus explicit feedback → link each story to its topic and the user's interests → analyse which stories are finished, skipped or rated positively per interest → improve story selection and route ranking for future users. No model training; only already-reviewed content is ranked.
+- *Session 7 (products that learn):* Mapped competitors: direct (VoiceMap, SmartGuide), substitutes (Google Maps, TikTok and travel blogs), general AI (ChatGPT) and fast copycats (developers using AI coding agents). Strongest competitor: VoiceMap. Chose **audio completion** as the single behaviour for our learning loop, and built a first version with explicit 👍/👎 feedback.
+  - **Learning loop:** track selected interests, stories played and whether they are finished, plus explicit feedback → link each story to its topic and the user's interests → analyse which stories are finished, skipped or rated positively per interest → improve story selection and route ranking on later routes in the same browser. No model training; only already-reviewed content is ranked.
   - **Human safety check:** a person reviews new AI-generated historical content before publication, catching inaccuracies, misleading recommendations, bias and disrespect towards residents. Cost: review time whenever stories or places are added.
   - **Growth metrics:** audio completion rate by interest, and percentage of stories rated positively by interest, compared across versions.
   - **Safety and ethics:** tell users what is collected and why; let them change interests, delete preferences and opt out; review for over-recommending popular places and neglecting less-known neighbourhoods.
+  - **Limit:** learning is per browser, so one visitor's data does not improve the app for the next visitor yet, and three testers cannot prove a data advantage.
   - **Red line:** WalkBCN must never learn to prioritise engagement or commercial interests over historical accuracy, user privacy and respect for local residents.

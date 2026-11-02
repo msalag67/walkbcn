@@ -8,6 +8,7 @@ WalkBCN is a personalised virtual travel guide that helps tourists discover Barc
 - The app creates a personalised route with 4–6 stops.
 - Users follow the route through an interactive map.
 - Each stop provides a short, engaging audio story, **told from the angle of the interests the user picked**.
+- **Learning from use:** the app remembers, in the visitor's own browser, which stories they finish and rate, and uses that to choose later story versions. Visitors can opt out or erase it.
 - **Activities:** users pick Restaurants or Nightlife and their preferences, and get a hand-picked list of places. "See & book" opens the place on Google Maps. This exists to test demand; there is no booking inside the app.
 
 ## What it deliberately does NOT do
