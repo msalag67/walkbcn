@@ -29,11 +29,18 @@
 - Content risk: AI-written stories can contain wrong facts → every version lists "facts to verify" in `content/review.md` for a human to check before real users hear it.
 
 **open assumptions:**
-- Tourists want personalised guidance adapted to their interests rather than a generic travel guide (main assumption, not yet tested with real tourists).
+- Tourists want personalised guidance adapted to their interests rather than a generic travel guide (main assumption; early feedback from three testers, not yet proven).
 - It benefits the city for both sides, locals and tourists.
-- We still have to decide **who the buyer is** (tourists, restaurants, the Ajuntament, museums…) and map our competitors (Airbnb Experiences, GetYourGuide, free tours, museum audio guides).
+- **Buyer still to be decided** (tourists, restaurants, the Ajuntament, museums…).
+- Our advantage over VoiceMap, our strongest competitor, is not yet proven: interest-based personalisation is easy to copy unless a real data cycle develops.
 
 **Session log:**
 - *Sessions 1–5:* Defined the venture as a personalised virtual travel guide for Barcelona to improve both citizens' and tourists' experience. Selected the name. Decided to build a mobile-friendly web MVP rather than a native app. Defined the initial product around personalised routes, an interactive map, GPS-based audio stories and an AI chatbot. Chose a low-cost stack. Agreed to test the core value proposition before adding payments or complex features. Identified the main assumptions to validate.
 - *Session 6 (hackathon):* Planned goal was to deepen personalisation inside the route (a "Start Route" progress feature or a choice of explanation style). What we built instead: story versions adapted to each user's interests (generated with Claude ahead of time, with recorded audio) and an Activities tab (restaurants and nightlife). We changed plan because personalising *what the story says* was the most direct way to test our main assumption, and we added Activities without a clear test behind it — that was a distraction. We cut natural AI voices and AI reservations (need paid external services, accounts and payments).
-- *Current state:* Verified the full flow end to end (choose interests → route → map → story version → audio; Activities → filters → Google Maps link). Put the project in a Git repository and published it on GitHub Pages. Did the security check above. Updated this document and the scope. Next: competitor map, choose one buyer and talk to five of them.
+- *Current state:* Verified the full flow end to end (choose interests → route → map → story version → audio; Activities → filters → Google Maps link). Put the project in a Git repository and published it on GitHub Pages. Did the security check above. Updated this document and the scope.
+- *Session 7 (products that learn):* Mapped competitors: direct (VoiceMap, SmartGuide), substitutes (Google Maps, TikTok and travel blogs), general AI (ChatGPT) and fast copycats (developers using AI coding agents). Strongest competitor: VoiceMap. Chose **audio completion** as the single behaviour for our learning loop.
+  - **Learning loop design:** track selected interests, stories played and whether they are finished, plus explicit feedback → link each story to its topic and the user's interests → analyse which stories are finished, skipped or rated positively per interest → improve story selection and route ranking for future users. No model training; only already-reviewed content is ranked.
+  - **Human safety check:** a person reviews new AI-generated historical content before publication, catching inaccuracies, misleading recommendations, bias and disrespect towards residents. Cost: review time whenever stories or places are added.
+  - **Growth metrics:** audio completion rate by interest, and percentage of stories rated positively by interest, compared across versions.
+  - **Safety and ethics:** tell users what is collected and why; let them change interests, delete preferences and opt out; review for over-recommending popular places and neglecting less-known neighbourhoods.
+  - **Red line:** WalkBCN must never learn to prioritise engagement or commercial interests over historical accuracy, user privacy and respect for local residents.
