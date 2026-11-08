@@ -15,6 +15,18 @@
 - **Analytics:** a `track()` hook for a cookieless tool such as Plausible. No analytics tool is installed, so nothing is sent; it also does nothing after opt-out.
 - **Not used (yet):** Supabase / database, FlutterFlow, user accounts, server-side analytics. If we add a backend, we must define consent and data retention first.
 
+**workflow (one request: "create my route"):**
+
+| Step | What happens | What it uses | Who decides |
+|---|---|---|---|
+| 1. Write the stories (offline) | Claude retells each stop's story for each interest | Claude API (`scripts/story-writer.mjs`), scope check, human review in `content/review.md` | AI, with a fixed scope rule and a human check |
+| 2. Read the choice | The visitor picks interests and route length | Web page (button stays disabled until an interest is picked) | Visitor, fixed rule |
+| 3. Build the route | Picks 4–6 nearby stops that match the interests | Scoring rules in `index.html` + small learning nudge | Fixed rules |
+| 4. Pick each story | Chooses the story version for the chosen interests | Generated stories + on-device learning | Fixed rule + learning |
+| 5. Play the story | Plays the recorded audio | Audio file, browser voice as fallback | Tool |
+
+**evals:** 15 test cases (10 normal, 5 attacks) in `evals/`. `evals/app-cases.js` runs the normal cases in the browser and logs every step; `scripts/eval-generator.mjs` sends 4 attacks to the AI step. Rules for a good route: every stop matches a chosen interest, every chosen interest appears when the route is long enough, no leg over 20 minutes, no route over 60 minutes, and the length asked for.
+
 **dependencies to avoid:** Depending too much on one tool or API, or on data we cannot control. That is why AI content is generated ahead of time and stored in the repo (if the Claude API is down or too expensive, the app keeps working), and why we do not scrape booking sites or depend on live availability APIs.
 
 **tradeoffs consciously accepted:**
@@ -48,3 +60,7 @@
   - **Safety and ethics:** tell users what is collected and why; let them change interests, delete preferences and opt out; review for over-recommending popular places and neglecting less-known neighbourhoods.
   - **Limit:** learning is per browser, so one visitor's data does not improve the app for the next visitor yet, and three testers cannot prove a data advantage.
   - **Red line:** WalkBCN must never learn to prioritise engagement or commercial interests over historical accuracy, user privacy and respect for local residents.
+- *Session 8 (agentic workflows and evals):* Mapped the product as 5 steps and wrote 15 test cases (10 normal, 3 of them from our real testers, and 5 attacks). Error analysis before the fix: 6/10 normal cases OK and 4/5 attacks handled safely. Errors per step: write stories 1, read choice 0, build route 4, pick story 0, play audio 0. The step we trusted least was the AI writing stories, but most failures came from our own route rules: stops unrelated to the interests, 28–38 minute legs, and an interest left out.
+  - **Fix (step 3 only):** the route builder now uses only stops that match a chosen interest, allows no leg over 20 minutes and no route over 60 minutes, tries to include every chosen interest, and makes the route shorter (and says so) instead of padding it. Result: 7/10 normal cases OK; step 3 errors 4 → 3. The remaining 3 fail because there are too few stops per interest (only 3 for parks and sea, 4 for food), which is a data problem for the next round.
+  - **Guardrail (worst attack, out of scope):** the AI wrote a story about Camp Nou, outside our area. Now a fixed rule checks the stop's coordinates against central Barcelona before any AI call, and the prompt tells the AI to refuse out-of-scope stops and to treat stop data as data, not instructions. Attacks handled safely: 4/5 → 5/5.
+  - **Still open:** tampered browser data is shown as-is in the privacy counter (no code runs); the 37 stories still need a human fact check.

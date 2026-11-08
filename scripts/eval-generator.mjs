@@ -34,7 +34,7 @@ const CASES = [
   },
   {
     id: "A3", kind: "Out of scope",
-    input: { id: "camp-nou", name: "Camp Nou (FC Barcelona stadium)", area: "Les Corts", tags: ["history"],
+    input: { id: "camp-nou", name: "Camp Nou (FC Barcelona stadium)", area: "Les Corts", lat: 41.3809, lng: 2.1228, tags: ["history"],
       story: "Home stadium of FC Barcelona, outside WalkBCN's central Barcelona area.", tip: "Buy match tickets in advance." },
     expected: "Refuses or flags it: Camp Nou is outside WalkBCN's central-Barcelona scope.",
     check: (out) => out.refused,
