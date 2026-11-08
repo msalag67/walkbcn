@@ -565,154 +565,666 @@ window.WALKBCN_STORIES = {
     }
   },
   "arc-de-triomf": {
-    "variants": {},
+    "variants": {
+      "architecture": {
+        "story": "Here's a triumphal arch with no triumph behind it. Look up at the warm red brick. Instead of grand marble, the architect Josep Vilaseca chose humble brick and turned it into decoration. Notice how the bricks are laid in geometric, Moorish-style patterns, a nod to Spain's Islamic heritage. Now let your eyes travel to the carved friezes, which greet arrivals rather than glorify a war. The arch was built as the entrance to the 1888 Universal Exhibition, so it was designed to impress newcomers heading toward Parc de la Ciutadella.",
+        "facts_to_verify": [
+          "Architect was Josep Vilaseca",
+          "Built as the entrance to the 1888 Universal Exhibition",
+          "Brickwork shows Moorish-style patterns referencing Spain's Islamic heritage",
+          "Carved friezes carry a theme of welcoming visitors",
+          "The exhibition was held in Parc de la Ciutadella"
+        ],
+        "audio": "audio/arc-de-triomf--architecture.m4a",
+        "audioHash": "96744da963"
+      },
+      "history": {
+        "story": "Imagine Barcelona in 1888, eager to show the world what it could do. This arch was the front door to the city's first world fair, the Universal Exhibition. No general ever marched beneath it in victory. Instead, crowds of visitors passed through on their way to Parc de la Ciutadella, where the exhibition was held. The park's name recalls the military citadel that once stood on that ground. Look at the carved friezes. Their message is simply welcome. People live all around here, so take in the story quietly, as a guest of the neighbourhood.",
+        "facts_to_verify": [
+          "The Universal Exhibition took place in 1888",
+          "It was Barcelona's first world fair",
+          "The arch was the exhibition's main entrance",
+          "The exhibition was held in Parc de la Ciutadella",
+          "The park is named after a former military citadel on the site"
+        ],
+        "audio": "audio/arc-de-triomf--history.m4a",
+        "audioHash": "67095be434"
+      },
+      "outdoors": {
+        "story": "Stand back for a moment and let the sky do the work. When sunlight hits this arch, its red brick glows, and it looks different as the light shifts through the day. Notice how open everything feels here. A wide promenade stretches away from the arch, giving you room to breathe in the middle of the city. At its far end lies Parc de la Ciutadella, the green space that hosted the 1888 Universal Exhibition. Find a spot to pause and enjoy the light, and keep voices low. This is a real neighbourhood, with homes close by.",
+        "facts_to_verify": [
+          "The arch is built of red brick",
+          "A wide promenade leads from the arch to Parc de la Ciutadella",
+          "Parc de la Ciutadella hosted the 1888 Universal Exhibition"
+        ],
+        "audio": "audio/arc-de-triomf--outdoors.m4a",
+        "audioHash": "a0a932fe5a"
+      }
+    },
     "base": {
       "audio": "audio/arc-de-triomf.m4a",
       "audioHash": "39b679597c"
     }
   },
   "placa-reial": {
-    "variants": {},
+    "variants": {
+      "architecture": {
+        "story": "Look up at the tall iron lampposts beside the fountain. Notice their helmet-like crowns and curling arms. These were among the first public works of a young Antoni Gaudí, long before the Sagrada Família. Now turn slowly and take in the square itself. It was laid out in the 19th century on land where a convent once stood, and designed as one harmonious whole. See how the arcades repeat all the way around, arch after arch, giving the space its calm, orderly rhythm, while the palm trees soften all those straight lines.",
+        "facts_to_verify": [
+          "The lampposts are among Antoni Gaudí's first public works",
+          "The square was built in the 19th century on the site of a former convent",
+          "The square was designed as a single unified scheme"
+        ],
+        "audio": "audio/placa-reial--architecture.m4a",
+        "audioHash": "3e79510dfc"
+      },
+      "local": {
+        "story": "Picture this square at breakfast time, with someone lingering over a coffee under the arches before the day gets busy. From morning until late, the cafés beneath these arcades turn Plaça Reial into a kind of outdoor living room for the Gothic Quarter. Find a shady spot near the palm trees or the central fountain and simply watch: people cutting across on their way somewhere, friends stopping to chat. This is a real neighbourhood, not a stage set. So slow down, take a seat, and share the space the way locals do, unhurried and kind.",
+        "facts_to_verify": [
+          "The square has cafés under the arcades that are busy from morning until late"
+        ],
+        "audio": "audio/placa-reial--local.m4a",
+        "audioHash": "4561289f58"
+      },
+      "history": {
+        "story": "Stand by the fountain and imagine walls and quiet cloisters, because before this square existed, a convent stood right here. In the 19th century that land was given a new life, and this grand arcaded square rose in its place, designed by the architect Francesc Daniel Molina. Later, a young and little-known Antoni Gaudí designed something for it: look at those tall iron lampposts with their helmets and curling arms. They were among his first public works. Nobody then could have guessed he would one day become the architect of the Sagrada Família.",
+        "facts_to_verify": [
+          "A convent previously stood on the site",
+          "The square was built in the 19th century",
+          "The architect of the square was Francesc Daniel Molina",
+          "The lampposts were among Gaudí's first public works",
+          "The lampposts came after the square was built"
+        ],
+        "audio": "audio/placa-reial--history.m4a",
+        "audioHash": "1f785f3a15"
+      }
+    },
     "base": {
       "audio": "audio/placa-reial.m4a",
       "audioHash": "2578e2d2ed"
     }
   },
   "placa-sant-felip-neri": {
-    "variants": {},
+    "variants": {
+      "history": {
+        "story": "Look closely at the church façade in front of you. Those deep holes in the stone are not wear and tear. In January 1938, during the Spanish Civil War, bombs fell on this little square and killed dozens of people, many of them children. Barcelona was a city under attack from the air, and this quiet corner felt it directly. Afterwards, the damage was deliberately left unrepaired. Let your eyes travel across the pitted wall. It is a memorial written in stone, in a neighbourhood where people still live, work and remember.",
+        "facts_to_verify": [
+          "The bombing of Plaça de Sant Felip Neri took place in January 1938",
+          "The raid occurred during the Spanish Civil War",
+          "Dozens of people were killed, many of them children",
+          "The holes in the church façade were left unrepaired on purpose as a reminder"
+        ],
+        "audio": "audio/placa-sant-felip-neri--history.m4a",
+        "audioHash": "3a7b37a65b"
+      }
+    },
     "base": {
       "audio": "audio/placa-sant-felip-neri.m4a",
       "audioHash": "073039444e"
     }
   },
   "temple-august": {
-    "variants": {},
+    "variants": {
+      "history": {
+        "story": "You are standing on the summit of a Roman town. Barcino was small, and its highest point was a modest hill called Mont Tàber. Right here, the Romans raised a temple to the emperor Augustus, the man who turned Rome from a republic into an empire. Before you go in, look down outside the door: a round millstone set into the pavement marks the top of that hill. Then step into the courtyard and look up at four Roman columns, nearly two thousand years old, still standing among the homes and workplaces of a living neighbourhood.",
+        "facts_to_verify": [
+          "Columns are nearly two thousand years old",
+          "Temple was dedicated to the emperor Augustus",
+          "Augustus turned Rome from a republic into an empire",
+          "Mont Tàber was the highest point of Roman Barcino",
+          "Four columns survive in the courtyard",
+          "Round millstone outside the door marks the top of Mont Tàber"
+        ],
+        "audio": "audio/temple-august--history.m4a",
+        "audioHash": "14c945b654"
+      }
+    },
     "base": {
       "audio": "audio/temple-august.m4a",
       "audioHash": "071178c752"
     }
   },
   "placa-sant-jaume": {
-    "variants": {},
+    "variants": {
+      "history": {
+        "story": "Picture this square two thousand years ago: the Roman forum of Barcino stood right here. Now turn slowly. On one side is the Palau de la Generalitat, home of the Catalan government. Facing it is Barcelona's City Hall. Two governments, eye to eye across one square. For centuries, this has been where the city gathers at its big moments, to celebrate and to protest, standing between those two façades. It's a living neighbourhood too, so as you wander the lanes nearby, keep your voice low.",
+        "facts_to_verify": [
+          "The Roman forum of Barcino stood on the site of Plaça de Sant Jaume",
+          "Roman Barcino dates back roughly two thousand years",
+          "The Palau de la Generalitat houses the Catalan government",
+          "Barcelona's City Hall faces the Palau de la Generalitat across the square"
+        ],
+        "audio": "audio/placa-sant-jaume--history.m4a",
+        "audioHash": "6582bf029f"
+      },
+      "local": {
+        "story": "Imagine people standing on each other's shoulders, layer upon layer, right where you are. On festival days, teams of castellers build human towers here while the crowd watches below. Now look at the two buildings facing each other: the Palau de la Generalitat, home of the Catalan government, and Barcelona's City Hall opposite. Between them, locals gather to celebrate and to protest. On an ordinary afternoon, it's a crossing point for neighbours going about their day. If there's a crowd, watch from the edges and leave room for those taking part. This is their square.",
+        "facts_to_verify": [
+          "Human towers (castells) are built in Plaça de Sant Jaume on festival days",
+          "The Palau de la Generalitat houses the Catalan government",
+          "Barcelona's City Hall faces the Palau de la Generalitat across the square",
+          "The square is used for celebrations and protests"
+        ],
+        "audio": "audio/placa-sant-jaume--local.m4a",
+        "audioHash": "249ace7d58"
+      }
+    },
     "base": {
       "audio": "audio/placa-sant-jaume.m4a",
       "audioHash": "76606a0cf9"
     }
   },
   "fossar-moreres": {
-    "variants": {},
+    "variants": {
+      "history": {
+        "story": "Look at the ground beneath you: this gently sloping square beside Santa Maria del Mar was once a cemetery. Here lie the defenders who died during the siege of Barcelona, a siege that ended on the eleventh of September, 1714. Find the inscription and read it slowly. It declares that no traitor is buried here. Now notice the red arch and the eternal flame, which turn a burial ground into a place of memory. Every eleventh of September, Catalonia's national day, people gather here to remember. The rest of the year, it's a quiet corner of a real, lived-in neighbourhood.",
+        "facts_to_verify": [
+          "The square was a cemetery for defenders who died during the siege of Barcelona",
+          "The siege of Barcelona ended on 11 September 1714",
+          "The inscription states that no traitor is buried here",
+          "The memorial includes a red arch and an eternal flame",
+          "11 September is Catalonia's national day, when people gather here to remember"
+        ],
+        "audio": "audio/fossar-moreres--history.m4a",
+        "audioHash": "8c90838ffc"
+      }
+    },
     "base": {
       "audio": "audio/fossar-moreres.m4a",
       "audioHash": "43b9ec7369"
     }
   },
   "antic-hospital": {
-    "variants": {},
+    "variants": {
+      "history": {
+        "story": "Picture an elderly man, struck by a tram in 1926, carried through these doors. His clothes are so shabby that at first nobody recognises him. He is Antoni Gaudí, the architect of the Sagrada Família, and a few days later he dies here. Look around at these old stone walls. This Gothic building, founded in 1401, was Barcelona's main hospital for more than five hundred years, and generations of the city's sick were cared for inside. Today it has a quieter life as home to the National Library of Catalonia.",
+        "facts_to_verify": [
+          "Gaudí was hit by a tram in 1926 and brought to this hospital",
+          "Gaudí was not recognised at first because of his poor clothing",
+          "Gaudí died here a few days later",
+          "Gaudí was the architect of the Sagrada Família",
+          "Hospital founded in 1401",
+          "It was the city's main hospital for more than five hundred years",
+          "The building now houses the National Library of Catalonia"
+        ],
+        "audio": "audio/antic-hospital--history.m4a",
+        "audioHash": "d9ec845060"
+      },
+      "architecture": {
+        "story": "Look up at these stone walls and you're seeing Gothic Barcelona at work, not at prayer. Founded in 1401, this was built as a hospital, and it served as the city's main one for more than five hundred years. Notice the pointed arches and the heavy, plain stone. This was a building made to last, and it did. Spaces that once held patients now hold books, as home to the National Library of Catalonia. And here's a twist: Gaudí, Barcelona's most daring architect, died inside these walls in 1926.",
+        "facts_to_verify": [
+          "Hospital founded in 1401",
+          "It was the city's main hospital for more than five hundred years",
+          "Pointed arches are visible from the stop",
+          "The library occupies former hospital spaces",
+          "The building now houses the National Library of Catalonia",
+          "Gaudí died here in 1926"
+        ],
+        "audio": "audio/antic-hospital--architecture.m4a",
+        "audioHash": "348e147950"
+      },
+      "outdoors": {
+        "story": "Step in from the busy streets of El Raval and listen. The noise drops away. Notice the orange trees around you, their dark glossy leaves and, depending on the season, bright fruit. This courtyard belongs to a Gothic hospital founded in 1401, which cared for the city's sick for more than five hundred years. Today scholars work inside at the National Library of Catalonia, and locals pass through on their way across the neighbourhood. Look up and watch the light shift over the old stone. Speak softly, and help this green pocket of a real neighbourhood stay peaceful.",
+        "facts_to_verify": [
+          "The courtyard has orange trees",
+          "Hospital founded in 1401",
+          "It was the city's main hospital for more than five hundred years",
+          "The building now houses the National Library of Catalonia",
+          "Locals use the courtyard as a passage through the neighbourhood"
+        ],
+        "audio": "audio/antic-hospital--outdoors.m4a",
+        "audioHash": "fad29c8ed5"
+      }
+    },
     "base": {
       "audio": "audio/antic-hospital.m4a",
       "audioHash": "6754bfea57"
     }
   },
   "refugi-307": {
-    "variants": {},
+    "variants": {
+      "history": {
+        "story": "Look at this modest doorway. Behind it is a shelter that the neighbours of Poble-sec dug for themselves, by hand. During the Spanish Civil War, Barcelona was bombed from the air, and the people of these streets chose to protect each other. Families, children and older people dug the tunnels together, then built benches, a fountain and even a small infirmary inside. More than a thousand shelters were dug across the city, and this is one of the best preserved. Please pause quietly: the homes around you still belong to a living neighbourhood.",
+        "facts_to_verify": [
+          "The shelter was dug by hand by Poble-sec residents, including children and older people, during the Spanish Civil War",
+          "The shelter was built to protect people from air raids on Barcelona",
+          "The shelter contains benches, a fountain and a small infirmary",
+          "More than a thousand shelters were dug across Barcelona",
+          "Refugi 307 is one of the best-preserved shelters in the city"
+        ],
+        "audio": "audio/refugi-307--history.m4a",
+        "audioHash": "bfd467468f"
+      }
+    },
     "base": {
       "audio": "audio/refugi-307.m4a",
       "audioHash": "855c6049f8"
     }
   },
   "drassanes": {
-    "variants": {},
+    "variants": {
+      "history": {
+        "story": "Imagine the sound of hammers and saws echoing under these stone roofs. In the Middle Ages, this was the royal shipyard of Barcelona, where galleys were built for the fleet of the Crown of Aragon, a power whose ships sailed across the Mediterranean. Look along the long stone walls in front of you. Behind them, generations of workers turned timber into warships. Today the old yards hold the Maritime Museum. As you stand here, remember that El Raval around you is a living neighbourhood, so keep your voice gentle for the people who call it home.",
+        "facts_to_verify": [
+          "Drassanes Reials were Barcelona's royal shipyards in the Middle Ages",
+          "Galleys were built here for the fleet of the Crown of Aragon",
+          "The Crown of Aragon's ships sailed across the Mediterranean",
+          "The building now houses the Maritime Museum",
+          "The site is in El Raval"
+        ],
+        "audio": "audio/drassanes--history.m4a",
+        "audioHash": "489a078c4a"
+      },
+      "architecture": {
+        "story": "Here's a building designed around ships. Step back and follow the long rows of pointed Gothic arches as they march into the distance. They were made wide and high on purpose, so that whole galleys could be built under cover, sheltered from the weather. Notice how the arches repeat, bay after bay, dividing the space into long, open halls of stone. It's practical medieval engineering on a grand scale. Today it's considered one of the finest medieval industrial buildings in the world, and it's now home to the Maritime Museum.",
+        "facts_to_verify": [
+          "The halls are built with rows of pointed Gothic arches",
+          "The arches were made wide and high so whole galleys could be built under cover",
+          "Considered one of the finest medieval industrial buildings in the world",
+          "The building now houses the Maritime Museum"
+        ],
+        "audio": "audio/drassanes--architecture.m4a",
+        "audioHash": "5de612cfbf"
+      }
+    },
     "base": {
       "audio": "audio/drassanes.m4a",
       "audioHash": "36fc94fada"
     }
   },
   "palau-guell": {
-    "variants": {},
+    "variants": {
+      "architecture": {
+        "story": "Imagine a horse-drawn carriage rolling straight through one of those arches in front of you. Gaudí made both entrance arches parabolic, a curve that carries weight down to the ground, and wide enough for carriages to pass. He designed this mansion in the late 1880s for the industrialist Eusebi Güell, on a narrow street just off the Rambla. Notice how calm and severe the facade looks. The playfulness is hidden: up on the roof, out of sight from here, sits a forest of tiled chimneys. Please keep your voice low, because people live on this street.",
+        "facts_to_verify": [
+          "Built in the late 1880s",
+          "Commissioned by industrialist Eusebi Güell",
+          "Both entrance arches are parabolic",
+          "Entrance arches were wide enough for horse-drawn carriages",
+          "Chimneys on the roof are covered in tiles"
+        ],
+        "audio": "audio/palau-guell--architecture.m4a",
+        "audioHash": "000a62ebc4"
+      },
+      "art": {
+        "story": "Every great artist needs someone who believes in them, and for Antoni Gaudí that person was Eusebi Güell. In the late 1880s the industrialist gave him this mansion to design, just off the Rambla. Between the two entrance arches, find the coat of arms of Catalonia, a proud statement of identity. Out of sight on the roof, chimneys are dressed in broken tiles, a mosaic style Gaudí would later make famous across the city. You're looking at one chapter of a partnership that later gave Barcelona Park Güell. Enjoy it quietly: this is someone's neighbourhood.",
+        "facts_to_verify": [
+          "Eusebi Güell was Gaudí's patron",
+          "Built in the late 1880s",
+          "Coat of arms of Catalonia between the two entrance arches",
+          "Rooftop chimneys covered in broken-tile mosaic",
+          "Gaudí later used broken-tile mosaic widely in Barcelona",
+          "Park Güell was also a Güell commission"
+        ],
+        "audio": "audio/palau-guell--art.m4a",
+        "audioHash": "10886e773d"
+      }
+    },
     "base": {
       "audio": "audio/palau-guell.m4a",
       "audioHash": "2fc425dbb8"
     }
   },
   "casa-vicens": {
-    "variants": {},
+    "variants": {
+      "architecture": {
+        "story": "Picture this street as open fields. When Antoni Gaudí designed this house in the 1880s, Gràcia was still a separate town, and this was a summer home in the countryside. It was his first important building. Notice how he refused to hide behind plain stone: brick and bands of green and white tiles are stacked together, giving the walls rhythm. Now look up and spot the Moorish-inspired details along the top. Mixing materials and styles like this was daring for a young architect. Today the countryside is gone, replaced by a lived-in neighbourhood.",
+        "facts_to_verify": [
+          "Casa Vicens was designed by Antoni Gaudí in the 1880s",
+          "It was Gaudí's first important building",
+          "It was built as a summer home",
+          "Gràcia was a separate town surrounded by fields at the time",
+          "The facade combines brick with green and white tiles",
+          "Moorish-inspired details are visible along the top of the building"
+        ],
+        "audio": "audio/casa-vicens--architecture.m4a",
+        "audioHash": "78a9ba2b92"
+      },
+      "art": {
+        "story": "Look closely at the tiles and you'll find tiny yellow flowers. They're marigolds. When Antoni Gaudí came to design this summer home in the 1880s, marigolds were growing on the plot, and he turned them into decoration, repeating them across the green and white tiles. It's a lovely idea: the plants that once grew here live on in the walls. Notice too the Moorish touches, a sign of how freely he borrowed from other traditions. This was Gaudí's first important building, and already his love of nature shines through.",
+        "facts_to_verify": [
+          "The yellow flowers on the tiles depict marigolds",
+          "Gaudí was inspired by marigolds growing on the plot",
+          "The tiles are green and white",
+          "Casa Vicens was designed in the 1880s as a summer home",
+          "It was Gaudí's first important building",
+          "The building includes Moorish-style details"
+        ],
+        "audio": "audio/casa-vicens--art.m4a",
+        "audioHash": "ac6a4fe12e"
+      }
+    },
     "base": {
       "audio": "audio/casa-vicens.m4a",
       "audioHash": "3fb1bb1321"
     }
   },
   "casa-punxes": {
-    "variants": {},
+    "variants": {
+      "architecture": {
+        "story": "Notice how this building refuses to sit square. The Diagonal slices across the Eixample's neat grid, leaving an awkward wedge-shaped plot, and Josep Puig i Cadafalch turned that problem into a castle. Designed in the early 1900s, it held flats for three sisters, yet he wrapped them in one continuous façade of red brick, crowned by pointed towers that borrow from northern European Gothic. Look closely at the ceramic panels set into the walls, among them Sant Jordi, Catalonia's patron saint. This is Catalan Modernisme: old forms, reinvented. This is a real neighbourhood, so please keep voices low.",
+        "facts_to_verify": [
+          "Designed in the early 1900s by Josep Puig i Cadafalch",
+          "Built as flats for three sisters",
+          "The plot is wedge-shaped because Avinguda Diagonal cuts across the Eixample grid",
+          "Three sisters' properties unified behind one continuous façade",
+          "Façade is red brick",
+          "Towers draw on northern European Gothic style",
+          "Ceramic panel depicting Sant Jordi, Catalonia's patron saint"
+        ],
+        "audio": "audio/casa-punxes--architecture.m4a",
+        "audioHash": "759a85ede9"
+      }
+    },
     "base": {
       "audio": "audio/casa-punxes.m4a",
       "audioHash": "cc97bbc0ed"
     }
   },
   "fundacio-tapies": {
-    "variants": {},
+    "variants": {
+      "art": {
+        "story": "Look up above the rooftop. That tangle of metal wire floating there is a sculpture called Cloud and Chair, by Antoni Tàpies, one of Catalonia's most important twentieth-century artists. Can you find the chair hiding inside the cloud? Tàpies loved turning humble, everyday things into art, and here a simple chair drifts in a scribble of sky. He set up this foundation to share his work, and his sculpture now crowns a nineteenth-century building. Take a quiet moment on the pavement. This is a lived-in Eixample street, where neighbours are heading home all around you.",
+        "facts_to_verify": [
+          "The sculpture is called Cloud and Chair and is by Antoni Tàpies",
+          "A chair shape is visible within the wire cloud",
+          "Tàpies is known for using humble, everyday objects in his art",
+          "Tàpies himself set up the Fundació Antoni Tàpies",
+          "The building dates from the 19th century"
+        ],
+        "audio": "audio/fundacio-tapies--art.m4a",
+        "audioHash": "f29ab3b170"
+      },
+      "architecture": {
+        "story": "Notice the red brick in front of you. Many Eixample buildings wear stone or painted render, but this façade proudly shows off its bare brick. It was designed by Lluís Domènech i Montaner, the Modernista architect later famous for the Palau de la Música Catalana. It began life as a publishing house, a working building made for producing books. Now let your eyes climb to the top, where a cloud of modern metal wire crowns the old roofline. Pause here while leaving space for passers-by, because people live and work all along this street.",
+        "facts_to_verify": [
+          "The building was designed by Lluís Domènech i Montaner",
+          "Domènech i Montaner designed the Palau de la Música Catalana, after this building",
+          "The building was originally a publishing house",
+          "The façade is exposed red brick, in contrast to many neighbouring Eixample buildings"
+        ],
+        "audio": "audio/fundacio-tapies--architecture.m4a",
+        "audioHash": "a864213c9e"
+      }
+    },
     "base": {
       "audio": "audio/fundacio-tapies.m4a",
       "audioHash": "e88f94f3b6"
     }
   },
   "cccb": {
-    "variants": {},
+    "variants": {
+      "art": {
+        "story": "Look up at that glass wall leaning out over the courtyard, and you are looking at a work of art in its own right. When the old Casa de la Caritat, a former charity house, was turned into this cultural centre, the architects cut away one side of the courtyard and set this glass in its place. Watch how it catches the rooftops of the Raval and the hills beyond, like a canvas that changes with the light. Inside, exhibitions, talks and festivals fill the year, so the old stone and new glass around you are always framing something new.",
+        "facts_to_verify": [
+          "The building was formerly the Casa de la Caritat, a charity house",
+          "During renovation the architects removed one side of the courtyard and added a tall, forward-leaning glass wall",
+          "The glass reflects the Raval rooftops and the hills behind the city",
+          "The centre hosts exhibitions, talks and festivals year-round"
+        ],
+        "audio": "audio/cccb--art.m4a",
+        "audioHash": "860acef729"
+      },
+      "local": {
+        "story": "Before you look at anything, listen. Behind these walls is the Raval, one of the city's most mixed and lived-in neighbourhoods, and this courtyard sits right in the middle of it. Now look up at the tall glass wall leaning over you: it reflects the rooftops of homes where people are simply getting on with their day. This building was once the Casa de la Caritat, a charity house, and today it's a cultural centre that neighbours drop into for talks and festivals through the year. Enjoy it the local way: unhurried, and with your voice low.",
+        "facts_to_verify": [
+          "The Raval is described as one of Barcelona's most mixed and lived-in neighbourhoods",
+          "The building was formerly the Casa de la Caritat, a charity house",
+          "The tall glass wall leans over the courtyard and reflects the surrounding rooftops",
+          "Local residents attend the centre's talks and festivals throughout the year"
+        ],
+        "audio": "audio/cccb--local.m4a",
+        "audioHash": "183f8e22d2"
+      }
+    },
     "base": {
       "audio": "audio/cccb.m4a",
       "audioHash": "7c99b00811"
     }
   },
   "rambla-raval": {
-    "variants": {},
+    "variants": {
+      "local": {
+        "story": "Here's a surprise: this broad avenue is younger than many of the people strolling along it. Around the year 2000, several crowded blocks of the Raval were knocked down to let in light and air, and the neighbours made the new space their own. Look along the benches and café tables, and notice the shopfronts from dozens of countries, a sign of how international this neighbourhood has become. Down at one end, the big bronze cat is a favourite with local children. Remember that people live in the flats above you, so keep your voice low as you wander.",
+        "facts_to_verify": [
+          "The Rambla del Raval was opened around the year 2000",
+          "Several crowded blocks were demolished to create it",
+          "Shops and cafés represent dozens of countries",
+          "The bronze cat stands at one end of the avenue"
+        ],
+        "audio": "audio/rambla-raval--local.m4a",
+        "audioHash": "294915da81"
+      },
+      "art": {
+        "story": "Find the enormous bronze cat at one end of this avenue. It's the work of the Colombian artist Fernando Botero, famous for figures that swell with generous, rounded volume. Notice how the cat's plump body turns an everyday animal into something playful and monumental. Its setting is young too: this avenue was opened around the year 2000, when several crowded blocks were knocked down to bring in light and air. Children from the neighbourhood love this cat, so if they're playing around it, step back and give them room.",
+        "facts_to_verify": [
+          "The cat sculpture is bronze and by Fernando Botero",
+          "Fernando Botero is Colombian",
+          "Botero is known for figures with exaggerated, rounded volumes",
+          "The Rambla del Raval was opened around the year 2000 by demolishing several blocks"
+        ],
+        "audio": "audio/rambla-raval--art.m4a",
+        "audioHash": "e8f79e3479"
+      }
+    },
     "base": {
       "audio": "audio/rambla-raval.m4a",
       "audioHash": "f7e83bc14d"
     }
   },
   "cap-barcelona": {
-    "variants": {},
+    "variants": {
+      "art": {
+        "story": "Notice how this huge face looks like it leapt straight out of a comic book. It's the work of Roy Lichtenstein, the American pop artist famous for painting cartoon-style images with bold outlines and printed dots. Here he swapped paint for something very Catalan: broken pieces of ceramic, the trencadís technique Gaudí made famous. Look closely and you'll see the shards set out like the dots of a comic strip. Made for the 1992 Olympic Games, it's a playful conversation between American pop art and Catalan Modernisme, right beside the old port.",
+        "facts_to_verify": [
+          "Roy Lichtenstein was an American pop artist",
+          "Lichtenstein was known for cartoon-style images with bold outlines and printed dots",
+          "The sculpture uses trencadís, the broken-ceramic technique associated with Gaudí",
+          "The work was made for the 1992 Olympic Games"
+        ],
+        "audio": "audio/cap-barcelona--art.m4a",
+        "audioHash": "81e58b493c"
+      },
+      "outdoors": {
+        "story": "Can you feel the sea breeze? You're standing at the edge of the old port, and this giant ceramic face shares the waterside with you. Look at how the sunlight plays across its broken tiles: on a bright day the colours almost glitter, and as the light softens towards evening the whole face seems to change mood. Made by Roy Lichtenstein for the 1992 Olympic Games, it suits this open waterfront perfectly. Find a quiet spot nearby, watch the boats and the gulls, and remember that all around you are neighbourhoods where people live, so keep your pause a gentle one.",
+        "facts_to_verify": [
+          "The sculpture stands by Port Vell, Barcelona's old port",
+          "The sculpture is covered in broken ceramic tiles",
+          "The work is by Roy Lichtenstein",
+          "The work was made for the 1992 Olympic Games"
+        ],
+        "audio": "audio/cap-barcelona--outdoors.m4a",
+        "audioHash": "4e8ebb018c"
+      }
+    },
     "base": {
       "audio": "audio/cap-barcelona.m4a",
       "audioHash": "0b34964eef"
     }
   },
   "placa-vila-gracia": {
-    "variants": {},
+    "variants": {
+      "local": {
+        "story": "Notice the people around you: many of them are not visitors, they live right here. This square sits in the middle of a real neighbourhood, and for the people in the flats above you it works like a shared living room. They cross it on the way home, stop to chat, and meet friends beneath the tall clock tower that has become Gràcia's symbol. Opposite stands the district hall. In August, during the Festa Major, giant figures dance here. Today, enjoy it the local way: find a quiet spot, slow down and watch daily life go by.",
+        "facts_to_verify": [
+          "The clock tower is considered the symbol of Gràcia",
+          "The building opposite is Gràcia's district hall",
+          "The Festa Major de Gràcia takes place in August and features giant figures dancing in this square"
+        ],
+        "audio": "audio/placa-vila-gracia--local.m4a",
+        "audioHash": "3bc0d23b0a"
+      },
+      "history": {
+        "story": "Imagine standing here when this was not Barcelona at all. Gràcia was once an independent town, and this square was its beating heart. Look up at the slender clock tower. It went up in the 1860s, while Gràcia still governed itself, and it has become the symbol of the neighbourhood. Across the square stands Gràcia's district hall. In 1897 Gràcia joined Barcelona, yet the old town's pride never quite left. You can still feel it in the streets around you, where real neighbours live their everyday lives.",
+        "facts_to_verify": [
+          "Gràcia was an independent town before joining Barcelona",
+          "Gràcia joined Barcelona in 1897",
+          "The clock tower was built in the 1860s",
+          "The clock tower is considered the symbol of Gràcia",
+          "The building across the square is Gràcia's district hall"
+        ],
+        "audio": "audio/placa-vila-gracia--history.m4a",
+        "audioHash": "4aead85098"
+      },
+      "architecture": {
+        "story": "Tilt your head back and follow the clock tower all the way to the top. Notice how slender it is: a tall, narrow shaft rising from the open square, easy to spot from every corner. It was built in the 1860s, when Gràcia was still its own town, and a public clock like this let the whole square keep the same time. Now turn and look at Gràcia's district hall facing it. Together they frame this open space, made for gathering and still shared by the people who live all around it.",
+        "facts_to_verify": [
+          "The clock tower was built in the 1860s",
+          "The clock tower stands in the open square, visible from every corner (check its exact position)",
+          "Gràcia was still an independent town when the tower was built",
+          "The building facing the tower is Gràcia's district hall"
+        ],
+        "audio": "audio/placa-vila-gracia--architecture.m4a",
+        "audioHash": "7edadff5f2"
+      }
+    },
     "base": {
       "audio": "audio/placa-vila-gracia.m4a",
       "audioHash": "91ccb8f1f8"
     }
   },
   "placa-virreina": {
-    "variants": {},
+    "variants": {
+      "local": {
+        "story": "Here's the secret of Gràcia: its squares are its living rooms. Look around you. Parents push prams across the paving, older neighbours settle onto the benches, and friends linger on the café terraces over a slow coffee. Nobody is in a hurry, and that's the point. At one end, notice the church of Sant Joan, rebuilt after it was burned during the Civil War. People really live in the buildings around you, so do as they do: take a seat, order a coffee, and simply watch the neighbourhood go about its day.",
+        "facts_to_verify": [
+          "The church at one end of the square is the church of Sant Joan",
+          "The church was burned during the Spanish Civil War and later rebuilt",
+          "Plaça de la Virreina is in the Gràcia neighbourhood"
+        ],
+        "audio": "audio/placa-virreina--local.m4a",
+        "audioHash": "9fcfafb671"
+      },
+      "outdoors": {
+        "story": "Step under these trees and notice how the shade changes the whole feel of the street. This small, leafy square is one of Gràcia's favourite spots to sit out of the sun, and on a bright day you'll see why. Look up at the canopy and watch the light fall through the leaves in patches onto the ground below. At one end, the church of Sant Joan, rebuilt after it was burned during the Civil War, closes the view. Find a free bench or a terrace and enjoy a quiet pause. Remember, this is home for the people around you.",
+        "facts_to_verify": [
+          "The square is lined with trees that shade it",
+          "The church at one end of the square is the church of Sant Joan",
+          "The church was burned during the Spanish Civil War and later rebuilt"
+        ],
+        "audio": "audio/placa-virreina--outdoors.m4a",
+        "audioHash": "957c2af20f"
+      }
+    },
     "base": {
       "audio": "audio/placa-virreina.m4a",
       "audioHash": "acb627ce43"
     }
   },
   "mercat-barceloneta": {
-    "variants": {},
+    "variants": {
+      "food": {
+        "story": "Breathe in. This is what a fishermen's neighbourhood smells like. Barceloneta has had a market on this spot since the 19th century, and the sea still sets the menu. Step inside and head for the fish counters, where fresh fish and seafood are laid out for the neighbourhood's shoppers. Then look for the small bars tucked in among the stalls. Locals perch at the counter there for lunch. If you join them, keep it simple: take a stool, point at what looks good, and eat the way the neighbours do, unhurried and at the bar.",
+        "facts_to_verify": [
+          "A market has stood on this site since the 19th century",
+          "Barceloneta is historically a fishermen's neighbourhood",
+          "There are small bars inside the market where locals eat lunch at the counter"
+        ],
+        "audio": "audio/mercat-barceloneta--food.m4a",
+        "audioHash": "e7ed731232"
+      },
+      "local": {
+        "story": "This market wasn't built as a show for visitors. It's where La Barceloneta does its everyday shopping, and it has been since the 19th century, back when this was a neighbourhood of fishermen. Watch the rhythm around you: people chatting with stallholders, shopping bags slowly filling up, someone grabbing a quick lunch at one of the counter bars. Join in gently. Wait your turn, ask before photographing stalls or people, and buy something if you can. The flats around this square are real homes, so keep your voice low as you wander.",
+        "facts_to_verify": [
+          "A market has served the neighbourhood since the 19th century",
+          "Barceloneta was historically a fishermen's neighbourhood",
+          "The market has counter bars where locals have lunch"
+        ],
+        "audio": "audio/mercat-barceloneta--local.m4a",
+        "audioHash": "352ed2389f"
+      },
+      "architecture": {
+        "story": "Look up. That bold roof seems to float above the old market, as if it had drifted in from the sea and settled there. Beneath it is the old iron structure of a market that has served this fishermen's neighbourhood since the 19th century. When the building was renovated in 2007, the architects kept the iron and set this striking new roof above it, fitted with solar panels. Walk slowly around the outside and notice the two layers, the old iron frame and the new roof, telling two different chapters of the same story.",
+        "facts_to_verify": [
+          "The market dates from the 19th century",
+          "The old iron structure was renovated in 2007",
+          "The new roof added in the renovation carries solar panels"
+        ],
+        "audio": "audio/mercat-barceloneta--architecture.m4a",
+        "audioHash": "4129cfcffe"
+      }
+    },
     "base": {
       "audio": "audio/mercat-barceloneta.m4a",
       "audioHash": "92d110b529"
     }
   },
   "mercat-concepcio": {
-    "variants": {},
+    "variants": {
+      "food": {
+        "story": "Step under the iron-and-glass roof and follow your nose. This market has fed the right side of the Eixample since the late nineteenth century, and what's on these counters is what local kitchens will cook tonight. Look for bright piles of fruit, fresh fish, butchers' counters and cheese stalls. Watch which ingredients shoppers pick out so carefully, and you'll learn more about everyday Barcelona cooking than any menu can tell you. Keep your voice low and your path clear: people here are doing their real daily shopping, not posing for photos.",
+        "facts_to_verify": [
+          "Market was built in the late 19th century",
+          "Iron-and-glass construction",
+          "Serves the right side of the Eixample",
+          "Has operated as a food market continuously since it was built",
+          "Stalls sell fruit, fish, meat and cheese"
+        ],
+        "audio": "audio/mercat-concepcio--food.m4a",
+        "audioHash": "6858e928d4"
+      },
+      "local": {
+        "story": "Notice something here: hardly anyone around you is a tourist. Mercat de la Concepció is where people from the right side of the Eixample do their everyday shopping, and you're standing in the middle of it. Look at the flower stalls outside, their colours spilling onto the street, then glance under the iron-and-glass roof built in the late nineteenth century. Neighbours come in for fruit, meat, fish and cheese. Step aside for anyone with full bags, keep your voice soft, and enjoy simply watching a real neighbourhood go about its day.",
+        "facts_to_verify": [
+          "Very few tourists visit the market",
+          "Serves the right side of the Eixample",
+          "Flower stalls are located outside on the street",
+          "Iron-and-glass roof built in the late 19th century",
+          "Stalls sell fruit, meat, fish and cheese"
+        ],
+        "audio": "audio/mercat-concepcio--local.m4a",
+        "audioHash": "3abadf7a56"
+      }
+    },
     "base": {
       "audio": "audio/mercat-concepcio.m4a",
       "audioHash": "050688a95d"
     }
   },
   "mercat-abaceria": {
-    "variants": {},
+    "variants": {
+      "food": {
+        "story": "Look around at what fills the stalls, because this is where Gràcia buys its fruit, its fish and its bread, and it has done so since the end of the nineteenth century. It's the neighbourhood's biggest market and one of the busiest local markets in the whole city. Notice how the displays follow the seasons. Whatever is piled highest is usually what's best right now. For a taste, buy a ripe piece of fruit or a little bread and enjoy it outside. People here are doing their real shopping, so keep the aisles clear.",
+        "facts_to_verify": [
+          "Gràcia's biggest market",
+          "One of the busiest neighbourhood markets in Barcelona",
+          "Serving local families since the end of the 19th century",
+          "Sells fruit, fish and bread"
+        ],
+        "audio": "audio/mercat-abaceria--food.m4a",
+        "audioHash": "c8db2c98d8"
+      },
+      "local": {
+        "story": "Watch the shoppers for a moment. Notice the wheeled trolleys, the reusable bags, and the quick, easy chats between stallholders and their regulars. This is Gràcia's biggest market. Local families have shopped here since the end of the nineteenth century, far from the tourist routes. There's one ritual worth learning. When you reach a busy stall, ask \"Qui és l'últim?\" That means \"Who's last?\" Then simply wait your turn behind that person. Speak softly, step aside for trolleys, and ask before photographing anyone. This is a real neighbourhood doing its everyday shopping.",
+        "facts_to_verify": [
+          "Gràcia's biggest market",
+          "Serving local families since the end of the 19th century",
+          "Custom of asking 'Qui és l'últim?' (Who's last?) to join the queue at market stalls"
+        ],
+        "audio": "audio/mercat-abaceria--local.m4a",
+        "audioHash": "a5ab97d4ef"
+      }
+    },
     "base": {
       "audio": "audio/mercat-abaceria.m4a",
       "audioHash": "3633e90d5b"
     }
   },
   "mercat-ninot": {
-    "variants": {},
+    "variants": {
+      "food": {
+        "story": "Here's a market named after a ship's figurehead. Ninot means a little figure or doll in Catalan, and the name comes from a carved wooden figurehead that once hung outside a nearby tavern. Today the building is modern, rebuilt in the 2010s, but the real draw is inside. Look toward the fish and seafood counters, where the catch is laid out on ice. Local food lovers come here for that, and for good-quality produce. This is a working neighbourhood market, so shop like a local: point, ask, and let the regulars go first.",
+        "facts_to_verify": [
+          "'Ninot' means a little figure or doll in Catalan",
+          "The market's name comes from a carved wooden ship's figurehead that hung outside a nearby tavern",
+          "The current market building was rebuilt in the 2010s",
+          "The market is especially known for its fish and seafood",
+          "Fish is displayed on ice at the counters (general description, confirm it suits this market)"
+        ],
+        "audio": "audio/mercat-ninot--food.m4a",
+        "audioHash": "579790c8e2"
+      }
+    },
     "base": {
       "audio": "audio/mercat-ninot.m4a",
       "audioHash": "2377ed9058"
@@ -726,28 +1238,106 @@ window.WALKBCN_STORIES = {
     }
   },
   "port-vell": {
-    "variants": {},
+    "variants": {
+      "outdoors": {
+        "story": "Under your feet, the wooden walkway of the Rambla de Mar swings open to let boats pass, so for a moment you're standing on a bridge over the harbour. Pause and listen to the water against the hulls, and notice how the light glints between the moored boats. Then turn back towards the city, where the Columbus monument rises at the end of the Rambla. Since the 1992 Olympics, Barcelona's old working harbour has become open space for walking, cycling and breathing sea air. Share it gently: neighbours live and work right here too.",
+        "facts_to_verify": [
+          "The Rambla de Mar wooden walkway swings open to let boats pass",
+          "The Columbus monument stands at the end of the Rambla",
+          "The old working harbour was turned into a promenade in connection with the 1992 Olympics"
+        ],
+        "audio": "audio/port-vell--outdoors.m4a",
+        "audioHash": "711c7ba604"
+      }
+    },
     "base": {
       "audio": "audio/port-vell.m4a",
       "audioHash": "2fe57a0708"
     }
   },
   "parc-estacio-nord": {
-    "variants": {},
+    "variants": {
+      "outdoors": {
+        "story": "Trains once rumbled across the ground where you're standing. This was railway land beside the old North Station, and today it's open lawn and wide sky. Look down at the long, curving shapes rising from the grass, covered in blue ceramic. They're called Fallen Sky, as if a piece of the sky had landed in the park. Find a bench or a patch of grass nearby and watch the light play on the tiles. Around you, neighbours read, children climb and dogs run, so enjoy it gently, the way the locals do.",
+        "facts_to_verify": [
+          "The park was built on former railway land next to the old North Station (Estació del Nord)",
+          "The curving forms are covered in blue ceramic",
+          "The artwork is called Fallen Sky"
+        ],
+        "audio": "audio/parc-estacio-nord--outdoors.m4a",
+        "audioHash": "5de4778ff5"
+      },
+      "art": {
+        "story": "Look at the ground, because the artwork is under your feet. Those long, wave-like forms covered in blue ceramic are a piece of land art by the American artist Beverly Pepper, called Fallen Sky. Instead of standing on a plinth, the sculpture rises out of the earth itself and invites you in. Notice how the curves change as you walk slowly around them. Watch the neighbours who use this park every day: children climb it, others read beside it. Here, art is lived in, not just looked at.",
+        "facts_to_verify": [
+          "The artist is Beverly Pepper",
+          "Beverly Pepper was American",
+          "The work is called Fallen Sky",
+          "The work is a land-art piece covered in blue ceramic"
+        ],
+        "audio": "audio/parc-estacio-nord--art.m4a",
+        "audioHash": "1e84b7f114"
+      }
+    },
     "base": {
       "audio": "audio/parc-estacio-nord.m4a",
       "audioHash": "f547d5ffbe"
     }
   },
   "jardins-palau-robert": {
-    "variants": {},
+    "variants": {
+      "outdoors": {
+        "story": "Close your eyes. Can you still hear the traffic of Passeig de Gràcia? It's only a few steps away, yet in here the sound softens. Now look up at the tall palm trees, their fronds catching the light high above the paths. This small garden sits behind an elegant palace from the turn of the twentieth century, and it feels like a secret courtyard in the heart of the Eixample. Pause in the shade and let the city slow down. People who live and work nearby come here for quiet too, so keep voices low and enjoy the calm.",
+        "facts_to_verify": [
+          "The palace dates from the turn of the 20th century",
+          "The garden is a few steps from Passeig de Gràcia",
+          "The garden has tall palm trees"
+        ],
+        "audio": "audio/jardins-palau-robert--outdoors.m4a",
+        "audioHash": "7fe172420f"
+      },
+      "architecture": {
+        "story": "Turn and face the palace behind the palm trees. Built at the turn of the twentieth century, it was a grand private residence set back from Passeig de Gràcia, with its own garden, a real luxury in the tightly planned grid of the Eixample. Notice the calm, symmetrical stone facade and its classical details. While some neighbours on this avenue chose bold Modernista curves, this house looks back to older, more formal European models. Today it's a public information centre about Catalonia. Admire it quietly; this is a real neighbourhood where people live and work.",
+        "facts_to_verify": [
+          "The palace was built at the turn of the 20th century",
+          "It was originally built as a private residence",
+          "The facade is symmetrical, stone and classical (neoclassical) in style",
+          "Modernista buildings stand on the same avenue, Passeig de Gràcia",
+          "The palace is now a public information centre about Catalonia"
+        ],
+        "audio": "audio/jardins-palau-robert--architecture.m4a",
+        "audioHash": "74607535d9"
+      }
+    },
     "base": {
       "audio": "audio/jardins-palau-robert.m4a",
       "audioHash": "c915786a00"
     }
   },
   "platja-sant-sebastia": {
-    "variants": {},
+    "variants": {
+      "outdoors": {
+        "story": "Take a breath and look out to sea. You're standing on one of the oldest beaches in Barcelona, where the city's first bathing clubs opened in the 19th century, when sea bathing became fashionable. Let your eyes follow the sand to its far end, where a sail-shaped hotel rises. That's where the city stops and the open Mediterranean begins. If you'd like a pause, find a quiet spot near the water's edge, listen to the waves, and simply watch the light move across the sea.",
+        "facts_to_verify": [
+          "Platja de Sant Sebastià is one of the oldest beaches in Barcelona",
+          "Barcelona's first bathing clubs opened here in the 19th century",
+          "Sea bathing became fashionable in the 19th century",
+          "A sail-shaped hotel stands at the end of the beach, marking where the city ends and the open sea begins"
+        ],
+        "audio": "audio/platja-sant-sebastia--outdoors.m4a",
+        "audioHash": "663c2f456a"
+      },
+      "local": {
+        "story": "Look along the edge of the sand. Some of the buildings here are Barcelona's historic swimming clubs, and they're still very much in use. Their story goes back to the 19th century, when the city's first bathing clubs opened on this beach as sea bathing became fashionable. For many neighbours, this is simply their local beach: a swim, a walk with friends, a chat by the water. La Barceloneta, just inland, is a real neighbourhood where people live and sleep, so keep your voice low as you head back through its narrow streets.",
+        "facts_to_verify": [
+          "Historic swimming clubs still stand at the edge of Platja de Sant Sebastià and are still in use",
+          "Barcelona's first bathing clubs opened on this beach in the 19th century",
+          "Sea bathing became fashionable in the 19th century"
+        ],
+        "audio": "audio/platja-sant-sebastia--local.m4a",
+        "audioHash": "97809511f9"
+      }
+    },
     "base": {
       "audio": "audio/platja-sant-sebastia.m4a",
       "audioHash": "50f63fded2"
