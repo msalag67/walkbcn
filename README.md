@@ -33,6 +33,18 @@ npm run generate
 - `-- --force` lo rehace todo · `-- --only=casa-batllo` una sola parada · `-- --text` / `-- --audio` solo una parte.
 - `-- --mock` prueba todo el proceso sin llamar a la IA.
 
+### Idiomas y duraciones
+
+`scripts/translate.mjs` crea las versiones corta y larga de cada historia y lo traduce todo (historias, consejos y Activities) al catalán, castellano, francés, alemán, italiano y chino. También graba el audio de la versión normal en cada idioma. Lo guarda en `content/i18n/`.
+
+```bash
+node scripts/translate.mjs               # todo lo que falte
+node scripts/translate.mjs --lang=fr     # solo un idioma
+node scripts/translate.mjs --audio       # solo grabar audio (sin clave)
+```
+
+Los textos de la interfaz (botones, avisos…) están en `data/ui.js` y se editan a mano.
+
 ### Revisar antes de enseñarlo
 
 Abre `content/review.md`: tiene todas las historias generadas y, para cada una, los datos (fechas, nombres, cifras) que conviene comprobar. Si cambias un texto, edita `content/stories.json` y ejecuta `npm run generate -- --audio` para volver a grabar solo lo que cambió.
