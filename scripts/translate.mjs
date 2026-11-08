@@ -91,8 +91,14 @@ async function pool(items, limit, fn) {
 }
 
 // ---------- Claude ----------
+// Errors that no retry will fix (no credit, bad key): stop the whole run straight away.
+let fatal = null;
+function isFatal(err) {
+  return err?.status === 401 || err?.status === 403 || /credit balance|billing/i.test(err?.message || "");
+}
 let client;
 async function ask(system, user, effort) {
+  if (fatal) throw fatal;
   // Many requests run at once, so allow more automatic retries if we hit rate limits.
   client ??= new Anthropic({ maxRetries: 8 });
   const response = await client.beta.messages.create({
@@ -105,6 +111,9 @@ async function ask(system, user, effort) {
     fallbacks: "default",
     system,
     messages: [{ role: "user", content: user }],
+  }).catch((err) => {
+    if (isFatal(err)) fatal ??= err;
+    throw err;
   });
   if (response.stop_reason === "refusal") throw new Error(`declined (${response.stop_details?.category ?? "no category"})`);
   if (response.stop_reason === "max_tokens") throw new Error("response was cut off");
@@ -258,6 +267,13 @@ if (needsKey && !process.env.ANTHROPIC_API_KEY) {
 }
 const en = load("en");
 if (doLengths) await makeLengths(en);
+const stopIfFatal = () => {
+  if (!fatal) return;
+  console.error(`\nStopped: ${/credit balance/i.test(fatal.message) ? "your API credit has run out. Add credit in Claude Console (Billing), then run the same command again" : fatal.message}.`);
+  console.error("Everything generated so far is saved.");
+  process.exit(1);
+};
+stopIfFatal();
 const targets = langs.filter((l) => l !== "en").map((lang) => ({ lang, data: load(lang) }));
 if (doText) {
   console.log(`Translating into ${targets.map((t) => LANGS[t.lang].name).join(", ")} (all at once)…`);
@@ -266,6 +282,7 @@ if (doText) {
     await translateActivities(lang, data);
   }));
 }
+stopIfFatal();
 if (doAudio) for (const { lang, data } of targets) recordAudio(lang, data);
 const missing = targets.flatMap(({ lang, data }) => STOPS.filter((s) => !data.stops[s.id]).map((s) => `${lang}/${s.id}`));
 if (missing.length) console.log(`\nStill missing (run the same command again): ${missing.join(", ")}`);
