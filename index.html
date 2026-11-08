@@ -67,6 +67,16 @@
   .seg button { border: 0; background: transparent; padding: 10px 16px; font: 500 15px Inter, sans-serif; cursor: pointer; color: var(--ink); }
   .seg button + button { border-left: 1.5px solid var(--line); }
   .seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
+  .plan-panel { margin-top: 14px; }
+  .range { display: flex; flex-direction: column; gap: 8px; max-width: 360px; font-size: 15px; }
+  .range input { width: 100%; accent-color: var(--accent); }
+  .opt-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 12px; }
+  .opt-label { width: 52px; font-weight: 600; font-size: 14px; }
+  .check { display: flex; gap: 8px; align-items: flex-start; margin-top: 16px; font-size: 15px; }
+  .check input { margin-top: 3px; accent-color: var(--accent); }
+  #pickMap { height: 240px; border-radius: 14px; border: 1px solid var(--line); margin-top: 6px; z-index: 0; }
+  .pin.start, .pin.end { background: #2e7d32; }
+  .pin.end { background: var(--ink); }
 
   .primary {
     display: block; width: 100%; margin-top: 28px; border: 0; border-radius: 14px;
@@ -195,11 +205,68 @@
     <div class="tiles" id="interests"></div>
 
     <h2>How long a walk?</h2>
-    <div class="seg" id="length">
-      <button type="button" data-n="4" aria-pressed="false">4 stops</button>
-      <button type="button" data-n="5" aria-pressed="true">5 stops</button>
-      <button type="button" data-n="6" aria-pressed="false">6 stops</button>
+    <div class="seg" id="planMode" role="group" aria-label="Plan by">
+      <button type="button" data-mode="stops" aria-pressed="true">Stops</button>
+      <button type="button" data-mode="time" aria-pressed="false">Time</button>
+      <button type="button" data-mode="distance" aria-pressed="false">Distance</button>
     </div>
+    <div class="plan-panel" id="panel-stops">
+      <label class="range"><span><b id="stopsValue">5</b> stops</span>
+        <input type="range" id="stopsRange" min="2" max="10" value="5" aria-label="Number of stops"></label>
+    </div>
+    <div class="plan-panel" id="panel-time" hidden>
+      <div class="chips" id="timeChips">
+        <button type="button" class="chip" data-v="30" aria-pressed="false">30 min</button>
+        <button type="button" class="chip" data-v="60" aria-pressed="true">1 h</button>
+        <button type="button" class="chip" data-v="90" aria-pressed="false">1 h 30</button>
+        <button type="button" class="chip" data-v="120" aria-pressed="false">2 h</button>
+        <button type="button" class="chip" data-v="180" aria-pressed="false">3 h</button>
+      </div>
+      <p class="hint">Includes about 10 minutes at each stop to listen and look around.</p>
+    </div>
+    <div class="plan-panel" id="panel-distance" hidden>
+      <div class="chips" id="distChips">
+        <button type="button" class="chip" data-v="1" aria-pressed="false">1 km</button>
+        <button type="button" class="chip" data-v="2" aria-pressed="true">2 km</button>
+        <button type="button" class="chip" data-v="3" aria-pressed="false">3 km</button>
+        <button type="button" class="chip" data-v="5" aria-pressed="false">5 km</button>
+      </div>
+      <p class="hint">Total walking distance.</p>
+    </div>
+
+    <h2>Where do you start and finish?</h2>
+    <div class="opt-row">
+      <span class="opt-label">Start</span>
+      <div class="chips" id="startChips">
+        <button type="button" class="chip" data-v="best" aria-pressed="true">Best spot for me</button>
+        <button type="button" class="chip" data-v="here" aria-pressed="false">Where I am now</button>
+        <button type="button" class="chip" data-v="map" aria-pressed="false">Choose on map</button>
+      </div>
+    </div>
+    <div class="opt-row">
+      <span class="opt-label">Finish</span>
+      <div class="chips" id="endChips">
+        <button type="button" class="chip" data-v="any" aria-pressed="true">Anywhere</button>
+        <button type="button" class="chip" data-v="loop" aria-pressed="false">Back where I started</button>
+        <button type="button" class="chip" data-v="map" aria-pressed="false">Choose on map</button>
+      </div>
+    </div>
+    <div id="pickBox" hidden>
+      <p class="hint" id="pickHint">Tap the map to set your start.</p>
+      <div id="pickMap" role="region" aria-label="Choose a point on the map"></div>
+    </div>
+    <p class="hint" id="locStatus" hidden></p>
+
+    <h2>A few more details</h2>
+    <div class="opt-row">
+      <span class="opt-label">Pace</span>
+      <div class="seg" id="paceSeg">
+        <button type="button" data-v="3.5" aria-pressed="false">Relaxed</button>
+        <button type="button" data-v="4.5" aria-pressed="true">Normal</button>
+        <button type="button" data-v="5.5" aria-pressed="false">Brisk</button>
+      </div>
+    </div>
+    <label class="check"><input type="checkbox" id="avoidCrowded"> Avoid the busiest places (Sagrada Família, Park Güell…)</label>
 
     <button class="primary" id="build" disabled>Create my route</button>
   </section>
@@ -255,10 +322,10 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="data/stops.js"></script>
-<script src="data/activities.js"></script>
+<script src="data/stops.js?v=2"></script>
+<script src="data/activities.js?v=2"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
-<script src="content/stories.js"></script>
+<script src="content/stories.js?v=3"></script>
 <script>
 // Photos come from Wikimedia Commons (free licences); credit links point to each file page.
 const photo = (file, w = 800) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
@@ -335,7 +402,7 @@ let selected = new Set();
 let stopsCount = 5;
 let route = [];
 let current = 0;
-let map, markers = [], line;
+let map, markers = [], line, pointMarkers = [];
 
 // ---- Step 1 UI ----
 document.getElementById('heroImg').src = photo(HERO_IMG, 1200);
@@ -352,12 +419,73 @@ INTERESTS.forEach(i => {
   };
   chipsEl.appendChild(b);
 });
-document.querySelectorAll('#length button').forEach(b => {
-  b.onclick = () => {
-    stopsCount = +b.dataset.n;
-    document.querySelectorAll('#length button').forEach(x => x.setAttribute('aria-pressed', x === b));
-  };
+// ---- Route options: how long, where to start and finish, pace ----
+const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false };
+const BCN_CENTER = [41.3874, 2.1686];
+
+function pressOnly(container, button) {
+  container.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === button));
+}
+function onChoice(id, handler) {
+  const box = document.getElementById(id);
+  box.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { pressOnly(box, b); handler(b.dataset); }));
+}
+onChoice('planMode', d => {
+  plan.mode = d.mode;
+  ['stops', 'time', 'distance'].forEach(m => { document.getElementById(`panel-${m}`).hidden = m !== d.mode; });
 });
+const stopsRange = document.getElementById('stopsRange');
+stopsRange.oninput = () => { stopsCount = +stopsRange.value; document.getElementById('stopsValue').textContent = stopsCount; };
+onChoice('timeChips', d => { plan.minutes = +d.v; });
+onChoice('distChips', d => { plan.km = +d.v; });
+onChoice('paceSeg', d => { plan.pace = +d.v; });
+document.getElementById('avoidCrowded').onchange = e => { plan.avoidCrowded = e.target.checked; };
+
+// Start and finish points. "Choose on map" opens a small map; "Where I am now" asks the browser.
+let pickMap = null, pickTarget = 'start', pickMarkers = {};
+const locStatus = document.getElementById('locStatus');
+function setStatus(text) { locStatus.hidden = !text; locStatus.textContent = text || ''; }
+function showPicker(target) {
+  pickTarget = target;
+  document.getElementById('pickBox').hidden = false;
+  document.getElementById('pickHint').textContent = `Tap the map to set your ${target === 'start' ? 'start' : 'finish'}.`;
+  if (!pickMap) {
+    pickMap = L.map('pickMap', { scrollWheelZoom: false }).setView(BCN_CENTER, 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(pickMap);
+    pickMap.on('click', e => setPoint(pickTarget, { lat: e.latlng.lat, lng: e.latlng.lng }));
+  }
+  setTimeout(() => pickMap.invalidateSize(), 0);
+}
+function setPoint(target, pt) {
+  plan[target === 'start' ? 'startPt' : 'endPt'] = pt;
+  if (!pickMap) return;
+  pickMarkers[target]?.remove();
+  pickMarkers[target] = L.marker([pt.lat, pt.lng], { icon: L.divIcon({ className: '', html: `<div class="pin ${target}">${target === 'start' ? 'S' : 'F'}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] }) }).addTo(pickMap);
+}
+function hidePickerIfUnused() {
+  if (plan.start !== 'map' && plan.end !== 'map') document.getElementById('pickBox').hidden = true;
+}
+onChoice('startChips', d => {
+  plan.start = d.v; plan.startPt = null; setStatus('');
+  if (pickMarkers.start) { pickMarkers.start.remove(); delete pickMarkers.start; }
+  if (d.v === 'map') showPicker('start');
+  if (d.v === 'here') locate();
+  hidePickerIfUnused();
+});
+onChoice('endChips', d => {
+  plan.end = d.v; plan.endPt = null;
+  if (pickMarkers.end) { pickMarkers.end.remove(); delete pickMarkers.end; }
+  if (d.v === 'map') showPicker('end');
+  hidePickerIfUnused();
+});
+function locate() {
+  if (!navigator.geolocation) { setStatus("Your browser can't share your location. Choose a point on the map instead."); return; }
+  setStatus('Finding where you are…');
+  navigator.geolocation.getCurrentPosition(
+    pos => { plan.startPt = { lat: pos.coords.latitude, lng: pos.coords.longitude }; setStatus('Got it: your route starts where you are.'); },
+    () => setStatus("We couldn't get your location. Allow location access, or choose a point on the map."),
+    { enableHighAccuracy: true, timeout: 10000 });
+}
 
 // ---- Route building ----
 function dist(a, b) { // km, haversine
@@ -371,30 +499,43 @@ function score(s) {
   return matches ? matches + learningNudge(s) : 0;
 }
 
-// Try each matching stop as a start; greedily add the next stop that best balances
-// interest match vs walking distance. Keep the best overall route.
-// Rules: only stops that match a chosen interest, no leg over 20 min on foot, no route
-// over 60 min, and try to include every chosen interest at least once. If too few
-// stops fit, the route is shorter rather than padded with unrelated places.
-const kmForMinutes = minutes => minutes / 60 * 4.5 / 1.3; // straight-line km for that walking time
-const MAX_LEG_KM = kmForMinutes(20.5); // "20 min", as rounded on screen
-const MAX_TOTAL_KM = kmForMinutes(60);
-function buildRoute(n) {
+// Builds a route from the options. Rules: only stops that match a chosen interest, no
+// leg over 20 min on foot (30 min from a chosen start point to the first stop), stay
+// within the time / distance / stop budget, try to include every chosen interest, and
+// leave enough budget to reach the chosen finish. If too few stops fit, the route is
+// shorter rather than padded with unrelated places.
+const STOP_MIN = 10;          // minutes spent at each stop (listening + looking)
+const LEG_MAX_MIN = 20;       // longest walk between two stops
+const FIRST_LEG_MAX_MIN = 30; // longest walk from a chosen start point to the first stop
+function buildRoute(opts) {
+  const o = { mode: 'stops', pace: 4.5, avoidCrowded: false, start: null, end: null, ...(typeof opts === 'number' ? { n: opts } : opts) };
   const W = 1.2;     // how many "interest points" one km of walking costs
   const COVER = 2;   // bonus for a stop that adds an interest the route doesn't have yet
-  const candidates = STOPS.filter(s => score(s) > 0);
+  const walkMin = km => km * 1.3 / o.pace * 60; // straight-line km -> minutes on foot
+  const target = o.mode === 'stops' ? o.n : 12;
+  const budgetOk = (km, stops) => {
+    if (o.mode === 'time') return walkMin(km) + stops * STOP_MIN <= o.minutes;
+    if (o.mode === 'distance') return km * 1.3 <= o.km;
+    return walkMin(km) <= (o.n <= 6 ? 60 : o.n * 10);
+  };
+  const candidates = STOPS.filter(s => score(s) > 0 && !(o.avoidCrowded && s.crowded));
   let best = null;
-  for (const seed of candidates) {
-    const path = [seed];
+  for (const seed of o.start ? [null] : candidates) {
+    const path = seed ? [seed] : [];
     const left = candidates.filter(s => s !== seed);
-    const covered = new Set(seed.tags.filter(t => selected.has(t)));
+    const covered = new Set(seed ? seed.tags.filter(t => selected.has(t)) : []);
+    const finish = () => (o.end === 'loop' ? (o.start || path[0]) : o.end);
+    const closeKm = p => { const f = finish() || null; return f ? dist(p, f) : 0; };
     let km = 0;
-    while (path.length < n) {
-      const last = path[path.length - 1];
+    if (seed && !budgetOk(closeKm(seed), 1)) continue;
+    while (path.length < target) {
+      const last = path.length ? path[path.length - 1] : o.start;
+      const legMax = path.length ? LEG_MAX_MIN : FIRST_LEG_MAX_MIN;
       let bi = -1, bv = -Infinity;
       left.forEach((s, i) => {
         const d = dist(last, s);
-        if (d > MAX_LEG_KM || km + d > MAX_TOTAL_KM) return;
+        if (walkMin(d) > legMax + 0.5) return;
+        if (!budgetOk(km + d + closeKm(s), path.length + 1)) return;
         const addsInterest = s.tags.some(t => selected.has(t) && !covered.has(t));
         const v = score(s) * 1.5 + (addsInterest ? COVER : 0) - W * d;
         if (v > bv) { bv = v; bi = i; }
@@ -405,26 +546,62 @@ function buildRoute(n) {
       path.push(next);
       next.tags.forEach(t => { if (selected.has(t)) covered.add(t); });
     }
-    // Prefer routes that reach the length asked for, then cover more interests, then walk less.
-    const value = path.length * 10 + covered.size * COVER + path.reduce((a, s) => a + score(s), 0) * 1.5 - W * km;
-    if (!best || value > best.value) best = { path, km, value };
+    if (!path.length) continue;
+    const totalKm = km + closeKm(path[path.length - 1]);
+    // Prefer routes with more stops (up to what was asked), then more interests, then less walking.
+    const value = path.length * 10 + covered.size * COVER + path.reduce((a, s) => a + score(s), 0) * 1.5 - W * totalKm;
+    if (!best || value > best.value) best = { path, km: totalKm, value, start: o.start, end: finish() };
   }
-  return best;
+  return best || { path: [], km: 0, start: o.start, end: null };
 }
 
 // ---- Step 2 UI ----
+function routeOptionsFromPlan() {
+  const opts = { mode: plan.mode, n: stopsCount, minutes: plan.minutes, km: plan.km, pace: plan.pace, avoidCrowded: plan.avoidCrowded };
+  if (plan.start !== 'best') opts.start = plan.startPt;
+  opts.end = plan.end === 'loop' ? 'loop' : plan.end === 'map' ? plan.endPt : null;
+  return opts;
+}
+const fmtMin = m => { const t = Math.round(m); return t >= 60 ? `${Math.floor(t / 60)} h${t % 60 ? ` ${t % 60} min` : ''}` : `${t} min`; };
+const pointIcon = (cls, label) => L.divIcon({ className: '', html: `<div class="pin ${cls}">${label}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] });
+
 function showRoute() {
+  // Points the user still has to give us
+  if (plan.start !== 'best' && !plan.startPt) {
+    setStatus(plan.start === 'here' ? 'We need your location first: allow location access, or choose a point on the map.' : 'Tap the map to set your start first.');
+    locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+  if (plan.end === 'map' && !plan.endPt) {
+    showPicker('end'); setStatus('Tap the map to set where you want to finish.');
+    locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
   routeAngles = {};
   recordLearning(() => selected.forEach(t => { learning.picks[t] = (learning.picks[t] || 0) + 1; }));
-  const r = buildRoute(stopsCount);
+  const opts = routeOptionsFromPlan();
+  const r = buildRoute(opts);
+  if (!r.path.length) {
+    setStatus(opts.start
+      ? 'No stops matching your interests are within a 30-minute walk of that start point. WalkBCN covers central Barcelona: try another start, or more time.'
+      : 'No route fits those options. Try more time or distance, or pick more interests.');
+    locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
   route = r.path; current = 0;
   const walkKm = r.km * 1.3; // streets aren't straight lines
-  const mins = Math.round(walkKm / 4.5 * 60 / 5) * 5;
+  const walkMins = walkKm / plan.pace * 60;
   const labels = INTERESTS.filter(i => selected.has(i.id)).map(i => i.label.toLowerCase());
   document.getElementById('routeTitle').textContent = 'Your ' + listJoin(labels) + ' walk';
+  const notes = [];
+  if (plan.mode === 'stops' && route.length < stopsCount) notes.push(`Only ${route.length} stops match your interests within a short walk, so this route is shorter than ${stopsCount}.`);
+  if (plan.mode !== 'stops' && route.length < 2) notes.push('Only one stop fits: try more time or distance.');
+  const finishLeg = r.end ? dist(route[route.length - 1], r.end) * 1.3 / plan.pace * 60 : 0;
+  if (r.end) notes.push(`Finish: ${Math.round(finishLeg)} min walk from the last stop${plan.end === 'loop' ? ' back to your start' : ''}.`);
   document.getElementById('summary').innerHTML =
-    `<span><b>${route.length}</b> stops</span><span>≈ <b>${walkKm.toFixed(1)} km</b></span><span>≈ <b>${mins} min</b> walking</span>` +
-    (route.length < stopsCount ? `<span>Only ${route.length} stops match your interests within a short walk, so this route is shorter than ${stopsCount}.</span>` : '');
+    `<span><b>${route.length}</b> stops</span><span>≈ <b>${walkKm.toFixed(1)} km</b></span><span>≈ <b>${fmtMin(walkMins)}</b> walking</span>` +
+    `<span>≈ <b>${fmtMin(walkMins + route.length * STOP_MIN)}</b> in total with stops</span>` +
+    notes.map(n => `<span>${n}</span>`).join('');
 
   document.getElementById('pick').hidden = true;
   document.getElementById('route').hidden = false;
@@ -438,9 +615,13 @@ function showRoute() {
   }
   map.invalidateSize();
   markers.forEach(m => m.remove()); markers = [];
+  pointMarkers.forEach(m => m.remove()); pointMarkers = [];
   if (line) line.remove();
 
-  line = L.polyline(route.map(s => [s.lat, s.lng]), { color: '#c4502b', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
+  const pts = [...(r.start ? [r.start] : []), ...route, ...(r.end ? [r.end] : [])].map(p => [p.lat, p.lng]);
+  line = L.polyline(pts, { color: '#c4502b', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
+  if (r.start) pointMarkers.push(L.marker([r.start.lat, r.start.lng], { icon: pointIcon('start', 'S') }).addTo(map));
+  if (r.end && r.end !== r.start && !route.includes(r.end)) pointMarkers.push(L.marker([r.end.lat, r.end.lng], { icon: pointIcon('end', 'F') }).addTo(map));
   route.forEach((s, i) => {
     const m = L.marker([s.lat, s.lng], {
       icon: L.divIcon({ className: '', html: `<div class="pin">${i+1}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] })
@@ -453,11 +634,13 @@ function showRoute() {
   list.innerHTML = '';
   route.forEach((s, i) => {
     const li = document.createElement('li');
-    const leg = i === 0 ? 'Start' : `${Math.round(dist(route[i-1], s) * 1.3 / 4.5 * 60)} min walk`;
+    const prev = i === 0 ? r.start : route[i - 1];
+    const leg = prev ? `${Math.round(dist(prev, s) * 1.3 / plan.pace * 60)} min walk` : 'Start';
     li.innerHTML = `<button type="button"><span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><span class="n">${i+1}</span></span>${s.name}<span class="d">${leg}</span></button>`;
     li.firstChild.onclick = () => { goTo(i); document.getElementById('map').scrollIntoView({ behavior: 'smooth' }); };
     list.appendChild(li);
   });
+  setStatus('');
   goTo(0, false);
 }
 

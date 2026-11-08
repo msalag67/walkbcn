@@ -21,7 +21,7 @@
 |---|---|---|---|
 | 1. Write the stories (offline) | Claude retells each stop's story for each interest | Claude API (`scripts/story-writer.mjs`), scope check, human review in `content/review.md` | AI, with a fixed scope rule and a human check |
 | 2. Read the choice | The visitor picks interests and route length | Web page (button stays disabled until an interest is picked) | Visitor, fixed rule |
-| 3. Build the route | Picks 4–6 nearby stops that match the interests | Scoring rules in `index.html` + small learning nudge | Fixed rules |
+| 3. Build the route | Picks nearby stops that match the interests, within the chosen stops / time / distance, from the chosen start to the chosen finish | Scoring rules in `index.html` + small learning nudge | Fixed rules |
 | 4. Pick each story | Chooses the story version for the chosen interests | Generated stories + on-device learning | Fixed rule + learning |
 | 5. Play the story | Plays the recorded audio | Audio file, browser voice as fallback | Tool |
 
@@ -64,3 +64,5 @@
   - **Fix (step 3 only):** the route builder now uses only stops that match a chosen interest, allows no leg over 20 minutes and no route over 60 minutes, tries to include every chosen interest, and makes the route shorter (and says so) instead of padding it. Result: 7/10 normal cases OK; step 3 errors 4 → 3. The remaining 3 fail because there are too few stops per interest (only 3 for parks and sea, 4 for food), which is a data problem for the next round.
   - **Guardrail (worst attack, out of scope):** the AI wrote a story about Camp Nou, outside our area. Now a fixed rule checks the stop's coordinates against central Barcelona before any AI call, and the prompt tells the AI to refuse out-of-scope stops and to treat stop data as data, not instructions. Attacks handled safely: 4/5 → 5/5.
   - **Still open:** tampered browser data is shown as-is in the privacy counter (no code runs); the 37 stories still need a human fact check.
+- *After the course sessions (product improvements, phase 1):* Grew the stop list from 19 to 46 (27 new stops with checked coordinates from OpenStreetMap; parks and sea 3 → 12, food 4 → 8), because the Session 8 error analysis showed too few stops per interest. Added custom routes: plan by number of stops (2–10), time or distance; start where the visitor is (browser location, used only on the device) or on a map point; finish anywhere, back at the start or on a map point; walking pace; and "avoid the busiest places" (8 stops flagged as crowded). Re-running the Session 8 cases: 8/10 normal cases OK (was 7/10). The 27 new stops have a base story and audio; their per-interest story versions still need generating, and all new facts need the human check.
+  - **Next phases:** story lengths (short, normal, long), languages (Spanish and Catalan first, then the main tourist languages: English, French, Italian, German, plus one more from official data), and more Activities categories.

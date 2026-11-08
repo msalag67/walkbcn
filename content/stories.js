@@ -563,5 +563,194 @@ window.WALKBCN_STORIES = {
       "audio": "audio/park-guell.m4a",
       "audioHash": "d8e07de9be"
     }
+  },
+  "arc-de-triomf": {
+    "variants": {},
+    "base": {
+      "audio": "audio/arc-de-triomf.m4a",
+      "audioHash": "39b679597c"
+    }
+  },
+  "placa-reial": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-reial.m4a",
+      "audioHash": "2578e2d2ed"
+    }
+  },
+  "placa-sant-felip-neri": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-sant-felip-neri.m4a",
+      "audioHash": "073039444e"
+    }
+  },
+  "temple-august": {
+    "variants": {},
+    "base": {
+      "audio": "audio/temple-august.m4a",
+      "audioHash": "071178c752"
+    }
+  },
+  "placa-sant-jaume": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-sant-jaume.m4a",
+      "audioHash": "76606a0cf9"
+    }
+  },
+  "fossar-moreres": {
+    "variants": {},
+    "base": {
+      "audio": "audio/fossar-moreres.m4a",
+      "audioHash": "43b9ec7369"
+    }
+  },
+  "antic-hospital": {
+    "variants": {},
+    "base": {
+      "audio": "audio/antic-hospital.m4a",
+      "audioHash": "6754bfea57"
+    }
+  },
+  "refugi-307": {
+    "variants": {},
+    "base": {
+      "audio": "audio/refugi-307.m4a",
+      "audioHash": "855c6049f8"
+    }
+  },
+  "drassanes": {
+    "variants": {},
+    "base": {
+      "audio": "audio/drassanes.m4a",
+      "audioHash": "36fc94fada"
+    }
+  },
+  "palau-guell": {
+    "variants": {},
+    "base": {
+      "audio": "audio/palau-guell.m4a",
+      "audioHash": "2fc425dbb8"
+    }
+  },
+  "casa-vicens": {
+    "variants": {},
+    "base": {
+      "audio": "audio/casa-vicens.m4a",
+      "audioHash": "3fb1bb1321"
+    }
+  },
+  "casa-punxes": {
+    "variants": {},
+    "base": {
+      "audio": "audio/casa-punxes.m4a",
+      "audioHash": "cc97bbc0ed"
+    }
+  },
+  "fundacio-tapies": {
+    "variants": {},
+    "base": {
+      "audio": "audio/fundacio-tapies.m4a",
+      "audioHash": "e88f94f3b6"
+    }
+  },
+  "cccb": {
+    "variants": {},
+    "base": {
+      "audio": "audio/cccb.m4a",
+      "audioHash": "7c99b00811"
+    }
+  },
+  "rambla-raval": {
+    "variants": {},
+    "base": {
+      "audio": "audio/rambla-raval.m4a",
+      "audioHash": "f7e83bc14d"
+    }
+  },
+  "cap-barcelona": {
+    "variants": {},
+    "base": {
+      "audio": "audio/cap-barcelona.m4a",
+      "audioHash": "0b34964eef"
+    }
+  },
+  "placa-vila-gracia": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-vila-gracia.m4a",
+      "audioHash": "91ccb8f1f8"
+    }
+  },
+  "placa-virreina": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-virreina.m4a",
+      "audioHash": "acb627ce43"
+    }
+  },
+  "mercat-barceloneta": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mercat-barceloneta.m4a",
+      "audioHash": "92d110b529"
+    }
+  },
+  "mercat-concepcio": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mercat-concepcio.m4a",
+      "audioHash": "050688a95d"
+    }
+  },
+  "mercat-abaceria": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mercat-abaceria.m4a",
+      "audioHash": "3633e90d5b"
+    }
+  },
+  "mercat-ninot": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mercat-ninot.m4a",
+      "audioHash": "2377ed9058"
+    }
+  },
+  "bunkers-carmel": {
+    "variants": {},
+    "base": {
+      "audio": "audio/bunkers-carmel.m4a",
+      "audioHash": "06b238029d"
+    }
+  },
+  "port-vell": {
+    "variants": {},
+    "base": {
+      "audio": "audio/port-vell.m4a",
+      "audioHash": "2fe57a0708"
+    }
+  },
+  "parc-estacio-nord": {
+    "variants": {},
+    "base": {
+      "audio": "audio/parc-estacio-nord.m4a",
+      "audioHash": "f547d5ffbe"
+    }
+  },
+  "jardins-palau-robert": {
+    "variants": {},
+    "base": {
+      "audio": "audio/jardins-palau-robert.m4a",
+      "audioHash": "c915786a00"
+    }
+  },
+  "platja-sant-sebastia": {
+    "variants": {},
+    "base": {
+      "audio": "audio/platja-sant-sebastia.m4a",
+      "audioHash": "50f63fded2"
+    }
   }
 };

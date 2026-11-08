@@ -5,7 +5,7 @@
 WalkBCN is a personalised virtual travel guide that helps tourists discover Barcelona through tailored walking routes and audio stories.
 
 - Users select their interests.
-- The app creates a personalised route with 4–6 stops.
+- The app creates a personalised route, planned by number of stops (2–10), by time (30 min–3 h) or by walking distance (1–5 km), with an optional start ("where I am now" or a point on the map), finish (anywhere, back to the start, or a point on the map), walking pace, and an option to avoid the busiest places.
 - Users follow the route through an interactive map.
 - Each stop provides a short, engaging audio story, **told from the angle of the interests the user picked**.
 - **Learning from use:** the app remembers, in the visitor's own browser, which stories they finish and rate, and uses that to choose later story versions. Visitors can opt out or erase it.
