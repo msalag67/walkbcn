@@ -1,0 +1,12 @@
+[
+  "1|Yes||||Plaça del Rei → Barcelona Cathedral → Santa Maria del Mar → Museu Picasso → Mercat de Santa Caterina|2, 8, 3, 4|17",
+  "2|Yes||||Casa Milà (La Pedrera) → Casa Batlló → MACBA → Palau de la Música Catalana|9, 16, 15|40",
+  "3|No|no stop for: local|||Barcelona Cathedral → Plaça del Rei → Museu Picasso → Santa Maria del Mar → El Born Centre de Cultura → Parc de la Ciutadella|2, 5, 3, 5, 7|22",
+  "4|No|1 stop(s) match no chosen interest (Museu Picasso); 28-min leg|||Carrer de Blai → Mercat de Sant Antoni → Mercat de Santa Caterina → Museu Picasso|10, 28, 4|42",
+  "5|Yes||||Santa Maria del Mar → Museu Picasso → Mercat de Santa Caterina → Barcelona Cathedral → Palau de la Música Catalana|3, 4, 5, 7|19",
+  "6|No|4 stop(s) match no chosen interest (El Born Centre de Cultura, Santa Maria del Mar, Museu Picasso, Mercat de Santa Caterina)|||Barceloneta beach → Parc de la Ciutadella → El Born Centre de Cultura → Santa Maria del Mar → Museu Picasso → Mercat de Santa Caterina|20, 7, 5, 3, 4|38",
+  "7|No|38-min leg; 67 min in total|||Carrer de Blai → Mercat de Sant Antoni → MACBA → Mercat de la Llibertat → Plaça del Sol|10, 11, 38, 8|67",
+  "8|Yes||||Casa Milà (La Pedrera) → Casa Batlló → Palau de la Música Catalana → Mercat de Santa Caterina → Museu Picasso → Santa Maria del Mar|9, 17, 5, 4, 3|38",
+  "9|Yes||||Parc de la Ciutadella → El Born Centre de Cultura → Santa Maria del Mar → Museu Picasso|7, 5, 3|15",
+  "10|Yes||||||"
+]

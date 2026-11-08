@@ -373,24 +373,40 @@ function score(s) {
 
 // Try each matching stop as a start; greedily add the next stop that best balances
 // interest match vs walking distance. Keep the best overall route.
+// Rules: only stops that match a chosen interest, no leg over 20 min on foot, no route
+// over 60 min, and try to include every chosen interest at least once. If too few
+// stops fit, the route is shorter rather than padded with unrelated places.
+const kmForMinutes = minutes => minutes / 60 * 4.5 / 1.3; // straight-line km for that walking time
+const MAX_LEG_KM = kmForMinutes(20.5); // "20 min", as rounded on screen
+const MAX_TOTAL_KM = kmForMinutes(60);
 function buildRoute(n) {
-  const W = 1.2; // how many "interest points" one km of walking costs
+  const W = 1.2;     // how many "interest points" one km of walking costs
+  const COVER = 2;   // bonus for a stop that adds an interest the route doesn't have yet
+  const candidates = STOPS.filter(s => score(s) > 0);
   let best = null;
-  for (const seed of STOPS.filter(s => score(s) > 0)) {
+  for (const seed of candidates) {
     const path = [seed];
-    const left = STOPS.filter(s => s !== seed);
-    while (path.length < n && left.length) {
+    const left = candidates.filter(s => s !== seed);
+    const covered = new Set(seed.tags.filter(t => selected.has(t)));
+    let km = 0;
+    while (path.length < n) {
       const last = path[path.length - 1];
-      let bi = 0, bv = -Infinity;
+      let bi = -1, bv = -Infinity;
       left.forEach((s, i) => {
-        const v = score(s) * 1.5 - W * dist(last, s);
+        const d = dist(last, s);
+        if (d > MAX_LEG_KM || km + d > MAX_TOTAL_KM) return;
+        const addsInterest = s.tags.some(t => selected.has(t) && !covered.has(t));
+        const v = score(s) * 1.5 + (addsInterest ? COVER : 0) - W * d;
         if (v > bv) { bv = v; bi = i; }
       });
-      path.push(left.splice(bi, 1)[0]);
+      if (bi < 0) break;
+      const next = left.splice(bi, 1)[0];
+      km += dist(last, next);
+      path.push(next);
+      next.tags.forEach(t => { if (selected.has(t)) covered.add(t); });
     }
-    let km = 0;
-    for (let i = 1; i < path.length; i++) km += dist(path[i-1], path[i]);
-    const value = path.reduce((a, s) => a + score(s), 0) * 1.5 - W * km;
+    // Prefer routes that reach the length asked for, then cover more interests, then walk less.
+    const value = path.length * 10 + covered.size * COVER + path.reduce((a, s) => a + score(s), 0) * 1.5 - W * km;
     if (!best || value > best.value) best = { path, km, value };
   }
   return best;
@@ -407,7 +423,8 @@ function showRoute() {
   const labels = INTERESTS.filter(i => selected.has(i.id)).map(i => i.label.toLowerCase());
   document.getElementById('routeTitle').textContent = 'Your ' + listJoin(labels) + ' walk';
   document.getElementById('summary').innerHTML =
-    `<span><b>${route.length}</b> stops</span><span>≈ <b>${walkKm.toFixed(1)} km</b></span><span>≈ <b>${mins} min</b> walking</span>`;
+    `<span><b>${route.length}</b> stops</span><span>≈ <b>${walkKm.toFixed(1)} km</b></span><span>≈ <b>${mins} min</b> walking</span>` +
+    (route.length < stopsCount ? `<span>Only ${route.length} stops match your interests within a short walk, so this route is shorter than ${stopsCount}.</span>` : '');
 
   document.getElementById('pick').hidden = true;
   document.getElementById('route').hidden = false;
