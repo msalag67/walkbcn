@@ -906,6 +906,26 @@ Check:
 - [ ] The market is especially known for its fish and seafood
 - [ ] Fish is displayed on ice at the counters (general description, confirm it suits this market)
 
+## Bunkers del Carmel
+
+**outdoors**
+
+Turn slowly in a full circle. From this hilltop almost the whole city spreads out below you, from the shining line of the sea to the green mountains behind. Let your eyes travel across the rooftops and see if you can pick out the spires of the Sagrada Família. Find a spot on the concrete platforms, sit, and just watch the light move over the streets. The breeze up here feels a world away from the busy centre. And remember, the houses on these slopes are home to real families, so enjoy the view softly.
+
+Check: 
+- [ ] Almost the whole city is visible from this hilltop, from the sea to the mountains
+- [ ] The Sagrada Família is visible from the Bunkers del Carmel
+
+**history**
+
+Look down at the concrete under your feet. During the Spanish Civil War, anti-aircraft guns stood on this hilltop. It was chosen because from here you can see almost the whole city, from the sea to the mountains, making it a lookout to defend Barcelona from bombing raids. But the story didn't end with the war. Families with nowhere else to live built shacks among the ruins, and people made their homes right here until the late 1980s. Picture kitchens and children's games where you stand now. Today El Carmel below is still a living neighbourhood, full of people's homes.
+
+Check: 
+- [ ] Anti-aircraft guns were placed here during the Spanish Civil War to defend Barcelona from bombing raids
+- [ ] After the war, families built shacks among the ruins
+- [ ] People lived in the shacks here until the late 1980s
+- [ ] The concrete platforms are remains of the anti-aircraft battery
+
 ## Port Vell
 
 **outdoors**
