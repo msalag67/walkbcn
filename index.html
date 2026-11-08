@@ -28,7 +28,13 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 48px; }
-  header { padding: 28px 0 8px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  header { padding: 28px 0 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .lang { position: relative; }
+  .lang-btn { display: flex; align-items: center; gap: 7px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 6px 12px 6px 8px; font: 600 13px Inter, sans-serif; cursor: pointer; }
+  .lang-btn img, .lang-menu img { width: 22px; height: 16px; border-radius: 3px; object-fit: cover; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+  .lang-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 1000; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.12); min-width: 170px; }
+  .lang-menu button { display: flex; align-items: center; gap: 10px; width: 100%; border: 0; background: none; padding: 9px 10px; border-radius: 10px; font: 500 15px Inter, sans-serif; color: var(--ink); cursor: pointer; text-align: left; }
+  .lang-menu button:hover, .lang-menu button[aria-current="true"] { background: var(--accent-soft); }
   .logo { font: 700 26px/1 Fraunces, Georgia, serif; letter-spacing: -0.02em; }
   .logo span { color: var(--accent); }
   .tag { color: var(--muted); font-size: 14px; }
@@ -180,13 +186,21 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="logo">Walk<span>BCN</span></div>
-    <div class="tag">Your personal walking guide</div>
+    <div>
+      <div class="logo">Walk<span>BCN</span></div>
+      <div class="tag" data-i18n="tagline">Your personal walking guide</div>
+    </div>
+    <div class="lang">
+      <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+        <img id="langFlag" src="assets/flags/gb.svg" alt=""><span id="langCode">EN</span>
+      </button>
+      <div class="lang-menu" id="langMenu" role="menu" hidden></div>
+    </div>
   </header>
 
   <nav class="tabs" role="tablist">
-    <button type="button" role="tab" id="tabWalk" aria-selected="true">Walking routes</button>
-    <button type="button" role="tab" id="tabAct" aria-selected="false">Activities</button>
+    <button type="button" role="tab" id="tabWalk" aria-selected="true" data-i18n="tabWalk">Walking routes</button>
+    <button type="button" role="tab" id="tabAct" aria-selected="false" data-i18n="tabAct">Activities</button>
   </nav>
 
   <div id="walkView">
@@ -194,24 +208,24 @@
   <!-- Step 1: interests -->
   <section id="pick">
     <div class="hero">
-      <img id="heroImg" alt="Barcelona rooftops at sunset">
+      <img id="heroImg" alt="Barcelona rooftops at sunset" data-i18n-alt="heroAlt">
       <div class="hero-text">
-        <h1>Barcelona, walked your way.</h1>
-        <p>Tell us what you're into. We'll build a short walking route with audio stories at every stop.</p>
+        <h1 data-i18n="heroTitle">Barcelona, walked your way.</h1>
+        <p data-i18n="heroText">Tell us what you're into. We'll build a short walking route with audio stories at every stop.</p>
       </div>
     </div>
 
-    <h2>What are you interested in?</h2>
+    <h2 data-i18n="interestsTitle">What are you interested in?</h2>
     <div class="tiles" id="interests"></div>
 
-    <h2>How long a walk?</h2>
+    <h2 data-i18n="lengthTitle">How long a walk?</h2>
     <div class="seg" id="planMode" role="group" aria-label="Plan by">
-      <button type="button" data-mode="stops" aria-pressed="true">Stops</button>
-      <button type="button" data-mode="time" aria-pressed="false">Time</button>
-      <button type="button" data-mode="distance" aria-pressed="false">Distance</button>
+      <button type="button" data-mode="stops" aria-pressed="true" data-i18n="planStops">Stops</button>
+      <button type="button" data-mode="time" aria-pressed="false" data-i18n="planTime">Time</button>
+      <button type="button" data-mode="distance" aria-pressed="false" data-i18n="planDistance">Distance</button>
     </div>
     <div class="plan-panel" id="panel-stops">
-      <label class="range"><span><b id="stopsValue">5</b> stops</span>
+      <label class="range"><span><b id="stopsValue">5</b> <span data-i18n="stopsWord">stops</span></span>
         <input type="range" id="stopsRange" min="2" max="10" value="5" aria-label="Number of stops"></label>
     </div>
     <div class="plan-panel" id="panel-time" hidden>
@@ -222,7 +236,7 @@
         <button type="button" class="chip" data-v="120" aria-pressed="false">2 h</button>
         <button type="button" class="chip" data-v="180" aria-pressed="false">3 h</button>
       </div>
-      <p class="hint">Includes about 10 minutes at each stop to listen and look around.</p>
+      <p class="hint" data-i18n="timeHint">Includes about 10 minutes at each stop to listen and look around.</p>
     </div>
     <div class="plan-panel" id="panel-distance" hidden>
       <div class="chips" id="distChips">
@@ -231,24 +245,24 @@
         <button type="button" class="chip" data-v="3" aria-pressed="false">3 km</button>
         <button type="button" class="chip" data-v="5" aria-pressed="false">5 km</button>
       </div>
-      <p class="hint">Total walking distance.</p>
+      <p class="hint" data-i18n="distHint">Total walking distance.</p>
     </div>
 
-    <h2>Where do you start and finish?</h2>
+    <h2 data-i18n="startFinishTitle">Where do you start and finish?</h2>
     <div class="opt-row">
-      <span class="opt-label">Start</span>
+      <span class="opt-label" data-i18n="start">Start</span>
       <div class="chips" id="startChips">
-        <button type="button" class="chip" data-v="best" aria-pressed="true">Best spot for me</button>
-        <button type="button" class="chip" data-v="here" aria-pressed="false">Where I am now</button>
-        <button type="button" class="chip" data-v="map" aria-pressed="false">Choose on map</button>
+        <button type="button" class="chip" data-v="best" aria-pressed="true" data-i18n="startBest">Best spot for me</button>
+        <button type="button" class="chip" data-v="here" aria-pressed="false" data-i18n="startHere">Where I am now</button>
+        <button type="button" class="chip" data-v="map" aria-pressed="false" data-i18n="startMap">Choose on map</button>
       </div>
     </div>
     <div class="opt-row">
-      <span class="opt-label">Finish</span>
+      <span class="opt-label" data-i18n="finish">Finish</span>
       <div class="chips" id="endChips">
-        <button type="button" class="chip" data-v="any" aria-pressed="true">Anywhere</button>
-        <button type="button" class="chip" data-v="loop" aria-pressed="false">Back where I started</button>
-        <button type="button" class="chip" data-v="map" aria-pressed="false">Choose on map</button>
+        <button type="button" class="chip" data-v="any" aria-pressed="true" data-i18n="endAny">Anywhere</button>
+        <button type="button" class="chip" data-v="loop" aria-pressed="false" data-i18n="endLoop">Back where I started</button>
+        <button type="button" class="chip" data-v="map" aria-pressed="false" data-i18n="endMap">Choose on map</button>
       </div>
     </div>
     <div id="pickBox" hidden>
@@ -257,18 +271,26 @@
     </div>
     <p class="hint" id="locStatus" hidden></p>
 
-    <h2>A few more details</h2>
+    <h2 data-i18n="detailsTitle">A few more details</h2>
     <div class="opt-row">
-      <span class="opt-label">Pace</span>
+      <span class="opt-label" data-i18n="pace">Pace</span>
       <div class="seg" id="paceSeg">
-        <button type="button" data-v="3.5" aria-pressed="false">Relaxed</button>
-        <button type="button" data-v="4.5" aria-pressed="true">Normal</button>
-        <button type="button" data-v="5.5" aria-pressed="false">Brisk</button>
+        <button type="button" data-v="3.5" aria-pressed="false" data-i18n="paceRelaxed">Relaxed</button>
+        <button type="button" data-v="4.5" aria-pressed="true" data-i18n="paceNormal">Normal</button>
+        <button type="button" data-v="5.5" aria-pressed="false" data-i18n="paceBrisk">Brisk</button>
       </div>
     </div>
-    <label class="check"><input type="checkbox" id="avoidCrowded"> Avoid the busiest places (Sagrada Família, Park Güell…)</label>
+    <div class="opt-row">
+      <span class="opt-label" data-i18n="stories">Stories</span>
+      <div class="seg" id="lengthSeg">
+        <button type="button" data-v="short" aria-pressed="false" data-i18n="lenShort">Short · 30 s</button>
+        <button type="button" data-v="normal" aria-pressed="true" data-i18n="lenNormal">Normal · 1 min</button>
+        <button type="button" data-v="long" aria-pressed="false" data-i18n="lenLong">Long · 2 min</button>
+      </div>
+    </div>
+    <label class="check"><input type="checkbox" id="avoidCrowded"> <span data-i18n="avoidCrowded">Avoid the busiest places (Sagrada Família, Park Güell…)</span></label>
 
-    <button class="primary" id="build" disabled>Create my route</button>
+    <button class="primary" id="build" disabled data-i18n="build">Create my route</button>
   </section>
 
   <!-- Step 2: route -->
@@ -280,7 +302,7 @@
     <div class="stop-card" id="stopCard" aria-live="polite"></div>
 
     <ol class="stops" id="stopList"></ol>
-    <button class="ghost" id="restart">← Change interests</button>
+    <button class="ghost" id="restart" data-i18n="restart">← Change interests</button>
   </section>
 
   </div>
@@ -288,35 +310,35 @@
   <!-- Activities: pick a category + preferences, get hand-picked places -->
   <section id="actView" hidden>
     <div id="actPick">
-      <h1>Eat, drink, go out.</h1>
-      <p class="lead">Choose what you're in the mood for and we'll suggest places worth your evening.</p>
+      <h1 data-i18n="actTitle">Eat, drink, go out.</h1>
+      <p class="lead" data-i18n="actLead">Choose what you're in the mood for and we'll suggest places worth your evening.</p>
       <div class="cat-tiles tiles" id="actCats"></div>
     </div>
 
     <div id="actFilters" hidden>
-      <button class="ghost" id="actBack">← All activities</button>
+      <button class="ghost" id="actBack" data-i18n="actBack">← All activities</button>
       <h1 id="actTitle"></h1>
       <p class="lead" id="actIntro"></p>
       <div id="actGroups"></div>
-      <p class="hint">Pick as many as you like, or none to see everything.</p>
-      <div class="results-head"><h2>Our picks</h2><span id="actCount"></span></div>
+      <p class="hint" data-i18n="actHint">Pick as many as you like, or none to see everything.</p>
+      <div class="results-head"><h2 data-i18n="ourPicks">Our picks</h2><span id="actCount"></span></div>
       <div id="actResults"></div>
-      <p class="hint" style="margin-top:18px">Hand-picked by WalkBCN. Opening times change, so check before you go.</p>
+      <p class="hint" style="margin-top:18px" data-i18n="actDisclaimer">Hand-picked by WalkBCN. Opening times change, so check before you go.</p>
     </div>
   </section>
 
-  <footer>WalkBCN MVP · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop) · <button class="link-btn" id="privacyOpen" type="button">Your data &amp; privacy</button></footer>
+  <footer><span data-i18n="footer">WalkBCN MVP · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop)</span> · <button class="link-btn" id="privacyOpen" type="button" data-i18n="privacyLink">Your data &amp; privacy</button></footer>
 
   <dialog id="privacy" aria-labelledby="privacyTitle">
-    <h2 id="privacyTitle">Your data &amp; privacy</h2>
-    <p>WalkBCN learns from how you use it, so it can pick the stories you enjoy. It remembers the interests you pick, the stories you play and finish, and your 👍/👎.</p>
-    <p><b>All of this stays in this browser.</b> It is never sent to us or anyone else, and there is no account.</p>
+    <h2 id="privacyTitle" data-i18n="privacyTitle">Your data &amp; privacy</h2>
+    <p data-i18n="privacyP1">WalkBCN learns from how you use it, so it can pick the stories you enjoy. It remembers the interests you pick, the stories you play and finish, and your 👍/👎.</p>
+    <p><b data-i18n="privacyP2a">All of this stays in this browser.</b> <span data-i18n="privacyP2b">It is never sent to us or anyone else, and there is no account.</span></p>
     <p id="privacySummary"></p>
-    <label><input type="checkbox" id="learningOptOut"> Don't learn from what I do</label>
-    <p>Learning only changes the order and choice of stories already in the app. It never writes or publishes new ones, and it must never put engagement or commercial interests above historical accuracy, your privacy or respect for local residents.</p>
+    <label><input type="checkbox" id="learningOptOut"> <span data-i18n="optOut">Don't learn from what I do</span></label>
+    <p data-i18n="privacyP3">Learning only changes the order and choice of stories already in the app. It never writes or publishes new ones, and it must never put engagement or commercial interests above historical accuracy, your privacy or respect for local residents.</p>
     <div class="privacy-actions">
-      <button type="button" id="learningErase">Erase my data</button>
-      <button type="button" class="close" id="privacyClose">Close</button>
+      <button type="button" id="learningErase" data-i18n="erase">Erase my data</button>
+      <button type="button" class="close" id="privacyClose" data-i18n="close">Close</button>
     </div>
   </dialog>
 </div>
@@ -324,6 +346,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="data/stops.js?v=2"></script>
 <script src="data/activities.js?v=2"></script>
+<script src="data/ui.js?v=1"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=5"></script>
 <script>
@@ -343,6 +366,41 @@ const HERO_IMG = 'Evening light over Barcelona.jpg';
 
 const STOPS = window.WALKBCN_STOPS;
 const STORIES = window.WALKBCN_STORIES || {};
+
+// ---- Languages ----
+// Interface texts come from data/ui.js. Stories, tips and Activities texts for each
+// language come from content/i18n/<lang>.js, loaded only when that language is used.
+const LANGS = window.WALKBCN_LANGS;
+const UI = window.WALKBCN_UI;
+const LANG_KEY = 'walkbcn_lang';
+const I18N = (window.WALKBCN_I18N = window.WALKBCN_I18N || {});
+function initialLang() {
+  try { const saved = localStorage.getItem(LANG_KEY); if (UI[saved]) return saved; } catch (e) {}
+  for (const l of navigator.languages || [navigator.language || 'en']) {
+    const code = String(l).slice(0, 2).toLowerCase();
+    if (UI[code]) return code;
+  }
+  return 'en';
+}
+let lang = initialLang();
+function t(key, vars = {}) {
+  const text = UI[lang]?.[key] ?? UI.en[key] ?? key;
+  return text.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? '');
+}
+const interestLabel = id => t(`int_${id}`);
+// Interest names go lower case inside a sentence, except in German and Chinese.
+const inSentence = text => (['de', 'zh'].includes(lang) ? text : text.toLowerCase());
+const langMeta = code => LANGS.find(l => l.code === code);
+const loadingLang = {};
+function loadLangData(code) {
+  if (I18N[code]) return Promise.resolve();
+  return (loadingLang[code] ||= new Promise(resolve => {
+    const el = document.createElement('script');
+    el.src = `content/i18n/${code}.js?v=1`;
+    el.onload = el.onerror = () => resolve(); // no file yet: English is used instead
+    document.head.appendChild(el);
+  }));
+}
 
 // ---- Learning loop ----
 // Remembers, in this browser only, what the visitor picks, finishes and rates,
@@ -394,8 +452,25 @@ function storyFor(s) {
   }
   const angle = routeAngles[s.id];
   const first = [...selected].find(t => s.tags.includes(t) && gen.variants?.[t]);
-  if (angle) return { text: gen.variants[angle].story, audio: gen.variants[angle].audio, angle, learned: angle !== first };
-  return { text: s.story, audio: gen.base?.audio, angle: null, learned: false };
+  const key = angle || 'base';
+  const length = plan.length;
+  // English normal version and its recorded audio: always available.
+  let text = angle ? gen.variants[angle].story : s.story;
+  let audio = angle ? gen.variants[angle].audio : gen.base?.audio;
+  let tip = s.tip, speech = 'en-GB';
+  const local = I18N[lang]?.stops?.[s.id];
+  if (lang !== 'en' && local?.stories?.[key]) {
+    const v = local.stories[key];
+    text = v[length] || v.normal;
+    audio = v[length] && length !== 'normal' ? null : local.audio?.[key]?.file || null;
+    tip = local.tip || tip;
+    speech = langMeta(lang).speech;
+  } else if (length !== 'normal') {
+    // Short and long English versions; recorded audio exists only for the normal one.
+    const v = I18N.en?.stops?.[s.id]?.stories?.[key]?.[length];
+    if (v) { text = v; audio = null; }
+  }
+  return { text, audio, angle, learned: !!angle && angle !== first, tip, speech };
 }
 
 let selected = new Set();
@@ -410,7 +485,8 @@ const chipsEl = document.getElementById('interests');
 INTERESTS.forEach(i => {
   const b = document.createElement('button');
   b.className = 'tile'; b.type = 'button';
-  b.innerHTML = `<img src="${photo(i.img, 500)}" alt="" loading="lazy"><span>${i.label}</span><i class="check" aria-hidden="true">✓</i>`;
+  b.dataset.id = i.id;
+  b.innerHTML = `<img src="${photo(i.img, 500)}" alt="" loading="lazy"><span>${interestLabel(i.id)}</span><i class="check" aria-hidden="true">✓</i>`;
   b.setAttribute('aria-pressed', 'false');
   b.onclick = () => {
     selected.has(i.id) ? selected.delete(i.id) : selected.add(i.id);
@@ -420,7 +496,7 @@ INTERESTS.forEach(i => {
   chipsEl.appendChild(b);
 });
 // ---- Route options: how long, where to start and finish, pace ----
-const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false };
+const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal' };
 const BCN_CENTER = [41.3874, 2.1686];
 
 function pressOnly(container, button) {
@@ -439,6 +515,7 @@ stopsRange.oninput = () => { stopsCount = +stopsRange.value; document.getElement
 onChoice('timeChips', d => { plan.minutes = +d.v; });
 onChoice('distChips', d => { plan.km = +d.v; });
 onChoice('paceSeg', d => { plan.pace = +d.v; });
+onChoice('lengthSeg', d => { plan.length = d.v; if (lang === 'en' && d.v !== 'normal') loadLangData('en'); refreshStoryCard(); });
 document.getElementById('avoidCrowded').onchange = e => { plan.avoidCrowded = e.target.checked; };
 
 // Start and finish points. "Choose on map" opens a small map; "Where I am now" asks the browser.
@@ -448,7 +525,7 @@ function setStatus(text) { locStatus.hidden = !text; locStatus.textContent = tex
 function showPicker(target) {
   pickTarget = target;
   document.getElementById('pickBox').hidden = false;
-  document.getElementById('pickHint').textContent = `Tap the map to set your ${target === 'start' ? 'start' : 'finish'}.`;
+  document.getElementById('pickHint').textContent = t(target === 'start' ? 'pickStart' : 'pickEnd');
   if (!pickMap) {
     pickMap = L.map('pickMap', { scrollWheelZoom: false }).setView(BCN_CENTER, 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(pickMap);
@@ -479,11 +556,11 @@ onChoice('endChips', d => {
   hidePickerIfUnused();
 });
 function locate() {
-  if (!navigator.geolocation) { setStatus("Your browser can't share your location. Choose a point on the map instead."); return; }
-  setStatus('Finding where you are…');
+  if (!navigator.geolocation) { setStatus(t('statusNoGeo')); return; }
+  setStatus(t('statusLocating'));
   navigator.geolocation.getCurrentPosition(
-    pos => { plan.startPt = { lat: pos.coords.latitude, lng: pos.coords.longitude }; setStatus('Got it: your route starts where you are.'); },
-    () => setStatus("We couldn't get your location. Allow location access, or choose a point on the map."),
+    pos => { plan.startPt = { lat: pos.coords.latitude, lng: pos.coords.longitude }; setStatus(t('statusGotIt')); },
+    () => setStatus(t('statusGeoFail')),
     { enableHighAccuracy: true, timeout: 10000 });
 }
 
@@ -568,12 +645,12 @@ const pointIcon = (cls, label) => L.divIcon({ className: '', html: `<div class="
 function showRoute() {
   // Points the user still has to give us
   if (plan.start !== 'best' && !plan.startPt) {
-    setStatus(plan.start === 'here' ? 'We need your location first: allow location access, or choose a point on the map.' : 'Tap the map to set your start first.');
+    setStatus(t(plan.start === 'here' ? 'statusNeedLoc' : 'statusNeedStartMap'));
     locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
   if (plan.end === 'map' && !plan.endPt) {
-    showPicker('end'); setStatus('Tap the map to set where you want to finish.');
+    showPicker('end'); setStatus(t('statusNeedEnd'));
     locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
@@ -582,26 +659,13 @@ function showRoute() {
   const opts = routeOptionsFromPlan();
   const r = buildRoute(opts);
   if (!r.path.length) {
-    setStatus(opts.start
-      ? 'No stops matching your interests are within a 30-minute walk of that start point. WalkBCN covers central Barcelona: try another start, or more time.'
-      : 'No route fits those options. Try more time or distance, or pick more interests.');
+    setStatus(t(opts.start ? 'statusNoStopsNear' : 'statusNoRoute'));
     locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
   route = r.path; current = 0;
-  const walkKm = r.km * 1.3; // streets aren't straight lines
-  const walkMins = walkKm / plan.pace * 60;
-  const labels = INTERESTS.filter(i => selected.has(i.id)).map(i => i.label.toLowerCase());
-  document.getElementById('routeTitle').textContent = 'Your ' + listJoin(labels) + ' walk';
-  const notes = [];
-  if (plan.mode === 'stops' && route.length < stopsCount) notes.push(`Only ${route.length} stops match your interests within a short walk, so this route is shorter than ${stopsCount}.`);
-  if (plan.mode !== 'stops' && route.length < 2) notes.push('Only one stop fits: try more time or distance.');
-  const finishLeg = r.end ? dist(route[route.length - 1], r.end) * 1.3 / plan.pace * 60 : 0;
-  if (r.end) notes.push(`Finish: ${Math.round(finishLeg)} min walk from the last stop${plan.end === 'loop' ? ' back to your start' : ''}.`);
-  document.getElementById('summary').innerHTML =
-    `<span><b>${route.length}</b> stops</span><span>≈ <b>${walkKm.toFixed(1)} km</b></span><span>≈ <b>${fmtMin(walkMins)}</b> walking</span>` +
-    `<span>≈ <b>${fmtMin(walkMins + route.length * STOP_MIN)}</b> in total with stops</span>` +
-    notes.map(n => `<span>${n}</span>`).join('');
+  lastRoute = r;
+  renderRouteTexts();
 
   document.getElementById('pick').hidden = true;
   document.getElementById('route').hidden = false;
@@ -630,18 +694,41 @@ function showRoute() {
   });
   map.fitBounds(line.getBounds(), { padding: [30, 30] });
 
+  renderStopList();
+  setStatus('');
+  goTo(0, false);
+}
+
+// Texts of the route screen, drawn again when the language changes.
+let lastRoute = null;
+function renderRouteTexts() {
+  const r = lastRoute;
+  const walkKm = r.km * 1.3; // streets aren't straight lines
+  const walkMins = walkKm / plan.pace * 60;
+  const labels = INTERESTS.filter(i => selected.has(i.id)).map(i => interestLabel(i.id));
+  document.getElementById('routeTitle').textContent = t('routeTitle', { list: labels.join(' · ') });
+  const notes = [];
+  if (plan.mode === 'stops' && route.length < stopsCount) notes.push(t('noteShorter', { n: route.length, asked: stopsCount }));
+  if (plan.mode !== 'stops' && route.length < 2) notes.push(t('noteOne'));
+  const finishLeg = r.end ? dist(route[route.length - 1], r.end) * 1.3 / plan.pace * 60 : 0;
+  if (r.end) notes.push(t(plan.end === 'loop' ? 'noteFinishLoop' : 'noteFinish', { m: Math.round(finishLeg) }));
+  const bold = (key, vars) => t(key, Object.fromEntries(Object.entries(vars).map(([k, v]) => [k, `<b>${v}</b>`])));
+  document.getElementById('summary').innerHTML =
+    [bold('sumStops', { n: route.length }), bold('sumKm', { km: walkKm.toFixed(1) }), bold('sumWalk', { t: fmtMin(walkMins) }),
+     bold('sumTotal', { t: fmtMin(walkMins + route.length * STOP_MIN) }), ...notes].map(x => `<span>${x}</span>`).join('');
+}
+function renderStopList() {
   const list = document.getElementById('stopList');
   list.innerHTML = '';
   route.forEach((s, i) => {
     const li = document.createElement('li');
-    const prev = i === 0 ? r.start : route[i - 1];
-    const leg = prev ? `${Math.round(dist(prev, s) * 1.3 / plan.pace * 60)} min walk` : 'Start';
+    const prev = i === 0 ? lastRoute.start : route[i - 1];
+    const leg = prev ? t('legWalk', { m: Math.round(dist(prev, s) * 1.3 / plan.pace * 60) }) : t('legStart');
     li.innerHTML = `<button type="button"><span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><span class="n">${i+1}</span></span>${s.name}<span class="d">${leg}</span></button>`;
     li.firstChild.onclick = () => { goTo(i); document.getElementById('map').scrollIntoView({ behavior: 'smooth' }); };
     list.appendChild(li);
   });
-  setStatus('');
-  goTo(0, false);
+  document.querySelectorAll('#stopList button').forEach((b, j) => b.classList.toggle('current', j === current));
 }
 
 function goTo(i, pan = true) {
@@ -649,7 +736,7 @@ function goTo(i, pan = true) {
   current = i;
   const s = route[i];
   const st = storyFor(s);
-  const angleLabel = st.angle && INTERESTS.find(x => x.id === st.angle).label.toLowerCase();
+  const angleLabel = st.angle && inSentence(interestLabel(st.angle));
   markers.forEach((m, j) => m.getElement()?.firstChild?.classList.toggle('active', j === i));
   document.querySelectorAll('#stopList button').forEach((b, j) => b.classList.toggle('current', j === i));
   if (pan) map.panTo([s.lat, s.lng]);
@@ -657,27 +744,27 @@ function goTo(i, pan = true) {
   document.getElementById('stopCard').innerHTML = `
     <figure class="stop-photo">
       <img src="${photo(s.img, 900)}" alt="${s.name}">
-      <a class="credit" href="${credit(s.img)}" target="_blank" rel="noopener">Photo: Wikimedia Commons</a>
+      <a class="credit" href="${credit(s.img)}" target="_blank" rel="noopener">${t('photoCredit')}</a>
     </figure>
     <div class="stop-head">
       <div class="stop-num">${i+1}</div>
       <div><h3 class="stop-title">${s.name}</h3><div class="stop-area">${s.area}</div></div>
     </div>
-    ${angleLabel ? `<p class="angle">Told for ${angleLabel} lovers</p>` : ''}
-    ${st.learned ? '<p class="learned">Chosen from how you listened to and rated earlier stories.</p>' : ''}
-    <p class="story">${st.text}</p>
-    <p class="tip"><b>Tip:</b> ${s.tip}</p>
+    ${angleLabel ? `<p class="angle">${t('toldFor', { interest: angleLabel })}</p>` : ''}
+    ${st.learned ? `<p class="learned">${t('learned')}</p>` : ''}
+    <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
+    <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>
     <div class="controls">
-      <button class="play" id="play" type="button">${playIcon()} Listen to the story</button>
+      <button class="play" id="play" type="button">${playIcon()} ${t('listen')}</button>
       <div class="nav">
-        <button type="button" id="prev" ${i === 0 ? 'disabled' : ''}>← Prev</button>
-        <button type="button" id="next" ${i === route.length - 1 ? 'disabled' : ''}>Next stop →</button>
+        <button type="button" id="prev" ${i === 0 ? 'disabled' : ''}>${t('prev')}</button>
+        <button type="button" id="next" ${i === route.length - 1 ? 'disabled' : ''}>${t('next')}</button>
       </div>
     </div>
-    ${learning.optOut ? '' : `<div class="feedback" role="group" aria-label="Rate this story">
-      <span>Enjoy this story?</span>
-      <button type="button" data-rating="1" aria-label="Yes" aria-pressed="false">👍</button>
-      <button type="button" data-rating="-1" aria-label="No" aria-pressed="false">👎</button>
+    ${learning.optOut ? '' : `<div class="feedback" role="group" aria-label="${t('enjoy')}">
+      <span>${t('enjoy')}</span>
+      <button type="button" data-rating="1" aria-label="${t('yes')}" aria-pressed="false">👍</button>
+      <button type="button" data-rating="-1" aria-label="${t('no')}" aria-pressed="false">👎</button>
     </div>`}`;
   renderRating();
   document.querySelectorAll('.feedback button').forEach(b => b.onclick = () => rateStory(+b.dataset.rating));
@@ -705,9 +792,14 @@ function rateStory(value) {
 // Plays the pre-recorded file when there is one; otherwise uses the browser's voice.
 let speaking = false;
 let player = null;
-function pickVoice() {
-  const vs = speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
-  return vs.find(v => /Daniel|Google UK English|Serena|Samantha/.test(v.name)) || vs[0] || null;
+// The phone's own voice for that language (exact region first, e.g. es-ES before es-MX).
+function pickVoice(speech) {
+  const all = speechSynthesis.getVoices();
+  const norm = l => l.replace('_', '-').toLowerCase();
+  const exact = all.filter(v => norm(v.lang) === speech.toLowerCase());
+  const same = all.filter(v => norm(v.lang).startsWith(speech.slice(0, 2).toLowerCase()));
+  const pool = exact.length ? exact : same;
+  return pool.find(v => /Daniel|Google UK English|Serena|Samantha|Mónica|Monica|Montse|Thomas|Amélie|Anna|Alice|Tingting|Google/.test(v.name)) || pool[0] || null;
 }
 function toggleAudio() {
   if (speaking) { stopAudio(); return; }
@@ -721,11 +813,11 @@ function toggleAudio() {
   if (st.audio) {
     player = new Audio(st.audio);
     player.onended = () => { markFinished(key); setPlaying(false); };
-    player.onerror = () => { player = null; speakText(`${s.name}. ${st.text}`, key); };
+    player.onerror = () => { player = null; speakText(`${s.name}. ${st.text}`, key, st.speech); };
     player.play().then(() => setPlaying(true)).catch(() => player?.onerror());
     return;
   }
-  speakText(`${s.name}. ${st.text}`, key);
+  speakText(`${s.name}. ${st.text}`, key, st.speech);
 }
 // Only a story that plays to its natural end counts as finished, not one the user stopped.
 let speechRun = 0;
@@ -735,10 +827,10 @@ function markFinished(key) {
     track('Story finished', { stop: key.stop, angle: key.angle || 'base' });
   });
 }
-function speakText(text, key) {
-  if (!('speechSynthesis' in window)) { alert('Audio is not supported in this browser.'); setPlaying(false); return; }
+function speakText(text, key, speech = 'en-GB') {
+  if (!('speechSynthesis' in window)) { alert(t('audioUnsupported')); setPlaying(false); return; }
   const u = new SpeechSynthesisUtterance(text);
-  const v = pickVoice(); if (v) { u.voice = v; u.lang = v.lang; } else u.lang = 'en-GB';
+  const v = pickVoice(speech); u.lang = speech; if (v) u.voice = v;
   u.rate = 0.97;
   const run = ++speechRun;
   u.onend = () => { if (run === speechRun) { markFinished(key); setPlaying(false); } };
@@ -756,13 +848,12 @@ function stopAudio() {
 function setPlaying(on) {
   speaking = on;
   const b = document.getElementById('play');
-  if (b) b.innerHTML = on ? `${stopIcon()} Stop` : `${playIcon()} Listen to the story`;
+  if (b) b.innerHTML = on ? `${stopIcon()} ${t('stop')}` : `${playIcon()} ${t('listen')}`;
 }
 const playIcon = () => '<svg viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z"/></svg>';
 const stopIcon = () => '<svg viewBox="0 0 16 16"><rect x="3.5" y="3.5" width="9" height="9" rx="1"/></svg>';
 if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
 
-function listJoin(a) { return a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' & ' + a[a.length - 1]; }
 
 // ---- Tabs ----
 function showTab(name) {
@@ -784,33 +875,43 @@ function track(event, props) { if (learning.optOut) return; try { window.plausib
 const ACTIVITIES = window.WALKBCN_ACTIVITIES;
 let actCat = null;
 let actSel = {};
+// Translated Activities texts, falling back to the English ones in data/activities.js.
+const actT = id => (lang !== 'en' && I18N[lang]?.activities?.[id]) || null;
+const catLabel = id => actT(id)?.label || ACTIVITIES[id].label;
+const catIntro = id => actT(id)?.intro || ACTIVITIES[id].intro;
+const filterLabel = (id, f) => actT(id)?.filters?.[f.id]?.label || f.label;
+const optLabelT = (id, f, o) => actT(id)?.filters?.[f.id]?.options?.[o.id] || o.label;
+const placeDesc = (id, p) => actT(id)?.places?.[p.name] || p.desc;
 
 const catsEl = document.getElementById('actCats');
-Object.entries(ACTIVITIES).forEach(([id, cat]) => {
-  const b = document.createElement('button');
-  b.className = 'tile'; b.type = 'button';
-  b.innerHTML = `<img src="${photo(cat.img, 600)}" alt="" loading="lazy"><span>${cat.label}</span>`;
-  b.onclick = () => openCategory(id);
-  catsEl.appendChild(b);
-});
+function renderCategories() {
+  catsEl.innerHTML = '';
+  Object.entries(ACTIVITIES).forEach(([id, cat]) => {
+    const b = document.createElement('button');
+    b.className = 'tile'; b.type = 'button';
+    b.innerHTML = `<img src="${photo(cat.img, 600)}" alt="" loading="lazy"><span>${catLabel(id)}</span>`;
+    b.onclick = () => openCategory(id);
+    catsEl.appendChild(b);
+  });
+}
+renderCategories();
 
-function openCategory(id) {
-  actCat = id; actSel = {};
+function openCategory(id, keepSelection = false) {
+  if (!keepSelection) { actCat = id; actSel = {}; track('Activity category', { category: id }); }
   const cat = ACTIVITIES[id];
-  track('Activity category', { category: id });
-  document.getElementById('actTitle').textContent = cat.label;
-  document.getElementById('actIntro').textContent = cat.intro;
+  document.getElementById('actTitle').textContent = catLabel(id);
+  document.getElementById('actIntro').textContent = catIntro(id);
   const groups = document.getElementById('actGroups');
   groups.innerHTML = '';
   cat.filters.forEach(f => {
-    actSel[f.id] = new Set();
+    actSel[f.id] ||= new Set();
     const g = document.createElement('div');
     g.className = 'filter-group';
-    g.innerHTML = `<h3>${f.label}</h3><div class="chips"></div>`;
+    g.innerHTML = `<h3>${filterLabel(id, f)}</h3><div class="chips"></div>`;
     f.options.forEach(o => {
       const c = document.createElement('button');
-      c.className = 'chip'; c.type = 'button'; c.textContent = o.label;
-      c.setAttribute('aria-pressed', 'false');
+      c.className = 'chip'; c.type = 'button'; c.textContent = optLabelT(id, f, o);
+      c.setAttribute('aria-pressed', actSel[f.id].has(o.id));
       c.onclick = () => {
         const set = actSel[f.id];
         set.has(o.id) ? set.delete(o.id) : set.add(o.id);
@@ -824,7 +925,7 @@ function openCategory(id) {
   document.getElementById('actPick').hidden = true;
   document.getElementById('actFilters').hidden = false;
   renderPlaces();
-  window.scrollTo(0, 0);
+  if (!keepSelection) window.scrollTo(0, 0);
 }
 document.getElementById('actBack').onclick = () => {
   document.getElementById('actPick').hidden = false;
@@ -844,16 +945,17 @@ function renderPlaces() {
   const exact = scored.filter(x => x.missed === 0).map(x => x.p);
   const close = active.length > 1 ? scored.filter(x => x.missed === 1).map(x => x.p).slice(0, 3) : [];
 
-  document.getElementById('actCount').textContent = `${exact.length} ${exact.length === 1 ? 'place' : 'places'}`;
+  document.getElementById('actCount').textContent = t(exact.length === 1 ? 'place1' : 'placeN', { n: exact.length });
   const el = document.getElementById('actResults');
   el.innerHTML = exact.map(p => placeCard(cat, p)).join('') +
-    (!exact.length ? '<p class="empty">Nothing matches all of that — try removing a filter.</p>' : '') +
-    (close.length && exact.length < 3 ? `<p class="near-title">Also worth a look</p>${close.map(p => placeCard(cat, p)).join('')}` : '');
+    (!exact.length ? `<p class="empty">${t('actEmpty')}</p>` : '') +
+    (close.length && exact.length < 3 ? `<p class="near-title">${t('alsoWorth')}</p>${close.map(p => placeCard(cat, p)).join('')}` : '');
   el.querySelectorAll('.book').forEach(a => a.onclick = () => track('Book click', { category: actCat, place: a.dataset.place }));
 }
 
 function optionLabel(cat, filterId, value) {
-  return cat.filters.find(f => f.id === filterId)?.options.find(o => o.id === value)?.label;
+  const f = cat.filters.find(x => x.id === filterId), o = f?.options.find(x => x.id === value);
+  return o ? optLabelT(actCat, f, o) : undefined;
 }
 
 function placeCard(cat, p) {
@@ -866,8 +968,8 @@ function placeCard(cat, p) {
     <h3>${p.name}</h3>
     <div class="meta">${area}${price}</div>
     <div class="tags">${tags.map(t => `<span>${t}</span>`).join('')}</div>
-    <p>${p.desc}</p>
-    <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${p.name}">See &amp; book ↗</a>
+    <p>${placeDesc(actCat, p)}</p>
+    <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${p.name}">${t('seeBook')}</a>
   </article>`;
 }
 
@@ -878,7 +980,7 @@ function renderPrivacy() {
   const played = records.reduce((n, r) => n + r.played, 0);
   const finished = records.reduce((n, r) => n + r.finished, 0);
   const rated = records.filter(r => r.rating).length;
-  document.getElementById('privacySummary').textContent = `Stored here now: ${played} plays, ${finished} finished, ${rated} rated.`;
+  document.getElementById('privacySummary').textContent = t('privacyStored', { p: played, f: finished, r: rated });
   document.getElementById('learningOptOut').checked = learning.optOut;
 }
 function refreshStoryCard() {
@@ -898,6 +1000,48 @@ document.getElementById('learningErase').onclick = () => {
   renderPrivacy();
   refreshStoryCard();
 };
+
+// ---- Language menu ----
+const langBtn = document.getElementById('langBtn'), langMenu = document.getElementById('langMenu');
+LANGS.forEach(l => {
+  const b = document.createElement('button');
+  b.type = 'button'; b.setAttribute('role', 'menuitem'); b.dataset.code = l.code;
+  b.innerHTML = `<img src="assets/flags/${l.flag}.svg" alt="">${l.name}`;
+  b.onclick = () => { setLang(l.code); toggleLangMenu(false); };
+  langMenu.appendChild(b);
+});
+function toggleLangMenu(open = langMenu.hidden) {
+  langMenu.hidden = !open;
+  langBtn.setAttribute('aria-expanded', open);
+}
+langBtn.onclick = e => { e.stopPropagation(); toggleLangMenu(); };
+document.addEventListener('click', e => { if (!langMenu.hidden && !langMenu.contains(e.target)) toggleLangMenu(false); });
+
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => { el.alt = t(el.dataset.i18nAlt); });
+  document.querySelectorAll('#interests .tile').forEach(b => { b.querySelector('span').textContent = interestLabel(b.dataset.id); });
+  const meta = langMeta(lang);
+  document.getElementById('langFlag').src = `assets/flags/${meta.flag}.svg`;
+  document.getElementById('langCode').textContent = lang.toUpperCase();
+  langBtn.setAttribute('aria-label', t('language'));
+  langMenu.querySelectorAll('button').forEach(b => b.setAttribute('aria-current', b.dataset.code === lang));
+  renderCategories();
+  if (actCat && !document.getElementById('actFilters').hidden) openCategory(actCat, true);
+  if (!document.getElementById('pickBox').hidden) document.getElementById('pickHint').textContent = t(pickTarget === 'start' ? 'pickStart' : 'pickEnd');
+  if (lastRoute && !document.getElementById('route').hidden) { renderRouteTexts(); renderStopList(); refreshStoryCard(); }
+  if (privacy.open) renderPrivacy();
+}
+async function setLang(code) {
+  stopAudio();
+  lang = code;
+  try { localStorage.setItem(LANG_KEY, code); } catch (e) {}
+  applyLang();
+  await Promise.all([loadLangData(code), plan.length !== 'normal' ? loadLangData('en') : null]);
+  applyLang();
+}
+setLang(lang);
 
 document.getElementById('build').onclick = showRoute;
 document.getElementById('restart').onclick = () => {
