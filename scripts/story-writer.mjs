@@ -11,6 +11,8 @@ export const ANGLES = {
   art: "Art lovers: the artists, works, styles and creative stories connected to this place.",
   local: "People who want local life: how neighbours actually use this place, everyday rituals, local etiquette.",
   outdoors: "People who love parks and the sea: light, nature, open space, where to pause and enjoy it.",
+  sports: "Sports fans: the clubs, athletes, games, celebrations and sporting history connected to this place.",
+  culture: "Lovers of film, books and theatre: the writers, novels, films, stages and performances connected to this place.",
 };
 
 export const SYSTEM = `You write short audio stories for WalkBCN, a walking-tour guide for tourists in central Barcelona.

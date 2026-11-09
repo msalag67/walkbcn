@@ -1362,5 +1362,89 @@
       "audio": "audio/platja-sant-sebastia.m4a",
       "audioHash": "50f63fded2"
     }
+  },
+  "font-canaletes": {
+    "variants": {},
+    "base": {
+      "audio": "audio/font-canaletes.m4a",
+      "audioHash": "89534d2ed6"
+    }
+  },
+  "gimnas-sole": {
+    "variants": {},
+    "base": {
+      "audio": "audio/gimnas-sole.m4a",
+      "audioHash": "af2c0864c3"
+    }
+  },
+  "nou-sardenya": {
+    "variants": {},
+    "base": {
+      "audio": "audio/nou-sardenya.m4a",
+      "audioHash": "6f896e9d57"
+    }
+  },
+  "club-natacio": {
+    "variants": {},
+    "base": {
+      "audio": "audio/club-natacio.m4a",
+      "audioHash": "d4da755db0"
+    }
+  },
+  "port-olimpic": {
+    "variants": {},
+    "base": {
+      "audio": "audio/port-olimpic.m4a",
+      "audioHash": "b7664b1746"
+    }
+  },
+  "liceu": {
+    "variants": {},
+    "base": {
+      "audio": "audio/liceu.m4a",
+      "audioHash": "04037b8c8e"
+    }
+  },
+  "teatre-romea": {
+    "variants": {},
+    "base": {
+      "audio": "audio/teatre-romea.m4a",
+      "audioHash": "e357dcbf18"
+    }
+  },
+  "el-molino": {
+    "variants": {},
+    "base": {
+      "audio": "audio/el-molino.m4a",
+      "audioHash": "bba362a98b"
+    }
+  },
+  "filmoteca": {
+    "variants": {},
+    "base": {
+      "audio": "audio/filmoteca.m4a",
+      "audioHash": "cf5de07d13"
+    }
+  },
+  "placa-orwell": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-orwell.m4a",
+      "audioHash": "ca01977aaa"
+    }
+  },
+  "arc-teatre": {
+    "variants": {},
+    "base": {
+      "audio": "audio/arc-teatre.m4a",
+      "audioHash": "514be0780e"
+    }
+  },
+  "la-central": {
+    "variants": {},
+    "base": {
+      "audio": "audio/la-central.m4a",
+      "audioHash": "1739f91d06"
+    }
   }
 }

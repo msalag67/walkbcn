@@ -1633,5 +1633,126 @@ window.WALKBCN_ACTIVITIES = {
         "desc": "A large independent bookshop dedicated entirely to travel, maps and guidebooks."
       }
     ]
+  },
+  "sports": {
+    "label": "Sports",
+    "img": "Montjuic2.jpg",
+    "intro": "Stadiums, Olympic venues and neighbourhood clubs. Most are outside the old town, so take the metro or a bus.",
+    "filters": [
+      {
+        "id": "kind",
+        "label": "What kind?",
+        "options": [
+          {
+            "id": "football",
+            "label": "Football"
+          },
+          {
+            "id": "olympic",
+            "label": "1992 Olympics"
+          },
+          {
+            "id": "museum",
+            "label": "Museums & tours"
+          },
+          {
+            "id": "active",
+            "label": "Do sport yourself"
+          }
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Where?",
+        "options": [
+          {
+            "id": "montjuic",
+            "label": "Montjuïc"
+          },
+          {
+            "id": "les-corts",
+            "label": "Les Corts"
+          },
+          {
+            "id": "gracia",
+            "label": "Gràcia"
+          },
+          {
+            "id": "north",
+            "label": "Sant Andreu & Horta"
+          }
+        ]
+      }
+    ],
+    "places": [
+      {
+        "name": "Spotify Camp Nou",
+        "area": "les-corts",
+        "kind": [
+          "football",
+          "museum"
+        ],
+        "desc": "FC Barcelona's stadium, the largest in Europe. It has been under major renovation, so check the match calendar and the museum and stadium-tour status before you go. Metro: Palau Reial or Les Corts (L3)."
+      },
+      {
+        "name": "Estadi Olímpic Lluís Companys",
+        "area": "montjuic",
+        "kind": [
+          "olympic",
+          "football"
+        ],
+        "desc": "Built in 1929 and renovated for the 1992 Olympic Games, which opened here. Reach Montjuïc by the funicular from Paral·lel (L2, L3)."
+      },
+      {
+        "name": "Museu Olímpic i de l'Esport",
+        "area": "montjuic",
+        "kind": [
+          "olympic",
+          "museum"
+        ],
+        "desc": "Interactive sports museum next to the Olympic Stadium, with memories of the 1992 Games."
+      },
+      {
+        "name": "Palau Sant Jordi",
+        "area": "montjuic",
+        "kind": [
+          "olympic"
+        ],
+        "desc": "The indoor arena of the 1992 Olympics, designed by Arata Isozaki. Today it hosts big concerts and sports events."
+      },
+      {
+        "name": "Piscines Bernat Picornell",
+        "area": "montjuic",
+        "kind": [
+          "olympic",
+          "active"
+        ],
+        "desc": "The Olympic swimming pools of 1992, now a public sports centre: in summer you can swim outdoors with views over the city."
+      },
+      {
+        "name": "Nou Sardenya",
+        "area": "gracia",
+        "kind": [
+          "football"
+        ],
+        "desc": "Home of CE Europa, Gràcia's historic club, founded in 1907. A home match is a great way to see local football up close."
+      },
+      {
+        "name": "Camp Municipal Narcís Sala",
+        "area": "north",
+        "kind": [
+          "football"
+        ],
+        "desc": "Home of UE Sant Andreu, a neighbourhood club with a long history and loyal local fans, in the north of the city."
+      },
+      {
+        "name": "Velòdrom d'Horta",
+        "area": "north",
+        "kind": [
+          "active"
+        ],
+        "desc": "Open-air cycling track built for the 1984 World Track Cycling Championships, next to the Laberint d'Horta gardens. Metro: Mundet (L3)."
+      }
+    ]
   }
 };
