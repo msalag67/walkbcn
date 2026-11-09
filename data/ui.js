@@ -55,6 +55,7 @@ window.WALKBCN_UI = {
     privacyStored: "Stored here now: {p} plays, {f} finished, {r} rated.", optOut: "Don't learn from what I do",
     privacyP3: "Learning only changes the order and choice of stories already in the app. It never writes or publishes new ones, and it must never put engagement or commercial interests above historical accuracy, your privacy or respect for local residents.",
     erase: "Erase my data", close: "Close",
+    dressCode: "Dress code:", dress_smart: "Smart: no sportswear, trainers or flip-flops.", dress_smartcasual: "Smart casual: tidy clothes; dressing up a little helps.", dress_casual: "Casual: come as you are.",
   },
   ca: {
     tagline: "La teva guia personal a peu", language: "Idioma",
@@ -99,6 +100,7 @@ window.WALKBCN_UI = {
     privacyStored: "Guardat aquí ara: {p} reproduccions, {f} acabades, {r} valorades.", optOut: "No aprenguis del que faig",
     privacyP3: "L'aprenentatge només canvia l'ordre i la tria de les històries que ja són a l'app. Mai no n'escriu ni en publica de noves, i mai no ha de posar l'interès comercial o l'enganxament per sobre de la veracitat històrica, la teva privacitat o el respecte pels veïns.",
     erase: "Esborrar les meves dades", close: "Tancar",
+    dressCode: "Codi de vestimenta:", dress_smart: "Arreglat: res de roba esportiva, vambes ni xancletes.", dress_smartcasual: "Arreglat però informal: roba endreçada; anar una mica arreglat ajuda.", dress_casual: "Informal: vine com vulguis.",
   },
   es: {
     tagline: "Tu guía personal a pie", language: "Idioma",
@@ -143,6 +145,7 @@ window.WALKBCN_UI = {
     privacyStored: "Guardado aquí ahora: {p} reproducciones, {f} terminadas, {r} valoradas.", optOut: "No aprender de lo que hago",
     privacyP3: "El aprendizaje solo cambia el orden y la elección de las historias que ya están en la app. Nunca escribe ni publica historias nuevas, y nunca debe poner el interés comercial o el enganche por encima de la veracidad histórica, tu privacidad o el respeto a los vecinos.",
     erase: "Borrar mis datos", close: "Cerrar",
+    dressCode: "Dress code:", dress_smart: "Arreglado: nada de ropa deportiva, zapatillas ni chanclas.", dress_smartcasual: "Arreglado pero informal: ropa cuidada; ir un poco arreglado ayuda.", dress_casual: "Informal: ven como quieras.",
   },
   fr: {
     tagline: "Votre guide personnel à pied", language: "Langue",
@@ -187,6 +190,7 @@ window.WALKBCN_UI = {
     privacyStored: "Enregistré ici : {p} écoutes, {f} terminées, {r} notées.", optOut: "Ne pas apprendre de mon utilisation",
     privacyP3: "L'apprentissage change seulement l'ordre et le choix des histoires déjà présentes dans l'app. Il n'en écrit ni n'en publie jamais de nouvelles, et ne doit jamais faire passer l'intérêt commercial ou l'engagement avant l'exactitude historique, votre vie privée ou le respect des habitants.",
     erase: "Effacer mes données", close: "Fermer",
+    dressCode: "Tenue :", dress_smart: "Habillée : pas de tenue de sport, de baskets ni de tongs.", dress_smartcasual: "Chic décontracté : tenue soignée ; être un peu habillé aide.", dress_casual: "Décontractée : venez comme vous êtes.",
   },
   de: {
     tagline: "Dein persönlicher Stadtführer zu Fuß", language: "Sprache",
@@ -231,6 +235,7 @@ window.WALKBCN_UI = {
     privacyStored: "Hier gespeichert: {p} Wiedergaben, {f} beendet, {r} bewertet.", optOut: "Nicht aus meiner Nutzung lernen",
     privacyP3: "Das Lernen ändert nur Reihenfolge und Auswahl der Geschichten, die schon in der App sind. Es schreibt oder veröffentlicht nie neue, und es darf nie Engagement oder kommerzielle Interessen über historische Genauigkeit, deine Privatsphäre oder den Respekt vor den Anwohnern stellen.",
     erase: "Meine Daten löschen", close: "Schließen",
+    dressCode: "Dresscode:", dress_smart: "Elegant: keine Sportkleidung, Turnschuhe oder Flip-Flops.", dress_smartcasual: "Smart Casual: gepflegte Kleidung; etwas schicker hilft.", dress_casual: "Locker: komm, wie du bist.",
   },
   it: {
     tagline: "La tua guida personale a piedi", language: "Lingua",
@@ -275,6 +280,7 @@ window.WALKBCN_UI = {
     privacyStored: "Salvato qui ora: {p} ascolti, {f} finite, {r} valutate.", optOut: "Non imparare da quello che faccio",
     privacyP3: "L'apprendimento cambia solo l'ordine e la scelta delle storie già presenti nell'app. Non ne scrive né pubblica mai di nuove, e non deve mai mettere il coinvolgimento o l'interesse commerciale sopra l'accuratezza storica, la tua privacy o il rispetto per i residenti.",
     erase: "Cancella i miei dati", close: "Chiudi",
+    dressCode: "Dress code:", dress_smart: "Elegante: niente abbigliamento sportivo, sneakers o infradito.", dress_smartcasual: "Smart casual: abiti curati; vestirsi un po' meglio aiuta.", dress_casual: "Informale: vieni come vuoi.",
   },
   zh: {
     tagline: "你的私人步行导游", language: "语言",
@@ -319,5 +325,6 @@ window.WALKBCN_UI = {
     privacyStored: "目前保存：收听 {p} 次，听完 {f} 个，评价 {r} 个。", optOut: "不要从我的使用中学习",
     privacyP3: "学习只会改变应用中已有故事的顺序和选择，绝不会撰写或发布新故事，也绝不能把参与度或商业利益置于历史准确性、你的隐私以及对当地居民的尊重之上。",
     erase: "删除我的数据", close: "关闭",
+    dressCode: "着装要求：", dress_smart: "正式：不要穿运动服、运动鞋或人字拖。", dress_smartcasual: "休闲正装：衣着整洁，稍微打扮一下更好。", dress_casual: "随意：怎么舒服怎么穿。",
   },
 };
