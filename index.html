@@ -397,7 +397,7 @@ function loadLangData(code) {
   if (I18N[code]) return Promise.resolve();
   return (loadingLang[code] ||= new Promise(resolve => {
     const el = document.createElement('script');
-    el.src = `content/i18n/${code}.js?v=2`;
+    el.src = `content/i18n/${code}.js?v=3`;
     el.onload = el.onerror = () => resolve(); // no file yet: English is used instead
     document.head.appendChild(el);
   }));

@@ -1587,10 +1587,10 @@
   "activities": {
     "restaurants": {
       "label": "餐厅",
-      "intro": "告诉我们您想吃点什么，我们为您推荐值得专程前往的好地方。",
+      "intro": "告诉我们您想吃点什么，我们为您推荐值得专程一去的好地方。",
       "filters": {
         "food": {
-          "label": "想吃哪类美食？",
+          "label": "想吃什么？",
           "options": {
             "catalan": "经典加泰罗尼亚菜",
             "tapas": "Tapas小吃",
@@ -1599,14 +1599,15 @@
           }
         },
         "area": {
-          "label": "在哪个区域？",
+          "label": "在哪儿？",
           "options": {
-            "gothic-born": "Gòtic（哥特区）和 Born（博恩区）",
-            "raval": "Raval（拉瓦尔区）",
+            "gothic-born": "Gothic（哥特区）和 Born（博恩区）",
+            "raval": "Raval（拉巴尔区）",
             "eixample": "Eixample（扩展区）",
             "gracia": "Gràcia（格拉西亚区）",
             "barceloneta": "Barceloneta（巴塞罗内塔）",
-            "poble-sec": "Poble-sec（波布雷塞克区）"
+            "poble-sec": "Poble-sec",
+            "sant-gervasi": "Sant Gervasi 和 Tibidabo（蒂比达博山）"
           }
         },
         "price": {
@@ -1619,27 +1620,42 @@
         }
       },
       "places": {
-        "Can Culleretes": "自1786年开业至今，常被称为巴塞罗那最古老的餐厅。在铺着瓷砖、充满怀旧气息的餐厅里，品尝传统加泰罗尼亚菜。",
-        "Els Quatre Gats": "这家现代主义风格的咖啡馆，正是年轻的毕加索在1900年举办个人首展的地方。在全城最美的餐厅之一里，享用加泰罗尼亚风味。",
-        "El Xampanyet": "位于Carrer de Montcada（蒙卡达街），就在毕加索博物馆旁边。小酒吧总是人头攒动，来这里喝一杯自家的卡瓦起泡酒，配上简单的tapas，做好站着吃的准备吧。",
-        "Cal Pep": "坐在吧台前，看着新鲜的海鲜tapas在您眼前现做。人气旺是有道理的，所以最好早点来，不然就得准备排队了。",
-        "Bar del Pla": "博恩区一家轻松惬意的酒吧，经典与创意tapas兼备，酒单也很不错，深受本地人喜爱。",
-        "Bar Cañete": "靠近Liceu（利塞乌大剧院）的吧台式餐吧，热闹又讲究，把经典tapas做得非常出色。",
-        "Teresa Carles": "Plaça de Catalunya（加泰罗尼亚广场）附近的一家老牌素食餐厅，主打富有创意的植物性地中海料理。",
-        "Flax & Kale": "Teresa Carles家族旗下的餐厅，明亮清新，注重健康饮食。以植物性菜品为主，也有几道鱼类菜肴。",
-        "Quimet & Quimet": "只能站着吃的家族小酒吧，满墙都是酒瓶。招牌是用顶级海鲜罐头做成的小巧montaditos（小面包片）。",
-        "Bar Mut": "小而精致的高档酒吧，黑板菜单随市场时令更换，非常适合度过一个特别的夜晚。",
-        "Cervecería Catalana": "宽敞热闹的tapas酒吧，本地人和游客都爱来。早点去，不然就要等位了。",
-        "La Pubilla": "就在Mercat de la Llibertat（自由市场）旁边，提供分量十足的加泰罗尼亚市场菜，最出名的是传统的“叉子早餐”。",
-        "La Pepita": "格拉西亚区一家温馨的小酒吧，供应创意tapas，也有不错的素食选择，社区氛围轻松自在。",
-        "La Cova Fumada": "家族经营、门口连招牌都没有的小酒吧，据说是“bomba”的发明者——一种配辣酱的土豆可乐饼。",
-        "Can Solé": "巴塞罗内塔一百多年的老字号，以海鲜、米饭料理和西班牙海鲜饭闻名。",
-        "Can Paixano": "挤满了人的站立式酒吧，供应便宜的自家卡瓦起泡酒和烤三明治。吵闹、拥挤，但特别好玩。"
+        "Can Culleretes": "1786年开业至今，常被称为巴塞罗那最古老的餐厅。在铺着瓷砖、古色古香的餐厅里，品尝传统加泰罗尼亚菜。",
+        "Els Quatre Gats": "这家现代主义风格的咖啡馆，正是年轻的毕加索1900年举办第一次个人展览的地方。在全城最美的餐厅之一，享用加泰罗尼亚菜。",
+        "El Xampanyet": "位于 Carrer de Montcada、紧挨着毕加索博物馆的一家小酒吧，总是人满为患。来这里喝自家的卡瓦起泡酒、吃简单的tapas，做好站着吃的准备吧。",
+        "Cal Pep": "坐在吧台前，看着新鲜的海鲜tapas在您眼前现做。人气旺是有原因的，所以要早点来，或者做好排队的准备。",
+        "Bar del Pla": "博恩区一家轻松惬意的酒吧，经典tapas和创意tapas兼而有之，酒单也很不错。本地人很喜欢这里。",
+        "Bar Cañete": "靠近 Liceu 歌剧院的一家热闹又讲究的吧台式酒吧，经典tapas做得非常地道。",
+        "Teresa Carles": "Plaça de Catalunya（加泰罗尼亚广场）附近一家开了多年的素食餐厅，主打富有创意的植物性地中海菜。",
+        "Flax & Kale": "Teresa Carles 家族旗下一家明亮、注重健康的餐厅。以植物性菜品为主，也有几道鱼类菜肴。",
+        "Quimet & Quimet": "只能站着吃的家族酒吧，满墙都是酒瓶，最有名的是用顶级海鲜罐头做成的小巧montaditos（小面包片）。",
+        "Bar Mut": "一家小而高档的酒吧，黑板上的菜单随市场时令而变。很适合安排一个特别的夜晚。",
+        "Cervecería Catalana": "一家又大又热闹的tapas酒吧，本地人和游客都爱来。要么早点去，要么做好等位的准备。",
+        "La Pubilla": "就在 Mercat de la Llibertat（自由市场）旁边。分量十足的加泰罗尼亚市场菜，最出名的是传统的“叉子早餐”。",
+        "La Pepita": "格拉西亚区一家温馨的酒吧，有各种创意tapas，素食选择也不错，街区氛围轻松自在。",
+        "La Cova Fumada": "一家门口没有招牌的家族经营酒吧，据说“bomba”就是在这里发明的——一种配辣酱的土豆可乐饼。",
+        "Can Solé": "巴塞罗内塔的百年老字号，以海鲜、米饭菜和西班牙海鲜饭闻名。",
+        "Can Paixano": "人挤人的站立式酒吧，供应便宜的自家卡瓦起泡酒和烤三明治。吵闹、拥挤，但特别好玩。",
+        "La Venta": "位于 Tibidabo（蒂比达博山）山脚下的经典餐厅，有玻璃围起来的露台，可以俯瞰全城。是本地人庆祝特别日子时最爱去的地方之一。",
+        "Via Veneto": "Sant Gervasi 一家优雅的老派高级餐厅，自上世纪60年代起就供应精致的加泰罗尼亚菜。",
+        "Botafumeiro": "Carrer Gran de Gràcia 上一家老牌加利西亚海鲜餐厅，服务员身穿白色制服，海鲜吧台非常有名。",
+        "7 Portes": "1836年开业，以米饭菜和西班牙海鲜饭著称，餐厅气派、古色古香。",
+        "Can Majó": "在巴塞罗内塔的海边享用海鲜和米饭菜，由同一个家族经营了几十年。",
+        "Casa Delfín": "位于 Passeig del Born（博恩大道）上，供应经典加泰罗尼亚菜和时令tapas，很受街坊们欢迎。",
+        "Can Ramonet": "巴塞罗内塔最古老的小酒馆之一，用酒桶当桌子，供应海鲜tapas。",
+        "Bodega La Peninsular": "巴塞罗内塔一家老式酒窖风格的酒吧，供应经典tapas和海鲜，到了喝味美思的时间，满屋都是本地人。",
+        "Bodega Sepúlveda": "Sant Antoni 一家热闹、朴实的酒窖酒吧，传统和创意tapas的选择非常多。",
+        "El Glop": "格拉西亚区一家质朴的加泰罗尼亚小酒馆，以烤肉和当季的calçots（烤大葱）闻名。",
+        "Bar La Plata": "1945年开业的一家小酒吧，几乎只卖四样东西：炸鱼、番茄沙拉、botifarra（加泰罗尼亚香肠）和凤尾鱼，再配上从酒桶里打出来的本地葡萄酒。",
+        "La Bombeta": "巴塞罗内塔一家实实在在的酒吧，以bomba土豆球和patatas bravas（辣酱土豆）出名。",
+        "Bodega Quimet": "格拉西亚区的一家老酒窖，有酒桶、生啤式的味美思和简单的tapas。",
+        "Bar Tomàs": "Sarrià 的一家街坊酒吧，很多本地人都说这里的patatas bravas（辣酱土豆）是全城最好吃的。",
+        "Bodega l'Electricitat": "巴塞罗内塔的一家酒窖酒吧，像街坊们周末那样，来杯味美思，配几样简单的tapas。"
       }
     },
     "nightlife": {
       "label": "夜生活",
-      "intro": "选一种您喜欢的夜晚吧。提醒一下，巴塞罗那的夜生活场所都在居民区里，回去的路上请小声一点哦。",
+      "intro": "选一种您喜欢的夜晚吧。着装要求仅供参考：门口的规定时有变化，拿不准的话就稍微打扮一下。巴塞罗那的夜生活就在居民区的街道上，所以回家路上请小声一点。",
       "filters": {
         "vibe": {
           "label": "想要什么样的夜晚？",
@@ -1649,42 +1665,250 @@
             "club": "夜店"
           }
         },
+        "style": {
+          "label": "什么样的氛围？",
+          "options": {
+            "upscale": "高档（pijo）",
+            "casual": "休闲",
+            "alternative": "另类"
+          }
+        },
+        "crowd": {
+          "label": "都是谁去？",
+          "options": {
+            "locals": "以本地人为主",
+            "mixed": "本地人和游客都有"
+          }
+        },
         "music": {
           "label": "音乐",
           "options": {
             "jazz": "爵士和灵魂乐",
             "latin": "弗拉门戈和拉丁音乐",
-            "indie": "独立音乐和摇滚",
-            "electronic": "电子音乐"
+            "indie": "独立和摇滚",
+            "electronic": "电子音乐",
+            "commercial": "流行和雷鬼动"
           }
         },
         "area": {
-          "label": "在哪个区域？",
+          "label": "在哪儿？",
           "options": {
-            "gothic-born": "Gòtic（哥特区）和 Born（博恩区）",
-            "raval": "Raval（拉瓦尔区）",
+            "gothic-born": "Gothic（哥特区）和 Born（博恩区）",
+            "raval": "Raval（拉巴尔区）",
             "eixample": "Eixample（扩展区）",
-            "poble-sec": "Poble-sec（波布雷塞克区）",
-            "poblenou": "Poblenou（波布雷诺区）"
+            "poble-sec": "Poble-sec",
+            "poblenou": "Poblenou（新村区）",
+            "sant-gervasi": "Tuset、Sant Gervasi 和 Diagonal（对角线大道）"
           }
         }
       },
       "places": {
-        "Boadas": "巴塞罗那最古老的鸡尾酒吧，1933年开业至今，就在Rambla（兰布拉大道）旁边。身穿白色外套的调酒师为您调制经典饮品。",
-        "Dry Martini": "木质护墙板装饰的经典酒吧，名声在外的，不出所料，正是它的马天尼。",
-        "Paradiso": "藏在一家小熏牛肉店冰箱门后的地下酒吧。鸡尾酒富有戏剧感和创意，门口经常排着队。",
-        "Two Schmucks": "轻松随性、充满趣味的鸡尾酒吧，派对氛围浓厚，没有着装要求。",
-        "Bar Marsella": "1820年开业至今，以苦艾酒闻名。斑驳的镜子、落满灰尘的酒瓶，满满的旧时光韵味。",
-        "Jamboree": "Plaça Reial（皇家广场）上的传奇爵士地下酒窖。晚上有音乐会，深夜则变身为夜店。",
-        "Jazz Si Club": "由一所音乐学校经营的小型平价音乐酒吧，一周里每天都有不同风格的即兴演奏。",
-        "Los Tarantos": "在皇家广场的一间小厅里上演简短的弗拉门戈表演，是初次体验弗拉门戈的轻松之选。",
-        "Marula Café": "小型夜店，主打放克、灵魂乐和拉丁律动。人群友好，舞池热闹。",
-        "Sidecar": "皇家广场旁的地下室场馆，专注独立音乐和摇滚：先是现场演出，之后由DJ接棒。",
-        "Sala Apolo": "Paral·lel（平行大道）上一座历史悠久的舞厅，有音乐会，一周里每晚还有不同主题的夜店之夜。",
-        "Razzmatazz": "由仓库改建的超大夜店，设有多个厅，从独立音乐到techno应有尽有，还常有大牌音乐会。",
-        "Moog": "拉瓦尔区一家小小的techno夜店，热得冒汗，营业到很晚。"
+        "Boadas": "巴塞罗那最古老的鸡尾酒吧，1933年开业，就在 Rambla（兰布拉大道）旁边。身穿白色外套的调酒师为您调制经典鸡尾酒。",
+        "Dry Martini": "木质墙板的经典酒吧，名气很大——不出所料，靠的正是它的马提尼。",
+        "Paradiso": "藏在一家小熏牛肉店冰箱门后面的地下酒吧。鸡尾酒充满戏剧感和创意，门口经常排队。",
+        "Two Schmucks": "轻松好玩的鸡尾酒吧，派对气氛浓厚，没有着装要求。",
+        "Bar Marsella": "1820年开业，以苦艾酒闻名。斑驳的镜子、落满灰尘的酒瓶，处处是老派的味道。",
+        "Jamboree": "Plaça Reial（皇家广场）上传奇的地下爵士酒吧。晚上有音乐会，深夜就变成夜店。",
+        "Jazz Si Club": "一家由音乐学校经营的小型平价音乐酒吧，一周里每天都有不同风格的即兴演奏。",
+        "Los Tarantos": "在 Plaça Reial（皇家广场）的一个小厅里上演的短场弗拉门戈表演。初次体验弗拉门戈的好选择。",
+        "Marula Café": "一家小夜店，放放克、灵魂乐和拉丁节奏。客人很友好，跳舞的人很多。",
+        "Sidecar": "Plaça Reial（皇家广场）旁的一家地下室场地，主打独立和摇滚：先是现场演出，之后是DJ。",
+        "Sala Apolo": "Paral·lel 大道上的一座历史悠久的舞厅，有音乐会，一周里每晚还有不同主题的夜店之夜。",
+        "Razzmatazz": "超大的仓库式夜店，有好几个厅，从独立音乐到techno应有尽有，还有大牌歌手的演唱会。",
+        "Moog": "拉巴尔区一家小而火热的techno夜店，营业到很晚。",
+        "Sutton": "位于 Carrer de Tuset 的夜店，这里是上城区夜生活的中心，客人打扮讲究，以本地人为主。周四到周六晚上最热闹。",
+        "Bling Bling": "位于 Carrer de Tuset 街口（8–10号）的夜店，是上城区夜生活最热闹的地方之一，放流行音乐，客人盛装打扮，以本地人为主。",
+        "Gatsby": "Carrer de Tuset 上一家二十年代爵士时代风格的场所：先是晚餐和表演，然后喝酒、听音乐直到深夜。",
+        "Otto Zutz": "自上世纪80年代起就是巴塞罗那的经典，设在一栋老纺织楼里，三层楼都有音乐，靠近 Via Augusta。",
+        "Luz de Gas": "Carrer de Muntaner 上的一座老音乐厅，有现场乐队和致敬演唱会，之后是放大家耳熟能详金曲的夜店之夜。",
+        "Slow": "Diagonal（对角线大道）附近一家时髦的酒吧夜店，很受衣着讲究的本地人欢迎。",
+        "Solange": "Carrer d'Aribau 上的一家鸡尾酒吧，灵感来自詹姆斯·邦德电影里的邦女郎，供应优雅的经典鸡尾酒。",
+        "Mirablau": "Tibidabo（蒂比达博山）山脚下的一家酒吧，巨大的落地窗正对全城；先边看风景边喝酒，深夜再跳舞。",
+        "Bikini": "Diagonal（对角线大道）上的巴塞罗那老牌名店：有音乐会，还有一家分好几个厅、风格各异的夜店。",
+        "Quilombo": "Carrer d'Aribau 上一家开了很多年的小酒吧，有吉他伴奏，唱的拉丁美洲歌曲最后大家都会跟着一起唱。",
+        "Antilla BCN": "全城最有名的萨尔萨舞俱乐部，傍晚有舞蹈课。欢迎初学者。",
+        "Dow Jones": "这家酒吧的酒价会像股市一样在屏幕上涨涨跌跌。很受学生欢迎。",
+        "City Hall": "位于 Rambla de Catalunya（加泰罗尼亚兰布拉大道）顶端一座老剧院里的夜店，有露台，每晚放不同的音乐。"
+      }
+    },
+    "museums": {
+      "label": "博物馆与文化",
+      "intro": "从罗马式壁画到设计和科学：这些博物馆都值得花上几个小时，很多还坐落在漂亮的建筑里。",
+      "filters": {
+        "kind": {
+          "label": "什么类型？",
+          "options": {
+            "art": "艺术",
+            "history": "历史",
+            "science": "科学",
+            "design": "设计"
+          }
+        },
+        "area": {
+          "label": "在哪儿？",
+          "options": {
+            "old-town": "老城区（哥特区、博恩区、拉巴尔区）",
+            "eixample": "Eixample（扩展区）",
+            "montjuic": "Montjuïc（蒙特惠奇山）",
+            "seafront": "海滨和 Poblenou（新村区）",
+            "uptown": "山区和上城区"
+          }
+        }
+      },
+      "places": {
+        "MNAC": "加泰罗尼亚国家艺术博物馆，坐落在为1929年世界博览会而建的宏伟的国家宫里。以罗马式教堂壁画闻名。",
+        "Fundació Joan Miró": "一座明亮洁白的博物馆，由 Josep Lluís Sert 为好友胡安·米罗设计，有绘画、雕塑，还有屋顶露台。",
+        "CaixaForum": "展览场地设在一座由 Josep Puig i Cadafalch 设计的现代主义风格老纺织厂里。",
+        "Museu Frederic Marès": "一位雕塑家规模庞大的个人收藏，从中世纪雕刻到日常用品都有，位于大教堂旁边的一座宫殿里。",
+        "Museu d'Història de Catalunya": "在一座名为 Palau de Mar（海洋宫）的港口老仓库里讲述加泰罗尼亚的历史，露台可以俯瞰港口。",
+        "Museu Egipci": "一座收藏古埃及文物的私人博物馆，就在 Passeig de Gràcia（格拉西亚大道）旁边。",
+        "Museu del Disseny": "位于 Glòries 的一座造型醒目的建筑，展出设计、时装和装饰艺术，本地人给它起了个外号叫“订书机”。",
+        "CosmoCaixa": "一座大型互动科学博物馆，最出名的是复原的亚马孙雨林水淹森林。"
+      }
+    },
+    "viewpoints": {
+      "label": "观景点",
+      "intro": "从高处俯瞰整座城市。请记住，好几个观景点就在居民家门口：请保持安静，尤其是日落时分。",
+      "filters": {
+        "view": {
+          "label": "看什么景？",
+          "options": {
+            "city": "城市",
+            "sea": "大海"
+          }
+        },
+        "area": {
+          "label": "在哪儿？",
+          "options": {
+            "old-town": "老城区（哥特区、博恩区、拉巴尔区）",
+            "eixample": "Eixample（扩展区）",
+            "montjuic": "Montjuïc（蒙特惠奇山）",
+            "uptown": "山区和上城区"
+          }
+        }
+      },
+      "places": {
+        "Bunkers del Carmel": "在一座内战时期的旧防空炮台上，360°全景尽收眼底。日落时分人特别多；附近居民已经请游客们小声一点。",
+        "Mirador del Palau Nacional": "站在 MNAC（加泰罗尼亚国家艺术博物馆）前的露台上，可以顺着大道一直望到 Plaça d'Espanya（西班牙广场），远眺整座城市。",
+        "Castell de Montjuïc": "蒙特惠奇山顶的一座17世纪要塞，一边可以俯瞰港口，另一边可以眺望城市。",
+        "Arenas de Barcelona": "由旧斗牛场改建的购物中心，环形的屋顶步道可以俯瞰 Plaça d'Espanya（西班牙广场）和蒙特惠奇山。",
+        "Parc del Guinardó": "一座安静的山坡公园，视野开阔，来的大多是本地人。",
+        "Turó del Putxet": "居民区里的一座小山顶公园，可以静静地眺望城市，一直望到大海。",
+        "Mirador de Colom": "在 Rambla（兰布拉大道）尽头的哥伦布纪念柱里乘电梯上去，就到了一个俯瞰港口的小观景台。",
+        "Tibidabo": "巴塞罗那周边的最高点，山顶矗立着 Sagrat Cor（圣心堂）。天气晴朗时，这里是全城最好的全景观景点。"
+      }
+    },
+    "cafes": {
+      "label": "咖啡馆与 granja",
+      "intro": "喝热巧克力的经典 granja（传统甜品奶品店）、历史悠久的糕点店和街坊咖啡馆，全都是本地小店，不是连锁店。",
+      "filters": {
+        "kind": {
+          "label": "想来点什么？",
+          "options": {
+            "chocolate": "热巧克力和吉事果",
+            "pastries": "糕点和面包店",
+            "historic": "老字号咖啡馆",
+            "coffee": "好咖啡",
+            "local": "街坊咖啡馆"
+          }
+        },
+        "area": {
+          "label": "在哪儿？",
+          "options": {
+            "old-town": "老城区（哥特区、博恩区、拉巴尔区）",
+            "eixample": "Eixample（扩展区）",
+            "gracia": "Gràcia（格拉西亚区）",
+            "seafront": "Barceloneta（巴塞罗内塔）"
+          }
+        }
+      },
+      "places": {
+        "Granja Dulcinea": "1941年起开在 Carrer de Petritxol 上的家族 granja，以浓稠的热巧克力配吉事果或 melindros（手指饼）闻名。",
+        "Granja La Pallaresa": "Petritxol 街上的又一家经典老店，这条小街以巧克力店出名。冬天的下午要做好排队的准备。",
+        "Cafè de l'Òpera": "1929年起开在 Rambla（兰布拉大道）上的咖啡馆，正对 Liceu 歌剧院，保留着原汁原味的现代主义风格内饰。",
+        "Nømad Coffee": "巴塞罗那精品咖啡的先驱之一，藏在 Sant Pere 的一条小巷里。",
+        "Granja M. Viader": "1870年起开在拉巴尔区的 granja，巴塞罗那著名的巧克力牛奶 Cacaolat 就诞生在这里。一定要尝尝加奶油的热巧克力。",
+        "Pastisseria La Colmena": "全城最古老的糕点店之一，位于 Plaça de l'Àngel，以传统甜点和蜂蜜色的焦糖糖果闻名。",
+        "Escribà": "Escribà 糕点世家在 Gran Via 上的旗舰店，以蛋糕和巧克力创意作品闻名。",
+        "Cafès El Magnífico": "1919年起开在博恩区的家族咖啡烘焙店。来这里喝一杯绝佳的咖啡，闻一闻咖啡豆烘焙的香气。",
+        "Bar Velódromo": "Carrer de Muntaner 上一家1933年的气派咖啡酒吧，挑高的天花板，长长的吧台，从早餐一直营业到深夜。",
+        "Granja La Nena": "格拉西亚区的家族 granja，供应浓稠的热巧克力、可丽饼和自制蛋糕，深受本地家庭喜爱。",
+        "Forn Baluard": "巴塞罗内塔一家出色的街坊面包店，以柴火烤炉烤制的酸面包和糕点闻名。",
+        "Cafè Salambó": "格拉西亚区一家宽敞的咖啡馆，也是大家碰头的好地方，就在 Verdi 电影院旁边，看电影前后来坐坐的人很多。"
+      }
+    },
+    "family": {
+      "label": "亲子游",
+      "intro": "动物、科学、缆车和游乐设施：孩子们（还有爸爸妈妈们）都会喜欢的好去处。",
+      "filters": {
+        "kind": {
+          "label": "孩子喜欢什么？",
+          "options": {
+            "animals": "动物",
+            "science": "科学",
+            "rides": "游乐设施和缆车",
+            "treats": "甜食"
+          }
+        },
+        "area": {
+          "label": "在哪儿？",
+          "options": {
+            "old-town": "老城区（哥特区、博恩区、拉巴尔区）",
+            "montjuic": "Montjuïc（蒙特惠奇山）",
+            "seafront": "海滨和 Poblenou（新村区）",
+            "uptown": "山区和上城区"
+          }
+        }
+      },
+      "places": {
+        "Aquàrium de Barcelona": "Port Vell（旧港）的大型水族馆，有一条海底隧道，鲨鱼就在头顶上游来游去。",
+        "Zoo de Barcelona": "巴塞罗那市立动物园，位于 Parc de la Ciutadella（城堡公园）内。",
+        "CosmoCaixa": "互动式科学博物馆，有复原的亚马孙水淹森林，很适合好奇心强的孩子。",
+        "Museu de la Xocolata": "博恩区的巧克力博物馆，由本市糕点师们经营，有用巧克力做成的雕塑。",
+        "Telefèric de Montjuïc": "乘缆车直上蒙特惠奇城堡，沿途可以俯瞰港口和城市。",
+        "Poble Espanyol": "为1929年世界博览会建造的露天村落，仿建了西班牙各地的建筑，还有手工艺作坊。",
+        "Parc d'Atraccions Tibidabo": "欧洲最古老的游乐园之一，1901年在 Tibidabo（蒂比达博山）山顶开业，可以俯瞰整座城市。"
+      }
+    },
+    "shops": {
+      "label": "老字号商店",
+      "intro": "这些店铺世世代代都是这座城市的一部分。在这里买东西，就是在帮它们延续下去。",
+      "filters": {
+        "kind": {
+          "label": "想买什么？",
+          "options": {
+            "crafts": "手工艺品和礼品",
+            "food": "食品和葡萄酒",
+            "fashion": "帽子和服饰",
+            "books": "书籍和音乐",
+            "market": "跳蚤市场"
+          }
+        },
+        "area": {
+          "label": "在哪儿？",
+          "options": {
+            "old-town": "老城区（哥特区、博恩区、拉巴尔区）",
+            "seafront": "海滨和 Poblenou（新村区）",
+            "eixample": "Eixample（扩展区）"
+          }
+        }
+      },
+      "places": {
+        "Cereria Subirà": "1761年开业的蜡烛店，常被称为巴塞罗那最古老的商店，店内是漂亮的19世纪装潢。",
+        "La Manual Alpargatera": "从上世纪40年代起就手工制作草编鞋，至今仍沿用传统工艺。",
+        "Casa Gispert": "博恩区的老店，自1851年起用柴火烤炉烘烤坚果、果干和咖啡。",
+        "El Rei de la Màgia": "1881年开业的魔术用品店，满是魔术道具、海报和历史。",
+        "Vila Viniteca": "博恩区的一家家族葡萄酒店，加泰罗尼亚和西班牙葡萄酒的选择非常丰富，隔壁还有一家熟食店。",
+        "Els Encants": "欧洲最古老的跳蚤市场之一，如今位于 Glòries 一个巨大的镜面屋顶下。每周只开放几天。",
+        "Herboristeria del Rei": "1823年开业的草药店，就在 Plaça Reial（皇家广场）旁边，保留着原有的雕花木质内饰，满是抽屉和罐子。",
+        "Ganiveteria Roca": "1911年起开在 Plaça del Pi 上的刀具餐具店，有着漂亮的现代主义风格门面。",
+        "Sombrereria Mil": "Plaça Urquinaona 附近的一家传统帽店，有贝雷帽、软呢帽和巴拿马草帽。",
+        "Casa Beethoven": "1880年起开在 Rambla（兰布拉大道）上的乐谱店，至今仍为全城各地的音乐人提供乐谱。",
+        "Planelles Donat": "自1850年起在 Portal de l'Àngel 制作牛轧糖（turrón）；夏天还卖 horchata（油莎豆饮）和冰淇淋。",
+        "Colmado Quílez": "1908年起开在 Rambla de Catalunya（加泰罗尼亚兰布拉大道）上的食品杂货店，货架一直顶到天花板，摆满了葡萄酒、罐头和精品熟食。",
+        "Llibreria Altaïr": "一家大型独立书店，专门经营旅行类书籍、地图和旅游指南。"
       }
     }
   },
-  "activitiesHash": "52391f76ef"
+  "activitiesHash": "ec0665945f"
 }

@@ -1587,7 +1587,7 @@
   "activities": {
     "restaurants": {
       "label": "Ristoranti",
-      "intro": "Diteci che cosa vi va di mangiare. Vi suggeriamo posti che valgono la strada.",
+      "intro": "Diteci cosa vi va di mangiare. Vi suggeriamo posti che valgono il viaggio.",
       "filters": {
         "food": {
           "label": "Che tipo di cucina?",
@@ -1595,7 +1595,7 @@
             "catalan": "Classici catalani",
             "tapas": "Tapas",
             "seafood": "Pesce e riso",
-            "veggie": "Adatti ai vegetariani"
+            "veggie": "Adatto ai vegetariani"
           }
         },
         "area": {
@@ -1606,7 +1606,8 @@
             "eixample": "Eixample",
             "gracia": "Gràcia",
             "barceloneta": "Barceloneta",
-            "poble-sec": "Poble-sec"
+            "poble-sec": "Poble-sec",
+            "sant-gervasi": "Sant Gervasi e Tibidabo"
           }
         },
         "price": {
@@ -1619,27 +1620,42 @@
         }
       },
       "places": {
-        "Can Culleretes": "Aperto dal 1786, viene spesso definito il ristorante più antico di Barcellona. Piatti tradizionali catalani in sale d'altri tempi, rivestite di piastrelle.",
-        "Els Quatre Gats": "Il caffè modernista dove un giovane Picasso tenne la sua prima mostra, nel 1900. Cucina catalana in una delle sale più belle della città.",
-        "El Xampanyet": "Un barettino minuscolo e sempre pieno in Carrer de Montcada, accanto al Museo Picasso. Si viene per il cava della casa e per tapas semplici, e mettete in conto di stare in piedi.",
-        "Cal Pep": "Posti al bancone e tapas di pesce fresco cucinate proprio davanti a voi. È famoso a ragione, quindi arrivate presto o preparatevi a fare la fila.",
-        "Bar del Pla": "Un bar rilassato del Born che mescola tapas classiche e creative, con una buona carta dei vini. Uno dei preferiti dalla gente del posto.",
-        "Bar Cañete": "Un bar vivace ed elegante, con il bancone, vicino al teatro dell'opera del Liceu: tapas classiche fatte davvero bene.",
-        "Teresa Carles": "Uno storico ristorante vegetariano vicino a Plaça de Catalunya, con piatti mediterranei creativi a base vegetale.",
-        "Flax & Kale": "Un ristorante luminoso, attento al benessere, della famiglia di Teresa Carles. Cucina in gran parte vegetale, con qualche piatto di pesce.",
-        "Quimet & Quimet": "Un bar di famiglia dove si mangia in piedi, con pareti tappezzate di bottiglie, famoso per i suoi montaditos, piccoli crostini preparati con conserve di mare di altissima qualità.",
-        "Bar Mut": "Un bar piccolo e raffinato, con il menù scritto alla lavagna che cambia secondo il mercato. Perfetto per una serata speciale.",
-        "Cervecería Catalana": "Un grande bar di tapas, sempre animato, amato tanto dagli abitanti quanto dai visitatori. Andateci presto o preparatevi ad aspettare.",
-        "La Pubilla": "Accanto al Mercat de la Llibertat. Cucina catalana di mercato, sostanziosa, nota soprattutto per le tradizionali \"colazioni con la forchetta\".",
-        "La Pepita": "Un bar accogliente di Gràcia con tapas creative, tra cui buone opzioni vegetariane, nell'atmosfera rilassata del quartiere.",
-        "La Cova Fumada": "Un bar a conduzione familiare, senza insegna fuori, a cui si attribuisce l'invenzione della \"bomba\": una crocchetta di patate con salsa piccante.",
+        "Can Culleretes": "Aperto dal 1786, viene spesso definito il ristorante più antico di Barcellona. Piatti catalani tradizionali in sale d'altri tempi, rivestite di piastrelle.",
+        "Els Quatre Gats": "Il caffè modernista dove un giovane Picasso tenne la sua prima mostra nel 1900. Cucina catalana in una delle sale più belle della città.",
+        "El Xampanyet": "Un barettino minuscolo e sempre pieno in Carrer de Montcada, accanto al Museo Picasso. Si viene per il cava della casa e tapas semplici, e di solito si sta in piedi.",
+        "Cal Pep": "Posti al bancone e tapas di pesce fresco cucinate proprio davanti a voi. Se è così famoso c'è un motivo: arrivate presto o preparatevi a fare la fila.",
+        "Bar del Pla": "Bar rilassato del Born che mescola tapas classiche e creative, con una buona carta dei vini. Molto amato dalla gente del posto.",
+        "Bar Cañete": "Bar con bancone, vivace e curato, vicino al teatro dell'opera del Liceu, con tapas classiche fatte davvero bene.",
+        "Teresa Carles": "Storico ristorante vegetariano vicino a Plaça de Catalunya, con piatti mediterranei creativi a base vegetale.",
+        "Flax & Kale": "Ristorante luminoso e attento alla salute, della famiglia di Teresa Carles. Cucina in gran parte vegetale, con qualche piatto di pesce.",
+        "Quimet & Quimet": "Bar di famiglia dove si sta in piedi, con le pareti coperte di bottiglie, famoso per i suoi piccoli montaditos con conserve di pesce di altissima qualità.",
+        "Bar Mut": "Piccolo bar raffinato con un menù scritto alla lavagna che cambia secondo il mercato. Perfetto per una serata speciale.",
+        "Cervecería Catalana": "Grande bar di tapas, sempre animato, amato sia dalla gente del posto sia dai visitatori. Andateci presto, altrimenti mettete in conto un po' di attesa.",
+        "La Pubilla": "Accanto al Mercat de la Llibertat. Cucina catalana di mercato, sostanziosa, conosciuta soprattutto per le tradizionali \"colazioni con la forchetta\".",
+        "La Pepita": "Accogliente bar di Gràcia con tapas creative, tra cui buone opzioni vegetariane, nell'atmosfera rilassata del quartiere.",
+        "La Cova Fumada": "Bar a gestione familiare, senza insegna fuori, a cui si attribuisce l'invenzione della \"bomba\": una crocchetta di patate con salsa piccante.",
         "Can Solé": "Un classico della Barceloneta da oltre un secolo, noto per il pesce, i piatti di riso e la paella.",
-        "Can Paixano": "Un bar affollatissimo dove si sta in piedi, con cava della casa a poco prezzo e panini alla piastra. Rumoroso, pieno di gente e divertentissimo."
+        "Can Paixano": "Bar strapieno dove si sta in piedi, con cava della casa economico e panini alla piastra. Rumoroso, affollato e divertentissimo.",
+        "La Venta": "Ristorante classico ai piedi del Tibidabo, con una terrazza vetrata e vista su tutta la città. Uno dei preferiti dalla gente del posto per le occasioni speciali.",
+        "Via Veneto": "Alta cucina elegante e d'altri tempi a Sant Gervasi, che serve una raffinata cucina catalana dagli anni Sessanta.",
+        "Botafumeiro": "Storico ristorante galiziano di pesce in Carrer Gran de Gràcia, con camerieri in giacca bianca e un famoso bancone di frutti di mare.",
+        "7 Portes": "Aperto nel 1836, è famoso per i piatti di riso e la paella, serviti in sale grandiose d'altri tempi.",
+        "Can Majó": "Pesce e piatti di riso vicino alla spiaggia della Barceloneta, gestito dalla stessa famiglia da decenni.",
+        "Casa Delfín": "Piatti catalani classici e tapas di stagione sul Passeig del Born, molto frequentato dalla gente del quartiere.",
+        "Can Ramonet": "Una delle taverne più antiche della Barceloneta, con botti di vino come tavoli e tapas di pesce.",
+        "Bodega La Peninsular": "Bar in stile bodega alla Barceloneta, con tapas classiche e pesce, pieno di gente del posto all'ora del vermut.",
+        "Bodega Sepúlveda": "Bodega senza fronzoli e sempre affollata a Sant Antoni, con una lunga lista di tapas tradizionali e creative.",
+        "El Glop": "Rustica taverna catalana a Gràcia, nota per la carne alla brace e, in stagione, per i calçots.",
+        "Bar La Plata": "Minuscolo bar aperto dal 1945 che serve quasi solo quattro cose: pesce fritto, un'insalata di pomodori, botifarra e acciughe, con vino locale spillato dalla botte.",
+        "La Bombeta": "Bar alla buona della Barceloneta, famoso per le sue bombas e le patatas bravas.",
+        "Bodega Quimet": "Vecchia bodega a Gràcia con botti, vermut alla spina e tapas semplici.",
+        "Bar Tomàs": "Bar di quartiere a Sarrià, le cui patatas bravas sono considerate da molti barcellonesi le migliori della città.",
+        "Bodega l'Electricitat": "Bodega della Barceloneta dove prendere un vermut e qualche tapa semplice, come fanno i vicini nel fine settimana."
       }
     },
     "nightlife": {
       "label": "Vita notturna",
-      "intro": "Scegliete il vostro tipo di serata. Ricordate che la vita notturna di Barcellona si svolge in strade abitate, quindi abbassate la voce quando tornate a casa.",
+      "intro": "Scegliete il vostro tipo di serata. Le indicazioni sull'abbigliamento sono orientative: le regole all'ingresso cambiano, quindi nel dubbio vestitevi un po' meglio. La vita notturna di Barcellona si svolge in strade residenziali: quando tornate a casa, abbassate la voce.",
       "filters": {
         "vibe": {
           "label": "Che tipo di serata?",
@@ -1649,13 +1665,29 @@
             "club": "Discoteche"
           }
         },
+        "style": {
+          "label": "Che atmosfera?",
+          "options": {
+            "upscale": "Elegante (pijo)",
+            "casual": "Informale",
+            "alternative": "Alternativa"
+          }
+        },
+        "crowd": {
+          "label": "Chi ci va?",
+          "options": {
+            "locals": "Soprattutto gente del posto",
+            "mixed": "Gente del posto e visitatori"
+          }
+        },
         "music": {
           "label": "Musica",
           "options": {
             "jazz": "Jazz e soul",
             "latin": "Flamenco e latina",
             "indie": "Indie e rock",
-            "electronic": "Elettronica"
+            "electronic": "Elettronica",
+            "commercial": "Commerciale e reggaeton"
           }
         },
         "area": {
@@ -1665,26 +1697,218 @@
             "raval": "Raval",
             "eixample": "Eixample",
             "poble-sec": "Poble-sec",
-            "poblenou": "Poblenou"
+            "poblenou": "Poblenou",
+            "sant-gervasi": "Tuset, Sant Gervasi e Diagonal"
           }
         }
       },
       "places": {
         "Boadas": "Il cocktail bar più antico di Barcellona, aperto dal 1933, a due passi dalla Rambla. Drink classici serviti da barman in giacca bianca.",
-        "Dry Martini": "Un locale classico rivestito di legno, con una solida reputazione per, ovviamente, i suoi martini.",
-        "Paradiso": "Uno speakeasy nascosto dietro la porta di un frigorifero, in un piccolo locale di pastrami. Cocktail teatrali e originali, e spesso c'è la fila.",
-        "Two Schmucks": "Un cocktail bar informale e giocoso, con un'atmosfera da festa e nessun dress code.",
-        "Bar Marsella": "Aperto dal 1820 e famoso per l'assenzio. Specchi sbiaditi, bottiglie impolverate e tutto il fascino di un tempo.",
-        "Jamboree": "Leggendaria cantina jazz in Plaça Reial. Concerti la sera, poi a notte fonda si trasforma in discoteca.",
-        "Jazz Si Club": "Un minuscolo bar musicale economico, gestito da una scuola di musica, con jam session di generi diversi durante la settimana.",
-        "Los Tarantos": "Brevi spettacoli di flamenco in una piccola sala in Plaça Reial. Un modo semplice per un primo assaggio di flamenco.",
-        "Marula Café": "Un piccolo club di funk, soul e ritmi latini. Pubblico simpatico e tanta voglia di ballare.",
-        "Sidecar": "Un locale seminterrato vicino a Plaça Reial per indie e rock: prima i concerti, poi i DJ.",
-        "Sala Apolo": "Una storica sala da ballo sul Paral·lel, con concerti e diverse serate a tema durante la settimana.",
-        "Razzmatazz": "Un'enorme discoteca in un ex capannone industriale, con diverse sale, dall'indie alla techno, e concerti di grandi nomi.",
-        "Moog": "Un piccolo club techno nel Raval, caldo e affollato, aperto fino a tardi."
+        "Dry Martini": "Un classico rivestito di legno, con una solida reputazione per, ovviamente, i suoi martini.",
+        "Paradiso": "Speakeasy nascosto dietro la porta di un frigorifero, in un piccolo locale di pastrami. Cocktail teatrali e originali, e spesso c'è la fila.",
+        "Two Schmucks": "Cocktail bar rilassato e giocoso, con un'atmosfera da festa e nessun dress code.",
+        "Bar Marsella": "Aperto dal 1820 e famoso per l'assenzio. Specchi sbiaditi, bottiglie impolverate e tanto fascino d'altri tempi.",
+        "Jamboree": "Leggendaria cantina jazz in Plaça Reial. Concerti la sera, poi a tarda notte si trasforma in discoteca.",
+        "Jazz Si Club": "Minuscolo locale musicale economico gestito da una scuola di musica, con jam session di stili diversi durante la settimana.",
+        "Los Tarantos": "Brevi spettacoli di flamenco in una piccola sala di Plaça Reial. Un modo facile per un primo assaggio di flamenco.",
+        "Marula Café": "Piccolo club di funk, soul e ritmi latini. Pubblico simpatico e tanto ballo.",
+        "Sidecar": "Locale nel seminterrato, vicino a Plaça Reial, per indie e rock: prima i concerti, poi i DJ.",
+        "Sala Apolo": "Storica sala da ballo sul Paral·lel con concerti e diverse serate a tema durante la settimana.",
+        "Razzmatazz": "Enorme discoteca in un ex capannone, con diverse sale, dall'indie alla techno, e concerti di grandi nomi.",
+        "Moog": "Piccolo club techno nel Raval, caldo e affollato, aperto fino a tardi.",
+        "Sutton": "Discoteca in Carrer de Tuset, il cuore della movida dei quartieri alti, con un pubblico elegante e in gran parte del posto. Il momento più vivace è dal giovedì al sabato sera.",
+        "Bling Bling": "Discoteca all'inizio di Carrer de Tuset (n. 8–10), uno dei locali più frequentati della movida dei quartieri alti, con musica commerciale e un pubblico ben vestito, in gran parte del posto.",
+        "Gatsby": "Locale in stile anni Venti in Carrer de Tuset: prima cena e spettacoli, poi drink e musica fino a notte fonda.",
+        "Otto Zutz": "Un classico di Barcellona dagli anni Ottanta, in un vecchio edificio tessile con tre piani di musica, vicino a Via Augusta.",
+        "Luz de Gas": "Vecchio teatro musicale in Carrer de Muntaner con band dal vivo e concerti tributo, poi una serata in discoteca con le hit che conoscono tutti.",
+        "Slow": "Elegante bar-discoteca vicino alla Diagonal, frequentato da un pubblico locale ben vestito.",
+        "Solange": "Cocktail bar in Carrer d'Aribau ispirato alle donne dei film di James Bond, con drink classici ed eleganti.",
+        "Mirablau": "Bar ai piedi del Tibidabo con enormi vetrate affacciate su tutta la città: un drink con vista, poi si balla fino a tarda notte.",
+        "Bikini": "Un'istituzione di Barcellona sulla Diagonal: concerti e una discoteca con diverse sale e stili.",
+        "Quilombo": "Piccolo bar storico in Carrer d'Aribau, con chitarre e canzoni latinoamericane che finiscono per cantare tutti.",
+        "Antilla BCN": "Il locale di salsa più famoso della città, con lezioni di ballo a inizio serata. I principianti sono i benvenuti.",
+        "Dow Jones": "Bar dove i prezzi dei drink salgono e scendono sugli schermi come in borsa. Molto frequentato dagli studenti.",
+        "City Hall": "Discoteca in un vecchio teatro all'inizio della Rambla de Catalunya, con una terrazza e musica diversa ogni sera."
+      }
+    },
+    "museums": {
+      "label": "Musei e cultura",
+      "intro": "Dagli affreschi romanici al design e alla scienza: musei che valgono qualche ora, molti dei quali in edifici bellissimi.",
+      "filters": {
+        "kind": {
+          "label": "Di che tipo?",
+          "options": {
+            "art": "Arte",
+            "history": "Storia",
+            "science": "Scienza",
+            "design": "Design"
+          }
+        },
+        "area": {
+          "label": "Dove?",
+          "options": {
+            "old-town": "Città vecchia (Gotico, Born, Raval)",
+            "eixample": "Eixample",
+            "montjuic": "Montjuïc",
+            "seafront": "Lungomare e Poblenou",
+            "uptown": "Colline e quartieri alti"
+          }
+        }
+      },
+      "places": {
+        "MNAC": "Il museo nazionale d'arte della Catalogna, nel grandioso Palau Nacional costruito per l'Esposizione Internazionale del 1929. Famoso per gli affreschi delle chiese romaniche.",
+        "Fundació Joan Miró": "Museo bianco e luminoso progettato da Josep Lluís Sert per il suo amico Joan Miró, con dipinti, sculture e una terrazza sul tetto.",
+        "CaixaForum": "Mostre all'interno di un'ex fabbrica tessile modernista di Josep Puig i Cadafalch.",
+        "Museu Frederic Marès": "L'enorme collezione personale di uno scultore, dalle sculture medievali agli oggetti di uso quotidiano, in un palazzo accanto alla Cattedrale.",
+        "Museu d'Història de Catalunya": "La storia della Catalogna raccontata in un vecchio magazzino del porto, il Palau de Mar, con una terrazza affacciata sul porto.",
+        "Museu Egipci": "Un museo privato di reperti dell'antico Egitto, a due passi dal Passeig de Gràcia.",
+        "Museu del Disseny": "Design, moda e arti decorative in un edificio sorprendente a Glòries, che i barcellonesi hanno soprannominato \"la spillatrice\".",
+        "CosmoCaixa": "Grande museo della scienza interattivo, famoso soprattutto per la ricostruzione di una foresta allagata dell'Amazzonia."
+      }
+    },
+    "viewpoints": {
+      "label": "Punti panoramici",
+      "intro": "Ammirate tutta la città dall'alto. Ricordate che diversi belvedere si trovano accanto alle case della gente: non fate rumore, soprattutto al tramonto.",
+      "filters": {
+        "view": {
+          "label": "Che vista?",
+          "options": {
+            "city": "Città",
+            "sea": "Mare"
+          }
+        },
+        "area": {
+          "label": "Dove?",
+          "options": {
+            "old-town": "Città vecchia (Gotico, Born, Raval)",
+            "eixample": "Eixample",
+            "montjuic": "Montjuïc",
+            "uptown": "Colline e quartieri alti"
+          }
+        }
+      },
+      "places": {
+        "Bunkers del Carmel": "Una vista a 360° da una vecchia batteria antiaerea della Guerra Civile. Molto frequentato al tramonto; i residenti hanno chiesto ai visitatori di fare meno rumore.",
+        "Mirador del Palau Nacional": "La terrazza davanti al MNAC guarda dritto lungo il viale fino a Plaça d'Espanya e su tutta la città.",
+        "Castell de Montjuïc": "Una fortezza del Seicento in cima al Montjuïc, con vista sul porto da un lato e sulla città dall'altro.",
+        "Arenas de Barcelona": "Un'ex arena per la corrida trasformata in centro commerciale, con una passerella circolare sul tetto affacciata su Plaça d'Espanya e sul Montjuïc.",
+        "Parc del Guinardó": "Un tranquillo parco in collina con ampie vedute, frequentato soprattutto dalla gente del posto.",
+        "Turó del Putxet": "Un piccolo parco in cima a una collina in una zona residenziale, con una vista tranquilla sulla città fino al mare.",
+        "Mirador de Colom": "Un ascensore all'interno della colonna di Colombo, in fondo alla Rambla, vi porta fino a una piccola piattaforma panoramica sul porto.",
+        "Tibidabo": "Il punto più alto sopra Barcellona, sormontato dalla chiesa del Sagrat Cor. Nelle giornate limpide, il panorama più bello della città."
+      }
+    },
+    "cafes": {
+      "label": "Caffè e granjas",
+      "intro": "Granjas classiche per la cioccolata calda, pasticcerie storiche e caffè di quartiere: tutte attività locali, non catene.",
+      "filters": {
+        "kind": {
+          "label": "Per cosa?",
+          "options": {
+            "chocolate": "Cioccolata e churros",
+            "pastries": "Pasticcerie e forni",
+            "historic": "Caffè storico",
+            "coffee": "Buon caffè",
+            "local": "Caffè di quartiere"
+          }
+        },
+        "area": {
+          "label": "Dove?",
+          "options": {
+            "old-town": "Città vecchia (Gotico, Born, Raval)",
+            "eixample": "Eixample",
+            "gracia": "Gràcia",
+            "seafront": "Barceloneta"
+          }
+        }
+      },
+      "places": {
+        "Granja Dulcinea": "Una granja a gestione familiare in Carrer de Petritxol dal 1941, famosa per la cioccolata calda densa con churros o melindros.",
+        "Granja La Pallaresa": "Un altro classico di Petritxol, la stradina famosa per le sue cioccolaterie. Nei pomeriggi d'inverno mettete in conto la fila.",
+        "Cafè de l'Òpera": "Un caffè sulla Rambla dal 1929, di fronte al teatro dell'opera del Liceu, con gli interni originali in stile modernista.",
+        "Nømad Coffee": "Uno dei pionieri del caffè specialty a Barcellona, in un piccolo passaggio di Sant Pere.",
+        "Granja M. Viader": "Una granja nel Raval dal 1870, dove è nato il Cacaolat, il famoso latte al cioccolato di Barcellona. Provate la cioccolata calda con la panna.",
+        "Pastisseria La Colmena": "Una delle pasticcerie più antiche della città, in Plaça de l'Àngel, nota per i dolci tradizionali e le caramelle color miele.",
+        "Escribà": "Il negozio principale della famiglia di pasticceri Escribà sulla Gran Via, famosa per le sue torte e le creazioni al cioccolato.",
+        "Cafès El Magnífico": "Torrefazione di famiglia nel Born dal 1919. Venite per un ottimo caffè e per sentire il profumo dei chicchi in tostatura.",
+        "Bar Velódromo": "Un grande caffè-bar del 1933 in Carrer de Muntaner, con soffitti alti e un lungo bancone, aperto dalla colazione fino a tardi.",
+        "Granja La Nena": "La granja di famiglia di Gràcia per la cioccolata calda densa, le crêpe e le torte fatte in casa, molto amata dalle famiglie del quartiere.",
+        "Forn Baluard": "Ottimo forno di quartiere alla Barceloneta, noto per il pane a lievitazione naturale e i dolci cotti nel forno a legna.",
+        "Cafè Salambó": "Un ampio caffè di Gràcia e punto d'incontro, accanto ai cinema Verdi, frequentato prima o dopo un film."
+      }
+    },
+    "family": {
+      "label": "Con i bambini",
+      "intro": "Animali, scienza, funivie e giostre: idee che piacciono ai bambini (e ai loro genitori).",
+      "filters": {
+        "kind": {
+          "label": "Cosa gli piace?",
+          "options": {
+            "animals": "Animali",
+            "science": "Scienza",
+            "rides": "Giostre e funivie",
+            "treats": "Dolcetti"
+          }
+        },
+        "area": {
+          "label": "Dove?",
+          "options": {
+            "old-town": "Città vecchia (Gotico, Born, Raval)",
+            "montjuic": "Montjuïc",
+            "seafront": "Lungomare e Poblenou",
+            "uptown": "Colline e quartieri alti"
+          }
+        }
+      },
+      "places": {
+        "Aquàrium de Barcelona": "Grande acquario nel Port Vell, con un tunnel sottomarino dove gli squali nuotano sopra la vostra testa.",
+        "Zoo de Barcelona": "Lo zoo della città, all'interno del Parc de la Ciutadella.",
+        "CosmoCaixa": "Museo della scienza interattivo con la ricostruzione di una foresta allagata dell'Amazzonia, perfetto per i bambini curiosi.",
+        "Museu de la Xocolata": "Il museo del cioccolato nel Born, gestito dai pasticceri della città, con sculture fatte di cioccolato.",
+        "Telefèric de Montjuïc": "Una funivia che sale fino al castello del Montjuïc, con vista sul porto e sulla città.",
+        "Poble Espanyol": "Un villaggio all'aperto costruito per l'Esposizione Internazionale del 1929, con riproduzioni di edifici di tutta la Spagna e botteghe artigiane.",
+        "Parc d'Atraccions Tibidabo": "Uno dei parchi divertimenti più antichi d'Europa, aperto nel 1901 in cima al Tibidabo, con vista su tutta la città."
+      }
+    },
+    "shops": {
+      "label": "Negozi storici",
+      "intro": "Negozi che fanno parte della città da generazioni. Comprare qui significa tenerli in vita.",
+      "filters": {
+        "kind": {
+          "label": "Cosa cercate?",
+          "options": {
+            "crafts": "Artigianato e regali",
+            "food": "Cibo e vino",
+            "fashion": "Cappelli e moda",
+            "books": "Libri e musica",
+            "market": "Mercatino delle pulci"
+          }
+        },
+        "area": {
+          "label": "Dove?",
+          "options": {
+            "old-town": "Città vecchia (Gotico, Born, Raval)",
+            "seafront": "Lungomare e Poblenou",
+            "eixample": "Eixample"
+          }
+        }
+      },
+      "places": {
+        "Cereria Subirà": "Un negozio di candele aperto dal 1761, spesso definito il negozio più antico di Barcellona, con un bellissimo interno ottocentesco.",
+        "La Manual Alpargatera": "Espadrillas fatte a mano dagli anni Quaranta, ancora realizzate in modo tradizionale.",
+        "Casa Gispert": "Frutta secca, frutta essiccata e caffè tostati nel forno a legna dal 1851, nel Born.",
+        "El Rei de la Màgia": "Un negozio di magia aperto dal 1881, pieno di trucchi, manifesti e storia.",
+        "Vila Viniteca": "Un'enoteca di famiglia nel Born con un'enorme scelta di vini catalani e spagnoli, e una gastronomia accanto.",
+        "Els Encants": "Uno dei mercatini delle pulci più antichi d'Europa, oggi sotto un enorme tetto a specchio a Glòries. Aperto alcuni giorni alla settimana.",
+        "Herboristeria del Rei": "Un'erboristeria aperta dal 1823, a due passi da Plaça Reial, con l'interno originale in legno intagliato pieno di cassetti e vasi.",
+        "Ganiveteria Roca": "Un negozio di coltelli e posate in Plaça del Pi dal 1911, con una bellissima facciata modernista.",
+        "Sombrereria Mil": "Una cappelleria tradizionale vicino a Plaça Urquinaona, con baschi, fedora e cappelli Panama.",
+        "Casa Beethoven": "Un negozio di spartiti sulla Rambla dal 1880, che vende ancora partiture ai musicisti di tutta la città.",
+        "Planelles Donat": "Produttori di torrone dal 1850 in Portal de l'Àngel; d'estate servono anche horchata e gelati.",
+        "Colmado Quílez": "Una drogheria sulla Rambla de Catalunya dal 1908, con scaffali fino al soffitto pieni di vini, conserve e specialità gastronomiche.",
+        "Llibreria Altaïr": "Una grande libreria indipendente interamente dedicata ai viaggi, alle mappe e alle guide."
       }
     }
   },
-  "activitiesHash": "52391f76ef"
+  "activitiesHash": "ec0665945f"
 }
