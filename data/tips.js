@@ -4,7 +4,7 @@
 window.WALKBCN_TIPS = {
   // Paste the link of the "Suggest a tip" form here (e.g. a Google Form).
   // While it is empty, the suggestion box is hidden.
-  formUrl: "",
+  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdhajfsN1qNiQxf6BtiAKNWsiBbeEhwBA2LEAE8wL_0vtotFA/viewform",
 
   text: {
     tab: { en: "Tips", ca: "Consells", es: "Consejos", fr: "Conseils", de: "Tipps", it: "Consigli", zh: "贴士" },
