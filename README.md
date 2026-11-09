@@ -56,6 +56,7 @@ Abre `content/review.md`: tiene todas las historias generadas y, para cada una, 
 | `index.html` | La web (una sola página) |
 | `data/stops.js` | Las 19 paradas: coordenadas, foto, historia base, consejo |
 | `data/activities.js` | Activities: restaurantes y nightlife (filtros, sitios y descripciones). Para añadir un sitio o una categoría, se edita aquí |
+| `data/tips.js` | Pestaña Consejos: los tips en los 7 idiomas y `formUrl`, el enlace al formulario de "Propón un consejo" (vacío = botón oculto). Para añadir un tip aprobado, se edita aquí |
 | `content/stories.json` | Historias generadas (fuente) — `stories.js` es la copia que lee la web |
 | `content/review.md` | Hoja de revisión de las historias |
 | `audio/` | Audios generados |

@@ -11,6 +11,7 @@ WalkBCN is a personalised virtual travel guide that helps tourists discover Barc
 - **Languages and lengths:** the app and its stories are available in Catalan, Spanish, English, French, German, Italian and Chinese, with short, normal or long stories.
 - **Learning from use:** the app remembers, in the visitor's own browser, which stories they finish and rate, and uses that to choose later story versions. Visitors can opt out or erase it.
 - **Activities:** users pick a category (Restaurants, Nightlife, Museums & culture, Viewpoints, Cafés & granjas, With kids, Historic shops) and their preferences, and get a hand-picked list of places. "See & book" opens the place on Google Maps. This exists to test demand; there is no booking inside the app.
+- **Local tips:** a "Tips" tab with short etiquette and practical advice from locals (names, rules such as no drinking in the street or going shirtless, meal times, safety, festivals), written and checked by the team in all 7 languages. Visitors can suggest a tip through an external form; the team reviews each one and adds it by hand. Nothing a visitor sends is published automatically.
 
 ## What it deliberately does NOT do
 
