@@ -214,34 +214,43 @@
       "tip": "Fixeu-vos en les columnes de mosaic de la cantonada: cadascuna té un motiu floral diferent.",
       "stories": {
         "base": {
-          "short": "Construïda el 1908 per a un cor obrer, aquesta sala de concerts és un cant a la identitat catalana. Mireu amunt, a la façana, i hi veureu els busts de Bach, Beethoven i Wagner. A dins, una immensa claraboia de vitrall brilla com un sol, i de dia és l'única sala de concerts d'Europa il·luminada només amb llum natural.",
-          "normal": "Construïda el 1908 per a un cor obrer, aquesta sala de concerts és tota una celebració de la identitat catalana. A la façana hi ha els busts de Bach, Beethoven i Wagner, i una escultura dedicada a la cançó popular catalana. A dins, una claraboia de vitrall enorme brilla com un sol damunt del públic. És l'única sala de concerts d'Europa il·luminada només amb llum natural durant el dia.",
-          "long": "Sou davant del Palau de la Música Catalana, construït el 1908 per a un cor obrer, l'Orfeó Català. Els seus membres eren gent treballadora corrent que es reunia per cantar, i aquest edifici es va aixecar perquè fos casa seva. Per això tot l'edifici és una celebració de la identitat catalana, des del maó fins als mosaics. Preneu-vos un moment per mirar amunt, cap a la façana. Hi trobareu busts esculpits de grans compositors, entre ells Bach, Beethoven i Wagner, que observen el carrer des de dalt. A la cantonada, una escultura sembla sortir de la pedra. És un homenatge a la cançó popular catalana, la música que aquests cantaires estimaven, i si mireu ben amunt de tot hi descobrireu Sant Jordi, el patró de Catalunya. Fixeu-vos també en les columnes del balcó superior, revestides d'un mosaic de colors que gairebé sembla florir. A dins, la sorpresa és la llum. Una claraboia de vitrall enorme penja damunt del públic i brilla com un sol. Durant el dia, aquesta és l'única sala de concerts d'Europa il·luminada només amb llum natural. Al voltant de l'escenari, unes muses esculpides surten de la paret darrere dels músics, meitat en mosaic i meitat en relleu, com si la música mateixa hagués pres forma. El 1997 el Palau va ser declarat Patrimoni Mundial per la UNESCO, però continua sent una sala de concerts ben viva, i en aquests carrers estrets hi viu gent. Així doncs, us demanem que us poseu a un costat, deixeu pas als veïns i gaudiu de la vista en silenci."
+          "short": "Construïda el 1908 per a un cor de gent treballadora, aquesta sala de concerts és un homenatge a la identitat catalana. Mireu amunt, a la façana, i hi veureu els busts de Bach, Beethoven i Wagner. A dins, una claraboia immensa de vitrall brilla com un sol, i de dia aquesta és l'única sala de concerts d'Europa il·luminada només amb llum natural.",
+          "normal": "Construïda el 1908 per a un cor de gent treballadora, aquesta sala de concerts és tota una celebració de la identitat catalana. A la façana hi ha els busts de Bach, Beethoven i Wagner, i una escultura dedicada a la cançó popular catalana. A dins, una claraboia enorme de vitrall brilla com un sol damunt del públic. És l'única sala de concerts d'Europa que, de dia, s'il·lumina només amb llum natural.",
+          "long": "Sou davant del Palau de la Música Catalana, construït el 1908 per a un cor de gent treballadora, l'Orfeó Català. Els seus membres eren treballadors corrents que s'ajuntaven per cantar, i aquest edifici es va fer perquè fos casa seva. Per això tot el Palau és una celebració de la identitat catalana, des del maó fins als mosaics. Preneu-vos un moment per mirar la façana. Hi trobareu busts esculpits de grans compositors, entre ells Bach, Beethoven i Wagner, que observen el carrer des de dalt. A la cantonada, una escultura sembla que surti de la pedra. És un homenatge a la cançó popular catalana, la música que aquells cantaires estimaven, i si mireu ben amunt de tot hi descobrireu Sant Jordi, el patró de Catalunya. Fixeu-vos també en les columnes del balcó superior, revestides d'un mosaic de colors que gairebé sembla florir. A dins, la sorpresa és la llum. Una claraboia enorme de vitrall penja damunt del públic i brilla com un sol. De dia, aquesta és l'única sala de concerts d'Europa il·luminada només amb llum natural. Al voltant de l'escenari, unes muses esculpides sorgeixen de la paret, darrere dels músics, meitat en mosaic i meitat en relleu, com si la mateixa música hagués pres forma. El 1997 el Palau va ser declarat Patrimoni de la Humanitat per la UNESCO, però continua sent una sala de concerts en plena activitat, i en aquests carrers estrets hi viu gent. Així que, si us plau, poseu-vos a un costat, deixeu pas als veïns i gaudiu de la vista sense fer soroll."
         },
         "architecture": {
-          "short": "Fixeu-vos que costa molt allunyar-se prou per veure aquest edifici sencer. Lluís Domènech i Montaner el va encabir en un solar molt estret, i la seva atrevida estructura d'acer va permetre obrir les parets amb vidre. Mireu amunt: maó, mosaic i pedra esculpida. Si us plau, poseu-vos a un costat per deixar passar els veïns.",
-          "normal": "Fixeu-vos que costa molt allunyar-se prou per abastar tot l'edifici. L'arquitecte, Lluís Domènech i Montaner, el va encabir en un solar estret entre aquests carrers tan estrets, així que poseu-vos a un costat i deixeu pas als veïns. El seu truc agosarat va ser una estructura d'acer. Com que és l'estructura la que aguanta el pes, les parets es van poder obrir amb vidre, i la sala de dins es va convertir en una caixa de llum resplendent sota una enorme claraboia de vitrall. Mireu amunt, cap al maó, el mosaic i la pedra esculpida: això és el Modernisme català a tot volum, acabat el 1908.",
-          "long": "Fixeu-vos que costa molt allunyar-se prou per abastar tot l'edifici. L'arquitecte, Lluís Domènech i Montaner, va haver d'encabir una sala de concerts en un solar estret entre aquests carrers estrets de Sant Pere, de manera que només el veieu a trossos, des de baix i de biaix. Aquí mateix hi viu i hi treballa gent, així que poseu-vos a un costat i deixeu pas als veïns. El truc agosarat de Domènech va ser una estructura d'acer. En un edifici tradicional, són els murs gruixuts els que aguanten el pes. Aquí aquesta feina la fa l'estructura, i això va permetre obrir les parets amb vidre. El resultat, a dins, és una caixa de llum resplendent sota una enorme claraboia de vitrall, amb la llum del dia entrant a raig a la sala des de dalt i pels costats. Ara mireu amunt, cap a les superfícies. Això és el Modernisme català a tot volum, acabat el 1908. El maó vermell dona a l'edifici una base càlida, i a sobre Domènech hi va anar superposant pedra esculpida i mosaic de colors vius. Busqueu les columnes del balcó superior, cadascuna revestida de rajoles que semblen tiges i flors. Després seguiu la cantonada, on un grup escultòric sembla sortir de l'edifici, com si la decoració i l'estructura haguessin deixat de ser coses separades. Aquesta idea, que tots els oficis havien de treballar plegats, era central en el Modernisme. Domènech va comptar amb escultors, mosaïcistes i vidriers en lloc de tractar l'ornament com un afegit d'última hora. És un dels motius pels quals, el 1997, la UNESCO va declarar el Palau Patrimoni Mundial, juntament amb un altre dels seus edificis, l'Hospital de Sant Pau."
+          "short": "El 1908, aquesta sala de concerts era una idea agosarada: gairebé una capsa de vidre. Lluís Domènech i Montaner la va construir sobre una estructura d'acer, perquè les parets es poguessin obrir al vidre de colors. Mireu la façana, on maó, pedra, mosaic i escultura s'apleguen tots junts. I, si us plau, aparteu-vos per deixar passar els veïns.",
+          "normal": "Una idea agosarada per al 1908: una sala de concerts que és gairebé una capsa de vidre. L'arquitecte, Lluís Domènech i Montaner, va construir el Palau de la Música Catalana sobre una estructura d'acer, de manera que les parets no havien d'aguantar el pes de l'edifici i, en canvi, es podien obrir al vidre de colors. Mireu la façana i fixeu-vos com maó, pedra, mosaic i escultura s'apleguen tots junts, un orgullós aparador del Modernisme català. A dins, una gran claraboia de vitrall aboca la llum del dia sobre el públic. Aquests carrers són estrets i habitats, així que aparteu-vos per deixar passar els veïns mentre mireu.",
+          "long": "Una idea agosarada per al 1908: una sala de concerts que és gairebé una capsa de vidre. L'arquitecte, Lluís Domènech i Montaner, va construir el Palau de la Música Catalana sobre una estructura d'acer. Com que aquesta estructura aguanta el pes, les parets no ho havien de fer, i grans trams es podien obrir al vidre de colors. És un truc d'enginyeria moderna vestit amb un ofici molt tradicional. Mireu la façana i fixeu-vos com maó, pedra, mosaic i escultura s'apleguen tots junts. El maó vermell és senzill i quotidià, però vegeu com contrasta amb la pedra esculpida i les rajoles que brillen, com si l'edifici volgués lluir tot allò que sabien fer els tallers catalans. Aquest és l'esperit del Modernisme català: no deixar res sense adornar si podia ser bonic. Ara busqueu les columnes del nivell superior, revestides de flors de mosaic, cadascuna amb un dibuix una mica diferent. Després alceu la mirada fins al gran mosaic de dalt de tot de la façana principal, obra de l'artista Lluís Bru. A dins, on des d'aquí no es veu, l'estructura d'acer llueix de veritat. Una gran claraboia de vitrall penja damunt del públic com una cúpula capgirada i aboca la llum del dia sobre les butaques: és una sala de concerts on pots escoltar música amb llum natural. El 1997 l'edifici va entrar a la llista del Patrimoni Mundial de la UNESCO. Mentre ho contempleu tot, recordeu que aquests carrers són estrets i habitats. Aparteu-vos per deixar passar els veïns i no ocupeu la vorera mentre mireu."
         },
         "art": {
-          "short": "Mireu amunt, a la cantonada damunt de l'entrada, on l'homenatge de Miquel Blay a la cançó popular catalana sembla sortir de la pedra: una noia envoltada de gent de totes les edats, els mateixos cantaires per als quals es va construir aquesta sala el 1908. Gaudiu-ne en silenci, si us plau: aquí hi viu gent.",
-          "normal": "Mireu amunt, a la cantonada damunt de l'entrada, on un grup escultòric sembla sortir directament de la pedra. És l'homenatge de Miquel Blay a la cançó popular catalana: al centre, una noia, envoltada de gent de totes les edats, els mateixos cantaires per als quals es va construir aquesta sala el 1908. Més amunt, uns busts esculpits de grans compositors vigilen el carrer. A dins, una claraboia de vitrall d'Antoni Rigalt brilla com un sol. Aquí l'escultura, el mosaic, el vidre i el maó es van concebre per treballar plegats com una sola obra d'art. En aquests carrers hi viu gent, així que gaudiu-ne en silenci.",
-          "long": "Mireu amunt, a la cantonada damunt de l'entrada, on un grup escultòric sembla sortir directament de la pedra. És l'homenatge de Miquel Blay a la cançó popular catalana. Al centre hi ha una noia, i al seu voltant s'aplega gent de totes les edats, els mateixos cantaires per als quals es va construir aquesta sala el 1908. Ara enfileu la mirada fins al capdamunt del grup. Hi trobareu Sant Jordi, el patró de Catalunya, vetllant la cançó que hi ha a sota. Més amunt, a la façana, uns busts esculpits de grans compositors vigilen el carrer, entre ells Bach, Beethoven i Wagner. Entre els busts i l'escultura, fixeu-vos com la pedra dona pas al color. Les columnes del balcó superior estan cobertes de mosaic, cadascuna amb un motiu de flors, de manera que tota la façana sembla més un jardí que no pas una paret. D'això es tracta. Aquí l'escultura, el mosaic, el vidre i el maó es van concebre per treballar plegats com una sola obra d'art, i no com una decoració afegida al final. A dins, la idea arriba al punt màxim. Una claraboia de vitrall d'Antoni Rigalt brilla com un sol damunt del públic. I darrere de l'escenari, una filera de muses surt de la paret, meitat esculpides en relleu i meitat fetes de mosaic, i sembla que sorgeixin de la mateixa música. En aquests carrers hi viu gent, així que gaudiu-ne en silenci i deixeu lloc a la vorera perquè hi puguin passar els veïns."
+          "short": "Imagineu-vos asseguts sota un sol fet de vidre: és la claraboia de vitrall de dins, que brilla en daurats i blaus. Aquí fora, mireu amunt a la cantonada i busqueu la gran escultura de Miquel Blay dedicada a la cançó popular catalana, plena de gent corrent, joves i grans, emportats per la música.",
+          "normal": "Imagineu-vos asseguts sota un sol fet de vidre. És la gran claraboia de vitrall d'aquesta sala, que brilla en daurats i blaus a cada concert. Aquí fora, mireu amunt a la cantonada i busqueu la gran escultura dedicada a la cançó popular catalana, obra de Miquel Blay, plena de gent corrent, joves i grans, emportats per la música. Després resseguiu la façana amb la mirada fins als busts de Bach, Beethoven i Wagner. Escultors, mosaïcistes i vitrallers van treballar colze a colze aquí, i van convertir la casa d'un cor en una gran obra d'art.",
+          "long": "Imagineu-vos asseguts sota un sol fet de vidre. És la gran claraboia de vitrall d'aquesta sala, que brilla en daurats i blaus a cada concert, feta al taller del vitraller Antoni Rigalt. Des del carrer no es veu, així que comenceu per allò que sí que podeu veure. Mireu amunt, a la cantonada de l'edifici, i busqueu la gran escultura dedicada a la cançó popular catalana, obra de Miquel Blay. Mireu-la amb calma. És plena de gent corrent, joves i grans, emportats tots junts per la música. Per sobre d'ells s'alça Sant Jordi, el patró de Catalunya, com si vetllés la mateixa cançó. Ara resseguiu la façana amb la mirada fins a la filera de busts. Hi ha Bach, Beethoven i Wagner, i també el compositor renaixentista Palestrina: grans noms de la música europea vetllant una sala construïda per a un cor català. Entre ells, fixeu-vos en les columnes revestides de flors de mosaic, cadascuna una mica diferent, i en la lluïssor de les rajoles trencades quan les toca la llum. A dins, l'escultura continua d'una manera sorprenent. Al fons de l'escenari hi ha figures femenines, els esperits de la música, amb la meitat de baix en mosaic pla i la meitat de dalt sortint en escultura, obra d'Eusebi Arnau. Escultors, mosaïcistes i vitrallers van treballar colze a colze aquí, i van convertir la casa d'un cor en una gran obra d'art. Separeu-vos una mica de la porta i deixeu lloc als vianants mentre mireu."
+        },
+        "culture": {
+          "short": "El 1960, amb ministres del govern de Franco entre el públic, la gent es va posar dempeus aquí i va cantar el Cant de la Senyera, una cançó catalana que havien tret del programa. Mireu amunt l'escultura de la cantonada, un homenatge a la cançó popular catalana. En aquests carrers hi viuen famílies, així que parleu fluixet.",
+          "normal": "Alguns dels moments més famosos d'aquesta sala no van venir de l'escenari, sinó del públic. El 1960, en un concert amb ministres del govern de Franco a la sala, la gent es va posar dempeus i va cantar el Cant de la Senyera, una cançó catalana que havien tret del programa. Es va convertir en un cèlebre acte de desafiament silenciós. Escau a un edifici fet per a un cor, l'Orfeó Català, perquè la gent corrent pogués cantar junta. Mireu amunt l'escultura de la cantonada, un homenatge a la cançó popular catalana. Els concerts encara omplen aquesta sala, i als carrers del voltant hi viuen famílies, així que parleu fluixet.",
+          "long": "Alguns dels moments més famosos d'aquesta sala no van venir de l'escenari, sinó del públic. El 1960, el règim de Franco encara restringia l'ús públic del català, i aquí es va fer un concert pel centenari del naixement del poeta Joan Maragall. Entre el públic hi havia ministres del govern de Franco. Havien tret una peça del programa: el Cant de la Senyera, una cançó catalana amb lletra del mateix Maragall. La gent es va posar dempeus i la va cantar igualment. Es va convertir en un cèlebre acte de desafiament silenciós, que avui recordem com els Fets del Palau. Alguns dels implicats van ser detinguts després, entre ells un jove Jordi Pujol, que dècades més tard va ser president de la Generalitat de Catalunya. Aquell moment escau a un edifici fet per cantar. El Palau es va construir com a seu de l'Orfeó Català, un cor fundat el 1891 per Lluís Millet i Amadeu Vives perquè la gent corrent pogués cantar junta. Millet també va compondre la música del Cant de la Senyera, de manera que la cançó que el públic va triar, en certa manera, tornava a casa. Mireu amunt l'escultura de la cantonada, un homenatge a la cançó popular catalana, amb la seva multitud de gent corrent emportada per la música. Diu ben clar per a qui es va pensar aquesta sala. Els concerts encara omplen el Palau, i l'Orfeó Català hi continua cantant. Als carrers estrets del voltant hi viuen famílies, així que, mentre sou aquí escoltant, parleu fluixet."
         }
       },
-      "srcHash": "167f38e45a",
+      "srcHash": "21d0eda844",
       "audio": {
         "base": {
           "file": "audio/ca/palau-de-la-musica-catalana.m4a",
-          "hash": "1a7be1fe15"
+          "hash": "31bdb45706"
         },
         "architecture": {
           "file": "audio/ca/palau-de-la-musica-catalana--architecture.m4a",
-          "hash": "d12f63d400"
+          "hash": "3de5bfd74b"
         },
         "art": {
           "file": "audio/ca/palau-de-la-musica-catalana--art.m4a",
-          "hash": "c958df2f7f"
+          "hash": "871bc9588c"
+        },
+        "culture": {
+          "file": "audio/ca/palau-de-la-musica-catalana--culture.m4a",
+          "hash": "a8096170cb"
         }
       }
     },
@@ -342,37 +351,46 @@
       }
     },
     "santa-maria-del-mar": {
-      "tip": "L'entrada a la basílica sol ser gratuïta en uns horaris concrets: mireu-ho a la porta.",
+      "tip": "L'entrada a la basílica sol ser gratuïta en uns horaris determinats; mireu-ho a la porta.",
       "stories": {
         "base": {
-          "short": "Aquesta és la catedral del poble, construïda en només 54 anys pels treballadors del port i els pescadors del barri. Els bastaixos, els portadors del port, van carregar a l'esquena cada pedra des de la pedrera de Montjuïc. Mireu les portes principals i hi trobareu les seves petites figures esculpides, que encara treballen.",
-          "normal": "Aquesta és la catedral del poble. La van construir en només 54 anys els treballadors del port i els pescadors del barri. Els bastaixos, els portadors, van carregar a l'esquena cada pedra des de la pedrera de Montjuïc. Busqueu-ne les petites figures esculpides a les portes principals. A dins, les columnes són tan esveltes que l'espai sembla que no pesi.",
-          "long": "Esteu davant del que la gent d'aquí anomena la catedral del poble. En realitat no és la catedral de Barcelona, que és a pocs carrers, al Barri Gòtic, però aquesta església la va aixecar el mateix barri. Les obres van començar el 1329 i el 1383 ja estava acabada. Són només 54 anys, una rapidesa sorprenent per a una església gòtica d'aquestes dimensions. Els treballadors del port i els pescadors de la Ribera, l'antic barri de vora mar, hi van posar la feina. I els bastaixos, els portadors del port, van carregar a l'esquena cada pedra des de la pedrera de Montjuïc, la muntanya que hi ha sobre el port. Imagineu-los fent aquell camí una vegada i una altra, bloc rere bloc. Ara mireu les portes principals. Hi trobareu les petites figures esculpides d'aquells portadors, que encara treballen. Mireu també amunt, cap a la gran rosassa rodona que hi ha sobre l'entrada. Quan entreu, l'ambient canvia del tot. Les columnes són tan esveltes, i les naus laterals s'enfilen tan a prop de l'alçada de la nau central, que l'espai sembla que no pesi, gairebé buit. Part d'aquesta nuesa té una història trista. El 1936, a l'inici de la Guerra Civil espanyola, un incendi va cremar a dins durant dies i en va destruir la major part de la decoració. El que en va sobreviure és la pura estructura de pedra, i molta gent pensa que per això encara és més bonica. Abans d'entrar, recordeu que continua sent l'església parroquial del Born, amb casaments, misses i veïns que hi vénen a resar. Parleu fluix i feu servir la càmera amb discreció."
+          "short": "Aquesta és la catedral del poble, aixecada en només 54 anys pels treballadors del port i els pescadors del barri. Els bastaixos, els portadors, van carregar cada pedra a l'esquena des de la pedrera de Montjuïc. Mireu les portes principals i hi trobareu les seves petites figures esculpides, encara treballant.",
+          "normal": "Aquesta és la catedral del poble. La van aixecar en només 54 anys els treballadors del port i els pescadors del barri. Els bastaixos, els portadors, van carregar cada pedra a l'esquena des de la pedrera de Montjuïc. Busqueu-ne les petites figures esculpides a les portes principals. A dins, les columnes són tan esveltes que l'espai sembla que no pesi gens.",
+          "long": "Esteu davant del que la gent d'aquí anomena la catedral del poble. En realitat no és la catedral de Barcelona, que és a pocs carrers, al Barri Gòtic, però aquesta església la va aixecar el mateix barri. Les obres van començar el 1329 i el 1383 ja estava acabada. Són només 54 anys, una rapidesa sorprenent per a una església gòtica d'aquestes dimensions. Els treballadors del port i els pescadors de la Ribera, l'antic barri de mar, hi van posar la feina. I els bastaixos, els portadors del port, van carregar cada pedra a l'esquena des de la pedrera de Montjuïc, la muntanya que s'alça sobre el port. Imagineu-vos-els fent aquell camí una vegada i una altra, bloc rere bloc. Ara mireu les portes principals. Hi trobareu les petites figures esculpides d'aquells portadors, encara treballant. Mireu també amunt, cap a la gran rosassa que hi ha sobre l'entrada. Quan entreu, l'ambient canvia del tot. Les columnes són tan esveltes, i les naus laterals s'alcen gairebé fins a l'altura de la nau central, que l'espai sembla lleuger, gairebé buit. Part d'aquesta austeritat té una història trista. El 1936, a l'inici de la Guerra Civil espanyola, un incendi va cremar a dins durant dies i en va destruir la major part de la decoració. El que va sobreviure és la pura estructura de pedra, i molta gent pensa que per això és encara més bonica. Abans d'entrar, recordeu que continua sent l'església parroquial del Born, amb casaments, misses i veïns que hi vénen a resar. Parleu baixet i feu servir la càmera amb discreció."
         },
         "history": {
-          "short": "Imagineu un portador del port, ajupit sota un bloc de pedra, caminant des de la pedrera de Montjuïc fins on sou ara. Aquests bastaixos van carregar a l'esquena les pedres d'aquesta església. Busqueu les seves petites figures esculpides a les portes principals, que encara treballen. Gaudiu-ne en silenci, si us plau. El Born és un barri ben viu.",
-          "normal": "Imagineu un portador d'aquest port, ajupit sota un bloc de pedra, caminant tot el trajecte des de la pedrera de Montjuïc fins al lloc on sou ara. Aquests homes eren els bastaixos, i van carregar a l'esquena les pedres d'aquesta església. Mireu les portes principals i hi trobareu les seves petites figures esculpides, que encara treballen. Juntament amb els treballadors del port i els pescadors del barri, la van aixecar en només 54 anys, i per això se la coneix com la catedral del poble. Encara pertany al Born, un barri real i ben viu, així que gaudiu-ne en silenci.",
-          "long": "Imagineu un portador d'aquest port, ajupit sota un bloc de pedra, caminant tot el trajecte des de la pedrera de Montjuïc, la muntanya que hi ha sobre el port, fins al lloc on sou ara. Després imagineu-lo deixant-lo a terra, fent mitja volta i tornant a buscar el següent. Aquests homes eren els bastaixos, i tenien el seu propi gremi a la Barcelona medieval. Ells van carregar a l'esquena les pedres d'aquesta església. Mireu les portes principals i hi trobareu les seves petites figures esculpides, que encara treballen després de tants segles. Juntament amb els treballadors del port i els pescadors del barri, van aixecar tota l'església en només 54 anys: van començar el 1329 i van acabar el 1383. És una rapidesa notable per a un edifici gòtic d'aquestes dimensions. I com que la va construir la gent del barri, encara se la coneix com la catedral del poble. Si la història us sona, potser heu llegit la novel·la d'Ildefonso Falcones La catedral del mar, el protagonista de la qual és un jove bastaix. Al costat de l'església hi ha una placeta amb un monument corbat i una flama perpètua. És el Fossar de les Moreres, un antic cementiri on els barcelonins recorden els defensors que van morir en el setge de 1714. Cada any, l'onze de setembre, la Diada Nacional de Catalunya, la gent s'hi aplega. Si us plau, tracteu tots dos llocs amb delicadesa. Aquesta església encara pertany al Born, un barri real i ben viu, així que gaudiu-ne en silenci."
+          "short": "Imagineu-vos carregant un bloc de pedra a l'esquena des de la muntanya de Montjuïc, una vegada i una altra. Els bastaixos, els portadors del port de Barcelona, van fer exactament això per construir aquesta església. Mireu les portes principals i hi trobareu les seves petites figures, ajupides sota la càrrega. Atureu-vos aquí en silenci, perquè al Born encara hi viu i hi resa gent.",
+          "normal": "Imagineu-vos carregant un bloc de pedra a l'esquena, des de la pedrera de la muntanya de Montjuïc fins aquí, i tornant-ho a fer, una vegada i una altra. Això és el que van fer els bastaixos, els portadors del port de Barcelona, per construir aquesta església. Mireu les portes principals i hi veureu les seves petites figures, ajupides sota la càrrega. Juntament amb els pescadors i els treballadors del port d'aquest barri, van veure com s'aixecava tota la basílica en només 54 anys. El 1936, un incendi va cremar a dins durant dies, però aquestes parets encara s'aguanten dretes. Preneu-vos un moment de silenci. Al Born encara hi viu i hi resa gent.",
+          "long": "Imagineu-vos carregant un bloc de pedra a l'esquena, des de la pedrera de la muntanya de Montjuïc fins aquí, i després fent mitja volta i tornant-ho a fer, una vegada i una altra. Això és el que van fer els bastaixos, els portadors del port de Barcelona, per construir aquesta església. Abans d'acostar-vos-hi més, mireu les portes principals. Hi veureu les seves petites figures, ajupides sota la càrrega, un homenatge als homes que van portar aquestes parets al seu lloc a cops d'esquena. Era una església feta pel barri i per al barri. Es va aixecar a la Ribera, l'antic barri vora el mar, i van ser els pescadors, els treballadors del port i els portadors que vivien en aquests carrers els qui la van tirar endavant. La primera pedra es va posar el 1329, i tota la basílica es va aixecar en només 54 anys, cosa extraordinàriament ràpida per a un edifici d'aquesta mida a l'edat mitjana. La seva història no s'acaba aquí. El 1936, a l'inici de la Guerra Civil espanyola, un incendi va cremar a dins durant dies. Va destruir bona part de la decoració, però aquestes parets encara s'aguanten dretes, i la pedra nua que veieu avui a l'interior és, en part, conseqüència d'aquella pèrdua. Si feu la volta pel lateral de l'església, trobareu el Fossar de les Moreres, un antic cementiri on van ser enterrats defensors morts durant el setge de Barcelona del 1714. Avui és un memorial. Preneu-vos un moment de silenci abans de continuar. Al Born encara hi viu i hi resa gent, i aquesta és tan la seva parròquia com un monument."
         },
         "architecture": {
-          "short": "Fixeu-vos que l'exterior és sobri i massís, gairebé com una fortalesa. Quedeu-vos amb aquesta imatge, perquè a dins l'efecte es capgira. Les columnes són tan esveltes i tan separades que tot l'espai sembla que suri. Construïda en només 54 anys, fa la sensació d'haver estat concebuda d'una tirada. A dins, parleu fluix.",
-          "normal": "Abans d'entrar, fixeu-vos que l'exterior és sobri i massís, gairebé com una fortalesa. Quedeu-vos amb aquesta imatge, perquè a dins l'efecte es capgira. Les columnes són tan esveltes, i estan tan separades, que tot l'espai sembla que suri. Això és gòtic català, i els seus constructors van treballar de pressa: tota l'església es va aixecar en només 54 anys, i per això té una unitat poc habitual, com si s'hagués concebut d'una tirada. Cada pedra va arribar des de Montjuïc a l'esquena dels portadors. Busqueu-ne les petites figures esculpides a les portes principals. A dins, parleu fluix. Continua sent l'església del barri.",
-          "long": "Abans d'entrar, fixeu-vos que l'exterior és sobri i massís, gairebé com una fortalesa. Els murs són amples i llisos, amb poca decoració, i els dos campanars octogonals acaben en terrats plans en lloc de les agulles altes que potser esperaríeu del gòtic. És típic del gòtic català, que prefereix les línies horitzontals ben marcades i les superfícies grans i serenes. Sobre les portes, la gran rosassa és un dels pocs llocs on la pedra s'obre. Quedeu-vos amb aquesta imatge, perquè a dins l'efecte es capgira. Les columnes són octogonals, molt esveltes, i estan tan separades que tot l'espai sembla que suri. Les dues naus laterals s'enfilen gairebé tan amunt com la nau central, de manera que, en lloc d'un passadís alt, teniu una única sala immensa i oberta. Bona part de la nuesa que veureu ve del 1936, quan un incendi a l'inici de la Guerra Civil espanyola va destruir la major part de la decoració posterior i va deixar a la vista l'estructura medieval. Els constructors, dirigits pels mestres d'obres Berenguer de Montagut i Ramon Despuig, van treballar de pressa. Tota l'església es va aixecar en només 54 anys, entre el 1329 i el 1383, i per això té una unitat poc habitual, com si s'hagués concebut d'una tirada. Moltes grans esglésies van trigar segles i van barrejar estils. Cada pedra va arribar des de Montjuïc a l'esquena dels portadors. Busqueu-ne les petites figures esculpides a les portes principals abans d'entrar. I un cop a dins, parleu fluix. Continua sent l'església del barri, on la gent ve a resar, no només a mirar."
+          "short": "Feu un pas enrere i mireu la façana, un mur de pedra alt i gairebé nu amb una gran rosassa al centre. Aquesta sobrietat és gòtic català en estat pur. Fixeu-vos en els dos campanars octogonals, acabats en terrat, sense agulles. Gaudiu-ne amb calma, perquè és una parròquia en plena activitat.",
+          "normal": "Feu un pas enrere i mireu la façana. És gairebé nua, un mur de pedra alt i llis amb una gran rosassa al centre. Aquesta sobrietat és gòtic català en estat pur. Ara fixeu-vos en els dos campanars octogonals, acabats en terrat en lloc d'agulles. La veritable sorpresa us espera a dins, on les columnes són tan esveltes i tan separades que tot l'espai sembla no pesar gens. Com que l'església es va aixecar en només 54 anys, el seu estil és extraordinàriament unitari de la primera pedra a l'última. Gaudiu-ne amb calma. És una parròquia en plena activitat, en un barri ben viu.",
+          "long": "Feu un pas enrere, tant com us ho permeti la placeta, i mireu la façana. És gairebé nua, un mur de pedra alt i llis amb una gran rosassa al centre. Aquesta sobrietat és gòtic català en estat pur. En lloc d'un bosc de sants esculpits i pinacles, hi trobeu superfícies amples i planes i línies horitzontals ben marcades. La rosassa que veieu no és ben bé l'original. La primera va quedar malmesa per un terratrèmol el 1428 i es va substituir més endavant, durant el segle XV, amb l'estil més ornamentat d'aquella època. Ara deixeu que la mirada pugi fins als dos campanars octogonals. Fixeu-vos que s'acaben en terrat. Aquí no hi ha agulles, i això dona a tota la façana un aire tranquil, sòlid, gairebé de fortalesa. La veritable sorpresa us espera a dins. Les columnes són esveltes i octogonals, i estan tan separades que l'espai sembla no pesar gens. Les naus laterals s'alcen gairebé tant com la nau central, de manera que l'interior es llegeix com una única sala immensa i oberta, i no com una sèrie de passadissos separats. Bona part de la decoració es va perdre en un incendi el 1936, i aquesta pèrdua deixa que l'arquitectura parli per si sola. Com que l'església es va aixecar en només 54 anys, entre el 1329 i el 1383, el seu estil és extraordinàriament unitari de la primera pedra a l'última. Esteu mirant una sola idea coherent, no segles d'afegits. Si hi entreu, moveu-vos a poc a poc i en silenci. És una parròquia en plena activitat, en un barri ben viu, i potser la gent que teniu al voltant hi ha vingut a resar."
+        },
+        "culture": {
+          "short": "Si aquesta església us sona, potser la coneixeu per la novel·la d'Ildefonso Falcones La catedral del mar, sobre un jove que es fa portador i carrega pedra per a aquestes parets. Busqueu a les portes principals les petites figures d'aquells portadors, ajupides sota la càrrega. Aquí hi viuen veïns, així que parleu baixet.",
+          "normal": "Si aquesta església us sona, potser ja us l'heu trobada en un llibre. La novel·la d'èxit d'Ildefonso Falcones, La catedral del mar, segueix un jove de la Barcelona medieval que es converteix en un dels bastaixos, els portadors que van carregar la pedra per a aquestes mateixes parets. Busqueu a les portes principals les petites figures d'aquells portadors, ajupides sota la càrrega. Més endavant la novel·la es va adaptar a la televisió, i això ha portat nous lectors i espectadors a venir a veure el lloc de debò. Si voleu, llegiu-ne un capítol per aquí a prop, però recordeu que en aquests carrers hi viuen veïns, així que parleu baixet.",
+          "long": "Si aquesta església us sona, potser ja us l'heu trobada en un llibre. La novel·la d'èxit d'Ildefonso Falcones, publicada per primer cop en castellà el 2006 amb el títol La catedral del mar, segueix un jove de la Barcelona medieval que es converteix en un dels bastaixos, els portadors que van carregar la pedra per a aquestes mateixes parets. A la història, l'església va creixent a poc a poc al mateix ritme que la seva vida, de manera que l'edifici esdevé gairebé un personatge més. Abans de continuar, mireu les portes principals. Hi trobareu les petites figures d'aquells portadors, ajupides sota la càrrega. Passen fàcilment desapercebudes, però un cop has llegit sobre els bastaixos, costa mirar-les sense pensar en els homes de carn i ossos que van arrossegar aquesta pedra, bloc rere bloc, des de la pedrera de Montjuïc. Més endavant la novel·la es va adaptar a la televisió, en una sèrie que es va estrenar el 2018, i entre el llibre i la pantalla ha portat nous lectors i espectadors a venir a veure el lloc de debò. Molts arriben esperant trobar una mena de decorat de pel·lícula i, en canvi, es troben un edifici viu, que encara s'utilitza per a celebracions i per resar en silenci. Preneu-vos el temps per mirar l'exterior amb calma i, si porteu el llibre, llegiu-ne un capítol en algun banc de per aquí a prop. Només recordeu que això no és un decorat. En aquests carrers hi viuen veïns i l'església és la seva parròquia, així que parleu baixet i deixeu que el Born continuï amb el seu dia."
         }
       },
-      "srcHash": "28a858f902",
+      "srcHash": "15de425525",
       "audio": {
         "base": {
           "file": "audio/ca/santa-maria-del-mar.m4a",
-          "hash": "a91f735aa4"
+          "hash": "fd14be209a"
         },
         "history": {
           "file": "audio/ca/santa-maria-del-mar--history.m4a",
-          "hash": "93e1ee30e6"
+          "hash": "6eeb27acd9"
         },
         "architecture": {
           "file": "audio/ca/santa-maria-del-mar--architecture.m4a",
-          "hash": "548f46701a"
+          "hash": "2f18556826"
+        },
+        "culture": {
+          "file": "audio/ca/santa-maria-del-mar--culture.m4a",
+          "hash": "90d2cfb364"
         }
       }
     },
@@ -704,25 +722,34 @@
       "tip": "A la plaça hi ha una escola: si us plau, parleu fluixet.",
       "stories": {
         "base": {
-          "short": "Aquest és un dels racons més tranquils de la ciutat vella, i també un dels més tristos. Fixeu-vos en la façana de l'església, plena de forats. Són les cicatrius d'un bombardeig del gener de 1938, durant la Guerra Civil espanyola, que va matar desenes de persones, moltes d'elles criatures. Les marques es van deixar expressament.",
-          "normal": "Aquest és un dels racons més tranquils de la ciutat vella, i també un dels més tristos. Fixeu-vos en la façana de l'església: està plena de forats. Són les cicatrius d'un bombardeig del gener de 1938, durant la Guerra Civil espanyola, quan les bombes van caure sobre la plaça i van matar desenes de persones, moltes d'elles criatures. Les marques es van deixar expressament, perquè ningú no ho oblidi.",
-          "long": "Aquest és un dels racons més tranquils de la ciutat vella, i també un dels més tristos. Abans d'aixecar la vista, preneu-vos un moment. Noteu com aquí s'apaga el soroll dels carrers plens de gent, com la petita font del mig ho suavitza tot. Ara mireu la façana de l'església. Està plena de forats, alguns poc profunds, d'altres prou fondos per ficar-hi els dits. Són les cicatrius d'un bombardeig del 30 de gener de 1938, durant la Guerra Civil espanyola. Els avions eren italians i volaven en suport de les tropes de Franco, i aquell any Barcelona va ser bombardejada des de l'aire una vegada i una altra. Les bombes van caure sobre aquesta plaça i van matar desenes de persones, moltes d'elles criatures que hi havien vingut a buscar refugi. Una segona bomba va caure mentre la gent intentava ajudar els ferits. L'església és del segle XVIII, però el que la gent recorda són aquestes marques d'un matí d'hivern. Es van deixar expressament, perquè ningú no ho oblidi. Busqueu la placa que hi ha a prop i que recorda les víctimes. Després, mireu al vostre voltant. En aquesta plaça encara hi ha una escola, i un dia feiner potser sentireu les veus de la mainada ressonant contra aquestes mateixes parets. També hi viu gent, als pisos de damunt vostre. Així que, si us hi quedeu una estona, parleu fluixet i respecteu el silenci de la plaça. És un lloc preciós, i també és un lloc de dol. Aquí, totes dues coses són certes alhora."
+          "short": "Aquest és un dels racons més tranquils del barri antic, i també un dels més tristos. Mireu la façana de l'església, plena de forats. Són les cicatrius d'un bombardeig del gener de 1938, durant la Guerra Civil espanyola, que va matar desenes de persones, moltes d'elles criatures. Les marques es van deixar expressament.",
+          "normal": "Aquest és un dels racons més tranquils del barri antic, i també un dels més tristos. Mireu la façana de l'església: està plena de forats. Són les cicatrius d'un bombardeig del gener de 1938, durant la Guerra Civil espanyola, quan van caure bombes sobre la plaça i van matar desenes de persones, moltes d'elles criatures. Les marques es van deixar expressament, perquè ningú no ho oblidi.",
+          "long": "Aquest és un dels racons més tranquils del barri antic, i també un dels més tristos. Abans d'aixecar la vista, preneu-vos un moment. Fixeu-vos com aquí s'apaga el soroll dels carrers plens de gent, com la petita font del mig ho suavitza tot. Ara mireu la façana de l'església. Està plena de forats, alguns de poc fondos, d'altres prou fondos per ficar-hi els dits. Són les cicatrius d'un bombardeig del 30 de gener de 1938, durant la Guerra Civil espanyola. Els avions eren italians, i volaven en suport de les tropes de Franco; aquell any, Barcelona va ser bombardejada des de l'aire una vegada i una altra. Les bombes van caure sobre aquesta plaça i van matar desenes de persones, moltes d'elles criatures que hi havien vingut a buscar refugi. Una segona bomba va caure mentre la gent intentava ajudar els ferits. L'església és del segle XVIII, però el que la gent recorda són aquestes marques d'un matí d'hivern. Es van deixar expressament, perquè ningú no ho oblidi. Busqueu la placa que hi ha a prop i que recorda les víctimes. Després mireu al vostre voltant. En aquesta plaça encara hi ha una escola, i un dia feiner potser sentireu les veus dels nens ressonant en aquestes mateixes parets. També hi viu gent, als pisos de sobre vostre. Així que, si us hi quedeu una estona, parleu fluixet i deixeu que la plaça conservi la seva calma. És un lloc preciós, i alhora és un lloc de dol. Aquí, totes dues coses són certes alhora."
         },
         "history": {
-          "short": "Mireu de prop la façana de l'església que teniu al davant. Aquests forats tan fondos no són fruit del desgast. El gener de 1938, durant la Guerra Civil espanyola, unes bombes van caure sobre aquesta placeta i van matar desenes de persones, moltes d'elles criatures. Els danys no es van reparar mai: són un memorial escrit en la pedra.",
-          "normal": "Mireu de prop la façana de l'església que teniu al davant. Aquests forats tan fondos a la pedra no són fruit del desgast. El gener de 1938, durant la Guerra Civil espanyola, unes bombes van caure sobre aquesta placeta i van matar desenes de persones, moltes d'elles criatures. Barcelona era una ciutat atacada des de l'aire, i aquest racó tranquil ho va patir de ple. Després, els danys es van deixar sense reparar, expressament. Recorreu amb la mirada la paret plena de forats. És un memorial escrit en la pedra, en un barri on la gent encara hi viu, hi treballa i recorda.",
-          "long": "Mireu de prop la façana de l'església que teniu al davant. Aquests forats tan fondos a la pedra no són fruit del desgast. Acosteu-vos-hi una mica, si podeu, i veureu quants n'hi ha: alguns amples i esquinçats, d'altres petits i afilats. El 30 de gener de 1938, durant la Guerra Civil espanyola, unes bombes van caure sobre aquesta placeta i van matar desenes de persones, moltes d'elles criatures. Els avions eren de la Itàlia de Mussolini, que donava suport al bàndol de Franco, i s'enlairaven des de bases a Mallorca. Barcelona era una ciutat atacada des de l'aire, i aquest racó tranquil ho va patir de ple. Els infants de l'escola d'aquí s'havien refugiat sota l'església. Llavors, una segona bomba va esclatar quan la gent hi corria a ajudar, i va fer encara més morts. Després, els danys es van deixar sense reparar, expressament. Recorreu amb la mirada la paret plena de forats. Ara fixeu-vos en com n'és, de normal, la resta de la plaça: la font, les cases antigues, les finestres de dalt. Aquesta vida quotidiana també forma part del sentit del lloc. A prop hi trobareu una placa en memòria de les víctimes. A la plaça encara hi ha una escola, i potser veureu la mainada entrant i sortint. És un memorial escrit en la pedra, en un barri on la gent encara hi viu, hi treballa i recorda. Abans de marxar, feu un moment de silenci, i després continueu en silenci, deixant la plaça a la gent que hi té la seva llar."
+          "short": "Mireu la paret de l'església que teniu al davant. Aquests forats i esgarrapades no són pas el desgast del temps. El gener de 1938, durant la Guerra Civil espanyola, van caure bombes sobre aquesta placeta i van matar desenes de persones, moltes d'elles criatures. Les cicatrius es van deixar expressament, com a memorial. Atureu-vos-hi en silenci; aquí hi viu gent.",
+          "normal": "Mireu la paret de l'església que teniu al davant. Aquests forats i esgarrapades a la pedra no són pas el desgast del temps. El gener de 1938, durant la Guerra Civil espanyola, van caure bombes sobre aquesta placeta, i van morir desenes de persones, moltes d'elles criatures. Els desperfectes es podrien haver tapat, però es van deixar tal com estaven, expressament, perquè ningú no ho oblidi. Aquestes cicatrius són un memorial escrit per la mateixa guerra. Atureu-vos-hi un moment en silenci; això continua sent un barri de veritat, on la gent viu i treballa.",
+          "long": "Mireu la paret de l'església que teniu al davant, la façana de l'església de Sant Felip Neri. Aquests forats i esgarrapades a la pedra no són pas el desgast del temps. El 30 de gener de 1938, durant la Guerra Civil espanyola, van caure sobre aquesta placeta bombes llançades per avions italians que lluitaven al costat de Franco. Van morir desenes de persones, i moltes eren criatures que s'havien refugiat al soterrani de l'església. Barcelona va ser bombardejada moltes vegades durant aquella guerra, però pocs llocs en conserven el record d'una manera tan clara com aquest. Els desperfectes es podrien haver tapat fàcilment. En canvi, es van deixar tal com estaven, expressament, perquè ningú no ho oblidi. Apropeu-vos una mica, sense tocar, i veureu les marques escampades per la pedra, algunes de poc fondes, d'altres prou fondes per guardar-hi una ombra. Busqueu la placa que hi ha a prop i que recorda les persones que hi van morir. Aquestes cicatrius són un memorial escrit per la mateixa guerra, i quan en coneixes la història no cal explicar-les més. Ara gireu-vos a poc a poc i contempleu la resta de la plaça: la font del mig, els edificis antics que us envolten per tots costats. Costa imaginar la violència en un lloc tan silenciós. Avui en aquesta plaça hi ha una escola, i les veus dels nens encara ressonen per aquestes pedres, cosa que fa que aquella paret encara colpeixi més. Atureu-vos-hi un moment en silenci. Parleu fluixet i, si feu fotos, tingueu en compte la gent que teniu al voltant. Això continua sent un barri de veritat, on la gent viu i treballa."
+        },
+        "culture": {
+          "short": "Aquesta plaça tancada i silenciosa sembla un decorat de teatre, i sovint es diu que s'hi van rodar escenes de la pel·lícula El perfum. Però les marques de la paret de l'església són reals: un bombardeig del gener de 1938, durant la Guerra Civil, va matar desenes de persones, moltes d'elles criatures. Contempleu-ho en silenci; aquí hi viu gent.",
+          "normal": "Fixeu-vos com aquesta plaça sembla gairebé un decorat de teatre: tancada, silenciosa, amb la façana ferida de l'església al fons. Els cineastes també se n'han adonat. Al barri antic de Barcelona s'hi van rodar escenes de la pel·lícula El perfum: història d'un assassí, i aquesta plaça sovint surt entre els seus escenaris. Però les marques d'aquella paret són reals, no pas d'atrezzo. Són d'un bombardeig del gener de 1938, durant la Guerra Civil espanyola, que va matar desenes de persones, moltes d'elles criatures. Conservades expressament, converteixen aquest racó tranquil en un memorial. Recordeu que és un barri ple de vida, així que contempleu-ho en silenci.",
+          "long": "Fixeu-vos com aquesta plaça sembla gairebé un decorat de teatre. Està tancada per tots costats, silenciosa, amb una font al mig i la façana ferida de l'església al fons. Els cineastes també se n'han adonat. Al barri antic de Barcelona s'hi van rodar escenes de la pel·lícula El perfum: història d'un assassí, dirigida per Tom Tykwer i estrenada el 2006, on la ciutat feia de França del segle XVIII, i aquesta plaça sovint surt entre els seus escenaris. És fàcil entendre per què. Mireu els edificis antics de pedra que us envolten. Dos no van néixer aquí: eren cases gremials, la dels sabaters i la dels calderers, i al segle XX les van traslladar a aquesta plaça des d'altres punts de la ciutat. O sigui que fins i tot el decorat s'ha reorganitzat. Però les marques d'aquella paret no són pas d'atrezzo. Són d'un bombardeig del 30 de gener de 1938, durant la Guerra Civil espanyola, fet per avions italians que donaven suport al bàndol de Franco. Van morir desenes de persones, moltes d'elles criatures que s'havien refugiat al soterrani de l'església. Els desperfectes es van conservar expressament, i aquesta decisió converteix aquest racó tranquil en un memorial. Quan ho saps, costa separar la bellesa del lloc del seu dol. Dediqueu un moment a mirar la pedra foradada, i la placa que recorda les víctimes. Avui en aquesta plaça hi ha una escola, i la vida de cada dia continua al vostre voltant. Recordeu que és un barri ple de vida, així que contempleu-ho en silenci i parleu fluixet."
         }
       },
-      "srcHash": "45f2fccfd2",
+      "srcHash": "a4f6fc0b49",
       "audio": {
         "base": {
           "file": "audio/ca/placa-sant-felip-neri.m4a",
-          "hash": "ede68bc31d"
+          "hash": "3bf2becc13"
         },
         "history": {
           "file": "audio/ca/placa-sant-felip-neri--history.m4a",
-          "hash": "9a1e4f26f4"
+          "hash": "a4a63411b6"
+        },
+        "culture": {
+          "file": "audio/ca/placa-sant-felip-neri--culture.m4a",
+          "hash": "3a5b055a02"
         }
       }
     },
@@ -823,37 +850,46 @@
       }
     },
     "placa-sant-jaume": {
-      "tip": "Gireu la cantonada i entreu al carrer del Bisbe per veure el Sant Jordi esculpit a la façana gòtica de la Generalitat.",
+      "tip": "Gireu la cantonada cap al carrer del Bisbe i veureu Sant Jordi esculpit a la façana gòtica de la Generalitat.",
       "stories": {
         "base": {
-          "short": "Poseu-vos al mig de la plaça i gireu-vos. A un costat, el Palau de la Generalitat, la seu del govern català. Just al davant, l'Ajuntament de Barcelona. Dos governs que es miren cara a cara a la mateixa plaça, allà on antigament hi havia el fòrum romà. Mireu d'una façana a l'altra: aquí és on la ciutat encara es reuneix.",
-          "normal": "Poseu-vos al mig de la plaça i gireu-vos: a un costat teniu el Palau de la Generalitat, la seu del govern català, i just al davant, l'Ajuntament de Barcelona. Dos governs que es miren cara a cara a la mateixa plaça. Això ja era el cor de la ciutat en temps dels romans, quan aquí hi havia el fòrum. I encara avui és el lloc on la gent es reuneix per celebrar, per protestar i, els dies de festa, per veure castells.",
-          "long": "Poseu-vos al mig de la plaça i feu una volta sencera, a poc a poc. A un costat hi ha el Palau de la Generalitat, la seu del govern català. Just al davant, l'Ajuntament de Barcelona. Dos governs que es miren cara a cara, amb només un espai obert entremig. Pocs llocs posen el poder tan clarament l'un davant de l'altre. Fixeu-vos primer en la Generalitat. La façana que dona a aquesta plaça és d'un estil renaixentista sobri. Damunt de l'entrada, dins d'una fornícula, hi ha Sant Jordi, el patró de Catalunya, el matador del drac que trobareu per tota la ciutat. Ara gireu-vos cap a l'Ajuntament. La façana que veieu aquí és neoclàssica, afegida molt més tard, però si gireu la cantonada cap al carrer de la Ciutat hi trobareu la façana gòtica, més antiga, amagada en aquell carrer lateral. Res d'això és terreny nou. Això ja era el cor de la ciutat en temps dels romans, quan aquí hi havia el fòrum de Barcino, a prop d'on es creuaven els dos carrers principals de la ciutat. A tocar d'aquí, al carrer del Paradís, encara s'aixequen quatre columnes altes del temple romà d'August, dins del pati d'un edifici. La plaça pren el nom d'una església de Sant Jaume que antigament hi havia aquí. Avui continua sent el lloc on la gent es reuneix per celebrar i per protestar, i els dies de festa, per veure com les colles castelleres aixequen castells entre les dues façanes. Als carrerons del voltant hi viu gent, així que quan marxeu a explorar, parleu fluix."
+          "short": "Poseu-vos al mig i feu una volta. A un costat, el Palau de la Generalitat, la seu del govern català. Al davant, l'Ajuntament de Barcelona. Dos governs que es miren cara a cara des de les dues bandes d'una mateixa plaça, allà on hi havia hagut el fòrum romà. Mireu d'una façana a l'altra: aquí és on la ciutat encara es troba.",
+          "normal": "Poseu-vos al mig i feu una volta: a un costat hi ha el Palau de la Generalitat, la seu del govern català, i just al davant, l'Ajuntament de Barcelona. Dos governs que es miren cara a cara des de les dues bandes d'una mateixa plaça. Això ja era el cor de la ciutat en temps dels romans, quan aquí hi havia el fòrum. I encara avui és on la gent es reuneix per celebrar, per protestar i, els dies de festa, per veure els castells.",
+          "long": "Poseu-vos al mig de la plaça i feu una volta sencera, a poc a poc. A un costat hi ha el Palau de la Generalitat, la seu del govern català. Just al davant, l'Ajuntament de Barcelona. Dos governs que es miren cara a cara a través d'un mateix espai obert. Pocs llocs posen el poder tan clarament l'un davant de l'altre. Fixeu-vos primer en la Generalitat. La façana que dona a aquesta plaça és d'un estil renaixentista sobri. Damunt de l'entrada, dins d'una fornícula, hi ha Sant Jordi, el patró de Catalunya, el matadrac que trobareu per tot arreu en aquesta ciutat. Ara gireu-vos cap a l'Ajuntament. La façana que veieu aquí és neoclàssica, afegida molt més tard, però si gireu la cantonada cap al carrer de la Ciutat hi trobareu la seva façana gòtica, més antiga, amagada al carreró lateral. Res d'això no és terreny nou. Això ja era el cor de la ciutat en temps dels romans, quan aquí hi havia el fòrum de Barcino, a prop d'on es creuaven els dos carrers principals de la població. A només unes passes, al carrer del Paradís, encara es conserven quatre columnes altes del temple romà d'August, dempeus dins del pati d'un edifici. La plaça mateixa pren el nom d'una església dedicada a Sant Jaume que antigament hi havia aquí. Avui encara és on la gent es reuneix per celebrar i per protestar, i els dies de festa, per veure les colles castelleres aixecant torres humanes entre les dues façanes. Als carrerons del voltant hi viu gent, així que quan marxeu a explorar, parleu fluixet."
         },
         "history": {
-          "short": "Imagineu-vos aquesta plaça fa dos mil anys, quan just aquí hi havia el fòrum romà de Barcino. Ara gireu-vos a poc a poc: el Palau de la Generalitat, la seu del govern català, té al davant l'Ajuntament de Barcelona. Dos governs, cara a cara, allà on la ciutat s'ha reunit durant segles. Aquí a prop hi viu gent, així que parleu fluix.",
-          "normal": "Imagineu-vos aquesta plaça fa dos mil anys: just aquí hi havia el fòrum romà de Barcino. Ara gireu-vos a poc a poc. A un costat hi ha el Palau de la Generalitat, la seu del govern català. Al davant, l'Ajuntament de Barcelona. Dos governs, cara a cara a la mateixa plaça. Durant segles, aquest ha estat el lloc on la ciutat es reuneix en els grans moments, per celebrar i per protestar, plantada entre aquestes dues façanes. També és un barri viu, així que quan passegeu pels carrerons del voltant, parleu fluix.",
-          "long": "Imagineu-vos aquesta plaça fa dos mil anys. La ciutat romana de Barcino era petita i emmurallada, i el seu fòrum, el cor públic de la ciutat, era just aquí, a prop d'on es creuaven els dos carrers principals. Barcino s'alçava sobre un petit turó anomenat Mont Tàber, i a poques passes d'aquí, al carrer del Paradís, encara s'aixequen quatre columnes del temple romà d'August, un record del temple que dominava el fòrum. Ara gireu-vos a poc a poc. A un costat hi ha el Palau de la Generalitat, la seu del govern català. Al davant, l'Ajuntament de Barcelona. Dos governs, cara a cara a la mateixa plaça. Tots dos edificis tenen arrels medievals, tot i que les façanes que veieu aquí són posteriors. La de la Generalitat és renaixentista, amb Sant Jordi, el patró de Catalunya, dins d'una fornícula damunt de la porta. La de l'Ajuntament és neoclàssica, però la seva façana gòtica, més antiga, encara es conserva just girant la cantonada, al carrer de la Ciutat. El nom de la plaça ve d'una església de Sant Jaume que antigament hi havia aquí. Es va enderrocar fa molt de temps per obrir l'espai on ara sou. Durant segles, aquest ha estat el lloc on la ciutat es reuneix en els grans moments, per celebrar i per protestar, plantada entre aquestes dues façanes. Mireu el paviment i imagineu-vos totes les multituds que l'han omplert. També és un barri viu, amb famílies als carrerons del voltant, així que quan marxeu, parleu fluix."
+          "short": "Poseu-vos al mig i imagineu-vos columnes de pedra al vostre voltant: fa dos mil anys, aquí hi havia el fòrum romà de Barcelona. Ara mireu el Palau de la Generalitat, la seu del govern català, i després gireu-vos cap a l'Ajuntament, just al davant. Dos governs, cara a cara. A dins hi treballa gent, així que parleu amb veu suau.",
+          "normal": "Poseu-vos al mig i imagineu-vos columnes de pedra al vostre voltant. Aquest indret ja era el cor de la ciutat en temps dels romans, quan aquí hi havia el fòrum. Dos mil anys més tard, el poder encara viu aquí. Mireu a un costat el Palau de la Generalitat, la seu del govern català, i després gireu-vos cap a l'Ajuntament de Barcelona, just al davant. Dos governs, cara a cara a banda i banda d'una mateixa plaça. Molts dels moments decisius de la ciutat s'han viscut entre aquestes façanes, amb multituds aplegades per celebrar o per protestar. Dins d'aquests edificis encara hi treballa gent, així que parleu amb veu suau.",
+          "long": "Poseu-vos al mig de la plaça i imagineu-vos columnes de pedra que s'alcen al vostre voltant. Aquest indret ja era el cor de la ciutat en temps dels romans, quan la població es deia Barcino i el seu fòrum era just aquí, a prop del punt més alt del petit turó on van construir els romans. Si després teniu temps, feu unes passes fins al carrer del Paradís, on quatre columnes altes del temple romà encara s'aguanten dempeus dins d'un pati. Us recorden com n'és, de propera, aquella ciutat antiga sota els vostres peus. Dos mil anys més tard, el poder encara viu aquí. Mireu a un costat el Palau de la Generalitat, la seu del govern català. Damunt de la porta principal, busqueu l'escultura de Sant Jordi, el patró de Catalunya, a cavall. Després gireu-vos cap a l'Ajuntament de Barcelona, just al davant, amb la seva façana més formal i clàssica. Dos governs, cara a cara a banda i banda d'una mateixa plaça, cadascun amb el seu balcó mirant l'altre. La plaça, en canvi, és més jove del que potser us penseu. Durant segles, això era un nus atapeït de carrers, amb una església dedicada a Sant Jaume, que és la que va donar nom a la plaça. L'església es va enderrocar i l'espai es va obrir al segle XIX. Molts dels moments decisius de la ciutat s'han viscut entre aquestes façanes, amb multituds aplegades per celebrar o per protestar. Feu una ullada tranquil·la al voltant i imagineu-vos aquelles multituds. Dins d'aquests edificis encara hi treballa gent, així que parleu amb veu suau."
         },
         "local": {
-          "short": "Imagineu-vos gent enfilada a les espatlles dels altres, pis rere pis, just on sou ara. Els dies de festa, els castellers aixequen castells aquí, entre el palau del govern català i l'Ajuntament. Si hi ha gentada, mireu-ho des de les vores i deixeu espai als qui hi participen. Aquesta és la seva plaça.",
-          "normal": "Imagineu-vos gent enfilada a les espatlles dels altres, pis rere pis, just on sou ara. Els dies de festa, les colles castelleres aixequen castells aquí mentre la gent ho mira des de baix. Ara mireu els dos edificis que es fan cara: el Palau de la Generalitat, la seu del govern català, i just al davant, l'Ajuntament de Barcelona. Entre tots dos, la gent del barri s'hi reuneix per celebrar i per protestar. Una tarda qualsevol, és un lloc de pas per als veïns que van fent la seva vida. Si hi ha gentada, mireu-ho des de les vores i deixeu espai als qui hi participen. Aquesta és la seva plaça.",
-          "long": "Imagineu-vos gent enfilada a les espatlles dels altres, pis rere pis, just on sou ara. Els dies de festa, les colles castelleres aixequen castells aquí mentre la gent ho mira des de baix. Cada castell comença amb la pinya, una pila atapeïda de membres de la colla ben arrapats a la base, aguantant, fent força i a punt per agafar algú si alguna cosa surt malament. Després van pujant els pisos, i ben amunt de tot una criatura, l'enxaneta, s'hi enfila i aixeca una mà abans que tothom torni a baixar. Avui dia, la canalla dels pisos de dalt porta casc. La UNESCO reconeix aquesta tradició com a part del patrimoni cultural immaterial de la humanitat, i sovint la podreu veure aquí per la Mercè, la gran festa de la ciutat, al setembre. Ara mireu els dos edificis que es fan cara: el Palau de la Generalitat, la seu del govern català, i just al davant, l'Ajuntament de Barcelona. Damunt de la porta de la Generalitat, Sant Jordi, el patró de Catalunya, ho vigila tot des de la seva fornícula. Entre aquestes façanes, la gent del barri s'hi reuneix per celebrar i per protestar. Ara bé, una tarda qualsevol és simplement un lloc de pas per als veïns que van fent la seva vida: algú que torna a casa amb la compra, la mainada que hi passa de camí quan surt de l'escola. Si hi ha gentada, mireu-ho des de les vores i deixeu espai als qui hi participen. I si voleu veure un castell, no us hi acosteu empenyent. La pinya necessita espai, i sovint es veu millor una mica de lluny. Aquesta és la seva plaça."
+          "short": "Fixeu-vos en qui travessa la plaça ara mateix: gent de les oficines fent una pausa, persones que entren a l'Ajuntament, veïns que hi passen de camí cap a casa. Per als barcelonins, això és com el menjador de la ciutat. Si us trobeu enmig d'una concentració, gaudiu-ne des dels marges i deixeu espai per a la gent que hi viu.",
+          "normal": "Fixeu-vos en qui travessa la plaça ara mateix. Alguns són visitants, però molts són gent d'aquí: persones que entren a l'Ajuntament, gent de les oficines fent una pausa, veïns que travessen el Barri Gòtic de camí cap a casa. Per als barcelonins, això és una mica com el menjador de la ciutat. Quan hi ha alguna cosa per celebrar o alguna cosa per protestar, és aquí on la gent es troba. Els dies de festa, els castells s'aixequen just aquí. Si us trobeu enmig d'una concentració, gaudiu-ne des dels marges i deixeu espai per a la gent que hi viu. Al cap i a la fi, això és un barri de veritat.",
+          "long": "Fixeu-vos en qui travessa la plaça ara mateix. Alguns són visitants, però molts són gent d'aquí: persones que entren a l'Ajuntament, gent de les oficines fent la pausa del cafè, veïns que travessen el Barri Gòtic de camí cap a casa. Per als barcelonins, això és una mica com el menjador de la ciutat. Quan hi ha alguna cosa per celebrar o alguna cosa per protestar, és aquí on la gent es troba, sovint mirant amunt, cap als balcons dels dos edificis de govern que es miren l'un a l'altre per sobre de les llambordes. Fixeu-vos també en les banderes d'aquests balcons. Normalment hi veureu la senyera, amb les seves franges vermelles i grogues, onejant al costat d'altres banderes. Alguns dies hi apareixen pancartes que us diuen de què parla la ciutat. Els dies de festa, els castells s'aixequen just aquí. Les colles castelleres, cadascuna amb la camisa del seu color, formen una base ampla de braços i espatlles. Després van pujant cada cop més amunt, fins que un nen o una nena petita s'enfila fins dalt de tot i aixeca una mà. Tota la plaça conté la respiració i després esclata en aplaudiments. Els castells són una de les tradicions més estimades de Catalunya, reconeguts per la UNESCO com a part del patrimoni cultural de la humanitat. Una de les grans ocasions és la Mercè, la festa major de la ciutat, al setembre, quan les colles castelleres es troben en aquesta mateixa plaça. Si us trobeu enmig d'una concentració, gaudiu-ne des dels marges. Tingueu la bossa a prop, parleu amb to amable i deixeu espai per a la gent que hi viu. Al cap i a la fi, això és un barri de veritat, no un decorat."
+        },
+        "sports": {
+          "short": "Mireu amunt, cap als balcons. Quan el FC Barcelona guanya un títol important, tradicionalment els jugadors vénen aquí a lluir els trofeus, i la plaça s'omple d'aficionats vestits de blau i grana. La resta del temps és una plaça tranquil·la i de feina, en un barri amb vida, així que guardeu els càntics per al dia de partit.",
+          "normal": "Mireu amunt, cap als balcons que teniu al voltant. Quan el FC Barcelona guanya un títol important, tradicionalment els jugadors vénen aquí a lluir els trofeus, i la plaça s'omple d'aficionats vestits de blau i grana. Feu una ullada del Palau de la Generalitat a l'Ajuntament, al davant, perquè l'equip sol ser rebut a tots dos llocs. Els dies de festa hi veureu una altra mena de treball en equip: les colles castelleres aixecant torres humanes damunt de les espatlles els uns dels altres mentre el públic conté la respiració. La resta del temps, això és una plaça tranquil·la i de feina, en un barri amb vida, així que guardeu els càntics per al dia de partit.",
+          "long": "Mireu amunt, cap als balcons que teniu al voltant. Quan el FC Barcelona guanya un títol important, tradicionalment els jugadors vénen aquí a lluir els trofeus. La plaça de sota s'omple d'aficionats vestits de blau i grana, els famosos colors blaugrana del club. Imagineu-vos-la plena a vessar, espatlla amb espatlla, amb les bufandes enlaire i senyeres onejant entre les samarretes del club. Feu una ullada del Palau de la Generalitat a l'Ajuntament, al davant, perquè l'equip sol ser rebut a tots dos llocs. Això mostra com n'està, de lligat, el club a la ciutat i a Catalunya. El seu famós lema, «Més que un club», ho diu ben clar. Moments com aquests, quan el govern rep els futbolistes com si fossin dignataris de visita, ajuden a entendre per què. Els dies de festa hi veureu una altra mena de treball en equip. Les colles castelleres aixequen torres humanes damunt de les espatlles els uns dels altres. Una base ampla de gent s'estreny ben atapeïda a baix, a sobre hi ha pisos més estables, i finalment un nen o una nena petita s'enfila fins dalt de tot per aixecar una mà. Cada persona té una feina, i si una rellisca, tot el castell pot trontollar, així que el públic conté la respiració fins que els que han pujat tornen a baixar sans i estalvis. Si sou aquí quan actuen, pareu l'orella a les gralles i els timbals tradicionals que sonen mentre el castell va pujant. La resta del temps, això és una plaça tranquil·la i de feina, en un barri amb vida. Dins d'aquests edificis hi treballa gent, i als carrers del voltant hi viu gent, així que gaudiu de la vista en silenci i guardeu els càntics per al dia de partit."
         }
       },
-      "srcHash": "d31c6ebc7d",
+      "srcHash": "5197a89015",
       "audio": {
         "base": {
           "file": "audio/ca/placa-sant-jaume.m4a",
-          "hash": "caab603cd9"
+          "hash": "ab2e59f721"
         },
         "history": {
           "file": "audio/ca/placa-sant-jaume--history.m4a",
-          "hash": "b050859837"
+          "hash": "1db730a1e5"
         },
         "local": {
           "file": "audio/ca/placa-sant-jaume--local.m4a",
-          "hash": "068d52530d"
+          "hash": "8122daab13"
+        },
+        "sports": {
+          "file": "audio/ca/placa-sant-jaume--sports.m4a",
+          "hash": "605c25cace"
         }
       }
     },
@@ -1582,12 +1618,441 @@
           "hash": "72f880221b"
         }
       }
+    },
+    "gimnas-sole": {
+      "tip": "És un carrer de veïns: busqueu la placa en silenci i no tapeu les portes.",
+      "stories": {
+        "base": {
+          "short": "Res d'aquest carrer estret fa pensar en la història, però aquí va néixer el FC Barcelona. El 29 de novembre de 1899, el suís Joan Gamper, que havia posat un anunci en un diari per buscar jugadors, es va reunir amb altres aficionats al Gimnàs Solé, un gimnàs d'aquest carrer, i hi van fundar el club. Busqueu la placa que recorda aquell vespre.",
+          "normal": "Res d'aquest carrer estret fa pensar en la història, però aquí va néixer el FC Barcelona. El 29 de novembre de 1899, un grup d'aficionats al futbol encapçalat pel suís Joan Gamper es va reunir al Gimnàs Solé, un gimnàs d'aquest carrer, i hi van fundar el club. Abans, Gamper havia posat un anunci en un diari esportiu per buscar jugadors. Avui una placa recorda aquell vespre. D'un petit gimnàs del Raval a un dels clubs més famosos del món.",
+          "long": "Res d'aquest carrer estret fa pensar en la història, però aquí va néixer el FC Barcelona. Som al carrer de Montjuïc del Carme, al Raval, i el 29 de novembre de 1899 un gimnàs d'aquest carrer, el Gimnàs Solé, va acollir una reunió que canviaria la vida esportiva de la ciutat. L'home que hi havia al darrere era Joan Gamper, un suís apassionat del futbol que havia nascut amb el nom de Hans Gamper i que s'havia establert a Barcelona. Aquí el futbol encara era un joc força nou, i ell volia formar un equip. Així que va posar un anunci en un diari esportiu, Los Deportes, per buscar jugadors. Els qui hi van respondre es van trobar aquell vespre en aquest gimnàs. Era un grup barrejat de suïssos, anglesos i catalans, units per l'amor a un joc que molta gent de la ciutat amb prou feines havia vist. Aquella nit van fundar el club. Preneu-vos un moment per trobar la placa que recorda la reunió. És modesta i és fàcil passar-hi pel davant sense veure-la, i això encaixa amb la història. Encara no hi havia estadi, ni públic, ni una samarreta famosa: només un grapat de persones en un petit gimnàs que decidien jugar plegades. Gamper va ser el cor del club durant anys: hi va jugar i més endavant en va ser president més d'una vegada. Avui el seu nom perviu en el Trofeu Joan Gamper, el partit de pretemporada que el club organitza cada estiu. Mireu el carrer tal com és ara, amb els balcons i les portes d'entrada. Aquí hi viu gent, així que parleu fluixet i deixeu les portes lliures. D'un petit gimnàs del Raval a un dels clubs més famosos del món."
+        },
+        "sports": {
+          "short": "Cada títol i cada càntic del FC Barcelona porten fins a aquest carrer estret. El 29 de novembre de 1899, Joan Gamper, un aficionat suís que havia posat un anunci en un diari esportiu per buscar jugadors, es va reunir amb altres apassionats al Gimnàs Solé i hi van fundar el club. Busqueu la placa, i recordeu que aquí hi viu gent.",
+          "normal": "Cada títol, cada càntic, cada celebració del FC Barcelona porten fins a un petit gimnàs d'aquest carrer estret. Busqueu la placa que marca el lloc. Un suís apassionat del futbol, Joan Gamper, havia posat un anunci en un diari esportiu per buscar jugadors. El 29 de novembre de 1899, ell i un grup d'aficionats es van reunir aquí, al Gimnàs Solé, i aquell mateix vespre van fundar el club. És un punt de partida ben humil per a un dels clubs més famosos del món, amagat en un carrer del Raval on encara avui hi viu gent.",
+          "long": "Cada títol, cada càntic, cada celebració del FC Barcelona porten fins a un petit gimnàs d'aquest carrer estret. Busqueu la placa que marca el lloc. Aquí, al carrer de Montjuïc del Carme, hi havia el Gimnàs Solé. La història comença amb Joan Gamper, un suís apassionat del futbol, nascut amb el nom de Hans Gamper, que havia fet de Barcelona casa seva. Volia jugar, però li calien companys d'equip, així que va posar un anunci en un diari esportiu, Los Deportes, per buscar jugadors. El 29 de novembre de 1899, ell i un grup d'aficionats es van reunir aquí, i aquell mateix vespre van fundar el club. Imagineu-vos aquell primer grup de jugadors suïssos, anglesos i catalans, una colla ben barrejada que havia reunit un sol anunci i una mateixa passió. No hi havia estadi, ni afició, ni himne: només un gimnàs i un projecte. Gamper no es va limitar a organitzar. Els primers anys es va posar ell mateix la samarreta, i més endavant va ser president del club més d'una vegada. El seu nom encara s'homenatja cada estiu amb el Trofeu Joan Gamper, el partit de pretemporada que organitza el club. Així que la propera vegada que sentiu rugir un estadi, penseu en aquest carrer tranquil. És un punt de partida ben humil per a un dels clubs més famosos del món, amagat en un carrer del Raval on encara avui hi viu gent. Fixeu-vos en els balcons i les portes del voltant i feu-vos la foto amb la placa. Després, parleu fluixet i deixeu les entrades lliures per als veïns."
+        },
+        "history": {
+          "short": "Fixeu-vos que corrent que sembla aquest carrer. Doncs el vespre del 29 de novembre de 1899, un petit grup encapçalat per Joan Gamper, un suís que havia posat un anunci en un diari esportiu per buscar jugadors, es va reunir aquí, al Gimnàs Solé, i va fundar el FC Barcelona. Busqueu la placa que els recorda.",
+          "normal": "Fixeu-vos que corrent que sembla aquest carrer. Doncs el vespre del 29 de novembre de 1899, un petit grup es va reunir en un gimnàs d'aquí, el Gimnàs Solé. Els encapçalava Joan Gamper, un suís apassionat del futbol que havia posat un anunci en un diari esportiu per buscar jugadors. Els qui es van trobar aquell vespre van fundar el FC Barcelona. Busqueu la placa que els recorda. La història no sempre passa en palaus o en grans places. De vegades comença en un gimnàs modest del Raval, un barri on la vida de cada dia continua tot al vostre voltant.",
+          "long": "Fixeu-vos que corrent que sembla aquest carrer. Som al carrer de Montjuïc del Carme, al Raval, i el vespre del 29 de novembre de 1899 un petit grup es va reunir en un gimnàs d'aquí, el Gimnàs Solé. Els encapçalava Joan Gamper, un suís apassionat del futbol, nascut amb el nom de Hans Gamper, que s'havia establert a Barcelona. En aquella època, el futbol encara era un joc força nou a la ciutat, que coneixia relativament poca gent. Gamper havia posat un anunci en un diari esportiu, Los Deportes, per buscar jugadors. Els qui hi van respondre, entre ells suïssos, anglesos i catalans, es van trobar aquell vespre i van fundar el FC Barcelona. Busqueu la placa que els recorda. És fàcil que passi desapercebuda, i això forma part del seu encant. No hi va haver cap cerimònia ni cap gran edifici: només un gimnàs en un barri obrer. Gamper va donar forma al club durant anys, primer com a jugador i després com a president més d'una vegada, i avui el Trofeu Joan Gamper, que es juga cada estiu, porta el seu nom. Penseu en tot el que ha sortit d'aquella única reunió, i després mireu el carrer mateix. El Raval ha estat durant molt de temps el lloc on la gent que arribava a la ciutat hi feia la seva vida, i Gamper també era un nouvingut. La història no sempre passa en palaus o en grans places. De vegades comença en un gimnàs modest del Raval, un barri on la vida de cada dia continua tot al vostre voltant, així que, si us plau, parleu fluixet i deixeu les portes lliures."
+        }
+      },
+      "srcHash": "2e9c5ebe00",
+      "audio": {
+        "base": {
+          "file": "audio/ca/gimnas-sole.m4a",
+          "hash": "cc4818116e"
+        },
+        "sports": {
+          "file": "audio/ca/gimnas-sole--sports.m4a",
+          "hash": "9b859f4473"
+        },
+        "history": {
+          "file": "audio/ca/gimnas-sole--history.m4a",
+          "hash": "692d93f645"
+        }
+      }
+    },
+    "font-canaletes": {
+      "tip": "Les nits de partit aquest racó s'omple de gom a gom: si veniu a celebrar, respecteu els veïns que viuen a la Rambla.",
+      "stories": {
+        "base": {
+          "short": "Aquesta font de ferro, a dalt de tot de la Rambla, amaga una llegenda: si en beus, sempre tornaràs a Barcelona. També és on es reuneixen els aficionats del Barça després de cada gran victòria, cantant fins ben entrada la nit. Fixeu-vos-hi bé i potser veureu algun veí que, simplement, omple una ampolla.",
+          "normal": "Aquesta font de ferro, a dalt de tot de la Rambla, guarda dues tradicions. La primera és una llegenda: qui en begui sempre tornarà a Barcelona. La segona és cosa del futbol. Fa dècades que els aficionats del Barça es reuneixen just aquí per celebrar cada gran victòria, cantant i onejant banderes fins ben tard. Un dia qualsevol, no és més que una font on els veïns omplen una ampolla; però una nit de títol, tota la Rambla es tenyeix de blau i grana.",
+          "long": "Sou a dalt de tot de la Rambla, al costat d'un dels elements de carrer més estimats de Barcelona: la Font de Canaletes, una font de ferro esvelta que guarda dues tradicions ben diferents. Just pujant el pendent hi ha la plaça de Catalunya, la gran plaça al cor de la ciutat, i al davant la Rambla baixa sota els plàtans cap al port vell i el mar. La primera tradició és una llegenda. Diuen que qui begui d'aquesta font sempre tornarà a Barcelona. És una promesa amable, i sovint veureu visitants que s'ajupen a fer-ne un glop amb un somriure mig avergonyit, com si no s'ho acabessin de creure però no volguessin arriscar-se. La segona tradició és cosa del futbol. Fa dècades que els seguidors del FC Barcelona es reuneixen just aquí per celebrar cada gran victòria. Una nit de títol, aquest racó tranquil s'omple de paret a paret. Els aficionats canten, onegen banderes i aixequen ben amunt les bufandes, i la festa continua fins ben entrada la nit. Tota la Rambla es converteix en un riu de blau i grana, els colors que aquí en diem blaugrana. La majoria de dies, però, la font és simplement útil. Els veïns s'hi aturen a omplir una ampolla de camí cap a casa, i les finestres de sobre la Rambla són de gent que hi viu. Així que, si voleu posar a prova la llegenda, espereu el vostre torn, feu el vostre glop i deixeu pas a la persona següent. Aquesta petita cortesia també forma part de la tradició."
+        },
+        "sports": {
+          "short": "Mireu aquesta font de ferro tan esvelta. Sembla modesta, però és el lloc que els aficionats del Barça consideren seu. Després de cada gran victòria, els seguidors hi pugen en riuades, cantant i onejant banderes fins ben entrada la nit, fins que tota la Rambla queda tenyida de blau i grana.",
+          "normal": "Mireu la font de ferro esvelta que teniu al davant. En una tarda tranquil·la sembla gairebé massa modesta per a la fama que té, però aquest és el lloc que els aficionats del Barça consideren seu. Fa dècades que, després de cada gran victòria, els seguidors pugen en riuades fins a aquest mateix punt, a dalt de tot de la Rambla, cantant i onejant banderes fins ben entrada la nit. Imagineu-vos tot el carrer tenyit de blau i grana, les bufandes ben amunt, les veus ressonant sota els arbres. Avui potser està tot tranquil, però aquesta font sempre espera el pròxim títol.",
+          "long": "Mireu la font de ferro esvelta que teniu al davant. En una tarda tranquil·la sembla gairebé massa modesta per a la fama que té: només una columna de metall a dalt de tot de la Rambla, a quatre passes de la plaça de Catalunya. I, tanmateix, aquest és el lloc que els aficionats del FC Barcelona consideren seu. L'estadi del club és lluny d'aquí, a l'altra banda de la ciutat, però fa dècades que és aquí on els seguidors vénen a celebrar. Després de cada gran victòria, pugen en riuades per la Rambla i arriben pels carrers del costat fins a aquesta mateixa font. Imagineu-vos-ho. Els plàtans per sobre, el carrer ple de gom a gom, les bufandes ben amunt, les banderes onejant i tota la gentada cantant fins ben entrada la nit. Si hi ha partit, fins i tot potser sentireu els crits que surten dels bars del voltant. Els colors són el blau i el grana, que aquí en diem blaugrana, i una nit de títol semblen tenyir-ho tot al vostre voltant. Ara mireu-vos-la de nou: fixeu-vos que petita que és, la font. No li cal ser grandiosa. El que compta és el costum, mantingut durant generacions, de trobar-se al mateix lloc per compartir la mateixa alegria. Recordeu també que als edificis de dalt hi viu gent, i que les nits normals aquest carrer és, simplement, el seu barri. Així que gaudiu de la calma mentre duri. Avui potser només és una font on algú omple una ampolla de camí cap a casa, però sempre està esperant el pròxim títol."
+        },
+        "local": {
+          "short": "Fixeu-vos en qui s'acosta a aquesta font de ferro. Sovint és un veí que omple una ampolla de camí cap a casa. Aquí diuen que qui en begui sempre tornarà a Barcelona. Si voleu fer-ne un glop, espereu el vostre torn, beveu i deixeu lloc a la persona següent. Les finestres de dalt són cases de veritat.",
+          "normal": "Feu un pas enrere un moment i mireu qui s'acosta a aquesta font de ferro. Sovint no és cap visitant, sinó un veí que omple una ampolla de camí cap a casa. La gent d'aquí diu que qui en begui sempre tornarà a Barcelona, i per això un glop es converteix en un petit ritual, discret. Fixeu-vos com la gent s'atura, beu i continua sense fer-ne cap escarafall. Les finestres de sobre la Rambla són cases de veritat. Si voleu tastar-la, espereu el vostre torn, feu el vostre glop i deixeu lloc a la persona següent.",
+          "long": "Feu un pas enrere un moment, fora del corrent de gent, i mireu qui s'acosta a aquesta font de ferro. Sovint no és cap visitant. És un veí de camí cap a casa, que omple una ampolla abans de ficar-se en algun dels carrers del costat. Som a dalt de tot de la Rambla, on es troba amb la plaça de Catalunya, una de les cruïlles més concorregudes de la ciutat, i tot i així, per a la gent que viu a prop, continua sent un lloc de petits encàrrecs de cada dia. La gent d'aquí diu que qui begui d'aquesta font sempre tornarà a Barcelona. Veureu com això converteix un glop en un petit ritual silenciós. Fixeu-vos com la gent s'atura, beu i continua sense fer-ne cap escarafall. Ningú en fa un espectacle. Mireu amunt, cap a les finestres de sobre la Rambla, amb els seus balcons. Són cases de veritat, i la gent que hi viu sent cada dia la gentada de sota; i les nits de futbol, quan els aficionats del Barça es reuneixen aquí per celebrar una gran victòria, els càntics sovint s'allarguen fins tard. Val la pena tenir-ho present mentre passegeu per aquest carrer. Parlar fluix i fer-vos a un costat a la vorera són petites gentileses que la gent d'aquí agraeix. Si voleu tastar la llegenda, espereu el vostre torn darrere de qui ja hi sigui, feu el vostre glop i deixeu lloc a la persona següent. I després, si podeu, quedeu-vos-hi una estona més i, simplement, observeu. La font és més interessant que mai quan la mireu amb els ulls de la gent que la fa servir cada dia."
+        },
+        "history": {
+          "short": "Fixeu-vos en aquesta font de ferro, a dalt de tot de la Rambla. Una llegenda diu que si en beus sempre tornaràs a Barcelona, i fa dècades que els aficionats del Barça es reuneixen just aquí després de cada gran victòria. Generacions senceres s'han aturat on ara sou vosaltres, fent-se la seva petita promesa de tornar.",
+          "normal": "Fixeu-vos en la font de ferro d'aquí, a dalt de tot de la Rambla. Sense fer soroll, ha anat aplegant dos tipus de records. Un és una llegenda que encara s'explica avui: si en beus, sempre tornaràs a Barcelona. L'altre es va anar forjant al llarg de dècades, a mesura que els aficionats al futbol van convertir aquest punt exacte en el seu lloc de trobada per a cada gran victòria del Barça. Així, una simple font de carrer es va convertir en un punt emblemàtic on es troben els desitjos íntims i les celebracions compartides. Mireu al vostre voltant: generacions de veïns i viatgers s'han aturat just on sou ara, fent-se la seva petita promesa de tornar.",
+          "long": "Fixeu-vos en la font de ferro d'aquí, a dalt de tot de la Rambla. Sembla un element de mobiliari urbà qualsevol, però sense fer soroll ha anat aplegant dos tipus de records. Comencem per on sou. La Rambla que teniu als peus va ser antigament el llit d'una riera de temporada, al costat de les muralles medievals, i avui baixa sota els plàtans cap al port vell i el mar. Just pujant el pendent hi ha la plaça de Catalunya, la gran plaça que uneix la ciutat vella amb la quadrícula més nova de l'Eixample. Una font en aquest punt de trobada estava destinada a veure-hi passar molta vida. El primer record és una llegenda que encara s'explica avui: si beus d'aquesta font, sempre tornaràs a Barcelona. No cal creure-s'ho del tot. Sobreviu perquè la gent la continua repetint: als amics, als fills, a visitants com vosaltres. El segon record es va anar forjant al llarg de dècades, a mesura que els seguidors del FC Barcelona van convertir aquest punt exacte en el seu lloc de trobada després de cada gran victòria. Aquí el blau i grana del club es desborda pel carrer. Així, una simple font de carrer es va convertir en un punt emblemàtic on es troben els desitjos íntims i les celebracions compartides. El glop discret d'una persona i tota una gentada cantant poden pertànyer al mateix lloc, amb anys de diferència o fins i tot la mateixa nit. Mireu al vostre voltant: generacions de veïns i viatgers s'han aturat just on sou ara, i molts s'hi han fet la seva petita promesa de tornar. I la gent que viu a sobre la Rambla comparteix aquest racó amb tots ells, cada dia."
+        }
+      },
+      "srcHash": "e766400c22",
+      "audio": {
+        "base": {
+          "file": "audio/ca/font-canaletes.m4a",
+          "hash": "dbb36c191c"
+        },
+        "sports": {
+          "file": "audio/ca/font-canaletes--sports.m4a",
+          "hash": "404c17e7b4"
+        },
+        "local": {
+          "file": "audio/ca/font-canaletes--local.m4a",
+          "hash": "c3547e3702"
+        },
+        "history": {
+          "file": "audio/ca/font-canaletes--history.m4a",
+          "hash": "5b6cd41d26"
+        }
+      }
+    },
+    "nou-sardenya": {
+      "tip": "Si hi ha partit a casa, comprar una entrada és una manera fantàstica de viure el futbol local de ben a prop.",
+      "stories": {
+        "base": {
+          "short": "Barcelona té un altre club de futbol històric, i aquesta és casa seva. El CE Europa es va fundar aquí, a Gràcia, el 1907. Fixeu-vos com el seu petit estadi queda encaixat entre blocs de pisos: els veïns gairebé poden veure els partits des del balcó. Per a la seva afició fidel, l'Europa és part de la mateixa Gràcia.",
+          "normal": "Barcelona té un altre club de futbol històric, i aquesta és casa seva. El CE Europa es va fundar el 1907 a Gràcia, i el 1929 va jugar la primera lliga estatal de la història, al costat dels clubs més grans del país. El seu petit estadi queda encaixat entre blocs de pisos, i els veïns gairebé poden veure els partits des del balcó. L'Europa és un club de barri de veritat, amb una afició fidel i apassionada que el considera part de la identitat de Gràcia.",
+          "long": "Barcelona té un altre club de futbol històric, i ara mateix sou a casa seva. Això és el Nou Sardenya, el camp del CE Europa. El nom s'entén de seguida: 'nou' vol dir això mateix, i Sardenya és el carrer on hi ha l'estadi. L'Europa es va fundar aquí mateix, a Gràcia, el 1907, poc després que Gràcia deixés de ser una vila independent i passés a formar part de Barcelona. Aquell esperit independent encara es respira al barri, i també en aquest club. El 1923, l'Europa va arribar a la final de la Copa d'Espanya. I el 1929 va jugar la primera lliga estatal de la història, com un dels només deu clubs participants, al costat dels noms més grans del país. Poca gent que hi passa avui per davant s'imaginaria que aquest camp tan modest és d'un dels clubs d'aquella primera temporada. Doneu un cop d'ull a l'estadi. És petit, i està tan encaixat entre blocs de pisos que els veïns gairebé poden veure els partits des del balcó. Mireu amunt i imagineu-vos un dia de partit: els crits de la grada, les banderes, potser algun veí recolzat a la barana amb un cafè, mirant-se el partit de franc. Aquí no hi ha grans accessos, només els carrers de sempre de Gràcia, que arriben fins a les mateixes portes. L'Europa és un club de barri de veritat. La seva afició, fidel i apassionada, el considera part de la identitat de Gràcia, tan arrelat a la vida del barri com les places i els bars de cantonada del voltant. I recordeu que aquí viu gent, així que gaudiu de la vista en silenci abans de continuar."
+        },
+        "sports": {
+          "short": "Aquí va una sorpresa: Barcelona té un altre club de futbol històric, i ara mateix sou a casa seva. El CE Europa, fundat a Gràcia el 1907, va jugar la primera lliga estatal de la història el 1929. Ara mireu l'estadi, ben encaixat entre blocs de pisos. Aquí el futbol es viu de prop, amb un tracte molt personal.",
+          "normal": "Aquí va una sorpresa: Barcelona té un altre club de futbol històric, i ara mateix sou a casa seva. El CE Europa es va fundar a Gràcia el 1907, i el 1929 va jugar la primera lliga estatal de la història, compartint escenari amb els clubs més grans del país. Ara mireu l'estadi. És petit, ben encaixat entre blocs de pisos, res a veure amb els estadis gegants que potser us esperàveu. Aquí rau l'encant. El futbol es viu de prop, amb un tracte molt personal, i l'afició és fidel i apassionada, i porta a l'esquena més d'un segle d'història.",
+          "long": "Aquí va una sorpresa: Barcelona té un altre club de futbol històric, i ara mateix sou a casa seva. El CE Europa es va fundar aquí, a Gràcia, el 1907, i mai no va ser un simple equip local per fer número. El 1923 va arribar a la final de la Copa d'Espanya. I el 1929 va ocupar el seu lloc a la primera lliga estatal de la història. Aquella primera temporada només hi havia deu clubs, i l'Europa va compartir escenari amb els noms més grans del futbol espanyol, entre ells els seus veïns de ciutat, el FC Barcelona, que va acabar guanyant aquell primer títol. Penseu-hi un moment: un dels deu equips originals, jugant des d'aquest racó de Gràcia. Ara mireu l'estadi, el Nou Sardenya. És petit, ben encaixat entre blocs de pisos, res a veure amb els estadis gegants que potser us esperàveu en una ciutat tan famosa pel futbol. No hi ha grades altíssimes que es vegin des de l'altra punta de la ciutat. Al contrari, el camp s'integra al carrer com un edifici més de l'illa. Aquí rau l'encant. El futbol es viu de prop, amb un tracte molt personal. En un camp d'aquesta mida, el soroll de l'afició se sent a tocar, i el partit sembla que el puguis tocar amb la mà. L'afició és fidel i apassionada, i porta a l'esquena més d'un segle d'història. Digui el que digui la classificació cada temporada, és aquesta història el que els fa tornar. Gaudiu del moment, i feu-ho amb esperit de bon veí, perquè just al voltant d'aquest camp hi viu gent."
+        },
+        "local": {
+          "short": "Mireu amunt, cap als balcons del voltant. Des d'alguns, els veïns gairebé poden veure els partits, perquè aquest petit estadi, el Nou Sardenya, casa del CE Europa, està encaixat just enmig de casa seva. Per a la gent d'aquí, el club és part de la identitat de Gràcia. Tot al voltant hi viu gent, així que parleu fluixet, si us plau.",
+          "normal": "Mireu amunt, cap als balcons dels blocs de pisos del voltant. Des d'alguns, els veïns gairebé poden veure els partits, perquè aquest petit estadi està encaixat just enmig de casa seva. Això és el Nou Sardenya, casa del CE Europa, un club fundat aquí, a Gràcia, el 1907. Per a molta gent del barri, l'Europa no és només un equip. És part de la identitat del barri, i té una afició fidel i apassionada. Recordeu que al voltant d'aquest camp hi ha gent que hi viu, hi dorm i hi treballa, així que parleu fluixet mentre passegeu per aquests carrers, com faria un bon veí.",
+          "long": "Mireu amunt, cap als balcons dels blocs de pisos del voltant. Des d'alguns, els veïns gairebé poden veure els partits, perquè aquest petit estadi està encaixat just enmig de casa seva. Imagineu-vos sentir celebrar un gol just a l'altra banda de la finestra de la cuina. Això és el Nou Sardenya, casa del CE Europa, un club fundat aquí, a Gràcia, el 1907. L'estadi pren el nom del carrer on és, el carrer de Sardenya, i 'nou' vol dir exactament això. Per entendre per què el club és tan important, cal saber que Gràcia havia estat una vila independent, i no es va annexionar a Barcelona fins a finals del segle dinou. Molta gent d'aquí encara sent que és un lloc a part, amb les seves places, les seves festes i el seu caràcter propi. Per a molta gent del barri, l'Europa no és només un equip. És part d'aquesta identitat de barri, i té una afició fidel i apassionada que porta amb ella la llarga història del club. Fixeu-vos un moment en com n'és, de quotidià, l'entorn: persianes, balcons, portals, la vida de cada dia d'un carrer residencial, amb un camp de futbol just al mig. Aquesta proximitat és el que fa especial aquest lloc, i també el motiu pel qual aquí cal comportar-se bé. Recordeu que al voltant d'aquest camp hi ha gent que hi viu, hi dorm i hi treballa, potser algú que fa el torn de nit, potser amb un nadó dormint al pis de dalt. Així que parleu fluixet mentre passegeu per aquests carrers, feu fotos sense apuntar la càmera cap a les finestres, i continueu el camí com faria un bon veí."
+        }
+      },
+      "srcHash": "18b1b74ecc",
+      "audio": {
+        "base": {
+          "file": "audio/ca/nou-sardenya.m4a",
+          "hash": "c0fe8af841"
+        },
+        "sports": {
+          "file": "audio/ca/nou-sardenya--sports.m4a",
+          "hash": "5b60cb9b9f"
+        },
+        "local": {
+          "file": "audio/ca/nou-sardenya--local.m4a",
+          "hash": "cf29ff0baf"
+        }
+      }
+    },
+    "club-natacio": {
+      "tip": "El club és només per a socis, però la platja que té al davant és oberta a tothom.",
+      "stories": {
+        "base": {
+          "short": "Imagineu-vos el dia de Nadal al port: nedadors valents que es llancen al mar fred d'hivern mentre la gent els anima des del moll. És la Copa Nadal, que aquest club organitza des dels seus primers anys. Mireu el club, aquí a la platja de la Barceloneta: es va fundar el 1907 i és un dels clubs de natació més antics d'Espanya.",
+          "normal": "Aquest club de la platja de la Barceloneta es va fundar el 1907 i és un dels clubs de natació més antics d'Espanya. N'han sortit generacions de nedadors i de jugadors de waterpolo, un esport en què Barcelona sempre ha estat molt forta. Cada dia de Nadal, des dels seus primers anys, el club organitza una travessia tradicional al port, la Copa Nadal: nedadors valents es llancen al mar fred d'hivern mentre la gent els anima des del moll.",
+          "long": "Sou davant del Club Natació Barcelona, just a tocar de la platja de la Barceloneta. Es va fundar el 1907, cosa que el converteix en un dels clubs de natació més antics d'Espanya, i fa més d'un segle que és la casa de la gent que estima l'aigua. Preneu-vos un moment per mirar el club i la platja que l'envolta, i imagineu-vos aquesta costa fa més de cent anys.\n\nAl llarg de les generacions, del club n'han sortit nedadors i jugadors de waterpolo, un esport en què Barcelona sempre ha estat molt forta. És un joc duríssim. Els jugadors no poden tocar el fons, així que es passen tot el partit surant i movent les cames mentre es passen la pilota i xuten. Quan Barcelona va acollir els Jocs Olímpics del 1992, el waterpolo formava part del programa, i el món va poder veure aquest esport a la ciutat.\n\nPerò la tradició més famosa del club arriba a l'hivern. Cada dia de Nadal, des dels primers anys del club, s'hi organitza una travessia al port que es diu Copa Nadal. Nedadors valents es llancen al mar fred d'hivern mentre la gent s'aplega al moll per animar-los. Mireu cap al port i imagineu-vos l'escena: gent ben abrigada amb abrics i bufandes al llarg de la vora, animant mentre els nedadors desafien l'aigua i lluiten per arribar a la meta.\n\nLa Barceloneta és un barri de veritat, traçat al segle XVIII, on la gent del barri encara neda i s'entrena. Així que gaudiu de la vista, parleu baixet i deixeu-los espai."
+        },
+        "sports": {
+          "short": "Imagineu-vos que us llanceu al port el dia de Nadal mentre la gent us anima des del moll. És la Copa Nadal, que aquest club organitza des dels seus primers anys. Mireu el club, aquí a la platja de la Barceloneta: fundat el 1907, hi han entrenat generacions de nedadors i de jugadors de waterpolo. La gent del barri s'hi entrena, així que deixeu-los espai.",
+          "normal": "Imagineu-vos que us llanceu al port el dia de Nadal mentre la gent us anima des del moll. És la Copa Nadal, una travessia d'hivern que aquest club organitza cada dia de Nadal des dels seus primers anys. Mireu el club, aquí mateix, a tocar de la platja de la Barceloneta. Fundat el 1907, és un dels clubs de natació més antics d'Espanya, i hi han entrenat generacions de nedadors i de jugadors de waterpolo, un esport en què Barcelona sempre ha destacat. La Barceloneta és un barri de veritat, on la gent encara neda i s'entrena, així que gaudiu de la vista en silenci i deixeu-los espai.",
+          "long": "Imagineu-vos que us llanceu al port el dia de Nadal mentre la gent us anima des del moll. És la Copa Nadal, una travessia d'hivern que aquest club organitza cada dia de Nadal des dels seus primers anys. És una cursa, però també una prova de valentia. Al desembre el mar és fred, i els nedadors s'hi tiren igualment, entre els aplaudiments d'amics, famílies i curiosos que passen per allà.\n\nAra mireu el club, aquí mateix, a tocar de la platja de la Barceloneta. Fundat el 1907, és un dels clubs de natació més antics d'Espanya. Entre els seus fundadors hi havia Bernat Picornell, un nedador que també dona nom a les grans piscines a l'aire lliure de dalt de la muntanya de Montjuïc.\n\nAquí hi han entrenat generacions de nedadors i de jugadors de waterpolo, un esport en què Barcelona sempre ha destacat. Si no heu vist mai un partit de waterpolo, és d'una exigència brutal. Els jugadors no poden tocar el fons, així que es passen tot el partit surant i movent les cames mentre lluiten per la posició, es passen la pilota i xuten amb una sola mà. Quan Barcelona va acollir els Jocs Olímpics del 1992, el waterpolo era al programa. Quatre anys més tard, la selecció espanyola masculina va guanyar l'or olímpic a Atlanta. És en clubs com aquest on es construeix aquesta mena de força, entrenament a entrenament.\n\nLa Barceloneta és un barri de veritat, on la gent encara neda i s'entrena, així que gaudiu de la vista en silenci i deixeu-los espai. Si veieu algú que va cap a l'aigua amb la tovallola a l'espatlla, esteu veient l'amor pel mar que aquest club comparteix des de fa més d'un segle."
+        },
+        "outdoors": {
+          "short": "Mireu el mar i imagineu-vos-el en ple hivern. Cada dia de Nadal, els nedadors d'aquest club es llancen a l'aigua freda del port mentre la gent els anima des del moll. Avui, simplement gaudiu-ne des de terra ferma: mireu la llum sobre les onades i sentiu la brisa. Aquí hi viu gent, així que parleu baixet.",
+          "normal": "Mireu el mar que teniu al davant i imagineu-vos-el en ple hivern. Cada dia de Nadal, els nedadors d'aquest club es llancen a l'aigua freda del port mentre la gent els anima des del moll: és una tradició que es diu Copa Nadal. Avui podeu gaudir del mar tranquil·lament des de terra ferma. Fixeu-vos com juga la llum sobre les onades, sentiu la brisa i escolteu l'aigua. El club, fundat el 1907, és just a la platja de la Barceloneta, en un barri on viu gent, així que parleu baixet i busqueu un racó tranquil per aturar-vos.",
+          "long": "Mireu el mar que teniu al davant i imagineu-vos-el en ple hivern. Cada dia de Nadal, els nedadors d'aquest club es llancen a l'aigua freda del port mentre la gent els anima des del moll. La tradició es diu Copa Nadal. Imagineu-vos la gent amb abrics i bufandes, el xipolleig quan els nedadors entren a l'aigua i els crits d'ànim des de la vora.\n\nAvui podeu gaudir de la Mediterrània tranquil·lament des de terra ferma. Respireu a poc a poc i fixeu-vos com juga la llum sobre les onades. Segons l'hora del dia, l'aigua pot semblar platejada, d'un blau profund o gairebé verda a prop de la vora. Sentiu la brisa a la cara i escolteu una estona. Potser sentireu el ritme de les onades, les gavines que volen per sobre i, potser, el grinyol de les barques al port, aquí a prop.\n\nEl club és molt a prop, just a la platja de la Barceloneta. Es va fundar el 1907, així que fa ben bé més d'un segle que els seus socis surten a nedar en aquest mateix mar. El barri que l'envolta es va traçar al segle XVIII, i els seus carrers de cases baixen fins arran d'aigua.\n\nLa Barceloneta és un lloc on viu gent, no només una postal, així que parleu baixet i busqueu un racó tranquil per aturar-vos. Seieu en un banc o a la vora de la sorra, si hi ha lloc. Regaleu-vos un minut sense res més a fer que mirar el mar."
+        }
+      },
+      "srcHash": "bed1fe9f2e",
+      "audio": {
+        "base": {
+          "file": "audio/ca/club-natacio.m4a",
+          "hash": "d4cfb82035"
+        },
+        "sports": {
+          "file": "audio/ca/club-natacio--sports.m4a",
+          "hash": "0a87889a64"
+        },
+        "outdoors": {
+          "file": "audio/ca/club-natacio--outdoors.m4a",
+          "hash": "352385ea13"
+        }
+      }
+    },
+    "port-olimpic": {
+      "tip": "Passegeu pel passeig marítim cap a la Barceloneta: és una de les millors passejades vora el mar de tota la ciutat.",
+      "stories": {
+        "base": {
+          "short": "Tot aquest barri es va construir per als Jocs Olímpics del 1992, en uns terrenys on abans hi havia fàbriques velles i vies de tren. Mireu amunt: aquí teniu el peix daurat gegant de Frank Gehry, que brilla al sol damunt de la platja. Els Jocs van canviar Barcelona per sempre: van obrir la ciutat al mar.",
+          "normal": "Tot aquest barri es va construir per als Jocs Olímpics del 1992. Es van enderrocar fàbriques velles i vies de tren per fer-hi la Vila Olímpica, on vivien els atletes, i aquest port, que va ser la seu de les proves de vela. Mireu amunt: veureu les dues torres que s'alcen sobre la platja i l'escultura del peix daurat gegant de Frank Gehry, brillant al sol. Els Jocs van canviar Barcelona per sempre: van obrir la ciutat al mar.",
+          "long": "Tot aquest barri es va construir per als Jocs Olímpics del 1992. Abans, aquest tros de costa era terreny industrial, amb fàbriques velles i vies de tren que passaven entre la ciutat i la riba. La gent de Barcelona podia viure a quatre passes del Mediterrani i, tot i així, amb prou feines hi podia arribar. Per als Jocs, tot allò es va fer desaparèixer. Al seu lloc van néixer la Vila Olímpica, on vivien els atletes, i aquest port, que va ser la seu de les proves de vela. Preneu-vos un moment per mirar el port. Les barques amarrades suren al llarg d'una costa que, no fa pas tant, no era gens fàcil d'atènyer des dels carrers que teniu al darrere. Ara mireu amunt, cap a les dues torres que s'alcen sobre la platja. Una és l'Hotel Arts i l'altra és la Torre Mapfre, un edifici d'oficines, i totes dues fan la mateixa alçada, com si fossin una porta d'entrada al front marítim. Prop del peu de les torres, busqueu el peix daurat gegant de Frank Gehry. De prop veureu que no és pas massís: està fet de tires de metall entreteixides com una gelosia, de manera que la llum el travessa i sembla que espurnegi a mesura que el sol es mou. Des d'alguns angles, fa l'efecte que neda pel passeig. Els Jocs van canviar Barcelona per sempre: van obrir la ciutat al mar. Fa temps que els atletes se'n van anar, i els carrers del vostre darrere ara són un barri de veritat, on la gent viu i treballa. Així que gaudiu de la vista i parleu fluixet mentre hi passegeu."
+        },
+        "sports": {
+          "short": "Imagineu aquest port l'estiu del 1992, ple de velers de competició. Aquest port es va construir com a seu de les proves olímpiques de vela. Mireu els amarratges i imagineu-vos les tripulacions preparant les embarcacions i sortint mar endins. Avui això és un barri on viu gent, així que gaudiu-ne amb tranquil·litat.",
+          "normal": "Imagineu aquest port l'estiu del 1992, ple de velers de competició. Aquest port es va construir com a seu de les proves olímpiques de vela, i els carrers que teniu al darrere eren la Vila Olímpica, on van viure atletes d'arreu del món durant els Jocs. Mireu els amarratges i imagineu-vos les tripulacions preparant-se per sortir mar endins. Després mireu amunt, cap al peix daurat gegant de Frank Gehry, que llueix damunt del front marítim. Avui fa temps que els atletes ja no hi són i això és un barri de veritat, així que gaudiu de l'escena amb calma mentre els veïns fan la seva vida.",
+          "long": "Imagineu aquest port l'estiu del 1992, ple de velers de competició. Aquest port es va construir com a seu de les proves olímpiques de vela, i els carrers que teniu al darrere eren la Vila Olímpica, on van viure atletes d'arreu del món durant els Jocs. Abans de tot això, aquí hi havia una franja de fàbriques velles i vies de tren, i des de la ciutat costava molt arribar a la riba. Tot es va enderrocar per fer lloc als Jocs. Mireu els amarratges i imagineu-vos les tripulacions preparant-se: revisant les cordes, aparellant les veles, estudiant el vent abans de sortir a mar obert. En aquest port començava i acabava cada jornada a l'aigua. Noteu la brisa a la cara, el mateix tipus de vent de mar que els regatistes devien llegir quan sortien. Després mireu amunt, cap al peix daurat gegant de Frank Gehry, que llueix damunt del front marítim. Està fet de tires de metall entreteixides com una gelosia, de manera que atrapa la llum i sembla que canviï mentre us moveu. Darrere seu s'alcen dues torres de la mateixa alçada, l'Hotel Arts i la Torre Mapfre. Els Jocs van deixar a Barcelona un front marítim que mai no havia tingut de veritat. Avui fa temps que els atletes ja no hi són i l'antiga vila és un barri de debò, amb cases i vida quotidiana. Així que gaudiu de l'escena amb calma mentre els veïns fan la seva vida, i si us ve de gust passejar pels carrers del darrere, recordeu que aquesta és casa seva."
+        },
+        "outdoors": {
+          "short": "Fixeu-vos com la llum rebota a l'aigua i després atrapa el peix daurat gegant de Frank Gehry, que brilla damunt de la platja. Aquest front marítim obert abans quedava amagat darrere de fàbriques i vies de tren, que es van enderrocar per als Jocs Olímpics del 1992. Atureu-vos, noteu la brisa i recordeu que just darrere vostre hi viu gent.",
+          "normal": "Fixeu-vos com la llum rebota a l'aigua aquí i després atrapa el peix daurat gegant de Frank Gehry, que brilla al sol damunt de la platja. Costa de creure que aquest front marítim tan obert abans quedés amagat darrere de fàbriques velles i vies de tren. Es van enderrocar per als Jocs Olímpics del 1992, i la ciutat va guanyar un accés al mar. Busqueu un racó per aturar-vos, noteu la brisa i mireu com es gronxen les barques al port. Mireu amunt, cap a les dues torres que s'alcen sobre la sorra. Recordeu que just darrere vostre hi viu gent, així que preneu-vos-ho amb calma i tranquil·litat.",
+          "long": "Fixeu-vos com la llum rebota a l'aigua aquí i després atrapa el peix daurat gegant de Frank Gehry, que brilla al sol damunt de la platja. Mireu-lo una mica més de prop i veureu que el peix no és pas una forma massissa. Està fet de tires de metall entreteixides com una gelosia, de manera que s'hi veu el cel a través i el color li va canviant segons l'hora del dia i els núvols que passen. Costa de creure que aquest front marítim tan obert abans quedés amagat darrere de fàbriques velles i vies de tren. Es van enderrocar per als Jocs Olímpics del 1992, i la ciutat va guanyar un accés al mar. Busqueu un racó per aturar-vos, potser a la vora del passeig, i noteu la brisa que arriba del Mediterrani. Pareu l'orella als petits sons del port: les cordes que repiquen contra els pals, l'aigua que colpeja suaument els cascos. Mireu com es gronxen les barques als amarratges, i fixeu-vos com els espigons mantenen l'aigua calmada a dins mentre el mar obert, més enllà, no para de moure's. Ara mireu amunt, cap a les dues torres que s'alcen sobre la sorra. Són l'Hotel Arts i la Torre Mapfre, i fan la mateixa alçada, de manera que des d'aquí baix emmarquen el cel com dos pals gegants. Gireu-vos a poc a poc i contempleu tota la línia de costa, amb la platja que s'estén a banda i banda. Recordeu que just darrere vostre, als carrers de l'antiga Vila Olímpica, hi viu gent, així que preneu-vos-ho amb calma i tranquil·litat, i deixeu el front marítim tan tranquil com l'heu trobat."
+        },
+        "history": {
+          "short": "Imagineu-vos fàbriques velles i vies de tren que separaven la ciutat de la seva pròpia costa. Tot això es va enderrocar per als Jocs Olímpics del 1992. Mireu amunt, cap a les dues torres que s'alcen sobre la platja. Barcelona es va obrir al mar, i la vila dels atletes es va convertir en un barri on encara hi viu gent.",
+          "normal": "Quedeu-vos aquí i imagineu-vos una escena molt diferent: fàbriques velles i vies de tren que separaven la ciutat de la seva pròpia costa. Tot això es va enderrocar per als Jocs Olímpics del 1992. Al seu lloc van néixer la Vila Olímpica, construïda per allotjar els atletes, i aquest port, seu de les proves de vela. Mireu amunt, cap a les dues torres que s'alcen sobre la platja, i cap al peix daurat de Frank Gehry, que brilla al sol. Els Jocs van ser un punt d'inflexió: Barcelona es va obrir al mar. Quan els atletes se'n van anar, la vila es va convertir en un barri de veritat, i avui encara hi viu gent.",
+          "long": "Quedeu-vos aquí i imagineu-vos una escena molt diferent: fàbriques velles i vies de tren que separaven la ciutat de la seva pròpia costa. Aquesta part de la ciutat havia crescut al voltant de la indústria, i el barri veí del Poblenou estava tan ple de fàbriques que el van arribar a conèixer com el Manchester català. Tot això es va enderrocar per als Jocs Olímpics del 1992. Al seu lloc van néixer la Vila Olímpica, construïda per allotjar els atletes, i aquest port, seu de les proves de vela. Els urbanistes no es van limitar a construir per a unes quantes setmanes d'esport: van transformar del tot la relació entre la ciutat i la seva costa. Mireu al vostre voltant i intenteu imaginar vies de tren i parets de fàbrica on ara la gent passeja i va en bicicleta pel front marítim. Després mireu amunt, cap a les dues torres que s'alcen sobre la platja. Són l'Hotel Arts i la Torre Mapfre, construïdes a la mateixa alçada, i es van convertir en una de les imatges més reconeixibles del nou front marítim. Als seus peus, busqueu el peix daurat de Frank Gehry, que brilla al sol: una escultura de tires de metall entreteixides que sembla ondular quan canvia la llum. Els Jocs van ser un punt d'inflexió: Barcelona es va obrir al mar. Quan els atletes se'n van anar, la vila es va convertir en un barri de veritat, i els pisos dels atletes van passar a ser habitatges normals i corrents. Avui encara hi viu gent, així que, mentre descobriu tota aquesta història, parleu fluixet i tracteu els veïns amb el mateix respecte que voldríeu al vostre carrer."
+        }
+      },
+      "srcHash": "c73056d1b0",
+      "audio": {
+        "base": {
+          "file": "audio/ca/port-olimpic.m4a",
+          "hash": "b60828cbcd"
+        },
+        "sports": {
+          "file": "audio/ca/port-olimpic--sports.m4a",
+          "hash": "a1be087886"
+        },
+        "outdoors": {
+          "file": "audio/ca/port-olimpic--outdoors.m4a",
+          "hash": "84d7f8e68c"
+        },
+        "history": {
+          "file": "audio/ca/port-olimpic--history.m4a",
+          "hash": "eeb610938d"
+        }
+      }
+    },
+    "teatre-romea": {
+      "tip": "Mireu la programació: algunes funcions ofereixen sobretítols.",
+      "stories": {
+        "base": {
+          "short": "Aquest teatre del carrer de l'Hospital fa obres des del 1863, i durant bona part d'aquest temps va ser la casa del teatre en català. Els actors van mantenir viva la llengua en aquest escenari fins i tot quan la van fer fora de la vida pública. Fixeu-vos en els cartells: els espectacles encara són majoritàriament en català.",
+          "normal": "Aquest teatre del carrer de l'Hospital fa obres des del 1863, i durant bona part de la seva història va ser la casa del teatre en català. Generacions d'actors i dramaturgs catalans s'hi van fer un nom, fins i tot en els anys en què la llengua havia estat expulsada de la vida pública. Avui encara hi programen produccions actuals, majoritàriament en català, per a un públic local.",
+          "long": "Sou al carrer de l'Hospital, davant del Teatre Romea, on es fan obres des del 1863. El carrer pren el nom de l'antic Hospital de la Santa Creu, els edificis gòtics del qual són aquí a prop, en aquest mateix carrer. El teatre, per la seva banda, porta el nom de Julián Romea, un cèlebre actor espanyol del segle XIX. Durant bona part de la seva història, el Romea va ser la casa del teatre en català. Generacions d'actors i dramaturgs catalans s'hi van fer un nom, i van continuar actuant en la seva llengua fins i tot en els anys en què l'havien expulsada de la vida pública. Durant la dictadura franquista, per exemple, el català estava molt restringit a l'escola, a la premsa i a la vida oficial, així que un escenari on encara es podia sentir era molt important per a la gent d'aquí. Ara mireu l'entrada i els cartells del costat de les portes. Us diuen què s'hi fa ara mateix, perquè el Romea és un teatre en ple funcionament, no pas un museu. Encara hi programen produccions actuals, majoritàriament en català, per a un públic local. Si hi passeu un vespre abans d'una funció, potser veureu gent del barri i de tota la ciutat saludant els amics abans que obrin les portes. Fixeu-vos també en la modèstia amb què l'edifici s'integra en el front de carrer quotidià del Raval. Aquí hi viu gent pertot arreu, així que, mentre us ho mireu, parleu baixet i deixeu l'entrada lliure."
+        },
+        "culture": {
+          "short": "Mireu l'entrada del Teatre Romea, aquí al carrer de l'Hospital. Aquest escenari s'omple d'obres des del 1863, i durant bona part d'aquest temps va ser la casa del teatre en català. Doneu un cop d'ull als cartells de la porta: els espectacles encara són majoritàriament en català, i els veuen els veïns del Raval.",
+          "normal": "Atureu-vos aquí, al carrer de l'Hospital, i mireu l'entrada del Teatre Romea. Darrere d'aquestes portes s'hi representen obres des del 1863, i durant bona part d'aquest temps aquesta va ser la casa del teatre en català. Imagineu-vos les generacions d'actors i dramaturgs catalans que van sortir sota els focus d'aquest escenari i s'hi van fer un nom. Ara doneu un cop d'ull als cartells de la porta. El Romea encara programa produccions actuals, majoritàriament en català, per a un públic local. Si torneu a veure una funció, compartireu platea amb veïns del Raval que han sortit a passar la vetllada.",
+          "long": "Atureu-vos aquí, al carrer de l'Hospital, i mireu l'entrada del Teatre Romea. Darrere d'aquestes portes s'hi representen obres des del 1863, i durant bona part d'aquest temps aquesta va ser la casa del teatre en català. El teatre porta el nom de Julián Romea, un cèlebre actor espanyol del segle XIX. Imagineu-vos les generacions d'actors i dramaturgs catalans que van sortir sota els focus d'aquest escenari i s'hi van fer un nom, davant d'un públic que venia a sentir la seva pròpia llengua. Fins i tot en els anys en què el català va ser expulsat de la vida pública, inclosa la llarga dictadura franquista, aquest escenari el va mantenir viu. Ara doneu un cop d'ull als cartells de la porta. Llegiu-ne els títols i els noms, i veureu que el Romea no és cap peça de museu. Encara programa produccions actuals, majoritàriament en català, per a un públic local. Si no parleu català, també pot ser una vetllada memorable, així que pregunteu a la taquilla què hi fan. Ja que hi sou, mireu carrer enllà. L'antic Hospital de la Santa Creu, un conjunt gòtic que va donar nom al carrer de l'Hospital, és aquí a prop, i ens recorda quant de temps fa que aquest carrer forma part de la vida diària de la ciutat. Si torneu a veure una funció, compartireu platea amb veïns del Raval que han sortit a passar la vetllada, així que tracteu-la també com la seva nit."
+        },
+        "history": {
+          "short": "Fixeu-vos en la modèstia amb què aquest teatre s'alça al carrer de l'Hospital. I, tanmateix, el Teatre Romea, que fa obres des del 1863, va ajudar el català a travessar temps difícils: fins i tot quan la llengua va ser expulsada de la vida pública, els actors la van mantenir viva aquí. Mireu la façana en silenci i parleu baixet pels veïns.",
+          "normal": "Fixeu-vos en la modèstia amb què aquest teatre s'alça al carrer de l'Hospital, integrat en el front de carrer quotidià del Raval. I, tanmateix, aquest edifici va ajudar una llengua a travessar temps difícils. El Teatre Romea fa obres des del 1863, i durant bona part de la seva llarga vida va ser la casa del teatre en català. Fins i tot en els anys en què el català va ser expulsat de la vida pública, generacions d'actors i dramaturgs el van mantenir viu en aquest escenari. Preneu-vos un moment de calma per mirar la façana. Aquest és un barri on viu gent, així que, si us plau, parleu baixet quan continueu.",
+          "long": "Fixeu-vos en la modèstia amb què aquest teatre s'alça al carrer de l'Hospital, integrat en el front de carrer quotidià del Raval. No té res de cridaner, però aquest edifici va ajudar una llengua a travessar temps difícils. El Teatre Romea fa obres des del 1863, i durant bona part de la seva llarga vida va ser la casa del teatre en català. Porta el nom de Julián Romea, un cèlebre actor espanyol del segle XIX. Al llarg de les dècades, el català va ser expulsat una vegada i una altra de la vida pública. Sobretot durant la dictadura franquista, estava molt restringit a l'escola, a la premsa i a l'administració. Fins i tot en aquells anys, generacions d'actors i dramaturgs el van mantenir viu en aquest escenari, i van donar a la llengua una veu pública. El carrer que us envolta també té arrels profundes. El carrer de l'Hospital pren el nom de l'Hospital de la Santa Creu, un conjunt gòtic que és aquí a prop i que va atendre els malalts de la ciutat durant segles. Així doncs, aquí dempeus sou enmig d'algunes de les capes més antigues de la vida diària de Barcelona. Preneu-vos un moment de calma per mirar la façana i l'entrada. Avui el Romea encara programa produccions actuals, majoritàriament en català, per a un públic local; per tant, la història que esteu escoltant no s'ha acabat: continua cada vespre que s'obren les portes. Recordeu que aquest és un barri on viu gent, que va fent la seva vida al vostre voltant. Si us plau, parleu baixet quan continueu."
+        }
+      },
+      "srcHash": "1f42cbfb9c",
+      "audio": {
+        "base": {
+          "file": "audio/ca/teatre-romea.m4a",
+          "hash": "4f0163f7a6"
+        },
+        "culture": {
+          "file": "audio/ca/teatre-romea--culture.m4a",
+          "hash": "43b605801d"
+        },
+        "history": {
+          "file": "audio/ca/teatre-romea--history.m4a",
+          "hash": "e1683f4ee0"
+        }
+      }
+    },
+    "liceu": {
+      "tip": "Gairebé cada dia hi ha visites guiades, i les entrades d'última hora poden sortir sorprenentment bé de preu.",
+      "stories": {
+        "base": {
+          "short": "Darrere d'aquesta façana tan discreta de la Rambla s'amaga un dels grans teatres d'òpera d'Europa, inaugurat el 1847. S'ha cremat dues vegades, el 1861 i el 1994, i totes dues vegades ha tornat a aixecar-se. Mireu aquesta façana tan senzilla i imagineu-vos la sala vermella i daurada que brilla just al darrere.",
+          "normal": "Darrere d'aquesta façana tan discreta de la Rambla s'amaga un dels grans teatres d'òpera d'Europa, inaugurat el 1847. La seva història és ben dramàtica: es va cremar el 1861, i el 1893 un anarquista va llançar bombes contra el públic en plena funció. El 1994 un altre incendi el va tornar a destruir, i tota la ciutat va ajudar a reconstruir-lo. Va reobrir el 1999, i la seva sala vermella i daurada torna a ser el cor de l'òpera a Barcelona.",
+          "long": "Fixeu-vos en l'edifici que teniu al davant. Des de la Rambla gairebé no destaca: és només una façana discreta encaixada en la filera d'edificis. Però al darrere s'hi amaga un dels grans teatres d'òpera d'Europa, el Gran Teatre del Liceu, inaugurat el 1847. Cosa poc habitual entre els grans teatres d'òpera europeus, no el va fer construir cap rei ni cap cort. El van pagar accionistes privats, famílies barcelonines que es van comprar les seves llotges, i es va aixecar on hi havia hagut un antic convent. La seva història és tan dramàtica com qualsevol obra representada a l'escenari. El 1861 un incendi el va deixar en runes, i es va reconstruir en un any, més o menys. El 1893 va arribar la nit més negra: durant una representació del Guillem Tell de Rossini, un anarquista va llançar dues bombes des dels pisos de dalt contra el públic. Només en va esclatar una, però va matar una vintena de persones. Després, el 1994, una espurna durant unes obres de reparació va encendre el teló de l'escenari, i el teatre va quedar destruït una altra vegada. Aquest cop tota la ciutat va ajudar a reconstruir-lo, i va reobrir el 1999, més gran per dins, entre bastidors, però amb la sala de ferradura vermella i daurada recreada. Abans de continuar, mireu a terra una mica més enllà, Rambla avall cap al mercat. Aquell mosaic circular ple de colors encastat al paviment és de Joan Miró, i la majoria de gent li passa per sobre sense adonar-se'n. I recordeu que aquest és un barri ple de vida, on viu gent, així que deixeu una mica d'espai als veïns que passen de camí cap a casa."
+        },
+        "culture": {
+          "short": "Mireu aquesta façana tan senzilla de la Rambla. Al darrere hi ha un dels grans teatres d'òpera d'Europa, la casa d'estrelles nascudes a Barcelona com Montserrat Caballé i Josep Carreras. Imagineu-vos la sala vermella i daurada en silenci just abans de l'obertura, i deixeu lloc a la vorera per als veïns que passen.",
+          "normal": "Feu un pas enrere i mireu aquesta façana tan senzilla de la Rambla. Qui diria que al darrere hi ha un dels grans teatres d'òpera d'Europa? Des del 1847 aquest escenari és dels cantants, i Barcelona li ha donat algunes de les seves estrelles més brillants, com Montserrat Caballé i Josep Carreras, tots dos nascuts en aquesta ciutat. Imagineu-vos la sala vermella i daurada una nit de funció, aquell silenci just abans de l'obertura. Aquí l'òpera no és només per als visitants. Els barcelonins omplen aquestes butaques des de fa generacions, així que, mentre us hi entretingueu, deixeu lloc a la vorera per als veïns que passen.",
+          "long": "Feu un pas enrere un moment i mireu aquesta façana tan senzilla de la Rambla. Qui diria que al darrere hi ha un dels grans teatres d'òpera d'Europa? Des del 1847 aquest escenari és dels cantants, i el mateix nom del teatre ja n'explica l'origen: va néixer d'una escola de música, el Liceu, que encara avui forma músics a la ciutat. Barcelona ha donat a l'òpera algunes de les seves estrelles més brillants. Montserrat Caballé i Josep Carreras van néixer aquí, igual que la soprano Victoria de los Ángeles, i tots tres van cantar en aquest escenari. La ciutat també és famosa per la seva passió per Wagner. Quan va caducar la restricció que reservava el Parsifal a Bayreuth, el Liceu va ser un dels primers teatres a estrenar-lo, a principis del 1914. Ara imagineu-vos la sala vermella i daurada una nit de funció, amb els pisos de llotges corbant-se en forma de ferradura i aquell silenci just abans de l'obertura. Dins del mateix edifici hi ha el Cercle del Liceu, un club privat amb sales que guarden pintures del modernista Ramon Casas. Però aquí l'òpera no és només per als visitants. Els barcelonins omplen aquestes butaques des de fa generacions. És un bon recordatori que això és un barri viu, no un decorat. Espectadors, treballadors i veïns comparteixen aquest tros de vorera, així que, mentre us hi entretingueu, deixeu lloc als veïns que passen."
+        },
+        "history": {
+          "short": "Aquesta porta tan tranquil·la n'ha viscut més, de drames, que la majoria de les òperes que s'hi canten. Inaugurat el 1847, el Liceu es va cremar el 1861, va patir un atemptat anarquista amb bombes contra el públic el 1893 i es va tornar a cremar el 1994. La ciutat el va reconstruir i va reobrir el 1999. Mireu la façana i imagineu-vos tot el que ha superat.",
+          "normal": "Aquesta porta tan tranquil·la ha sobreviscut a més drames que la majoria de les òperes que s'hi canten. El Liceu es va inaugurar el 1847, i només catorze anys després, el 1861, un incendi el va deixar en runes. El 1893 va arribar una cosa encara més fosca: un anarquista va llançar bombes contra el públic en plena funció. I el 1994 les flames van tornar a destruir el teatre. Aquest cop tota la ciutat es va bolcar a reconstruir-lo, i el 1999 el teló es va tornar a alçar. Mireu la façana que teniu al davant i imagineu-vos tot el que ha resistit, aquí mateix a la Rambla, en un barri on la gent encara hi viu.",
+          "long": "Aquesta porta tan tranquil·la ha sobreviscut a més drames que la majoria de les òperes que s'hi canten. El Liceu es va inaugurar el 1847, construït no pas per una cort reial sinó per accionistes privats, en uns terrenys que havien estat d'un convent. Només catorze anys després, el 1861, un incendi el va deixar en runes. Els barcelonins van reaccionar de pressa, i el teatre reconstruït va tornar a obrir les portes l'any següent. El 1893 va arribar una cosa molt més fosca. Durant una representació del Guillem Tell de Rossini, un anarquista anomenat Santiago Salvador va llançar dues bombes des dels pisos de dalt cap a la platea. Només en va esclatar una, però va matar una vintena de persones. Per al públic benestant de la ciutat, l'atemptat es va convertir en un símbol de les fortes tensions socials d'aquells anys, i l'anarquista va ser executat més endavant. Després, el 1994, durant unes obres de reparació, unes espurnes van encendre el teló de l'escenari, i en poques hores el teatre va tornar a quedar destruït. Aquest cop tota la ciutat s'hi va bolcar. Institucions públiques i donants privats van unir forces, el teatre es va ampliar cap als edificis del costat per guanyar espai modern entre bastidors, i el 1999 el teló es va tornar a alçar sobre una sala vermella i daurada recreada. Mireu la façana que teniu al davant i imagineu-vos tot el que ha resistit. Després fixeu-vos en la vida que l'envolta: la gent que puja i baixa per la Rambla, l'entrada del metro de Liceu aquí a prop, el mercat una mica més enllà. Això continua sent un barri on la gent hi viu, així que deixeu una mica d'espai als veïns que hi passen."
+        },
+        "architecture": {
+          "short": "Aquí hi ha el truc: des de la Rambla, aquest edifici gairebé no es fa notar. I, tanmateix, darrere d'aquesta façana discreta s'obre una sala vermella i daurada amb pisos que es corben en forma de ferradura. Reconstruït després de l'incendi del 1994, va reobrir el 1999. Atureu-vos a la porta, aparteu-vos per deixar passar els veïns i imagineu-vos aquella sala lluminosa.",
+          "normal": "Aquest és el truc de l'edifici: des de la Rambla gairebé no es fa notar. La façana que teniu al davant és discreta, encaixada en la línia del carrer, però al darrere s'obre un dels grans teatres d'òpera d'Europa, una sala vermella i daurada amb els pisos corbats en una ferradura clàssica. Després que el foc destruís el teatre el 1994, Barcelona va decidir reconstruir-lo, recreant la sala històrica però dotant-la de tecnologia escènica moderna. Va reobrir el 1999. Així que atureu-vos un moment a la porta, aparteu-vos per deixar passar els veïns per la vorera i imagineu-vos aquell interior lluminós amagat a quatre passes.",
+          "long": "Aquest és el truc de l'edifici: des de la Rambla gairebé no es fa notar. La façana que teniu al davant és discreta, encaixada en la línia del carrer com qualsevol dels seus veïns. El teatre es va aixecar el 1847 on hi havia hagut un antic convent, amb projecte de l'arquitecte Miquel Garriga i Roca i pagat per accionistes privats, no pas per una cort reial. A diferència de molts teatres d'òpera europeus, no té cap gran plaça pròpia des d'on lluir-se. I, tanmateix, darrere d'aquesta façana s'obre un dels grans teatres d'òpera d'Europa: una sala vermella i daurada en forma de ferradura clàssica, amb pisos i pisos de llotges que s'enfilen cap al sostre i capacitat per a ben bé més de dues mil persones. Després que el foc destruís el teatre el 1994, Barcelona va decidir recrear la sala històrica en lloc de construir-ne una de nova. Les flames van respectar la façana i l'elegant Saló dels Miralls, així que el que esteu mirant és l'autèntica façana del segle XIX. La reconstrucció, dirigida per l'arquitecte Ignasi de Solà-Morales, va mantenir la ferradura de sempre i la seva decoració daurada, però el teatre també va incorporar els edificis del costat, cosa que li va donar un escenari molt més gran i modern i una maquinària escènica amagada a la vista. Va reobrir el 1999. Així que l'edifici que veieu en realitat són dos edificis en un: una cara del segle XIX que dona al carrer i un teatre modern que treballa discretament al darrere. Atureu-vos un moment a la porta, aparteu-vos per deixar passar els veïns per la vorera i imagineu-vos aquell interior lluminós amagat a quatre passes."
+        }
+      },
+      "srcHash": "4d6e8e54d0",
+      "audio": {
+        "base": {
+          "file": "audio/ca/liceu.m4a",
+          "hash": "e06d394ee5"
+        },
+        "culture": {
+          "file": "audio/ca/liceu--culture.m4a",
+          "hash": "4d83736ae3"
+        },
+        "history": {
+          "file": "audio/ca/liceu--history.m4a",
+          "hash": "e42ac03753"
+        },
+        "architecture": {
+          "file": "audio/ca/liceu--architecture.m4a",
+          "hash": "6940ae9baa"
+        }
+      }
+    },
+    "filmoteca": {
+      "tip": "Les entrades són barates: veure-hi un clàssic del cinema és un vespre ben de la terra.",
+      "stories": {
+        "base": {
+          "short": "Aquest edifici de formigó tan contundent, inaugurat el 2012, acull l'arxiu de cinema de Catalunya. Fixeu-vos en les parets de formigó nu i imagineu-vos les sales de dins, on cada dia es projecten clàssics i pel·lícules rares a preus baixos. Va arribar a aquest racó del Raval per portar cultura i vida nova a un barri antic i molt densament poblat.",
+          "normal": "Aquest edifici de formigó tan contundent, inaugurat el 2012, acull l'arxiu de cinema de Catalunya. A dins, les sales projecten cada dia clàssics, retrospectives i pel·lícules rares a preus baixos, i l'arxiu conserva dècades de cinema català. La seva arribada a aquest racó del Raval formava part d'un pla per portar cultura i vida nova a un dels barris més antics i més densament poblats de la ciutat.",
+          "long": "Preneu-vos un moment per mirar aquest edifici de formigó tan contundent que teniu al davant. Es va inaugurar el 2012 i acull la Filmoteca de Catalunya, l'arxiu de cinema de Catalunya. El va dissenyar l'arquitecte Josep Lluís Mateo, i des d'aquí podeu veure com va treballar amb un formigó pesant i nu, deixant que les grans superfícies i obertures donessin forma a l'edifici. Fixeu-vos com l'edifici s'obre a la plaça, la plaça de Salvador Seguí. A dins hi ha dues sales, i cada dia s'hi projecten clàssics, retrospectives i pel·lícules rares a preus baixos, així que una nit de cinema aquí no us buidarà la butxaca. També hi ha una biblioteca per a tothom qui tingui curiositat pel cinema, i exposicions sobre el cinema i la seva història. I darrere de tot això, l'arxiu conserva dècades de cinema català, guardant pel·lícules que, si no, es podrien perdre. Ara mireu la plaça mateixa. L'arribada de la Filmoteca a aquest racó del Raval formava part d'un pla per portar cultura i vida nova a un dels barris més antics i més densament poblats de la ciutat. El Raval té carrers estrets, edificis d'habitatges alts i antics, i una llarga història de gent treballadora i de nouvinguts que hi han fet casa seva, com encara fan molts avui dia. Mentre ho contempleu, recordeu que aquests balcons i portals són dels veïns, així que gaudiu de la vista en silenci. I si teniu un vespre lliure, consulteu la programació. Una sessió aquí és una manera preciosa d'acabar un dia al barri."
+        },
+        "culture": {
+          "short": "Mireu amunt, cap a aquest bloc de formigó nu. Des del 2012, les seves sales projecten clàssics i pel·lícules rares cada dia, sense excepció, mentre a dins es conserven dècades de cinema català. Imagineu-vos totes aquestes històries parpellejant a pocs metres. Tot al voltant hi viu gent, així que quedeu-vos-hi amb calma i parleu baixet.",
+          "normal": "Mireu amunt, cap a aquest bloc de formigó nu. Darrere d'aquestes parets, l'arxiu de cinema de Catalunya conserva amb cura dècades de cinema català. Des que l'edifici es va inaugurar, el 2012, les seves sales projecten clàssics, retrospectives i pel·lícules rares cada dia, sense excepció. Imagineu-vos totes aquestes històries parpellejant a les fosques, a pocs metres d'on sou. La Filmoteca va arribar aquí dins d'un pla per portar cultura i vida nova a un dels barris més antics de Barcelona. El Raval encara és la llar de molta gent, així que quedeu-vos-hi amb calma i parleu baixet.",
+          "long": "Mireu amunt, cap a aquest bloc de formigó nu. El va dissenyar l'arquitecte Josep Lluís Mateo i es va inaugurar el 2012. Deixeu que la mirada recorri les seves superfícies, com la llum s'enganxa al gris i com les ombres cauen dins les obertures. Darrere d'aquestes parets, l'arxiu de cinema de Catalunya conserva amb cura dècades de cinema català. Penseu en tot el que això vol dir: cares, carrers i veus d'anys enrere, guardats perquè es puguin tornar a veure. A dins hi ha dues sales, i des que es va inaugurar l'edifici hi han projectat clàssics, retrospectives i pel·lícules rares cada dia, sense excepció. També hi ha una biblioteca, on estudiants i amants del cinema vénen a llegir i investigar, i espais per a exposicions sobre cinema. Imagineu-vos totes aquestes històries parpellejant a les fosques, a pocs metres d'on sou, mentre la plaça de fora, la plaça de Salvador Seguí, segueix amb el seu dia a dia. Dos mons de costat: les pel·lícules antigues a dins i la vida quotidiana del barri a fora. La Filmoteca va arribar aquí dins d'un pla per portar cultura i vida nova a un dels barris més antics de Barcelona. El Raval ha estat durant molt de temps un lloc on famílies treballadores i gent vinguda d'altres llocs hi han fet casa seva, i els seus carrers estrets i edificis alts encara guarden aquesta vida avui dia. Fixeu-vos en els balcons i les persianes del voltant. Són les cases de la gent. Així que quedeu-vos-hi amb calma i parleu baixet. Si podeu, torneu-hi un vespre per veure una sessió, i deixeu que el cinema del mateix barri us obri les portes."
+        }
+      },
+      "srcHash": "b905c62eb8",
+      "audio": {
+        "base": {
+          "file": "audio/ca/filmoteca.m4a",
+          "hash": "34424f252d"
+        },
+        "culture": {
+          "file": "audio/ca/filmoteca--culture.m4a",
+          "hash": "2a2684a7fb"
+        }
+      }
+    },
+    "el-molino": {
+      "tip": "Damunt dels teatres del Paral·lel hi viu gent: quan s'acabin les funcions, sortiu amb calma i sense fer soroll.",
+      "stories": {
+        "base": {
+          "short": "Mireu amunt, al molí de la façana. Això és El Molino, el cabaret més famós de Barcelona, inspirat en el Moulin Rouge de París i obert des de principis del segle XX. El Paral·lel que teniu al voltant va ser, en el seu dia, el Broadway de la ciutat. La majoria de les sales de music-hall van tancar, però El Molino encara hi fa espectacles avui dia.",
+          "normal": "Busqueu el molí de la façana: això és El Molino, el cabaret més famós de Barcelona, obert des de principis del segle XX i inspirat en el Moulin Rouge de París. L'avinguda del Paral·lel que l'envolta va ser, en el seu dia, el Broadway de la ciutat, plena de teatres, music-halls i cafès on els treballadors venien a riure, cantar i oblidar-se d'una setmana dura. El Molino va sobreviure quan la majoria van tancar, i encara hi fa espectacles avui dia.",
+          "long": "Busqueu el molí de la façana, aquí damunt vostre. Les seves aspes assenyalen El Molino, el cabaret més famós de Barcelona, obert des de principis del segle vint i inspirat en el Moulin Rouge de París, el cabaret de Montmartre que va obrir el 1889 sota el seu propi molí vermell. Barcelona en va agafar la idea i la va fer seva. Ara gireu-vos i mireu al llarg de l'avinguda. És l'avinguda del Paral·lel, i el nom té una història curiosa: el carrer segueix, més o menys, una línia de latitud, un paral·lel, que travessa el mapa de la ciutat. Fa un segle, això era el Broadway de Barcelona. Imagineu-vos-el ple de teatres, music-halls i cafès, amb els llums encesos, les portes obertes i la gent desbordant-se per la vorera. La major part del públic era gent treballadora, que venia aquí després d'una setmana dura per riure, cantar i oblidar-se dels maldecaps durant unes quantes hores. Amb els anys, la majoria d'aquelles sales van anar tancant, l'una darrere l'altra, i l'avinguda va anar canviant al seu voltant. El Molino va sobreviure. Encara hi fa espectacles avui dia, així que el molí que teniu al damunt no és només un record del passat, sinó el senyal d'un escenari ben viu. Preneu-vos també un moment per fixar-vos en els vessants verds de la muntanya de Montjuïc, aquí a tocar. El barri que hi ha als seus peus és el Poble-sec, on viuen famílies que hi són des de fa generacions. Per això, mentre passegeu, parleu fluixet pels carrers residencials, i gaudiu de l'avinguda com ho fa la gent d'aquí: a poc a poc, i sense cap pressa."
+        },
+        "culture": {
+          "short": "Mireu amunt, al molí: és un picada d'ullet al Moulin Rouge de París. Això és El Molino, el cabaret més famós de Barcelona, on cantants, humoristes i ballarins s'han intercanviat cançons picants i acudits ràpids amb sales plenes de gom a gom. Al llarg del Paral·lel, que havia estat el Broadway de la ciutat, la majoria d'escenaris es van apagar. Aquest encara actua.",
+          "normal": "Mireu amunt, al molí de la façana. És un picada d'ullet al Moulin Rouge de París, i assenyala El Molino, el cabaret més famós de Barcelona. Imagineu-vos tot el que ha vist aquest escenari: cantants, humoristes i ballarins intercanviant cançons picants i acudits ràpids amb una sala plena de gom a gom. A tota l'avinguda del Paral·lel, que en el seu dia anomenaven el Broadway de la ciutat, teatres i music-halls es disputaven el públic cada nit. La majoria es van apagar, però El Molino va continuar actuant, i encara hi fa espectacles avui dia. Feu una ullada avinguda avall i veureu altres escenaris que mantenen viva la tradició.",
+          "long": "Mireu amunt, al molí de la façana. És un picada d'ullet al Moulin Rouge de París, el cabaret de Montmartre que va obrir el 1889 sota el seu propi molí vermell, i aquí assenyala El Molino, el cabaret més famós de Barcelona. Ara imagineu-vos tot el que ha vist aquest escenari. Cantants, humoristes i ballarins, tan a prop del públic que no se'ls escapava ni una rialla, intercanviant cançons picants i acudits ràpids amb una sala plena de gom a gom. Un cabaret com aquest mai no ha estat un teatre encarcarat i formal; era proper, atrevit i ple d'energia. Mireu al llarg de l'avinguda que teniu al voltant. És l'avinguda del Paral·lel, que es diu així perquè segueix, més o menys, una línia de latitud, un paral·lel, que travessa el mapa de la ciutat. En el seu dia l'anomenaven el Broadway de Barcelona, i estava atapeïda de teatres i music-halls que es disputaven el públic cada nit. Amb els anys, la majoria d'aquells escenaris es van apagar. El Molino va continuar actuant, i encara hi fa espectacles avui dia, així que les cançons i els acudits que us esteu imaginant no són només història. Feu una ullada avinguda avall i veureu altres escenaris que mantenen viva la tradició: el Teatre Victòria i el Teatre Condal són tots dos en aquesta mateixa avinguda. Si torneu al vespre, notareu com l'avinguda es desperta mentre el públic s'aplega davant de les portes. Només recordeu que hi ha gent que viu als pisos de dalt i als carrers del darrere, així que gaudiu de l'ambient i deixeu descansar el barri quan s'acabi la funció."
+        },
+        "local": {
+          "short": "Fixeu-vos en el molí que teniu al damunt, i després en la gent que us envolta. Això és el Poble-sec, on viuen famílies des de fa generacions, just al costat del cabaret més famós de Barcelona. Feu com els veïns: endinseu-vos una illa de cases cap als carrers més tranquils, seieu en una terrassa i preneu-vos alguna cosa al vespre, sense presses i amb bon humor.",
+          "normal": "Fixeu-vos en el molí que teniu al damunt, i després fixeu-vos en la gent que us envolta. Això és el Poble-sec, un barri de veritat on viuen famílies des de fa generacions, just al costat del cabaret més famós de Barcelona. Fa un segle, els treballadors venien al Paral·lel després d'una setmana dura per riure i cantar. Avui dia, els veïns encara queden amb els amics pels carrers del costat per fer una copa al vespre o unes quantes tapes. Si us hi voleu afegir, endinseu-vos una illa de cases cap als carrers més tranquils, busqueu lloc en una terrassa i gaudiu-ne a la manera d'aquí: sense presses, amb bon humor i sense córrer mai.",
+          "long": "Fixeu-vos en el molí que teniu al damunt, el senyal d'El Molino, el cabaret més famós de Barcelona. Ara fixeu-vos en la gent que us envolta. Això és el Poble-sec, un barri de veritat on viuen famílies des de fa generacions, encaixat entre l'avinguda del Paral·lel i els vessants de la muntanya de Montjuïc. El nom és català i vol dir, literalment, 'poble sec'. Mireu amunt, als balcons del voltant: potser hi veureu roba estesa, testos amb plantes o algú abocat fent petar la xerrada amb un veí de baix. És la vida de cada dia que continua just al costat dels llums d'un cabaret. Fa un segle, els treballadors venien al Paral·lel després d'una setmana dura per riure i cantar als seus teatres i music-halls. Aquell costum de trobar-se després de la feina no ha desaparegut mai del tot. Avui dia, els veïns encara queden amb els amics pels carrers del costat per fer una copa al vespre o unes quantes tapes. Si us hi voleu afegir, endinseu-vos una o dues illes de cases cap als carrers més tranquils, lluny del trànsit de l'avinguda. Busqueu lloc en una terrassa, demaneu alguna cosa petita i deixeu que el vespre passi al seu ritme. Aquí, quatre detalls d'educació fan molt. Digueu un senzill 'bon vespre', que en català vol dir bona nit a l'hora del capvespre, i sovint us tornaran un somriure. Parleu baixet a prop de portals i balcons, perquè just damunt vostre hi ha gent que dorm, que estudia o que posa els nens a dormir. Gaudiu-ne a la manera d'aquí: sense presses, amb bon humor i sense córrer mai."
+        },
+        "history": {
+          "short": "Feu un pas enrere i mireu aquest molí. Fa més d'un segle que vetlla pel Paral·lel. El Molino va obrir a principis del segle vint, inspirat en el Moulin Rouge de París, quan aquesta avinguda era el Broadway de Barcelona. Gairebé totes les seves sales van tancar; El Molino va sobreviure i encara hi fa espectacles.",
+          "normal": "Feu un pas enrere i mireu aquest molí. Fa més d'un segle que vetlla pel Paral·lel. El Molino va obrir a principis del segle vint, amb un aire manllevat del Moulin Rouge de París. Aleshores, aquesta avinguda era el Broadway de Barcelona, plena de teatres, music-halls i cafès. El seu públic era sobretot gent treballadora, que hi venia a riure, cantar i oblidar-se d'una setmana dura. Amb el pas de les dècades, gairebé totes aquelles sales van tancar. El Molino és un dels grans supervivents: encara hi fa espectacles avui dia, com un tros viu del passat de l'avinguda.",
+          "long": "Feu un pas enrere i mireu aquest molí. Fa més d'un segle que vetlla pel Paral·lel. El Molino va obrir a principis del segle vint, amb un aire manllevat del Moulin Rouge de París, que havia obert a Montmartre el 1889 sota el seu propi molí vermell. París marcava la moda, i Barcelona va respondre amb un molí ben seu. Ara mireu al llarg de l'avinguda. El seu nom, avinguda del Paral·lel, ve de la línia de latitud, el paral·lel, que segueix més o menys a través de la ciutat. En els primers anys d'El Molino, això era el Broadway de Barcelona, ple de teatres, music-halls i cafès. Proveu d'imaginar-vos aquells vespres: voreres plenes de gent, portes obertes, música que sortia fins al carrer. El públic era sobretot gent treballadora, que hi venia a riure, cantar i oblidar-se d'una setmana dura. Durant unes hores, el Paral·lel els permetia deixar les preocupacions a la porta. Amb el pas de les dècades, gairebé totes aquelles sales van tancar. Encara queden alguns teatres a l'avinguda, entre ells el Teatre Victòria i el Teatre Condal, però El Molino és el que ha mantingut viu l'esperit del cabaret d'abans. És un dels grans supervivents: encara hi fa espectacles avui dia, com un tros viu del passat de l'avinguda. Quan continueu caminant, mireu els edificis amb uns altres ulls, i recordeu que darrere de moltes d'aquestes façanes hi viuen veïns que fan la seva vida enmig de tota aquesta història."
+        }
+      },
+      "srcHash": "7f9e4a809a",
+      "audio": {
+        "base": {
+          "file": "audio/ca/el-molino.m4a",
+          "hash": "75821c4e11"
+        },
+        "culture": {
+          "file": "audio/ca/el-molino--culture.m4a",
+          "hash": "a07ebfe2bf"
+        },
+        "local": {
+          "file": "audio/ca/el-molino--local.m4a",
+          "hash": "ca0effbb81"
+        },
+        "history": {
+          "file": "audio/ca/el-molino--history.m4a",
+          "hash": "3f0bd6b04f"
+        }
+      }
+    },
+    "placa-orwell": {
+      "tip": "Al voltant de la plaça hi viuen veïns: gaudiu de les terrasses, però a la nit no feu soroll.",
+      "stories": {
+        "base": {
+          "short": "Aquesta placeta porta el nom de George Orwell, l'escriptor anglès que va venir a Barcelona el 1936 per lluitar per la República a la Guerra Civil espanyola. Ho va explicar a Homenatge a Catalunya. Mireu les terrasses i els veïns que xerren al vostre voltant: res a veure amb les barricades que ell va descriure.",
+          "normal": "Aquesta placeta porta el nom de l'escriptor anglès George Orwell. El 1936 va venir a Barcelona per lluitar per la República a la Guerra Civil espanyola, i va descriure la ciutat d'aquells mesos tan intensos al seu llibre Homenatge a Catalunya. Avui la plaça és un punt de trobada ple de vida al Barri Gòtic, amb terrasses i veïns que xerren, res a veure amb les barricades de què escrivia Orwell.",
+          "long": "Sou en una placeta que porta el nom d'un escriptor anglès, George Orwell. Orwell era un pseudònim; de fet, es deia Eric Blair. A finals de desembre de 1936 va venir a Barcelona per lluitar per la República a la Guerra Civil espanyola. Es va allistar en una milícia vinculada a un partit petit, el POUM, i el van enviar al front d'Aragó. Mesos després, de permís a la ciutat, va viure els combats de carrer del maig de 1937, quan grups del mateix bàndol republicà es van girar les armes els uns contra els altres i es van aixecar barricades per tot el centre de Barcelona. Poc després, ja de tornada al front, la bala d'un franctirador li va travessar la gola. Va sobreviure, i aquell estiu ell i la seva dona, Eileen, van fugir d'Espanya. El 1938 va publicar Homenatge a Catalunya, la crònica d'aquells mesos tan intensos. Ara mireu al vostre voltant amb calma. Fixeu-vos en les terrasses, les taules ben juntes, els veïns que s'aturen a xerrar. Alceu la vista cap als balcons, on la gent fa la seva vida de cada dia damunt de la plaça, i parleu fluixet per respecte a ells. Fixeu-vos com els carrers estrets del Barri Gòtic desemboquen en aquest espai obert: el tipus de carrers que el 1937 eren fàcils de tallar. La Rambla, on Orwell va fer guàrdia des d'un terrat durant aquells combats, és a només uns minuts a peu. Avui això és un punt de trobada ple de vida, res a veure amb les barricades de què ell escrivia."
+        },
+        "culture": {
+          "short": "Busqueu la placa amb el nom a la paret de la cantonada. George Orwell va arribar a Barcelona el 1936 com a voluntari, no com a turista, i en va escriure Homenatge a Catalunya. Hi descriu cambrers que rebutjaven les propines i desconeguts que es deien camarada. Imagineu-vos aquella ciutat mentre mireu aquestes terrasses.",
+          "normal": "Busqueu la placa amb el nom a la paret de la cantonada: aquesta plaça homenatja un escriptor que va arribar a Barcelona com a voluntari, no com a turista. George Orwell hi va venir el 1936 per lluitar per la República, i va convertir el que va veure en Homenatge a Catalunya. A les seves pàgines descriu una ciutat on els cambrers rebutjaven les propines i els desconeguts es deien camarada. Fixeu-vos en les terrasses del voltant i imagineu-vos llegint aquelles línies aquí mateix. És un bon lloc per obrir el llibre, en silenci, entre els veïns que tenen la seva llar en aquests carrers estrets.",
+          "long": "Busqueu la placa amb el nom a la paret de la cantonada. Aquesta plaça homenatja un escriptor que va arribar a Barcelona com a voluntari, no com a turista. George Orwell, que en realitat es deia Eric Blair, hi va venir el 1936 per lluitar per la República, i va convertir el que va veure en Homenatge a Catalunya, publicat el 1938. A les primeres pàgines descriu una ciutat que semblava capgirada. Els edificis estaven coberts de banderes roges i negres dels anarquistes, les parets plenes de cartells revolucionaris, els cambrers rebutjaven les propines i els desconeguts es deien camarada. Admet que no ho entenia tot, però sentia que valia la pena lluitar-hi. Al principi el llibre es va vendre poc, i no va trobar un públic ampli fins anys més tard, quan La revolta dels animals i 1984 ja l'havien fet famós. Molts lectors veuen Espanya com el lloc on van prendre forma les idees d'aquells llibres. Ara mireu al vostre voltant. Fixeu-vos en les terrasses, les taules dels cafès, la barreja de llengües que passa per la plaça. Mireu les parets dels edificis del voltant i imagineu-les cobertes de cartells; després adoneu-vos de com en són, avui, de corrents i tranquil·les. Són cases on viu gent, així que alceu la vista cap als balcons i parleu fluixet per respecte als que hi viuen a dalt. És un bon lloc per obrir el llibre, en silenci, i llegir-ne una pàgina o dues entre els veïns que tenen la seva llar en aquests carrers estrets. Orwell va venir aquí com algú de fora que volia entendre la ciutat. És un bon esperit per endur-vos-en mentre continueu caminant."
+        },
+        "history": {
+          "short": "Fixeu-vos que tranquil·les són aquestes terrasses, i ara imagineu aquests carrers del Barri Gòtic tallats amb barricades. George Orwell va venir aquí el 1936 per lluitar per la República, i en tornar del front es va trobar combats de carrer entre faccions del mateix bàndol. Mireu la placa amb el nom a la paret: la ciutat el recorda.",
+          "normal": "Fixeu-vos que tranquil·les són aquestes terrasses, i ara imagineu aquests mateixos carrers del Barri Gòtic tallats amb barricades. El 1936 George Orwell, l'escriptor anglès, va arribar a Barcelona per lluitar per la República a la Guerra Civil espanyola. Es va allistar en una milícia, va anar al front i va tornar a una ciutat que s'enfonsava en combats de carrer entre faccions del mateix bàndol. Ho va explicar tot a Homenatge a Catalunya. Mireu la placa amb el nom a la paret: és una ciutat que el recorda. Avui és simplement una plaça de barri, on la gent viu i es troba.",
+          "long": "Fixeu-vos que tranquil·les són aquestes terrasses. Ara imagineu aquests mateixos carrers del Barri Gòtic tallats amb barricades. A finals de desembre de 1936, George Orwell, l'escriptor anglès, va arribar a Barcelona per lluitar per la República a la Guerra Civil espanyola. Es va allistar a la milícia del POUM, un petit partit marxista antiestalinista, i va anar al front d'Aragó, on durant mesos la guerra va ser sobretot fred, avorriment i espera. Quan va tornar de permís a la ciutat, el maig de 1937, Barcelona s'enfonsava en combats de carrer entre faccions del mateix bàndol. D'una banda, els anarquistes i el POUM; de l'altra, les forces del govern i els comunistes. Durant uns quants dies, el centre de Barcelona va quedar partit per barricades, i Orwell els va passar fent guàrdia en un terrat damunt de la Rambla, a uns minuts a peu d'aquí. Poc després, ja de tornada al front, un franctirador li va disparar a la gola, i va sobreviure. Aleshores el POUM va ser il·legalitzat, i ell i la seva dona, Eileen, van haver de fugir d'Espanya. Ho va explicar tot a Homenatge a Catalunya, publicat el 1938. Mireu la placa amb el nom a la paret: és una ciutat que el recorda. Ara mireu els carrers estrets que s'obren a aquesta plaça i imagineu com de fàcil era tancar-los amb llambordes amuntegades, tal com Orwell va veure aixecar les barricades. Després torneu al present. Fixeu-vos en la gent a les taules, els veïns que travessen la plaça de camí a casa, els balcons de dalt. Avui és simplement una plaça de barri, on la gent viu i es troba, així que gaudiu-ne amb discreció."
+        }
+      },
+      "srcHash": "b80499ff3e",
+      "audio": {
+        "base": {
+          "file": "audio/ca/placa-orwell.m4a",
+          "hash": "dd4976cebd"
+        },
+        "culture": {
+          "file": "audio/ca/placa-orwell--culture.m4a",
+          "hash": "dc7545a32f"
+        },
+        "history": {
+          "file": "audio/ca/placa-orwell--history.m4a",
+          "hash": "3e98b59551"
+        }
+      }
+    },
+    "arc-teatre": {
+      "tip": "És un carrer estret i residencial: si us plau, no truqueu a les portes buscant la biblioteca.",
+      "stories": {
+        "base": {
+          "short": "Passeu sota aquest arc que surt de la Rambla i entrareu dins d'una novel·la. A L'ombra del vent, de Carlos Ruiz Zafón, un nen és conduït fins a una biblioteca secreta, el Cementiri dels Llibres Oblidats, amagada darrere d'una porta d'aquest mateix passatge. És ficció, però mireu les portes i imagineu quina podria ser.",
+          "normal": "Passeu sota aquest arc que surt de la Rambla i entrareu al món d'una novel·la. A L'ombra del vent, de Carlos Ruiz Zafón, un dels llibres espanyols més venuts de la història, un nen és conduït per aquests carrers fins a una biblioteca secreta anomenada el Cementiri dels Llibres Oblidats, amagada darrere d'una porta d'aquest mateix passatge. El lloc és fictici, però lectors d'arreu del món vénen a imaginar quina porta podria ser.",
+          "long": "Passeu sota aquest arc que surt de la Rambla i deixareu enrere el bullici del passeig per entrar al món d'una novel·la. L'ombra del vent, de Carlos Ruiz Zafón, és un dels llibres espanyols més venuts de la història, i el va escriure un home nascut aquí mateix, a Barcelona. Es va publicar el 2001 i va ser la primera de quatre novel·les construïdes al voltant d'un mateix lloc secret. Aquest lloc és el Cementiri dels Llibres Oblidats, una immensa biblioteca amagada on es guarden i es protegeixen els llibres que el món ha oblidat. Al començament de la història, el 1945, un nen que es diu Daniel Sempere és dut de bon matí pel seu pare, un llibreter, per aquests carrers fins a una porta d'aquest mateix passatge. A dins, li deixen triar un llibre i prometre que el protegirà, i aquesta tria posa en marxa tot el misteri. Ara feu unes quantes passes cap endins i deixeu que el carreró us envolti. Noteu com s'apaga de pressa el soroll de la Rambla, com s'alcen les parets a banda i banda, com la llum s'estreny fins a ser una franja de cel allà dalt. És fàcil entendre per què un escriptor hi amagaria un secret. La biblioteca és fictícia, i cap porta d'aquest carreró no hi porta. Tot i així, lectors d'arreu del món vénen a posar-se on sou vosaltres i a imaginar quina podria ser. Mentre mireu, recordeu que aquestes portes són les cases de la gent, així que gaudiu de la història en silenci i deixeu que els veïns facin la seva vida."
+        },
+        "culture": {
+          "short": "Mireu l'arc que teniu al damunt: emmarca aquest carreró estret com un teló d'escenari que s'acaba d'obrir. A L'ombra del vent, de Carlos Ruiz Zafón, una biblioteca secreta, el Cementiri dels Llibres Oblidats, s'amaga darrere d'una porta d'aquí. No va existir mai. Aquestes portes són cases de veritat; el misteri només viu sobre el paper.",
+          "normal": "Mireu l'arc que teniu al damunt: emmarca un carreró estret com un teló d'escenari que s'acaba d'obrir. Per als lectors d'una de les novel·les espanyoles més venudes de la història, aquest carreró guarda un secret. A L'ombra del vent, Carlos Ruiz Zafón fa que un nen sigui conduït per aquests carrers fins al Cementiri dels Llibres Oblidats, una biblioteca secreta amagada darrere d'una porta d'aquest mateix passatge. No va existir mai, però lectors d'arreu del món vénen a imaginar-la. Fixeu-vos en les portes: són cases de veritat en un barri de veritat, on el misteri només viu sobre el paper.",
+          "long": "Mireu l'arc que teniu al damunt. Emmarca aquest carreró estret com un teló d'escenari que s'acaba d'obrir, com si el carrer del darrere fos un decorat esperant els actors. Per als lectors de L'ombra del vent, una de les novel·les espanyoles més venudes de la història, és exactament això. El seu autor, Carlos Ruiz Zafón, va néixer a Barcelona i va omplir els seus llibres dels racons més foscos de la ciutat. A la novel·la, publicada el 2001 i ambientada en els anys posteriors a la Guerra Civil espanyola, un nen que es diu Daniel és conduït per aquests carrers pel seu pare, un llibreter, fins al Cementiri dels Llibres Oblidats. És una biblioteca secreta amagada darrere d'una porta d'aquest mateix passatge, un laberint de prestatges on es mantenen vius els llibres que ningú no recorda. En Daniel en tria un, i la novel·la que escull l'arrossega cap a un misteri que marcarà la resta de la seva vida. Ara abaixeu la mirada de l'arc i fixeu-vos en el carreró. Mireu com els edificis s'atansen, com s'alcen les parets i el cel s'estreny fins a ser una franja prima, com una sola porta pot semblar el començament d'una història. La biblioteca no va existir mai, però lectors d'arreu del món vénen aquí a imaginar darrere de quina porta es podria amagar. Preneu-vos un moment per fer el mateix, però fixeu-vos també en el que teniu realment al davant: cases de veritat en un barri de veritat, on la gent fa la seva vida de cada dia. El misteri pertany al paper; les portes són seves, així que parleu baixet i feu servir la càmera amb respecte."
+        }
+      },
+      "srcHash": "f28d81bbc5",
+      "audio": {
+        "base": {
+          "file": "audio/ca/arc-teatre.m4a",
+          "hash": "8f2cb5773d"
+        },
+        "culture": {
+          "file": "audio/ca/arc-teatre--culture.m4a",
+          "hash": "fd2bb1618d"
+        }
+      }
+    },
+    "la-central": {
+      "tip": "Mireu els llibres en silenci, com si fóssiu en una biblioteca, i si hi trobeu alguna cosa que us agradi, doneu un cop de mà a la llibreria comprant-la.",
+      "stories": {
+        "base": {
+          "short": "Aquesta llibreria del carrer d'Elisabets és dins d'una antiga capella. On abans hi havia un altar, ara hi ha taules plenes de novel·les, llibres d'art i assaigs. Mireu amunt i veureu les velles voltes de pedra que s'arquegen sobre els prestatges. La gent del barri hi ve a mirar llibres amb calma, i és un bon exemple de com els antics edificis religiosos del Raval han trobat una nova vida.",
+          "normal": "Aquesta llibreria és dins d'una antiga capella del carrer d'Elisabets. En lloc d'un altar, sota les velles voltes de pedra hi trobareu taules plenes de novel·les, llibres d'art i assaigs. És una de les llibreries independents preferides de la ciutat, un lloc on la gent del barri ve a remenar llibres amb calma, i mostra com els antics edificis religiosos del Raval han trobat una nova vida com a espais de cultura.",
+          "long": "Som al carrer d'Elisabets, davant d'una de les llibreries independents preferides de Barcelona, i és en un lloc ben inesperat: dins d'una antiga capella. Aquesta capella pertanyia a la Casa de la Misericòrdia, una antiga institució benèfica del Raval. Acosteu-vos a la porta i deixeu que la mirada s'enfili cap amunt. Les voltes de pedra encara s'arquegen sobre els vostres caps, tal com quan això era un lloc de culte. Però en lloc d'un altar, hi ha taules plenes de novel·les, llibres d'art i assaigs. Fixeu-vos com la quietud de l'edifici antic encaixa amb el seu nou ús. Aquí la gent sol mirar els llibres amb calma: n'agafa un, en llegeix unes quantes pàgines, el torna a deixar i hi torna a passar. La llibreria forma part de La Central, un petit grup de llibreries independents de Barcelona, i aquesta botiga l'estimen tant els veïns com els visitants. Ara mireu al llarg del carrer. El Raval és ple d'edificis com aquest: convents, capelles i cases de caritat construïts al llarg dels segles, quan aquesta part de la ciutat vella acollia hospitals, monestirs i institucions que tenien cura dels pobres. Aquí mateix, a tocar, l'antic Convent dels Àngels forma part ara del MACBA, el museu d'art contemporani de Barcelona, i l'antiga Casa de la Caritat acull el centre cultural CCCB. Antics edificis religiosos que han renascut com a espais de cultura: és una història que el barri explica una vegada i una altra. Si hi entreu, feu com la gent d'aquí: mireu els llibres en silenci i sense pressa."
+        },
+        "culture": {
+          "short": "Imagineu-vos que entreu en una capella i descobriu que l'altar ha deixat lloc a piles de novel·les. Traieu el cap per la porta, al carrer d'Elisabets, i mireu amunt: les velles voltes de pedra encara s'arquegen sobre taules de narrativa i llibres d'art. La gent del barri s'hi entreté abans de triar, així que remeneu amb delicadesa: aquesta llibreria forma part de la vida quotidiana del barri.",
+          "normal": "Imagineu-vos que entreu en una capella i descobriu que l'altar ha deixat lloc a piles de novel·les. Doncs això és el que ha passat aquí, al carrer d'Elisabets. Traieu el cap per la porta i mireu amunt: les velles voltes de pedra encara s'arquegen sobre els vostres caps, però a sota hi ha taules de narrativa, llibres d'art i assaigs. Els lectors de Barcelona la compten entre les seves llibreries independents preferides, un racó on la gent s'entreté amb una pàgina abans de decidir-se. És una petita història que el Raval explica una vegada i una altra: antics edificis religiosos que han renascut com a espais de cultura. I recordeu que això és un barri viu, i que la llibreria forma part de la seva vida de cada dia.",
+          "long": "Imagineu-vos que entreu en una capella i descobriu que l'altar ha deixat lloc a piles de novel·les. Doncs això és exactament el que ha passat aquí, al carrer d'Elisabets. Traieu el cap per la porta i mireu amunt. Les velles voltes de pedra encara s'arquegen sobre els vostres caps, les mateixes corbes on abans ressonaven les pregàries, però ara, a sota, hi ha taules de narrativa, llibres d'art i assaigs. Aquesta era la capella de la Casa de la Misericòrdia, una de les cases de caritat que antigament omplien aquesta part de la ciutat. Avui pertany a La Central, una petita família de llibreries independents de Barcelona, i els lectors d'aquí la compten entre les seves preferides. Observeu un moment la gent de dins. Ningú no sembla tenir pressa. Algú passa una pàgina, i després una altra, abans de decidir-se; algú altre va d'una taula a l'altra i torna enrere. El silenci de l'edifici antic fa la meitat de la feina. Ara feu un pas enrere i fixeu-vos en el carrer mateix. El Raval explica aquesta petita història una vegada i una altra. Aquí mateix, a tocar, l'antic Convent dels Àngels ha passat a formar part del MACBA, el museu d'art contemporani, i l'antiga Casa de la Caritat acull ara el CCCB, un centre cultural ple de vida. Capelles, convents i cases de caritat, construïts per resar i per tenir cura dels pobres, han renascut com a espais de cultura. Però recordeu que això és un barri viu, i que la llibreria forma part de la seva vida de cada dia. Si hi entreu, feu com els habituals: en silenci, amb curiositat i sense presses."
+        }
+      },
+      "srcHash": "c2341f6117",
+      "audio": {
+        "base": {
+          "file": "audio/ca/la-central.m4a",
+          "hash": "8b89882728"
+        },
+        "culture": {
+          "file": "audio/ca/la-central--culture.m4a",
+          "hash": "9bcf570720"
+        }
+      }
     }
   },
   "activities": {
     "restaurants": {
       "label": "Restaurants",
-      "intro": "Digues-nos què et ve de gust menjar. Et proposarem llocs que valen la pena.",
+      "intro": "Digues-nos què et ve de gust menjar i et proposarem llocs que valen la pena.",
       "filters": {
         "food": {
           "label": "Quin tipus de menjar?",
@@ -1595,7 +2060,7 @@
             "catalan": "Clàssics de la cuina catalana",
             "tapas": "Tapes",
             "seafood": "Peix, marisc i arrossos",
-            "veggie": "Bones opcions vegetarianes"
+            "veggie": "Opcions vegetarianes"
           }
         },
         "area": {
@@ -1620,47 +2085,47 @@
         }
       },
       "places": {
-        "Can Culleretes": "Obert des del 1786, sovint se'l considera el restaurant més antic de Barcelona. Plats catalans tradicionals en menjadors d'estil antic, amb rajoles a les parets.",
+        "Can Culleretes": "Obert des del 1786, sovint se'l considera el restaurant més antic de Barcelona. Plats catalans de tota la vida en uns menjadors antics, plens de rajoles.",
         "Els Quatre Gats": "El cafè modernista on un jove Picasso va fer la seva primera exposició, el 1900. Cuina catalana en una de les sales més boniques de la ciutat.",
-        "El Xampanyet": "Un bar petitíssim i sempre ple al carrer de Montcada, al costat del Museu Picasso. S'hi va pel cava de la casa i per unes tapes senzilles, i el més normal és fer-les dempeus.",
-        "Cal Pep": "Seients a la barra i tapes de peix i marisc fresc cuinades davant teu. Té fama per alguna cosa, així que hi has d'arribar d'hora o venir disposat a fer cua.",
-        "Bar del Pla": "Un bar tranquil del Born que combina tapes clàssiques i creatives, amb una bona carta de vins. Molt estimat pels veïns.",
+        "El Xampanyet": "Un bar petitíssim i sempre ple al carrer de Montcada, al costat del Museu Picasso. Hi aneu pel cava de la casa i unes tapes senzilles, i compteu que us tocarà estar drets.",
+        "Cal Pep": "Seients a la barra i tapes de peix i marisc fresc cuinades davant vostre. Té fama per alguna cosa, així que arribeu d'hora o prepareu-vos per fer cua.",
+        "Bar del Pla": "Un bar tranquil del Born que barreja tapes clàssiques i creatives, amb una bona carta de vins. Molt estimat per la gent del barri.",
         "Bar Cañete": "Un bar de barra animat i ben cuidat a prop del Liceu, amb tapes clàssiques molt ben fetes.",
-        "Teresa Carles": "Un restaurant vegetarià amb molts anys d'història a prop de la plaça de Catalunya, amb plats mediterranis creatius i vegetals.",
-        "Flax & Kale": "Un restaurant lluminós i saludable de la família Teresa Carles. Sobretot vegetal, amb alguns plats de peix.",
-        "Quimet & Quimet": "Un bar familiar per menjar dempeus, amb les parets plenes d'ampolles, famós pels seus petits montaditos fets amb conserves de marisc de primera qualitat.",
-        "Bar Mut": "Un bar petit i selecte amb la carta en una pissarra que canvia segons el mercat. Ideal per a un vespre especial.",
-        "Cervecería Catalana": "Un bar de tapes gran i animadíssim, que agrada tant als veïns com als visitants. Hi has d'anar d'hora o comptar que t'hauràs d'esperar.",
-        "La Pubilla": "Al costat del Mercat de la Llibertat. Cuina catalana de mercat, contundent, coneguda sobretot pels seus tradicionals «esmorzars de forquilla».",
+        "Teresa Carles": "Un restaurant vegetarià amb molts anys de trajectòria, a prop de la plaça de Catalunya, amb plats mediterranis creatius i vegetals.",
+        "Flax & Kale": "Un restaurant lluminós i centrat en la cuina saludable, de la família de Teresa Carles. Sobretot vegetal, amb uns quants plats de peix.",
+        "Quimet & Quimet": "Un bar familiar per menjar dret, amb les parets plenes d'ampolles, famós pels seus montaditos fets amb conserves de marisc de primera qualitat.",
+        "Bar Mut": "Un bar petit i selecte amb una pissarra que canvia segons el mercat. Ideal per a un vespre especial.",
+        "Cervecería Catalana": "Un bar de tapes gran i ple de vida, que agrada tant a la gent d'aquí com als visitants. Aneu-hi d'hora o us tocarà esperar.",
+        "La Pubilla": "Al costat del Mercat de la Llibertat. Cuina catalana de mercat, contundent, coneguda sobretot pels seus esmorzars de forquilla tradicionals.",
         "La Pepita": "Un bar acollidor de Gràcia amb tapes creatives, també bones opcions vegetarianes, en un ambient de barri relaxat.",
-        "La Cova Fumada": "Un bar familiar sense cap rètol a fora, a qui s'atribueix la invenció de la «bomba», una croqueta de patata amb salsa picant.",
+        "La Cova Fumada": "Un bar familiar sense cap rètol a fora, a qui s'atribueix la invenció de la bomba, una croqueta de patata amb salsa picant.",
         "Can Solé": "Un clàssic de la Barceloneta des de fa més d'un segle, conegut pel peix i el marisc, els arrossos i la paella.",
-        "Can Paixano": "Un bar ple a vessar per estar dempeus, amb cava de la casa barat i entrepans a la planxa. Sorollós, atapeït i molt divertit.",
-        "La Venta": "Un restaurant clàssic al peu del Tibidabo, amb una terrassa envidrada i vistes sobre tota la ciutat. Un dels preferits dels barcelonins per a les ocasions especials.",
-        "Via Veneto": "Alta cuina elegant i de tota la vida a Sant Gervasi, amb cuina catalana refinada des dels anys seixanta.",
-        "Botafumeiro": "Un restaurant gallec de marisc amb molta trajectòria al carrer Gran de Gràcia, amb cambrers de jaqueta blanca i una barra de marisc famosa.",
-        "7 Portes": "Obert el 1836 i famós pels seus arrossos i la seva paella, servits en grans menjadors d'estil antic.",
-        "Can Majó": "Peix, marisc i arrossos tocant a la platja de la Barceloneta, en mans de la mateixa família des de fa dècades.",
+        "Can Paixano": "Un bar per estar dret, sempre ple, amb cava de la casa barat i entrepans a la planxa. Sorollós, atapeït i molt divertit.",
+        "La Venta": "Un restaurant clàssic als peus del Tibidabo, amb una terrassa envidrada i vistes sobre tota la ciutat. Un dels preferits de la gent d'aquí per a les ocasions especials.",
+        "Via Veneto": "Alta cuina elegant i de les d'abans a Sant Gervasi, amb una cuina catalana refinada des dels anys seixanta.",
+        "Botafumeiro": "Un restaurant gallec de marisc amb molta història al carrer Gran de Gràcia, amb cambrers de jaqueta blanca i una barra de marisc famosa.",
+        "7 Portes": "Obert el 1836 i famós pels seus arrossos i la paella, que se serveixen en uns menjadors grandiosos i d'època.",
+        "Can Majó": "Peix, marisc i arrossos al costat de la platja, a la Barceloneta, en mans de la mateixa família des de fa dècades.",
         "Casa Delfín": "Plats catalans clàssics i tapes de temporada al passeig del Born, molt freqüentat per la gent del barri.",
-        "Can Ramonet": "Una de les tavernes més antigues de la Barceloneta, amb bótes de vi com a taules i tapes de peix i marisc.",
-        "Bodega La Peninsular": "Un bar d'estil bodega a la Barceloneta amb tapes clàssiques i marisc, ple de veïns a l'hora del vermut.",
+        "Can Ramonet": "Una de les tavernes més antigues de la Barceloneta, amb bótes de vi fent de taula i tapes de peix i marisc.",
+        "Bodega La Peninsular": "Un bar d'estil bodega a la Barceloneta, amb tapes clàssiques i marisc, ple de gent del barri a l'hora del vermut.",
         "Bodega Sepúlveda": "Una bodega sense floritures i sempre plena a Sant Antoni, amb una llarga llista de tapes tradicionals i creatives.",
         "El Glop": "Una taverna catalana rústica a Gràcia, coneguda per la carn a la brasa i pels calçots quan és temporada.",
         "Bar La Plata": "Un bar petitíssim obert des del 1945 que serveix gairebé només quatre coses: peix fregit, amanida de tomàquet, botifarra i anxoves, amb vi de la terra de bóta.",
-        "La Bombeta": "Un bar de la Barceloneta sense complicacions, famós per les seves bombes i les seves patates braves.",
-        "Bodega Quimet": "Una bodega antiga de Gràcia, amb bótes, vermut de sifó i tapes senzilles.",
-        "Bar Tomàs": "Un bar de barri a Sarrià les patates braves del qual molts barcelonins consideren les millors de la ciutat.",
-        "Bodega l'Electricitat": "Una bodega de la Barceloneta per fer un vermut i unes quantes tapes senzilles, com fan els veïns els caps de setmana."
+        "La Bombeta": "Un bar de la Barceloneta sense complicacions, famós per les seves bombes i les patates braves.",
+        "Bodega Quimet": "Una bodega antiga a Gràcia, amb bótes, vermut de sifó i tapes senzilles.",
+        "Bar Tomàs": "Un bar de barri a Sarrià, les patates braves del qual molta gent d'aquí diu que són les millors de la ciutat.",
+        "Bodega l'Electricitat": "Una bodega de la Barceloneta per fer un vermut i quatre tapes senzilles, com fan els veïns els caps de setmana."
       }
     },
     "nightlife": {
       "label": "Vida nocturna",
-      "intro": "Tria quin tipus de nit vols. Els codis de vestimenta són orientatius: els criteris de porta canvien, així que, si dubtes, arregla't una mica. La nit de Barcelona és en carrers on viu gent, així que no facis soroll quan tornis cap a casa.",
+      "intro": "Tria el teu tipus de nit. Els codis de vestimenta són orientatius: les normes de la porta canvien, així que, si dubtes, arregla't una mica. La nit de Barcelona és en carrers on viu gent, així que no feu soroll quan torneu a casa.",
       "filters": {
         "vibe": {
           "label": "Quin tipus de nit?",
           "options": {
-            "cocktail": "Coctelleries",
+            "cocktail": "Cocteleries",
             "live": "Música en directe",
             "club": "Discoteques"
           }
@@ -1703,32 +2168,32 @@
         }
       },
       "places": {
-        "Boadas": "La coctelleria més antiga de Barcelona, oberta des del 1933, a tocar de la Rambla. Còctels clàssics servits per bàrmans amb jaqueta blanca.",
-        "Dry Martini": "Un clàssic revestit de fusta amb una sòlida reputació pels seus martinis, com era d'esperar.",
-        "Paradiso": "Un local clandestí amagat darrere la porta d'una nevera en un petit bar de pastrami. Còctels teatrals i enginyosos; sovint hi ha cua.",
-        "Two Schmucks": "Una coctelleria relaxada i desenfadada, amb ambient de festa i sense codi de vestimenta.",
-        "Bar Marsella": "Obert des del 1820 i famós per l'absenta. Miralls envellits, ampolles plenes de pols i molt de caràcter d'una altra època.",
-        "Jamboree": "Un mític soterrani de jazz a la plaça Reial. Concerts al vespre i, ja tard, es converteix en discoteca.",
-        "Jazz Si Club": "Un bar musical petitíssim i econòmic que porta una escola de música, amb jam sessions de diferents estils al llarg de la setmana.",
+        "Boadas": "La coctelera més antiga de Barcelona, oberta des del 1933, a tocar de la Rambla. Còctels clàssics servits per bàrmans amb jaqueta blanca.",
+        "Dry Martini": "Un clàssic amb les parets revestides de fusta i una fama ben merescuda pels seus martinis, com era d'esperar.",
+        "Paradiso": "Un bar clandestí amagat darrere la porta d'una nevera en un petit bar de pastrami. Còctels teatrals i imaginatius, i sovint hi ha cua.",
+        "Two Schmucks": "Una coctelera relaxada i desenfadada, amb ambient de festa i sense codi de vestimenta.",
+        "Bar Marsella": "Obert des del 1820 i famós per l'absenta. Miralls desgastats, ampolles plenes de pols i tot l'encant d'un altre temps.",
+        "Jamboree": "Un mític soterrani de jazz a la plaça Reial. Concerts al vespre, i a la nit es converteix en discoteca.",
+        "Jazz Si Club": "Un bar musical petitíssim i econòmic, portat per una escola de música, amb jam sessions de diferents estils al llarg de la setmana.",
         "Los Tarantos": "Espectacles curts de flamenc en una sala petita de la plaça Reial. Una manera fàcil de tastar el flamenc per primer cop.",
-        "Marula Café": "Una discoteca petita de funk, soul i ritmes llatins. Públic simpàtic i molt de ball.",
-        "Sidecar": "Un soterrani a tocar de la plaça Reial per a l'indie i el rock: primer concerts i després DJ.",
+        "Marula Café": "Una discoteca petita de funk, soul i ritmes llatins. Gent simpàtica i molt de ball.",
+        "Sidecar": "Un local en un soterrani a tocar de la plaça Reial, d'indie i rock: primer concerts i després DJ.",
         "Sala Apolo": "Una sala de ball històrica al Paral·lel, amb concerts i diferents nits temàtiques al llarg de la setmana.",
-        "Razzmatazz": "Una discoteca enorme en una antiga nau, amb diverses sales, de l'indie al techno, i concerts de grans noms.",
+        "Razzmatazz": "Una discoteca enorme en una antiga nau, amb diverses sales, de l'indie al techno, i concerts d'artistes de primera fila.",
         "Moog": "Una discoteca de techno petita i calorosa al Raval, oberta fins tard.",
-        "Sutton": "Discoteca al carrer de Tuset, el cor de la nit de la part alta, amb un públic arreglat i sobretot d'aquí. Els dies amb més ambient són de dijous a dissabte a la nit.",
-        "Bling Bling": "Discoteca a l'inici del carrer de Tuset (núm. 8–10), un dels punts amb més ambient de la nit de la part alta, amb música comercial i un públic arreglat i sobretot d'aquí.",
+        "Sutton": "Una discoteca al carrer de Tuset, el cor de la nit de la part alta, amb un públic elegant i sobretot d'aquí. Hi ha més ambient de dijous a dissabte a la nit.",
+        "Bling Bling": "Una discoteca a l'inici del carrer de Tuset (núm. 8-10), un dels punts amb més ambient de la nit de la part alta, amb música comercial i un públic arreglat i sobretot d'aquí.",
         "Gatsby": "Un local d'estil anys vint al carrer de Tuset: primer sopar i espectacles, i després copes i música fins ben entrada la nit.",
         "Otto Zutz": "Un clàssic de Barcelona des dels anys vuitanta, en un antic edifici tèxtil amb tres plantes de música, a prop de la Via Augusta.",
-        "Luz de Gas": "Una antiga sala de music-hall al carrer de Muntaner amb grups en directe i concerts d'homenatge, i després nit de discoteca amb èxits que tothom coneix.",
+        "Luz de Gas": "Una antiga sala de music-hall al carrer de Muntaner, amb grups en directe i concerts d'homenatge, i després una nit de discoteca amb èxits que tothom coneix.",
         "Slow": "Un bar-discoteca amb estil a prop de la Diagonal, molt freqüentat per un públic d'aquí ben vestit.",
-        "Solange": "Una coctelleria al carrer d'Aribau inspirada en les dones de les pel·lícules de James Bond, amb còctels clàssics i elegants.",
-        "Mirablau": "Un bar al peu del Tibidabo amb uns finestrals enormes sobre tota la ciutat: una copa amb vistes i, ja tard, a ballar.",
-        "Bikini": "Una institució de Barcelona a la Diagonal: concerts i discoteca amb diferents sales i estils.",
-        "Quilombo": "Un bar petit i amb molts anys d'història al carrer d'Aribau, amb guitarres i cançons llatinoamericanes que tothom acaba cantant.",
+        "Solange": "Una coctelera al carrer d'Aribau inspirada en les dones de les pel·lícules de James Bond, amb còctels clàssics i elegants.",
+        "Mirablau": "Un bar als peus del Tibidabo amb uns finestrals enormes sobre tota la ciutat: copes amb vistes i, més tard, ball fins a la matinada.",
+        "Bikini": "Tota una institució de Barcelona a la Diagonal: concerts i una discoteca amb diferents sales i estils.",
+        "Quilombo": "Un bar petit i amb molts anys al carrer d'Aribau, amb guitarres i cançons llatinoamericanes que tothom acaba cantant.",
         "Antilla BCN": "La discoteca de salsa més coneguda de la ciutat, amb classes de ball a primera hora del vespre. Els principiants hi són benvinguts.",
-        "Dow Jones": "Un bar on els preus de les begudes pugen i baixen en pantalles com si fos la borsa. Molt popular entre els estudiants.",
-        "City Hall": "Una discoteca en un antic teatre a dalt de tot de la Rambla de Catalunya, amb terrassa i una música diferent cada nit."
+        "Dow Jones": "Un bar on els preus de les begudes pugen i baixen a les pantalles com si fos la borsa. Molt popular entre els estudiants.",
+        "City Hall": "Una discoteca en un antic teatre a dalt de tot de la Rambla de Catalunya, amb terrassa i música diferent cada nit."
       }
     },
     "museums": {
@@ -1751,24 +2216,24 @@
             "eixample": "Eixample",
             "montjuic": "Montjuïc",
             "seafront": "Front marítim i Poblenou",
-            "uptown": "Turons i part alta"
+            "uptown": "Muntanya i part alta"
           }
         }
       },
       "places": {
-        "MNAC": "El museu nacional d'art de Catalunya, al grandiós Palau Nacional construït per a l'Exposició Internacional del 1929. Famós per les pintures murals de les esglésies romàniques.",
-        "Fundació Joan Miró": "Un museu lluminós i blanc dissenyat per Josep Lluís Sert per al seu amic Joan Miró, amb pintures, escultures i un terrat-terrassa.",
+        "MNAC": "El museu nacional d'art de Catalunya, al majestuós Palau Nacional construït per a l'Exposició Internacional del 1929. Famós per les pintures murals de les esglésies romàniques.",
+        "Fundació Joan Miró": "Un museu lluminós i blanc dissenyat per Josep Lluís Sert per al seu amic Joan Miró, amb pintures, escultures i una terrassa al terrat.",
         "CaixaForum": "Exposicions dins d'una antiga fàbrica tèxtil modernista de Josep Puig i Cadafalch.",
         "Museu Frederic Marès": "L'enorme col·lecció personal d'un escultor, des de talles medievals fins a objectes quotidians, en un palau al costat de la Catedral.",
         "Museu d'Història de Catalunya": "La història de Catalunya explicada en un antic magatzem del port, el Palau de Mar, amb una terrassa que mira al port.",
         "Museu Egipci": "Un museu privat d'objectes de l'antic Egipte, a tocar del passeig de Gràcia.",
-        "Museu del Disseny": "Disseny, moda i arts decoratives en un edifici espectacular a les Glòries que els barcelonins han batejat com «la grapadora».",
+        "Museu del Disseny": "Disseny, moda i arts decoratives en un edifici molt cridaner a les Glòries, que la gent d'aquí ha batejat com «la grapadora».",
         "CosmoCaixa": "Un gran museu de ciència per tocar i experimentar, conegut sobretot pel seu bosc inundat de l'Amazònia recreat."
       }
     },
     "viewpoints": {
       "label": "Miradors",
-      "intro": "Contempla tota la ciutat des de dalt. Recorda que diversos miradors són al costat de casa de la gent: no facis soroll, sobretot a la posta de sol.",
+      "intro": "Mira tota la ciutat des de dalt. Recorda que diversos miradors són al costat de cases on viu gent: no facis soroll, sobretot a la posta de sol.",
       "filters": {
         "view": {
           "label": "Quina vista?",
@@ -1783,24 +2248,24 @@
             "old-town": "Ciutat Vella (Gòtic, Born, Raval)",
             "eixample": "Eixample",
             "montjuic": "Montjuïc",
-            "uptown": "Turons i part alta"
+            "uptown": "Muntanya i part alta"
           }
         }
       },
       "places": {
         "Bunkers del Carmel": "Una vista de 360° des d'una antiga bateria antiaèria de la Guerra Civil. Molt concorregut a la posta de sol; els veïns han demanat als visitants que no facin soroll.",
-        "Mirador del Palau Nacional": "La terrassa de davant del MNAC mira de dret avinguda avall fins a la plaça d'Espanya i per sobre de la ciutat.",
-        "Castell de Montjuïc": "Una fortalesa del segle XVII dalt de Montjuïc, amb vistes al port per una banda i a la ciutat per l'altra.",
-        "Arenas de Barcelona": "Una antiga plaça de braus convertida en centre comercial, amb un passeig circular al terrat que domina la plaça d'Espanya i Montjuïc.",
-        "Parc del Guinardó": "Un parc tranquil en un vessant, amb vistes àmplies, visitat sobretot per gent d'aquí.",
-        "Turó del Putxet": "Un petit parc dalt d'un turó en una zona residencial, amb una vista serena sobre la ciutat fins al mar.",
-        "Mirador de Colom": "Un ascensor dins el monument a Colom, al final de la Rambla, et puja fins a una petita plataforma amb vistes al port.",
-        "Tibidabo": "El punt més alt sobre Barcelona, coronat pel temple del Sagrat Cor. La millor panoràmica de la ciutat en un dia clar."
+        "Mirador del Palau Nacional": "La terrassa de davant del MNAC mira de dret avinguda avall fins a la plaça d'Espanya i per sobre de tota la ciutat.",
+        "Castell de Montjuïc": "Una fortalesa del segle XVII dalt de tot de Montjuïc, amb vistes al port per una banda i a la ciutat per l'altra.",
+        "Arenas de Barcelona": "Una antiga plaça de toros convertida en centre comercial, amb un passeig circular al terrat que domina la plaça d'Espanya i Montjuïc.",
+        "Parc del Guinardó": "Un parc tranquil en un turó, amb vistes àmplies, visitat sobretot per gent d'aquí.",
+        "Turó del Putxet": "Un petit parc dalt d'un turó en una zona residencial, amb una vista tranquil·la sobre la ciutat fins al mar.",
+        "Mirador de Colom": "Un ascensor dins la columna de Colom, al final de la Rambla, us puja fins a una petita plataforma amb vistes al port.",
+        "Tibidabo": "El punt més alt sobre Barcelona, coronat per l'església del Sagrat Cor. La millor panoràmica de la ciutat en un dia clar."
       }
     },
     "cafes": {
       "label": "Cafès i granges",
-      "intro": "Granges clàssiques per prendre xocolata desfeta, pastisseries històriques i cafès de barri, tot comerços locals, no cadenes.",
+      "intro": "Granges clàssiques per prendre xocolata desfeta, pastisseries històriques i cafès de barri: tots negocis locals, res de cadenes.",
       "filters": {
         "kind": {
           "label": "Per a què?",
@@ -1823,18 +2288,18 @@
         }
       },
       "places": {
-        "Granja Dulcinea": "Una granja familiar al carrer de Petritxol des del 1941, famosa per la seva xocolata desfeta espessa amb xurros o melindros.",
-        "Granja La Pallaresa": "Un altre clàssic de Petritxol, el carrer petit conegut per les seves xocolateries. Les tardes d'hivern, compta que hi haurà cua.",
+        "Granja Dulcinea": "Una granja familiar al carrer de Petritxol des del 1941, famosa per la xocolata desfeta espessa amb xurros o melindros.",
+        "Granja La Pallaresa": "Un altre clàssic de Petritxol, el carreró conegut per les seves xocolateries. Les tardes d'hivern, compteu a fer cua.",
         "Cafè de l'Òpera": "Un cafè a la Rambla des del 1929, davant del Liceu, amb el seu interior original d'estil modernista.",
         "Nømad Coffee": "Un dels pioners del cafè d'especialitat a Barcelona, en un petit passatge de Sant Pere.",
-        "Granja M. Viader": "Una granja al Raval des del 1870, on va néixer el Cacaolat, el famós batut de xocolata de Barcelona. Tasta la xocolata desfeta amb nata.",
-        "Pastisseria La Colmena": "Una de les pastisseries més antigues de la ciutat, a la plaça de l'Àngel, coneguda pels seus dolços tradicionals i els seus caramels de color de mel.",
+        "Granja M. Viader": "Una granja al Raval des del 1870, on va néixer el Cacaolat, el famós batut de xocolata de Barcelona. Tasteu la xocolata desfeta amb nata.",
+        "Pastisseria La Colmena": "Una de les pastisseries més antigues de la ciutat, a la plaça de l'Àngel, coneguda pels seus dolços tradicionals i els caramels de color de mel.",
         "Escribà": "La botiga principal de la família de pastissers Escribà, a la Gran Via, famosa pels seus pastissos i les seves creacions de xocolata.",
-        "Cafès El Magnífico": "Torradors de cafè familiars al Born des del 1919. Vine a prendre un cafè excel·lent i a sentir l'olor dels grans mentre es torren.",
-        "Bar Velódromo": "Un gran cafè-bar del 1933 al carrer de Muntaner, amb sostres alts i una barra llarga, obert des de l'hora d'esmorzar fins a la nit.",
+        "Cafès El Magnífico": "Torradors de cafè familiars al Born des del 1919. Veniu a prendre un cafè excel·lent i a sentir l'olor dels grans mentre es torren.",
+        "Bar Velódromo": "Un gran cafè-bar del 1933 al carrer de Muntaner, amb sostres alts i una barra llarga, obert des de l'hora d'esmorzar fins tard.",
         "Granja La Nena": "La granja familiar de Gràcia per prendre xocolata desfeta espessa, crêpes i pastissos casolans, molt estimada per les famílies del barri.",
-        "Forn Baluard": "Un forn de barri excel·lent a la Barceloneta, conegut pel seu pa de massa mare i les pastes cuites en forn de llenya.",
-        "Cafè Salambó": "Un cafè espaiós de Gràcia i punt de trobada, al costat dels cinemes Verdi, molt concorregut abans o després d'una pel·lícula."
+        "Forn Baluard": "Un forn de barri excel·lent a la Barceloneta, conegut pel pa de massa mare i les pastes cuites en forn de llenya.",
+        "Cafè Salambó": "Un cafè espaiós i lloc de trobada a Gràcia, al costat dels cinemes Verdi, molt freqüentat abans o després d'una pel·lícula."
       }
     },
     "family": {
@@ -1856,23 +2321,23 @@
             "old-town": "Ciutat Vella (Gòtic, Born, Raval)",
             "montjuic": "Montjuïc",
             "seafront": "Front marítim i Poblenou",
-            "uptown": "Turons i part alta"
+            "uptown": "Muntanya i part alta"
           }
         }
       },
       "places": {
-        "Aquàrium de Barcelona": "Un gran aquari al Port Vell, amb un túnel submarí on els taurons neden per sobre teu.",
-        "Zoo de Barcelona": "El zoo de la ciutat, dins el parc de la Ciutadella.",
+        "Aquàrium de Barcelona": "Un gran aquàrium al Port Vell, amb un túnel submarí on els taurons neden per sobre vostre.",
+        "Zoo de Barcelona": "El zoo de la ciutat, dins del parc de la Ciutadella.",
         "CosmoCaixa": "Un museu de ciència per tocar i experimentar, amb un bosc inundat de l'Amazònia recreat, ideal per a nens curiosos.",
-        "Museu de la Xocolata": "El museu de la xocolata al Born, gestionat pels pastissers de la ciutat, amb escultures fetes de xocolata.",
+        "Museu de la Xocolata": "El museu de la xocolata, al Born, gestionat pels pastissers de la ciutat, amb escultures fetes de xocolata.",
         "Telefèric de Montjuïc": "Un telefèric que puja fins al castell de Montjuïc, amb vistes al port i a la ciutat.",
         "Poble Espanyol": "Un poble a l'aire lliure construït per a l'Exposició Internacional del 1929, amb còpies d'edificis de tot Espanya i tallers d'artesans.",
-        "Parc d'Atraccions Tibidabo": "Un dels parcs d'atraccions més antics d'Europa, inaugurat el 1901 dalt del Tibidabo, amb vistes sobre tota la ciutat."
+        "Parc d'Atraccions Tibidabo": "Un dels parcs d'atraccions més antics d'Europa, inaugurat el 1901 dalt de tot del Tibidabo, amb vistes sobre tota la ciutat."
       }
     },
     "shops": {
       "label": "Botigues històriques",
-      "intro": "Botigues que formen part de la ciutat des de fa generacions. Comprar-hi és la manera de mantenir-les vives.",
+      "intro": "Botigues que fa generacions que formen part de la ciutat. Comprar-hi les manté vives.",
       "filters": {
         "kind": {
           "label": "Què busques?",
@@ -1881,7 +2346,7 @@
             "food": "Menjar i vi",
             "fashion": "Barrets i moda",
             "books": "Llibres i música",
-            "market": "Mercat de vell"
+            "market": "Mercat de segona mà"
           }
         },
         "area": {
@@ -1895,20 +2360,54 @@
       },
       "places": {
         "Cereria Subirà": "Una botiga d'espelmes oberta des del 1761, sovint considerada la botiga més antiga de Barcelona, amb un interior preciós del segle XIX.",
-        "La Manual Alpargatera": "Espardenyes fetes a mà des dels anys quaranta, encara elaborades de manera tradicional.",
+        "La Manual Alpargatera": "Espardenyes fetes a mà des dels anys quaranta, encara elaborades a la manera tradicional.",
         "Casa Gispert": "Fruits secs, fruita seca i cafè torrats en forn de llenya des del 1851, al Born.",
         "El Rei de la Màgia": "Una botiga de màgia oberta des del 1881, plena de trucs, cartells i història.",
         "Vila Viniteca": "Una botiga de vins familiar al Born amb una selecció enorme de vins catalans i espanyols, i una botiga de queviures selectes al costat.",
-        "Els Encants": "Un dels mercats de vell més antics d'Europa, ara sota una enorme coberta de miralls a les Glòries. Obert uns quants dies a la setmana.",
+        "Els Encants": "Un dels mercats de segona mà més antics d'Europa, ara sota una enorme coberta de miralls a les Glòries. Obre uns quants dies a la setmana.",
         "Herboristeria del Rei": "Una herboristeria oberta des del 1823, a tocar de la plaça Reial, amb el seu interior original de fusta tallada ple de calaixos i pots.",
-        "Ganiveteria Roca": "Una botiga de ganivets i coberts a la plaça del Pi des del 1911, amb una preciosa façana modernista.",
-        "Sombrereria Mil": "Una barreteria tradicional a prop de la plaça d'Urquinaona, amb boines, barrets de feltre i panamàs.",
+        "Ganiveteria Roca": "Una ganiveteria a la plaça del Pi des del 1911, amb una façana modernista preciosa.",
+        "Sombrereria Mil": "Una barreteria tradicional a prop de la plaça Urquinaona, amb boines, barrets de feltre i panamàs.",
         "Casa Beethoven": "Una botiga de partitures a la Rambla des del 1880, que encara ven partitures a músics de tota la ciutat.",
         "Planelles Donat": "Torronaires des del 1850 al Portal de l'Àngel; a l'estiu també serveixen orxata i gelats.",
-        "Colmado Quílez": "Un colmado a la Rambla de Catalunya des del 1908, amb prestatges fins al sostre plens de vins, conserves i productes selectes.",
+        "Colmado Quílez": "Una botiga de queviures a la Rambla de Catalunya des del 1908, amb prestatges fins al sostre plens de vins, conserves i productes selectes.",
         "Llibreria Altaïr": "Una gran llibreria independent dedicada íntegrament als viatges, els mapes i les guies."
+      }
+    },
+    "sports": {
+      "label": "Esports",
+      "intro": "Estadis, instal·lacions olímpiques i clubs de barri. La majoria són fora de Ciutat Vella, així que agafeu el metro o un autobús.",
+      "filters": {
+        "kind": {
+          "label": "De quin tipus?",
+          "options": {
+            "football": "Futbol",
+            "olympic": "Jocs Olímpics del 1992",
+            "museum": "Museus i visites",
+            "active": "Fer esport"
+          }
+        },
+        "area": {
+          "label": "On?",
+          "options": {
+            "montjuic": "Montjuïc",
+            "les-corts": "Les Corts",
+            "gracia": "Gràcia",
+            "north": "Sant Andreu i Horta"
+          }
+        }
+      },
+      "places": {
+        "Spotify Camp Nou": "L'estadi del FC Barcelona, el més gran d'Europa. Ha estat en plena remodelació, així que abans d'anar-hi consulteu el calendari de partits i si el museu i la visita a l'estadi estan oberts. Metro: Palau Reial o Les Corts (L3).",
+        "Estadi Olímpic Lluís Companys": "Construït el 1929 i renovat per als Jocs Olímpics del 1992, que s'hi van inaugurar. Per pujar a Montjuïc, agafeu el funicular des del Paral·lel (L2, L3).",
+        "Museu Olímpic i de l'Esport": "Un museu interactiu de l'esport al costat de l'Estadi Olímpic, amb records dels Jocs del 1992.",
+        "Palau Sant Jordi": "El pavelló cobert dels Jocs Olímpics del 1992, dissenyat per Arata Isozaki. Avui acull grans concerts i esdeveniments esportius.",
+        "Piscines Bernat Picornell": "Les piscines olímpiques del 1992, avui un centre esportiu públic: a l'estiu hi podeu nedar a l'aire lliure amb vistes sobre la ciutat.",
+        "Nou Sardenya": "El camp del CE Europa, el club històric de Gràcia, fundat el 1907. Un partit a casa és una manera fantàstica de veure el futbol local de ben a prop.",
+        "Camp Municipal Narcís Sala": "El camp de la UE Sant Andreu, un club de barri amb una llarga història i una afició local fidel, al nord de la ciutat.",
+        "Velòdrom d'Horta": "Una pista de ciclisme a l'aire lliure construïda per als Campionats del Món de Ciclisme en Pista del 1984, al costat dels jardins del Laberint d'Horta. Metro: Mundet (L3)."
       }
     }
   },
-  "activitiesHash": "ec0665945f"
+  "activitiesHash": "f3687f7932"
 }

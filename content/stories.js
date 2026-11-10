@@ -185,29 +185,39 @@ window.WALKBCN_STORIES = {
   "palau-de-la-musica-catalana": {
     "variants": {
       "architecture": {
-        "story": "Notice how hard it is to step back far enough to take this building in. The architect, Lluís Domènech i Montaner, fitted it onto a tight plot among these narrow streets, so please keep to the side and leave room for neighbours passing by. His daring trick was a steel frame. Because the frame carries the weight, the walls could be opened up with glass, turning the hall inside into a glowing box of light beneath a huge stained-glass skylight. Look up at the brick, mosaic and carved stone: this is Catalan Modernisme at full volume, completed in 1908.",
+        "story": "Here's a daring idea for 1908: a concert hall that's almost a glass box. The architect, Lluís Domènech i Montaner, built the Palau de la Música Catalana around a steel frame, so the walls didn't have to carry the building's weight and could open up to coloured glass instead. Look up at the façade and notice how brick, stone, mosaic and sculpture all crowd together, a proud showcase of Catalan Modernisme. Inside, a huge stained-glass skylight pours daylight over the audience. These are narrow, lived-in streets, so do step aside to let neighbours pass while you look.",
         "facts_to_verify": [
+          "Completed in 1908",
           "Architect was Lluís Domènech i Montaner",
-          "Building completed in 1908",
-          "The structure is a steel frame that allowed largely glass walls",
-          "The interior has a large stained-glass skylight",
+          "Structure built around a steel frame, allowing large areas of glass in the walls",
           "Style described as Catalan Modernisme",
-          "Reference claim not used: 'only concert hall in Europe lit entirely by natural light during the day' is widely repeated but hard to substantiate; editor should confirm before use elsewhere"
+          "Large stained-glass skylight inside lets in daylight"
         ],
         "audio": "audio/palau-de-la-musica-catalana--architecture.m4a",
-        "audioHash": "7719766f68"
+        "audioHash": "5fd3c0aa83"
       },
       "art": {
-        "story": "Look up at the corner above the entrance, where a sculpted group seems to burst straight out of the stone. This is Miquel Blay's tribute to Catalan folk song: a young woman at its heart, surrounded by people of every age, the very singers this hall was built for in 1908. Higher up, carved busts of great composers keep watch over the street. Inside, a stained-glass skylight by Antoni Rigalt glows like a sun. Here sculpture, mosaic, glass and brick were designed to work together as a single artwork. People live on these streets, so enjoy it quietly.",
+        "story": "Imagine sitting beneath a sun made of glass. That's the great stained-glass skylight inside this hall, glowing in golds and blues above every concert. Out here, look up at the corner and find the big sculpture celebrating Catalan folk song, carved by Miquel Blay, full of everyday people, young and old, swept up in music. Then let your eyes travel along the façade to the busts of Bach, Beethoven and Wagner. Sculptors, mosaic makers and glass artists all worked side by side here, turning a choir's home into one great work of art.",
         "facts_to_verify": [
-          "The corner sculpture of Catalan folk song is by Miquel Blay",
-          "The sculpture features a central female figure surrounded by people of various ages",
-          "The hall was built in 1908 for the Orfeó Català choir",
-          "The skylight's stained glass is by Antoni Rigalt",
-          "Reference names the façade busts as Bach, Beethoven and Wagner; sources often list Palestrina, Bach and Beethoven on the main façade, so composer names were left out pending checking"
+          "Stained-glass skylight inside the hall",
+          "Sculpture of Catalan folk song on the corner is by Miquel Blay",
+          "Façade features busts of Bach, Beethoven and Wagner"
         ],
         "audio": "audio/palau-de-la-musica-catalana--art.m4a",
-        "audioHash": "6a007202ed"
+        "audioHash": "b64f995dbd"
+      },
+      "culture": {
+        "story": "Some of the most famous moments in this hall came from the audience, not the stage. In 1960, at a concert attended by ministers of Franco's government, people here stood and sang the Cant de la Senyera, a Catalan song that had been removed from the programme. It became a celebrated act of quiet defiance. That suits a building made for a choir, the Orfeó Català, so ordinary people could sing together. Look up at the corner sculpture honouring Catalan folk song. Concerts still fill this hall, and families live in the streets around you, so keep your voice gentle.",
+        "facts_to_verify": [
+          "Event took place in 1960",
+          "Ministers of Franco's government attended that concert",
+          "The audience sang the Cant de la Senyera",
+          "The song had been removed from the concert programme",
+          "The hall was built for the choir known as the Orfeó Català",
+          "Corner sculpture honours Catalan folk song"
+        ],
+        "audio": "audio/palau-de-la-musica-catalana--culture.m4a",
+        "audioHash": "475421134e"
       }
     },
     "base": {
@@ -301,29 +311,38 @@ window.WALKBCN_STORIES = {
   "santa-maria-del-mar": {
     "variants": {
       "history": {
-        "story": "Imagine a porter from this harbour, bent under a block of stone, walking all the way from the quarry on Montjuïc to the spot where you're standing. These men were the bastaixos, and they carried the stones for this church on their backs. Look at the main doors and find their small carved figures, still at work. Together with the neighbourhood's dock workers and fishermen, they raised it in just 54 years, which is why it's known as the cathedral of the people. It still belongs to El Born, a real, living neighbourhood, so enjoy it quietly.",
+        "story": "Imagine carrying a block of stone on your back, all the way from the quarry on Montjuïc hill, then doing it again, and again. That's what the bastaixos, the porters of Barcelona's port, did to build this church. Look at the main doors and you'll spot small figures of them, bent under their loads. Together with the fishermen and dock workers of this neighbourhood, they saw the whole basilica raised in just 54 years. In 1936, a fire burned inside for days, yet these walls still stand. Take a quiet moment here. People still live and pray in El Born.",
         "facts_to_verify": [
-          "The bastaixos (porters) carried the stones on their backs from the Montjuïc quarry",
-          "Small carved figures of the bastaixos appear on the main doors",
-          "Built by the neighbourhood's dock workers and fishermen",
-          "Construction took 54 years",
-          "Nickname 'the cathedral of the people'"
+          "Stone carried by the bastaixos from the quarry on Montjuïc",
+          "Small figures of the bastaixos on the main doors",
+          "Built in 54 years",
+          "Fire inside the church in 1936 that burned for days"
         ],
         "audio": "audio/santa-maria-del-mar--history.m4a",
-        "audioHash": "9c7f6ac318"
+        "audioHash": "d9167fd051"
       },
       "architecture": {
-        "story": "Before you go in, notice how plain and solid the outside looks, almost like a fortress. Hold onto that picture, because inside the effect flips. The columns are so slender, and set so far apart, that the whole space seems to float. This is Catalan Gothic, and its builders worked fast: the whole church went up in just 54 years, so it feels unusually unified, as if designed in one breath. Every stone came on porters' backs from Montjuïc. Look for their small carved figures on the main doors. Inside, speak softly. This is still the neighbourhood's church.",
+        "story": "Step back and look at the façade. It's almost bare, a tall, plain wall of stone with a great rose window at its heart. That restraint is classic Catalan Gothic. Now notice the two octagonal bell towers, with flat tops rather than spires. The real surprise waits inside, where the columns are so slender and spaced so widely that the whole space feels weightless. Because the church went up in just 54 years, its style is remarkably unified from first stone to last. Enjoy it calmly. This is a working parish in a lived-in neighbourhood.",
         "facts_to_verify": [
-          "Style described as Catalan Gothic",
-          "Exterior is plain and fortress-like",
-          "Columns are unusually slender and widely spaced",
-          "Construction took 54 years, giving a unified design",
-          "Stones carried by porters from Montjuïc",
-          "Small carved figures of the porters on the main doors"
+          "Rose window on the main façade",
+          "Two octagonal bell towers with flat tops",
+          "Catalan Gothic style",
+          "Built in 54 years, giving a unified style"
         ],
         "audio": "audio/santa-maria-del-mar--architecture.m4a",
-        "audioHash": "629dcee45a"
+        "audioHash": "3bd0b3793c"
+      },
+      "culture": {
+        "story": "If this church feels familiar, you may have met it in a book. Ildefonso Falcones's best-selling novel, Cathedral of the Sea, follows a young man in medieval Barcelona who becomes one of the bastaixos, the porters who carried stone for these very walls. Look at the main doors for small figures of those porters, bent under their loads. The novel was later adapted for television, sending new readers and viewers here to see the real thing. Read a chapter nearby if you like, but remember that neighbours live on these streets, so keep your voice low.",
+        "facts_to_verify": [
+          "Author Ildefonso Falcones",
+          "Novel title 'Cathedral of the Sea' (La catedral del mar) and its best-seller status",
+          "Protagonist becomes a bastaix in the novel",
+          "Television adaptation of the novel",
+          "Small figures of the bastaixos on the main doors"
+        ],
+        "audio": "audio/santa-maria-del-mar--culture.m4a",
+        "audioHash": "68f1bf36e4"
       }
     },
     "base": {
@@ -647,15 +666,25 @@ window.WALKBCN_STORIES = {
   "placa-sant-felip-neri": {
     "variants": {
       "history": {
-        "story": "Look closely at the church façade in front of you. Those deep holes in the stone are not wear and tear. In January 1938, during the Spanish Civil War, bombs fell on this little square and killed dozens of people, many of them children. Barcelona was a city under attack from the air, and this quiet corner felt it directly. Afterwards, the damage was deliberately left unrepaired. Let your eyes travel across the pitted wall. It is a memorial written in stone, in a neighbourhood where people still live, work and remember.",
+        "story": "Look at the church wall in front of you. Those pits and gouges in the stone are not weathering. In January 1938, during the Spanish Civil War, bombs fell on this small square, and dozens of people were killed, many of them children. The damage could have been patched over, but it was deliberately left as it is, so that no one forgets. Those scars are a memorial written by war itself. Pause here for a quiet moment; this is still a real neighbourhood where people live and work.",
         "facts_to_verify": [
-          "The bombing of Plaça de Sant Felip Neri took place in January 1938",
-          "The raid occurred during the Spanish Civil War",
-          "Dozens of people were killed, many of them children",
-          "The holes in the church façade were left unrepaired on purpose as a reminder"
+          "Bombing date: January 1938",
+          "Death toll: dozens killed, many of them children",
+          "The damage was deliberately left unrepaired as a memorial"
         ],
         "audio": "audio/placa-sant-felip-neri--history.m4a",
-        "audioHash": "3a7b37a65b"
+        "audioHash": "66f7408dbf"
+      },
+      "culture": {
+        "story": "Notice how this square feels almost like a stage set: enclosed, hushed, with the scarred church façade as its backdrop. Filmmakers have noticed too. Scenes of the film Perfume: The Story of a Murderer were shot in Barcelona's old town, and this square is often named among its locations. But the marks on that wall are real, not props. They come from a bombing in January 1938, during the Spanish Civil War, that killed dozens, many of them children. Kept on purpose, they turn this quiet corner into a memorial. Remember it's a living neighbourhood, so take it in quietly.",
+        "facts_to_verify": [
+          "Plaça de Sant Felip Neri was a filming location for 'Perfume: The Story of a Murderer' (2006)",
+          "Bombing date: January 1938",
+          "Death toll: dozens killed, many of them children",
+          "The marks were deliberately left as a memorial"
+        ],
+        "audio": "audio/placa-sant-felip-neri--culture.m4a",
+        "audioHash": "5f97bcc603"
       }
     },
     "base": {
@@ -687,26 +716,35 @@ window.WALKBCN_STORIES = {
   "placa-sant-jaume": {
     "variants": {
       "history": {
-        "story": "Picture this square two thousand years ago: the Roman forum of Barcino stood right here. Now turn slowly. On one side is the Palau de la Generalitat, home of the Catalan government. Facing it is Barcelona's City Hall. Two governments, eye to eye across one square. For centuries, this has been where the city gathers at its big moments, to celebrate and to protest, standing between those two façades. It's a living neighbourhood too, so as you wander the lanes nearby, keep your voice low.",
+        "story": "Stand in the middle and picture stone columns around you. This spot was already the heart of the city in Roman times, when the forum stood here. Two thousand years later, power still lives here. Look to one side at the Palau de la Generalitat, home of the Catalan government, then turn to face Barcelona's City Hall directly opposite. Two governments, eye to eye across one square. Many of the city's turning points have played out between these façades, with crowds gathering to celebrate or protest. People still work inside these buildings, so keep your voice gentle.",
         "facts_to_verify": [
-          "The Roman forum of Barcino stood on the site of Plaça de Sant Jaume",
-          "Roman Barcino dates back roughly two thousand years",
+          "The Roman forum of Barcelona stood on the site of Plaça de Sant Jaume",
+          "Roughly two thousand years separate the Roman forum from today",
           "The Palau de la Generalitat houses the Catalan government",
-          "Barcelona's City Hall faces the Palau de la Generalitat across the square"
+          "Barcelona City Hall stands directly opposite the Palau de la Generalitat"
         ],
         "audio": "audio/placa-sant-jaume--history.m4a",
-        "audioHash": "6582bf029f"
+        "audioHash": "e17cc3724d"
       },
       "local": {
-        "story": "Imagine people standing on each other's shoulders, layer upon layer, right where you are. On festival days, teams of castellers build human towers here while the crowd watches below. Now look at the two buildings facing each other: the Palau de la Generalitat, home of the Catalan government, and Barcelona's City Hall opposite. Between them, locals gather to celebrate and to protest. On an ordinary afternoon, it's a crossing point for neighbours going about their day. If there's a crowd, watch from the edges and leave room for those taking part. This is their square.",
+        "story": "Notice who's crossing the square right now. Some are visitors, but many are locals: people heading into City Hall, office workers on a break, neighbours cutting through the Gothic Quarter on their way home. For Barcelonans, this is something like the city's living room. When there's something to celebrate or something to protest, this is where people come together. On festival days, human towers rise right here. If you find yourself in the middle of a gathering, enjoy it from the edges and leave room for the people who live here. This is a real neighbourhood, after all.",
         "facts_to_verify": [
-          "Human towers (castells) are built in Plaça de Sant Jaume on festival days",
-          "The Palau de la Generalitat houses the Catalan government",
-          "Barcelona's City Hall faces the Palau de la Generalitat across the square",
-          "The square is used for celebrations and protests"
+          "Plaça de Sant Jaume is a traditional gathering place for celebrations and protests",
+          "Human towers are built in the square on festival days"
         ],
         "audio": "audio/placa-sant-jaume--local.m4a",
-        "audioHash": "249ace7d58"
+        "audioHash": "23febaa5c7"
+      },
+      "sports": {
+        "story": "Look up at the balconies around you. When FC Barcelona wins a major title, the players have traditionally come here to show off their trophies, and the square fills with fans in blue and red. Glance from the Palau de la Generalitat to City Hall opposite, because the team is usually welcomed at both. On festival days you'll see another kind of teamwork: castellers building human towers on each other's shoulders while the crowd holds its breath. The rest of the time, this is a calm, working square in a lived-in neighbourhood, so save the chanting for game day.",
+        "facts_to_verify": [
+          "FC Barcelona traditionally presents trophies from balconies on Plaça de Sant Jaume after winning major titles",
+          "The team is usually received at both the Palau de la Generalitat and City Hall",
+          "FC Barcelona's colours are blue and red",
+          "Castellers build human towers in the square on festival days"
+        ],
+        "audio": "audio/placa-sant-jaume--sports.m4a",
+        "audioHash": "cd846bc65a"
       }
     },
     "base": {
@@ -1365,84 +1403,375 @@ window.WALKBCN_STORIES = {
     }
   },
   "font-canaletes": {
-    "variants": {},
+    "variants": {
+      "sports": {
+        "story": "Look at the slender iron fountain in front of you. On a quiet afternoon it seems almost too modest for its fame, yet this is the place Barça fans claim as their own. For decades, after every big win, supporters have streamed up to this very spot at the top of the Rambla, singing and waving flags late into the night. Picture the whole street around you washed in blue and red, scarves held high, voices echoing under the trees. Tonight it may be calm, but this fountain is always waiting for the next title.",
+        "facts_to_verify": [
+          "Barça fans have gathered at Font de Canaletes for decades to celebrate big wins",
+          "The fountain is at the top of La Rambla"
+        ],
+        "audio": "audio/font-canaletes--sports.m4a",
+        "audioHash": "1ff35139d2"
+      },
+      "local": {
+        "story": "Stand back for a moment and watch who comes to this iron fountain. Often it isn't a visitor at all, but a neighbour filling a bottle on the way home. People here say that anyone who drinks from it will always come back to Barcelona, so a sip becomes a small, quiet ritual. Notice how people pause, drink and move on without fuss. The windows above the Rambla belong to real homes. If you'd like a taste, wait your turn, take your sip, and leave room for the next person.",
+        "facts_to_verify": [
+          "Local legend: drinking from the fountain means you will return to Barcelona",
+          "Neighbours use the fountain to fill water bottles"
+        ],
+        "audio": "audio/font-canaletes--local.m4a",
+        "audioHash": "e66c56c7ab"
+      },
+      "history": {
+        "story": "Notice the iron fountain here at the top of the Rambla. It has quietly gathered two kinds of memory. One is a legend, still told today: drink from it and you will always return to Barcelona. The other grew over decades, as football supporters made this exact spot their meeting place for every big Barça victory. So a simple street fountain became a landmark where private wishes and shared celebrations meet. Look around you: generations of locals and travellers have stood just where you are standing now, making their own small promise to return.",
+        "facts_to_verify": [
+          "The fountain is made of iron and stands at the top of La Rambla",
+          "Legend that drinking from it ensures a return to Barcelona",
+          "Barça fans have used the spot for victory celebrations for decades"
+        ],
+        "audio": "audio/font-canaletes--history.m4a",
+        "audioHash": "fad7790972"
+      }
+    },
     "base": {
       "audio": "audio/font-canaletes.m4a",
       "audioHash": "89534d2ed6"
     }
   },
   "gimnas-sole": {
-    "variants": {},
+    "variants": {
+      "sports": {
+        "story": "Every trophy, every chant, every celebration of FC Barcelona leads back to a small gym on this narrow street. Look for the plaque that marks the spot. A Swiss football enthusiast, Joan Gamper, had placed an advert in a sports newspaper looking for players. On 29 November 1899, he and a group of fellow fans met here, at the Gimnàs Solé, and that evening they founded the club. It's a humble starting line for one of the most famous clubs in the world, tucked into a Raval street where people still live today.",
+        "facts_to_verify": [
+          "FC Barcelona was founded at the Gimnàs Solé, a gymnasium on this street",
+          "The founding meeting took place on the evening of 29 November 1899",
+          "Joan Gamper was Swiss",
+          "Gamper placed an advert in a sports newspaper looking for players",
+          "A plaque on the street commemorates the founding"
+        ],
+        "audio": "audio/gimnas-sole--sports.m4a",
+        "audioHash": "170087b1ce"
+      },
+      "history": {
+        "story": "Notice how ordinary this street looks. Yet on the evening of 29 November 1899, a small group gathered in a gymnasium here, the Gimnàs Solé. Their leader was Joan Gamper, a Swiss football enthusiast, who had placed an advert in a sports newspaper asking for players. The people who met that evening founded FC Barcelona. Find the plaque that remembers them. History doesn't always happen in palaces or grand squares. Sometimes it starts in a modest gym in the Raval, a neighbourhood where everyday life carries on all around you.",
+        "facts_to_verify": [
+          "The Gimnàs Solé was a gymnasium on this street",
+          "The founding meeting took place on the evening of 29 November 1899",
+          "Joan Gamper was Swiss and led the group",
+          "Gamper placed an advert in a sports newspaper asking for players",
+          "A plaque on the street commemorates the founding of FC Barcelona"
+        ],
+        "audio": "audio/gimnas-sole--history.m4a",
+        "audioHash": "d6a857bfce"
+      }
+    },
     "base": {
       "audio": "audio/gimnas-sole.m4a",
       "audioHash": "af2c0864c3"
     }
   },
   "nou-sardenya": {
-    "variants": {},
+    "variants": {
+      "sports": {
+        "story": "Here's a surprise: Barcelona has another historic football club, and you're standing at its home. CE Europa was founded in Gràcia in 1907, and in 1929 it played in Spain's very first national league, sharing that stage with the biggest clubs in the country. Now look at the stadium itself. It's small, tucked tightly between apartment blocks, nothing like the giant arenas you might expect. That's the charm. Football here feels close and personal, and the fans are loyal and passionate, carrying more than a century of history on their shoulders.",
+        "facts_to_verify": [
+          "CE Europa was founded in 1907 in Gràcia",
+          "CE Europa played in Spain's first national league in 1929, alongside the country's biggest clubs",
+          "Nou Sardenya is CE Europa's home stadium"
+        ],
+        "audio": "audio/nou-sardenya--sports.m4a",
+        "audioHash": "6ba0e5944b"
+      },
+      "local": {
+        "story": "Look up at the balconies on the apartment blocks around you. From some of them, neighbours can almost watch the matches, because this small stadium is squeezed right in among their homes. This is Nou Sardenya, home of CE Europa, a club founded here in Gràcia in 1907. For many locals, Europa isn't just a team. It's part of the neighbourhood's identity, followed by loyal, passionate fans. Remember that people live, sleep and work all around this ground, so keep your voice low as you wander these streets, just as a good neighbour would.",
+        "facts_to_verify": [
+          "Nou Sardenya is CE Europa's home stadium",
+          "CE Europa was founded in 1907 in Gràcia",
+          "Neighbours can almost watch matches from their balconies"
+        ],
+        "audio": "audio/nou-sardenya--local.m4a",
+        "audioHash": "1c0a7726ab"
+      }
+    },
     "base": {
       "audio": "audio/nou-sardenya.m4a",
       "audioHash": "6f896e9d57"
     }
   },
   "club-natacio": {
-    "variants": {},
+    "variants": {
+      "sports": {
+        "story": "Imagine plunging into the port on Christmas Day while crowds cheer from the quay. That's the Copa Nadal, a winter swim this club has organised every Christmas Day since its early years. Look at the club right here on the edge of Barceloneta beach. Founded in 1907, it's one of the oldest swimming clubs in Spain, and generations of swimmers and water polo players have trained here, in a sport Barcelona has always excelled at. Barceloneta is a real neighbourhood where locals still swim and train, so enjoy the view quietly and give them room.",
+        "facts_to_verify": [
+          "Club Natació Barcelona was founded in 1907",
+          "It is one of the oldest swimming clubs in Spain",
+          "The Copa Nadal has been held every Christmas Day since the club's early years",
+          "The Copa Nadal swim takes place in the port, with spectators on the quay",
+          "The club has produced generations of swimmers and water polo players"
+        ],
+        "audio": "audio/club-natacio--sports.m4a",
+        "audioHash": "640d4af9f3"
+      },
+      "outdoors": {
+        "story": "Look out at the sea in front of you and imagine it in midwinter. Every Christmas Day, swimmers from this club leap into the chilly water of the port while people cheer from the quay, a tradition called the Copa Nadal. Today you can simply enjoy the sea from dry land. Notice how the light plays on the waves, feel the breeze, and listen to the water. The club, founded in 1907, sits right on Barceloneta beach, in a neighbourhood where people live, so keep voices soft and find a calm spot to pause.",
+        "facts_to_verify": [
+          "Club Natació Barcelona was founded in 1907",
+          "The Copa Nadal is held every Christmas Day in the port",
+          "Spectators watch the Copa Nadal from the quay",
+          "The club is located on Barceloneta beach"
+        ],
+        "audio": "audio/club-natacio--outdoors.m4a",
+        "audioHash": "96b7a35ab7"
+      }
+    },
     "base": {
       "audio": "audio/club-natacio.m4a",
       "audioHash": "d4da755db0"
     }
   },
   "port-olimpic": {
-    "variants": {},
+    "variants": {
+      "sports": {
+        "story": "Imagine this harbour in the summer of 1992, filled with racing sailboats. This port was built as the base for the Olympic sailing events, and the streets behind you were the Olympic Village, where athletes from around the world lived during the Games. Look out at the moorings and picture the crews preparing to head out to sea. Then look up at Frank Gehry's giant golden fish, glinting above the waterfront. Today the athletes are long gone and this is a real neighbourhood, so enjoy the scene quietly as residents go about their day.",
+        "facts_to_verify": [
+          "Barcelona hosted the Olympic Games in 1992",
+          "Port Olímpic was the base for the 1992 Olympic sailing events",
+          "The surrounding area was the Olympic Village where athletes lived",
+          "The golden fish sculpture is by Frank Gehry"
+        ],
+        "audio": "audio/port-olimpic--sports.m4a",
+        "audioHash": "4598b89968"
+      },
+      "outdoors": {
+        "story": "Notice how the light bounces off the water here, and then catches Frank Gehry's giant golden fish, shining in the sun above the beach. It's hard to believe this open seafront was once hidden behind old factories and railway lines. They were cleared for the 1992 Olympic Games, and the city gained a way down to the sea. Find a spot to pause, feel the breeze, and watch the boats bob in the port. Look up at the two towers rising over the sand. Remember that people live just behind you, so keep things calm and relaxed.",
+        "facts_to_verify": [
+          "The golden fish sculpture is by Frank Gehry",
+          "Factories and railway lines were cleared from the seafront for the 1992 Olympic Games",
+          "Two towers are visible rising over the beach from this stop"
+        ],
+        "audio": "audio/port-olimpic--outdoors.m4a",
+        "audioHash": "4961bcaf10"
+      },
+      "history": {
+        "story": "Stand here and picture a very different scene: old factories and railway lines cutting the city off from its own shore. All of that was cleared away for the 1992 Olympic Games. In its place came the Olympic Village, built to house the athletes, and this port, base for the sailing events. Look up at the two towers rising over the beach, and at Frank Gehry's golden fish shining in the sun. The Games were a turning point: Barcelona opened itself to the sea. Once the athletes left, the village became a real neighbourhood, and people still live here today.",
+        "facts_to_verify": [
+          "Factories and railway lines previously occupied the area and separated the city from the shore",
+          "The area was redeveloped for the 1992 Olympic Games",
+          "The Olympic Village housed the athletes",
+          "Port Olímpic was the base for the Olympic sailing events",
+          "The golden fish sculpture is by Frank Gehry",
+          "The Olympic Village became a residential neighbourhood after the Games"
+        ],
+        "audio": "audio/port-olimpic--history.m4a",
+        "audioHash": "741f1c4f46"
+      }
+    },
     "base": {
       "audio": "audio/port-olimpic.m4a",
       "audioHash": "b7664b1746"
     }
   },
   "liceu": {
-    "variants": {},
+    "variants": {
+      "culture": {
+        "story": "Stand back and look at this rather plain façade on the Rambla. Would you guess that behind it lies one of Europe's great opera houses? Since 1847 this stage has belonged to singers, and Barcelona has given it some of its brightest stars, including Montserrat Caballé and Josep Carreras, both born in this city. Picture the red and gold auditorium on a performance night, the hush before the overture. Opera here isn't only for visitors. Locals have filled these seats for generations, so as you linger, leave room on the pavement for neighbours passing by.",
+        "facts_to_verify": [
+          "The Liceu opened in 1847",
+          "Montserrat Caballé and Josep Carreras are closely associated with the Liceu",
+          "Montserrat Caballé and Josep Carreras were both born in Barcelona",
+          "The auditorium is decorated in red and gold"
+        ],
+        "audio": "audio/liceu--culture.m4a",
+        "audioHash": "076d24ef71"
+      },
+      "history": {
+        "story": "This quiet doorway has survived more drama than most of the operas sung inside. The Liceu opened in 1847, and just fourteen years later, in 1861, fire gutted it. In 1893 came something darker: an anarchist threw bombs into the audience during a performance. Then, in 1994, flames destroyed the theatre again. This time the whole city rallied to rebuild, and in 1999 the curtain rose once more. Look at the façade in front of you and imagine all it has outlasted, right here on the Rambla, in a neighbourhood people still call home.",
+        "facts_to_verify": [
+          "Opened in 1847",
+          "Burned down in 1861",
+          "In 1893 an anarchist threw bombs into the audience during a performance",
+          "Destroyed by fire again in 1994",
+          "The city collectively supported the rebuilding",
+          "Reopened in 1999"
+        ],
+        "audio": "audio/liceu--history.m4a",
+        "audioHash": "8966e47418"
+      },
+      "architecture": {
+        "story": "Here's the trick of this building: from the Rambla it barely announces itself. The façade in front of you is modest, slipped into the line of the street, yet behind it opens one of Europe's great opera houses, a red and gold auditorium curving in a classic horseshoe of tiers. After fire destroyed the theatre in 1994, Barcelona chose to rebuild it, recreating the historic hall while giving it modern stage technology. It reopened in 1999. So take a moment at the doorway, step aside for neighbours on the pavement, and picture that glowing interior hidden just steps away.",
+        "facts_to_verify": [
+          "The auditorium is a horseshoe shape with tiers",
+          "The auditorium is decorated in red and gold",
+          "Destroyed by fire in 1994",
+          "The rebuild recreated the historic auditorium while adding modern stage technology",
+          "Reopened in 1999"
+        ],
+        "audio": "audio/liceu--architecture.m4a",
+        "audioHash": "a214e4f0c3"
+      }
+    },
     "base": {
       "audio": "audio/liceu.m4a",
       "audioHash": "04037b8c8e"
     }
   },
   "teatre-romea": {
-    "variants": {},
+    "variants": {
+      "culture": {
+        "story": "Stand here on Carrer de l'Hospital and look at the entrance of the Teatre Romea. Behind these doors, plays have been performed since 1863, and for much of that time this was the home of theatre in Catalan. Picture the generations of Catalan actors and playwrights who stepped into the lights on this stage and made their names. Now glance at the posters by the door. The Romea still presents modern productions, mostly in Catalan, for a local audience. Come back for a show and you'll share the seats with Raval neighbours on their night out.",
+        "facts_to_verify": [
+          "The theatre has staged plays since 1863",
+          "It is on Carrer de l'Hospital",
+          "For much of its history it was the home of theatre in Catalan",
+          "Generations of Catalan actors and playwrights made their names here",
+          "It presents modern productions, mostly in Catalan, for a local audience",
+          "Posters are displayed by the entrance"
+        ],
+        "audio": "audio/teatre-romea--culture.m4a",
+        "audioHash": "58b8f9780a"
+      },
+      "history": {
+        "story": "Notice how modestly this theatre sits along Carrer de l'Hospital, part of the everyday street front of El Raval. Yet this building helped carry a language through difficult times. The Teatre Romea has been staging plays since 1863, and for much of its long life it was the home of theatre in Catalan. Even in years when Catalan was pushed out of public life, generations of actors and playwrights kept it alive on this stage. Take a quiet moment to look at the facade. This is a lived-in neighbourhood, so please keep your voice low as you move on.",
+        "facts_to_verify": [
+          "The theatre has staged plays since 1863",
+          "It is on Carrer de l'Hospital in El Raval",
+          "For much of its history it was the home of theatre in Catalan",
+          "Catalan theatre continued here in years when the language was pushed out of public life",
+          "Generations of Catalan actors and playwrights worked on this stage"
+        ],
+        "audio": "audio/teatre-romea--history.m4a",
+        "audioHash": "dd07bbc79e"
+      }
+    },
     "base": {
       "audio": "audio/teatre-romea.m4a",
       "audioHash": "e357dcbf18"
     }
   },
   "el-molino": {
-    "variants": {},
+    "variants": {
+      "culture": {
+        "story": "Look up at the windmill on the façade. It's a nod to the Moulin Rouge in Paris, and it marks El Molino, Barcelona's most famous cabaret. Imagine what this stage has seen: singers, comedians and dancers trading cheeky songs and quick jokes with a packed room. All along the Avinguda del Paral·lel, once called the city's Broadway, theatres and music halls competed for audiences every night. Most of them went dark, but El Molino kept performing, and it still puts on shows today. Glance down the avenue and you'll spot other stages carrying the tradition on.",
+        "facts_to_verify": [
+          "El Molino is Barcelona's most famous cabaret",
+          "The windmill design was inspired by the Moulin Rouge in Paris",
+          "The Avinguda del Paral·lel was known as Barcelona's Broadway",
+          "Other theatres are still operating along the Paral·lel today"
+        ],
+        "audio": "audio/el-molino--culture.m4a",
+        "audioHash": "e73170a1c3"
+      },
+      "local": {
+        "story": "Notice the windmill above you, and then notice the people around you. This is Poble-sec, a real neighbourhood where families have lived for generations, right beside Barcelona's most famous cabaret. A century ago, workers came to the Paral·lel after a hard week to laugh and sing. Today neighbours still meet friends in the side streets for an evening drink or a few tapas. If you'd like to join them, wander a block into the quieter streets, find a seat at a terrace, and enjoy it the local way: unhurried, friendly, and never in a rush.",
+        "facts_to_verify": [
+          "El Molino is Barcelona's most famous cabaret",
+          "Workers historically came to the Paral·lel for entertainment after the working week",
+          "Poble-sec side streets have bars and terraces popular with residents"
+        ],
+        "audio": "audio/el-molino--local.m4a",
+        "audioHash": "8e1fe8b340"
+      },
+      "history": {
+        "story": "Stand back and look at that windmill. It has watched over the Paral·lel for more than a century. El Molino opened in the early twentieth century, borrowing its look from the Moulin Rouge in Paris. Back then this avenue was Barcelona's Broadway, crowded with theatres, music halls and cafés. Their audiences were mostly working people, who came to laugh, sing and forget a hard week. As the decades passed, nearly all those halls closed. El Molino is one of the great survivors, still staging shows today, a living piece of the avenue's past.",
+        "facts_to_verify": [
+          "El Molino opened in the early 20th century (more than a century ago)",
+          "Its design was inspired by the Moulin Rouge in Paris",
+          "The Paral·lel was known as Barcelona's Broadway",
+          "Most of the Paral·lel's original theatres and music halls have closed",
+          "El Molino still puts on shows today"
+        ],
+        "audio": "audio/el-molino--history.m4a",
+        "audioHash": "3376cad6c1"
+      }
+    },
     "base": {
       "audio": "audio/el-molino.m4a",
       "audioHash": "bba362a98b"
     }
   },
   "filmoteca": {
-    "variants": {},
+    "variants": {
+      "culture": {
+        "story": "Look up at this slab of bare concrete. Behind those walls, decades of Catalan cinema are carefully looked after in Catalonia's film archive. Since the building opened in 2012, its cinemas have shown classics, retrospectives and rare films every single day. Imagine all those stories flickering in the dark, just metres from where you stand. The Filmoteca arrived here as part of a plan to bring culture and new life to one of Barcelona's oldest neighbourhoods. The Raval is still home to many people, so linger gently and keep your voice low.",
+        "facts_to_verify": [
+          "The building opened in 2012",
+          "It houses Catalonia's film archive, which preserves decades of Catalan cinema",
+          "Its cinemas screen classics, retrospectives and rare films every day",
+          "It was built in the Raval as part of a plan to bring culture and new life to the neighbourhood"
+        ],
+        "audio": "audio/filmoteca--culture.m4a",
+        "audioHash": "da28d425b5"
+      }
+    },
     "base": {
       "audio": "audio/filmoteca.m4a",
       "audioHash": "cf5de07d13"
     }
   },
   "placa-orwell": {
-    "variants": {},
+    "variants": {
+      "culture": {
+        "story": "Look for the name sign on the corner wall: this square honours a writer who arrived in Barcelona as a volunteer, not a tourist. George Orwell came in 1936 to fight for the Republic, and turned what he saw into Homage to Catalonia. In its pages he describes a city where waiters refused tips and strangers called each other comrade. Notice the terraces around you and imagine reading those lines here. It's a fine place to open the book, quietly, among the neighbours who call these narrow streets home.",
+        "facts_to_verify": [
+          "A street-name sign reading Plaça de George Orwell is visible on a corner wall of the square",
+          "George Orwell came to Barcelona in 1936 to fight for the Republic",
+          "Homage to Catalonia describes waiters refusing tips in revolutionary Barcelona",
+          "Homage to Catalonia describes people addressing each other as 'comrade'"
+        ],
+        "audio": "audio/placa-orwell--culture.m4a",
+        "audioHash": "f007876b1c"
+      },
+      "history": {
+        "story": "Notice how calm these terraces feel, then picture the same Gothic Quarter streets blocked by barricades. In 1936 George Orwell, the English writer, arrived in Barcelona to fight for the Republic in the Spanish Civil War. He joined a militia, went to the front, and came back to a city sliding into street fighting between factions on the same side. He told it all in Homage to Catalonia. Look at the name sign on the wall: that's a city remembering him. Today it's simply a neighbourhood square, where people live and meet.",
+        "facts_to_verify": [
+          "George Orwell arrived in Barcelona in 1936 to fight for the Republic in the Spanish Civil War",
+          "Orwell joined a militia (the POUM militia) and served at the front",
+          "On returning to Barcelona, Orwell witnessed street fighting between Republican factions (the May Days of 1937)",
+          "Barricades went up in the Gothic Quarter streets during that fighting",
+          "A street-name sign for the square is visible on a wall from the stop"
+        ],
+        "audio": "audio/placa-orwell--history.m4a",
+        "audioHash": "3a78c6f7f4"
+      }
+    },
     "base": {
       "audio": "audio/placa-orwell.m4a",
       "audioHash": "ca01977aaa"
     }
   },
   "arc-teatre": {
-    "variants": {},
+    "variants": {
+      "culture": {
+        "story": "Look up at the arch above you, framing a narrow lane like a stage curtain drawn back. For readers of one of the best-selling Spanish novels ever, this lane holds a secret. In The Shadow of the Wind, Carlos Ruiz Zafón has a young boy led through these streets to the Cemetery of Forgotten Books, a secret library hidden behind a door in this very passage. It never existed, yet readers worldwide come to imagine it. Notice the doorways: real homes in a real neighbourhood, where the mystery lives only on the page.",
+        "facts_to_verify": [
+          "The Shadow of the Wind is by Carlos Ruiz Zafón",
+          "The Shadow of the Wind is one of the best-selling Spanish novels ever",
+          "In the novel, a young boy is led through these streets to the Cemetery of Forgotten Books",
+          "In the novel, the library is hidden behind a door in the Arc del Teatre passage"
+        ],
+        "audio": "audio/arc-teatre--culture.m4a",
+        "audioHash": "3b80e90b60"
+      }
+    },
     "base": {
       "audio": "audio/arc-teatre.m4a",
       "audioHash": "514be0780e"
     }
   },
   "la-central": {
-    "variants": {},
+    "variants": {
+      "culture": {
+        "story": "Imagine walking into a chapel and finding the altar replaced by stacks of novels. That's what's happened here on Carrer d'Elisabets. Peek through the doorway and look up: the old stone vaults still arch overhead, but beneath them sit tables of fiction, art books and essays. Readers in Barcelona count this among their favourite independent bookshops, a spot where people linger over a page before deciding. It's a small story the Raval tells again and again, old religious buildings reborn as places of culture. Remember, this is a living neighbourhood, and the shop is part of its everyday life.",
+        "facts_to_verify": [
+          "The bookshop occupies a former chapel",
+          "The shop is located on Carrer d'Elisabets",
+          "The original stone vaults are still visible inside",
+          "La Central del Raval is an independent bookshop"
+        ],
+        "audio": "audio/la-central--culture.m4a",
+        "audioHash": "ab1259d5ab"
+      }
+    },
     "base": {
       "audio": "audio/la-central.m4a",
       "audioHash": "1739f91d06"
