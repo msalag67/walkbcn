@@ -3,9 +3,10 @@
 // that are not used as examples in the prompt, compares each verdict with our own
 // (evals/judge/cases.json) and counts failures caught and passes agreed separately.
 //
-// Usage:  node scripts/judge.mjs --version=1
-// Needs:  ANTHROPIC_API_KEY  (12 API calls, a few cents)
-// Saves:  evals/judge/round-<version>.json
+// Usage:  node scripts/judge.mjs --version=1              check the judge on the Class 8 answers
+//         node scripts/judge.mjs --version=3 --today      measure today's app: % of answers it passes
+// Needs:  ANTHROPIC_API_KEY  (12 to 15 API calls, a few cents)
+// Saves:  evals/judge/round-<version>.json  or  evals/judge/today-v<version>.json
 
 import fs from "node:fs";
 import path from "node:path";
@@ -21,6 +22,7 @@ if (!process.env.ANTHROPIC_API_KEY) {
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIR = path.join(ROOT, "evals/judge");
 const version = Number(process.argv.find((a) => a.startsWith("--version="))?.split("=")[1] || 1);
+const TODAY = process.argv.includes("--today");
 
 // The prompt template for this version: the ```text block under "## Version N".
 const md = fs.readFileSync(path.join(DIR, "judgeprompt.md"), "utf8");
@@ -28,9 +30,9 @@ const section = md.split(/^## /m).find((s) => s.startsWith(`Version ${version}\n
 if (!section) { console.error(`No "## Version ${version}" in judgeprompt.md`); process.exit(1); }
 const template = section.match(/```text\n([\s\S]*?)```/)[1];
 
-const { cases } = JSON.parse(fs.readFileSync(path.join(DIR, "cases.json"), "utf8"));
-// Cases already shown to the judge as examples do not count.
-const inPrompt = new Set(cases.filter((c) => template.includes(c.answer.slice(0, 120))).map((c) => c.id));
+const { cases } = JSON.parse(fs.readFileSync(path.join(DIR, TODAY ? "cases-today.json" : "cases.json"), "utf8"));
+// Class 8 answers already shown to the judge as examples do not count. Today's answers are all new.
+const inPrompt = new Set(TODAY ? [] : cases.filter((c) => template.includes(c.answer.slice(0, 120))).map((c) => c.id));
 const todo = cases.filter((c) => !inPrompt.has(c.id));
 
 // Code checks that never go to the judge.
@@ -54,8 +56,18 @@ for (const c of todo) {
   const judge = ["PASS", "FAIL", "UNKNOWN"].includes(last) ? last : "UNKNOWN";
   const code = codeCheck(c);
   const system = code ? "FAIL" : judge;
-  results.push({ id: c.id, type: c.type, model: res.model, ours: c.verdict, judge, code, system, reason: text.split("\n").slice(0, -1).join(" ").trim() });
-  console.log(`ours ${c.verdict} · judge ${judge}${code ? ` · code FAIL (${code})` : ""}`);
+  results.push({ id: c.id, type: c.type, model: res.model, ours: c.verdict ?? null, judge, code, system, reason: text.split("\n").slice(0, -1).join(" ").trim() });
+  console.log(`${c.verdict ? `ours ${c.verdict} · ` : ""}judge ${judge}${code ? ` · code FAIL (${code})` : ""}`);
+}
+
+if (TODAY) {
+  const passed = results.filter((r) => r.system === "PASS").length;
+  const out = { version, model: MODEL, ranAt: new Date().toISOString(), answers: results.length, passed, percent: Math.round((passed / results.length) * 100), results };
+  fs.writeFileSync(path.join(DIR, `today-v${version}.json`), JSON.stringify(out, null, 2) + "\n");
+  console.log(`\nToday's app: the judge (with the code checks) passes ${passed} of ${results.length} answers = ${out.percent}%`);
+  for (const r of results.filter((r) => r.system !== "PASS")) console.log(`\n✗ Case ${r.id} (judge ${r.judge}${r.code ? `, code: ${r.code}` : ""}): ${r.reason}`);
+  console.log(`\nSaved evals/judge/today-v${version}.json`);
+  process.exit(0);
 }
 
 const count = (key) => {
