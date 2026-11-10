@@ -56,7 +56,7 @@ for (const c of todo) {
   const judge = ["PASS", "FAIL", "UNKNOWN"].includes(last) ? last : "UNKNOWN";
   const code = codeCheck(c);
   const system = code ? "FAIL" : judge;
-  results.push({ id: c.id, type: c.type, model: res.model, ours: c.verdict ?? null, judge, code, system, reason: text.split("\n").slice(0, -1).join(" ").trim() });
+  results.push({ id: c.id, type: c.type, model: res.model, ours: c.verdict ?? null, judge, code, system, reason: text.split("\n").slice(0, -1).join(" ").trim(), raw: text });
   console.log(`${c.verdict ? `ours ${c.verdict} · ` : ""}judge ${judge}${code ? ` · code FAIL (${code})` : ""}`);
 }
 
