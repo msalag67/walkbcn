@@ -521,7 +521,11 @@
   .tabs { border-bottom: 0; gap: 8px; }
   .tabs button { padding: 10px 16px; border-radius: var(--r-pill); }
   .tabs button::after { left: 16px; right: 16px; bottom: 4px; height: 4px; border-radius: 4px; }
-  .tabs button[aria-selected="true"] { background: rgba(255,255,255,.75); }
+  /* No box around the tabs: only the underline. It appears while hovering (or keyboard
+     focus) and stays only under the tab you are on. */
+  .tabs button, .tabs button[aria-selected="true"] { background: none; box-shadow: none; }
+  .tabs button:hover::after, .tabs button:focus-visible::after { transform: scaleX(1); }
+  .tabs button:focus-visible { outline-offset: 0; }
   .tabs button { white-space: nowrap; }
   @media (max-width: 480px) { .tabs { gap: 2px; } .tabs button { padding: 9px 12px; font-size: 15px; } .tabs button::after { left: 12px; right: 12px; } }
 
