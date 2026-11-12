@@ -327,6 +327,84 @@
     }
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+  /* ===== Park Güell palette: sun yellow, sand, mist, sky blue, cobalt ===== */
+  :root {
+    --sun: #f5c000;
+    --sand: #d4b872;
+    --mist: #cdd8dd;
+    --sky: #6faed3;
+    --cobalt: #0026b8;
+    --navy: #0a1a5e;
+
+    --bg: #f2f5f7;
+    --panel: #ffffff;
+    --panel-2: #e6edf1;
+    --ink: var(--navy);
+    --muted: #4f6274;
+    --line: var(--mist);
+    --accent: var(--cobalt);
+    --accent-ink: #fff;
+    --accent-soft: rgba(0,38,184,.09);
+    --paper: var(--sun);
+    --paper-ink: var(--navy);
+  }
+  /* Mediterranean sky at the top, panot tiles drawn in faint cobalt */
+  body {
+    --petal: rgba(0,38,184,.055);
+    background-image:
+      linear-gradient(180deg, rgba(111,174,211,.42) 0, rgba(205,216,221,.25) 420px, transparent 900px),
+      radial-gradient(circle at 50% 50%, var(--petal) 0 2.5px, transparent 3px),
+      radial-gradient(circle at 0 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 100% 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 0 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 100% 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px);
+  }
+  .hero img, .tile img, .stop-photo, ol.stops .thumb { background-color: var(--mist); }
+  .lang-menu { box-shadow: 0 12px 30px rgba(10,26,94,.18); }
+
+  /* Hero card in sun yellow, with a cobalt rule and a navy button */
+  .hero-text::before { background: var(--cobalt); }
+  .hero-text p { color: var(--navy); }
+
+  /* Trencadís strip: the broken-tile bench colours, under the key facts */
+  .facts { position: relative; }
+  .facts::after {
+    content: ''; grid-column: 1 / -1; height: 10px; margin-top: 18px;
+    background: linear-gradient(90deg, var(--sun) 0 22%, var(--sand) 22% 38%, var(--mist) 38% 55%, var(--sky) 55% 76%, var(--cobalt) 76% 100%);
+  }
+
+  /* Cards: white panels; chosen = cobalt frame + sun-yellow stamp */
+  .tile { box-shadow: 0 1px 0 var(--mist); }
+  .tile[aria-pressed="true"] { outline-color: var(--cobalt); }
+  .tile[aria-pressed="true"] .check { background: var(--sun); border-color: var(--sun); color: var(--navy); }
+  .badge { background: var(--sun); color: var(--navy); }
+  .cat-tiles .tile:nth-child(5n+2) .badge { background: var(--sky); }
+  .cat-tiles .tile:nth-child(5n+3) .badge { background: var(--sand); }
+  .cat-tiles .tile:nth-child(5n+4) .badge { background: var(--cobalt); color: #fff; }
+
+  /* Buttons */
+  .primary { background: var(--cobalt); color: #fff; }
+  .primary:not(:disabled):hover { background: var(--navy); }
+  .primary .arrow svg { stroke: var(--cobalt); }
+  .primary:not(:disabled):hover .arrow svg { stroke: var(--navy); }
+  .cta { background: var(--navy); color: var(--sun); }
+  .cta .arrow svg { stroke: var(--navy); }
+  .cta:hover { background: var(--cobalt); }
+  .chip[aria-pressed="true"], .seg button[aria-pressed="true"] { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+
+  /* Map pins and route */
+  .pin { background: var(--navy); }
+  .pin.active { background: var(--sun); color: var(--navy); border-color: var(--navy); }
+  ol.stops li button .n { background: var(--navy); }
+  ol.stops li button.current .n { background: var(--sun); color: var(--navy); }
+  .act-pop a.book { background: var(--navy); }
+
+  /* Panels that were paper-coloured stay readable */
+  dialog { background: #fff; color: var(--navy); }
+  .privacy-actions button { border-color: var(--navy); color: var(--navy); }
+  .privacy-actions .close { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+  .suggest { background: var(--sun); }
+
 </style>
 </head>
 <body>
@@ -864,7 +942,7 @@ function showRoute() {
   if (line) line.remove();
 
   const pts = [...(r.start ? [r.start] : []), ...route, ...(r.end ? [r.end] : [])].map(p => [p.lat, p.lng]);
-  line = L.polyline(pts, { color: '#c97a00', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
+  line = L.polyline(pts, { color: '#0026b8', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
   if (r.start) pointMarkers.push(L.marker([r.start.lat, r.start.lng], { icon: pointIcon('start', 'S') }).addTo(map));
   if (r.end && r.end !== r.start && !route.includes(r.end)) pointMarkers.push(L.marker([r.end.lat, r.end.lng], { icon: pointIcon('end', 'F') }).addTo(map));
   route.forEach((s, i) => {
