@@ -7,24 +7,29 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%23151515%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2216%22 font-family=%22Georgia%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22%3EW%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Commissioner:wght@300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   /* Museum-style layout: black page, white type, full-width photography, dark panels,
      round badges. Accent: Barcelona taxi yellow. Serif only for the wordmark. */
   :root {
-    --bg: #000;
-    --panel: #1d1d1d;
-    --panel-2: #2a2a2a;
-    --ink: #fff;
-    --muted: #b3b3b3;
-    --line: #3d3d3d;
+    --bg: #0c0b09;
+    --panel: #181613;
+    --panel-2: #24211c;
+    --ink: #f3eee4;
+    --muted: #a7a196;
+    --line: #34302a;
     --accent: #f6c700;
     --accent-ink: #000;
     --accent-soft: rgba(246,199,0,.16);
-    --paper: #fff;
-    --paper-ink: #000;
-    --serif: 'Libre Baskerville', Baskerville, Georgia, serif;
-    --sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --paper: #f3eee4;
+    --paper-ink: #0c0b09;
+    /* Gloock: sharp, high-contrast display serif. Commissioner: flared text face.
+       IBM Plex Mono: small museum-label captions and numbers. */
+    --display: 'Gloock', 'Bodoni 72', Didot, serif;
+    --serif: var(--display);
+    --sans: 'Commissioner', 'Gill Sans', sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --ease: cubic-bezier(.2,.7,.1,1);
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
@@ -51,8 +56,8 @@
   .tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
 
   /* Type */
-  h1 { font: 500 clamp(34px, 6vw, 56px)/1.1 var(--sans); letter-spacing: -0.01em; margin: 40px 0 12px; }
-  h2 { font: 500 clamp(26px, 4vw, 38px)/1.15 var(--sans); margin: 56px 0 22px; padding-top: 44px; border-top: 1px solid var(--line); }
+  h1 { font: 400 clamp(38px, 6.4vw, 64px)/1.02 var(--display); letter-spacing: -0.01em; margin: 40px 0 12px; }
+  h2 { font: 400 clamp(30px, 4.4vw, 44px)/1.08 var(--display); margin: 56px 0 22px; padding-top: 44px; border-top: 1px solid var(--line); }
   h3 { font-weight: 500; }
   p.lead { color: var(--muted); margin: 0 0 8px; max-width: 56ch; font-size: 18px; }
   .hint { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
@@ -74,7 +79,7 @@
 
   /* Key facts strip under the hero */
   .facts { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px 48px; padding: 48px 0 8px; }
-  .facts .big { margin: 0; font: 500 clamp(26px, 3.6vw, 38px)/1.2 var(--sans); }
+  .facts .big { margin: 0; font: 400 clamp(30px, 4vw, 44px)/1.12 var(--display); }
   .facts ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 14px; }
   .facts li { display: flex; gap: 12px; align-items: flex-start; font-weight: 500; font-size: 18px; line-height: 1.35; }
   .facts svg { flex: none; width: 22px; height: 22px; margin-top: 1px; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -98,7 +103,7 @@
   .cat-tiles .tile { display: grid; grid-template-rows: auto 1fr; }
   .cat-tiles .tile img { aspect-ratio: 16 / 9; }
   .cat-tiles .tile-body { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 20px 96px 24px 22px; min-height: 120px; }
-  .cat-tiles .tile-title { font: 500 24px/1.2 var(--sans); color: var(--accent); }
+  .cat-tiles .tile-title { font: 400 30px/1.05 var(--display); color: var(--accent); }
   .cat-tiles .tile-meta { color: var(--muted); font-size: 15px; margin-top: auto; }
   .badge { position: absolute; right: 20px; bottom: 20px; width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font: 500 14px var(--sans); font-style: normal; transition: transform .15s; }
   .tile:hover .badge { transform: scale(1.06); }
@@ -132,7 +137,7 @@
   .results-head h2 { margin: 0; padding: 0; border: 0; }
   .results-head span { color: var(--muted); font-size: 15px; }
   .place { background: var(--panel); padding: 22px 24px 24px; margin-top: 16px; }
-  .place h3 { margin: 0; font: 500 24px/1.2 var(--sans); }
+  .place h3 { margin: 0; font: 400 27px/1.15 var(--display); }
   .place .meta { color: var(--muted); font-size: 15px; margin-top: 4px; }
   .place p { margin: 12px 0 0; font-size: 17px; }
   .place .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
@@ -168,7 +173,7 @@
   .credit { position: absolute; right: 8px; bottom: 6px; font-size: 11px; color: #fff; background: rgba(0,0,0,.6); padding: 2px 6px; text-decoration: none; }
   .stop-head { display: flex; align-items: center; gap: 14px; }
   .stop-num { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-weight: 500; font-size: 18px; }
-  .stop-title { font: 500 26px/1.2 var(--sans); margin: 0; }
+  .stop-title { font: 400 30px/1.1 var(--display); margin: 0; }
   .stop-area { color: var(--muted); font-size: 15px; }
   .story { margin: 16px 0 0; font-size: 18px; line-height: 1.65; }
   .angle { display: inline-block; margin: 16px 0 0; padding: 3px 12px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 14px; }
@@ -225,6 +230,103 @@
   .privacy-actions button { border: 1px solid #000; background: transparent; color: #000; border-radius: 999px; padding: 10px 16px; font: 500 15px var(--sans); cursor: pointer; }
   .privacy-actions .close { background: #000; color: #fff; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  /* ===== Character layer: Barcelona at night ===== */
+
+  /* Background: the Eixample "panot" pavement tile (four quarter-circle petals and a
+     centre dot), barely visible, under the warm sodium glow of a street lamp. */
+  body {
+    --tile: 44px;
+    --petal: rgba(243,238,228,.03);
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(120% 70% at 50% -8%, rgba(255,166,43,.17), rgba(255,166,43,.05) 38%, transparent 62%),
+      radial-gradient(circle at 50% 50%, var(--petal) 0 2.5px, transparent 3px),
+      radial-gradient(circle at 0 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 100% 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 0 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 100% 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px);
+    background-size: 100% 1100px, var(--tile) var(--tile), var(--tile) var(--tile), var(--tile) var(--tile), var(--tile) var(--tile), var(--tile) var(--tile);
+    background-repeat: no-repeat, repeat, repeat, repeat, repeat, repeat;
+  }
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+
+  /* Museum-label captions: small mono, wide tracking */
+  .tag, .opt-label, .filter-group h3, .place .meta, .results-head span, .tile-meta, .stop-area, .summary, .act-pop .cat {
+    font-family: var(--mono) !important; font-size: 12px !important; font-weight: 500 !important;
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  .summary b { font-family: var(--mono); }
+  .logo { font-family: var(--display); font-size: 34px; letter-spacing: -0.005em; }
+  .stop-num { font-family: var(--mono); font-size: 15px; }
+
+  /* Numbered interest cards, like catalogue entries: 01, 02, 03… */
+  #interests { counter-reset: entry; }
+  #interests .tile { counter-increment: entry; }
+  #interests .tile > span::before {
+    content: counter(entry, decimal-leading-zero); display: block; margin-bottom: 6px;
+    font: 500 11px var(--mono); letter-spacing: .14em; color: var(--muted);
+  }
+  #interests .tile[aria-pressed="true"] > span::before { color: var(--accent); }
+
+  /* Hero card: bone paper with a yellow rule, like a printed label */
+  .hero-text::before { content: ''; display: block; width: 52px; height: 5px; background: var(--accent); margin-bottom: 20px; }
+  .hero-text h1 { font-size: clamp(30px, 3.6vw, 40px); line-height: 1.05; }
+  .hero img { filter: saturate(1.08) contrast(1.04); }
+  .hero::after { content: ''; position: absolute; inset: auto 0 0; height: 30%; background: linear-gradient(to top, var(--bg), transparent); pointer-events: none; }
+  @media (max-width: 640px) { .hero::after { display: none; } }
+  .hero-text { z-index: 1; }
+
+  /* Cards: photo zooms gently inside its frame; the round badge tilts like a stamp */
+  .tile { overflow: hidden; }
+  .tile img { transition: transform .9s var(--ease), opacity .3s; }
+  .tile:hover img { transform: scale(1.06); opacity: 1; }
+  .badge { transition: transform .45s var(--ease); }
+  .tile:hover .badge { transform: rotate(-14deg) scale(1.08); }
+  .tile[aria-pressed="true"] .check { animation: stamp .45s var(--ease); }
+  @keyframes stamp { 0% { transform: scale(.4) rotate(-30deg); } 70% { transform: scale(1.15) rotate(6deg); } 100% { transform: none; } }
+
+  /* Buttons */
+  .cta .arrow, .primary .arrow { transition: transform .35s var(--ease); }
+  .cta:hover .arrow, .primary:not(:disabled):hover .arrow { transform: translateX(5px); }
+  .primary { transition: background .2s, transform .2s var(--ease); }
+  .primary:not(:disabled):hover { background: var(--accent); }
+  .chip, .seg button, .nav button, .locate-btn, .lang-btn { transition: background .2s, color .2s, border-color .2s, transform .15s; }
+  .chip:active, .seg button:active, .nav button:active { transform: scale(.95); }
+
+  /* Tabs: yellow underline grows from the left */
+  .tabs button { position: relative; border-bottom: 0; }
+  .tabs button::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+  .tabs button[aria-selected="true"]::after { transform: scaleX(1); }
+
+  /* Page load: one orchestrated reveal */
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } }
+  @keyframes settle { from { transform: scale(1.1); filter: brightness(.4) saturate(.5); } }
+  @keyframes fadeIn { from { opacity: 0; } }
+  @media (prefers-reduced-motion: no-preference) {
+    header { animation: rise .8s var(--ease) both; }
+    .tabs { animation: rise .8s .08s var(--ease) both; }
+    .hero img { animation: settle 1.8s var(--ease) both; }
+    .hero-text { animation: rise 1s .45s var(--ease) both; }
+    .hero-text::before { animation: grow .7s 1.05s var(--ease) both; transform-origin: left; }
+    .facts .big { animation: rise .9s .7s var(--ease) both; }
+    .facts li { animation: rise .8s var(--ease) both; }
+    .facts li:nth-child(1) { animation-delay: .85s; }
+    .facts li:nth-child(2) { animation-delay: .95s; }
+    .facts li:nth-child(3) { animation-delay: 1.05s; }
+    /* Switching tabs fades the new view in */
+    #walkView:not([hidden]), #actView:not([hidden]), #tipsView:not([hidden]) { animation: fadeIn .5s var(--ease); }
+  }
+  @keyframes grow { from { transform: scaleX(0); } }
+  /* Cards and section titles rise as they scroll into view (browsers that support it) */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .tile, .place, h2, .results-head, .tip-group .tip {
+        animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 55%;
+      }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
 </style>
 </head>
 <body>
@@ -762,7 +864,7 @@ function showRoute() {
   if (line) line.remove();
 
   const pts = [...(r.start ? [r.start] : []), ...route, ...(r.end ? [r.end] : [])].map(p => [p.lat, p.lng]);
-  line = L.polyline(pts, { color: '#2140b8', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
+  line = L.polyline(pts, { color: '#c97a00', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
   if (r.start) pointMarkers.push(L.marker([r.start.lat, r.start.lng], { icon: pointIcon('start', 'S') }).addTo(map));
   if (r.end && r.end !== r.start && !route.includes(r.end)) pointMarkers.push(L.marker([r.end.lat, r.end.lng], { icon: pointIcon('end', 'F') }).addTo(map));
   route.forEach((s, i) => {
