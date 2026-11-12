@@ -512,7 +512,9 @@
   #interests .tile > span::before { content: none; }
 
   /* Brand mark: a round trencadís medallion before the wordmark */
-  .logo { display: inline-flex; align-items: center; gap: 0; }
+  .logo { display: inline-flex; align-items: center; gap: 0; color: inherit; text-decoration: none; border-radius: var(--r-pill); }
+  .logo:hover::before { transform: rotate(-20deg); }
+  .logo::before { transition: transform .5s var(--ease); }
   .logo::before { content: ''; margin-right: 10px; width: 34px; height: 34px; border-radius: 50%; background: var(--trencadis-tile) center / 90px; box-shadow: inset 0 0 0 2px #fff, 0 0 0 1.5px var(--cobalt); flex: none; }
 
   /* Tabs: rounded pill underline */
@@ -588,7 +590,7 @@
 <div class="wrap">
   <header>
     <div>
-      <div class="logo">Walk<span>BCN</span></div>
+      <a class="logo" href="./" id="homeLink" aria-label="WalkBCN">Walk<span>BCN</span></a>
       <div class="tag" data-i18n="tagline">Your personal walking guide</div>
     </div>
     <div class="lang">
@@ -1983,6 +1985,18 @@ document.getElementById('heroCta').onclick = e => {
 document.getElementById('restart').onclick = () => {
   if (history.state?.r) history.back();          // same as the browser's Back
   else { history.replaceState(null, '', location.pathname); showPickView(); }
+};
+// The wordmark always leads home: Walking routes tab, the choices, top of the page.
+document.getElementById('homeLink').onclick = e => {
+  e.preventDefault();
+  if (document.getElementById('walkView').hidden) showTab('walk');
+  if (!document.getElementById('actFilters').hidden) document.getElementById('actBack').click();
+  if (!document.getElementById('route').hidden) {
+    if (history.state?.r) history.back();
+    else { history.replaceState(null, '', location.pathname); showPickView(); }
+  }
+  window.scrollTo(0, 0);
+  setTimeout(() => window.scrollTo(0, 0), 60);   // again after Back has redrawn the page
 };
 document.getElementById('resumeBtn').onclick = () => {
   if (restoreRoute()) history.pushState({ r: 1 }, '', '#ruta');
