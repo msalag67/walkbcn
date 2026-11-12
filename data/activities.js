@@ -1,6 +1,7 @@
 // Activities: hand-picked places, shown by category and filters.
 // No live availability and no booking inside WalkBCN (MVP): "See & book" opens
 // the place on Google Maps, where its own website / booking options are listed.
+// lat/lng: map position, looked up on OpenStreetMap (Nominatim) by name or address.
 // Every place was checked on OpenStreetMap, which confirms it is registered there,
 // not that it is still open: check before showing this to users.
 // Local businesses only: no chains and no places aimed mainly at expats.
@@ -89,6 +90,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "Can Culleretes",
+        "lat": 41.38121,
+        "lng": 2.17442,
         "area": "gothic-born",
         "price": "2",
         "food": [
@@ -98,6 +101,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Els Quatre Gats",
+        "lat": 41.38574,
+        "lng": 2.17364,
         "area": "gothic-born",
         "price": "3",
         "food": [
@@ -107,6 +112,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "El Xampanyet",
+        "lat": 41.38451,
+        "lng": 2.18167,
         "area": "gothic-born",
         "price": "1",
         "food": [
@@ -116,6 +123,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Cal Pep",
+        "lat": 41.38394,
+        "lng": 2.18333,
         "area": "gothic-born",
         "price": "3",
         "food": [
@@ -126,6 +135,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bar del Pla",
+        "lat": 41.3856,
+        "lng": 2.18002,
         "area": "gothic-born",
         "price": "2",
         "food": [
@@ -135,6 +146,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bar Cañete",
+        "lat": 41.37914,
+        "lng": 2.17314,
         "area": "raval",
         "price": "3",
         "food": [
@@ -145,6 +158,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Teresa Carles",
+        "lat": 41.38514,
+        "lng": 2.16804,
         "area": "raval",
         "price": "2",
         "food": [
@@ -154,6 +169,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Flax & Kale",
+        "lat": 41.38515,
+        "lng": 2.16553,
         "area": "raval",
         "price": "2",
         "food": [
@@ -163,6 +180,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Quimet & Quimet",
+        "lat": 41.37422,
+        "lng": 2.16574,
         "area": "poble-sec",
         "price": "2",
         "food": [
@@ -173,6 +192,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bar Mut",
+        "lat": 41.3973,
+        "lng": 2.16128,
         "area": "eixample",
         "price": "3",
         "food": [
@@ -183,6 +204,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Cervecería Catalana",
+        "lat": 41.3924,
+        "lng": 2.1609,
         "area": "eixample",
         "price": "2",
         "food": [
@@ -192,6 +215,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "La Pubilla",
+        "lat": 41.39957,
+        "lng": 2.15367,
         "area": "gracia",
         "price": "2",
         "food": [
@@ -201,6 +226,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "La Pepita",
+        "lat": 41.39796,
+        "lng": 2.16102,
         "area": "gracia",
         "price": "2",
         "food": [
@@ -211,6 +238,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "La Cova Fumada",
+        "lat": 41.3793,
+        "lng": 2.18919,
         "area": "barceloneta",
         "price": "1",
         "food": [
@@ -221,6 +250,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Can Solé",
+        "lat": 41.3789,
+        "lng": 2.18837,
         "area": "barceloneta",
         "price": "3",
         "food": [
@@ -230,6 +261,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Can Paixano",
+        "lat": 41.38178,
+        "lng": 2.18343,
         "area": "barceloneta",
         "price": "1",
         "food": [
@@ -239,6 +272,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "La Venta",
+        "lat": 41.41624,
+        "lng": 2.1317,
         "area": "sant-gervasi",
         "price": "3",
         "food": [
@@ -248,6 +283,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Via Veneto",
+        "lat": 41.39246,
+        "lng": 2.13907,
         "area": "sant-gervasi",
         "price": "3",
         "food": [
@@ -257,6 +294,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Botafumeiro",
+        "lat": 41.4004,
+        "lng": 2.15464,
         "area": "gracia",
         "price": "3",
         "food": [
@@ -266,6 +305,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "7 Portes",
+        "lat": 41.38217,
+        "lng": 2.18325,
         "area": "gothic-born",
         "price": "3",
         "food": [
@@ -276,6 +317,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Can Majó",
+        "lat": 41.37752,
+        "lng": 2.19089,
         "area": "barceloneta",
         "price": "3",
         "food": [
@@ -285,6 +328,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Casa Delfín",
+        "lat": 41.38521,
+        "lng": 2.18336,
         "area": "gothic-born",
         "price": "2",
         "food": [
@@ -295,6 +340,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Can Ramonet",
+        "lat": 41.38082,
+        "lng": 2.18892,
         "area": "barceloneta",
         "price": "2",
         "food": [
@@ -305,6 +352,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bodega La Peninsular",
+        "lat": 41.38024,
+        "lng": 2.1878,
         "area": "barceloneta",
         "price": "2",
         "food": [
@@ -315,6 +364,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bodega Sepúlveda",
+        "lat": 41.38348,
+        "lng": 2.16257,
         "area": "eixample",
         "price": "2",
         "food": [
@@ -324,6 +375,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "El Glop",
+        "lat": 41.38945,
+        "lng": 2.17062,
         "area": "gracia",
         "price": "2",
         "food": [
@@ -333,6 +386,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bar La Plata",
+        "lat": 41.3804,
+        "lng": 2.18059,
         "area": "gothic-born",
         "price": "1",
         "food": [
@@ -343,6 +398,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "La Bombeta",
+        "lat": 41.38057,
+        "lng": 2.18771,
         "area": "barceloneta",
         "price": "1",
         "food": [
@@ -352,6 +409,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bodega Quimet",
+        "lat": 41.39922,
+        "lng": 2.15464,
         "area": "gracia",
         "price": "1",
         "food": [
@@ -361,6 +420,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bar Tomàs",
+        "lat": 41.39755,
+        "lng": 2.12308,
         "area": "sant-gervasi",
         "price": "1",
         "food": [
@@ -370,6 +431,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bodega l'Electricitat",
+        "lat": 41.37935,
+        "lng": 2.19002,
         "area": "barceloneta",
         "price": "1",
         "food": [
@@ -494,6 +557,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "Boadas",
+        "lat": 41.38466,
+        "lng": 2.17027,
         "area": "raval",
         "vibe": [
           "cocktail"
@@ -510,6 +575,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Dry Martini",
+        "lat": 41.39274,
+        "lng": 2.154,
         "area": "eixample",
         "vibe": [
           "cocktail"
@@ -526,6 +593,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Paradiso",
+        "lat": 41.38367,
+        "lng": 2.1837,
         "area": "gothic-born",
         "vibe": [
           "cocktail"
@@ -542,6 +611,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Two Schmucks",
+        "lat": 41.38312,
+        "lng": 2.16527,
         "area": "raval",
         "vibe": [
           "cocktail"
@@ -558,6 +629,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bar Marsella",
+        "lat": 41.37824,
+        "lng": 2.17124,
         "area": "raval",
         "vibe": [
           "cocktail"
@@ -574,6 +647,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Jamboree",
+        "lat": 41.37971,
+        "lng": 2.17519,
         "area": "gothic-born",
         "vibe": [
           "live",
@@ -593,6 +668,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Jazz Si Club",
+        "lat": 41.37982,
+        "lng": 2.16414,
         "area": "raval",
         "vibe": [
           "live"
@@ -613,6 +690,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Los Tarantos",
+        "lat": 41.37974,
+        "lng": 2.17515,
         "area": "gothic-born",
         "vibe": [
           "live"
@@ -631,6 +710,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Marula Café",
+        "lat": 41.38015,
+        "lng": 2.17685,
         "area": "gothic-born",
         "vibe": [
           "club"
@@ -650,6 +731,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Sidecar",
+        "lat": 41.3801,
+        "lng": 2.17526,
         "area": "gothic-born",
         "vibe": [
           "live",
@@ -669,6 +752,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Sala Apolo",
+        "lat": 41.37439,
+        "lng": 2.16956,
         "area": "poble-sec",
         "vibe": [
           "live",
@@ -690,6 +775,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Razzmatazz",
+        "lat": 41.39759,
+        "lng": 2.19125,
         "area": "poblenou",
         "vibe": [
           "live",
@@ -710,6 +797,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Moog",
+        "lat": 41.37807,
+        "lng": 2.17508,
         "area": "raval",
         "vibe": [
           "club"
@@ -728,6 +817,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Sutton",
+        "lat": 41.39595,
+        "lng": 2.15174,
         "area": "sant-gervasi",
         "vibe": [
           "club"
@@ -746,6 +837,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bling Bling",
+        "lat": 41.39554,
+        "lng": 2.15279,
         "area": "sant-gervasi",
         "vibe": [
           "club"
@@ -764,6 +857,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Gatsby",
+        "lat": 41.39621,
+        "lng": 2.15137,
         "area": "sant-gervasi",
         "vibe": [
           "cocktail",
@@ -783,6 +878,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Otto Zutz",
+        "lat": 41.40011,
+        "lng": 2.15038,
         "area": "sant-gervasi",
         "vibe": [
           "club"
@@ -803,6 +900,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Luz de Gas",
+        "lat": 41.3946,
+        "lng": 2.14904,
         "area": "sant-gervasi",
         "vibe": [
           "live",
@@ -823,6 +922,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Slow",
+        "lat": 41.39354,
+        "lng": 2.15337,
         "area": "sant-gervasi",
         "vibe": [
           "cocktail",
@@ -842,6 +943,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Solange",
+        "lat": 41.39224,
+        "lng": 2.154,
         "area": "eixample",
         "vibe": [
           "cocktail"
@@ -858,6 +961,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Mirablau",
+        "lat": 41.41604,
+        "lng": 2.13192,
         "area": "sant-gervasi",
         "vibe": [
           "cocktail",
@@ -877,6 +982,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bikini",
+        "lat": 41.38946,
+        "lng": 2.13703,
         "area": "sant-gervasi",
         "vibe": [
           "club",
@@ -897,6 +1004,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Quilombo",
+        "lat": 41.39251,
+        "lng": 2.15366,
         "area": "eixample",
         "vibe": [
           "live"
@@ -916,6 +1025,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Antilla BCN",
+        "lat": 41.38457,
+        "lng": 2.1546,
         "area": "eixample",
         "vibe": [
           "club"
@@ -934,6 +1045,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Dow Jones",
+        "lat": 41.3955,
+        "lng": 2.16774,
         "area": "eixample",
         "vibe": [
           "cocktail"
@@ -950,6 +1063,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "City Hall",
+        "lat": 41.38775,
+        "lng": 2.16826,
         "area": "eixample",
         "vibe": [
           "club"
@@ -1027,6 +1142,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "MNAC",
+        "lat": 41.3686,
+        "lng": 2.15346,
         "area": "montjuic",
         "kind": [
           "art",
@@ -1036,6 +1153,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Fundació Joan Miró",
+        "lat": 41.36864,
+        "lng": 2.16008,
         "area": "montjuic",
         "kind": [
           "art"
@@ -1044,6 +1163,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "CaixaForum",
+        "lat": 41.37148,
+        "lng": 2.14972,
         "area": "montjuic",
         "kind": [
           "art",
@@ -1053,6 +1174,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Museu Frederic Marès",
+        "lat": 41.38436,
+        "lng": 2.17673,
         "area": "old-town",
         "kind": [
           "art",
@@ -1062,6 +1185,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Museu d'Història de Catalunya",
+        "lat": 41.38082,
+        "lng": 2.18587,
         "area": "seafront",
         "kind": [
           "history"
@@ -1070,6 +1195,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Museu Egipci",
+        "lat": 41.39362,
+        "lng": 2.16474,
         "area": "eixample",
         "kind": [
           "history"
@@ -1078,6 +1205,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Museu del Disseny",
+        "lat": 41.4026,
+        "lng": 2.18805,
         "area": "seafront",
         "kind": [
           "design"
@@ -1086,6 +1215,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "CosmoCaixa",
+        "lat": 41.41245,
+        "lng": 2.13167,
         "area": "uptown",
         "kind": [
           "science"
@@ -1139,6 +1270,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "Bunkers del Carmel",
+        "lat": 41.41939,
+        "lng": 2.1617,
         "area": "uptown",
         "view": [
           "city",
@@ -1148,6 +1281,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Mirador del Palau Nacional",
+        "lat": 41.36902,
+        "lng": 2.15319,
         "area": "montjuic",
         "view": [
           "city"
@@ -1156,6 +1291,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Castell de Montjuïc",
+        "lat": 41.36338,
+        "lng": 2.16614,
         "area": "montjuic",
         "view": [
           "city",
@@ -1165,6 +1302,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Arenas de Barcelona",
+        "lat": 41.3763,
+        "lng": 2.1493,
         "area": "eixample",
         "view": [
           "city"
@@ -1173,6 +1312,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Parc del Guinardó",
+        "lat": 41.42049,
+        "lng": 2.16691,
         "area": "uptown",
         "view": [
           "city"
@@ -1181,6 +1322,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Turó del Putxet",
+        "lat": 41.40885,
+        "lng": 2.14185,
         "area": "uptown",
         "view": [
           "city"
@@ -1189,6 +1332,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Mirador de Colom",
+        "lat": 41.3758,
+        "lng": 2.17777,
         "area": "old-town",
         "view": [
           "sea",
@@ -1198,6 +1343,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Tibidabo",
+        "lat": 41.42315,
+        "lng": 2.11994,
         "area": "uptown",
         "view": [
           "city",
@@ -1264,6 +1411,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "Granja Dulcinea",
+        "lat": 41.38247,
+        "lng": 2.17341,
         "area": "old-town",
         "kind": [
           "chocolate",
@@ -1273,6 +1422,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Granja La Pallaresa",
+        "lat": 41.3829,
+        "lng": 2.1728,
         "area": "old-town",
         "kind": [
           "chocolate",
@@ -1282,6 +1433,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Cafè de l'Òpera",
+        "lat": 41.38097,
+        "lng": 2.17378,
         "area": "old-town",
         "kind": [
           "historic"
@@ -1290,6 +1443,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Nømad Coffee",
+        "lat": 41.38891,
+        "lng": 2.17717,
         "area": "old-town",
         "kind": [
           "coffee"
@@ -1298,6 +1453,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Granja M. Viader",
+        "lat": 41.38296,
+        "lng": 2.171,
         "area": "old-town",
         "kind": [
           "chocolate",
@@ -1307,6 +1464,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Pastisseria La Colmena",
+        "lat": 41.38379,
+        "lng": 2.17823,
         "area": "old-town",
         "kind": [
           "pastries",
@@ -1316,6 +1475,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Escribà",
+        "lat": 41.38304,
+        "lng": 2.16025,
         "area": "eixample",
         "kind": [
           "pastries"
@@ -1324,6 +1485,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Cafès El Magnífico",
+        "lat": 41.38352,
+        "lng": 2.18101,
         "area": "old-town",
         "kind": [
           "coffee",
@@ -1333,6 +1496,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Bar Velódromo",
+        "lat": 41.39347,
+        "lng": 2.15016,
         "area": "eixample",
         "kind": [
           "historic",
@@ -1342,6 +1507,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Granja La Nena",
+        "lat": 41.40266,
+        "lng": 2.15887,
         "area": "gracia",
         "kind": [
           "chocolate",
@@ -1351,6 +1518,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Forn Baluard",
+        "lat": 41.38002,
+        "lng": 2.18886,
         "area": "seafront",
         "kind": [
           "pastries",
@@ -1360,6 +1529,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Cafè Salambó",
+        "lat": 41.40445,
+        "lng": 2.15764,
         "area": "gracia",
         "kind": [
           "local"
@@ -1421,6 +1592,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "Aquàrium de Barcelona",
+        "lat": 41.37685,
+        "lng": 2.18441,
         "area": "seafront",
         "kind": [
           "animals"
@@ -1429,6 +1602,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Zoo de Barcelona",
+        "lat": 41.38612,
+        "lng": 2.18725,
         "area": "old-town",
         "kind": [
           "animals"
@@ -1437,6 +1612,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "CosmoCaixa",
+        "lat": 41.41245,
+        "lng": 2.13167,
         "area": "uptown",
         "kind": [
           "science"
@@ -1445,6 +1622,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Museu de la Xocolata",
+        "lat": 41.38711,
+        "lng": 2.18172,
         "area": "old-town",
         "kind": [
           "treats"
@@ -1453,6 +1632,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Telefèric de Montjuïc",
+        "lat": 41.36765,
+        "lng": 2.16723,
         "area": "montjuic",
         "kind": [
           "rides"
@@ -1461,6 +1642,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Poble Espanyol",
+        "lat": 41.36955,
+        "lng": 2.14676,
         "area": "montjuic",
         "kind": [
           "rides"
@@ -1469,6 +1652,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Parc d'Atraccions Tibidabo",
+        "lat": 41.42315,
+        "lng": 2.11994,
         "area": "uptown",
         "kind": [
           "rides"
@@ -1530,6 +1715,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "Cereria Subirà",
+        "lat": 41.38382,
+        "lng": 2.17804,
         "area": "old-town",
         "kind": [
           "crafts"
@@ -1538,6 +1725,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "La Manual Alpargatera",
+        "lat": 41.38155,
+        "lng": 2.17612,
         "area": "old-town",
         "kind": [
           "crafts"
@@ -1546,6 +1735,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Casa Gispert",
+        "lat": 41.38409,
+        "lng": 2.18192,
         "area": "old-town",
         "kind": [
           "food"
@@ -1554,6 +1745,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "El Rei de la Màgia",
+        "lat": 41.38463,
+        "lng": 2.17943,
         "area": "old-town",
         "kind": [
           "crafts"
@@ -1562,6 +1755,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Vila Viniteca",
+        "lat": 41.38247,
+        "lng": 2.18155,
         "area": "old-town",
         "kind": [
           "food"
@@ -1570,6 +1765,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Els Encants",
+        "lat": 41.40101,
+        "lng": 2.18809,
         "area": "seafront",
         "kind": [
           "market"
@@ -1578,6 +1775,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Herboristeria del Rei",
+        "lat": 41.38065,
+        "lng": 2.17505,
         "area": "old-town",
         "kind": [
           "crafts"
@@ -1586,6 +1785,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Ganiveteria Roca",
+        "lat": 41.38248,
+        "lng": 2.1735,
         "area": "old-town",
         "kind": [
           "crafts"
@@ -1594,6 +1795,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Sombrereria Mil",
+        "lat": 41.38824,
+        "lng": 2.17273,
         "area": "old-town",
         "kind": [
           "fashion"
@@ -1602,6 +1805,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Casa Beethoven",
+        "lat": 41.38231,
+        "lng": 2.17183,
         "area": "old-town",
         "kind": [
           "books"
@@ -1610,6 +1815,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Planelles Donat",
+        "lat": 41.38624,
+        "lng": 2.172,
         "area": "old-town",
         "kind": [
           "food"
@@ -1618,6 +1825,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Colmado Quílez",
+        "lat": 41.39121,
+        "lng": 2.16298,
         "area": "eixample",
         "kind": [
           "food"
@@ -1626,6 +1835,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Llibreria Altaïr",
+        "lat": 41.38773,
+        "lng": 2.16644,
         "area": "eixample",
         "kind": [
           "books"
@@ -1687,6 +1898,8 @@ window.WALKBCN_ACTIVITIES = {
     "places": [
       {
         "name": "Spotify Camp Nou",
+        "lat": 41.38088,
+        "lng": 2.12282,
         "area": "les-corts",
         "kind": [
           "football",
@@ -1696,6 +1909,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Estadi Olímpic Lluís Companys",
+        "lat": 41.36472,
+        "lng": 2.15565,
         "area": "montjuic",
         "kind": [
           "olympic",
@@ -1705,6 +1920,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Museu Olímpic i de l'Esport",
+        "lat": 41.36589,
+        "lng": 2.15763,
         "area": "montjuic",
         "kind": [
           "olympic",
@@ -1714,6 +1931,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Palau Sant Jordi",
+        "lat": 41.36347,
+        "lng": 2.15257,
         "area": "montjuic",
         "kind": [
           "olympic"
@@ -1722,6 +1941,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Piscines Bernat Picornell",
+        "lat": 41.36582,
+        "lng": 2.15072,
         "area": "montjuic",
         "kind": [
           "olympic",
@@ -1731,6 +1952,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Nou Sardenya",
+        "lat": 41.41177,
+        "lng": 2.16154,
         "area": "gracia",
         "kind": [
           "football"
@@ -1739,6 +1962,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Camp Municipal Narcís Sala",
+        "lat": 41.42881,
+        "lng": 2.19304,
         "area": "north",
         "kind": [
           "football"
@@ -1747,6 +1972,8 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "name": "Velòdrom d'Horta",
+        "lat": 41.43808,
+        "lng": 2.14885,
         "area": "north",
         "kind": [
           "active"
