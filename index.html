@@ -618,6 +618,87 @@
   .cat-tiles .tile:nth-child(3n+2) .badge { background: var(--cobalt); color: #fff; }
   .cat-tiles .tile:nth-child(3n+3) .badge { background: var(--navy); color: #fff; }
   .listened-tag, ol.stops .ok, .pin.done { background: var(--sky-light); color: var(--navy); }
+  /* ===== Polish pass: fewer ornaments, one type scale, calmer motion =====
+     Kept on purpose: Eixample blocks with streets, the trencadís crest and medallion,
+     the bench-wave edge of the hero photo, the faint panot circles, pill controls. */
+  :root { --fs-xs: 13px; --fs-s: 15px; --fs-m: 17px; --fs-l: 20px; --fs-xl: 24px; --fs-2xl: clamp(26px, 3.2vw, 32px); --fs-3xl: clamp(34px, 5vw, 48px);
+          --card-line: 0 0 0 1px var(--line); }
+  /* Flat ground: no sky gradient; the circles stay, quieter */
+  body { --petal: rgba(0,38,184,.03); background-color: #F6F7F9; }
+  body { background-image:
+      linear-gradient(transparent, transparent),
+      radial-gradient(circle at 50% 50%, var(--petal) 0 2.5px, transparent 3px),
+      radial-gradient(circle at 0 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 100% 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 0 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
+      radial-gradient(circle at 100% 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px); }
+
+  /* Type: one scale, headings carried by spacing instead of ornaments */
+  h1 { font-size: var(--fs-3xl); line-height: 1.08; margin: 40px 0 12px; }
+  h2, .results-head { background: none !important; padding-top: 0 !important; }
+  h2 { font-size: var(--fs-2xl); line-height: 1.15; margin: 72px 0 20px; }
+  .results-head { margin-top: 64px; }
+  .results-head h2, .tip-group h2, .suggest h2, dialog h2 { margin: 0; }
+  p.lead { font-size: var(--fs-l); line-height: 1.45; }
+  .hint, .tag, .stop-area, .summary, .place .meta, .tile-meta, .results-head span, .listened-count { font-size: var(--fs-s) !important; }
+  .tag { font-size: var(--fs-xs) !important; }
+
+  /* Hero: a plain white card; the photo and the mosaic crest do the talking */
+  .hero-text { background: #fff; color: var(--navy); border-radius: 24px; box-shadow: 0 1px 2px rgba(10,26,94,.08), 0 12px 32px rgba(10,26,94,.12); }
+  .hero-text h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.1; margin-bottom: 12px; }
+  .hero-text p { color: var(--muted); font-size: var(--fs-m); }
+  .hero img { filter: none; }
+
+  /* Buttons: label only (no arrow-in-a-circle), one height */
+  .cta .arrow, .primary .arrow { display: none; }
+  .cta { min-height: 48px; padding: 0 24px; background: var(--cobalt); font-size: var(--fs-m); font-weight: 600; }
+  .cta:hover { background: var(--navy); }
+  .primary { min-height: 56px; justify-content: center; font-size: var(--fs-m); font-weight: 600; padding: 0 28px; }
+  .primary:disabled { opacity: 1; background: var(--panel-2); color: var(--muted); }
+  .create-bar .primary { justify-content: flex-start; padding: 8px 24px; }
+  .book { min-height: 44px; font-weight: 600; }
+
+  /* Key facts: one sentence, then three plain facts on a hairline */
+  .facts { display: block; padding: 44px 0 0; }
+  .facts::after { display: none; }
+  .facts .big { font-size: var(--fs-xl); line-height: 1.3; max-width: 32ch; }
+  .facts ul { display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .facts li { font-size: var(--fs-s); font-weight: 500; color: var(--muted); align-items: center; gap: 8px; }
+  .facts svg { width: 18px; height: 18px; padding: 0; margin: 0; background: none; box-shadow: none; border-radius: 0; stroke: var(--cobalt); box-sizing: border-box; }
+
+  /* Cards: no hover zoom, no round "See" badge; the whole block is the button */
+  .tile img, .tile:hover img { transform: none; transition: none; }
+  .tile:hover img { opacity: .92; }
+  .badge { display: none; }
+  .cat-tiles .tile-body { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 12px; min-height: 0; padding: 18px 26px 24px; }
+  .cat-tiles .tile-title { font-size: var(--fs-xl); color: var(--navy); }
+  .cat-tiles .tile-meta { margin: 0; white-space: nowrap; }
+  .tile > span { font-size: var(--fs-m); }
+  .place, .tip, .stop-card, .resume { box-shadow: var(--card-line); }
+  .stop-card .tip { box-shadow: none; }
+  .place h3 { font-size: var(--fs-xl); }
+  .stop-title { font-size: var(--fs-2xl); }
+
+  /* Comfortable touch targets everywhere */
+  .chip, .seg button, .nav button, .locate-btn, .lang-btn { min-height: 44px; }
+  .chip { padding: 0 18px; }
+  .act-legend button { min-height: 40px; }
+  .tabs button { min-height: 44px; }
+  .check { min-height: 44px; align-items: center; }
+  .check input { width: 22px; height: 22px; margin: 0; flex: none; }
+  .link-btn { padding: 12px 0; }
+  .feedback button { min-width: 48px; min-height: 44px; display: grid; place-items: center; color: var(--navy); }
+  .feedback svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .feedback button[aria-pressed="true"] { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+
+  /* Motion: only what answers an action. No entrance choreography, no scroll reveals. */
+  header, .tabs, .hero img, .hero-text, .hero-text::before, .facts .big, .facts li,
+  .tile, .place, h2, .results-head, .tip { animation: none !important; }
+
+  footer { margin-top: 80px; padding: 24px 0 8px; line-height: 1.7; }
+  /* The tick only appears on chosen interests; unchosen photos stay clean */
+  .tile .check { opacity: 0; }
+  .tile[aria-pressed="true"] .check { opacity: 1; }
 </style>
 </head>
 <body>
@@ -809,7 +890,7 @@
     </div>
   </section>
 
-  <footer><span data-i18n="footer">WalkBCN MVP · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop)</span> · <button class="link-btn" id="privacyOpen" type="button" data-i18n="privacyLink">Your data &amp; privacy</button></footer>
+  <footer><span data-i18n="footer">WalkBCN · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop)</span> · <button class="link-btn" id="privacyOpen" type="button" data-i18n="privacyLink">Your data &amp; privacy</button></footer>
 
   <dialog id="privacy" aria-labelledby="privacyTitle">
     <h2 id="privacyTitle" data-i18n="privacyTitle">Your data &amp; privacy</h2>
@@ -838,7 +919,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="data/stops.js?v=3"></script>
 <script src="data/activities.js?v=7"></script>
-<script src="data/ui.js?v=10"></script>
+<script src="data/ui.js?v=11"></script>
 <script src="data/tips.js?v=2"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=7"></script>
@@ -1359,6 +1440,8 @@ function renderStopList() {
   renderListened();
 }
 
+// Neighbourhoods keep their local names; only the English page says "Gothic Quarter".
+const areaName = a => (lang !== 'en' && a === 'Gothic Quarter' ? 'Barri Gòtic' : a);
 function goTo(i, pan = true) {
   stopAudio();
   current = i;
@@ -1376,7 +1459,7 @@ function goTo(i, pan = true) {
     </figure>
     <div class="stop-head">
       <div class="stop-num">${i+1}</div>
-      <div><h3 class="stop-title">${s.name}</h3><div class="stop-area">${s.area}</div></div>
+      <div><h3 class="stop-title">${s.name}</h3><div class="stop-area">${areaName(s.area)}</div></div>
       <span class="listened-tag" id="listenedTag" ${isListened(s.id) ? '' : 'hidden'}>✓ ${t('listened')}</span>
     </div>
     ${angleLabel ? `<p class="angle">${t('toldFor', { interest: angleLabel })}</p>` : ''}
@@ -1403,8 +1486,8 @@ function goTo(i, pan = true) {
     </div>
     ${learning.optOut ? '' : `<div class="feedback" role="group" aria-label="${t('enjoy')}">
       <span>${t('enjoy')}</span>
-      <button type="button" data-rating="1" aria-label="${t('yes')}" aria-pressed="false">👍</button>
-      <button type="button" data-rating="-1" aria-label="${t('no')}" aria-pressed="false">👎</button>
+      <button type="button" data-rating="1" aria-label="${t('yes')}" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2.3l-1.2 6a2 2 0 0 1-2 1.7H7"/></svg></button>
+      <button type="button" data-rating="-1" aria-label="${t('no')}" aria-pressed="false"><svg style="transform:rotate(180deg)" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2.3l-1.2 6a2 2 0 0 1-2 1.7H7"/></svg></button>
     </div>`}`;
   renderRating();
   document.querySelectorAll('.feedback button').forEach(b => b.onclick = () => rateStory(+b.dataset.rating));
