@@ -443,6 +443,8 @@
   .resume b { display: block; font: 400 24px/1.15 var(--display); color: var(--navy); }
   .resume span { color: var(--muted); font-size: 15px; }
   .resume .cta { margin: 0; }
+  /* The banner's grey caption style must not reach the button label */
+  .resume .cta span { color: inherit; font-size: inherit; }
 
   /* Fixed bottom bars */
   .mini-player, .create-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 900; padding: 10px max(16px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -6px 24px rgba(10,26,94,.14); }
