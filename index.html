@@ -443,6 +443,8 @@
   .resume b { display: block; font: 400 24px/1.15 var(--display); color: var(--navy); }
   .resume span { color: var(--muted); font-size: 15px; }
   .resume .cta { margin: 0; }
+  /* The banner's grey caption style must not reach the button label */
+  .resume .cta span { color: inherit; font-size: inherit; }
 
   /* Fixed bottom bars */
   .mini-player, .create-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 900; padding: 10px max(16px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -6px 24px rgba(10,26,94,.14); }
@@ -588,6 +590,34 @@
   .mini-player { padding-top: 14px; overflow: hidden; }
   .create-bar .primary { max-width: none; }
 
+  /* ===== Eixample blocks: only the interest tiles and the Activities sections =====
+     Each card is a Cerdà block (a square with chamfered corners). Side by side, the
+     gaps read as streets and the cut corners open small octagonal crossings. */
+  #interests, .cat-tiles { --street: 18px; gap: var(--street); }
+  /* The grid sits on a street plan: a darker "asphalt" shows between and around the blocks */
+  #interests, .cat-tiles { padding: var(--street); background: #A9BCCB; border-radius: var(--r-lg); }
+  #interests .tile, .cat-tiles .tile {
+    --ch: 22px;
+    border-radius: 0; box-shadow: none; outline: 0;
+    clip-path: polygon(var(--ch) 0, calc(100% - var(--ch)) 0, 100% var(--ch), 100% calc(100% - var(--ch)),
+                       calc(100% - var(--ch)) 100%, var(--ch) 100%, 0 calc(100% - var(--ch)), 0 var(--ch));
+  }
+  .cat-tiles .tile { --ch: 30px; }
+  /* The clip would cut an outline, so "chosen" and keyboard focus are drawn inside the block */
+  #interests .tile[aria-pressed="true"] { outline: 0; box-shadow: inset 0 0 0 4px var(--cobalt); }
+  #interests .tile[aria-pressed="true"] > span { background: var(--cobalt); color: #fff; }
+  #interests .tile:focus-visible, .cat-tiles .tile:focus-visible { outline: 0; box-shadow: inset 0 0 0 4px var(--sun), inset 0 0 0 7px var(--navy); }
+  #interests .tile[aria-pressed="true"]:focus-visible { box-shadow: inset 0 0 0 4px var(--sun), inset 0 0 0 7px var(--cobalt); }
+  @media (max-width: 640px) { #interests, .cat-tiles { --street: 12px; } #interests .tile { --ch: 16px; } .cat-tiles .tile { --ch: 22px; } }
+  /* ===== Only blues: sky blue takes every place the yellow had =====
+     Navy text on sky reads at 6.6:1, so the existing navy-on-yellow pairs keep working. */
+  :root { --sun: #6FAED3; --sky-light: #A9CFE6; }
+  .cta { background: var(--navy); color: #fff; }
+  .cta:hover { background: var(--cobalt); color: #fff; }
+  .badge { background: var(--sun); color: var(--navy); }
+  .cat-tiles .tile:nth-child(3n+2) .badge { background: var(--cobalt); color: #fff; }
+  .cat-tiles .tile:nth-child(3n+3) .badge { background: var(--navy); color: #fff; }
+  .listened-tag, ol.stops .ok, .pin.done { background: var(--sky-light); color: var(--navy); }
 </style>
 </head>
 <body>
