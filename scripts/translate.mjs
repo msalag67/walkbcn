@@ -19,6 +19,8 @@
 //   node scripts/translate.mjs --force         redo the selected parts
 //
 // Needs ANTHROPIC_API_KEY for text (not for --audio).
+// Spanish audio uses the ElevenLabs voice RxPoOxDaJiOdJGnMMaql when ELEVENLABS_API_KEY is set
+// (saved as .mp3). Re-record it with:  node scripts/translate.mjs --audio --lang=es
 
 import fs from "node:fs";
 import path from "node:path";
@@ -33,7 +35,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const I18N_DIR = path.join(ROOT, "content/i18n");
 const LANGS = {
   ca: { name: "Catalan", voices: ["Montse"], locale: "ca_ES" },
-  es: { name: "Spanish (Spain)", voices: ["Mónica", "Monica"], locale: "es_ES" },
+  // Spanish uses a natural ElevenLabs voice (needs ELEVENLABS_API_KEY); macOS Mónica is the fallback.
+  es: { name: "Spanish (Spain)", voices: ["Mónica", "Monica"], locale: "es_ES", elevenVoice: "RxPoOxDaJiOdJGnMMaql" },
   fr: { name: "French", voices: ["Thomas", "Jacques", "Amélie"], locale: "fr_FR" },
   de: { name: "German", voices: ["Anna", "Helena"], locale: "de_DE" },
   it: { name: "Italian", voices: ["Alice", "Federica"], locale: "it_IT" },
@@ -236,9 +239,33 @@ function record(text, voice, outFile) {
     fs.rmSync(tmpAiff, { force: true });
   }
 }
-function recordAudio(lang, data) {
-  const voice = pickVoice(lang);
+const ELEVEN_KEY = process.env.ELEVENLABS_API_KEY;
+async function recordEleven(text, voiceId, outFile) {
+  fs.mkdirSync(path.dirname(outFile), { recursive: true });
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_44100_64`, {
+        method: "POST",
+        headers: { "xi-api-key": ELEVEN_KEY, "Content-Type": "application/json", Accept: "audio/mpeg" },
+        body: JSON.stringify({ text, model_id: "eleven_multilingual_v2" }),
+        signal: AbortSignal.timeout(90_000), // never hang forever on a stuck request
+      });
+      if (!res.ok) throw Object.assign(new Error(`ElevenLabs ${res.status}: ${await res.text()}`), { fatal: res.status < 500 && res.status !== 429 });
+      fs.writeFileSync(outFile, Buffer.from(await res.arrayBuffer()));
+      return;
+    } catch (err) {
+      if (err.fatal || attempt >= 3) throw err; // bad key / no credit: stop; network blips: retry
+      await new Promise((r) => setTimeout(r, 5000 * attempt));
+    }
+  }
+}
+async function recordAudio(lang, data) {
+  const elevenVoice = LANGS[lang].elevenVoice;
+  if (elevenVoice && !ELEVEN_KEY) console.log(`  ! ELEVENLABS_API_KEY is not set: ${LANGS[lang].name} falls back to the macOS voice`);
+  const useEleven = Boolean(elevenVoice && ELEVEN_KEY);
+  const voice = useEleven ? `ElevenLabs ${elevenVoice}` : pickVoice(lang);
   if (!voice) { console.log(`  ✗ no macOS voice installed for ${LANGS[lang].name}`); return; }
+  const ext = useEleven ? "mp3" : "m4a";
   console.log(`Recording ${LANGS[lang].name} (voice: ${voice})…`);
   for (const stop of STOPS) {
     const entry = data.stops[stop.id];
@@ -247,11 +274,20 @@ function recordAudio(lang, data) {
     let made = 0;
     for (const [k, v] of Object.entries(entry.stories)) {
       const spoken = `${stop.name}. ${v.normal}`;
-      const rel = `audio/${lang}/${k === "base" ? stop.id : `${stop.id}--${k}`}.m4a`;
+      const rel = `audio/${lang}/${k === "base" ? stop.id : `${stop.id}--${k}`}.${ext}`;
       const prev = entry.audio[k];
-      if (!FORCE && prev?.file === rel && prev.hash === hash(spoken) && fs.existsSync(path.join(ROOT, rel))) continue;
-      record(spoken, voice, path.join(ROOT, rel));
-      entry.audio[k] = { file: rel, hash: hash(spoken) };
+      const h = useEleven ? hash(`${elevenVoice}|${spoken}`) : hash(spoken); // a new ElevenLabs voice re-records
+      if (!FORCE && prev?.file === rel && prev.hash === h && fs.existsSync(path.join(ROOT, rel))) continue;
+      try {
+        if (useEleven) await recordEleven(spoken, elevenVoice, path.join(ROOT, rel));
+        else record(spoken, voice, path.join(ROOT, rel));
+      } catch (err) {
+        console.log(`  [${lang}] ✗ ${stop.name} (${k}): ${err.message}`);
+        save(lang, data);
+        return; // stop this language; run the same command again to continue
+      }
+      if (prev?.file && prev.file !== rel) fs.rmSync(path.join(ROOT, prev.file), { force: true });
+      entry.audio[k] = { file: rel, hash: h };
       made++;
     }
     save(lang, data);
@@ -283,7 +319,7 @@ if (doText) {
   }));
 }
 stopIfFatal();
-if (doAudio) for (const { lang, data } of targets) recordAudio(lang, data);
+if (doAudio) for (const { lang, data } of targets) await recordAudio(lang, data);
 const missing = targets.flatMap(({ lang, data }) => STOPS.filter((s) => !data.stops[s.id]).map((s) => `${lang}/${s.id}`));
 if (missing.length) console.log(`\nStill missing (run the same command again): ${missing.join(", ")}`);
 console.log("\nDone. Reload the web page to see the new languages.");
