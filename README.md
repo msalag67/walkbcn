@@ -43,6 +43,12 @@ node scripts/translate.mjs --lang=fr     # solo un idioma
 node scripts/translate.mjs --audio       # solo grabar audio (sin clave)
 ```
 
+El audio en castellano usa la voz de ElevenLabs `RxPoOxDaJiOdJGnMMaql` (en `.mp3`) si hay `ELEVENLABS_API_KEY`; si no, la voz Mónica de macOS. Para regrabarlo:
+
+```bash
+ELEVENLABS_API_KEY=... node scripts/translate.mjs --audio --lang=es
+```
+
 Los textos de la interfaz (botones, avisos…) están en `data/ui.js` y se editan a mano.
 
 ### Revisar antes de enseñarlo
