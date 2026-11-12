@@ -348,16 +348,11 @@
     --paper: var(--sun);
     --paper-ink: var(--navy);
   }
-  /* Mediterranean sky at the top, panot tiles drawn in faint cobalt */
+  /* Mediterranean sky at the top, then a clean light background (no tile pattern) */
   body {
-    --petal: rgba(0,38,184,.055);
-    background-image:
-      linear-gradient(180deg, rgba(111,174,211,.42) 0, rgba(205,216,221,.25) 420px, transparent 900px),
-      radial-gradient(circle at 50% 50%, var(--petal) 0 2.5px, transparent 3px),
-      radial-gradient(circle at 0 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
-      radial-gradient(circle at 100% 0, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
-      radial-gradient(circle at 0 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px),
-      radial-gradient(circle at 100% 100%, transparent 0 15px, var(--petal) 15.5px 17px, transparent 17.5px);
+    background-image: linear-gradient(180deg, rgba(111,174,211,.42) 0, rgba(205,216,221,.25) 420px, transparent 900px);
+    background-size: 100% 900px;
+    background-repeat: no-repeat;
   }
   .hero img, .tile img, .stop-photo, ol.stops .thumb { background-color: var(--mist); }
   .lang-menu { box-shadow: 0 12px 30px rgba(10,26,94,.18); }
