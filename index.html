@@ -437,6 +437,39 @@
   .pin.done { background: var(--sky); color: var(--navy); }
   .pin.done.active { background: var(--sun); }
 
+
+  /* Resume banner (a saved walk that isn't open) */
+  .resume { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; margin: 18px 0; padding: 18px 20px; background: var(--panel); border-left: 6px solid var(--sun); }
+  .resume b { display: block; font: 400 24px/1.15 var(--display); color: var(--navy); }
+  .resume span { color: var(--muted); font-size: 15px; }
+  .resume .cta { margin: 0; }
+
+  /* Fixed bottom bars */
+  .mini-player, .create-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 900; padding: 10px max(16px, env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 -6px 24px rgba(10,26,94,.14); }
+  @media (prefers-reduced-motion: no-preference) { .mini-player:not([hidden]), .create-bar:not([hidden]) { animation: barIn .35s var(--ease); } }
+  @keyframes barIn { from { transform: translateY(100%); } }
+  body.has-bottom-bar footer, body:has(.mini-player:not([hidden])) footer { padding-bottom: 90px; }
+  .mini-player { display: flex; align-items: center; gap: 12px; padding-top: 14px; }
+  .mini-player[hidden], .create-bar[hidden] { display: none; }
+  .mini-bar { position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--mist); }
+  .mini-bar i { display: block; height: 100%; width: 0; background: var(--cobalt); transition: width .3s linear; }
+  .mini-info { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; border: 0; background: none; padding: 0; color: var(--navy); font: 500 16px var(--sans); text-align: left; cursor: pointer; }
+  .mini-num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font: 500 13px var(--mono); }
+  .mini-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mini-play { width: 50px; height: 50px; flex: none; }
+  .mini-player.playing .mini-play { background: var(--sun); color: var(--navy); }
+  .create-bar .primary { margin: 0 auto; max-width: 560px; }
+  .create-bar .primary > span { display: flex; flex-direction: column; align-items: flex-start; text-align: left; min-width: 0; }
+  .create-bar small { font: 400 13px var(--sans); opacity: .8; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .build-hint { margin-top: 10px; }
+
+  /* Activities: List / Map */
+  .view-toggle { margin-top: 16px; }
+  #actView.map-mode #actResults, #actView.map-mode #actResults + .hint { display: none; }
+  #actView.map-mode .act-map-wrap .results-head { margin-top: 20px; padding-top: 0; border-top: 0; }
+  #actView.map-mode .act-map-wrap .results-head h2 { display: none; }
+  .see-map { padding-top: 6px; }
+
   /* Panels that were paper-coloured stay readable */
   dialog { background: #fff; color: var(--navy); }
   .privacy-actions button { border-color: var(--navy); color: var(--navy); }
@@ -470,6 +503,11 @@
 
   <!-- Step 1: interests -->
   <section id="pick">
+    <div class="resume" id="resume" hidden>
+      <div><b data-i18n="resumeTitle">Your walk is waiting</b><span id="resumeText"></span></div>
+      <button type="button" class="cta" id="resumeBtn"><span data-i18n="resumeBtn">Continue</span><i class="arrow" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></i></button>
+    </div>
+
     <div class="hero">
       <img id="heroImg" alt="Barcelona rooftops at sunset" data-i18n-alt="heroAlt">
       <div class="hero-text">
@@ -565,6 +603,7 @@
     <label class="check"><input type="checkbox" id="avoidCrowded"> <span data-i18n="avoidCrowded">Avoid the busiest places (Sagrada Família, Park Güell…)</span></label>
 
     <button class="primary" id="build" disabled><span data-i18n="build">Create my route</span><i class="arrow" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></i></button>
+    <p class="hint build-hint" id="buildHint" data-i18n="buildHint">Choose at least one interest to create your route.</p>
   </section>
 
   <!-- Step 2: route -->
@@ -587,6 +626,7 @@
     <div id="actPick">
       <h1 data-i18n="actTitle">Things to do.</h1>
       <p class="lead" data-i18n="actLead">Choose what you're in the mood for and we'll suggest places worth your evening.</p>
+      <button type="button" class="ghost see-map" id="actSeeMap" data-i18n="seeOnMap">See everything on the map ↓</button>
       <div class="cat-tiles tiles" id="actCats"></div>
     </div>
 
@@ -597,6 +637,10 @@
       <div id="actGroups"></div>
       <p class="hint" data-i18n="actHint">Pick as many as you like, or none to see everything.</p>
       <div class="results-head"><h2 data-i18n="ourPicks">Our picks</h2><span id="actCount"></span></div>
+      <div class="seg view-toggle" id="actViewToggle" role="group">
+        <button type="button" data-v="list" aria-pressed="true" data-i18n="viewList">List</button>
+        <button type="button" data-v="map" aria-pressed="false" data-i18n="viewMap">Map</button>
+      </div>
       <div id="actResults"></div>
       <p class="hint" style="margin-top:18px" data-i18n="actDisclaimer">Hand-picked by WalkBCN. Opening times change, so check before you go.</p>
     </div>
@@ -638,10 +682,20 @@
   </dialog>
 </div>
 
+<!-- Fixed bottom bars: mini player while a story plays off-screen; "Create my route" while choosing -->
+<div class="mini-player" id="miniPlayer" hidden>
+  <div class="mini-bar"><i id="miniProgress"></i></div>
+  <button type="button" class="mini-info" id="miniInfo"><span class="mini-num" id="miniNum"></span><span class="mini-name" id="miniName"></span></button>
+  <button type="button" class="pl-play mini-play" id="miniPlay"></button>
+</div>
+<div class="create-bar" id="createBar" hidden>
+  <button type="button" class="primary" id="createBarBtn"><span><span data-i18n="build">Create my route</span><small id="createBarInfo"></small></span><i class="arrow" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></i></button>
+</div>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="data/stops.js?v=3"></script>
 <script src="data/activities.js?v=7"></script>
-<script src="data/ui.js?v=8"></script>
+<script src="data/ui.js?v=9"></script>
 <script src="data/tips.js?v=2"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=7"></script>
@@ -790,9 +844,36 @@ INTERESTS.forEach(i => {
     selected.has(i.id) ? selected.delete(i.id) : selected.add(i.id);
     b.setAttribute('aria-pressed', selected.has(i.id));
     document.getElementById('build').disabled = selected.size === 0;
+    updateCreateBar();
   };
   chipsEl.appendChild(b);
 });
+
+// "Create my route" bar: fixed at the bottom once an interest is chosen, until the real
+// button below the options comes into view. The hint explains a disabled button.
+let buildInView = false;
+function updateCreateBar() {
+  const bar = document.getElementById('createBar');
+  const choosing = !document.getElementById('walkView').hidden && !document.getElementById('pick').hidden;
+  bar.hidden = !(choosing && selected.size > 0 && !buildInView);
+  document.getElementById('buildHint').hidden = selected.size > 0;
+  document.body.classList.toggle('has-bottom-bar', !bar.hidden);
+  if (!bar.hidden) {
+    document.getElementById('createBarInfo').textContent =
+      INTERESTS.filter(i => selected.has(i.id)).map(i => interestLabel(i.id)).join(' · ');
+  }
+}
+// Visibility is measured on scroll/resize (simple and works in every browser).
+const inViewport = el => { if (!el || !el.offsetParent) return false; const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; };
+function checkBottomBars() {
+  const b = inViewport(document.getElementById('build'));
+  if (b !== buildInView) { buildInView = b; updateCreateBar(); }
+  const p = inViewport(document.getElementById('audioPlayer'));
+  if (p !== playerInView) { playerInView = p; updateMini(); }
+}
+addEventListener('scroll', checkBottomBars, { passive: true });
+addEventListener('resize', checkBottomBars);
+document.getElementById('createBarBtn').onclick = () => showRoute();
 // ---- Route options: how long, where to start and finish, pace ----
 const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal' };
 const BCN_CENTER = [41.3874, 2.1686];
@@ -987,13 +1068,23 @@ function showRoute() {
     locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
-  route = r.path; current = 0;
+  drawRoute(r, 0);
+  // The route gets its own history entry (#ruta): Back returns to the choices,
+  // and a reload restores it from the saved copy.
+  if (location.hash === '#ruta') history.replaceState({ r: 1 }, '', '#ruta');
+  else history.pushState({ r: 1 }, '', '#ruta');
+}
+
+function drawRoute(r, startAt = 0) {
+  route = r.path; current = startAt;
   lastRoute = r;
   renderRouteTexts();
 
   document.getElementById('pick').hidden = true;
   document.getElementById('route').hidden = false;
+  updateCreateBar();
   window.scrollTo(0, 0);
+  checkBottomBars();
 
   if (!map) {
     map = enablePinchZoom(L.map('map', { zoomControl: true, scrollWheelZoom: false, touchZoom: true }));
@@ -1020,8 +1111,77 @@ function showRoute() {
 
   renderStopList();
   setStatus('');
-  goTo(0, false);
+  goTo(startAt, startAt > 0);
 }
+
+// ---- Saved route: survives reloads, a locked phone and the Back button ----
+const ROUTE_KEY = 'walkbcn_route_v1';
+const ROUTE_MAX_AGE = 1000 * 60 * 60 * 24; // a day: after that, start fresh
+function saveRoute() {
+  if (!lastRoute || !route.length) return;
+  const pt = p => !p ? null : p.id ? { id: p.id } : { lat: p.lat, lng: p.lng };
+  const data = {
+    at: Date.now(), ids: route.map(s => s.id), current, km: lastRoute.km,
+    start: pt(lastRoute.start), end: pt(lastRoute.end),
+    selected: [...selected], angles: routeAngles, plan: { ...plan }, stopsCount,
+  };
+  try { localStorage.setItem(ROUTE_KEY, JSON.stringify(data)); } catch (e) {}
+}
+function loadSavedRoute() {
+  let d = null;
+  try { d = JSON.parse(localStorage.getItem(ROUTE_KEY)); } catch (e) {}
+  if (!d || Date.now() - d.at > ROUTE_MAX_AGE) return null;
+  const byId = id => STOPS.find(s => s.id === id);
+  const path = d.ids.map(byId).filter(Boolean);
+  if (!path.length) return null;
+  const pt = p => !p ? null : p.id ? byId(p.id) : p;
+  return { d, r: { path, km: d.km, start: pt(d.start), end: pt(d.end) } };
+}
+function restoreRoute() {
+  const saved = loadSavedRoute();
+  if (!saved) return false;
+  const { d, r } = saved;
+  // Put the visitor's choices back, in the data and on the buttons.
+  selected = new Set(d.selected);
+  document.querySelectorAll('#interests .tile').forEach(b => b.setAttribute('aria-pressed', selected.has(b.dataset.id)));
+  Object.assign(plan, d.plan);
+  stopsCount = d.stopsCount;
+  stopsRange.value = stopsCount; document.getElementById('stopsValue').textContent = stopsCount;
+  const press = (id, attr, value) => { const box = document.getElementById(id); const b = box.querySelector(`button[data-${attr}="${value}"]`); if (b) pressOnly(box, b); };
+  press('planMode', 'mode', plan.mode); press('paceSeg', 'v', plan.pace); press('lengthSeg', 'v', plan.length);
+  press('timeChips', 'v', plan.minutes); press('distChips', 'v', plan.km); press('startChips', 'v', plan.start); press('endChips', 'v', plan.end);
+  ['stops', 'time', 'distance'].forEach(m => { document.getElementById(`panel-${m}`).hidden = m !== plan.mode; });
+  document.getElementById('avoidCrowded').checked = !!plan.avoidCrowded;
+  document.getElementById('build').disabled = selected.size === 0;
+  if (plan.length !== 'normal') loadLangData('en');
+  routeAngles = d.angles || {};   // same story versions as before
+  drawRoute(r, Math.min(d.current || 0, r.path.length - 1));
+  return true;
+}
+function showPickView() {
+  stopAudio();
+  document.getElementById('route').hidden = true;
+  document.getElementById('pick').hidden = false;
+  updateCreateBar();
+  renderResume();
+  window.scrollTo(0, 0);
+  checkBottomBars();
+}
+// A saved route that isn't open: offer to continue it at the top of the choices.
+function renderResume() {
+  const box = document.getElementById('resume');
+  const saved = document.getElementById('route').hidden ? loadSavedRoute() : null;
+  box.hidden = !saved;
+  if (!saved) return;
+  const { d, r } = saved;
+  const done = r.path.filter(s => isListened(s.id)).length;
+  document.getElementById('resumeText').textContent = t('resumeText', { stop: r.path[Math.min(d.current, r.path.length - 1)].name, n: done, total: r.path.length });
+}
+window.addEventListener('popstate', () => {
+  const onRoute = !document.getElementById('route').hidden;
+  if (location.hash === '#ruta') { if (!onRoute && !restoreRoute()) history.replaceState(null, '', location.pathname); }
+  else if (onRoute) showPickView();
+});
 
 // Texts of the route screen, drawn again when the language changes.
 let lastRoute = null;
@@ -1078,8 +1238,6 @@ function goTo(i, pan = true) {
     </div>
     ${angleLabel ? `<p class="angle">${t('toldFor', { interest: angleLabel })}</p>` : ''}
     ${st.learned ? `<p class="learned">${t('learned')}</p>` : ''}
-    <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
-    <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>
     <div class="player" id="audioPlayer">
       <div class="pl-buttons">
         <button type="button" class="pl-skip" id="back10" aria-label="${t('back10')}">${back10Icon()}</button>
@@ -1092,6 +1250,8 @@ function goTo(i, pan = true) {
         <span class="pl-time" id="plTime">0:00</span>
       </div>
     </div>
+    <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
+    <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>
     <div class="controls">
       <div class="nav">
         <button type="button" id="prev" ${i === 0 ? 'disabled' : ''}>${t('prev')}</button>
@@ -1106,6 +1266,7 @@ function goTo(i, pan = true) {
   renderRating();
   document.querySelectorAll('.feedback button').forEach(b => b.onclick = () => rateStory(+b.dataset.rating));
   setupPlayer();
+  saveRoute();
   document.getElementById('prev').onclick = () => goTo(current - 1);
   document.getElementById('next').onclick = () => goTo(current + 1);
 }
@@ -1197,6 +1358,7 @@ function setupPlayer() {
   setPlaying(false);
   updateProgress();
   renderListened();
+  watchPlayer();
 }
 function setupTts(s, st) {
   const text = `${s.name}. ${st.text}`;
@@ -1302,6 +1464,8 @@ function updateProgress() {
     time.textContent = `${tts.idx + 1} / ${tts.parts.length}`;
   }
   paintBar(seek);
+  const mini = document.getElementById('miniProgress');
+  if (mini) mini.style.width = `${seek.value / 10}%`;
 }
 function stopAudio() {
   if (player) player.pause();
@@ -1318,7 +1482,27 @@ function setPlaying(on) {
   const label = document.querySelector('#audioPlayer .pl-label');
   if (label) label.textContent = on ? t('pause') : t('listen');
   document.getElementById('audioPlayer')?.classList.toggle('playing', on);
+  updateMini();
 }
+// Mini player: shows at the bottom while a story is playing (or paused part-way)
+// and the big player has scrolled out of view.
+let playerInView = true;
+function watchPlayer() { playerInView = true; checkBottomBars(); }
+function updateMini() {
+  const box = document.getElementById('miniPlayer');
+  const onRoute = !document.getElementById('route').hidden && !document.getElementById('walkView').hidden;
+  const started = speaking || (player && player.currentTime > 0) || (tts && tts.idx > 0);
+  box.hidden = !(onRoute && started && !playerInView);
+  if (box.hidden || !route[current]) return;
+  document.getElementById('miniNum').textContent = current + 1;
+  document.getElementById('miniName').textContent = route[current].name;
+  const b = document.getElementById('miniPlay');
+  b.innerHTML = speaking ? pauseIcon() : playIcon();
+  b.setAttribute('aria-label', speaking ? t('pause') : t('listen'));
+  box.classList.toggle('playing', speaking);
+}
+document.getElementById('miniPlay').onclick = () => toggleAudio();
+document.getElementById('miniInfo').onclick = () => document.getElementById('audioPlayer')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 const playIcon = () => '<svg viewBox="0 0 16 16"><path d="M4.5 2.5v11l9-5.5z"/></svg>';
 const pauseIcon = () => '<svg viewBox="0 0 16 16"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1"/></svg>';
 const back10Icon = () => '<svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 3.8v3.6h3.6"/><text x="12.4" y="15.3" text-anchor="middle">10</text></svg>';
@@ -1337,6 +1521,7 @@ function showTab(name) {
   document.getElementById('tabTips').setAttribute('aria-selected', name === 'tips');
   if (name === 'walk' && map) map.invalidateSize();
   if (name === 'act') { ensureActMap(); startWatchingMe(); } else stopWatchingMe();
+  updateCreateBar(); updateMini(); checkBottomBars();
   window.scrollTo(0, 0);
 }
 document.getElementById('tabWalk').onclick = () => showTab('walk');
@@ -1428,10 +1613,25 @@ function openCategory(id, keepSelection = false) {
   });
   document.getElementById('actPick').hidden = true;
   document.getElementById('actFilters').hidden = false;
+  if (!keepSelection) setActView('list');
   renderPlaces();
   if (!keepSelection) window.scrollTo(0, 0);
 }
+// List / Map switch inside a section: "Map" hides the cards so the map sits right
+// under the filters (and follows them), instead of 13 screens further down.
+function setActView(v) {
+  document.getElementById('actView').classList.toggle('map-mode', v === 'map');
+  const box = document.getElementById('actViewToggle');
+  pressOnly(box, box.querySelector(`[data-v="${v}"]`));
+  if (v === 'map') {
+    ensureActMap();
+    setTimeout(() => { actMap.invalidateSize(); document.getElementById('actViewToggle').scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 0);
+  }
+}
+document.querySelectorAll('#actViewToggle button').forEach(b => b.onclick = () => setActView(b.dataset.v));
+document.getElementById('actSeeMap').onclick = () => document.getElementById('actMap').scrollIntoView({ behavior: 'smooth', block: 'center' });
 document.getElementById('actBack').onclick = () => {
+  document.getElementById('actView').classList.remove('map-mode');
   document.getElementById('actPick').hidden = false;
   document.getElementById('actFilters').hidden = true;
   drawActMap(allActItems());
@@ -1642,6 +1842,8 @@ function applyLang() {
   if (!document.getElementById('pickBox').hidden) document.getElementById('pickHint').textContent = t(pickTarget === 'start' ? 'pickStart' : 'pickEnd');
   if (lastRoute && !document.getElementById('route').hidden) { renderRouteTexts(); renderStopList(); refreshStoryCard(); }
   if (privacy.open) renderPrivacy();
+  renderResume();
+  updateCreateBar();
 }
 async function setLang(code) {
   stopAudio();
@@ -1659,11 +1861,15 @@ document.getElementById('heroCta').onclick = e => {
   document.getElementById('interestsTitle').scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
 document.getElementById('restart').onclick = () => {
-  stopAudio();
-  document.getElementById('route').hidden = true;
-  document.getElementById('pick').hidden = false;
-  window.scrollTo(0, 0);
+  if (history.state?.r) history.back();          // same as the browser's Back
+  else { history.replaceState(null, '', location.pathname); showPickView(); }
 };
+document.getElementById('resumeBtn').onclick = () => {
+  if (restoreRoute()) history.pushState({ r: 1 }, '', '#ruta');
+};
+// Opening the page: back to the route if it was open (reload, locked phone), else offer it.
+if (location.hash === '#ruta' && !restoreRoute()) history.replaceState(null, '', location.pathname);
+renderResume();
 </script>
 </body>
 </html>
