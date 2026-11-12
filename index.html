@@ -588,6 +588,23 @@
   .mini-player { padding-top: 14px; overflow: hidden; }
   .create-bar .primary { max-width: none; }
 
+  /* ===== Eixample blocks: only the interest tiles and the Activities sections =====
+     Each card is a Cerdà block (a square with chamfered corners). Side by side, the
+     gaps read as streets and the cut corners open small octagonal crossings. */
+  #interests, .cat-tiles { --street: 18px; gap: var(--street); }
+  #interests .tile, .cat-tiles .tile {
+    --ch: 22px;
+    border-radius: 0; box-shadow: none; outline: 0;
+    clip-path: polygon(var(--ch) 0, calc(100% - var(--ch)) 0, 100% var(--ch), 100% calc(100% - var(--ch)),
+                       calc(100% - var(--ch)) 100%, var(--ch) 100%, 0 calc(100% - var(--ch)), 0 var(--ch));
+  }
+  .cat-tiles .tile { --ch: 30px; }
+  /* The clip would cut an outline, so "chosen" and keyboard focus are drawn inside the block */
+  #interests .tile[aria-pressed="true"] { outline: 0; box-shadow: inset 0 0 0 4px var(--cobalt); }
+  #interests .tile[aria-pressed="true"] > span { background: var(--cobalt); color: #fff; }
+  #interests .tile:focus-visible, .cat-tiles .tile:focus-visible { outline: 0; box-shadow: inset 0 0 0 4px var(--sun), inset 0 0 0 7px var(--navy); }
+  #interests .tile[aria-pressed="true"]:focus-visible { box-shadow: inset 0 0 0 4px var(--sun), inset 0 0 0 7px var(--cobalt); }
+  @media (max-width: 640px) { #interests, .cat-tiles { --street: 12px; } #interests .tile { --ch: 16px; } .cat-tiles .tile { --ch: 22px; } }
 </style>
 </head>
 <body>
