@@ -758,6 +758,32 @@ INTERESTS.forEach(i => {
 const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal' };
 const BCN_CENTER = [41.3874, 2.1686];
 
+// Two-finger zoom on every map.
+// Phones/tablets: Leaflet's own pinch zoom (touchZoom), always on.
+// Laptop trackpads: a pinch arrives as ctrl+wheel (Chrome, Edge, Firefox) or as
+// gesture events (Safari). We zoom the map for those, but keep plain two-finger
+// scrolling for the page, so the map never traps the scroll.
+function enablePinchZoom(m) {
+  m.options.zoomSnap = 0.25;
+  const el = m.getContainer();
+  el.addEventListener('wheel', e => {
+    if (!e.ctrlKey) return;              // a normal scroll: let the page move
+    e.preventDefault();
+    const target = m.getZoom() - e.deltaY * 0.012;
+    m.setZoomAround(m.mouseEventToContainerPoint(e), Math.max(m.getMinZoom(), Math.min(m.getMaxZoom(), target)), { animate: false });
+  }, { passive: false });
+  let startZoom = null, at = null;
+  el.addEventListener('gesturestart', e => { e.preventDefault(); startZoom = m.getZoom(); at = m.mouseEventToContainerPoint(e); });
+  el.addEventListener('gesturechange', e => {
+    if (startZoom === null) return;
+    e.preventDefault();
+    const target = startZoom + Math.log2(e.scale);
+    m.setZoomAround(at, Math.max(m.getMinZoom(), Math.min(m.getMaxZoom(), target)), { animate: false });
+  });
+  el.addEventListener('gestureend', e => { e.preventDefault(); startZoom = null; });
+  return m;
+}
+
 function pressOnly(container, button) {
   container.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === button));
 }
@@ -786,7 +812,7 @@ function showPicker(target) {
   document.getElementById('pickBox').hidden = false;
   document.getElementById('pickHint').textContent = t(target === 'start' ? 'pickStart' : 'pickEnd');
   if (!pickMap) {
-    pickMap = L.map('pickMap', { scrollWheelZoom: false }).setView(BCN_CENTER, 13);
+    pickMap = enablePinchZoom(L.map('pickMap', { scrollWheelZoom: false, touchZoom: true })).setView(BCN_CENTER, 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(pickMap);
     pickMap.on('click', e => setPoint(pickTarget, { lat: e.latlng.lat, lng: e.latlng.lng }));
   }
@@ -931,7 +957,7 @@ function showRoute() {
   window.scrollTo(0, 0);
 
   if (!map) {
-    map = L.map('map', { zoomControl: true, scrollWheelZoom: false });
+    map = enablePinchZoom(L.map('map', { zoomControl: true, scrollWheelZoom: false, touchZoom: true }));
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19, attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
@@ -1304,7 +1330,7 @@ function actPopup(id, p) {
 // Created the first time the Activities tab opens (Leaflet needs a visible box).
 function ensureActMap() {
   if (actMap) { actMap.invalidateSize(); return; }
-  actMap = L.map('actMap', { scrollWheelZoom: false }).setView(BCN_CENTER, 13);
+  actMap = enablePinchZoom(L.map('actMap', { scrollWheelZoom: false, touchZoom: true })).setView(BCN_CENTER, 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(actMap);
   actLayer = L.layerGroup().addTo(actMap);
   drawActMap(actItems);
