@@ -492,6 +492,96 @@
   .privacy-actions .close { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
   .suggest { background: var(--sun); }
 
+  /* ===== Gaudí layer: no straight lines. Rounded everything, trencadís, bench waves ===== */
+  :root {
+    --r-xl: 32px;   /* hero card, big panels */
+    --r-lg: 24px;   /* cards, maps, player */
+    --r-md: 16px;   /* photos inside cards, thumbs */
+    --r-pill: 999px;
+    --trencadis: url("assets/guell/trencadis-band.svg");
+    --trencadis-tile: url("assets/guell/trencadis-tile.svg");
+  }
+
+  /* Softer labels: sentence case in the text face (no typewriter capitals) */
+  .tag, .opt-label, .filter-group h3, .place .meta, .results-head span, .tile-meta, .stop-area, .summary, .act-pop .cat, .listened-count {
+    font-family: var(--sans) !important; text-transform: none !important; letter-spacing: 0 !important; font-size: 14px !important;
+  }
+  .tag { font-size: 13px !important; }
+  .opt-label, .filter-group h3 { font-weight: 600 !important; color: var(--navy) !important; }
+  /* Interests are not a sequence: no 01, 02… */
+  #interests .tile > span::before { content: none; }
+
+  /* Brand mark: a round trencadís medallion before the wordmark */
+  .logo { display: inline-flex; align-items: center; gap: 0; }
+  .logo::before { content: ''; margin-right: 10px; width: 34px; height: 34px; border-radius: 50%; background: var(--trencadis-tile) center / 90px; box-shadow: inset 0 0 0 2px #fff, 0 0 0 1.5px var(--cobalt); flex: none; }
+
+  /* Tabs: rounded pill underline */
+  .tabs { border-bottom: 0; gap: 8px; }
+  .tabs button { padding: 10px 16px; border-radius: var(--r-pill); }
+  .tabs button::after { left: 16px; right: 16px; bottom: 4px; height: 4px; border-radius: 4px; }
+  .tabs button[aria-selected="true"] { background: rgba(255,255,255,.75); }
+  .tabs button { white-space: nowrap; }
+  @media (max-width: 480px) { .tabs { gap: 2px; } .tabs button { padding: 9px 12px; font-size: 15px; } .tabs button::after { left: 12px; right: 12px; } }
+
+  /* Hero: photo with a serpentine-bench edge; round card with a trencadís crest */
+  /* The photo itself is cut along the bench curve, so the real background shows below */
+  .hero img { border-radius: 0; -webkit-mask: linear-gradient(#000, #000) top / 100% calc(100% - 63px) no-repeat, url("assets/guell/wave-mask.svg") bottom / 100% 64px no-repeat; mask: linear-gradient(#000, #000) top / 100% calc(100% - 63px) no-repeat, url("assets/guell/wave-mask.svg") bottom / 100% 64px no-repeat; }
+  .hero::after { display: none; }
+  .hero-text { border-radius: var(--r-xl); padding-top: 0; overflow: hidden; box-shadow: 0 18px 40px rgba(10,26,94,.18); }
+  .hero-text::before { width: auto; height: 22px; margin: 0 -26px 22px; background: var(--trencadis) left center / 160px 24px repeat-x; border-radius: 0; }
+  @media (max-width: 640px) { .hero-text { margin-top: -40px; } }
+
+  /* Key facts: the trencadís bench instead of a flat colour strip */
+  .facts::after { height: 22px; border-radius: var(--r-pill); background: var(--trencadis) left center / 160px 24px repeat-x; box-shadow: inset 0 0 0 2px #fff; }
+  .facts svg { width: 26px; height: 26px; padding: 5px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1.5px var(--mist); box-sizing: content-box; }
+
+  /* Section titles: a little bench wave instead of a ruler line */
+  h2, .results-head { border-top: 0 !important; background: url("assets/guell/wave-line.svg") left top / 96px 16px no-repeat; padding-top: 40px; }
+  .results-head h2, .tip-group h2, .suggest h2, dialog h2, .act-map-wrap .results-head h2 { background: none; padding-top: 0; }
+  #actView.map-mode .act-map-wrap .results-head { background: none; padding-top: 0; }
+
+  /* Cards and panels */
+  .tile { border-radius: var(--r-lg); box-shadow: 0 2px 0 var(--mist), 0 10px 24px rgba(10,26,94,.06); }
+  .tile img { border-radius: 0; }
+  .tile .check { width: 36px; height: 36px; }
+  .cat-tiles .tile { border-radius: var(--r-xl); }
+  .badge { width: 66px; height: 66px; }
+  .place, .tip, .stop-card, .player, .resume, .map-note, .suggest { border-radius: var(--r-lg); }
+  .resume { border-left: 0; box-shadow: inset 6px 0 0 var(--sun), 0 10px 24px rgba(10,26,94,.08); }
+  .stop-card { overflow: hidden; }
+  .stop-photo { margin: 0 -24px 20px; }
+  .player { border-radius: var(--r-lg); }
+  .stop-card .player { margin-left: -6px; margin-right: -6px; }
+  .map-note { border-left: 0; box-shadow: inset 4px 0 0 var(--sky); }
+  #map, #actMap, #pickMap { border-radius: var(--r-lg); overflow: hidden; }
+  ol.stops .thumb { border-radius: var(--r-md); }
+  ol.stops li button { border-bottom: 0; padding: 10px; margin: 4px 0; border-radius: var(--r-lg); }
+  ol.stops li button:hover { background: rgba(255,255,255,.7); }
+  ol.stops li button.current { background: #fff; box-shadow: 0 6px 18px rgba(10,26,94,.08); }
+  ol.stops li button.current .thumb { outline: 0; box-shadow: 0 0 0 3px var(--sun); }
+
+  /* Controls: everything a pill */
+  .seg { border-radius: var(--r-pill); overflow: hidden; padding: 3px; gap: 3px; border: 1px solid var(--line); }
+  .seg button { border-radius: var(--r-pill); border-left: 0 !important; }
+  .chip, .primary, .cta, .book, .play, .nav button, .locate-btn, .lang-btn, .act-legend button, .feedback button, .privacy-actions button, .ghost.clear-filters { border-radius: var(--r-pill); }
+  .primary { padding: 18px 26px; }
+  .cta { padding: 13px 20px 13px 24px; }
+  .book { padding: 10px 18px; }
+  .lang-menu { border-radius: var(--r-lg); padding: 8px; }
+  .lang-menu button { border-radius: var(--r-md); }
+  dialog { border-radius: var(--r-xl); }
+  .range input, .pl-bar input { border-radius: var(--r-pill); }
+  .leaflet-popup-content-wrapper { border-radius: 18px; }
+  .leaflet-popup-tip { border-radius: 2px; }
+  .act-pop a.book { border-radius: var(--r-pill); }
+  .listened-tag { border-radius: var(--r-pill); }
+
+  /* Bottom bars float as rounded capsules instead of edge-to-edge strips */
+  .mini-player, .create-bar { left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); padding: 10px 12px; border-radius: 26px; box-shadow: 0 12px 34px rgba(10,26,94,.22); }
+  .create-bar { padding: 8px; }
+  .mini-player { padding-top: 14px; overflow: hidden; }
+  .create-bar .primary { max-width: none; }
+
 </style>
 </head>
 <body>
