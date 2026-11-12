@@ -592,6 +592,8 @@
      Each card is a Cerdà block (a square with chamfered corners). Side by side, the
      gaps read as streets and the cut corners open small octagonal crossings. */
   #interests, .cat-tiles { --street: 18px; gap: var(--street); }
+  /* The grid sits on a street plan: a darker "asphalt" shows between and around the blocks */
+  #interests, .cat-tiles { padding: var(--street); background: #A9BCCB; border-radius: var(--r-lg); }
   #interests .tile, .cat-tiles .tile {
     --ch: 22px;
     border-radius: 0; box-shadow: none; outline: 0;
