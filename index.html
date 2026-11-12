@@ -1633,7 +1633,7 @@ function showTab(name) {
   document.getElementById('tabAct').setAttribute('aria-selected', name === 'act');
   document.getElementById('tabTips').setAttribute('aria-selected', name === 'tips');
   if (name === 'walk' && map) map.invalidateSize();
-  if (name === 'act') { ensureActMap(); startWatchingMe(); } else stopWatchingMe();
+  if (name === 'act') { ensureActMap(); resumeWatchingIfAllowed(); } else stopWatchingMe();
   updateCreateBar(); updateMini(); checkBottomBars();
   window.scrollTo(0, 0);
 }
@@ -1893,6 +1893,14 @@ function startWatchingMe() {
     if (err.code === err.PERMISSION_DENIED) { stopWatchingMe(); geoStatus(t('geoDenied')); }
     else if (!mePos) geoStatus(t('geoUnavailable'));
   }, { enableHighAccuracy: true, maximumAge: 15000, timeout: 20000 });
+}
+// Location is only asked for when the visitor taps "Where am I?". If they already allowed it
+// before, the blue dot comes back by itself when they open Activities, without asking again.
+async function resumeWatchingIfAllowed() {
+  try {
+    const st = await navigator.permissions?.query({ name: 'geolocation' });
+    if (st?.state === 'granted') startWatchingMe();
+  } catch (e) {}
 }
 function stopWatchingMe() {
   if (meWatch !== null) navigator.geolocation.clearWatch(meWatch);
