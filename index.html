@@ -1081,10 +1081,9 @@ function storyFor(s) {
   return { ...storyText(s, angle), angle, learned: !!angle && angle !== first };
 }
 // The text, recording and tip of one version of a stop's story, in the current language.
-function storyText(s, angle = null) {
+function storyText(s, angle = null, length = plan.length) {
   const gen = STORIES[s.id] || {};
   const key = angle || 'base';
-  const length = plan.length;
   // English normal version and its recorded audio: always available.
   let text = angle ? gen.variants[angle].story : s.story;
   let audio = angle ? gen.variants[angle].audio : gen.base?.audio;
@@ -2210,7 +2209,8 @@ function openGuideStop(s, scroll = true) {
   if (prev && guideMarkers[prev.id]) guideMarkers[prev.id].setIcon(guideIcon(prev)).setZIndexOffset(0);
   if (!guideMarkers[s.id] && guideMap) drawGuideMap();
   guideMarkers[s.id]?.setIcon(guideIcon(s)).setZIndexOffset(500);
-  const st = { ...storyText(s), angle: null };
+  // The audio guide always tells the medium version (about a minute), whatever the routes use.
+  const st = { ...storyText(s, null, 'normal'), angle: null };
   const [icon, c] = INT_STYLE[guideInterest(s)];
   const away = mePos ? metres(mePos, s) : null;
   const dest = `https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=walking`;
