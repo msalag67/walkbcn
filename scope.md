@@ -29,7 +29,7 @@ For the MVP, we will not include:
 
 **Rule for adding later:** We only add a feature if user testing shows that it solves a real user need or provides significant value.
 
-**Change log:** We moved "personalised story versions" and a limited "Activities" list into the MVP. Activities was not backed by user testing, which breaks our own rule above; we keep it only as a demand test (we will measure clicks on "See & book") and will remove it if users do not use it.
+**Change log:** After the November 2026 audit we added directions to each stop, routes drawn along the streets, four themed starting points and search in the audio guide; these fix problems found when using the product (getting lost between stops, unclear time and distance), which our survey also asked for (a clearer map and directions). We moved "personalised story versions" and a limited "Activities" list into the MVP. Activities was not backed by user testing, which breaks our own rule above; we keep it only as a demand test (we will measure clicks on "See & book") and will remove it if users do not use it.
 
 ## Main assumption tested
 

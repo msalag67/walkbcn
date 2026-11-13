@@ -67,3 +67,9 @@ Abre `content/review.md`: tiene todas las historias generadas y, para cada una, 
 | `content/review.md` | Hoja de revisión de las historias |
 | `audio/` | Audios generados |
 | `scripts/generate.mjs` | El generador |
+| `scripts/check.mjs` | Comprobaciones rápidas: textos en los 7 idiomas, paradas, avisos con fecha y fuente, audios y temas (`node scripts/check.mjs`) |
+| `evals/audit-scenarios.js` | Los escenarios de la auditoría de noviembre de 2026, para pegar en la consola del navegador |
+
+### Avisos con fecha en una parada
+
+En `data/stops.js`, `WALKBCN_NOTICES` guarda avisos prácticos (obras, traslados, qué queda de un lugar) que solo se muestran entre `from` y `until`, con la fuente y el día en que se comprobó. Cuando pase la fecha, revisa la fuente y actualízalo.

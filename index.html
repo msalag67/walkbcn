@@ -6,6 +6,7 @@
 <title>WalkBCN</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%23151515%22/%3E%3Ctext x=%2216%22 y=%2222%22 font-size=%2216%22 font-family=%22Georgia%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22%3EW%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha256-YU3qCpj/P06tdPBJGPax0bm6Q1wltfwjsho5TR4+TYc=" crossorigin="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Commissioner:wght@300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -732,6 +733,117 @@
   .near-list li button.current .thumb { outline: 3px solid var(--cobalt); outline-offset: -3px; }
   #guideView:not([hidden]) { animation: fadeIn .5s var(--ease); }
   @media (prefers-reduced-motion: reduce) { .guide-pin { transition: none; } #guideView:not([hidden]) { animation: none; } }
+
+  /* ===== November 2026: audit improvements ===== */
+  /* Themed starting points */
+  .themes { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .theme { display: flex; align-items: center; gap: 12px; text-align: left; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: var(--r-md, 16px); padding: 8px; cursor: pointer; font: inherit; min-height: 72px; }
+  .theme img { width: 56px; height: 56px; flex: none; object-fit: cover; border-radius: 12px; background: var(--mist); }
+  .theme b { display: block; font-weight: 600; color: var(--navy); line-height: 1.25; }
+  .theme small { display: block; color: var(--muted); font-size: 13px; line-height: 1.35; margin-top: 2px; }
+  .theme:hover { border-color: var(--navy); }
+  .theme[aria-pressed="true"] { border-color: var(--cobalt); box-shadow: inset 0 0 0 2px var(--cobalt); }
+  .theme-active { margin-top: 14px; padding: 12px 16px; background: var(--panel); border-left: 5px solid var(--sun); border-radius: 12px; color: var(--navy); font-size: 15px; }
+  .theme-active p { margin: 0; }
+  .theme-actions { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+  .theme-actions .ghost, .loc-actions .ghost { padding-top: 8px; font-size: 15px; }
+
+  /* Start / finish picker */
+  .pick-targets { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+  .pick-targets.single { grid-template-columns: 1fr; }
+  .pick-targets button { display: flex; align-items: center; gap: 10px; text-align: left; border: 1px solid var(--line); background: var(--panel); color: var(--navy); border-radius: 14px; padding: 8px 12px; font: 600 15px var(--sans); cursor: pointer; min-height: 52px; }
+  .pick-targets button[aria-pressed="true"] { border-color: var(--cobalt); box-shadow: inset 0 0 0 2px var(--cobalt); }
+  .pick-targets small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); }
+  .pick-targets .pin { width: 28px; height: 28px; flex: none; font-style: normal; }
+  .pick-search { display: flex; gap: 8px; margin-top: 10px; }
+  .pick-search input, .guide-tools input { flex: 1; min-width: 0; min-height: 44px; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font: 16px var(--sans); color: var(--navy); background: #fff; }
+  .pick-search button { min-height: 44px; border: 0; border-radius: 999px; padding: 0 18px; background: var(--navy); color: #fff; font: 600 15px var(--sans); cursor: pointer; }
+  .pick-results { list-style: none; margin: 8px 0 0; padding: 0; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .pick-results li + li { border-top: 1px solid var(--line); }
+  .pick-results button { width: 100%; text-align: left; border: 0; background: none; padding: 12px 14px; font: 15px var(--sans); color: var(--navy); cursor: pointer; min-height: 44px; }
+  .pick-results button:hover, .pick-results button:focus-visible { background: var(--panel); }
+  .pick-results .hint { padding: 10px 14px; margin: 0; }
+  .loc-status { margin-top: 12px; padding: 12px 16px; background: var(--panel); border-left: 5px solid var(--sky); border-radius: 12px; color: var(--navy); font-size: 15px; }
+  .loc-status p { margin: 0; }
+  .loc-actions { display: flex; flex-wrap: wrap; gap: 0 18px; }
+
+  /* Route screen */
+  .sum-notes { flex-basis: 100%; margin: 0; font-size: 14px; color: var(--muted); }
+  .map-foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+  .line-note { margin: 8px 0 0; font-size: 14px; color: var(--muted); }
+  .line-note.sketch { color: var(--navy); }
+  .share-btn { padding-top: 8px; font-size: 15px; }
+  .stop-address { font-size: 14px; color: var(--navy); margin-top: 2px; }
+  .notice { margin-top: 16px; padding: 12px 16px; background: #fff6d6; border-left: 5px solid var(--sun); border-radius: 12px; color: var(--navy); font-size: 15px; }
+  .notice p { margin: 0; }
+  .notice .notice-meta { margin-top: 6px; font-size: 13px; color: var(--muted); }
+  .go-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 16px; }
+  .go-row .book { margin-top: 0; }
+  .book.go { background: var(--navy); color: #fff; border-radius: 999px; min-height: 44px; }
+  .book.go.alt { background: #fff; color: var(--navy); border: 1px solid var(--navy); }
+  .go-row .hint { flex-basis: 100%; margin: 0; font-size: 13px; }
+  .near-acts { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 10px; }
+  .near-acts summary { cursor: pointer; font-weight: 600; color: var(--navy); min-height: 32px; }
+  .near-acts ul { list-style: none; margin: 6px 0 0; padding: 0; }
+  .near-acts li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; display: flex; flex-wrap: wrap; gap: 2px 8px; align-items: baseline; }
+  .near-acts .cat { flex-basis: 100%; font-size: 12px; color: var(--muted); }
+  .near-acts .d { color: var(--muted); font-size: 13px; }
+  .near-acts a { margin-left: auto; font-size: 14px; color: var(--cobalt); }
+  .visit-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .visit-row button { min-height: 44px; border: 1px solid var(--line); background: #fff; color: var(--navy); border-radius: 999px; padding: 8px 16px; font: 500 15px var(--sans); cursor: pointer; }
+  .visit-row button[aria-pressed="true"] { background: var(--sky); border-color: var(--sky); }
+  .nav button { min-height: 44px; }
+  .nav .finish { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+  .nav-hint { flex-basis: 100%; margin: 4px 0 0; font-size: 13px; }
+  .walk-done { margin-top: 18px; padding: 18px 20px; background: var(--panel); border-left: 6px solid var(--sky); border-radius: var(--r-lg, 24px); color: var(--navy); }
+  .walk-done h3 { margin: 0; font: 400 26px/1.15 var(--display); }
+  .walk-done p { margin: 6px 0 0; }
+  .done-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-top: 12px; }
+  .done-actions .primary { width: auto; margin: 0; }
+  .done-actions .ghost { padding-top: 0; }
+  ol.stops li button .nm { display: flex; flex-direction: column; min-width: 0; }
+  ol.stops .st { font-size: 12px; font-weight: 600; color: var(--muted); }
+  ol.stops .st.visited { color: #1d7a4a; }
+  ol.stops li.skipped button .nm { text-decoration: line-through; text-decoration-color: var(--muted); color: var(--muted); }
+  ol.stops li.visited .n { background: #1d7a4a !important; color: #fff !important; }
+  ol.stops li.finish-leg { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 16px; }
+  ol.stops li.finish-leg .pin { width: 30px; height: 30px; margin: 0 15px; }
+  ol.stops li.finish-leg .d { margin-left: auto; font-size: 14px; }
+  .pin.done { background: #1d7a4a; color: #fff; }
+  figure.broken img { visibility: hidden; }
+
+  /* Player states */
+  .pl-status { margin: 0; font-size: 14px; color: var(--muted); min-height: 0; }
+  .pl-status:empty { display: none; }
+  .pl-status .ghost { padding: 0; font-size: 14px; }
+  .player.error .pl-status { color: #9b2c1a; }
+  .player.loading .pl-play { animation: plPulse 1s ease-in-out infinite; }
+  @keyframes plPulse { 50% { opacity: .55; } }
+  @media (prefers-reduced-motion: reduce) { .player.loading .pl-play { animation: none; opacity: .7; } }
+  body.has-mini footer { padding-bottom: 90px; }
+
+  /* Activities alternatives */
+  .place.alt { opacity: .92; border-left: 4px dashed var(--sky); }
+  .alt-tag { margin: 0 0 6px !important; font-size: 13px !important; color: var(--navy); font-weight: 600; }
+
+  /* Audio guide: search, list and clusters */
+  .guide-tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; align-items: center; }
+  .guide-tools .seg { flex: none; }
+  .guide-list { margin-top: 12px; }
+  .guide-list .nm { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  ol.guide-list li button .d { margin-left: 0; }
+  .guide-list i { position: absolute; left: 3px; top: 3px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--c); border: 2px solid var(--c); }
+  .guide-list i svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .cluster { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: #fff; font: 600 14px var(--sans); border: 3px solid #fff; box-shadow: 0 1px 6px rgba(0,0,0,.35); }
+  @media (max-width: 640px) {
+    .themes { grid-template-columns: 1fr; }
+    #lengthSeg, #paceSeg { display: flex; width: 100%; }
+    #lengthSeg button, #paceSeg button { flex: 1; padding: 10px 6px; font-size: 15px; }
+    .stop-card { padding: 0 16px 20px; }
+    .nav { margin-left: 0; width: 100%; }
+    .nav button { flex: 1; }
+  }
+  :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -784,6 +896,11 @@
       </ul>
     </div>
 
+    <!-- Ready-made starting points: they fill in the choices below, which stay editable -->
+    <h2 data-i18n="themesTitle" id="themesTitle">Not sure? Start with an idea</h2>
+    <div class="themes" id="themes"></div>
+    <div class="theme-active" id="themeActive" hidden></div>
+
     <h2 data-i18n="interestsTitle" id="interestsTitle">What are you interested in?</h2>
     <div class="tiles" id="interests"></div>
 
@@ -805,7 +922,7 @@
         <button type="button" class="chip" data-v="120" aria-pressed="false">2 h</button>
         <button type="button" class="chip" data-v="180" aria-pressed="false">3 h</button>
       </div>
-      <p class="hint" data-i18n="timeHint">Includes about 10 minutes at each stop to listen and look around.</p>
+      <p class="hint" data-i18n="timeHint2">Includes 5–8 minutes at each stop to listen and look around (depends on the story length). Going inside and queues are not included.</p>
     </div>
     <div class="plan-panel" id="panel-distance" hidden>
       <div class="chips" id="distChips">
@@ -835,10 +952,17 @@
       </div>
     </div>
     <div id="pickBox" hidden>
+      <!-- Which point the next tap sets, and whether each one is already set -->
+      <div class="pick-targets" id="pickTargets" role="group"></div>
+      <form class="pick-search" id="pickSearch" role="search">
+        <input type="search" id="pickQuery" autocomplete="off" enterkeyhint="search">
+        <button type="submit" id="pickGo"></button>
+      </form>
+      <ul class="pick-results" id="pickResults" hidden></ul>
       <p class="hint" id="pickHint">Tap the map to set your start.</p>
       <div id="pickMap" role="region" aria-label="Choose a point on the map"></div>
     </div>
-    <p class="hint" id="locStatus" hidden></p>
+    <div class="loc-status" id="locStatus" role="status" hidden></div>
 
     <h2 data-i18n="detailsTitle">A few more details</h2>
     <div class="opt-row">
@@ -857,7 +981,8 @@
         <button type="button" data-v="long" aria-pressed="false" data-i18n="lenLong">Long · 2 min</button>
       </div>
     </div>
-    <label class="check"><input type="checkbox" id="avoidCrowded"> <span data-i18n="avoidCrowded">Avoid the busiest places (Sagrada Família, Park Güell…)</span></label>
+    <label class="check"><input type="checkbox" id="avoidCrowded" aria-describedby="avoidCrowdedHint"> <span data-i18n="avoidIcons">Skip the big icons (Sagrada Família, Park Güell, Casa Batlló…)</span></label>
+    <p class="hint" id="avoidCrowdedHint" data-i18n="avoidIconsHint">A fixed list of the most-visited sights, not live crowd data.</p>
 
     <button class="primary" id="build" disabled><span data-i18n="build">Create my route</span><i class="arrow" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></i></button>
     <p class="hint build-hint" id="buildHint" data-i18n="buildHint">Choose at least one interest to create your route.</p>
@@ -868,8 +993,10 @@
     <h1 id="routeTitle">Your route</h1>
     <div class="summary" id="summary"></div>
     <div id="map" role="region" aria-label="Route map"></div>
+    <div class="map-foot"><p class="line-note" id="routeLineNote"></p><button type="button" class="ghost share-btn" id="shareRoute">Share</button></div>
 
-    <div class="stop-card" id="stopCard" aria-live="polite"></div>
+    <div class="stop-card" id="stopCard"></div>
+    <div class="walk-done" id="walkDone" role="status" hidden></div>
 
     <p class="listened-count" id="listenedCount"></p>
     <ol class="stops" id="stopList"></ol>
@@ -916,9 +1043,18 @@
   <section id="guideView" hidden>
     <h1 data-i18n="guideTitle">The whole city, one story at a time.</h1>
     <p class="lead" data-i18n="guideLead">Tap any point on the map to hear its story. Share your location and we'll show you what's closest.</p>
+    <div class="guide-tools">
+      <input type="search" id="guideSearch" autocomplete="off" enterkeyhint="search">
+      <div class="seg" id="guideViewToggle" role="group">
+        <button type="button" data-v="map" aria-pressed="true" data-i18n="viewMap">Map</button>
+        <button type="button" data-v="list" aria-pressed="false" data-i18n="viewList">List</button>
+      </div>
+    </div>
     <div class="guide-filter" id="guideFilter" role="group"></div>
-    <div class="results-head guide-head"><span id="guideCount"></span><button type="button" class="locate-btn" id="guideLocate" data-i18n="actLocate">Where am I?</button></div>
+    <div class="results-head guide-head"><span id="guideCount" role="status"></span><button type="button" class="locate-btn" id="guideLocate" data-i18n="actLocate">Where am I?</button></div>
+    <p class="empty" id="guideEmpty" hidden></p>
     <div id="guideMap" role="region" aria-label="Audio guide map"></div>
+    <ol class="stops guide-list" id="guideList" hidden></ol>
     <p class="hint" id="guideGeoStatus"></p>
     <div class="stop-card guide-card" id="guideCard" aria-live="polite" hidden></div>
     <div class="guide-near" id="guideNear">
@@ -948,6 +1084,7 @@
     <p><b data-i18n="privacyP2a">All of this stays in this browser.</b> <span data-i18n="privacyP2b">It is never sent to us or anyone else, and there is no account.</span></p>
     <p id="privacySummary"></p>
     <label><input type="checkbox" id="learningOptOut"> <span data-i18n="optOut">Don't learn from what I do</span></label>
+    <p data-i18n="privacyRouting">To draw your route along the streets, the points of the route (including your start, if you chose one) are sent to the OpenStreetMap walking router. Address searches send only the text you type.</p>
     <p data-i18n="privacyP3">Learning only changes the order and choice of stories already in the app. It never writes or publishes new ones, and it must never put engagement or commercial interests above historical accuracy, your privacy or respect for local residents.</p>
     <div class="privacy-actions">
       <button type="button" id="learningErase" data-i18n="erase">Erase my data</button>
@@ -967,9 +1104,10 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="data/stops.js?v=3"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg=" crossorigin=""></script>
+<script src="data/stops.js?v=4"></script>
 <script src="data/activities.js?v=7"></script>
-<script src="data/ui.js?v=12"></script>
+<script src="data/ui.js?v=13"></script>
 <script src="data/tips.js?v=2"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=7"></script>
@@ -977,6 +1115,7 @@
 // Photos come from Wikimedia Commons (free licences); credit links point to each file page.
 const photo = (file, w = 800) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
 const credit = file => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, '_'))}`;
+const escHtml = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 const INTERESTS = [
   { id: 'architecture', label: 'Architecture',   img: 'Casa Batllo Overview Barcelona Spain cut.jpg' },
@@ -989,6 +1128,22 @@ const INTERESTS = [
   { id: 'culture',      label: 'Culture',        img: "Gran Teatre del Liceu (façana).jpg" },
 ];
 const HERO_IMG = 'Evening light over Barcelona.jpg';
+
+// Themed starting points. Each one fills in the interests and length; `pool` limits the
+// route to the stops that really belong to the theme. All of them stay editable.
+const THEMES = {
+  firstDay:   { img: 'Barcelona - Carrer del Bisbe.jpg', interests: ['architecture', 'history', 'art', 'local'], mode: 'time', minutes: 120,
+                pool: ['santa-maria-del-mar', 'barcelona-cathedral', 'placa-del-rei', 'placa-sant-jaume', 'placa-sant-felip-neri', 'temple-august',
+                       'placa-reial', 'liceu', 'font-canaletes', 'palau-de-la-musica-catalana', 'mercat-de-santa-caterina', 'museu-picasso',
+                       'palau-guell', 'antic-hospital', 'port-vell', 'fossar-moreres'] },
+  barca:      { img: '34 Fundació del F.C. Barcelona, c. Montjuïc del Carme.jpg', interests: ['sports', 'history'], mode: 'stops', n: 3,
+                pool: ['gimnas-sole', 'font-canaletes', 'placa-sant-jaume'], act: 'sports' },
+  gracia:     { img: 'Young adults sit and talk in Plaza del Sol in Barcelona.jpg', interests: ['local', 'food', 'history', 'architecture'], mode: 'time', minutes: 90,
+                pool: ['mercat-de-la-llibertat', 'placa-del-sol', 'casa-vicens', 'placa-vila-gracia', 'placa-virreina', 'mercat-abaceria'] },
+  modernisme: { img: 'Casa Batllo Overview Barcelona Spain cut.jpg', interests: ['architecture', 'art'], mode: 'time', minutes: 150,
+                pool: ['sagrada-familia', 'recinte-modernista-de-sant-pau', 'casa-mila', 'casa-batllo', 'palau-de-la-musica-catalana', 'casa-vicens',
+                       'casa-punxes', 'fundacio-tapies', 'palau-guell', 'park-guell', 'arc-de-triomf'] },
+};
 
 const STOPS = window.WALKBCN_STOPS;
 const STORIES = window.WALKBCN_STORIES || {};
@@ -1158,7 +1313,7 @@ addEventListener('scroll', checkBottomBars, { passive: true });
 addEventListener('resize', checkBottomBars);
 document.getElementById('createBarBtn').onclick = () => showRoute();
 // ---- Route options: how long, where to start and finish, pace ----
-const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal' };
+const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal', theme: null };
 const BCN_CENTER = [41.3874, 2.1686];
 
 // Two-finger zoom on every map.
@@ -1206,51 +1361,191 @@ onChoice('paceSeg', d => { plan.pace = +d.v; });
 onChoice('lengthSeg', d => { plan.length = d.v; if (lang === 'en' && d.v !== 'normal') loadLangData('en'); refreshStoryCard(); });
 document.getElementById('avoidCrowded').onchange = e => { plan.avoidCrowded = e.target.checked; };
 
-// Start and finish points. "Choose on map" opens a small map; "Where I am now" asks the browser.
+// Put the buttons back in line with `selected`, `plan` and `stopsCount` (themes, restored routes).
+function syncPlanControls() {
+  document.querySelectorAll('#interests .tile').forEach(b => b.setAttribute('aria-pressed', selected.has(b.dataset.id)));
+  stopsRange.value = stopsCount; document.getElementById('stopsValue').textContent = stopsCount;
+  const press = (id, attr, value) => { const box = document.getElementById(id); const b = box.querySelector(`button[data-${attr}="${value}"]`); if (b) pressOnly(box, b); };
+  press('planMode', 'mode', plan.mode); press('paceSeg', 'v', plan.pace); press('lengthSeg', 'v', plan.length);
+  press('timeChips', 'v', plan.minutes); press('distChips', 'v', plan.km); press('startChips', 'v', plan.start); press('endChips', 'v', plan.end);
+  ['stops', 'time', 'distance'].forEach(m => { document.getElementById(`panel-${m}`).hidden = m !== plan.mode; });
+  document.getElementById('avoidCrowded').checked = !!plan.avoidCrowded;
+  document.getElementById('build').disabled = selected.size === 0;
+  renderThemes();
+  updateCreateBar();
+}
+
+// ---- Themed starting points ----
+function renderThemes() {
+  const el = document.getElementById('themes');
+  el.innerHTML = Object.entries(THEMES).map(([id, th]) => `
+    <button type="button" class="theme" data-id="${id}" aria-pressed="${plan.theme === id}">
+      <img src="${photo(th.img, 400)}" alt="" loading="lazy">
+      <span><b>${t(`theme_${id}`)}</b><small>${t(`theme_${id}_sub`)}</small></span>
+    </button>`).join('');
+  el.querySelectorAll('.theme').forEach(b => b.onclick = () => (plan.theme === b.dataset.id ? clearTheme() : applyTheme(b.dataset.id)));
+  const box = document.getElementById('themeActive');
+  const th = THEMES[plan.theme];
+  box.hidden = !th;
+  if (!th) return;
+  box.innerHTML = `<p><b>${t('themeActive', { name: t(`theme_${plan.theme}`) })}</b> ${t(`theme_${plan.theme}_cover`)}</p>
+    <div class="theme-actions">${th.act ? `<button type="button" class="ghost" id="themeAct">${t('themeSeeAct')}</button>` : ''}
+    <button type="button" class="ghost" id="themeClear">${t('themeClear')}</button></div>`;
+  document.getElementById('themeClear').onclick = clearTheme;
+  const act = document.getElementById('themeAct');
+  if (act) act.onclick = () => { showTab('act'); openCategory(th.act); };
+}
+function applyTheme(id) {
+  const th = THEMES[id];
+  plan.theme = id;
+  selected = new Set(th.interests);
+  plan.mode = th.mode;
+  if (th.minutes) plan.minutes = th.minutes;
+  if (th.n) stopsCount = th.n;
+  syncPlanControls();
+  track('Theme picked', { theme: id });
+  document.getElementById('themeActive').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+function clearTheme() { plan.theme = null; renderThemes(); }
+
+// Start and finish points. "Choose on map" opens a small map with a Start / Finish switch,
+// an address search and draggable pins; "Where I am now" asks the browser.
 let pickMap = null, pickTarget = 'start', pickMarkers = {};
 const locStatus = document.getElementById('locStatus');
-function setStatus(text) { locStatus.hidden = !text; locStatus.textContent = text || ''; }
+// A status line under the start/finish options, with optional action buttons.
+function setStatus(text, actions = []) {
+  locStatus.hidden = !text;
+  locStatus.innerHTML = text ? `<p>${escHtml(text)}</p>${actions.length ? `<div class="loc-actions">${actions.map((a, i) => `<button type="button" class="ghost" data-i="${i}">${escHtml(a.label)}</button>`).join('')}</div>` : ''}` : '';
+  locStatus.querySelectorAll('button').forEach(b => b.onclick = () => actions[+b.dataset.i].run());
+}
+const pickingStart = () => plan.start === 'map';
+const pickingEnd = () => plan.end === 'map';
+function renderPickTargets() {
+  const box = document.getElementById('pickTargets');
+  const both = pickingStart() && pickingEnd();
+  const item = target => {
+    const set = !!plan[target === 'start' ? 'startPt' : 'endPt'];
+    return `<button type="button" data-t="${target}" aria-pressed="${pickTarget === target}">
+      <i class="pin ${target}">${target === 'start' ? 'S' : 'F'}</i>
+      <span>${t(target === 'start' ? 'start' : 'finish')}<small>${t(set ? 'pickSet' : 'pickNotSet')}</small></span></button>`;
+  };
+  box.setAttribute('aria-label', t('pickWhich'));
+  box.innerHTML = [pickingStart() ? item('start') : '', pickingEnd() ? item('end') : ''].join('');
+  box.classList.toggle('single', !both);
+  box.querySelectorAll('button').forEach(b => b.onclick = () => { pickTarget = b.dataset.t; renderPickTargets(); });
+  document.getElementById('pickHint').textContent = t(pickTarget === 'start' ? 'pickStart' : 'pickEnd');
+  document.getElementById('pickQuery').placeholder = t('pickSearchPh');
+  document.getElementById('pickQuery').setAttribute('aria-label', t('pickSearchPh'));
+  document.getElementById('pickGo').textContent = t('pickSearchBtn');
+}
 function showPicker(target) {
   pickTarget = target;
   document.getElementById('pickBox').hidden = false;
-  document.getElementById('pickHint').textContent = t(target === 'start' ? 'pickStart' : 'pickEnd');
+  renderPickTargets();
   if (!pickMap) {
     pickMap = enablePinchZoom(L.map('pickMap', { scrollWheelZoom: false, touchZoom: true })).setView(BCN_CENTER, 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(pickMap);
     pickMap.on('click', e => setPoint(pickTarget, { lat: e.latlng.lat, lng: e.latlng.lng }));
   }
-  setTimeout(() => pickMap.invalidateSize(), 0);
+  setTimeout(() => { pickMap.invalidateSize(); drawPickMarkers(); }, 0);
 }
-function setPoint(target, pt) {
-  plan[target === 'start' ? 'startPt' : 'endPt'] = pt;
+// Start/finish pins on the small map. Points picked on the map can be dragged to adjust them;
+// "Where I am now" is shown too, but stays where the phone says.
+function drawPickMarkers() {
   if (!pickMap) return;
-  pickMarkers[target]?.remove();
-  pickMarkers[target] = L.marker([pt.lat, pt.lng], { icon: L.divIcon({ className: '', html: `<div class="pin ${target}">${target === 'start' ? 'S' : 'F'}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] }) }).addTo(pickMap);
+  ['start', 'end'].forEach(target => {
+    pickMarkers[target]?.remove(); delete pickMarkers[target];
+    const pt = plan[target === 'start' ? 'startPt' : 'endPt'];
+    if (!pt) return;
+    const drag = target === 'start' ? pickingStart() : pickingEnd();
+    const m = L.marker([pt.lat, pt.lng], { icon: pointIcon(target, target === 'start' ? 'S' : 'F'), draggable: drag, title: t(target === 'start' ? 'start' : 'finish'), keyboard: false }).addTo(pickMap);
+    if (drag) m.on('dragend', () => { const ll = m.getLatLng(); setPoint(target, { lat: ll.lat, lng: ll.lng }, false); });
+    pickMarkers[target] = m;
+  });
+}
+function setPoint(target, pt, redraw = true) {
+  plan[target === 'start' ? 'startPt' : 'endPt'] = pt;
+  setStatus('');
+  if (redraw) drawPickMarkers();
+  // Start set and the finish still to choose: the next tap sets the finish.
+  if (target === 'start' && pickingEnd() && !plan.endPt) pickTarget = 'end';
+  renderPickTargets();
+  if (target === 'start') checkCoverage(pt);
 }
 function hidePickerIfUnused() {
-  if (plan.start !== 'map' && plan.end !== 'map') document.getElementById('pickBox').hidden = true;
+  if (!pickingStart() && !pickingEnd()) document.getElementById('pickBox').hidden = true;
+  else renderPickTargets();
 }
+// A start far from every stop: say so, and offer the two ways out.
+const FAR_KM = 3;
+function checkCoverage(pt) {
+  const near = Math.min(...STOPS.map(s => dist(pt, s)));
+  if (near <= FAR_KM) return true;
+  setStatus(t('statusFar', { km: fmtNum(near) }), [
+    { label: t('useBestStart'), run: () => chooseStart('best') },
+    ...(plan.start === 'map' ? [] : [{ label: t('useMapStart'), run: () => chooseStart('map') }]),
+  ]);
+  return false;
+}
+function chooseStart(v) { document.querySelector(`#startChips button[data-v="${v}"]`)?.click(); }
 onChoice('startChips', d => {
   plan.start = d.v; plan.startPt = null; setStatus('');
-  if (pickMarkers.start) { pickMarkers.start.remove(); delete pickMarkers.start; }
   if (d.v === 'map') showPicker('start');
   if (d.v === 'here') locate();
   hidePickerIfUnused();
+  drawPickMarkers();
 });
 onChoice('endChips', d => {
   plan.end = d.v; plan.endPt = null;
-  if (pickMarkers.end) { pickMarkers.end.remove(); delete pickMarkers.end; }
-  if (d.v === 'map') showPicker('end');
+  if (d.v === 'map') showPicker(pickingStart() && !plan.startPt ? 'start' : 'end');
   hidePickerIfUnused();
+  drawPickMarkers();
 });
 function locate() {
-  if (!navigator.geolocation) { setStatus(t('statusNoGeo')); return; }
+  if (!navigator.geolocation) { setStatus(t('statusNoGeo'), [{ label: t('useMapStart'), run: () => chooseStart('map') }, { label: t('useBestStart'), run: () => chooseStart('best') }]); return; }
   setStatus(t('statusLocating'));
   navigator.geolocation.getCurrentPosition(
-    pos => { plan.startPt = { lat: pos.coords.latitude, lng: pos.coords.longitude }; setStatus(t('statusGotIt')); },
-    () => setStatus(t('statusGeoFail')),
+    pos => {
+      if (plan.start !== 'here') return;   // the visitor changed their mind meanwhile
+      plan.startPt = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+      if (checkCoverage(plan.startPt)) setStatus(t('statusGotIt'));
+      drawPickMarkers();
+    },
+    err => {
+      if (plan.start !== 'here') return;
+      setStatus(t(err && err.code === 1 ? 'statusGeoDenied' : 'statusGeoFail'),
+        [{ label: t('useMapStart'), run: () => chooseStart('map') }, { label: t('useBestStart'), run: () => chooseStart('best') }]);
+    },
     { enableHighAccuracy: true, timeout: 10000 });
 }
+// Address search (OpenStreetMap Nominatim): only when the visitor presses Search, limited to
+// Barcelona, a handful of results. Only the typed text is sent.
+document.getElementById('pickSearch').onsubmit = async e => {
+  e.preventDefault();
+  const q = document.getElementById('pickQuery').value.trim();
+  const list = document.getElementById('pickResults');
+  if (q.length < 3) return;
+  list.hidden = false;
+  list.innerHTML = `<li class="hint">${t('pickSearching')}</li>`;
+  try {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&limit=5&bounded=1&viewbox=2.09,41.45,2.23,41.34&accept-language=${lang}&q=${encodeURIComponent(q)}`;
+    const seen = new Set();
+    const label = r => r.display_name.split(',').slice(0, 3).join(',');
+    // Several map objects can share a name (a square, its metro stop…): show each place once.
+    const res = (await (await fetch(url)).json()).filter(r => !seen.has(label(r)) && seen.add(label(r)));
+    if (!res.length) { list.innerHTML = `<li class="hint">${t('pickNoResults')}</li>`; return; }
+    list.innerHTML = res.map((r, i) => `<li><button type="button" data-i="${i}">${escHtml(label(r))}</button></li>`).join('');
+    list.querySelectorAll('button').forEach(b => b.onclick = () => {
+      const r = res[+b.dataset.i];
+      const pt = { lat: +r.lat, lng: +r.lon };
+      list.hidden = true;
+      pickMap.setView([pt.lat, pt.lng], 16);
+      setPoint(pickTarget, pt);
+    });
+  } catch (err) {
+    list.innerHTML = `<li class="hint">${t('pickSearchFail')}</li>`;
+  }
+};
 
 // ---- Route building ----
 function dist(a, b) { // km, haversine
@@ -1269,11 +1564,15 @@ function score(s) {
 // within the time / distance / stop budget, try to include every chosen interest, and
 // leave enough budget to reach the chosen finish. If too few stops fit, the route is
 // shorter rather than padded with unrelated places.
-const STOP_MIN = 10;          // minutes spent at each stop (listening + looking)
+// Minutes at each stop: the story (about 30 s, 1 min or 2 min) plus a few minutes to look
+// around. Going inside a building and queues are not included (the route screen says so).
+const STOP_MINUTES = { short: 5, normal: 6, long: 8 };
+const stopMinutes = () => STOP_MINUTES[plan.length] || 6;
 const LEG_MAX_MIN = 20;       // longest walk between two stops
 const FIRST_LEG_MAX_MIN = 30; // longest walk from a chosen start point to the first stop
 function buildRoute(opts) {
-  const o = { mode: 'stops', pace: 4.5, avoidCrowded: false, start: null, end: null, ...(typeof opts === 'number' ? { n: opts } : opts) };
+  const o = { mode: 'stops', pace: 4.5, avoidCrowded: false, start: null, end: null, stopMin: stopMinutes(), pool: null, ...(typeof opts === 'number' ? { n: opts } : opts) };
+  const STOP_MIN = o.stopMin;
   const W = 1.2;     // how many "interest points" one km of walking costs
   const COVER = 2;   // bonus for a stop that adds an interest the route doesn't have yet
   const walkMin = km => km * 1.3 / o.pace * 60; // straight-line km -> minutes on foot
@@ -1283,7 +1582,7 @@ function buildRoute(opts) {
     if (o.mode === 'distance') return km * 1.3 <= o.km;
     return walkMin(km) <= (o.n <= 6 ? 60 : o.n * 10);
   };
-  const candidates = STOPS.filter(s => score(s) > 0 && !(o.avoidCrowded && s.crowded));
+  const candidates = STOPS.filter(s => score(s) > 0 && !(o.avoidCrowded && s.crowded) && (!o.pool || o.pool.includes(s.id)));
   let best = null;
   for (const seed of o.start ? [null] : candidates) {
     const path = seed ? [seed] : [];
@@ -1312,6 +1611,8 @@ function buildRoute(opts) {
       next.tags.forEach(t => { if (selected.has(t)) covered.add(t); });
     }
     if (!path.length) continue;
+    untangle(path, o.start, finish());
+    km = pathKm(path, o.start);
     const totalKm = km + closeKm(path[path.length - 1]);
     // Prefer routes with more stops (up to what was asked), then more interests, then less walking.
     const value = path.length * 10 + covered.size * COVER + path.reduce((a, s) => a + score(s), 0) * 1.5 - W * totalKm;
@@ -1320,9 +1621,35 @@ function buildRoute(opts) {
   return best || { path: [], km: 0, start: o.start, end: null };
 }
 
+// Straight-line km along the route, from the start point (if any) through every stop.
+function pathKm(path, start) {
+  return path.reduce((sum, s, i) => sum + (i ? dist(path[i - 1], s) : start ? dist(start, s) : 0), 0);
+}
+// 2-opt: reverse any stretch of the route that makes it cross itself or double back,
+// keeping the start and finish fixed. The greedy builder picks good stops; this fixes their order.
+function untangle(path, start, end) {
+  // Without a start point the first stop is where the walk begins, so it stays put.
+  const pts = () => [...(start ? [start] : []), ...path, ...(end && end !== path[path.length - 1] ? [end] : [])];
+  const total = () => { const p = pts(); return p.slice(1).reduce((a, x, i) => a + dist(p[i], x), 0); };
+  let improved = true, guard = 0;
+  while (improved && guard++ < 50) {
+    improved = false;
+    for (let i = start ? 0 : 1; i < path.length - 1; i++) {
+      for (let j = i + 1; j < path.length; j++) {
+        const before = total();
+        const seg = path.slice(i, j + 1).reverse();
+        path.splice(i, seg.length, ...seg);
+        if (total() < before - 1e-6) improved = true;
+        else { const back = path.slice(i, j + 1).reverse(); path.splice(i, back.length, ...back); }
+      }
+    }
+  }
+  return path;
+}
+
 // ---- Step 2 UI ----
 function routeOptionsFromPlan() {
-  const opts = { mode: plan.mode, n: stopsCount, minutes: plan.minutes, km: plan.km, pace: plan.pace, avoidCrowded: plan.avoidCrowded };
+  const opts = { mode: plan.mode, n: stopsCount, minutes: plan.minutes, km: plan.km, pace: plan.pace, avoidCrowded: plan.avoidCrowded, stopMin: stopMinutes(), pool: THEMES[plan.theme]?.pool || null };
   if (plan.start !== 'best') opts.start = plan.startPt;
   opts.end = plan.end === 'loop' ? 'loop' : plan.end === 'map' ? plan.endPt : null;
   return opts;
@@ -1330,9 +1657,30 @@ function routeOptionsFromPlan() {
 const fmtMin = m => { const t = Math.round(m); return t >= 60 ? `${Math.floor(t / 60)} h${t % 60 ? ` ${t % 60} min` : ''}` : `${t} min`; };
 const pointIcon = (cls, label) => L.divIcon({ className: '', html: `<div class="pin ${cls}">${label}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] });
 
+// Why no route came out, in words that match the options the visitor picked.
+function explainNoRoute(o) {
+  const all = STOPS.filter(s => score(s) > 0 && (!o.pool || o.pool.includes(s.id)));
+  if (!all.length) return { text: t('statusNoRoute') };
+  const free = all.filter(s => !(o.avoidCrowded && s.crowded));
+  if (!free.length) return { text: t('noRouteCrowded'), actions: [{ label: t('allowIcons'), run: () => { document.getElementById('avoidCrowded').click(); showRoute(); } }] };
+  const walk = km => km * 1.3 / o.pace * 60;
+  if (o.start) {
+    const near = Math.min(...free.map(s => dist(o.start, s)));
+    if (near > FAR_KM) return { text: t('statusFar', { km: fmtNum(near) }), actions: [{ label: t('useBestStart'), run: () => chooseStart('best') }] };
+    if (walk(near) > FIRST_LEG_MAX_MIN) return { text: t('statusNoStopsNear') };
+  }
+  // The cheapest walk with a single stop: start → stop → finish.
+  const fin = o.end === 'loop' ? o.start : o.end;
+  const need = Math.min(...free.map(s => (o.start ? dist(o.start, s) : 0) + (fin ? dist(s, fin) : 0)));
+  if (o.mode === 'distance') return { text: t('noRouteKm', { km: Math.max(1, Math.ceil(need * 1.3)) }) };
+  if (o.mode === 'time') return { text: t('noRouteTime', { t: fmtMin(Math.ceil((walk(need) + o.stopMin) / 15) * 15) }) };
+  return { text: t('statusNoRoute') };
+}
+
 function showRoute() {
   // Points the user still has to give us
   if (plan.start !== 'best' && !plan.startPt) {
+    if (plan.start === 'map') showPicker('start');
     setStatus(t(plan.start === 'here' ? 'statusNeedLoc' : 'statusNeedStartMap'));
     locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
@@ -1343,14 +1691,17 @@ function showRoute() {
     return;
   }
   routeAngles = {};
-  recordLearning(() => selected.forEach(t => { learning.picks[t] = (learning.picks[t] || 0) + 1; }));
   const opts = routeOptionsFromPlan();
   const r = buildRoute(opts);
   if (!r.path.length) {
-    setStatus(t(opts.start ? 'statusNoStopsNear' : 'statusNoRoute'));
+    const why = explainNoRoute(opts);
+    setStatus(why.text, why.actions || []);
     locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
+  recordLearning(() => selected.forEach(t => { learning.picks[t] = (learning.picks[t] || 0) + 1; }));
+  stopAudio();
+  walk = { visited: {}, skipped: {}, finished: false };
   drawRoute(r, 0);
   // The route gets its own history entry (#ruta): Back returns to the choices,
   // and a reload restores it from the saved copy.
@@ -1358,10 +1709,69 @@ function showRoute() {
   else history.pushState({ r: 1 }, '', '#ruta');
 }
 
+// Progress on the walk itself, separate from listening: stops marked as visited or skipped.
+let walk = { visited: {}, skipped: {}, finished: false };
+
+// ---- Walking line along the streets ----
+// The route is chosen with straight-line distances. Once it is on screen we ask the
+// OpenStreetMap walking router for the real path, legs and distances. If that fails,
+// the map keeps a dashed sketch and says so. Only the route's points are sent.
+const ROUTER = 'https://routing.openstreetmap.de/routed-foot/route/v1/driving/';
+const streetCache = {};
+let street = null;          // { legs: [km…], coords: [[lat, lng]…] } for the route on screen
+let streetState = 'sketch'; // 'loading' | 'streets' | 'sketch'
+function routePoints(r) {
+  const last = r.path[r.path.length - 1];
+  return [...(r.start ? [r.start] : []), ...r.path, ...(r.end && r.end !== last ? [r.end] : [])];
+}
+const pointsKey = pts => pts.map(p => `${p.lng.toFixed(5)},${p.lat.toFixed(5)}`).join(';');
+async function loadStreetRoute(r) {
+  const pts = routePoints(r);
+  const key = pointsKey(pts);
+  street = null;
+  if (pts.length < 2) { streetState = 'sketch'; return; }
+  streetState = 'loading';
+  if (!streetCache[key]) {
+    const ctl = new AbortController();
+    const timer = setTimeout(() => ctl.abort(), 9000);
+    streetCache[key] = fetch(`${ROUTER}${key}?overview=full&geometries=geojson&steps=false`, { signal: ctl.signal })
+      .then(res => (res.ok ? res.json() : Promise.reject(res.status)))
+      .then(d => {
+        const rt = d.routes?.[0];
+        if (d.code !== 'Ok' || !rt || rt.legs.length !== pts.length - 1) throw new Error('bad route');
+        return { legs: rt.legs.map(l => l.distance / 1000), coords: rt.geometry.coordinates.map(([x, y]) => [y, x]) };
+      })
+      .catch(() => { delete streetCache[key]; return null; })
+      .finally(() => clearTimeout(timer));
+  }
+  const res = await streetCache[key];
+  if (lastRoute !== r) return;           // another route was drawn meanwhile
+  street = res; streetState = res ? 'streets' : 'sketch';
+  drawLine(r);
+  renderRouteTexts(); renderStopList();
+}
+// Leg k goes from point k to point k+1 of routePoints(). Distances in km on foot.
+function legKm(r, k) {
+  if (street) return street.legs[k];
+  const p = routePoints(r);
+  return dist(p[k], p[k + 1]) * 1.3;   // streets aren't straight lines
+}
+const legMin = km => km / plan.pace * 60;
+const totalWalkKm = r => routePoints(r).slice(1).reduce((a, _, k) => a + legKm(r, k), 0);
+// The leg that arrives at stop i (null for the first stop when there's no start point).
+const legInto = (r, i) => (r.start ? i : i - 1);
+function drawLine(r) {
+  if (line) line.remove();
+  const pts = street ? street.coords : routePoints(r).map(p => [p.lat, p.lng]);
+  line = street
+    ? L.polyline(pts, { color: '#0026b8', weight: 5, opacity: .85, lineJoin: 'round' }).addTo(map)
+    : L.polyline(pts, { color: '#0026b8', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
+}
+
 function drawRoute(r, startAt = 0) {
   route = r.path; current = startAt;
   lastRoute = r;
-  renderRouteTexts();
+  street = null; streetState = 'loading';
 
   document.getElementById('pick').hidden = true;
   document.getElementById('route').hidden = false;
@@ -1378,26 +1788,26 @@ function drawRoute(r, startAt = 0) {
   map.invalidateSize();
   markers.forEach(m => m.remove()); markers = [];
   pointMarkers.forEach(m => m.remove()); pointMarkers = [];
-  if (line) line.remove();
-
-  const pts = [...(r.start ? [r.start] : []), ...route, ...(r.end ? [r.end] : [])].map(p => [p.lat, p.lng]);
-  line = L.polyline(pts, { color: '#0026b8', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
-  if (r.start) pointMarkers.push(L.marker([r.start.lat, r.start.lng], { icon: pointIcon('start', 'S') }).addTo(map));
-  if (r.end && r.end !== r.start && !route.includes(r.end)) pointMarkers.push(L.marker([r.end.lat, r.end.lng], { icon: pointIcon('end', 'F') }).addTo(map));
+  drawLine(r);
+  if (r.start) pointMarkers.push(L.marker([r.start.lat, r.start.lng], { icon: pointIcon('start', 'S'), title: t('start') }).addTo(map));
+  if (r.end && r.end !== r.start && !route.includes(r.end)) pointMarkers.push(L.marker([r.end.lat, r.end.lng], { icon: pointIcon('end', 'F'), title: t('finish') }).addTo(map));
   route.forEach((s, i) => {
     const m = L.marker([s.lat, s.lng], {
-      icon: L.divIcon({ className: '', html: `<div class="pin">${i+1}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] })
+      icon: L.divIcon({ className: '', html: `<div class="pin">${i+1}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] }),
+      title: `${i + 1}. ${s.name}`,
     }).addTo(map).on('click', () => goTo(i));
     markers.push(m);
   });
   map.fitBounds(line.getBounds(), { padding: [30, 30] });
 
+  renderRouteTexts();
   renderStopList();
   setStatus('');
   goTo(startAt, startAt > 0);
+  loadStreetRoute(r);
 }
 
-// ---- Saved route: survives reloads, a locked phone and the Back button ----
+// ---- Saved route: survives reloads, a locked phone, a trip to Google Maps and the Back button ----
 const ROUTE_KEY = 'walkbcn_route_v1';
 const ROUTE_MAX_AGE = 1000 * 60 * 60 * 24; // a day: after that, start fresh
 function saveRoute() {
@@ -1406,45 +1816,74 @@ function saveRoute() {
   const data = {
     at: Date.now(), ids: route.map(s => s.id), current, km: lastRoute.km,
     start: pt(lastRoute.start), end: pt(lastRoute.end),
-    selected: [...selected], angles: routeAngles, plan: { ...plan }, stopsCount,
+    selected: [...selected], angles: routeAngles, plan: { ...plan }, stopsCount, walk,
   };
   try { localStorage.setItem(ROUTE_KEY, JSON.stringify(data)); } catch (e) {}
 }
 function loadSavedRoute() {
   let d = null;
   try { d = JSON.parse(localStorage.getItem(ROUTE_KEY)); } catch (e) {}
-  if (!d || Date.now() - d.at > ROUTE_MAX_AGE) return null;
+  if (!d || typeof d !== 'object' || !Array.isArray(d.ids) || Date.now() - d.at > ROUTE_MAX_AGE) return null;
   const byId = id => STOPS.find(s => s.id === id);
   const path = d.ids.map(byId).filter(Boolean);
   if (!path.length) return null;
-  const pt = p => !p ? null : p.id ? byId(p.id) : p;
-  return { d, r: { path, km: d.km, start: pt(d.start), end: pt(d.end) } };
+  const pt = p => !p ? null : p.id ? byId(p.id) || null : (isFinite(p.lat) && isFinite(p.lng) ? p : null);
+  return { d, r: { path, km: +d.km || pathKm(path, pt(d.start)), start: pt(d.start), end: pt(d.end) } };
 }
 function restoreRoute() {
   const saved = loadSavedRoute();
   if (!saved) return false;
   const { d, r } = saved;
   // Put the visitor's choices back, in the data and on the buttons.
-  selected = new Set(d.selected);
-  document.querySelectorAll('#interests .tile').forEach(b => b.setAttribute('aria-pressed', selected.has(b.dataset.id)));
-  Object.assign(plan, d.plan);
-  stopsCount = d.stopsCount;
-  stopsRange.value = stopsCount; document.getElementById('stopsValue').textContent = stopsCount;
-  const press = (id, attr, value) => { const box = document.getElementById(id); const b = box.querySelector(`button[data-${attr}="${value}"]`); if (b) pressOnly(box, b); };
-  press('planMode', 'mode', plan.mode); press('paceSeg', 'v', plan.pace); press('lengthSeg', 'v', plan.length);
-  press('timeChips', 'v', plan.minutes); press('distChips', 'v', plan.km); press('startChips', 'v', plan.start); press('endChips', 'v', plan.end);
-  ['stops', 'time', 'distance'].forEach(m => { document.getElementById(`panel-${m}`).hidden = m !== plan.mode; });
-  document.getElementById('avoidCrowded').checked = !!plan.avoidCrowded;
-  document.getElementById('build').disabled = selected.size === 0;
+  selected = new Set((d.selected || []).filter(id => INTERESTS.some(i => i.id === id)));
+  // Saved by an older version: unknown or missing options fall back to the defaults.
+  const keep = { ...plan };
+  Object.assign(plan, d.plan || {});
+  if (!STOP_MINUTES[plan.length]) plan.length = keep.length;
+  if (plan.theme && !THEMES[plan.theme]) plan.theme = null;
+  stopsCount = +d.stopsCount || stopsCount;
+  syncPlanControls();
   if (plan.length !== 'normal') loadLangData('en');
   routeAngles = d.angles || {};   // same story versions as before
+  walk = { visited: {}, skipped: {}, finished: false, ...(d.walk || {}) };
   drawRoute(r, Math.min(d.current || 0, r.path.length - 1));
   return true;
+}
+// A shared link (#walk=stop,stop,…&i=interests&l=length) opens the same stops in the same order.
+function routeFromLink() {
+  const m = location.hash.match(/^#walk=([^&]+)(?:&i=([^&]*))?(?:&l=(\w+))?/);
+  if (!m) return false;
+  const path = decodeURIComponent(m[1]).split(',').map(id => STOPS.find(s => s.id === id)).filter(Boolean);
+  if (!path.length) return false;
+  selected = new Set((m[2] ? decodeURIComponent(m[2]).split(',') : path.flatMap(s => s.tags)).filter(id => INTERESTS.some(i => i.id === id)));
+  if (STOP_MINUTES[m[3]]) plan.length = m[3];
+  plan.mode = 'stops'; stopsCount = Math.max(2, Math.min(10, path.length)); plan.start = 'best'; plan.end = 'any'; plan.theme = null;
+  syncPlanControls();
+  routeAngles = {}; walk = { visited: {}, skipped: {}, finished: false };
+  drawRoute({ path, km: pathKm(path, null), start: null, end: null }, 0);
+  history.replaceState({ r: 1 }, '', '#ruta');
+  return true;
+}
+function shareLink() {
+  const url = `${location.origin}${location.pathname}#walk=${route.map(s => s.id).join(',')}&i=${[...selected].join(',')}&l=${plan.length}`;
+  return url;
+}
+async function shareRoute(btn) {
+  const url = shareLink();
+  track('Route shared');
+  try {
+    if (navigator.share) { await navigator.share({ title: 'WalkBCN', text: document.getElementById('routeTitle').textContent, url }); return; }
+    await navigator.clipboard.writeText(url);
+    btn.textContent = t('linkCopied');
+  } catch (e) {
+    if (e?.name !== 'AbortError') prompt(t('copyLink'), url);
+  }
 }
 function showPickView() {
   stopAudio();
   document.getElementById('route').hidden = true;
   document.getElementById('pick').hidden = false;
+  updateMini();   // the mini player belongs to the route: never over the choices
   updateCreateBar();
   renderResume();
   window.scrollTo(0, 0);
@@ -1454,11 +1893,11 @@ function showPickView() {
 function renderResume() {
   const box = document.getElementById('resume');
   const saved = document.getElementById('route').hidden ? loadSavedRoute() : null;
-  box.hidden = !saved;
-  if (!saved) return;
+  box.hidden = !saved || !!saved.d.walk?.finished;
+  if (box.hidden) return;
   const { d, r } = saved;
-  const done = r.path.filter(s => isListened(s.id)).length;
-  document.getElementById('resumeText').textContent = t('resumeText', { stop: r.path[Math.min(d.current, r.path.length - 1)].name, n: done, total: r.path.length });
+  const done = r.path.filter(s => d.walk?.visited?.[s.id]).length;
+  document.getElementById('resumeText').textContent = t('resumeText2', { stop: r.path[Math.min(d.current || 0, r.path.length - 1)].name, n: done, total: r.path.length });
 }
 window.addEventListener('popstate', () => {
   const onRoute = !document.getElementById('route').hidden;
@@ -1470,78 +1909,132 @@ window.addEventListener('popstate', () => {
 let lastRoute = null;
 function renderRouteTexts() {
   const r = lastRoute;
-  const walkKm = r.km * 1.3; // streets aren't straight lines
-  const walkMins = walkKm / plan.pace * 60;
+  const walkKm = totalWalkKm(r);
+  const walkMins = Math.max(1, legMin(walkKm));
+  const atStops = route.length * stopMinutes();
   const labels = INTERESTS.filter(i => selected.has(i.id)).map(i => interestLabel(i.id));
-  document.getElementById('routeTitle').textContent = t('routeTitle', { list: labels.join(' · ') });
+  document.getElementById('routeTitle').textContent = plan.theme ? t(`theme_${plan.theme}`) : t('routeTitle', { list: labels.join(' · ') });
   const notes = [];
   if (plan.mode === 'stops' && route.length < stopsCount) notes.push(t('noteShorter', { n: route.length, asked: stopsCount }));
   if (plan.mode !== 'stops' && route.length < 2) notes.push(t('noteOne'));
-  const finishLeg = r.end ? dist(route[route.length - 1], r.end) * 1.3 / plan.pace * 60 : 0;
-  if (r.end) notes.push(t(plan.end === 'loop' ? 'noteFinishLoop' : 'noteFinish', { m: Math.round(finishLeg) }));
+  if (r.end) notes.push(t(plan.end === 'loop' ? 'noteFinishLoop' : 'noteFinish', { m: Math.round(legMin(legKm(r, routePoints(r).length - 2))) }));
+  if (plan.avoidCrowded) notes.push(t('noteIcons'));
   const bold = (key, vars) => t(key, Object.fromEntries(Object.entries(vars).map(([k, v]) => [k, `<b>${v}</b>`])));
+  const km = fmtKm(walkKm, streetState !== 'streets');
   document.getElementById('summary').innerHTML =
-    [bold('sumStops', { n: route.length }), bold('sumKm', { km: walkKm.toFixed(1) }), bold('sumWalk', { t: fmtMin(walkMins) }),
-     bold('sumTotal', { t: fmtMin(walkMins + route.length * STOP_MIN) }), ...notes].map(x => `<span>${x}</span>`).join('');
+    [bold('sumStops', { n: route.length }), bold('sumKm2', { km }), bold('sumWalk', { t: fmtMin(walkMins) }),
+     bold('sumAtStops', { t: fmtMin(atStops), m: stopMinutes() }),
+     bold('sumTotal', { t: fmtMin(walkMins + atStops) })].map(x => `<span>${x}</span>`).join('') +
+    `<p class="sum-notes">${[t('sumExcludes'), ...notes].map(escHtml).join(' · ')}</p>`;
+  const note = document.getElementById('routeLineNote');
+  note.textContent = t(streetState === 'streets' ? 'lineStreets' : streetState === 'loading' ? 'lineLoading' : 'lineSketch');
+  note.className = `line-note ${streetState}`;
+  const share = document.getElementById('shareRoute');
+  share.textContent = t('shareRoute');
+  share.onclick = () => shareRoute(share);
 }
+// "≈ 2.3 km" for straight-line estimates, "2.4 km" when measured along the streets.
+const fmtNum = n => n.toFixed(1).replace('.', lang === 'en' || lang === 'zh' ? '.' : ',');
+const fmtKm = (km, approx) => `${approx ? '≈ ' : ''}${km < 0.95 ? `${Math.max(10, Math.round(km * 100) * 10)} m` : `${km.toFixed(1).replace('.', lang === 'en' || lang === 'zh' ? '.' : ',')} km`}`;
 function renderStopList() {
   const list = document.getElementById('stopList');
   list.innerHTML = '';
   route.forEach((s, i) => {
     const li = document.createElement('li');
-    const prev = i === 0 ? lastRoute.start : route[i - 1];
-    const leg = prev ? t('legWalk', { m: Math.round(dist(prev, s) * 1.3 / plan.pace * 60) }) : t('legStart');
-    li.innerHTML = `<button type="button"><span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><span class="n">${i+1}</span><span class="ok" aria-hidden="true">✓</span></span>${s.name}<span class="d">${leg}</span></button>`;
+    const k = legInto(lastRoute, i);
+    const leg = k >= 0 ? t('legWalk', { m: Math.max(1, Math.round(legMin(legKm(lastRoute, k)))) }) : t('legStart');
+    const state = walk.visited[s.id] ? `<span class="st visited">${t('visited')}</span>` : walk.skipped[s.id] ? `<span class="st skipped">${t('skipped')}</span>` : '';
+    li.innerHTML = `<button type="button"><span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><span class="n">${i+1}</span><span class="ok" aria-hidden="true">✓</span></span><span class="nm">${escHtml(s.name)}${state}</span><span class="d">${leg}</span></button>`;
+    li.classList.toggle('visited', !!walk.visited[s.id]);
+    li.classList.toggle('skipped', !!walk.skipped[s.id]);
     li.firstChild.onclick = () => { goTo(i); document.getElementById('map').scrollIntoView({ behavior: 'smooth' }); };
     list.appendChild(li);
   });
+  // Back to the start, or on to the chosen finish, as a last line.
+  if (lastRoute.end) {
+    const li = document.createElement('li');
+    li.className = 'finish-leg';
+    const k = routePoints(lastRoute).length - 2;
+    li.innerHTML = `<span class="pin end">F</span><span class="nm">${t(plan.end === 'loop' ? 'backToStart' : 'toFinish')}</span><span class="d">${t('legWalk', { m: Math.max(1, Math.round(legMin(legKm(lastRoute, k)))) })}</span>`;
+    list.appendChild(li);
+  }
   document.querySelectorAll('#stopList button').forEach((b, j) => b.classList.toggle('current', j === current));
   renderListened();
 }
 
 // Neighbourhoods keep their local names; only the English page says "Gothic Quarter".
 const areaName = a => (lang !== 'en' && a === 'Gothic Quarter' ? 'Barri Gòtic' : a);
+const directionsUrl = p => `https://www.google.com/maps/dir/?api=1&destination=${p.lat.toFixed(6)},${p.lng.toFixed(6)}&travelmode=walking`;
+// Notices for a stop that apply today (see WALKBCN_NOTICES in data/stops.js).
+const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+function noticesFor(s) {
+  const day = todayISO();
+  return (window.WALKBCN_NOTICES?.[s.id] || []).filter(n => (!n.from || n.from <= day) && (!n.until || day <= n.until));
+}
+function noticeHtml(s) {
+  return noticesFor(s).map(n => `<div class="notice" role="note">
+    <p>${escHtml(n.text[lang] || n.text.en)}</p>
+    <p class="notice-meta">${n.go ? `<a href="${directionsUrl(n.go)}" target="_blank" rel="noopener">${t('directionsTo', { place: escHtml(n.go.label) })}</a> · ` : ''}<a href="${n.source}" target="_blank" rel="noopener">${t('noticeSource')}</a> · ${t('noticeChecked', { d: n.checked })}</p>
+  </div>`).join('');
+}
+function addressHtml(s) { return s.address ? `<div class="stop-address">${escHtml(s.address)}</div>` : ''; }
+// Hand-picked Activities places close to a point (the overview list, one entry per place).
+function activitiesNear(p, maxM = 450, n = 3) {
+  return uniqueActItems().map(x => ({ ...x, m: dist(p, x.p) * 1000 })).filter(x => x.m <= maxM).sort((a, b) => a.m - b.m).slice(0, n);
+}
+function nearHtml(s) {
+  const near = activitiesNear(s);
+  if (!near.length) return '';
+  return `<details class="near-acts"><summary>${t('nearActs', { n: near.length })}</summary><ul>${near.map(({ ids, p, m }) => `
+    <li><span class="cat">${escHtml(ids.map(catLabel).join(' · '))}</span><b>${escHtml(p.name)}</b> <span class="d">${fmtDist(m)}</span>
+    <a href="${mapsSearchUrl(p)}" target="_blank" rel="noopener">${t('seeMaps')}</a></li>`).join('')}</ul></details>`;
+}
 function goTo(i, pan = true) {
   stopAudio();
   current = i;
   const s = route[i];
   const st = storyFor(s);
   const angleLabel = st.angle && inSentence(interestLabel(st.angle));
+  const last = i === route.length - 1;
+  const r = lastRoute;
   markers.forEach((m, j) => m.getElement()?.firstChild?.classList.toggle('active', j === i));
   document.querySelectorAll('#stopList button').forEach((b, j) => b.classList.toggle('current', j === i));
   if (pan) map.panTo([s.lat, s.lng]);
-
+  // Where each button takes you: Google Maps (walking) to this stop; on the last stop, also
+  // back to the start or on to the chosen finish.
+  const goBack = last && r.end ? (plan.end === 'loop' ? (r.start || route[0]) : r.end) : null;
   document.getElementById('stopCard').innerHTML = `
     <figure class="stop-photo">
-      <img src="${photo(s.img, 900)}" alt="${s.name}">
+      <img src="${photo(s.img, 900)}" alt="${escHtml(s.name)}" onerror="this.closest('figure').classList.add('broken')">
       <a class="credit" href="${credit(s.img)}" target="_blank" rel="noopener">${t('photoCredit')}</a>
     </figure>
     <div class="stop-head">
       <div class="stop-num">${i+1}</div>
-      <div><h3 class="stop-title">${s.name}</h3><div class="stop-area">${areaName(s.area)}</div></div>
+      <div><h3 class="stop-title">${escHtml(s.name)}</h3><div class="stop-area">${escHtml(areaName(s.area))}</div>${addressHtml(s)}</div>
       <span class="listened-tag" id="listenedTag" ${isListened(s.id) ? '' : 'hidden'}>✓ ${t('listened')}</span>
+    </div>
+    ${noticeHtml(s)}
+    <div class="go-row">
+      <a class="book go" href="${directionsUrl(s)}" target="_blank" rel="noopener" id="goHere">${t('directionsHere')}</a>
+      ${goBack ? `<a class="book go alt" href="${directionsUrl(goBack)}" target="_blank" rel="noopener">${t(plan.end === 'loop' ? 'directionsBack' : 'directionsFinish')}</a>` : ''}
+      <p class="hint">${t('directionsHint')}</p>
     </div>
     ${angleLabel ? `<p class="angle">${t('toldFor', { interest: angleLabel })}</p>` : ''}
     ${st.learned ? `<p class="learned">${t('learned')}</p>` : ''}
-    <div class="player" id="audioPlayer">
-      <div class="pl-buttons">
-        <button type="button" class="pl-skip" id="back10" aria-label="${t('back10')}">${back10Icon()}</button>
-        <button type="button" class="pl-play" id="play" aria-label="${t('listen')}">${playIcon()}</button>
-        <button type="button" class="pl-skip" id="fwd10" aria-label="${t('fwd10')}">${fwd10Icon()}</button>
-        <span class="pl-label">${t('listen')}</span>
-      </div>
-      <div class="pl-bar">
-        <input type="range" id="seek" min="0" max="1000" step="1" value="0" aria-label="${t('seekLabel')}">
-        <span class="pl-time" id="plTime">0:00</span>
-      </div>
-    </div>
+    ${playerHtml()}
     <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
     <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>
+    ${nearHtml(s)}
+    <div class="visit-row" role="group" aria-label="${t('visitGroup')}">
+      <button type="button" id="markVisited" aria-pressed="${!!walk.visited[s.id]}">${t(walk.visited[s.id] ? 'visitedDone' : 'markVisited')}</button>
+      <button type="button" id="skipStop">${t(walk.skipped[s.id] ? 'unskip' : 'skipStop')}</button>
+    </div>
     <div class="controls">
       <div class="nav">
-        <button type="button" id="prev" ${i === 0 ? 'disabled' : ''}>${t('prev')}</button>
-        <button type="button" id="next" ${i === route.length - 1 ? 'disabled' : ''}>${t('next')}</button>
+        <button type="button" id="prev" ${i === 0 ? 'disabled' : ''}>${t('prevStop')}</button>
+        ${last ? `<button type="button" id="finishWalk" class="finish">${t('finishWalk')}</button>` : `<button type="button" id="next">${t('nextStop')}</button>`}
       </div>
+      <p class="hint nav-hint">${t('navHint')}</p>
     </div>
     ${learning.optOut ? '' : `<div class="feedback" role="group" aria-label="${t('enjoy')}">
       <span>${t('enjoy')}</span>
@@ -1553,8 +2046,42 @@ function goTo(i, pan = true) {
   plRoot = document.getElementById('stopCard');
   setupPlayer();
   saveRoute();
+  renderWalkDone();
   document.getElementById('prev').onclick = () => goTo(current - 1);
-  document.getElementById('next').onclick = () => goTo(current + 1);
+  document.getElementById('next')?.addEventListener('click', () => goTo(current + 1));
+  document.getElementById('finishWalk')?.addEventListener('click', finishWalk);
+  document.getElementById('goHere').onclick = () => { saveRoute(); track('Directions opened', { stop: s.id }); };
+  document.getElementById('markVisited').onclick = () => {
+    walk.visited[s.id] = !walk.visited[s.id];
+    if (walk.visited[s.id]) delete walk.skipped[s.id];
+    saveRoute(); renderStopList(); goTo(current, false);
+  };
+  document.getElementById('skipStop').onclick = () => {
+    if (walk.skipped[s.id]) { delete walk.skipped[s.id]; saveRoute(); renderStopList(); goTo(current, false); return; }
+    walk.skipped[s.id] = true; delete walk.visited[s.id];
+    track('Stop skipped', { stop: s.id });
+    saveRoute(); renderStopList();
+    if (last) finishWalk(); else goTo(current + 1);
+  };
+}
+// The end of the walk: a short summary with what was visited, skipped and listened to.
+function finishWalk() {
+  walk.finished = true;
+  stopAudio();
+  saveRoute();
+  track('Walk finished', { stops: route.length, visited: Object.keys(walk.visited).length });
+  renderWalkDone();
+  document.getElementById('walkDone').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function renderWalkDone() {
+  const box = document.getElementById('walkDone');
+  box.hidden = !walk.finished;
+  if (!walk.finished) return;
+  const v = route.filter(s => walk.visited[s.id]).length, sk = route.filter(s => walk.skipped[s.id]).length, l = route.filter(s => isListened(s.id)).length;
+  box.innerHTML = `<h3>${t('doneTitle')}</h3><p>${t('doneText', { v, s: sk, l, n: route.length })}</p>
+    <div class="done-actions"><button type="button" class="primary" id="doneNew">${t('doneNew')}</button><button type="button" class="ghost" id="doneShare">${t('shareRoute')}</button></div>`;
+  document.getElementById('doneNew').onclick = () => document.getElementById('restart').click();
+  document.getElementById('doneShare').onclick = e => shareRoute(e.target);
 }
 
 function renderRating() {
@@ -1573,15 +2100,21 @@ function rateStory(value) {
 }
 
 // ---- Audio stories: a small player ----
-// Plays the pre-recorded file when there is one (play/pause, ±10 s, seek bar).
-// Without a file it uses the browser's voice, sentence by sentence, so the same
-// buttons jump back/forward one sentence and the bar moves through the sentences.
-let speaking = false;
+// Plays the pre-recorded file when there is one (play/pause, ±10 s, seek bar). Without a
+// file, or if it fails, it reads the story with the device's own voice, sentence by
+// sentence: the same buttons then move one sentence back or forward.
+// States: idle → loading → playing ⇄ paused → ended, or error (with Retry; the text
+// stays on screen to read). Only one story can sound at a time.
+let pstate = 'idle';
+let speaking = false;  // playing or about to (loading); used by the mini player
 let player = null;   // <audio> for the current stop, when it has a recording
-let tts = null;      // { parts, idx, speech, run } for the browser-voice fallback
+let tts = null;      // { parts, idx, speech, run } for the device-voice fallback
 let audioKey = null;
 let playedOnce = false;
 let seeking = false;
+let heard = 0, lastTick = null, lastWall = 0;   // seconds really played, to count a story as listened
+let spoken = new Set();           // sentences the device voice read to the end
+let fellBack = false;             // the recording failed and the device voice took over
 // The phone's own voice for that language (exact region first, e.g. es-ES before es-MX).
 function pickVoice(speech) {
   const all = speechSynthesis.getVoices();
@@ -1589,12 +2122,15 @@ function pickVoice(speech) {
   const exact = all.filter(v => norm(v.lang) === speech.toLowerCase());
   const same = all.filter(v => norm(v.lang).startsWith(speech.slice(0, 2).toLowerCase()));
   const pool = exact.length ? exact : same;
-  return pool.find(v => /Daniel|Google UK English|Serena|Samantha|Mónica|Monica|Montse|Thomas|Amélie|Anna|Alice|Tingting|Google/.test(v.name)) || pool[0] || null;
+  // Local voices first: network voices in desktop Chrome sometimes stop half-way.
+  const local = pool.filter(v => v.localService !== false);
+  const from = local.length ? local : pool;
+  return from.find(v => /Daniel|Serena|Samantha|Mónica|Monica|Montse|Thomas|Amélie|Anna|Alice|Tingting|Google/.test(v.name)) || from[0] || null;
 }
 
 // Stops listened to the end, remembered in this browser (shown as ✓ on the route).
 const LISTENED_KEY = 'walkbcn_listened_v1';
-let listened = (() => { try { return JSON.parse(localStorage.getItem(LISTENED_KEY)) || {}; } catch (e) { return {}; } })();
+let listened = (() => { try { const v = JSON.parse(localStorage.getItem(LISTENED_KEY)); return v && typeof v === 'object' ? v : {}; } catch (e) { return {}; } })();
 function saveListened() { try { localStorage.setItem(LISTENED_KEY, JSON.stringify(listened)); } catch (e) {} }
 const isListened = id => !!listened[id];
 function renderListened() {
@@ -1603,54 +2139,148 @@ function renderListened() {
   renderGuideDone();
   if (!route?.length) return;
   route.forEach((s, j) => {
-    markers[j]?.getElement()?.firstChild?.classList.toggle('done', isListened(s.id));
+    markers[j]?.getElement()?.firstChild?.classList.toggle('done', !!walk.visited[s.id]);
     document.querySelectorAll('#stopList li')[j]?.classList.toggle('done', isListened(s.id));
   });
+  const v = route.filter(s => walk.visited[s.id]).length;
   const n = route.filter(s => isListened(s.id)).length;
   const el = document.getElementById('listenedCount');
-  if (el) el.textContent = t('listenedCount', { n, total: route.length });
+  if (el) el.textContent = t('progressCount', { v, n, total: route.length });
+}
+
+// Where you stopped listening, per stop, version, language and length, so a reload or a
+// trip to Google Maps doesn't send you back to 0:00.
+const POS_KEY = 'walkbcn_pos_v1';
+const posId = () => audioKey && `${audioKey.stop}|${audioKey.angle || 'base'}|${audioKey.lang}|${audioKey.length}`;
+function loadPos() { try { return (JSON.parse(localStorage.getItem(POS_KEY)) || {})[posId()] || null; } catch (e) { return null; } }
+let posSavedAt = 0;
+function savePos(force = false) {
+  if (!audioKey || (!force && Date.now() - posSavedAt < 3000)) return;
+  posSavedAt = Date.now();
+  try {
+    const all = JSON.parse(localStorage.getItem(POS_KEY)) || {};
+    const cur = player ? { t: player.currentTime } : tts ? { idx: tts.idx } : null;
+    if (cur && (cur.t > 1 || cur.idx > 0)) all[posId()] = { ...cur, at: Date.now() }; else delete all[posId()];
+    const keys = Object.keys(all).sort((a, b) => all[b].at - all[a].at).slice(0, 40);
+    localStorage.setItem(POS_KEY, JSON.stringify(Object.fromEntries(keys.map(k => [k, all[k]]))));
+  } catch (e) {}
+}
+function clearPos() { try { const all = JSON.parse(localStorage.getItem(POS_KEY)) || {}; delete all[posId()]; localStorage.setItem(POS_KEY, JSON.stringify(all)); } catch (e) {} }
+
+function playerHtml() {
+  return `<div class="player" id="audioPlayer">
+      <div class="pl-buttons">
+        <button type="button" class="pl-skip" id="back10" aria-label="${t('back10')}">${back10Icon()}</button>
+        <button type="button" class="pl-play" id="play" aria-label="${t('listen')}">${playIcon()}</button>
+        <button type="button" class="pl-skip" id="fwd10" aria-label="${t('fwd10')}">${fwd10Icon()}</button>
+        <span class="pl-label" id="plLabel">${t('listen')}</span>
+      </div>
+      <div class="pl-bar">
+        <input type="range" id="seek" min="0" max="1000" step="1" value="0" aria-label="${t('seekLabel')}">
+        <span class="pl-time" id="plTime">0:00</span>
+      </div>
+      <div class="pl-status" id="plStatus" role="status" aria-live="polite"></div>
+    </div>`;
 }
 
 function setupPlayer(s = route[current], st = storyFor(s)) {
-  audioKey = { stop: s.id, angle: st.angle };
-  player = null; tts = null; playedOnce = false;
+  audioKey = { stop: s.id, angle: st.angle, lang, length: plan.length, name: s.name, img: s.img };
+  player = null; tts = null; playedOnce = false; heard = 0; lastTick = null; spoken = new Set(); fellBack = false;
+  pstate = 'idle';
+  const saved = loadPos();
   if (st.audio) {
     const a = new Audio();
     a.preload = 'metadata';
-    a.addEventListener('loadedmetadata', updateProgress);
-    a.addEventListener('timeupdate', updateProgress);
+    a.addEventListener('loadedmetadata', () => {
+      if (a !== player) return;
+      if (saved?.t && !a.currentTime && saved.t < a.duration - 2) a.currentTime = saved.t;
+      updateProgress();
+    });
+    a.addEventListener('timeupdate', () => {
+      if (a !== player) return;
+      // Count real playback only: a jump (seek, ±10 s) moves the time faster than the clock.
+      const now = a.currentTime, wall = performance.now();
+      if (!a.paused && lastTick !== null && now > lastTick && now - lastTick <= (wall - lastWall) / 1000 * a.playbackRate + 0.75) heard += now - lastTick;
+      lastTick = now; lastWall = wall;
+      updateProgress(); savePos();
+    });
+    a.addEventListener('seeking', () => { lastTick = null; });
+    a.addEventListener('waiting', () => { if (a === player && pstate === 'playing') setState('loading'); });
+    a.addEventListener('playing', () => { if (a === player) setState('playing'); else a.pause(); });
+    a.addEventListener('pause', () => { if (a === player && (pstate === 'playing' || pstate === 'loading') && !a.ended) { setState('paused'); savePos(true); } });
     a.addEventListener('ended', () => { if (a === player) storyFinished(); });
-    a.addEventListener('error', () => { if (a !== player) return; player = null; setupTts(s, st); if (speaking) speakFrom(0); updateProgress(); });
+    a.addEventListener('error', () => { if (a === player) fallBackToVoice(s, st); });
     a.src = st.audio;
     player = a;
     // Load the file into memory too: a blob is always seekable, even on servers that
     // don't announce byte ranges, so ±10 s and the bar work everywhere.
     fetch(st.audio).then(r => r.ok ? r.blob() : Promise.reject()).then(blob => {
       if (a !== player) return;
-      const at = a.currentTime, wasPlaying = !a.paused;
+      const at = a.currentTime, resume = pstate === 'playing' || pstate === 'loading';
       a.src = URL.createObjectURL(blob);
       a.addEventListener('loadedmetadata', () => {
+        if (a !== player) return;
         if (at) a.currentTime = at;
-        if (wasPlaying) a.play().catch(() => {});
+        if (resume && (pstate === 'playing' || pstate === 'loading')) a.play().catch(() => {});
       }, { once: true });
     }).catch(() => {});
-  } else setupTts(s, st);
+  } else setupTts(s, st, saved?.idx);
   const seek = pl('seek');
   seek.oninput = () => { seeking = true; previewSeek(seek.value / 1000); };
   seek.onchange = () => { seeking = false; seekTo(seek.value / 1000); };
   pl('play').onclick = toggleAudio;
   pl('back10').onclick = () => skip(-10);
   pl('fwd10').onclick = () => skip(10);
-  setPlaying(false);
+  setState('idle');
   updateProgress();
   renderListened();
   watchPlayer();
 }
-function setupTts(s, st) {
-  const text = `${s.name}. ${st.text}`;
+function setupTts(s, st, idx = 0) {
+  const text = `${s.name}. ${String(st.text).replace(/<[^>]+>/g, '')}`;
   const parts = (text.match(/[^.!?。！？]+[.!?。！？]*/g) || [text]).map(p => p.trim()).filter(Boolean);
-  tts = { parts, idx: 0, speech: st.speech, run: 0 };
-  pl('audioPlayer')?.classList.add('sentences');
+  tts = { parts, idx: Math.min(idx || 0, parts.length - 1), speech: st.speech, run: 0 };
+  const box = pl('audioPlayer');
+  box?.classList.add('sentences');
+  pl('back10')?.setAttribute('aria-label', t('prevSentence'));
+  pl('fwd10')?.setAttribute('aria-label', t('nextSentence'));
+}
+// The recording didn't load: read the story with the device voice instead, and say so.
+function fallBackToVoice(s, st) {
+  const wasOn = pstate === 'playing' || pstate === 'loading';
+  player = null; fellBack = true;
+  if (!('speechSynthesis' in window)) { setState('error', t('audioErrorNoVoice')); return; }
+  setupTts(s, st);
+  if (wasOn) speakFrom(0); else setState('idle');
+  updateProgress();
+}
+function setState(next, msg = '') {
+  pstate = next;
+  speaking = next === 'playing' || next === 'loading';
+  const b = pl('play'), box = pl('audioPlayer'), status = pl('plStatus'), label = pl('plLabel');
+  if (b) {
+    b.innerHTML = speaking ? pauseIcon() : playIcon();
+    b.setAttribute('aria-label', speaking ? t('pause') : t('listen'));
+  }
+  if (label) label.textContent = next === 'loading' ? t('audioLoading') : next === 'playing' ? (tts ? t('audioVoice') : t('pause')) : next === 'error' ? t('audioRetry') : t('listen');
+  box?.classList.toggle('playing', next === 'playing');
+  box?.classList.toggle('loading', next === 'loading');
+  box?.classList.toggle('error', next === 'error');
+  if (status) {
+    const parts = [];
+    if (next === 'error') parts.push(`<span>${escHtml(msg || t('audioError'))}</span> <button type="button" class="ghost" id="plRetry">${t('audioRetry')}</button>`);
+    else if (next === 'ended') parts.push(escHtml(msg || t('audioEnded')));
+    else if (fellBack) parts.push(escHtml(t('audioFellBack')));
+    else if (tts && next !== 'idle') parts.push(escHtml(t('audioDeviceVoice')));
+    status.innerHTML = parts.join('');
+    pl('plRetry')?.addEventListener('click', retryAudio);
+  }
+  updateMediaSession();
+  updateMini();
+}
+function retryAudio() {
+  if (player) { const at = player.currentTime; player.load(); player.currentTime = at; }
+  toggleAudio();
 }
 function toggleAudio() {
   if (speaking) { pauseAudio(); return; }
@@ -1663,16 +2293,21 @@ function toggleAudio() {
   }
   if (player) {
     const a = player;
-    a.play().then(() => { if (a === player) setPlaying(true); }).catch(() => a.dispatchEvent(new Event('error')));
-    setPlaying(true);
+    if (pstate === 'ended') a.currentTime = 0;
+    setState('loading');
+    a.play().then(() => { if (a !== player) a.pause(); }).catch(err => {
+      if (a !== player || err?.name === 'AbortError') return;
+      setState('error', t('audioErrorPlay'));
+    });
     return;
   }
-  if (tts) speakFrom(tts.idx);
+  if (tts) speakFrom(pstate === 'ended' ? 0 : tts.idx);
 }
 function pauseAudio() {
   if (player) player.pause();
   if (tts) { tts.run++; speechSynthesis.cancel(); }   // resumes from the same sentence
-  setPlaying(false);
+  setState('paused');
+  savePos(true);
 }
 function skip(sec) {
   if (player) {
@@ -1692,27 +2327,39 @@ function seekTo(frac) {
   }
 }
 function speakFrom(i) {
-  if (!('speechSynthesis' in window)) { alert(t('audioUnsupported')); setPlaying(false); return; }
+  if (!('speechSynthesis' in window)) { setState('error', t('audioErrorNoVoice')); return; }
   const me = tts;
   speechSynthesis.cancel();
   const run = ++me.run;
   me.idx = i;
+  const voices = speechSynthesis.getVoices();
   const v = pickVoice(me.speech);
+  // Voices are known and none speaks this language: say so instead of reading it wrongly.
+  if (voices.length && !v) { setState('error', t('audioErrorNoLangVoice')); return; }
   const live = () => me === tts && run === me.run;
   const sayNext = () => {
     if (!live()) return;
     if (me.idx >= me.parts.length) { me.idx = 0; storyFinished(); return; }
-    const u = new SpeechSynthesisUtterance(me.parts[me.idx]);
+    const at = me.idx, text = me.parts[at];
+    const u = new SpeechSynthesisUtterance(text);
     u.lang = me.speech; if (v) u.voice = v; u.rate = 0.97;
-    u.onend = () => { if (!live()) return; me.idx++; updateProgress(); sayNext(); };
-    u.onerror = () => { if (live()) setPlaying(false); };
+    let started = false, done = false;
+    const next = () => { if (done || !live()) return; done = true; spoken.add(at); me.idx = at + 1; updateProgress(); savePos(); sayNext(); };
+    u.onstart = () => { started = true; if (live()) setState('playing'); };
+    u.onend = next;
+    u.onerror = e => { if (!live() || done || ['interrupted', 'canceled'].includes(e.error)) return; setState('error', t('audioErrorVoice')); };
     speechSynthesis.speak(u);
+    // Watchdogs for browsers whose voice never starts, or stops without saying it ended.
+    setTimeout(() => { if (live() && !started && !done) { speechSynthesis.cancel(); setState('error', t('audioErrorVoice')); } }, 6000);
+    const expected = 4000 + text.length * 120;
+    const check = () => { if (!live() || done) return; if (!speechSynthesis.speaking && started) next(); else setTimeout(check, 1500); };
+    setTimeout(check, expected);
   };
-  setPlaying(true);
+  setState('loading');
   updateProgress();
   sayNext();
 }
-// Only a story that plays to its natural end counts as finished, not one the user stopped.
+// Only a story that was really listened to (most of it played, not skipped through) counts.
 function markFinished(key) {
   recordLearning(() => {
     storyRecord(key.stop, key.angle).finished++;
@@ -1720,22 +2367,26 @@ function markFinished(key) {
   });
 }
 function storyFinished() {
-  setPlaying(false);
+  const enough = player ? heard >= 0.6 * (player.duration || Infinity) : tts ? spoken.size >= Math.ceil(0.6 * tts.parts.length) : false;
   if (player) player.currentTime = 0;
-  markFinished(audioKey);
-  listened[audioKey.stop] = Date.now();
-  saveListened();
+  clearPos();
+  if (enough) {
+    markFinished(audioKey);
+    listened[audioKey.stop] = Date.now();
+    saveListened();
+  }
+  setState('ended', enough ? t('audioEnded') : t('audioEndedSkipped'));
   updateProgress();
   renderListened();
   const tag = pl('listenedTag');
-  if (tag) { tag.classList.remove('pop'); void tag.offsetWidth; tag.classList.add('pop'); }
+  if (enough && tag) { tag.classList.remove('pop'); void tag.offsetWidth; tag.classList.add('pop'); }
 }
 const fmtClock = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 function paintBar(seek) { seek.style.setProperty('--p', `${seek.value / 10}%`); }
 function previewSeek(frac) {
   const seek = pl('seek'), time = pl('plTime');
   if (player?.duration) time.textContent = `${fmtClock(frac * player.duration)} / ${fmtClock(player.duration)}`;
-  else if (tts) time.textContent = `${Math.min(tts.parts.length, Math.floor(frac * tts.parts.length) + 1)} / ${tts.parts.length}`;
+  else if (tts) time.textContent = t('sentenceOf', { i: Math.min(tts.parts.length, Math.floor(frac * tts.parts.length) + 1), n: tts.parts.length });
   paintBar(seek);
 }
 function updateProgress() {
@@ -1747,38 +2398,41 @@ function updateProgress() {
     time.textContent = `${fmtClock(c)} / ${d ? fmtClock(d) : '–:––'}`;
   } else if (tts) {
     seek.value = Math.round(tts.idx / tts.parts.length * 1000);
-    time.textContent = `${tts.idx + 1} / ${tts.parts.length}`;
+    time.textContent = t('sentenceOf', { i: tts.idx + 1, n: tts.parts.length });
   }
   paintBar(seek);
   const mini = document.getElementById('miniProgress');
   if (mini) mini.style.width = `${seek.value / 10}%`;
 }
 function stopAudio() {
-  if (player) player.pause();
-  if (tts) tts.run++;
+  if (player) { player.pause(); savePos(true); }
+  if (tts) { tts.run++; savePos(true); }
   if ('speechSynthesis' in window) speechSynthesis.cancel();
-  setPlaying(false);
+  if (speaking) setState('paused'); else updateMini();
 }
-function setPlaying(on) {
-  speaking = on;
-  const b = pl('play');
-  if (!b) return;
-  b.innerHTML = on ? pauseIcon() : playIcon();
-  b.setAttribute('aria-label', on ? t('pause') : t('listen'));
-  const label = pl('audioPlayer')?.querySelector('.pl-label');
-  if (label) label.textContent = on ? t('pause') : t('listen');
-  pl('audioPlayer')?.classList.toggle('playing', on);
-  updateMini();
+// Lock screen / headphone controls for recordings (the device voice can't run in the background).
+function updateMediaSession() {
+  if (!('mediaSession' in navigator) || !audioKey) return;
+  try {
+    navigator.mediaSession.playbackState = pstate === 'playing' ? 'playing' : pstate === 'paused' ? 'paused' : 'none';
+    if (pstate !== 'playing' || !player) return;
+    navigator.mediaSession.metadata = new MediaMetadata({ title: audioKey.name, artist: 'WalkBCN', artwork: [{ src: photo(audioKey.img, 512), sizes: '512x512' }] });
+    navigator.mediaSession.setActionHandler('play', () => { if (!speaking) toggleAudio(); });
+    navigator.mediaSession.setActionHandler('pause', () => { if (speaking) pauseAudio(); });
+    navigator.mediaSession.setActionHandler('seekbackward', () => skip(-10));
+    navigator.mediaSession.setActionHandler('seekforward', () => skip(10));
+  } catch (e) {}
 }
-// Mini player: shows at the bottom while a story is playing (or paused part-way)
-// and the big player has scrolled out of view.
+// Mini player: shows at the bottom while a route story is playing (or paused part-way)
+// and the big player has scrolled out of view. Never on the choices screen or other tabs.
 let playerInView = true;
 function watchPlayer() { playerInView = true; checkBottomBars(); }
 function updateMini() {
   const box = document.getElementById('miniPlayer');
-  const onRoute = !document.getElementById('route').hidden && !document.getElementById('walkView').hidden;
-  const started = speaking || (player && player.currentTime > 0) || (tts && tts.idx > 0);
+  const onRoute = !document.getElementById('route').hidden && !document.getElementById('walkView').hidden && plRoot?.id === 'stopCard';
+  const started = speaking || pstate === 'paused';
   box.hidden = !(onRoute && started && !playerInView);
+  document.body.classList.toggle('has-mini', !box.hidden);
   if (box.hidden || !route[current]) return;
   document.getElementById('miniNum').textContent = current + 1;
   document.getElementById('miniName').textContent = route[current].name;
@@ -1789,10 +2443,13 @@ function updateMini() {
 }
 document.getElementById('miniPlay').onclick = () => toggleAudio();
 document.getElementById('miniInfo').onclick = () => pl('audioPlayer')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-const playIcon = () => '<svg viewBox="0 0 16 16"><path d="M4.5 2.5v11l9-5.5z"/></svg>';
-const pauseIcon = () => '<svg viewBox="0 0 16 16"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1"/></svg>';
-const back10Icon = () => '<svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 3.8v3.6h3.6"/><text x="12.4" y="15.3" text-anchor="middle">10</text></svg>';
-const fwd10Icon = () => '<svg viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3M19.5 3.8v3.6h-3.6"/><text x="11.6" y="15.3" text-anchor="middle">10</text></svg>';
+const playIcon = () => '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.5v11l9-5.5z"/></svg>';
+const pauseIcon = () => '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1"/></svg>';
+const back10Icon = () => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 3.8v3.6h3.6"/><text x="12.4" y="15.3" text-anchor="middle">10</text></svg>';
+const fwd10Icon = () => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3M19.5 3.8v3.6h-3.6"/><text x="11.6" y="15.3" text-anchor="middle">10</text></svg>';
+// Save where you were when the page is hidden (switching to Google Maps, locking the phone).
+document.addEventListener('visibilitychange', () => { if (document.hidden) { savePos(true); saveRoute(); } });
+
 if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
 
 
@@ -1823,7 +2480,6 @@ document.getElementById('tabTips').onclick = () => { showTab('tips'); track('Tip
 // ---- Local tips (data/tips.js) ----
 const TIPS = window.WALKBCN_TIPS;
 const tipT = o => (o && (o[lang] || o.en)) || '';
-const escHtml = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 function renderTips() {
   if (!TIPS) return;
   const tx = TIPS.text;
@@ -1937,17 +2593,19 @@ function renderPlaces() {
   const cat = ACTIVITIES[actCat];
   const active = cat.filters.filter(f => actSel[f.id].size);
   const scored = cat.places.map(p => {
-    const hits = active.filter(f => [].concat(p[f.id]).some(v => actSel[f.id].has(v))).length;
-    return { p, missed: active.length - hits };
+    const miss = active.filter(f => ![].concat(p[f.id]).some(v => actSel[f.id].has(v)));
+    return { p, missed: miss.length, which: miss[0] };
   });
   const exact = scored.filter(x => x.missed === 0).map(x => x.p);
-  const close = active.length > 1 ? scored.filter(x => x.missed === 1).map(x => x.p).slice(0, 3) : [];
+  const closeX = active.length > 1 ? scored.filter(x => x.missed === 1).slice(0, 3) : [];
+  const close = closeX.map(x => x.p);
 
   document.getElementById('actCount').textContent = t(exact.length === 1 ? 'place1' : 'placeN', { n: exact.length });
   const el = document.getElementById('actResults');
   el.innerHTML = exact.map(p => placeCard(cat, p)).join('') +
     (!exact.length ? `<p class="empty">${t('actEmpty')} <button type="button" class="ghost clear-filters">${t('clearFilters')}</button></p>` : '') +
-    (close.length && exact.length < 3 ? `<p class="near-title">${t('alsoWorth')}</p>${close.map(p => placeCard(cat, p)).join('')}` : '');
+    (close.length && exact.length < 3 ? `<p class="near-title">${t('altTitle')}</p>${closeX.map(x => placeCard(cat, x.p,
+      `${filterLabel(actCat, x.which)} → ${[].concat(x.p[x.which.id] || []).map(v => optionLabel(cat, x.which.id, v)).filter(Boolean).join(', ') || '—'}`)).join('')}` : '');
   el.querySelectorAll('.book').forEach(a => a.onclick = () => track('Book click', { category: actCat, place: a.dataset.place }));
   el.querySelector('.clear-filters')?.addEventListener('click', clearActFilters);
   // On the map, alternatives (miss one filter) get a dashed, faded pin and a note,
@@ -1970,19 +2628,31 @@ function optionLabel(cat, filterId, value) {
   return o ? optLabelT(actCat, f, o) : undefined;
 }
 
-function placeCard(cat, p) {
+const mapsSearchUrl = p => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ', Barcelona')}`;
+// One entry per place for the overview map and "near this stop": a place listed in two
+// sections (e.g. CosmoCaixa in Museums and With kids) keeps one pin with both labels.
+function uniqueActItems() {
+  const byName = new Map();
+  Object.entries(ACTIVITIES).forEach(([id, c]) => c.places.filter(p => p.lat != null).forEach(p => {
+    const k = p.name.toLowerCase();
+    if (byName.has(k)) byName.get(k).ids.push(id); else byName.set(k, { id, ids: [id], p });
+  }));
+  return [...byName.values()];
+}
+function placeCard(cat, p, missed = null) {
   const area = optionLabel(cat, 'area', p.area);
   const price = p.price ? ' · ' + optionLabel(cat, 'price', p.price) : '';
   const tags = cat.filters.filter(f => f.id !== 'area' && f.id !== 'price')
     .flatMap(f => [].concat(p[f.id] || []).map(v => optionLabel(cat, f.id, v)));
-  const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ', Barcelona')}`;
-  return `<article class="place">
+  const maps = mapsSearchUrl(p);
+  return `<article class="place${missed ? ' alt' : ''}">
+    ${missed ? `<p class="alt-tag">${t('altMisses', { filter: escHtml(missed) })}</p>` : ''}
     <h3>${p.name}</h3>
     <div class="meta">${area}${price}</div>
     <div class="tags">${tags.map(t => `<span>${t}</span>`).join('')}</div>
     <p>${placeDesc(actCat, p)}</p>
     ${p.dress ? `<p class="dress"><b>${t('dressCode')}</b> ${t(`dress_${p.dress}`)}</p>` : ''}
-    <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${p.name}">${t('seeBook')}</a>
+    <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${p.name}">${t('seeMaps')}</a>
   </article>`;
 }
 
@@ -2001,21 +2671,20 @@ const ACT_STYLE = {
   sports:      [svgIcon('<circle cx="12" cy="12" r="9"/><path d="m12 7.5 4 2.9-1.5 4.6h-5L8 10.4z"/>'), '#14706f'],
 };
 const actStyle = id => ACT_STYLE[id] || [svgIcon('<circle cx="12" cy="11" r="3"/>'), '#5f5e59'];
-const allActItems = () => Object.entries(ACTIVITIES).flatMap(([id, c]) => c.places.filter(p => p.lat != null).map(p => ({ id, p })));
+const allActItems = () => uniqueActItems();
 let actMap = null, actLayer = null, actItems = allActItems();
 
 function actIcon(id, near = false) {
   const [icon, color] = actStyle(id);
   return L.divIcon({ className: '', html: `<div class="act-pin${near ? ' near' : ''}" style="--c:${color}">${icon}</div>`, iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -16] });
 }
-function actPopup(id, p) {
+function actPopup(id, p, ids = [id]) {
   const [, color] = actStyle(id);
-  const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name + ', Barcelona')}`;
   return `<div class="act-pop" style="--c:${color}">
-    <div class="cat">${escHtml(catLabel(id))}</div>
+    <div class="cat">${escHtml(ids.map(catLabel).join(' · '))}</div>
     <h4>${escHtml(p.name)}</h4>
     <p>${escHtml(placeDesc(id, p))}</p>
-    <a class="book" href="${maps}" target="_blank" rel="noopener">${t('seeBook')}</a>
+    <a class="book" href="${mapsSearchUrl(p)}" target="_blank" rel="noopener">${t('seeMaps')}</a>
   </div>`;
 }
 // Created the first time the Activities tab opens (Leaflet needs a visible box).
@@ -2031,9 +2700,9 @@ function drawActMap(items, fit = true) {
   renderActLegend();
   if (!actMap) return;
   actLayer.clearLayers();
-  items.forEach(({ id, p, near }) => {
+  items.forEach(({ id, ids, p, near }) => {
     L.marker([p.lat, p.lng], { icon: actIcon(id, near), title: p.name, zIndexOffset: near ? -100 : 0 })
-      .bindPopup(() => actPopup(id, p), { maxWidth: 260 })
+      .bindPopup(() => actPopup(id, p, ids), { maxWidth: 260 })
       .on('popupopen', () => track('Activity map pin', { category: id, place: p.name }))
       .addTo(actLayer);
   });
@@ -2130,7 +2799,11 @@ let guideMap = null, guideLayer = null, guideMarkers = {}, guideStop = null;
 const guideFilter = new Set();   // empty = every interest
 // The interest a stop is drawn with: its first tag, or the first one the visitor filtered by.
 const guideInterest = s => s.tags.find(t => guideFilter.has(t)) || s.tags[0];
-const guideStops = () => STOPS.filter(s => !guideFilter.size || s.tags.some(t => guideFilter.has(t)));
+// Search ignores accents and case: "abaceria" finds "l'Abaceria", "sole" finds "Solé".
+const fold = x => String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+let guideQuery = '', guideView = 'map';
+const guideStops = () => STOPS.filter(s => (!guideFilter.size || s.tags.some(t => guideFilter.has(t)))
+  && (!guideQuery || fold(`${s.name} ${s.area}`).includes(fold(guideQuery))));
 const metres = (a, b) => dist({ lat: a[0], lng: a[1] }, b) * 1000;
 const fmtDist = m => (m < 950 ? `${Math.round(m / 10) * 10} m` : `${(m / 1000).toFixed(1).replace('.', lang === 'en' || lang === 'zh' ? '.' : ',')} km`);
 const walkMin = m => Math.max(1, Math.round(m * 1.3 / 1000 / plan.pace * 60));
@@ -2151,17 +2824,66 @@ function renderGuideFilter() {
     else if (guideFilter.has(id)) guideFilter.delete(id); else guideFilter.add(id);
     renderGuideFilter();
     drawGuideMap(true);
+    renderGuideList();
     renderGuideNear();
   });
+  renderGuideCount();
+}
+function renderGuideCount() {
   const n = guideStops().length;
   document.getElementById('guideCount').textContent = t('guideCount', { n });
+  const empty = document.getElementById('guideEmpty');
+  empty.hidden = n > 0;
+  if (!n) {
+    empty.innerHTML = `${t('guideNone')} <button type="button" class="ghost" id="guideReset">${t('guideReset')}</button>`;
+    document.getElementById('guideReset').onclick = resetGuide;
+  }
+  const s = document.getElementById('guideSearch');
+  s.placeholder = t('guideSearchPh'); s.setAttribute('aria-label', t('guideSearchPh'));
 }
+function resetGuide() {
+  guideFilter.clear(); guideQuery = '';
+  document.getElementById('guideSearch').value = '';
+  renderGuideFilter(); drawGuideMap(true); renderGuideList(); renderGuideNear();
+}
+// List view: every story that matches, nearest first when we know where you are, else A–Z.
+function renderGuideList() {
+  const list = document.getElementById('guideList');
+  const items = guideStops().map(s => [s, mePos ? metres(mePos, s) : null]);
+  items.sort((a, b) => (mePos ? a[1] - b[1] : a[0].name.localeCompare(b[0].name, lang)));
+  list.innerHTML = items.map(([s, m]) => {
+    const [icon, c] = INT_STYLE[guideInterest(s)];
+    return `<li class="${isListened(s.id) ? 'done' : ''}"><button type="button" data-id="${s.id}" class="${guideStop === s ? 'current' : ''}">
+      <span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><i style="--c:${c}">${icon}</i><span class="ok" aria-hidden="true">✓</span></span>
+      <span class="nm">${escHtml(s.name)}<span class="d">${escHtml(areaName(s.area))} · ${s.tags.map(x => escHtml(interestLabel(x))).join(', ')}${m != null ? ` · ${fmtDist(m)}` : ''}</span></span></button></li>`;
+  }).join('');
+  list.querySelectorAll('button').forEach(b => b.onclick = () => openGuideStop(STOPS.find(s => s.id === b.dataset.id)));
+}
+function setGuideView(v) {
+  guideView = v;
+  const box = document.getElementById('guideViewToggle');
+  pressOnly(box, box.querySelector(`[data-v="${v}"]`));
+  document.getElementById('guideMap').hidden = v !== 'map';
+  document.getElementById('guideList').hidden = v !== 'list';
+  if (v === 'map') setTimeout(() => guideMap?.invalidateSize(), 0); else renderGuideList();
+}
+document.querySelectorAll('#guideViewToggle button').forEach(b => b.onclick = () => setGuideView(b.dataset.v));
+let guideSearchTimer = null;
+document.getElementById('guideSearch').addEventListener('input', e => {
+  clearTimeout(guideSearchTimer);
+  guideSearchTimer = setTimeout(() => {
+    guideQuery = e.target.value.trim();
+    renderGuideCount(); drawGuideMap(true); renderGuideList(); renderGuideNear();
+  }, 150);
+});
 // Created the first time the tab opens (Leaflet needs a visible box).
 function ensureGuideMap() {
   if (guideMap) { guideMap.invalidateSize(); return; }
   guideMap = enablePinchZoom(L.map('guideMap', { scrollWheelZoom: false, touchZoom: true })).setView(BCN_CENTER, 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(guideMap);
-  guideLayer = L.layerGroup().addTo(guideMap);
+  // Pins close together merge into a numbered bubble when zoomed out (if the plugin loaded).
+  guideLayer = (L.markerClusterGroup ? L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 40, disableClusteringAtZoom: 16,
+    iconCreateFunction: c => L.divIcon({ className: '', html: `<div class="cluster">${c.getChildCount()}</div>`, iconSize: [38, 38] }) }) : L.layerGroup()).addTo(guideMap);
   renderGuideFilter();
   drawGuideMap(true);
   paintMe('guide');
@@ -2182,6 +2904,7 @@ function renderGuideDone() {
   if (!guideMap) return;
   STOPS.forEach(s => guideMarkers[s.id]?.setIcon(guideIcon(s)));
   renderGuideNear();
+  if (guideView === 'list') renderGuideList();
 }
 // The visitor's dot plus the three closest stories, all in view.
 function showMeAndNearest() {
@@ -2210,38 +2933,30 @@ function openGuideStop(s, scroll = true) {
   if (prev && guideMarkers[prev.id]) guideMarkers[prev.id].setIcon(guideIcon(prev)).setZIndexOffset(0);
   if (!guideMarkers[s.id] && guideMap) drawGuideMap();
   guideMarkers[s.id]?.setIcon(guideIcon(s)).setZIndexOffset(500);
+  if (guideLayer?.zoomToShowLayer && guideMarkers[s.id] && guideView === 'map' && scroll) guideLayer.zoomToShowLayer(guideMarkers[s.id], () => {});
   const st = { ...storyText(s), angle: null };
   const [icon, c] = INT_STYLE[guideInterest(s)];
   const away = mePos ? metres(mePos, s) : null;
-  const dest = `https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=walking`;
+  const dest = directionsUrl(s);
   const card = document.getElementById('guideCard');
   card.hidden = false;
   card.innerHTML = `
     <button type="button" class="guide-close" id="guideClose" aria-label="${t('guideClose')}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
     <figure class="stop-photo">
-      <img src="${photo(s.img, 900)}" alt="${escHtml(s.name)}">
+      <img src="${photo(s.img, 900)}" alt="${escHtml(s.name)}" onerror="this.closest('figure').classList.add('broken')">
       <a class="credit" href="${credit(s.img)}" target="_blank" rel="noopener">${t('photoCredit')}</a>
     </figure>
     <div class="stop-head">
       <div class="stop-num guide-icon" style="--c:${c}">${icon}</div>
-      <div><h3 class="stop-title">${escHtml(s.name)}</h3><div class="stop-area">${escHtml(areaName(s.area))}${away != null ? ` · ${fmtDist(away)} · ${t('guideWalk', { m: walkMin(away) })}` : ''}</div></div>
+      <div><h3 class="stop-title">${escHtml(s.name)}</h3><div class="stop-area">${escHtml(areaName(s.area))}${away != null ? ` · ${fmtDist(away)} · ${t('guideWalk', { m: walkMin(away) })}` : ''}</div>${addressHtml(s)}</div>
       <span class="listened-tag" id="listenedTag" ${isListened(s.id) ? '' : 'hidden'}>✓ ${t('listened')}</span>
     </div>
-    <div class="player" id="audioPlayer">
-      <div class="pl-buttons">
-        <button type="button" class="pl-skip" id="back10" aria-label="${t('back10')}">${back10Icon()}</button>
-        <button type="button" class="pl-play" id="play" aria-label="${t('listen')}">${playIcon()}</button>
-        <button type="button" class="pl-skip" id="fwd10" aria-label="${t('fwd10')}">${fwd10Icon()}</button>
-        <span class="pl-label">${t('listen')}</span>
-      </div>
-      <div class="pl-bar">
-        <input type="range" id="seek" min="0" max="1000" step="1" value="0" aria-label="${t('seekLabel')}">
-        <span class="pl-time" id="plTime">0:00</span>
-      </div>
-    </div>
+    ${noticeHtml(s)}
+    <div class="go-row"><a class="book go" href="${dest}" target="_blank" rel="noopener">${t('directionsHere')}</a></div>
+    ${playerHtml()}
     <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
     <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>
-    <a class="book guide-go" href="${dest}" target="_blank" rel="noopener">${t('guideDirections')}</a>`;
+    ${nearHtml(s)}`;
   plRoot = card;
   setupPlayer(s, st);
   document.getElementById('guideClose').onclick = closeGuideStop;
@@ -2329,7 +3044,8 @@ function applyLang() {
   document.getElementById('factsBig').textContent = t('factsBig', { n: STOPS.length });
   if (actCat && !document.getElementById('actFilters').hidden) openCategory(actCat, true);
   else drawActMap(actItems, false);
-  if (!document.getElementById('pickBox').hidden) document.getElementById('pickHint').textContent = t(pickTarget === 'start' ? 'pickStart' : 'pickEnd');
+  if (!document.getElementById('pickBox').hidden) renderPickTargets();
+  renderThemes();
   if (lastRoute && !document.getElementById('route').hidden) { renderRouteTexts(); renderStopList(); refreshStoryCard(); }
   refreshGuideTexts();
   if (privacy.open) renderPrivacy();
@@ -2371,7 +3087,10 @@ document.getElementById('resumeBtn').onclick = () => {
   if (restoreRoute()) history.pushState({ r: 1 }, '', '#ruta');
 };
 // Opening the page: back to the route if it was open (reload, locked phone), else offer it.
-if (location.hash === '#ruta' && !restoreRoute()) history.replaceState(null, '', location.pathname);
+// A shared link opens that walk; otherwise back to the route if it was open (reload, locked
+// phone, coming back from Google Maps), else offer it.
+if (location.hash.startsWith('#walk=')) { if (!routeFromLink()) history.replaceState(null, '', location.pathname); }
+else if (location.hash === '#ruta' && !restoreRoute()) history.replaceState(null, '', location.pathname);
 renderResume();
 </script>
 </body>

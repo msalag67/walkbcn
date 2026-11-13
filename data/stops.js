@@ -121,6 +121,7 @@ window.WALKBCN_STOPS = [
     story: "Built in the late 19th century, this iron-and-glass market serves the right side of the Eixample. It's especially known for its flower stalls, which spill colour onto the street outside. Inside, it's a real neighbourhood market: fruit, meat, fish and cheese, with very few tourists. A good place to see how locals in the Eixample really shop.",
     tip: "Buy something if you linger: the stalls are people's livelihoods, not a museum." },
   { id: "mercat-abaceria", name: "Mercat de l'Abaceria Central", img: "Mercat de l'Abaceria Central.JPG", area: "Gràcia", lat: 41.4021, lng: 2.1595, tags: ["food", "local"],
+    address: "Travessera de Gràcia, 186 · Carrer de Puigmartí",
     story: "This is Gràcia's biggest market and one of the busiest neighbourhood markets in the city, serving local families since the end of the 19th century. It has gone through a long renovation, so the stalls may be in a temporary space nearby. Either way, it's where Gràcia buys its fruit, fish and bread, far from the tourist routes.",
     tip: "Check where the stalls are on the day you visit: the market has been under renovation." },
   { id: "mercat-ninot", name: "Mercat del Ninot", img: "01 Mercat del Ninot, c. Mallorca.jpg", area: "Eixample", lat: 41.3882, lng: 2.1542, tags: ["food"],
@@ -145,7 +146,8 @@ window.WALKBCN_STOPS = [
   { id: "font-canaletes", name: "Font de Canaletes", img: "Barcelona - Rambla de Canaletes - View NE.jpg", area: "La Rambla", lat: 41.3852, lng: 2.1702, tags: ["sports", "local", "history"], crowded: true,
     story: "This iron fountain at the top of the Rambla carries two traditions. The first is a legend: whoever drinks from it will always come back to Barcelona. The second belongs to football. For decades, Barça fans have gathered right here to celebrate every big win, singing and waving flags until late at night. On an ordinary day it's just a fountain where neighbours fill a bottle; on a title night, the whole Rambla turns blue and red.",
     tip: "On match nights this spot gets packed: if you come to celebrate, respect the people who live on the Rambla." },
-  { id: "gimnas-sole", name: "Gimnàs Solé", img: "Blai 14.jpg", area: "El Raval", lat: 41.3828, lng: 2.17, tags: ["sports", "history"],
+  { id: "gimnas-sole", name: "Gimnàs Solé", img: "34 Fundació del F.C. Barcelona, c. Montjuïc del Carme.jpg", area: "El Raval", lat: 41.3828, lng: 2.17, tags: ["sports", "history"],
+    address: "Carrer de Montjuïc del Carme, 5 · Carrer del Pintor Fortuny",
     story: "Nothing about this narrow street suggests history, yet FC Barcelona was born here. On 29 November 1899, a group of football enthusiasts led by the Swiss Joan Gamper met at the Gimnàs Solé, a gymnasium in this street, and founded the club after Gamper had placed an advert in a sports newspaper looking for players. Today a plaque recalls that evening. From a small gym in the Raval to one of the most famous clubs in the world.",
     tip: "It's a residential street: look for the plaque quietly and don't block doorways." },
   { id: "nou-sardenya", name: "Nou Sardenya", img: "NouSardenya.jpg", area: "Gràcia", lat: 41.4118, lng: 2.1615, tags: ["sports", "local"],
@@ -179,3 +181,47 @@ window.WALKBCN_STOPS = [
     story: "This bookshop lives inside a former chapel on Carrer d'Elisabets. Instead of an altar, there are tables piled with novels, art books and essays under the old stone vaults. It's one of the city's favourite independent bookshops, a place where locals come to browse slowly, and it shows how the Raval's old religious buildings have found new lives as places of culture.",
     tip: "Browse quietly, as you would in a library, and support the shop if you find something you like." },
 ];
+
+// Practical notices shown on a stop's card, only between `from` and `until` (inclusive,
+// local dates). Each one says where the fact comes from and when we checked it, so the team
+// knows when to look again. Keep them short: what the visitor needs on the day.
+window.WALKBCN_NOTICES = {
+  "mercat-abaceria": [
+    { until: "2026-11-16", checked: "2026-11-13",
+      source: "https://beteve.cat/politica/mercat-abaceria-tornara-casa-17-novembre-despres-8-anys-carpa-provisional/",
+      go: { lat: 41.4031, lng: 2.1647, label: "Passeig de Sant Joan, 168" },
+      text: {
+        en: "Until 16 November 2026 the stalls are in the temporary market at Passeig de Sant Joan, 168 (about 8 minutes' walk east). The renovated building here reopens on 17 November.",
+        ca: "Fins al 16 de novembre de 2026 les parades són al mercat provisional del passeig de Sant Joan, 168 (a uns 8 minuts a peu cap a l'est). L'edifici renovat d'aquí reobre el 17 de novembre.",
+        es: "Hasta el 16 de noviembre de 2026 los puestos están en el mercado provisional del paseo de Sant Joan, 168 (a unos 8 minutos a pie hacia el este). El edificio renovado de aquí reabre el 17 de noviembre.",
+        fr: "Jusqu'au 16 novembre 2026, les étals sont dans le marché provisoire du passeig de Sant Joan, 168 (à environ 8 minutes à pied vers l'est). Le bâtiment rénové rouvre ici le 17 novembre.",
+        de: "Bis zum 16. November 2026 sind die Stände in der provisorischen Markthalle am Passeig de Sant Joan 168 (etwa 8 Minuten zu Fuß Richtung Osten). Das renovierte Gebäude hier öffnet am 17. November wieder.",
+        it: "Fino al 16 novembre 2026 i banchi sono nel mercato provvisorio del passeig de Sant Joan, 168 (circa 8 minuti a piedi verso est). L'edificio rinnovato qui riapre il 17 novembre.",
+        zh: "2026年11月16日之前，摊位位于圣胡安大道168号的临时市场（向东步行约8分钟）。这里翻新后的市场大楼将于11月17日重新开放。",
+      } },
+    { from: "2026-11-17", until: "2026-12-31", checked: "2026-11-13",
+      source: "https://www.independent.cat/noticia/160842/lestrena-del-nou-mercat-de-labaceria-es-mante-pel-17-de-novembre",
+      text: {
+        en: "The market reopened in its renovated building on 17 November 2026, after years in a temporary tent. In the first weeks some stalls may still be moving in.",
+        ca: "El mercat va reobrir a l'edifici renovat el 17 de novembre de 2026, després d'anys en una carpa provisional. Les primeres setmanes algunes parades encara poden estar-se traslladant.",
+        es: "El mercado reabrió en su edificio renovado el 17 de noviembre de 2026, tras años en una carpa provisional. Las primeras semanas algunos puestos aún pueden estar trasladándose.",
+        fr: "Le marché a rouvert dans son bâtiment rénové le 17 novembre 2026, après des années sous un chapiteau provisoire. Les premières semaines, certains étals peuvent encore être en cours d'installation.",
+        de: "Der Markt hat am 17. November 2026 nach Jahren im provisorischen Zelt in seinem renovierten Gebäude wieder geöffnet. In den ersten Wochen ziehen manche Stände eventuell noch um.",
+        it: "Il mercato ha riaperto nel suo edificio rinnovato il 17 novembre 2026, dopo anni in una tenda provvisoria. Nelle prime settimane alcuni banchi potrebbero essere ancora in trasloco.",
+        zh: "市场在临时帐篷中经营多年后，已于2026年11月17日在翻新后的大楼重新开放。最初几周，部分摊位可能仍在搬迁中。",
+      } },
+  ],
+  "gimnas-sole": [
+    { checked: "2026-11-13",
+      source: "https://www.fcbarcelona.com/en/el-museu-a-la-ciutat",
+      text: {
+        en: "The gym itself is gone: the building was demolished in the 1990s. What you can see is the commemorative plaque on the street, at number 5.",
+        ca: "El gimnàs ja no hi és: l'edifici es va enderrocar als anys noranta. El que pots veure és la placa commemorativa al carrer, al número 5.",
+        es: "El gimnasio ya no existe: el edificio se derribó en los años noventa. Lo que puedes ver es la placa conmemorativa en la calle, en el número 5.",
+        fr: "Le gymnase n'existe plus : le bâtiment a été démoli dans les années 1990. Ce que vous pouvez voir, c'est la plaque commémorative dans la rue, au numéro 5.",
+        de: "Die Turnhalle gibt es nicht mehr: Das Gebäude wurde in den 1990er-Jahren abgerissen. Zu sehen ist die Gedenktafel an der Straße, bei Nummer 5.",
+        it: "La palestra non c'è più: l'edificio è stato demolito negli anni Novanta. Quello che puoi vedere è la targa commemorativa in strada, al numero 5.",
+        zh: "体育馆本身已不复存在：建筑在1990年代被拆除。你能看到的是街上5号门牌处的纪念牌。",
+      } },
+  ],
+};
