@@ -667,7 +667,6 @@
   .facts svg { width: 18px; height: 18px; padding: 0; margin: 0; background: none; box-shadow: none; border-radius: 0; stroke: var(--cobalt); box-sizing: border-box; }
 
   /* Cards: no hover zoom, no round "See" badge; the whole block is the button */
-  .tile img, .tile:hover img { transform: none; transition: none; }
   .tile:hover img { opacity: .92; }
   .badge { display: none; }
   .cat-tiles .tile-body { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 12px; min-height: 0; padding: 18px 26px 24px; }
@@ -691,9 +690,6 @@
   .feedback svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   .feedback button[aria-pressed="true"] { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
 
-  /* Motion: only what answers an action. No entrance choreography, no scroll reveals. */
-  header, .tabs, .hero img, .hero-text, .hero-text::before, .facts .big, .facts li,
-  .tile, .place, h2, .results-head, .tip { animation: none !important; }
 
   footer { margin-top: 80px; padding: 24px 0 8px; line-height: 1.7; }
   /* The tick only appears on chosen interests; unchosen photos stay clean */
