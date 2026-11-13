@@ -14,7 +14,7 @@ window.WALKBCN_LANGS = [
 window.WALKBCN_UI = {
   en: {
     tagline: "Audio walks through central Barcelona", language: "Language",
-    tabWalk: "Walking routes", tabAct: "Activities",
+    tabWalk: "Walking routes", tabGuide: "Audio guide", guideTitle: "The whole city, one story at a time.", guideLead: "Tap any point on the map to hear its story. Share your location and we'll show you what's closest.", guideFilterLabel: "Show stories about", guideAll: "Everything", guideCount: "{n} stories on the map", guideNearTitle: "Close to you", guideNearHint: "Tap “Where am I?” to see the stories closest to you.", guideWalk: "{m} min walk", guideDirections: "Walking directions", guideClose: "Close", tabAct: "Activities",
     heroAlt: "Barcelona rooftops at sunset", heroTitle: "A walk through Barcelona, with a story at every stop.",
     heroText: "Pick what you like (Gaudí, markets, football, old neighbourhood bars) and we'll draw a short route through the centre. At each stop, press play.",
     interestsTitle: "What are you interested in?",
@@ -64,7 +64,7 @@ window.WALKBCN_UI = {
   },
   ca: {
     tagline: "Passejades amb àudio pel centre de Barcelona", language: "Idioma",
-    tabWalk: "Rutes a peu", tabAct: "Activitats",
+    tabWalk: "Rutes a peu", tabGuide: "Audioguia", guideTitle: "Tota la ciutat, una història cada vegada.", guideLead: "Toca qualsevol punt del mapa per escoltar-ne la història. Si comparteixes la teva ubicació, et mostrem el que tens més a prop.", guideFilterLabel: "Mostra històries de", guideAll: "Tot", guideCount: "{n} històries al mapa", guideNearTitle: "A prop teu", guideNearHint: "Toca «On sóc?» per veure les històries que tens més a prop.", guideWalk: "{m} min a peu", guideDirections: "Com arribar-hi", guideClose: "Tanca", tabAct: "Activitats",
     heroAlt: "Terrats de Barcelona al capvespre", heroTitle: "Una passejada per Barcelona, amb una història a cada parada.",
     heroText: "Tria el que t'agrada (Gaudí, mercats, futbol, bars de tota la vida) i et dibuixem una ruta curta pel centre. A cada parada, prem play.",
     interestsTitle: "Què t'interessa?",
@@ -114,7 +114,7 @@ window.WALKBCN_UI = {
   },
   es: {
     tagline: "Paseos con audio por el centro de Barcelona", language: "Idioma",
-    tabWalk: "Rutas a pie", tabAct: "Actividades",
+    tabWalk: "Rutas a pie", tabGuide: "Audioguía", guideTitle: "Toda la ciudad, una historia cada vez.", guideLead: "Toca cualquier punto del mapa para escuchar su historia. Si compartes tu ubicación, te enseñamos lo que tienes más cerca.", guideFilterLabel: "Mostrar historias de", guideAll: "Todo", guideCount: "{n} historias en el mapa", guideNearTitle: "Cerca de ti", guideNearHint: "Toca «¿Dónde estoy?» para ver las historias que tienes más cerca.", guideWalk: "{m} min a pie", guideDirections: "Cómo llegar", guideClose: "Cerrar", tabAct: "Actividades",
     heroAlt: "Azoteas de Barcelona al atardecer", heroTitle: "Un paseo por Barcelona, con una historia en cada parada.",
     heroText: "Elige lo que te gusta (Gaudí, mercados, fútbol, bares de toda la vida) y te trazamos una ruta corta por el centro. En cada parada, dale al play.",
     interestsTitle: "¿Qué te interesa?",
@@ -164,7 +164,7 @@ window.WALKBCN_UI = {
   },
   fr: {
     tagline: "Balades audio dans le centre de Barcelone", language: "Langue",
-    tabWalk: "Balades à pied", tabAct: "Activités",
+    tabWalk: "Balades à pied", tabGuide: "Audioguide", guideTitle: "Toute la ville, une histoire à la fois.", guideLead: "Touchez n'importe quel point de la carte pour écouter son histoire. Partagez votre position et nous vous montrons ce qui est le plus proche.", guideFilterLabel: "Afficher les histoires sur", guideAll: "Tout", guideCount: "{n} histoires sur la carte", guideNearTitle: "Près de vous", guideNearHint: "Touchez « Où suis-je ? » pour voir les histoires les plus proches.", guideWalk: "{m} min à pied", guideDirections: "Itinéraire à pied", guideClose: "Fermer", tabAct: "Activités",
     heroAlt: "Toits de Barcelone au coucher du soleil", heroTitle: "Une balade dans Barcelone, avec une histoire à chaque étape.",
     heroText: "Choisissez ce qui vous plaît (Gaudí, marchés, football, bars de quartier) et nous traçons une courte balade dans le centre. À chaque étape, appuyez sur play.",
     interestsTitle: "Qu'est-ce qui vous intéresse ?",
@@ -214,7 +214,7 @@ window.WALKBCN_UI = {
   },
   de: {
     tagline: "Audio-Spaziergänge durch Barcelonas Zentrum", language: "Sprache",
-    tabWalk: "Spaziergänge", tabAct: "Aktivitäten",
+    tabWalk: "Spaziergänge", tabGuide: "Audioguide", guideTitle: "Die ganze Stadt, eine Geschichte nach der anderen.", guideLead: "Tippe auf einen Punkt der Karte, um seine Geschichte zu hören. Teile deinen Standort, dann zeigen wir dir, was in der Nähe ist.", guideFilterLabel: "Geschichten zeigen über", guideAll: "Alles", guideCount: "{n} Geschichten auf der Karte", guideNearTitle: "In deiner Nähe", guideNearHint: "Tippe auf „Wo bin ich?“, um die Geschichten in deiner Nähe zu sehen.", guideWalk: "{m} Min. zu Fuß", guideDirections: "Fußweg anzeigen", guideClose: "Schließen", tabAct: "Aktivitäten",
     heroAlt: "Dächer von Barcelona bei Sonnenuntergang", heroTitle: "Ein Spaziergang durch Barcelona, mit einer Geschichte an jedem Halt.",
     heroText: "Wähle, was dich interessiert (Gaudí, Märkte, Fußball, alte Eckkneipen), und wir zeichnen dir eine kurze Route durchs Zentrum. An jedem Halt: Play drücken.",
     interestsTitle: "Was interessiert dich?",
@@ -264,7 +264,7 @@ window.WALKBCN_UI = {
   },
   it: {
     tagline: "Passeggiate audio nel centro di Barcellona", language: "Lingua",
-    tabWalk: "Passeggiate", tabAct: "Attività",
+    tabWalk: "Passeggiate", tabGuide: "Audioguida", guideTitle: "Tutta la città, una storia alla volta.", guideLead: "Tocca un punto qualsiasi della mappa per ascoltarne la storia. Se condividi la tua posizione, ti mostriamo cosa hai più vicino.", guideFilterLabel: "Mostra storie di", guideAll: "Tutto", guideCount: "{n} storie sulla mappa", guideNearTitle: "Vicino a te", guideNearHint: "Tocca «Dove sono?» per vedere le storie più vicine a te.", guideWalk: "{m} min a piedi", guideDirections: "Indicazioni a piedi", guideClose: "Chiudi", tabAct: "Attività",
     heroAlt: "Tetti di Barcellona al tramonto", heroTitle: "Una passeggiata per Barcellona, con una storia a ogni tappa.",
     heroText: "Scegli cosa ti piace (Gaudí, mercati, calcio, bar storici di quartiere) e ti disegniamo un breve percorso in centro. A ogni tappa, premi play.",
     interestsTitle: "Cosa ti interessa?",
@@ -314,7 +314,7 @@ window.WALKBCN_UI = {
   },
   zh: {
     tagline: "巴塞罗那市中心语音步行导览", language: "语言",
-    tabWalk: "步行路线", tabAct: "活动推荐",
+    tabWalk: "步行路线", tabGuide: "语音导览", guideTitle: "整座城市，一次一个故事。", guideLead: "点击地图上的任意地点，收听它的故事。分享你的位置，我们会告诉你附近有什么。", guideFilterLabel: "显示以下主题的故事", guideAll: "全部", guideCount: "地图上有 {n} 个故事", guideNearTitle: "你附近", guideNearHint: "点击“我在哪？”查看离你最近的故事。", guideWalk: "步行 {m} 分钟", guideDirections: "步行路线", guideClose: "关闭", tabAct: "活动推荐",
     heroAlt: "日落时分的巴塞罗那屋顶", heroTitle: "漫步巴塞罗那，每一站都有一个故事。",
     heroText: "选择你喜欢的（高迪、市场、足球、街坊老酒吧），我们为你规划一条市中心的短途路线。到达每一站，按下播放即可。",
     interestsTitle: "你对什么感兴趣？",
