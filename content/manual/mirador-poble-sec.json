@@ -1,0 +1,84 @@
+{
+  "id": "mirador-poble-sec",
+  "tip": {
+    "en": "It is the neighbourhood's park: share the paths with children and dog walkers, and keep music and voices low.",
+    "ca": "És el parc del barri: comparteix els camins amb la canalla i amb qui passeja el gos, i res de música ni crits.",
+    "es": "Es el parque del barrio: comparte los caminos con los niños y con quien pasea al perro, y nada de música ni gritos.",
+    "fr": "C'est le parc du quartier : partagez les allées avec les enfants et les promeneurs de chiens, et pas de musique ni de cris.",
+    "de": "Es ist der Park des Viertels: Teil die Wege mit Kindern und Hundehaltern und verzichte auf Musik und Lärm.",
+    "it": "È il parco del quartiere: condividi i sentieri con i bambini e con chi porta a spasso il cane, e niente musica né grida.",
+    "zh": "这是街区居民的公园：请与孩子和遛狗的人共用小路，不要放音乐或大声喧哗。"
+  },
+  "stories": {
+    "en": {
+      "short": "This park hangs on the slope of Montjuïc, right above the streets of Poble-sec. Its upper part feels like a small forest, with gravel paths and viewpoints; lower down it becomes a neighbourhood garden. Follow the water: a stream runs down an iron channel to a pond and a stepped cascade.",
+      "normal": "This park hangs on the slope of Montjuïc, right above the dense streets of Poble-sec. It is two parks in one. The upper part feels like a small forest, with wide gravel paths, stairs and viewpoints at the top. The lower part is a neighbourhood garden, with petanca courts, a playground and a pergola covered in wisteria. Now follow the water: a stream runs down an iron channel twenty-eight metres long into a small pond, and further down a stepped cascade eighteen metres high carries it to the bottom. Look for the jacarandas, purple in late spring.",
+      "long": "This park hangs on the slope of Montjuïc, right above the dense streets of Poble-sec, a neighbourhood with little green space of its own. It is two parks in one. The upper part feels like a small forest, with wide gravel paths, stairs and viewpoints at the highest levels, among Aleppo pines. The lower part is an urban garden made for daily life: petanca courts, a playground, a ping-pong table, an area for dogs and a pergola covered in wisteria and Virginia creeper. Now follow the water, which ties the two parts together. A stream fed from a wall runs down an iron channel twenty-eight metres long into a small pond, and lower down another pond with water plants sends it over a stepped cascade eighteen metres high. Look at the trees too: jacarandas, which turn purple in late spring, Judas trees and Koelreuterias. Listen for a moment: the sounds here are neighbours playing petanca and children on the swings, not traffic. This is where Poble-sec comes to breathe, so enjoy it quietly."
+    },
+    "ca": {
+      "short": "Aquest parc penja del vessant de Montjuïc, just damunt dels carrers del Poble-sec. La part de dalt sembla un petit bosc, amb camins de sauló i miradors; més avall es converteix en un jardí de barri. Segueix l'aigua: un rierol baixa per un canal de ferro fins a un estany i una cascada esglaonada.",
+      "normal": "Aquest parc penja del vessant de Montjuïc, just damunt dels carrers atapeïts del Poble-sec. Són dos parcs en un. La part de dalt sembla un petit bosc, amb camins amples de sauló, escales i miradors al capdamunt. La part de baix és un jardí de barri, amb pistes de petanca, una zona de jocs i una pèrgola coberta de glicines. Ara segueix l'aigua: un rierol baixa per un canal de ferro de vint-i-vuit metres fins a un petit estany, i més avall una cascada esglaonada de divuit metres d'alçada la porta fins a baix. Busca les jacarandes, liles a finals de primavera.",
+      "long": "Aquest parc penja del vessant de Montjuïc, just damunt dels carrers atapeïts del Poble-sec, un barri amb poc verd propi. Són dos parcs en un. La part de dalt sembla un petit bosc, amb camins amples de sauló, escales i miradors als nivells més alts, entre pins blancs. La part de baix és un jardí urbà pensat per a la vida de cada dia: pistes de petanca, una zona de jocs, una taula de ping-pong, un espai per als gossos i una pèrgola coberta de glicines i vinya verge. Ara segueix l'aigua, que uneix les dues parts. Un rierol que neix d'un mur baixa per un canal de ferro de vint-i-vuit metres fins a un petit estany, i més avall un altre estany amb plantes aquàtiques l'envia per una cascada esglaonada de divuit metres d'alçada. Fixa't també en els arbres: jacarandes, que es tornen liles a finals de primavera, arbres de l'amor i koelreuteries. Escolta un moment: aquí els sons són veïns jugant a petanca i criatures als gronxadors, no pas trànsit. És on el Poble-sec ve a respirar, així que gaudeix-ne amb calma."
+    },
+    "es": {
+      "short": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles del Poble-sec. La parte de arriba parece un pequeño bosque, con caminos de sablón y miradores; más abajo se convierte en un jardín de barrio. Sigue el agua: un riachuelo baja por un canal de hierro hasta un estanque y una cascada escalonada.",
+      "normal": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles apretadas del Poble-sec. Son dos parques en uno. La parte de arriba parece un pequeño bosque, con caminos anchos de sablón, escaleras y miradores en lo alto. La parte de abajo es un jardín de barrio, con pistas de petanca, una zona de juegos y una pérgola cubierta de glicinas. Ahora sigue el agua: un riachuelo baja por un canal de hierro de veintiocho metros hasta un pequeño estanque, y más abajo una cascada escalonada de dieciocho metros de altura la lleva hasta el fondo. Busca las jacarandas, moradas a finales de primavera.",
+      "long": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles apretadas del Poble-sec, un barrio con poco verde propio. Son dos parques en uno. La parte de arriba parece un pequeño bosque, con caminos anchos de sablón, escaleras y miradores en los niveles más altos, entre pinos carrascos. La parte de abajo es un jardín urbano pensado para la vida diaria: pistas de petanca, una zona de juegos, una mesa de ping-pong, un espacio para perros y una pérgola cubierta de glicinas y parra virgen. Ahora sigue el agua, que une las dos partes. Un riachuelo que nace de un muro baja por un canal de hierro de veintiocho metros hasta un pequeño estanque, y más abajo otro estanque con plantas acuáticas la envía por una cascada escalonada de dieciocho metros de altura. Fíjate también en los árboles: jacarandas, que se vuelven moradas a finales de primavera, árboles del amor y koelreuterias. Escucha un momento: aquí los sonidos son vecinos jugando a la petanca y niños en los columpios, no tráfico. Es donde el Poble-sec viene a respirar, así que disfrútalo con calma."
+    },
+    "fr": {
+      "short": "Ce parc s'accroche au flanc de Montjuïc, juste au-dessus des rues du Poble-sec. Sa partie haute ressemble à un petit bois, avec des chemins de gravier et des belvédères ; plus bas, il devient un jardin de quartier. Suivez l'eau : un ruisseau descend par un canal de fer jusqu'à un bassin et une cascade en gradins.",
+      "normal": "Ce parc s'accroche au flanc de Montjuïc, juste au-dessus des rues serrées du Poble-sec. Ce sont deux parcs en un. La partie haute ressemble à un petit bois, avec de larges chemins de gravier, des escaliers et des belvédères au sommet. La partie basse est un jardin de quartier, avec des terrains de pétanque, une aire de jeux et une pergola couverte de glycines. Suivez maintenant l'eau : un ruisseau descend par un canal de fer de vingt-huit mètres jusqu'à un petit bassin, et plus bas une cascade en gradins de dix-huit mètres de haut l'emmène jusqu'en bas. Cherchez les jacarandas, violets à la fin du printemps.",
+      "long": "Ce parc s'accroche au flanc de Montjuïc, juste au-dessus des rues serrées du Poble-sec, un quartier qui a peu de verdure à lui. Ce sont deux parcs en un. La partie haute ressemble à un petit bois, avec de larges chemins de gravier, des escaliers et des belvédères aux niveaux les plus hauts, parmi les pins d'Alep. La partie basse est un jardin urbain pensé pour la vie de tous les jours : terrains de pétanque, aire de jeux, table de ping-pong, espace pour les chiens et pergola couverte de glycines et de vigne vierge. Suivez maintenant l'eau, qui relie les deux parties. Un ruisseau qui naît d'un mur descend par un canal de fer de vingt-huit mètres jusqu'à un petit bassin, et plus bas un autre bassin aux plantes aquatiques l'envoie sur une cascade en gradins de dix-huit mètres de haut. Regardez aussi les arbres : jacarandas, qui deviennent violets à la fin du printemps, arbres de Judée et koelreuterias. Écoutez un instant : ici, les sons sont ceux des voisins jouant à la pétanque et des enfants sur les balançoires, pas de la circulation. C'est là que le Poble-sec vient respirer : profitez-en calmement."
+    },
+    "de": {
+      "short": "Dieser Park hängt am Hang des Montjuïc, direkt über den Straßen von Poble-sec. Oben wirkt er wie ein kleiner Wald mit Kieswegen und Aussichtspunkten; weiter unten wird er zum Nachbarschaftsgarten. Folge dem Wasser: Ein Bach fließt durch eine Eisenrinne in einen Teich und über eine Stufenkaskade.",
+      "normal": "Dieser Park hängt am Hang des Montjuïc, direkt über den dichten Straßen von Poble-sec. Er ist zwei Parks in einem. Der obere Teil wirkt wie ein kleiner Wald, mit breiten Kieswegen, Treppen und Aussichtspunkten ganz oben. Der untere Teil ist ein Nachbarschaftsgarten mit Boule-Bahnen, einem Spielplatz und einer mit Glyzinien bewachsenen Pergola. Folge nun dem Wasser: Ein Bach fließt durch eine achtundzwanzig Meter lange Eisenrinne in einen kleinen Teich, und weiter unten trägt ihn eine achtzehn Meter hohe Stufenkaskade nach unten. Achte auf die Jacarandas, die im Spätfrühling lila blühen.",
+      "long": "Dieser Park hängt am Hang des Montjuïc, direkt über den dichten Straßen von Poble-sec, einem Viertel mit wenig eigenem Grün. Er ist zwei Parks in einem. Der obere Teil wirkt wie ein kleiner Wald, mit breiten Kieswegen, Treppen und Aussichtspunkten auf den höchsten Ebenen, zwischen Aleppo-Kiefern. Der untere Teil ist ein Stadtgarten für den Alltag: Boule-Bahnen, ein Spielplatz, eine Tischtennisplatte, ein Bereich für Hunde und eine Pergola mit Glyzinien und wildem Wein. Folge nun dem Wasser, das beide Teile verbindet. Ein Bach, der aus einer Mauer kommt, fließt durch eine achtundzwanzig Meter lange Eisenrinne in einen kleinen Teich, und weiter unten schickt ihn ein zweiter Teich mit Wasserpflanzen über eine achtzehn Meter hohe Stufenkaskade. Schau dir auch die Bäume an: Jacarandas, die im Spätfrühling lila werden, Judasbäume und Blasenbäume. Hör einen Moment zu: Hier hört man Nachbarn beim Boule und Kinder auf den Schaukeln, keinen Verkehr. Hierher kommt Poble-sec zum Durchatmen, also genieß es ruhig."
+    },
+    "it": {
+      "short": "Questo parco è appeso al pendio di Montjuïc, proprio sopra le strade del Poble-sec. La parte alta sembra un piccolo bosco, con sentieri di ghiaia e belvedere; più in basso diventa un giardino di quartiere. Segui l'acqua: un ruscello scende in un canale di ferro fino a uno stagno e a una cascata a gradini.",
+      "normal": "Questo parco è appeso al pendio di Montjuïc, proprio sopra le strade fitte del Poble-sec. Sono due parchi in uno. La parte alta sembra un piccolo bosco, con ampi sentieri di ghiaia, scale e belvedere in cima. La parte bassa è un giardino di quartiere, con campi da bocce, un'area giochi e un pergolato coperto di glicine. Ora segui l'acqua: un ruscello scende in un canale di ferro lungo ventotto metri fino a un piccolo stagno, e più in basso una cascata a gradini alta diciotto metri la porta fino in fondo. Cerca le jacarande, viola a fine primavera.",
+      "long": "Questo parco è appeso al pendio di Montjuïc, proprio sopra le strade fitte del Poble-sec, un quartiere con poco verde proprio. Sono due parchi in uno. La parte alta sembra un piccolo bosco, con ampi sentieri di ghiaia, scale e belvedere ai livelli più alti, tra pini d'Aleppo. La parte bassa è un giardino urbano pensato per la vita di tutti i giorni: campi da bocce, un'area giochi, un tavolo da ping-pong, uno spazio per i cani e un pergolato coperto di glicine e vite americana. Ora segui l'acqua, che unisce le due parti. Un ruscello che nasce da un muro scende in un canale di ferro lungo ventotto metri fino a un piccolo stagno, e più in basso un altro stagno con piante acquatiche la manda giù per una cascata a gradini alta diciotto metri. Guarda anche gli alberi: jacarande, che diventano viola a fine primavera, alberi di Giuda e koelreuterie. Ascolta un momento: qui i suoni sono residenti che giocano a bocce e bambini sulle altalene, non il traffico. È qui che il Poble-sec viene a respirare, quindi goditelo con calma."
+    },
+    "zh": {
+      "short": "这座公园挂在蒙特惠奇山（Montjuïc）的山坡上，就在干村区（Poble-sec）的街道上方。上半部分像一片小树林，有砂石小路和观景台；往下则变成街区花园。跟着水走：一条小溪顺着铁槽流进池塘，再流下一道阶梯式瀑布。",
+      "normal": "这座公园挂在蒙特惠奇山（Montjuïc）的山坡上，就在干村区（Poble-sec）密集的街道上方。它是两座公园合二为一。上半部分像一片小树林，有宽阔的砂石小路、台阶和顶部的观景台。下半部分是街区花园，有地掷球场、儿童游乐区和爬满紫藤的花架。现在跟着水走：一条小溪顺着二十八米长的铁槽流进一个小池塘，再往下，一道十八米高的阶梯式瀑布把水送到底部。找找蓝花楹，春末时会开满紫色的花。",
+      "long": "这座公园挂在蒙特惠奇山（Montjuïc）的山坡上，就在干村区（Poble-sec）密集的街道上方，这个街区自己的绿地很少。它是两座公园合二为一。上半部分像一片小树林，有宽阔的砂石小路、台阶和最高处的观景台，周围是阿勒颇松。下半部分是为日常生活设计的城市花园：地掷球场、儿童游乐区、乒乓球台、遛狗区，还有爬满紫藤和五叶地锦的花架。现在跟着水走，水把两部分连在一起。一条从墙里流出的小溪顺着二十八米长的铁槽流进一个小池塘，再往下，另一个种着水生植物的池塘把水送下一道十八米高的阶梯式瀑布。也看看这些树：春末变成紫色的蓝花楹、紫荆和栾树。静听片刻：这里的声音是邻居们玩地掷球、孩子们荡秋千，而不是车流。这里是干村区的人来透气的地方，请安静地享受。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": ["residential"],
+    "official": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-mirador-del-poble-sec-95125123610",
+    "look": {
+      "en": "The iron water channel, the ponds and the stepped cascade; the jacarandas and the wisteria pergola.",
+      "ca": "El canal d'aigua de ferro, els estanys i la cascada esglaonada; les jacarandes i la pèrgola de glicines.",
+      "es": "El canal de agua de hierro, los estanques y la cascada escalonada; las jacarandas y la pérgola de glicinas.",
+      "fr": "Le canal d'eau en fer, les bassins et la cascade en gradins ; les jacarandas et la pergola de glycines.",
+      "de": "Die eiserne Wasserrinne, die Teiche und die Stufenkaskade; die Jacarandas und die Glyzinienpergola.",
+      "it": "Il canale d'acqua in ferro, gli stagni e la cascata a gradini; le jacarande e il pergolato di glicine.",
+      "zh": "铁制水槽、池塘和阶梯式瀑布；蓝花楹和紫藤花架。"
+    },
+    "listen": {
+      "en": "On a bench beside the upper pond, away from the playground.",
+      "ca": "En un banc al costat de l'estany de dalt, lluny de la zona de jocs.",
+      "es": "En un banco junto al estanque de arriba, lejos de la zona de juegos.",
+      "fr": "Sur un banc près du bassin du haut, loin de l'aire de jeux.",
+      "de": "Auf einer Bank am oberen Teich, abseits vom Spielplatz.",
+      "it": "Su una panchina accanto allo stagno superiore, lontano dall'area giochi.",
+      "zh": "坐在上方池塘边的长椅上收听，远离儿童游乐区。"
+    },
+    "access": {
+      "en": "A free public park (Passeig de Montjuïc, 59), accessible for people with reduced mobility. The upper part is uphill with stairs.",
+      "ca": "Un parc públic gratuït (passeig de Montjuïc, 59), accessible per a persones amb mobilitat reduïda. La part de dalt fa pujada i té escales.",
+      "es": "Un parque público gratuito (paseo de Montjuïc, 59), accesible para personas con movilidad reducida. La parte de arriba es cuesta arriba y tiene escaleras.",
+      "fr": "Un parc public gratuit (Passeig de Montjuïc, 59), accessible aux personnes à mobilité réduite. La partie haute monte et a des escaliers.",
+      "de": "Ein kostenloser öffentlicher Park (Passeig de Montjuïc 59), barrierefrei zugänglich. Der obere Teil geht bergauf und hat Treppen.",
+      "it": "Un parco pubblico gratuito (Passeig de Montjuïc, 59), accessibile alle persone con mobilità ridotta. La parte alta è in salita e ha scale.",
+      "zh": "免费公共公园（Passeig de Montjuïc 59号），行动不便者可通行。上半部分是上坡，有台阶。"
+    },
+    "sources": [
+      { "url": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-mirador-del-poble-sec-95125123610", "checked": "2026-11-14" }
+    ]
+  }
+}

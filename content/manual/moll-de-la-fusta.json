@@ -1,0 +1,94 @@
+{
+  "id": "moll-de-la-fusta",
+  "tip": {
+    "en": "Runners, cyclists and families share this promenade: walk on the pedestrian side and don't stop in the cycle lane.",
+    "ca": "Corredors, ciclistes i famílies comparteixen aquest passeig: camina pel costat de vianants i no t'aturis al carril bici.",
+    "es": "Corredores, ciclistas y familias comparten este paseo: camina por el lado de peatones y no te pares en el carril bici.",
+    "fr": "Coureurs, cyclistes et familles partagent cette promenade : marchez côté piétons et ne vous arrêtez pas sur la piste cyclable.",
+    "de": "Läufer, Radfahrer und Familien teilen sich diese Promenade: Geh auf der Fußgängerseite und bleib nicht auf dem Radweg stehen.",
+    "it": "Corridori, ciclisti e famiglie condividono questa passeggiata: cammina sul lato pedonale e non fermarti sulla pista ciclabile.",
+    "zh": "跑步者、骑车人和家庭共用这条步道：请走在行人一侧，不要停在自行车道上。"
+  },
+  "stories": {
+    "en": {
+      "short": "This palm-lined promenade is the Moll de la Fusta, the timber wharf, part of the Port Vell, the oldest part of Barcelona's harbour. Ships once unloaded here; today it is a place to walk by the water, between the Columbus monument and the big Barcelona Head sculpture.",
+      "normal": "You are on the Moll de la Fusta, the timber wharf, part of the Port Vell, the oldest part of Barcelona's harbour. For a long time this edge of the city was a working quay, cut off from the streets behind it by warehouses and traffic. In the 1980s the architect Manuel de Solà-Morales redesigned it as a promenade, with palm trees and room to walk by the water. Look to one end and you will see the Columbus monument; look to the other and the big ceramic face of the Barcelona Head. In between, the boats of the old port are moored right in front of you.",
+      "long": "You are on the Moll de la Fusta, the timber wharf, part of the Port Vell, the oldest part of Barcelona's harbour, in use for more than four centuries. For a long time this edge of the city was a working quay, cut off from the streets behind it by sheds, warehouses and traffic: the old town lived with its back to the sea. In the 1980s, as the city began to open up its waterfront, the architect Manuel de Solà-Morales redesigned this wharf as a promenade on several levels, with palm trees, benches and room to walk by the water, while the traffic was kept apart. Look to the south-west and you will see the Columbus monument at the bottom of the Rambla; look the other way and you will find the big ceramic face of the Barcelona Head. In front of you, sailing boats and old ships are moored where cargo used to be unloaded. It is one of the easiest places in the old town to feel the sea, so take a seat, look at the water and let the noise of the city fall behind you."
+    },
+    "ca": {
+      "short": "Aquest passeig de palmeres és el Moll de la Fusta, part del Port Vell, la part més antiga del port de Barcelona. Abans hi descarregaven els vaixells; avui és un lloc per passejar arran d'aigua, entre el monument a Colom i la gran escultura del Cap de Barcelona.",
+      "normal": "Ets al Moll de la Fusta, part del Port Vell, la part més antiga del port de Barcelona. Durant molt de temps aquesta vora de la ciutat va ser un moll de treball, separat dels carrers del darrere per magatzems i trànsit. Als anys vuitanta l'arquitecte Manuel de Solà-Morales el va redissenyar com un passeig, amb palmeres i espai per caminar arran d'aigua. Mira cap a un extrem i veuràs el monument a Colom; mira cap a l'altre i trobaràs la gran cara de ceràmica del Cap de Barcelona. Entremig, les barques del port vell són amarrades just davant teu.",
+      "long": "Ets al Moll de la Fusta, part del Port Vell, la part més antiga del port de Barcelona, en ús des de fa més de quatre segles. Durant molt de temps aquesta vora de la ciutat va ser un moll de treball, separat dels carrers del darrere per coberts, magatzems i trànsit: la ciutat vella vivia d'esquena al mar. Als anys vuitanta, quan la ciutat va començar a obrir el seu front marítim, l'arquitecte Manuel de Solà-Morales va redissenyar aquest moll com un passeig a diversos nivells, amb palmeres, bancs i espai per caminar arran d'aigua, mantenint el trànsit a part. Mira cap al sud-oest i veuràs el monument a Colom al final de la Rambla; mira cap a l'altre costat i trobaràs la gran cara de ceràmica del Cap de Barcelona. Davant teu, velers i vaixells antics són amarrats on abans es descarregava la mercaderia. És un dels llocs de Ciutat Vella on més fàcilment es nota el mar: seu una estona, mira l'aigua i deixa que el soroll de la ciutat quedi enrere."
+    },
+    "es": {
+      "short": "Este paseo de palmeras es el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona. Antes descargaban aquí los barcos; hoy es un lugar para pasear junto al agua, entre el monumento a Colón y la gran escultura del Cap de Barcelona.",
+      "normal": "Estás en el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona. Durante mucho tiempo este borde de la ciudad fue un muelle de trabajo, separado de las calles de detrás por almacenes y tráfico. En los años ochenta el arquitecto Manuel de Solà-Morales lo rediseñó como un paseo, con palmeras y espacio para caminar junto al agua. Mira hacia un extremo y verás el monumento a Colón; mira hacia el otro y encontrarás la gran cara de cerámica del Cap de Barcelona. En medio, los barcos del puerto viejo están amarrados justo delante de ti.",
+      "long": "Estás en el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona, en uso desde hace más de cuatro siglos. Durante mucho tiempo este borde de la ciudad fue un muelle de trabajo, separado de las calles de detrás por cobertizos, almacenes y tráfico: la ciudad vieja vivía de espaldas al mar. En los años ochenta, cuando la ciudad empezó a abrir su frente marítimo, el arquitecto Manuel de Solà-Morales rediseñó este muelle como un paseo en varios niveles, con palmeras, bancos y espacio para caminar junto al agua, manteniendo el tráfico aparte. Mira hacia el suroeste y verás el monumento a Colón al final de la Rambla; mira hacia el otro lado y encontrarás la gran cara de cerámica del Cap de Barcelona. Delante de ti, veleros y barcos antiguos están amarrados donde antes se descargaba la mercancía. Es uno de los lugares de Ciutat Vella donde más fácilmente se nota el mar: siéntate un rato, mira el agua y deja que el ruido de la ciudad quede atrás."
+    },
+    "fr": {
+      "short": "Cette promenade bordée de palmiers est le Moll de la Fusta, le quai du bois, dans le Port Vell, la partie la plus ancienne du port de Barcelone. Les navires y déchargeaient autrefois ; c'est aujourd'hui un lieu de balade au bord de l'eau, entre le monument à Colomb et la grande sculpture du Cap de Barcelona.",
+      "normal": "Vous êtes sur le Moll de la Fusta, le quai du bois, dans le Port Vell, la partie la plus ancienne du port de Barcelone. Longtemps, ce bord de ville fut un quai de travail, coupé des rues voisines par des entrepôts et la circulation. Dans les années 1980, l'architecte Manuel de Solà-Morales le redessina en promenade, avec des palmiers et de l'espace pour marcher au bord de l'eau. D'un côté, vous verrez le monument à Colomb ; de l'autre, le grand visage en céramique du Cap de Barcelona. Entre les deux, les bateaux du vieux port sont amarrés juste devant vous.",
+      "long": "Vous êtes sur le Moll de la Fusta, le quai du bois, dans le Port Vell, la partie la plus ancienne du port de Barcelone, en activité depuis plus de quatre siècles. Longtemps, ce bord de ville fut un quai de travail, coupé des rues voisines par des hangars, des entrepôts et la circulation : la vieille ville tournait le dos à la mer. Dans les années 1980, lorsque la ville commença à ouvrir son front de mer, l'architecte Manuel de Solà-Morales redessina ce quai en promenade sur plusieurs niveaux, avec palmiers, bancs et espace pour marcher au bord de l'eau, tout en tenant la circulation à l'écart. Vers le sud-ouest, vous verrez le monument à Colomb au bas de la Rambla ; de l'autre côté, le grand visage en céramique du Cap de Barcelona. Devant vous, voiliers et vieux navires sont amarrés là où l'on déchargeait autrefois les marchandises. C'est l'un des endroits de la vieille ville où l'on sent le plus facilement la mer : asseyez-vous un moment, regardez l'eau et laissez le bruit de la ville derrière vous."
+    },
+    "de": {
+      "short": "Diese Palmenpromenade ist der Moll de la Fusta, der Holzkai, im Port Vell, dem ältesten Teil des Hafens von Barcelona. Früher wurden hier Schiffe entladen; heute spaziert man am Wasser entlang, zwischen dem Kolumbus-Denkmal und der großen Skulptur Barcelona Head.",
+      "normal": "Du stehst auf dem Moll de la Fusta, dem Holzkai, im Port Vell, dem ältesten Teil des Hafens von Barcelona. Lange war dieser Stadtrand ein Arbeitskai, durch Lagerhallen und Verkehr von den Straßen dahinter abgeschnitten. In den 1980er-Jahren gestaltete der Architekt Manuel de Solà-Morales ihn als Promenade um, mit Palmen und Platz zum Gehen am Wasser. An einem Ende siehst du das Kolumbus-Denkmal, am anderen das große Keramikgesicht des Barcelona Head. Dazwischen liegen die Boote des alten Hafens direkt vor dir.",
+      "long": "Du stehst auf dem Moll de la Fusta, dem Holzkai, im Port Vell, dem ältesten Teil des Hafens von Barcelona, seit mehr als vier Jahrhunderten in Betrieb. Lange war dieser Stadtrand ein Arbeitskai, durch Schuppen, Lagerhallen und Verkehr von den Straßen dahinter abgeschnitten: Die Altstadt lebte mit dem Rücken zum Meer. In den 1980er-Jahren, als die Stadt begann, ihre Uferzone zu öffnen, gestaltete der Architekt Manuel de Solà-Morales diesen Kai als Promenade auf mehreren Ebenen um, mit Palmen, Bänken und Platz zum Gehen am Wasser, während der Verkehr getrennt blieb. Im Südwesten siehst du das Kolumbus-Denkmal am Ende der Rambla; auf der anderen Seite das große Keramikgesicht des Barcelona Head. Vor dir liegen Segelboote und alte Schiffe dort, wo früher Fracht entladen wurde. Es ist einer der Orte in der Altstadt, an denen man das Meer am leichtesten spürt: Setz dich eine Weile, schau aufs Wasser und lass den Lärm der Stadt hinter dir."
+    },
+    "it": {
+      "short": "Questa passeggiata con le palme è il Moll de la Fusta, il molo del legname, nel Port Vell, la parte più antica del porto di Barcellona. Un tempo qui si scaricavano le navi; oggi è un luogo per passeggiare sull'acqua, tra il monumento a Colombo e la grande scultura Barcelona Head.",
+      "normal": "Sei sul Moll de la Fusta, il molo del legname, nel Port Vell, la parte più antica del porto di Barcellona. Per molto tempo questo bordo della città fu un molo di lavoro, separato dalle strade retrostanti da magazzini e traffico. Negli anni Ottanta l'architetto Manuel de Solà-Morales lo ridisegnò come passeggiata, con palme e spazio per camminare lungo l'acqua. Da un lato vedrai il monumento a Colombo; dall'altro il grande volto in ceramica del Barcelona Head. In mezzo, le barche del vecchio porto sono ormeggiate proprio davanti a te.",
+      "long": "Sei sul Moll de la Fusta, il molo del legname, nel Port Vell, la parte più antica del porto di Barcellona, in uso da più di quattro secoli. Per molto tempo questo bordo della città fu un molo di lavoro, separato dalle strade retrostanti da capannoni, magazzini e traffico: la città vecchia viveva voltando le spalle al mare. Negli anni Ottanta, quando la città cominciò ad aprire il suo fronte marittimo, l'architetto Manuel de Solà-Morales ridisegnò questo molo come una passeggiata su più livelli, con palme, panchine e spazio per camminare lungo l'acqua, tenendo separato il traffico. Verso sud-ovest vedrai il monumento a Colombo in fondo alla Rambla; dall'altra parte il grande volto in ceramica del Barcelona Head. Davanti a te, barche a vela e vecchie navi sono ormeggiate dove un tempo si scaricavano le merci. È uno dei luoghi della città vecchia dove si sente più facilmente il mare: siediti un po', guarda l'acqua e lascia alle spalle il rumore della città."
+    },
+    "zh": {
+      "short": "这条棕榈步道叫 Moll de la Fusta，意思是“木材码头”，属于巴塞罗那港最古老的部分老港（Port Vell）。过去船只在这里卸货；如今人们在这里沿水边散步，一端是哥伦布纪念碑，另一端是大型雕塑“巴塞罗那之首”。",
+      "normal": "你正站在木材码头（Moll de la Fusta）上，它属于巴塞罗那港最古老的部分老港（Port Vell）。很长一段时间里，城市的这条边缘是作业码头，被仓库和车流与后面的街道隔开。20世纪80年代，建筑师曼努埃尔·德·索拉-莫拉莱斯（Manuel de Solà-Morales）把它重新设计成一条步道，种上棕榈，留出沿水散步的空间。往一端看是哥伦布纪念碑，往另一端看是“巴塞罗那之首”巨大的陶瓷脸。两者之间，老港的船只就停泊在你面前。",
+      "long": "你正站在木材码头（Moll de la Fusta）上，它属于巴塞罗那港最古老的部分老港（Port Vell），已使用了四个多世纪。很长一段时间里，城市的这条边缘是作业码头，被棚屋、仓库和车流与后面的街道隔开：老城背对着大海生活。20世纪80年代，随着城市开始打开海滨，建筑师曼努埃尔·德·索拉-莫拉莱斯（Manuel de Solà-Morales）把这座码头重新设计成多层步道，有棕榈、长椅和沿水散步的空间，同时把车流隔开。往西南看，兰布拉大道尽头是哥伦布纪念碑；往另一边看，是“巴塞罗那之首”巨大的陶瓷脸。在你面前，帆船和老船停泊在过去卸货的地方。这是老城区最容易感受到大海的地方之一：坐一会儿，看看水面，让城市的喧嚣留在身后。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": [],
+    "official": null,
+    "img2": "Barcelona - Moll de la Fusta - View SW towards Monument a Colom 1888.jpg",
+    "look": {
+      "en": "The palm-lined promenade, the boats moored at the quay, the Columbus monument at one end and the Barcelona Head at the other.",
+      "ca": "El passeig de palmeres, les barques amarrades al moll, el monument a Colom en un extrem i el Cap de Barcelona a l'altre.",
+      "es": "El paseo de palmeras, los barcos amarrados al muelle, el monumento a Colón en un extremo y el Cap de Barcelona en el otro.",
+      "fr": "La promenade bordée de palmiers, les bateaux amarrés au quai, le monument à Colomb à un bout et le Cap de Barcelona à l'autre.",
+      "de": "Die Palmenpromenade, die Boote am Kai, das Kolumbus-Denkmal an einem Ende und der Barcelona Head am anderen.",
+      "it": "La passeggiata con le palme, le barche ormeggiate al molo, il monumento a Colombo da un lato e il Barcelona Head dall'altro.",
+      "zh": "棕榈步道、停靠在码头的船只，一端是哥伦布纪念碑，另一端是“巴塞罗那之首”。"
+    },
+    "listen": {
+      "en": "On a bench facing the water, out of the cycle lane.",
+      "ca": "En un banc de cara a l'aigua, fora del carril bici.",
+      "es": "En un banco de cara al agua, fuera del carril bici.",
+      "fr": "Sur un banc face à l'eau, en dehors de la piste cyclable.",
+      "de": "Auf einer Bank mit Blick aufs Wasser, nicht auf dem Radweg.",
+      "it": "Su una panchina di fronte all'acqua, fuori dalla pista ciclabile.",
+      "zh": "坐在面朝水面的长椅上收听，不要站在自行车道上。"
+    },
+    "access": {
+      "en": "A public promenade, open at all times.",
+      "ca": "Un passeig públic, obert a tota hora.",
+      "es": "Un paseo público, abierto a todas horas.",
+      "fr": "Une promenade publique, ouverte à toute heure.",
+      "de": "Eine öffentliche Promenade, jederzeit zugänglich.",
+      "it": "Una passeggiata pubblica, aperta a tutte le ore.",
+      "zh": "公共步道，全天开放。"
+    },
+    "cap2": {
+      "en": "Palms on the promenade, looking towards the Columbus monument.",
+      "ca": "Palmeres del passeig, mirant cap al monument a Colom.",
+      "es": "Palmeras del paseo, mirando hacia el monumento a Colón.",
+      "fr": "Les palmiers de la promenade, en direction du monument à Colomb.",
+      "de": "Palmen auf der Promenade, mit Blick zum Kolumbus-Denkmal.",
+      "it": "Le palme della passeggiata, guardando verso il monumento a Colombo.",
+      "zh": "步道上的棕榈，远眺哥伦布纪念碑。"
+    },
+    "sources": [
+      { "url": "https://ca.wikipedia.org/wiki/Port_Vell_de_Barcelona", "checked": "2026-11-14" }
+    ]
+  }
+}

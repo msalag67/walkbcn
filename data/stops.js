@@ -219,7 +219,25 @@ window.WALKBCN_STOPS = [
     address: "Plaça de les Glòries Catalanes, 37–38",
     story: "Look at this dark building that seems to hang in the air, with a huge overhang reaching out over the square. People nicknamed it the stapler. It is the Disseny Hub, designed by the studio MBM and built between 2008 and 2013, and since 2014 it has been home to the Museu del Disseny, Barcelona's design museum. Inside, it brings together the collections of four older museums: decorative arts, ceramics, textiles and fashion, and graphic arts, more than seventy thousand objects. Now look around you. Glòries was for decades a huge road junction, and it is slowly being turned into a park.",
     tip: "The square outside is a public space; the museum has a ticket and opening hours. Keep cycle lanes and the park paths clear." },
+  // Added 14 Nov 2026 after the AI judge: real parks-and-sea, local-life and food stops.
+  { id: "mercat-boqueria", name: "Mercat de la Boqueria", img: "La Boquería vista frontal entrada.png", area: "La Rambla", lat: 41.3817, lng: 2.1716, tags: ["food", "history"], crowded: true,
+    address: "La Rambla, 91",
+    story: "Food has been sold on this spot, by the old Boqueria gate in the city wall, since at least the 13th century, first as an open-air market on the Rambla. In 1840 the city began a proper market square here, and its first stone was laid on 19 March, Saint Joseph's day, which is why its official name is the Mercat de Sant Josep. Now look up at the entrance: the iron arch with coloured glass and the city's coat of arms was added in 1913, and the great metal roof was opened in 1914. Inside, more than three hundred stalls still sell fish, meat, fruit and bread.",
+    tip: "It is a working market and very busy: come early on a weekday, buy something if you stop, and ask before photographing stallholders." },
+  { id: "placa-del-pi", name: "Plaça del Pi", img: "Pi de la plaça del Pi P1100927.JPG", area: "Gothic Quarter", lat: 41.3824, lng: 2.1737, tags: ["local", "history"],
+    address: "Plaça del Pi",
+    story: "This little square takes its name from a pine tree. A pine already grew here in the 16th century, tall enough to be seen above the houses, and the one you see now was planted in 1985 to keep the tradition alive. Behind it rises the Gothic church of Santa Maria del Pi. Opposite the church, look at the old guild house with scratched plaster patterns on its façade, a technique called sgraffito. Three streets meet here, and this is where neighbours of the old town cross paths on their way to work, school or the shops.",
+    tip: "People live above the terraces and the church is in use: keep your voice down and leave the church steps clear." },
+  { id: "moll-de-la-fusta", name: "Moll de la Fusta", img: "Barcelona - Moll de la Fusta - View NNE.jpg", area: "Port Vell", lat: 41.3786, lng: 2.1806, tags: ["outdoors", "history"],
+    address: "Moll de la Fusta",
+    story: "You are on the Moll de la Fusta, the timber wharf, part of the Port Vell, the oldest part of Barcelona's harbour. For a long time this edge of the city was a working quay, cut off from the streets behind it by warehouses and traffic. In the 1980s the architect Manuel de Solà-Morales redesigned it as a promenade, with palm trees and room to walk by the water. Look to one end and you will see the Columbus monument; look to the other and the big ceramic face of the Barcelona Head. In between, the boats of the old port are moored right in front of you.",
+    tip: "Runners, cyclists and families share this promenade: walk on the pedestrian side and don't stop in the cycle lane." },
+  { id: "mirador-poble-sec", name: "Parc del Mirador del Poble-sec", img: "Mirador Poble Sec.JPG", area: "Poble-sec", lat: 41.3708, lng: 2.1706, tags: ["outdoors", "local"],
+    address: "Passeig de Montjuïc, 59",
+    story: "This park hangs on the slope of Montjuïc, right above the dense streets of Poble-sec. It is two parks in one. The upper part feels like a small forest, with wide gravel paths, stairs and viewpoints at the top. The lower part is a neighbourhood garden, with petanca courts, a playground and a pergola covered in wisteria. Now follow the water: a stream runs down an iron channel twenty-eight metres long into a small pond, and further down a stepped cascade eighteen metres high carries it to the bottom. Look for the jacarandas, purple in late spring.",
+    tip: "It is the neighbourhood's park: share the paths with children and dog walkers, and keep music and voices low." },
 ];
+
 // Practical notices shown on a stop's card, only between `from` and `until` (inclusive,
 // local dates). Each one says where the fact comes from (`source`) and when we checked it
 // (`checked`). Editorial rules, applied by index.html:

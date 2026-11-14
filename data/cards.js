@@ -549,6 +549,183 @@ window.WALKBCN_CARDS = {
    }
   ]
  },
+ "mercat-boqueria": {
+  "outside": "partly",
+  "sensitive": [],
+  "official": null,
+  "img2": "La boqueria a contraluz.JPG",
+  "look": {
+   "en": "The 1913 iron entrance arch with coloured glass and the city's coat of arms; inside, the five naves under the 1914 metal roof.",
+   "ca": "L'arc de ferro de l'entrada, del 1913, amb vidres de colors i l'escut de la ciutat; a dins, les cinc naus sota la coberta metàl·lica del 1914.",
+   "es": "El arco de hierro de la entrada, de 1913, con cristales de colores y el escudo de la ciudad; dentro, las cinco naves bajo la cubierta metálica de 1914.",
+   "fr": "L'arc d'entrée en fer de 1913, avec ses vitraux et les armoiries de la ville ; à l'intérieur, les cinq nefs sous la toiture métallique de 1914.",
+   "de": "Der eiserne Eingangsbogen von 1913 mit Buntglas und Stadtwappen; drinnen die fünf Hallenschiffe unter dem Metalldach von 1914.",
+   "it": "L'arco d'ingresso in ferro del 1913, con vetri colorati e lo stemma della città; dentro, le cinque navate sotto la copertura metallica del 1914.",
+   "zh": "1913年的铁制入口拱门，带彩色玻璃和城市徽章；市场内是1914年金属屋顶下的五条通道。"
+  },
+  "listen": {
+   "en": "On the Rambla's central walk, opposite the entrance, not inside the arch where people go in and out.",
+   "ca": "Al passeig central de la Rambla, davant de l'entrada, no a dins de l'arc per on entra i surt la gent.",
+   "es": "En el paseo central de la Rambla, frente a la entrada, no dentro del arco por donde entra y sale la gente.",
+   "fr": "Sur l'allée centrale de la Rambla, face à l'entrée, pas sous l'arc où les gens entrent et sortent.",
+   "de": "Auf dem Mittelweg der Rambla gegenüber dem Eingang, nicht im Bogen, wo die Leute ein- und ausgehen.",
+   "it": "Sul viale centrale della Rambla, di fronte all'ingresso, non sotto l'arco dove la gente entra ed esce.",
+   "zh": "在兰布拉大道中央步道、入口对面收听，不要站在人们进出的拱门下。"
+  },
+  "access": {
+   "en": "Free to enter during market hours; most stalls are open in the morning. Very crowded at midday: it is one of the city's big icons.",
+   "ca": "Entrada lliure en l'horari del mercat; la majoria de parades obren al matí. Molt ple al migdia: és un dels grans icones de la ciutat.",
+   "es": "Entrada libre en horario de mercado; la mayoría de puestos abren por la mañana. Muy lleno a mediodía: es uno de los grandes iconos de la ciudad.",
+   "fr": "Entrée libre aux heures du marché ; la plupart des étals ouvrent le matin. Très bondé à midi : c'est l'un des grands sites de la ville.",
+   "de": "Freier Eintritt zu den Marktzeiten; die meisten Stände haben vormittags geöffnet. Mittags sehr voll: eine der großen Sehenswürdigkeiten.",
+   "it": "Ingresso libero negli orari del mercato; la maggior parte dei banchi apre al mattino. Affollatissimo a mezzogiorno: è una delle grandi icone della città.",
+   "zh": "市场营业时间内可免费进入；大部分摊位上午营业。中午非常拥挤：这里是城市的热门地标之一。"
+  },
+  "cap2": {
+   "en": "The coat of arms on the 1913 entrance arch.",
+   "ca": "L'escut de l'arc de l'entrada, del 1913.",
+   "es": "El escudo del arco de la entrada, de 1913.",
+   "fr": "Les armoiries de l'arc d'entrée de 1913.",
+   "de": "Das Wappen am Eingangsbogen von 1913.",
+   "it": "Lo stemma dell'arco d'ingresso del 1913.",
+   "zh": "1913年入口拱门上的徽章。"
+  },
+  "sources": [
+   {
+    "url": "https://ca.wikipedia.org/wiki/Mercat_de_la_Boqueria",
+    "checked": "2026-11-14"
+   }
+  ]
+ },
+ "mirador-poble-sec": {
+  "outside": "yes",
+  "sensitive": [
+   "residential"
+  ],
+  "official": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-mirador-del-poble-sec-95125123610",
+  "look": {
+   "en": "The iron water channel, the ponds and the stepped cascade; the jacarandas and the wisteria pergola.",
+   "ca": "El canal d'aigua de ferro, els estanys i la cascada esglaonada; les jacarandes i la pèrgola de glicines.",
+   "es": "El canal de agua de hierro, los estanques y la cascada escalonada; las jacarandas y la pérgola de glicinas.",
+   "fr": "Le canal d'eau en fer, les bassins et la cascade en gradins ; les jacarandas et la pergola de glycines.",
+   "de": "Die eiserne Wasserrinne, die Teiche und die Stufenkaskade; die Jacarandas und die Glyzinienpergola.",
+   "it": "Il canale d'acqua in ferro, gli stagni e la cascata a gradini; le jacarande e il pergolato di glicine.",
+   "zh": "铁制水槽、池塘和阶梯式瀑布；蓝花楹和紫藤花架。"
+  },
+  "listen": {
+   "en": "On a bench beside the upper pond, away from the playground.",
+   "ca": "En un banc al costat de l'estany de dalt, lluny de la zona de jocs.",
+   "es": "En un banco junto al estanque de arriba, lejos de la zona de juegos.",
+   "fr": "Sur un banc près du bassin du haut, loin de l'aire de jeux.",
+   "de": "Auf einer Bank am oberen Teich, abseits vom Spielplatz.",
+   "it": "Su una panchina accanto allo stagno superiore, lontano dall'area giochi.",
+   "zh": "坐在上方池塘边的长椅上收听，远离儿童游乐区。"
+  },
+  "access": {
+   "en": "A free public park (Passeig de Montjuïc, 59), accessible for people with reduced mobility. The upper part is uphill with stairs.",
+   "ca": "Un parc públic gratuït (passeig de Montjuïc, 59), accessible per a persones amb mobilitat reduïda. La part de dalt fa pujada i té escales.",
+   "es": "Un parque público gratuito (paseo de Montjuïc, 59), accesible para personas con movilidad reducida. La parte de arriba es cuesta arriba y tiene escaleras.",
+   "fr": "Un parc public gratuit (Passeig de Montjuïc, 59), accessible aux personnes à mobilité réduite. La partie haute monte et a des escaliers.",
+   "de": "Ein kostenloser öffentlicher Park (Passeig de Montjuïc 59), barrierefrei zugänglich. Der obere Teil geht bergauf und hat Treppen.",
+   "it": "Un parco pubblico gratuito (Passeig de Montjuïc, 59), accessibile alle persone con mobilità ridotta. La parte alta è in salita e ha scale.",
+   "zh": "免费公共公园（Passeig de Montjuïc 59号），行动不便者可通行。上半部分是上坡，有台阶。"
+  },
+  "sources": [
+   {
+    "url": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-mirador-del-poble-sec-95125123610",
+    "checked": "2026-11-14"
+   }
+  ]
+ },
+ "moll-de-la-fusta": {
+  "outside": "yes",
+  "sensitive": [],
+  "official": null,
+  "img2": "Barcelona - Moll de la Fusta - View SW towards Monument a Colom 1888.jpg",
+  "look": {
+   "en": "The palm-lined promenade, the boats moored at the quay, the Columbus monument at one end and the Barcelona Head at the other.",
+   "ca": "El passeig de palmeres, les barques amarrades al moll, el monument a Colom en un extrem i el Cap de Barcelona a l'altre.",
+   "es": "El paseo de palmeras, los barcos amarrados al muelle, el monumento a Colón en un extremo y el Cap de Barcelona en el otro.",
+   "fr": "La promenade bordée de palmiers, les bateaux amarrés au quai, le monument à Colomb à un bout et le Cap de Barcelona à l'autre.",
+   "de": "Die Palmenpromenade, die Boote am Kai, das Kolumbus-Denkmal an einem Ende und der Barcelona Head am anderen.",
+   "it": "La passeggiata con le palme, le barche ormeggiate al molo, il monumento a Colombo da un lato e il Barcelona Head dall'altro.",
+   "zh": "棕榈步道、停靠在码头的船只，一端是哥伦布纪念碑，另一端是“巴塞罗那之首”。"
+  },
+  "listen": {
+   "en": "On a bench facing the water, out of the cycle lane.",
+   "ca": "En un banc de cara a l'aigua, fora del carril bici.",
+   "es": "En un banco de cara al agua, fuera del carril bici.",
+   "fr": "Sur un banc face à l'eau, en dehors de la piste cyclable.",
+   "de": "Auf einer Bank mit Blick aufs Wasser, nicht auf dem Radweg.",
+   "it": "Su una panchina di fronte all'acqua, fuori dalla pista ciclabile.",
+   "zh": "坐在面朝水面的长椅上收听，不要站在自行车道上。"
+  },
+  "access": {
+   "en": "A public promenade, open at all times.",
+   "ca": "Un passeig públic, obert a tota hora.",
+   "es": "Un paseo público, abierto a todas horas.",
+   "fr": "Une promenade publique, ouverte à toute heure.",
+   "de": "Eine öffentliche Promenade, jederzeit zugänglich.",
+   "it": "Una passeggiata pubblica, aperta a tutte le ore.",
+   "zh": "公共步道，全天开放。"
+  },
+  "cap2": {
+   "en": "Palms on the promenade, looking towards the Columbus monument.",
+   "ca": "Palmeres del passeig, mirant cap al monument a Colom.",
+   "es": "Palmeras del paseo, mirando hacia el monumento a Colón.",
+   "fr": "Les palmiers de la promenade, en direction du monument à Colomb.",
+   "de": "Palmen auf der Promenade, mit Blick zum Kolumbus-Denkmal.",
+   "it": "Le palme della passeggiata, guardando verso il monumento a Colombo.",
+   "zh": "步道上的棕榈，远眺哥伦布纪念碑。"
+  },
+  "sources": [
+   {
+    "url": "https://ca.wikipedia.org/wiki/Port_Vell_de_Barcelona",
+    "checked": "2026-11-14"
+   }
+  ]
+ },
+ "placa-del-pi": {
+  "outside": "yes",
+  "sensitive": [
+   "residential",
+   "worship"
+  ],
+  "official": null,
+  "look": {
+   "en": "The pine tree, the Gothic church behind it, and opposite it the sgraffito façade of the old guild house.",
+   "ca": "El pi, l'església gòtica del darrere i, al davant, la façana esgrafiada de l'antiga casa gremial.",
+   "es": "El pino, la iglesia gótica de detrás y, enfrente, la fachada esgrafiada de la antigua casa gremial.",
+   "fr": "Le pin, l'église gothique derrière et, en face, la façade en sgraffite de l'ancienne maison de corporation.",
+   "de": "Die Kiefer, die gotische Kirche dahinter und gegenüber die Sgraffito-Fassade des alten Zunfthauses.",
+   "it": "Il pino, la chiesa gotica dietro e, di fronte, la facciata a graffito dell'antica casa della corporazione.",
+   "zh": "松树、后面的哥特式教堂，以及对面旧行会会馆的刮画立面。"
+  },
+  "listen": {
+   "en": "Beside the pine, at the edge of the square, away from the terrace tables and the church door.",
+   "ca": "Al costat del pi, a la vora de la plaça, lluny de les taules de les terrasses i de la porta de l'església.",
+   "es": "Junto al pino, en el borde de la plaza, lejos de las mesas de las terrazas y de la puerta de la iglesia.",
+   "fr": "À côté du pin, au bord de la place, loin des tables des terrasses et de la porte de l'église.",
+   "de": "Neben der Kiefer am Rand des Platzes, fern von den Terrassentischen und der Kirchentür.",
+   "it": "Accanto al pino, sul bordo della piazza, lontano dai tavolini e dalla porta della chiesa.",
+   "zh": "在松树旁、广场边缘收听，远离露台餐桌和教堂大门。"
+  },
+  "access": {
+   "en": "A public square, always open. The church opens for services and, at set times, for visits: check before going in.",
+   "ca": "Una plaça pública, sempre oberta. L'església obre per al culte i, en horaris fixos, per a visites: consulta-ho abans d'entrar.",
+   "es": "Una plaza pública, siempre abierta. La iglesia abre para el culto y, en horarios fijos, para visitas: consúltalo antes de entrar.",
+   "fr": "Une place publique, toujours ouverte. L'église ouvre pour les offices et, à heures fixes, pour les visites : renseignez-vous avant d'entrer.",
+   "de": "Ein öffentlicher Platz, immer offen. Die Kirche öffnet für Gottesdienste und zu festen Zeiten für Besuche: vorher prüfen.",
+   "it": "Una piazza pubblica, sempre aperta. La chiesa apre per le funzioni e, in orari fissi, per le visite: verifica prima di entrare.",
+   "zh": "公共广场，随时开放。教堂在宗教仪式时以及固定时间开放参观：进入前请先查询。"
+  },
+  "sources": [
+   {
+    "url": "https://ca.wikipedia.org/wiki/Pla%C3%A7a_del_Pi",
+    "checked": "2026-11-14"
+   }
+  ]
+ },
  "sant-pau-del-camp": {
   "outside": "yes",
   "sensitive": [
@@ -778,6 +955,16 @@ window.WALKBCN_PHOTOS = {
   "licence": "CC BY-SA 4.0",
   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0"
  },
+ "Barcelona - Moll de la Fusta - View NNE.jpg": {
+  "author": "Txllxt TxllxT",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "Barcelona - Moll de la Fusta - View SW towards Monument a Colom 1888.jpg": {
+  "author": "Txllxt TxllxT",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
  "Barcelona - Museu Can Framis (1).jpg": {
   "author": "Fred Romero",
   "licence": "CC BY 2.0",
@@ -963,6 +1150,16 @@ window.WALKBCN_PHOTOS = {
   "licence": "CC BY-SA 3.0",
   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0"
  },
+ "La Boquería vista frontal entrada.png": {
+  "author": "Naymorales",
+  "licence": "CC BY-SA 4.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+ },
+ "La boqueria a contraluz.JPG": {
+  "author": "heribert roca gavira",
+  "licence": "CC BY-SA 3.0 es",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/es/deed.en"
+ },
  "MUHBA- Via Sepulcral Romana003.JPG": {
   "author": "Kippelboy",
   "licence": "CC BY-SA 3.0",
@@ -993,6 +1190,11 @@ window.WALKBCN_PHOTOS = {
   "licence": "CC BY-SA 3.0",
   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0"
  },
+ "Mirador Poble Sec.JPG": {
+  "author": "Canaan",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+ },
  "Museu Picasso Barcelona.jpg": {
   "author": "uayebt",
   "licence": "CC BY 2.0",
@@ -1012,6 +1214,11 @@ window.WALKBCN_PHOTOS = {
   "author": "essetefano",
   "licence": "CC BY 3.0",
   "licenceUrl": "https://creativecommons.org/licenses/by/3.0"
+ },
+ "Pi de la plaça del Pi P1100927.JPG": {
+  "author": "Pere López",
+  "licence": "CC BY-SA 3.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0"
  },
  "Platja de la Barceloneta 02.jpg": {
   "author": "CPG83",

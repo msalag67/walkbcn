@@ -1,0 +1,90 @@
+{
+  "id": "placa-del-pi",
+  "tip": {
+    "en": "People live above the terraces and the church is in use: keep your voice down and leave the church steps clear.",
+    "ca": "Damunt de les terrasses hi viu gent i l'església s'utilitza: parla baix i deixa lliures les escales de l'església.",
+    "es": "Encima de las terrazas vive gente y la iglesia está en uso: habla bajo y deja libres los escalones de la iglesia.",
+    "fr": "Des gens vivent au-dessus des terrasses et l'église est en service : parlez bas et laissez libres les marches de l'église.",
+    "de": "Über den Terrassen wohnen Menschen, und die Kirche ist in Gebrauch: Sprich leise und halte die Kirchenstufen frei.",
+    "it": "Sopra i dehors vive gente e la chiesa è in uso: parla piano e lascia liberi i gradini della chiesa.",
+    "zh": "露台上方住着居民，教堂也在使用：请小声说话，不要挡住教堂台阶。"
+  },
+  "stories": {
+    "en": {
+      "short": "This little square takes its name from a pine tree, and there is still one here. The tree you see was planted in 1985 to replace an older one. Behind it rises the Gothic church of Santa Maria del Pi, and around it neighbours meet on the way to the shops of the old town.",
+      "normal": "This little square takes its name from a pine tree. A pine already grew here in the 16th century, tall enough to be seen above the houses, and the one you see now was planted in 1985 to keep the tradition alive. Behind it rises the Gothic church of Santa Maria del Pi. Opposite the church, look at the old guild house with scratched plaster patterns on its façade, a technique called sgraffito. Three streets meet here, and this is where neighbours of the old town cross paths on their way to work, school or the shops.",
+      "long": "This little square takes its name from a pine tree. Legend talks of a palm and a pine on this spot, and by the 16th century a pine grew here so tall that it could be seen above the houses. The one you see now was planted in 1985 to keep the tradition alive. Behind it rises the Gothic church of Santa Maria del Pi, which gave its name to the whole neighbourhood. Now turn around. Opposite the church stands the old house of a guild of resellers: look at its façade, decorated with patterns scratched into the plaster, a technique called sgraffito. On the corner with Carrer del Cardenal Casañas, the Casa de la Confraria de la Sang is an example of the city's houses from the early 17th century. Three streets meet here, Petritxol, del Pi and Cardenal Casañas, and this is one of the places where people who live in the old town cross paths every day, on their way to work, school or the shops. Take a moment on the side of the square and simply watch how it works."
+    },
+    "ca": {
+      "short": "Aquesta placeta pren el nom d'un pi, i encara n'hi ha un. El que veus es va plantar el 1985 per substituir-ne un de més antic. Al darrere s'alça l'església gòtica de Santa Maria del Pi, i al seu voltant els veïns es creuen camí de les botigues de Ciutat Vella.",
+      "normal": "Aquesta placeta pren el nom d'un pi. Ja al segle XVI n'hi creixia un de tan alt que es veia per damunt de les cases, i el que veus ara es va plantar el 1985 per mantenir la tradició. Al darrere s'alça l'església gòtica de Santa Maria del Pi. Davant de l'església, fixa't en l'antiga casa gremial amb dibuixos gravats a l'arrebossat de la façana, una tècnica que es diu esgrafiat. Aquí s'hi troben tres carrers, i és on els veïns de Ciutat Vella es creuen camí de la feina, l'escola o les botigues.",
+      "long": "Aquesta placeta pren el nom d'un pi. La llegenda parla d'una palma i d'un pi en aquest lloc, i al segle XVI ja hi creixia un pi tan alt que es veia per damunt de les cases. El que veus ara es va plantar el 1985 per mantenir la tradició. Al darrere s'alça l'església gòtica de Santa Maria del Pi, que va donar nom a tot el barri. Ara gira't. Davant de l'església hi ha l'antiga casa del gremi de revenedors: fixa't en la façana, decorada amb dibuixos gravats a l'arrebossat, una tècnica que es diu esgrafiat. A la cantonada amb el carrer del Cardenal Casañas, la Casa de la Confraria de la Sang és un exemple de les cases de la ciutat de principis del segle XVII. Aquí s'hi troben tres carrers, Petritxol, del Pi i Cardenal Casañas, i és un dels llocs on la gent que viu a Ciutat Vella es creua cada dia, camí de la feina, l'escola o les botigues. Atura't un moment en un costat de la plaça i mira com funciona."
+    },
+    "es": {
+      "short": "Esta placita toma el nombre de un pino, y todavía hay uno. El que ves se plantó en 1985 para sustituir a uno más antiguo. Detrás se alza la iglesia gótica de Santa Maria del Pi, y a su alrededor los vecinos se cruzan camino de las tiendas de Ciutat Vella.",
+      "normal": "Esta placita toma el nombre de un pino. Ya en el siglo XVI crecía aquí uno tan alto que se veía por encima de las casas, y el que ves ahora se plantó en 1985 para mantener la tradición. Detrás se alza la iglesia gótica de Santa Maria del Pi. Frente a la iglesia, fíjate en la antigua casa gremial con dibujos grabados en el revoque de la fachada, una técnica llamada esgrafiado. Aquí se encuentran tres calles, y es donde los vecinos de Ciutat Vella se cruzan camino del trabajo, la escuela o las tiendas.",
+      "long": "Esta placita toma el nombre de un pino. La leyenda habla de una palma y un pino en este lugar, y en el siglo XVI ya crecía aquí un pino tan alto que se veía por encima de las casas. El que ves ahora se plantó en 1985 para mantener la tradición. Detrás se alza la iglesia gótica de Santa Maria del Pi, que dio nombre a todo el barrio. Ahora date la vuelta. Frente a la iglesia está la antigua casa del gremio de revendedores: fíjate en su fachada, decorada con dibujos grabados en el revoque, una técnica llamada esgrafiado. En la esquina con la calle del Cardenal Casañas, la Casa de la Confraria de la Sang es un ejemplo de las casas de la ciudad de principios del siglo XVII. Aquí se encuentran tres calles, Petritxol, del Pi y Cardenal Casañas, y es uno de los lugares donde la gente que vive en Ciutat Vella se cruza cada día, camino del trabajo, la escuela o las tiendas. Párate un momento en un lado de la plaza y mira cómo funciona."
+    },
+    "fr": {
+      "short": "Cette petite place tient son nom d'un pin, et il y en a toujours un. Celui que vous voyez a été planté en 1985 pour en remplacer un plus ancien. Derrière s'élève l'église gothique Santa Maria del Pi, et autour, les habitants se croisent en allant aux boutiques de la vieille ville.",
+      "normal": "Cette petite place tient son nom d'un pin. Au XVIe siècle déjà, un pin y poussait, si haut qu'on le voyait au-dessus des maisons, et celui que vous voyez a été planté en 1985 pour garder la tradition. Derrière s'élève l'église gothique Santa Maria del Pi. Face à l'église, regardez l'ancienne maison de corporation, dont la façade porte des motifs gravés dans l'enduit, une technique appelée sgraffite. Trois rues se rejoignent ici, et c'est là que les habitants de la vieille ville se croisent en allant au travail, à l'école ou aux boutiques.",
+      "long": "Cette petite place tient son nom d'un pin. La légende parle d'un palmier et d'un pin à cet endroit, et au XVIe siècle un pin y poussait déjà, si haut qu'on le voyait au-dessus des maisons. Celui que vous voyez a été planté en 1985 pour garder la tradition. Derrière s'élève l'église gothique Santa Maria del Pi, qui a donné son nom à tout le quartier. Retournez-vous maintenant. Face à l'église se dresse l'ancienne maison de la corporation des revendeurs : regardez sa façade, ornée de motifs gravés dans l'enduit, une technique appelée sgraffite. À l'angle de la rue del Cardenal Casañas, la Casa de la Confraria de la Sang est un exemple des maisons de la ville du début du XVIIe siècle. Trois rues se rejoignent ici, Petritxol, del Pi et Cardenal Casañas, et c'est l'un des endroits où les habitants de la vieille ville se croisent chaque jour, en allant au travail, à l'école ou aux boutiques. Arrêtez-vous un instant sur un côté de la place et regardez simplement comment elle vit."
+    },
+    "de": {
+      "short": "Dieser kleine Platz ist nach einer Kiefer benannt, und es steht noch immer eine hier. Die Kiefer, die du siehst, wurde 1985 als Ersatz für eine ältere gepflanzt. Dahinter erhebt sich die gotische Kirche Santa Maria del Pi, und rundherum begegnen sich die Nachbarn auf dem Weg zu den Läden der Altstadt.",
+      "normal": "Dieser kleine Platz ist nach einer Kiefer benannt. Schon im 16. Jahrhundert wuchs hier eine, so hoch, dass man sie über den Häusern sah, und die heutige wurde 1985 gepflanzt, um die Tradition zu bewahren. Dahinter erhebt sich die gotische Kirche Santa Maria del Pi. Gegenüber der Kirche lohnt ein Blick auf das alte Zunfthaus mit in den Putz geritzten Mustern an der Fassade, einer Technik namens Sgraffito. Drei Straßen treffen hier aufeinander, und hier kreuzen sich die Wege der Altstadtbewohner auf dem Weg zur Arbeit, zur Schule oder zum Einkaufen.",
+      "long": "Dieser kleine Platz ist nach einer Kiefer benannt. Die Legende erzählt von einer Palme und einer Kiefer an dieser Stelle, und im 16. Jahrhundert wuchs hier bereits eine Kiefer, so hoch, dass man sie über den Häusern sah. Die heutige wurde 1985 gepflanzt, um die Tradition zu bewahren. Dahinter erhebt sich die gotische Kirche Santa Maria del Pi, die dem ganzen Viertel ihren Namen gab. Dreh dich nun um. Gegenüber der Kirche steht das alte Haus der Zunft der Wiederverkäufer: Schau dir die Fassade an, verziert mit in den Putz geritzten Mustern, einer Technik namens Sgraffito. An der Ecke zur Carrer del Cardenal Casañas ist die Casa de la Confraria de la Sang ein Beispiel für die Stadthäuser vom Anfang des 17. Jahrhunderts. Drei Straßen treffen hier aufeinander, Petritxol, del Pi und Cardenal Casañas, und hier kreuzen sich täglich die Wege der Menschen, die in der Altstadt leben, auf dem Weg zur Arbeit, zur Schule oder zum Einkaufen. Bleib einen Moment am Rand des Platzes stehen und schau einfach, wie er funktioniert."
+    },
+    "it": {
+      "short": "Questa piazzetta prende il nome da un pino, e ce n'è ancora uno. Quello che vedi fu piantato nel 1985 per sostituirne uno più antico. Dietro si alza la chiesa gotica di Santa Maria del Pi, e intorno i residenti si incrociano andando ai negozi della città vecchia.",
+      "normal": "Questa piazzetta prende il nome da un pino. Già nel XVI secolo qui cresceva un pino così alto da vedersi sopra le case, e quello che vedi ora fu piantato nel 1985 per mantenere la tradizione. Dietro si alza la chiesa gotica di Santa Maria del Pi. Di fronte alla chiesa, guarda l'antica casa della corporazione con disegni incisi nell'intonaco della facciata, una tecnica chiamata graffito. Qui si incontrano tre strade, ed è dove i residenti della città vecchia si incrociano andando al lavoro, a scuola o nei negozi.",
+      "long": "Questa piazzetta prende il nome da un pino. La leggenda parla di una palma e di un pino in questo luogo, e nel XVI secolo qui cresceva già un pino così alto da vedersi sopra le case. Quello che vedi ora fu piantato nel 1985 per mantenere la tradizione. Dietro si alza la chiesa gotica di Santa Maria del Pi, che diede il nome a tutto il quartiere. Ora girati. Di fronte alla chiesa c'è l'antica casa della corporazione dei rivenditori: guarda la facciata, decorata con disegni incisi nell'intonaco, una tecnica chiamata graffito. All'angolo con Carrer del Cardenal Casañas, la Casa de la Confraria de la Sang è un esempio delle case cittadine dell'inizio del Seicento. Qui si incontrano tre strade, Petritxol, del Pi e Cardenal Casañas, ed è uno dei luoghi dove chi vive nella città vecchia si incrocia ogni giorno, andando al lavoro, a scuola o nei negozi. Fermati un momento su un lato della piazza e guarda semplicemente come vive."
+    },
+    "zh": {
+      "short": "这个小广场以一棵松树命名，如今这里仍有一棵。你看到的这棵是1985年种下的，替代了更老的那棵。后面是哥特式的松树圣母教堂（Santa Maria del Pi），周围的居民在去老城区商店的路上在这里擦肩而过。",
+      "normal": "这个小广场以一棵松树命名。早在16世纪，这里就长着一棵高过屋顶的松树；你现在看到的这棵是1985年种下的，为了延续这个传统。后面是哥特式的松树圣母教堂（Santa Maria del Pi）。在教堂对面，看看那座旧行会会馆，立面灰泥上刻着图案，这种技法叫刮画（sgraffito）。三条街在这里交汇，老城区的居民上班、上学或购物时都会在这里碰面。",
+      "long": "这个小广场以一棵松树命名。传说这里曾有一棵棕榈和一棵松树；到16世纪，这里已经长着一棵高过屋顶的松树。你现在看到的这棵是1985年种下的，为了延续这个传统。后面是哥特式的松树圣母教堂（Santa Maria del Pi），整个街区都因它得名。现在转过身来。教堂对面是旧时转售商行会的会馆：看看它的立面，灰泥上刻着装饰图案，这种技法叫刮画（sgraffito）。在与红衣主教卡萨尼亚斯街（Carrer del Cardenal Casañas）交界的街角，圣血兄弟会之家（Casa de la Confraria de la Sang）是17世纪初城市民居的一个例子。佩特里乔尔街（Petritxol）、松树街（del Pi）和红衣主教卡萨尼亚斯街三条街在这里交汇，住在老城区的人每天上班、上学或购物时都会在这里擦肩而过。在广场一侧停留片刻，看看它是如何运转的。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": [
+      "residential",
+      "worship"
+    ],
+    "official": null,
+    "look": {
+      "en": "The pine tree, the Gothic church behind it, and opposite it the sgraffito façade of the old guild house.",
+      "ca": "El pi, l'església gòtica del darrere i, al davant, la façana esgrafiada de l'antiga casa gremial.",
+      "es": "El pino, la iglesia gótica de detrás y, enfrente, la fachada esgrafiada de la antigua casa gremial.",
+      "fr": "Le pin, l'église gothique derrière et, en face, la façade en sgraffite de l'ancienne maison de corporation.",
+      "de": "Die Kiefer, die gotische Kirche dahinter und gegenüber die Sgraffito-Fassade des alten Zunfthauses.",
+      "it": "Il pino, la chiesa gotica dietro e, di fronte, la facciata a graffito dell'antica casa della corporazione.",
+      "zh": "松树、后面的哥特式教堂，以及对面旧行会会馆的刮画立面。"
+    },
+    "listen": {
+      "en": "Beside the pine, at the edge of the square, away from the terrace tables and the church door.",
+      "ca": "Al costat del pi, a la vora de la plaça, lluny de les taules de les terrasses i de la porta de l'església.",
+      "es": "Junto al pino, en el borde de la plaza, lejos de las mesas de las terrazas y de la puerta de la iglesia.",
+      "fr": "À côté du pin, au bord de la place, loin des tables des terrasses et de la porte de l'église.",
+      "de": "Neben der Kiefer am Rand des Platzes, fern von den Terrassentischen und der Kirchentür.",
+      "it": "Accanto al pino, sul bordo della piazza, lontano dai tavolini e dalla porta della chiesa.",
+      "zh": "在松树旁、广场边缘收听，远离露台餐桌和教堂大门。"
+    },
+    "access": {
+      "en": "A public square, always open. The church opens for services and, at set times, for visits: check before going in.",
+      "ca": "Una plaça pública, sempre oberta. L'església obre per al culte i, en horaris fixos, per a visites: consulta-ho abans d'entrar.",
+      "es": "Una plaza pública, siempre abierta. La iglesia abre para el culto y, en horarios fijos, para visitas: consúltalo antes de entrar.",
+      "fr": "Une place publique, toujours ouverte. L'église ouvre pour les offices et, à heures fixes, pour les visites : renseignez-vous avant d'entrer.",
+      "de": "Ein öffentlicher Platz, immer offen. Die Kirche öffnet für Gottesdienste und zu festen Zeiten für Besuche: vorher prüfen.",
+      "it": "Una piazza pubblica, sempre aperta. La chiesa apre per le funzioni e, in orari fissi, per le visite: verifica prima di entrare.",
+      "zh": "公共广场，随时开放。教堂在宗教仪式时以及固定时间开放参观：进入前请先查询。"
+    },
+    "sources": [
+      {
+        "url": "https://ca.wikipedia.org/wiki/Pla%C3%A7a_del_Pi",
+        "checked": "2026-11-14"
+      }
+    ]
+  }
+}

@@ -2200,6 +2200,74 @@
           "hash": "4b6509db1e"
         }
       }
+    },
+    "mercat-boqueria": {
+      "tip": "Es un mercado en funcionamiento y muy concurrido: ven temprano un día laborable, compra algo si te paras y pide permiso antes de fotografiar a los paradistas.",
+      "stories": {
+        "base": {
+          "short": "Aquí se vende comida, junto al antiguo portal de la Boqueria en la Rambla, al menos desde el siglo XIII. El mercado cubierto se empezó en 1840 y lleva el nombre de san José. Mira el arco de hierro de la entrada, de 1913, con el escudo de la ciudad en vidriera.",
+          "normal": "En este lugar se vende comida, junto al antiguo portal de la Boqueria de la muralla, al menos desde el siglo XIII, primero como un mercado al aire libre en la Rambla. En 1840 la ciudad empezó aquí una plaza de mercado, y la primera piedra se puso el 19 de marzo, día de San José: por eso su nombre oficial es Mercat de Sant Josep. Ahora mira la entrada: el arco de hierro con cristales de colores y el escudo de la ciudad se añadió en 1913, y la gran cubierta metálica se inauguró en 1914. Dentro, más de trescientos puestos siguen vendiendo pescado, carne, fruta y pan.",
+          "long": "En este lugar se vende comida al menos desde el siglo XIII. Empezó como un mercado al aire libre delante del portal de la Boqueria de la antigua muralla, en la actual Rambla. En 1840 la ciudad aprobó una plaza de mercado porticada del arquitecto municipal Josep Mas i Vila, y la primera piedra se puso el 19 de marzo, día de San José. Por eso su nombre oficial es Mercat de Sant Josep, aunque todo el mundo lo llama la Boqueria. Mira la entrada: el arco de hierro con cristales de colores y el escudo de la ciudad lo construyó en 1913 el arquitecto Antoni de Falguera, y la gran cubierta metálica, fabricada por La Maquinista Terrestre y Marítima, se inauguró en 1914. Dentro hay más de trescientos puestos. Se ha convertido en uno de los lugares más visitados de la ciudad, pero para muchos vecinos sigue siendo donde compran el pescado, la carne y la fruta. Así que compra como ellos: temprano, rápido y sin tapar los puestos."
+        }
+      },
+      "srcHash": "manual-818592f2d0",
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-boqueria.m4a",
+          "hash": "5591782b73"
+        }
+      }
+    },
+    "mirador-poble-sec": {
+      "tip": "Es el parque del barrio: comparte los caminos con los niños y con quien pasea al perro, y nada de música ni gritos.",
+      "stories": {
+        "base": {
+          "short": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles del Poble-sec. La parte de arriba parece un pequeño bosque, con caminos de sablón y miradores; más abajo se convierte en un jardín de barrio. Sigue el agua: un riachuelo baja por un canal de hierro hasta un estanque y una cascada escalonada.",
+          "normal": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles apretadas del Poble-sec. Son dos parques en uno. La parte de arriba parece un pequeño bosque, con caminos anchos de sablón, escaleras y miradores en lo alto. La parte de abajo es un jardín de barrio, con pistas de petanca, una zona de juegos y una pérgola cubierta de glicinas. Ahora sigue el agua: un riachuelo baja por un canal de hierro de veintiocho metros hasta un pequeño estanque, y más abajo una cascada escalonada de dieciocho metros de altura la lleva hasta el fondo. Busca las jacarandas, moradas a finales de primavera.",
+          "long": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles apretadas del Poble-sec, un barrio con poco verde propio. Son dos parques en uno. La parte de arriba parece un pequeño bosque, con caminos anchos de sablón, escaleras y miradores en los niveles más altos, entre pinos carrascos. La parte de abajo es un jardín urbano pensado para la vida diaria: pistas de petanca, una zona de juegos, una mesa de ping-pong, un espacio para perros y una pérgola cubierta de glicinas y parra virgen. Ahora sigue el agua, que une las dos partes. Un riachuelo que nace de un muro baja por un canal de hierro de veintiocho metros hasta un pequeño estanque, y más abajo otro estanque con plantas acuáticas la envía por una cascada escalonada de dieciocho metros de altura. Fíjate también en los árboles: jacarandas, que se vuelven moradas a finales de primavera, árboles del amor y koelreuterias. Escucha un momento: aquí los sonidos son vecinos jugando a la petanca y niños en los columpios, no tráfico. Es donde el Poble-sec viene a respirar, así que disfrútalo con calma."
+        }
+      },
+      "srcHash": "manual-6ce547688e",
+      "audio": {
+        "base": {
+          "file": "audio/es/mirador-poble-sec.m4a",
+          "hash": "0211adb95a"
+        }
+      }
+    },
+    "moll-de-la-fusta": {
+      "tip": "Corredores, ciclistas y familias comparten este paseo: camina por el lado de peatones y no te pares en el carril bici.",
+      "stories": {
+        "base": {
+          "short": "Este paseo de palmeras es el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona. Antes descargaban aquí los barcos; hoy es un lugar para pasear junto al agua, entre el monumento a Colón y la gran escultura del Cap de Barcelona.",
+          "normal": "Estás en el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona. Durante mucho tiempo este borde de la ciudad fue un muelle de trabajo, separado de las calles de detrás por almacenes y tráfico. En los años ochenta el arquitecto Manuel de Solà-Morales lo rediseñó como un paseo, con palmeras y espacio para caminar junto al agua. Mira hacia un extremo y verás el monumento a Colón; mira hacia el otro y encontrarás la gran cara de cerámica del Cap de Barcelona. En medio, los barcos del puerto viejo están amarrados justo delante de ti.",
+          "long": "Estás en el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona, en uso desde hace más de cuatro siglos. Durante mucho tiempo este borde de la ciudad fue un muelle de trabajo, separado de las calles de detrás por cobertizos, almacenes y tráfico: la ciudad vieja vivía de espaldas al mar. En los años ochenta, cuando la ciudad empezó a abrir su frente marítimo, el arquitecto Manuel de Solà-Morales rediseñó este muelle como un paseo en varios niveles, con palmeras, bancos y espacio para caminar junto al agua, manteniendo el tráfico aparte. Mira hacia el suroeste y verás el monumento a Colón al final de la Rambla; mira hacia el otro lado y encontrarás la gran cara de cerámica del Cap de Barcelona. Delante de ti, veleros y barcos antiguos están amarrados donde antes se descargaba la mercancía. Es uno de los lugares de Ciutat Vella donde más fácilmente se nota el mar: siéntate un rato, mira el agua y deja que el ruido de la ciudad quede atrás."
+        }
+      },
+      "srcHash": "manual-5e04f36ced",
+      "audio": {
+        "base": {
+          "file": "audio/es/moll-de-la-fusta.m4a",
+          "hash": "b80a12d608"
+        }
+      }
+    },
+    "placa-del-pi": {
+      "tip": "Encima de las terrazas vive gente y la iglesia está en uso: habla bajo y deja libres los escalones de la iglesia.",
+      "stories": {
+        "base": {
+          "short": "Esta placita toma el nombre de un pino, y todavía hay uno. El que ves se plantó en 1985 para sustituir a uno más antiguo. Detrás se alza la iglesia gótica de Santa Maria del Pi, y a su alrededor los vecinos se cruzan camino de las tiendas de Ciutat Vella.",
+          "normal": "Esta placita toma el nombre de un pino. Ya en el siglo XVI crecía aquí uno tan alto que se veía por encima de las casas, y el que ves ahora se plantó en 1985 para mantener la tradición. Detrás se alza la iglesia gótica de Santa Maria del Pi. Frente a la iglesia, fíjate en la antigua casa gremial con dibujos grabados en el revoque de la fachada, una técnica llamada esgrafiado. Aquí se encuentran tres calles, y es donde los vecinos de Ciutat Vella se cruzan camino del trabajo, la escuela o las tiendas.",
+          "long": "Esta placita toma el nombre de un pino. La leyenda habla de una palma y un pino en este lugar, y en el siglo XVI ya crecía aquí un pino tan alto que se veía por encima de las casas. El que ves ahora se plantó en 1985 para mantener la tradición. Detrás se alza la iglesia gótica de Santa Maria del Pi, que dio nombre a todo el barrio. Ahora date la vuelta. Frente a la iglesia está la antigua casa del gremio de revendedores: fíjate en su fachada, decorada con dibujos grabados en el revoque, una técnica llamada esgrafiado. En la esquina con la calle del Cardenal Casañas, la Casa de la Confraria de la Sang es un ejemplo de las casas de la ciudad de principios del siglo XVII. Aquí se encuentran tres calles, Petritxol, del Pi y Cardenal Casañas, y es uno de los lugares donde la gente que vive en Ciutat Vella se cruza cada día, camino del trabajo, la escuela o las tiendas. Párate un momento en un lado de la plaza y mira cómo funciona."
+        }
+      },
+      "srcHash": "manual-6d221f06bb",
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-del-pi.m4a",
+          "hash": "d5aa136a9b"
+        }
+      }
     }
   },
   "activities": {

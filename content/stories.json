@@ -1838,5 +1838,33 @@
       "audio": "audio/disseny-hub.m4a",
       "audioHash": "c7b140fa7c"
     }
+  },
+  "mercat-boqueria": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mercat-boqueria.m4a",
+      "audioHash": "ee63d9a49f"
+    }
+  },
+  "placa-del-pi": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-del-pi.m4a",
+      "audioHash": "96d9ce3cfe"
+    }
+  },
+  "moll-de-la-fusta": {
+    "variants": {},
+    "base": {
+      "audio": "audio/moll-de-la-fusta.m4a",
+      "audioHash": "c891e2fc4a"
+    }
+  },
+  "mirador-poble-sec": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mirador-poble-sec.m4a",
+      "audioHash": "0786594114"
+    }
   }
 }

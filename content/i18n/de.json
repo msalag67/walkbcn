@@ -2200,6 +2200,74 @@
           "hash": "4aa1eefd9c"
         }
       }
+    },
+    "mercat-boqueria": {
+      "tip": "Ein aktiver und sehr voller Markt: Komm früh an einem Werktag, kauf etwas, wenn du stehen bleibst, und frag, bevor du Standbetreiber fotografierst.",
+      "stories": {
+        "base": {
+          "short": "Hier, am alten Boqueria-Tor an der Rambla, wird seit mindestens dem 13. Jahrhundert Essen verkauft. Die Markthalle wurde 1840 begonnen und nach dem heiligen Josef benannt. Schau hinauf zum eisernen Eingangsbogen von 1913 mit dem Stadtwappen in Buntglas.",
+          "normal": "An dieser Stelle, am alten Boqueria-Tor der Stadtmauer, wird seit mindestens dem 13. Jahrhundert Essen verkauft, zuerst als offener Markt auf der Rambla. 1840 begann die Stadt hier einen richtigen Marktplatz, und der Grundstein wurde am 19. März gelegt, dem Josefstag: Deshalb heißt er offiziell Mercat de Sant Josep. Schau nun auf den Eingang: Der eiserne Bogen mit farbigem Glas und dem Stadtwappen kam 1913 hinzu, das große Metalldach wurde 1914 eröffnet. Drinnen verkaufen noch heute mehr als dreihundert Stände Fisch, Fleisch, Obst und Brot.",
+          "long": "An dieser Stelle wird seit mindestens dem 13. Jahrhundert Essen verkauft. Es begann als offener Markt vor dem Boqueria-Tor der alten Stadtmauer, auf der heutigen Rambla. 1840 genehmigte die Stadt einen Marktplatz mit Arkaden nach Plänen des Stadtarchitekten Josep Mas i Vila, und der Grundstein wurde am 19. März gelegt, dem Josefstag. Deshalb heißt er offiziell Mercat de Sant Josep, auch wenn alle ihn Boqueria nennen. Schau auf den Eingang: Den eisernen Bogen mit farbigem Glas und dem Stadtwappen baute 1913 der Architekt Antoni de Falguera, und das große Metalldach der Barceloneser Maschinenbaufirma La Maquinista wurde 1914 eröffnet. Drinnen gibt es mehr als dreihundert Stände. Der Markt gehört heute zu den meistbesuchten Orten der Stadt, doch für viele Nachbarn ist er noch immer der Ort, wo sie Fisch, Fleisch und Obst kaufen. Mach es also wie sie: früh, zügig und ohne die Stände zu blockieren."
+        }
+      },
+      "srcHash": "manual-818592f2d0",
+      "audio": {
+        "base": {
+          "file": "audio/de/mercat-boqueria.m4a",
+          "hash": "94aaae5977"
+        }
+      }
+    },
+    "mirador-poble-sec": {
+      "tip": "Es ist der Park des Viertels: Teil die Wege mit Kindern und Hundehaltern und verzichte auf Musik und Lärm.",
+      "stories": {
+        "base": {
+          "short": "Dieser Park hängt am Hang des Montjuïc, direkt über den Straßen von Poble-sec. Oben wirkt er wie ein kleiner Wald mit Kieswegen und Aussichtspunkten; weiter unten wird er zum Nachbarschaftsgarten. Folge dem Wasser: Ein Bach fließt durch eine Eisenrinne in einen Teich und über eine Stufenkaskade.",
+          "normal": "Dieser Park hängt am Hang des Montjuïc, direkt über den dichten Straßen von Poble-sec. Er ist zwei Parks in einem. Der obere Teil wirkt wie ein kleiner Wald, mit breiten Kieswegen, Treppen und Aussichtspunkten ganz oben. Der untere Teil ist ein Nachbarschaftsgarten mit Boule-Bahnen, einem Spielplatz und einer mit Glyzinien bewachsenen Pergola. Folge nun dem Wasser: Ein Bach fließt durch eine achtundzwanzig Meter lange Eisenrinne in einen kleinen Teich, und weiter unten trägt ihn eine achtzehn Meter hohe Stufenkaskade nach unten. Achte auf die Jacarandas, die im Spätfrühling lila blühen.",
+          "long": "Dieser Park hängt am Hang des Montjuïc, direkt über den dichten Straßen von Poble-sec, einem Viertel mit wenig eigenem Grün. Er ist zwei Parks in einem. Der obere Teil wirkt wie ein kleiner Wald, mit breiten Kieswegen, Treppen und Aussichtspunkten auf den höchsten Ebenen, zwischen Aleppo-Kiefern. Der untere Teil ist ein Stadtgarten für den Alltag: Boule-Bahnen, ein Spielplatz, eine Tischtennisplatte, ein Bereich für Hunde und eine Pergola mit Glyzinien und wildem Wein. Folge nun dem Wasser, das beide Teile verbindet. Ein Bach, der aus einer Mauer kommt, fließt durch eine achtundzwanzig Meter lange Eisenrinne in einen kleinen Teich, und weiter unten schickt ihn ein zweiter Teich mit Wasserpflanzen über eine achtzehn Meter hohe Stufenkaskade. Schau dir auch die Bäume an: Jacarandas, die im Spätfrühling lila werden, Judasbäume und Blasenbäume. Hör einen Moment zu: Hier hört man Nachbarn beim Boule und Kinder auf den Schaukeln, keinen Verkehr. Hierher kommt Poble-sec zum Durchatmen, also genieß es ruhig."
+        }
+      },
+      "srcHash": "manual-6ce547688e",
+      "audio": {
+        "base": {
+          "file": "audio/de/mirador-poble-sec.m4a",
+          "hash": "0cf492e00d"
+        }
+      }
+    },
+    "moll-de-la-fusta": {
+      "tip": "Läufer, Radfahrer und Familien teilen sich diese Promenade: Geh auf der Fußgängerseite und bleib nicht auf dem Radweg stehen.",
+      "stories": {
+        "base": {
+          "short": "Diese Palmenpromenade ist der Moll de la Fusta, der Holzkai, im Port Vell, dem ältesten Teil des Hafens von Barcelona. Früher wurden hier Schiffe entladen; heute spaziert man am Wasser entlang, zwischen dem Kolumbus-Denkmal und der großen Skulptur Barcelona Head.",
+          "normal": "Du stehst auf dem Moll de la Fusta, dem Holzkai, im Port Vell, dem ältesten Teil des Hafens von Barcelona. Lange war dieser Stadtrand ein Arbeitskai, durch Lagerhallen und Verkehr von den Straßen dahinter abgeschnitten. In den 1980er-Jahren gestaltete der Architekt Manuel de Solà-Morales ihn als Promenade um, mit Palmen und Platz zum Gehen am Wasser. An einem Ende siehst du das Kolumbus-Denkmal, am anderen das große Keramikgesicht des Barcelona Head. Dazwischen liegen die Boote des alten Hafens direkt vor dir.",
+          "long": "Du stehst auf dem Moll de la Fusta, dem Holzkai, im Port Vell, dem ältesten Teil des Hafens von Barcelona, seit mehr als vier Jahrhunderten in Betrieb. Lange war dieser Stadtrand ein Arbeitskai, durch Schuppen, Lagerhallen und Verkehr von den Straßen dahinter abgeschnitten: Die Altstadt lebte mit dem Rücken zum Meer. In den 1980er-Jahren, als die Stadt begann, ihre Uferzone zu öffnen, gestaltete der Architekt Manuel de Solà-Morales diesen Kai als Promenade auf mehreren Ebenen um, mit Palmen, Bänken und Platz zum Gehen am Wasser, während der Verkehr getrennt blieb. Im Südwesten siehst du das Kolumbus-Denkmal am Ende der Rambla; auf der anderen Seite das große Keramikgesicht des Barcelona Head. Vor dir liegen Segelboote und alte Schiffe dort, wo früher Fracht entladen wurde. Es ist einer der Orte in der Altstadt, an denen man das Meer am leichtesten spürt: Setz dich eine Weile, schau aufs Wasser und lass den Lärm der Stadt hinter dir."
+        }
+      },
+      "srcHash": "manual-5e04f36ced",
+      "audio": {
+        "base": {
+          "file": "audio/de/moll-de-la-fusta.m4a",
+          "hash": "48fa654b44"
+        }
+      }
+    },
+    "placa-del-pi": {
+      "tip": "Über den Terrassen wohnen Menschen, und die Kirche ist in Gebrauch: Sprich leise und halte die Kirchenstufen frei.",
+      "stories": {
+        "base": {
+          "short": "Dieser kleine Platz ist nach einer Kiefer benannt, und es steht noch immer eine hier. Die Kiefer, die du siehst, wurde 1985 als Ersatz für eine ältere gepflanzt. Dahinter erhebt sich die gotische Kirche Santa Maria del Pi, und rundherum begegnen sich die Nachbarn auf dem Weg zu den Läden der Altstadt.",
+          "normal": "Dieser kleine Platz ist nach einer Kiefer benannt. Schon im 16. Jahrhundert wuchs hier eine, so hoch, dass man sie über den Häusern sah, und die heutige wurde 1985 gepflanzt, um die Tradition zu bewahren. Dahinter erhebt sich die gotische Kirche Santa Maria del Pi. Gegenüber der Kirche lohnt ein Blick auf das alte Zunfthaus mit in den Putz geritzten Mustern an der Fassade, einer Technik namens Sgraffito. Drei Straßen treffen hier aufeinander, und hier kreuzen sich die Wege der Altstadtbewohner auf dem Weg zur Arbeit, zur Schule oder zum Einkaufen.",
+          "long": "Dieser kleine Platz ist nach einer Kiefer benannt. Die Legende erzählt von einer Palme und einer Kiefer an dieser Stelle, und im 16. Jahrhundert wuchs hier bereits eine Kiefer, so hoch, dass man sie über den Häusern sah. Die heutige wurde 1985 gepflanzt, um die Tradition zu bewahren. Dahinter erhebt sich die gotische Kirche Santa Maria del Pi, die dem ganzen Viertel ihren Namen gab. Dreh dich nun um. Gegenüber der Kirche steht das alte Haus der Zunft der Wiederverkäufer: Schau dir die Fassade an, verziert mit in den Putz geritzten Mustern, einer Technik namens Sgraffito. An der Ecke zur Carrer del Cardenal Casañas ist die Casa de la Confraria de la Sang ein Beispiel für die Stadthäuser vom Anfang des 17. Jahrhunderts. Drei Straßen treffen hier aufeinander, Petritxol, del Pi und Cardenal Casañas, und hier kreuzen sich täglich die Wege der Menschen, die in der Altstadt leben, auf dem Weg zur Arbeit, zur Schule oder zum Einkaufen. Bleib einen Moment am Rand des Platzes stehen und schau einfach, wie er funktioniert."
+        }
+      },
+      "srcHash": "manual-6d221f06bb",
+      "audio": {
+        "base": {
+          "file": "audio/de/placa-del-pi.m4a",
+          "hash": "fbcde1e845"
+        }
+      }
     }
   },
   "activities": {

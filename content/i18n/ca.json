@@ -2200,6 +2200,74 @@
           "hash": "030e0f1696"
         }
       }
+    },
+    "mercat-boqueria": {
+      "tip": "És un mercat en funcionament i molt concorregut: vine aviat un dia feiner, compra alguna cosa si t'atures i demana permís abans de fotografiar els paradistes.",
+      "stories": {
+        "base": {
+          "short": "Aquí s'hi ven menjar, al costat de l'antic portal de la Boqueria a la Rambla, almenys des del segle XIII. El mercat cobert es va començar el 1840 i porta el nom de sant Josep. Mira l'arc de ferro de l'entrada, del 1913, amb l'escut de la ciutat en vitrall.",
+          "normal": "En aquest lloc s'hi ven menjar, al costat de l'antic portal de la Boqueria de la muralla, almenys des del segle XIII, primer com un mercat a l'aire lliure a la Rambla. El 1840 la ciutat hi va començar una plaça de mercat, i la primera pedra es va posar el 19 de març, dia de Sant Josep: per això el seu nom oficial és Mercat de Sant Josep. Ara mira l'entrada: l'arc de ferro amb vidres de colors i l'escut de la ciutat es va afegir el 1913, i la gran coberta metàl·lica es va inaugurar el 1914. A dins, més de tres-centes parades encara venen peix, carn, fruita i pa.",
+          "long": "En aquest lloc s'hi ven menjar almenys des del segle XIII. Va començar com un mercat a l'aire lliure davant del portal de la Boqueria de l'antiga muralla, a l'actual Rambla. El 1840 la ciutat va aprovar una plaça de mercat porxada de l'arquitecte municipal Josep Mas i Vila, i la primera pedra es va posar el 19 de març, dia de Sant Josep. Per això el seu nom oficial és Mercat de Sant Josep, tot i que tothom en diu la Boqueria. Mira l'entrada: l'arc de ferro amb vidres de colors i l'escut de la ciutat el va construir el 1913 l'arquitecte Antoni de Falguera, i la gran coberta metàl·lica, feta per la Maquinista Terrestre i Marítima, es va inaugurar el 1914. A dins hi ha més de tres-centes parades. S'ha convertit en un dels llocs més visitats de la ciutat, però per a molts veïns encara és on compren el peix, la carn i la fruita. Així que compra com ells: aviat, de pressa i sense tapar les parades."
+        }
+      },
+      "srcHash": "manual-818592f2d0",
+      "audio": {
+        "base": {
+          "file": "audio/ca/mercat-boqueria.m4a",
+          "hash": "3f2dda3810"
+        }
+      }
+    },
+    "mirador-poble-sec": {
+      "tip": "És el parc del barri: comparteix els camins amb la canalla i amb qui passeja el gos, i res de música ni crits.",
+      "stories": {
+        "base": {
+          "short": "Aquest parc penja del vessant de Montjuïc, just damunt dels carrers del Poble-sec. La part de dalt sembla un petit bosc, amb camins de sauló i miradors; més avall es converteix en un jardí de barri. Segueix l'aigua: un rierol baixa per un canal de ferro fins a un estany i una cascada esglaonada.",
+          "normal": "Aquest parc penja del vessant de Montjuïc, just damunt dels carrers atapeïts del Poble-sec. Són dos parcs en un. La part de dalt sembla un petit bosc, amb camins amples de sauló, escales i miradors al capdamunt. La part de baix és un jardí de barri, amb pistes de petanca, una zona de jocs i una pèrgola coberta de glicines. Ara segueix l'aigua: un rierol baixa per un canal de ferro de vint-i-vuit metres fins a un petit estany, i més avall una cascada esglaonada de divuit metres d'alçada la porta fins a baix. Busca les jacarandes, liles a finals de primavera.",
+          "long": "Aquest parc penja del vessant de Montjuïc, just damunt dels carrers atapeïts del Poble-sec, un barri amb poc verd propi. Són dos parcs en un. La part de dalt sembla un petit bosc, amb camins amples de sauló, escales i miradors als nivells més alts, entre pins blancs. La part de baix és un jardí urbà pensat per a la vida de cada dia: pistes de petanca, una zona de jocs, una taula de ping-pong, un espai per als gossos i una pèrgola coberta de glicines i vinya verge. Ara segueix l'aigua, que uneix les dues parts. Un rierol que neix d'un mur baixa per un canal de ferro de vint-i-vuit metres fins a un petit estany, i més avall un altre estany amb plantes aquàtiques l'envia per una cascada esglaonada de divuit metres d'alçada. Fixa't també en els arbres: jacarandes, que es tornen liles a finals de primavera, arbres de l'amor i koelreuteries. Escolta un moment: aquí els sons són veïns jugant a petanca i criatures als gronxadors, no pas trànsit. És on el Poble-sec ve a respirar, així que gaudeix-ne amb calma."
+        }
+      },
+      "srcHash": "manual-6ce547688e",
+      "audio": {
+        "base": {
+          "file": "audio/ca/mirador-poble-sec.m4a",
+          "hash": "d6e3b2fd36"
+        }
+      }
+    },
+    "moll-de-la-fusta": {
+      "tip": "Corredors, ciclistes i famílies comparteixen aquest passeig: camina pel costat de vianants i no t'aturis al carril bici.",
+      "stories": {
+        "base": {
+          "short": "Aquest passeig de palmeres és el Moll de la Fusta, part del Port Vell, la part més antiga del port de Barcelona. Abans hi descarregaven els vaixells; avui és un lloc per passejar arran d'aigua, entre el monument a Colom i la gran escultura del Cap de Barcelona.",
+          "normal": "Ets al Moll de la Fusta, part del Port Vell, la part més antiga del port de Barcelona. Durant molt de temps aquesta vora de la ciutat va ser un moll de treball, separat dels carrers del darrere per magatzems i trànsit. Als anys vuitanta l'arquitecte Manuel de Solà-Morales el va redissenyar com un passeig, amb palmeres i espai per caminar arran d'aigua. Mira cap a un extrem i veuràs el monument a Colom; mira cap a l'altre i trobaràs la gran cara de ceràmica del Cap de Barcelona. Entremig, les barques del port vell són amarrades just davant teu.",
+          "long": "Ets al Moll de la Fusta, part del Port Vell, la part més antiga del port de Barcelona, en ús des de fa més de quatre segles. Durant molt de temps aquesta vora de la ciutat va ser un moll de treball, separat dels carrers del darrere per coberts, magatzems i trànsit: la ciutat vella vivia d'esquena al mar. Als anys vuitanta, quan la ciutat va començar a obrir el seu front marítim, l'arquitecte Manuel de Solà-Morales va redissenyar aquest moll com un passeig a diversos nivells, amb palmeres, bancs i espai per caminar arran d'aigua, mantenint el trànsit a part. Mira cap al sud-oest i veuràs el monument a Colom al final de la Rambla; mira cap a l'altre costat i trobaràs la gran cara de ceràmica del Cap de Barcelona. Davant teu, velers i vaixells antics són amarrats on abans es descarregava la mercaderia. És un dels llocs de Ciutat Vella on més fàcilment es nota el mar: seu una estona, mira l'aigua i deixa que el soroll de la ciutat quedi enrere."
+        }
+      },
+      "srcHash": "manual-5e04f36ced",
+      "audio": {
+        "base": {
+          "file": "audio/ca/moll-de-la-fusta.m4a",
+          "hash": "4d7d86ab94"
+        }
+      }
+    },
+    "placa-del-pi": {
+      "tip": "Damunt de les terrasses hi viu gent i l'església s'utilitza: parla baix i deixa lliures les escales de l'església.",
+      "stories": {
+        "base": {
+          "short": "Aquesta placeta pren el nom d'un pi, i encara n'hi ha un. El que veus es va plantar el 1985 per substituir-ne un de més antic. Al darrere s'alça l'església gòtica de Santa Maria del Pi, i al seu voltant els veïns es creuen camí de les botigues de Ciutat Vella.",
+          "normal": "Aquesta placeta pren el nom d'un pi. Ja al segle XVI n'hi creixia un de tan alt que es veia per damunt de les cases, i el que veus ara es va plantar el 1985 per mantenir la tradició. Al darrere s'alça l'església gòtica de Santa Maria del Pi. Davant de l'església, fixa't en l'antiga casa gremial amb dibuixos gravats a l'arrebossat de la façana, una tècnica que es diu esgrafiat. Aquí s'hi troben tres carrers, i és on els veïns de Ciutat Vella es creuen camí de la feina, l'escola o les botigues.",
+          "long": "Aquesta placeta pren el nom d'un pi. La llegenda parla d'una palma i d'un pi en aquest lloc, i al segle XVI ja hi creixia un pi tan alt que es veia per damunt de les cases. El que veus ara es va plantar el 1985 per mantenir la tradició. Al darrere s'alça l'església gòtica de Santa Maria del Pi, que va donar nom a tot el barri. Ara gira't. Davant de l'església hi ha l'antiga casa del gremi de revenedors: fixa't en la façana, decorada amb dibuixos gravats a l'arrebossat, una tècnica que es diu esgrafiat. A la cantonada amb el carrer del Cardenal Casañas, la Casa de la Confraria de la Sang és un exemple de les cases de la ciutat de principis del segle XVII. Aquí s'hi troben tres carrers, Petritxol, del Pi i Cardenal Casañas, i és un dels llocs on la gent que viu a Ciutat Vella es creua cada dia, camí de la feina, l'escola o les botigues. Atura't un moment en un costat de la plaça i mira com funciona."
+        }
+      },
+      "srcHash": "manual-6d221f06bb",
+      "audio": {
+        "base": {
+          "file": "audio/ca/placa-del-pi.m4a",
+          "hash": "bfe9c408d3"
+        }
+      }
     }
   },
   "activities": {
