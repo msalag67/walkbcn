@@ -102,7 +102,7 @@ Cada parada y cada sitio de Activities tiene "Comunicar un problema": abre el fo
 
 ### Medir el uso (desactivado por defecto)
 
-`index.html` tiene `ANALYTICS.goatcounter`: vacío = no se carga nada y no se envía nada. Con un código de GoatCounter (gratis, sin cookies) cuenta eventos anónimos (`Walk finished`, `Directions opened`, `Survey opened`…) con el `src` del enlace. Respeta "No aprender de lo que hago" y la ventana de privacidad lo explica. Al terminar un paseo, la web ofrece la encuesta de la sesión 9 (`SURVEY_URL`).
+`index.html` tiene `ANALYTICS.goatcounter` (activado: `walkbcn`, panel en walkbcn.goatcounter.com). Vacío = no se carga nada y no se envía nada. Con un código de GoatCounter (gratis, sin cookies) cuenta eventos anónimos (`Walk finished`, `Directions opened`, `Survey opened`…) con el `src` del enlace. Respeta "No aprender de lo que hago" y la ventana de privacidad lo explica. Al terminar un paseo, la web ofrece la encuesta de la sesión 9 (`SURVEY_URL`).
 
 ### Repetir el juez de IA con la app de hoy
 

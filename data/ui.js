@@ -1290,3 +1290,11 @@ Object.assign(window.WALKBCN_UI.fr, { offlineNoSupport: "Ce navigateur n'a pas p
 Object.assign(window.WALKBCN_UI.de, { offlineNoSupport: "Dieser Browser konnte die Offline-Nutzung nicht vorbereiten. Lade die Seite neu und versuch es noch einmal (funktioniert in Chrome und Safari)." });
 Object.assign(window.WALKBCN_UI.it, { offlineNoSupport: "Questo browser non è riuscito a preparare l'uso offline. Ricarica la pagina e riprova (funziona in Chrome e Safari)." });
 Object.assign(window.WALKBCN_UI.zh, { offlineNoSupport: "此浏览器无法准备离线使用。请刷新页面后重试（Chrome 和 Safari 可用）。" });
+// GoatCounter is on (14 Nov 2026): the privacy text says what is sent.
+Object.assign(window.WALKBCN_UI.en, { privacyP2b: "These records are never sent to us or anyone else, and there is no account. The only thing sent is the anonymous count explained below." });
+Object.assign(window.WALKBCN_UI.ca, { privacyP2b: "Aquests registres mai no s'envien ni a nosaltres ni a ningú, i no hi ha cap compte. L'única cosa que s'envia és el recompte anònim que s'explica a sota." });
+Object.assign(window.WALKBCN_UI.es, { privacyP2b: "Estos registros nunca se envían ni a nosotros ni a nadie, y no hay ninguna cuenta. Lo único que se envía es el recuento anónimo que se explica abajo." });
+Object.assign(window.WALKBCN_UI.fr, { privacyP2b: "Ces données ne sont jamais envoyées ni à nous ni à personne, et il n'y a pas de compte. Seul le comptage anonyme expliqué ci-dessous est envoyé." });
+Object.assign(window.WALKBCN_UI.de, { privacyP2b: "Diese Daten werden nie an uns oder andere gesendet, und es gibt kein Konto. Gesendet wird nur die unten erklärte anonyme Zählung." });
+Object.assign(window.WALKBCN_UI.it, { privacyP2b: "Questi dati non vengono mai inviati a noi né a nessun altro, e non c'è nessun account. L'unica cosa inviata è il conteggio anonimo spiegato qui sotto." });
+Object.assign(window.WALKBCN_UI.zh, { privacyP2b: "这些记录不会发送给我们或任何人，也不需要账户。唯一发送的是下面说明的匿名统计。" });
