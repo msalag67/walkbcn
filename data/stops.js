@@ -162,7 +162,7 @@ window.WALKBCN_STOPS = [
   { id: "liceu", name: "Gran Teatre del Liceu", img: "Gran Teatre del Liceu, façana Rambla.jpg", area: "La Rambla", lat: 41.3802, lng: 2.1734, tags: ["culture", "history"],
     story: "Behind this modest façade on the Rambla hides one of Europe's great opera houses, opened in 1847. Its story is dramatic: it burned down in 1861, and in 1893 an anarchist threw bombs into the audience during a performance. In 1994 another fire destroyed it again, and the whole city helped rebuild it. It reopened in 1999, and its red and gold auditorium is once again the heart of opera in Barcelona.",
     tip: "Guided tours run most days, and last-minute tickets can be surprisingly affordable." },
-  { id: "teatre-romea", name: "Teatre Romea", img: "Teatre Romea - Barcelona (Catalonia).jpg", area: "El Raval", lat: 41.3805, lng: 2.1711, tags: ["culture", "history"],
+  { id: "teatre-romea", name: "Teatre Romea", img: "Teatre Romea - Barcelona (Catalonia).jpg", area: "El Raval", lat: 41.3805, lng: 2.1711, tags: ["culture"],
     story: "This theatre on Carrer de l'Hospital has been staging plays since 1863, and for much of its history it was the home of theatre in Catalan. Generations of Catalan actors and playwrights made their names on this stage, even in years when the language was pushed out of public life. Today it still presents modern productions, mostly in Catalan, for a local audience.",
     tip: "Check the programme: some productions offer surtitles." },
   { id: "el-molino", name: "El Molino", img: "Fachada Rosa Puig retoc opt.jpg", area: "Poble-sec", lat: 41.3746, lng: 2.1672, tags: ["culture", "local"],
