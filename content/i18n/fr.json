@@ -1393,12 +1393,12 @@
       }
     },
     "mercat-abaceria": {
-      "tip": "Renseignez-vous sur l'emplacement des étals le jour de votre visite : le marché a été en travaux de rénovation.",
+      "tip": "Si vous vous attardez, achetez quelque chose : les étals font vivre ceux qui y travaillent. Les premières semaines après la réouverture, certains étals s'installent encore.",
       "stories": {
         "base": {
-          "short": "Voici le plus grand marché de Gràcia : depuis la fin du dix-neuvième siècle, les familles du quartier y viennent acheter leurs fruits, leur poisson et leur pain. Après une longue rénovation, il se peut que les étals soient installés dans un espace provisoire tout près. Dans tous les cas, observez les caddies et les habitués : c'est le Gràcia du quotidien, loin des circuits touristiques.",
-          "normal": "Voici le plus grand marché de Gràcia, et l'un des marchés de quartier les plus animés de la ville. Il nourrit les familles du coin depuis la fin du XIXe siècle. Il a connu une longue rénovation, donc il se peut que les étals soient installés dans un espace provisoire tout près. Dans tous les cas, c'est ici que Gràcia achète ses fruits, son poisson et son pain, loin des circuits touristiques.",
-          "long": "Vous êtes devant le Mercat de l'Abaceria Central, le plus grand marché de Gràcia et l'un des marchés de quartier les plus animés de tout Barcelone. Il nourrit les familles du coin depuis la fin du dix-neuvième siècle. Rien que son nom vous dit à quoi il sert. Une abaceria, c'est un vieux mot catalan qui désigne une épicerie, un endroit où l'on trouve les provisions de tous les jours, et c'est exactement ce qu'il est encore aujourd'hui. Le marché a connu une longue rénovation, alors selon le moment de votre visite, il se peut que les étals fonctionnent dans un espace provisoire tout près. Ne vous laissez pas décourager pour autant. Un marché, ce sont avant tout ses commerçants et ses habitués, pas son toit. Prenez un instant pour observer avant d'entrer. Regardez qui va et vient : des habitants âgés avec leur caddie à roulettes, des parents avec un enfant dans leur sillage, quelqu'un qui porte un pain sous le bras. C'est ici que Gràcia achète ses fruits, son poisson et son pain, loin des circuits touristiques, et beaucoup d'habitués connaissent leurs commerçants par leur prénom. Comme les autres marchés municipaux de la ville, il fait partie de la routine quotidienne, ce n'est pas une curiosité à cocher sur une liste. Alors si vous entrez, faites-le en douceur, restez sur le côté des allées, et demandez avant de photographier qui que ce soit. Et si quelque chose vous fait envie, achetez-le. Un fruit dégusté sur un banc tout près, c'est l'une des façons les plus simples de se sentir, le temps de quelques minutes, comme un habitant du quartier."
+          "short": "Voici le plus grand marché de Gràcia : depuis la fin du dix-neuvième siècle, les familles du quartier y viennent acheter leurs fruits, leur poisson et leur pain. Après des années sous un chapiteau provisoire, il a rouvert dans son bâtiment rénové en novembre 2026. Dans tous les cas, observez les caddies et les habitués : c'est le Gràcia du quotidien, loin des circuits touristiques.",
+          "normal": "Voici le plus grand marché de Gràcia, et l'un des marchés de quartier les plus animés de la ville. Il nourrit les familles du coin depuis la fin du XIXe siècle. Après une longue rénovation et des années sous un chapiteau provisoire, il a rouvert dans son bâtiment rénové en novembre 2026. Dans tous les cas, c'est ici que Gràcia achète ses fruits, son poisson et son pain, loin des circuits touristiques.",
+          "long": "Vous êtes devant le Mercat de l'Abaceria Central, le plus grand marché de Gràcia et l'un des marchés de quartier les plus animés de tout Barcelone. Il nourrit les familles du coin depuis la fin du dix-neuvième siècle. Rien que son nom vous dit à quoi il sert. Une abaceria, c'est un vieux mot catalan qui désigne une épicerie, un endroit où l'on trouve les provisions de tous les jours, et c'est exactement ce qu'il est encore aujourd'hui. Le marché a passé des années sous un chapiteau provisoire pendant une longue rénovation, et en novembre 2026 les étals sont revenus dans ce bâtiment rénové. Un marché, ce sont avant tout ses commerçants et ses habitués, pas son toit. Prenez un instant pour observer avant d'entrer. Regardez qui va et vient : des habitants âgés avec leur caddie à roulettes, des parents avec un enfant dans leur sillage, quelqu'un qui porte un pain sous le bras. C'est ici que Gràcia achète ses fruits, son poisson et son pain, loin des circuits touristiques, et beaucoup d'habitués connaissent leurs commerçants par leur prénom. Comme les autres marchés municipaux de la ville, il fait partie de la routine quotidienne, ce n'est pas une curiosité à cocher sur une liste. Alors si vous entrez, faites-le en douceur, restez sur le côté des allées, et demandez avant de photographier qui que ce soit. Et si quelque chose vous fait envie, achetez-le. Un fruit dégusté sur un banc tout près, c'est l'une des façons les plus simples de se sentir, le temps de quelques minutes, comme un habitant du quartier."
         },
         "food": {
           "short": "Regardez ce qui est empilé le plus haut sur les étals : c'est généralement ce qu'il y a de meilleur en ce moment, car les étalages suivent les saisons. Gràcia achète ici ses fruits, son poisson et son pain depuis la fin du dix-neuvième siècle. Prenez un beau fruit bien mûr à savourer dehors, et laissez les allées dégagées.",
@@ -1415,7 +1415,7 @@
       "audio": {
         "base": {
           "file": "audio/fr/mercat-abaceria.m4a",
-          "hash": "1efbdf5432"
+          "hash": "cdb7fbd766"
         },
         "food": {
           "file": "audio/fr/mercat-abaceria--food.m4a",
@@ -2183,6 +2183,23 @@
           "hash": "7403691898"
         }
       }
+    },
+    "disseny-hub": {
+      "tip": "La place devant est un espace public ; le musée a un billet et des horaires. Laissez libres les pistes cyclables et les allées du parc.",
+      "stories": {
+        "base": {
+          "short": "Ce bâtiment sombre qui semble suspendu dans les airs est le Disseny Hub, siège du musée du Design de Barcelone depuis 2014. On le surnomme l'agrafeuse. Conçu par l'agence MBM, il réunit les collections de quatre anciens musées : arts décoratifs, céramique, textile et mode, et arts graphiques.",
+          "normal": "Regardez ce bâtiment sombre qui semble suspendu dans les airs, avec un immense porte-à-faux au-dessus de la place. On le surnomme l'agrafeuse. C'est le Disseny Hub, conçu par l'agence MBM et construit entre 2008 et 2013 ; depuis 2014, il abrite le Museu del Disseny, le musée du design de Barcelone. À l'intérieur, il réunit les collections de quatre anciens musées : arts décoratifs, céramique, textile et mode, et arts graphiques, plus de soixante-dix mille objets. Regardez maintenant autour de vous. Glòries a longtemps été un énorme nœud routier, et il se transforme peu à peu en parc.",
+          "long": "Regardez ce bâtiment sombre qui semble suspendu dans les airs, avec un immense porte-à-faux au-dessus de la place. On le surnomme l'agrafeuse, et en le voyant de profil, vous comprendrez pourquoi. C'est le Disseny Hub, conçu par l'agence MBM, fondée par les architectes Josep Martorell, Oriol Bohigas et David Mackay, et construit entre 2008 et 2013. Il est revêtu de zinc et de grandes baies vitrées, et une partie du bâtiment se trouve sous le niveau de la place. Depuis 2014, il abrite le Museu del Disseny, le musée du design de Barcelone. À l'intérieur, il réunit les collections de quatre anciens musées autrefois dispersés dans la ville : arts décoratifs, céramique, textile et mode, et arts graphiques, plus de soixante-dix mille objets, des chaises et des robes aux affiches. Regardez maintenant autour de vous. Dans le plan de l'Eixample d'Ildefons Cerdà, Glòries devait être le nouveau centre de la ville. Pendant des décennies, ce fut au contraire un énorme nœud routier, avec la circulation passant au-dessus. Peu à peu, il devient un parc et un lieu de rencontre entre l'Eixample, Poblenou et le Clot, et la haute tour arrondie à côté, la Torre Glòries, en est devenue un emblème."
+        }
+      },
+      "srcHash": "manual-b2efc247c0",
+      "audio": {
+        "base": {
+          "file": "audio/fr/disseny-hub.m4a",
+          "hash": "41cf02e744"
+        }
+      }
     }
   },
   "activities": {
@@ -2197,7 +2214,7 @@
             "tapas": "Tapas",
             "seafood": "Poissons et fruits de mer",
             "rice": "Plats de riz (arrossos)",
-            "esmorzar": "Esmorzar de forquilla (petit-déjeuner copieux)",
+            "esmorzar": "Esmorzar (petit-déj. salé)",
             "menu": "Menú del dia (menu du midi)",
             "veggie": "Options végétariennes"
           }
@@ -2257,7 +2274,9 @@
         "Bar Gelida": "Bar familial de l'Eixample depuis 1946, tenu aujourd'hui par le petit-fils du fondateur. Pas de menu fixe : une longue liste de plats catalans maison, et les plats du jour à l'ardoise vers 13 h.",
         "Bar Bodega Can Ros": "Bodega fondée en 1971 par Esteve Ros et tenue par ses fils, siège d'une colla de la fête de Sant Medir. Tapas traditionnelles et petits-déjeuners copieux, Carrer de Roger de Flor.",
         "La Sosenga": "Petit restaurant ouvert en 2023 près de la cathédrale, cuisine catalane contemporaine de saison. Son nom vient d'un plat du livre de cuisine catalan médiéval Sent Soví.",
-        "Can Lluís": "Restaurant du Raval fondé en 1929. Fermé en 2021, il a rouvert en décembre 2025 avec de nouveaux propriétaires, qui ont gardé sa cuisine catalane traditionnelle. Ouvert tous les jours midi et soir."
+        "Can Lluís": "Restaurant du Raval fondé en 1929. Fermé en 2021, il a rouvert en décembre 2025 avec de nouveaux propriétaires, qui ont gardé sa cuisine catalane traditionnelle. Ouvert tous les jours midi et soir.",
+        "Biocenter": "Restaurant végétarien familial dans le Raval depuis 1980, avec des plats végans signalés sur la carte et un menu du midi en semaine.",
+        "Veg World India": "Restaurant indien végétarien familial à Gràcia depuis 2005 ; la plupart de la carte est végane. Fermé le lundi."
       }
     },
     "nightlife": {
@@ -2561,5 +2580,5 @@
       }
     }
   },
-  "activitiesHash": "7db13e8075"
+  "activitiesHash": "77cf047399"
 }

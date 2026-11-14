@@ -1393,12 +1393,12 @@
       }
     },
     "mercat-abaceria": {
-      "tip": "Schauen Sie am Tag Ihres Besuchs nach, wo die Stände gerade sind: Die Markthalle wurde renoviert.",
+      "tip": "Wenn du länger bleibst, kauf etwas: Von den Ständen leben die Menschen, die dort arbeiten. In den ersten Wochen nach der Wiedereröffnung richten sich manche Stände noch ein.",
       "stories": {
         "base": {
-          "short": "Das ist der größte Markt von Gràcia, und seit dem Ende des 19. Jahrhunderts kaufen die Familien aus dem Viertel hier ihr Obst, ihren Fisch und ihr Brot. Nach einer langen Renovierung sind die Stände vielleicht in einem Ausweichquartier ganz in der Nähe. So oder so: Achten Sie auf die Einkaufstrolleys und die Stammkundschaft. Das hier ist der ganz normale Alltag in Gràcia, weit weg von den Touristenpfaden.",
-          "normal": "Das ist der größte Markt von Gràcia und einer der belebtesten Viertelmärkte der Stadt. Seit dem Ende des 19. Jahrhunderts versorgt er die Familien hier im Viertel. Er wurde lange renoviert, deshalb sind die Stände vielleicht in einem Ausweichquartier ganz in der Nähe. So oder so: Hier kauft Gràcia sein Obst, seinen Fisch und sein Brot, weit weg von den Touristenpfaden.",
-          "long": "Sie stehen hier vor dem Mercat de l'Abaceria Central, dem größten Markt von Gràcia und einem der belebtesten Viertelmärkte in ganz Barcelona. Seit dem Ende des 19. Jahrhunderts versorgt er die Familien aus der Nachbarschaft. Schon der Name verrät, wozu er da ist. „Abaceria“ ist ein altes katalanisches Wort für einen Krämerladen, also einen Ort für den täglichen Bedarf, und genau das ist der Markt bis heute. Er wurde lange renoviert, und je nachdem, wann Sie hier sind, arbeiten die Stände vielleicht in einem Ausweichquartier ganz in der Nähe. Lassen Sie sich davon nicht abschrecken. Ein Markt lebt von seinen Händlern und seiner Stammkundschaft, nicht von seinem Dach. Bevor Sie hineingehen, schauen Sie sich kurz um. Achten Sie darauf, wer kommt und geht: ältere Leute aus dem Viertel mit ihren Einkaufstrolleys, Eltern mit einem Kind im Schlepptau, jemand mit einem Brotlaib unter dem Arm. Hier kauft Gràcia sein Obst, seinen Fisch und sein Brot, weit weg von den Touristenpfaden, und viele Stammkunden kennen ihre Händler beim Namen. Wie die anderen städtischen Märkte Barcelonas gehört er zum Alltag und ist keine Sehenswürdigkeit zum Abhaken. Wenn Sie also hineingehen, bewegen Sie sich behutsam, bleiben Sie am Rand der Gänge und fragen Sie, bevor Sie jemanden fotografieren. Und wenn Ihnen etwas gut aussieht, kaufen Sie es. Ein Stück Obst, auf einer Bank in der Nähe gegessen, ist eine der einfachsten Möglichkeiten, sich für ein paar Minuten so zu fühlen, als würden Sie hier wohnen."
+          "short": "Das ist der größte Markt von Gràcia, und seit dem Ende des 19. Jahrhunderts kaufen die Familien aus dem Viertel hier ihr Obst, ihren Fisch und ihr Brot. Nach Jahren in einem provisorischen Zelt hat er im November 2026 in seinem renovierten Gebäude wieder geöffnet. So oder so: Achten Sie auf die Einkaufstrolleys und die Stammkundschaft. Das hier ist der ganz normale Alltag in Gràcia, weit weg von den Touristenpfaden.",
+          "normal": "Das ist der größte Markt von Gràcia und einer der belebtesten Viertelmärkte der Stadt. Seit dem Ende des 19. Jahrhunderts versorgt er die Familien hier im Viertel. Nach einer langen Renovierung und Jahren in einem provisorischen Zelt hat er im November 2026 in seinem erneuerten Gebäude wieder geöffnet. So oder so: Hier kauft Gràcia sein Obst, seinen Fisch und sein Brot, weit weg von den Touristenpfaden.",
+          "long": "Sie stehen hier vor dem Mercat de l'Abaceria Central, dem größten Markt von Gràcia und einem der belebtesten Viertelmärkte in ganz Barcelona. Seit dem Ende des 19. Jahrhunderts versorgt er die Familien aus der Nachbarschaft. Schon der Name verrät, wozu er da ist. „Abaceria“ ist ein altes katalanisches Wort für einen Krämerladen, also einen Ort für den täglichen Bedarf, und genau das ist der Markt bis heute. Während einer langen Renovierung war der Markt jahrelang in einem provisorischen Zelt, und im November 2026 sind die Stände in dieses erneuerte Gebäude zurückgekehrt. Ein Markt lebt von seinen Händlern und seiner Stammkundschaft, nicht von seinem Dach. Bevor Sie hineingehen, schauen Sie sich kurz um. Achten Sie darauf, wer kommt und geht: ältere Leute aus dem Viertel mit ihren Einkaufstrolleys, Eltern mit einem Kind im Schlepptau, jemand mit einem Brotlaib unter dem Arm. Hier kauft Gràcia sein Obst, seinen Fisch und sein Brot, weit weg von den Touristenpfaden, und viele Stammkunden kennen ihre Händler beim Namen. Wie die anderen städtischen Märkte Barcelonas gehört er zum Alltag und ist keine Sehenswürdigkeit zum Abhaken. Wenn Sie also hineingehen, bewegen Sie sich behutsam, bleiben Sie am Rand der Gänge und fragen Sie, bevor Sie jemanden fotografieren. Und wenn Ihnen etwas gut aussieht, kaufen Sie es. Ein Stück Obst, auf einer Bank in der Nähe gegessen, ist eine der einfachsten Möglichkeiten, sich für ein paar Minuten so zu fühlen, als würden Sie hier wohnen."
         },
         "food": {
           "short": "Schauen Sie, was sich an den Ständen am höchsten stapelt: Das ist meistens gerade am besten, denn die Auslagen richten sich nach der Saison. Seit dem Ende des 19. Jahrhunderts kauft Gràcia hier sein Obst, seinen Fisch und sein Brot. Nehmen Sie sich ein reifes Stück Obst für draußen mit und halten Sie die Gänge frei.",
@@ -1415,7 +1415,7 @@
       "audio": {
         "base": {
           "file": "audio/de/mercat-abaceria.m4a",
-          "hash": "418d07a66e"
+          "hash": "e83c0b0e89"
         },
         "food": {
           "file": "audio/de/mercat-abaceria--food.m4a",
@@ -2183,6 +2183,23 @@
           "hash": "42f34617f4"
         }
       }
+    },
+    "disseny-hub": {
+      "tip": "Der Platz davor ist öffentlich; das Museum hat Eintritt und Öffnungszeiten. Halte Radwege und Parkwege frei.",
+      "stories": {
+        "base": {
+          "short": "Dieses dunkle Gebäude, das in der Luft zu schweben scheint, ist der Disseny Hub, seit 2014 Sitz des Designmuseums von Barcelona. Man nennt es den Tacker. Entworfen hat es das Büro MBM, und drinnen vereint es die Sammlungen von vier älteren Museen: Kunsthandwerk, Keramik, Textil und Mode sowie Grafik.",
+          "normal": "Schau dir dieses dunkle Gebäude an, das in der Luft zu schweben scheint, mit einer riesigen Auskragung über dem Platz. Man nennt es den Tacker. Es ist der Disseny Hub, entworfen vom Büro MBM und zwischen 2008 und 2013 gebaut; seit 2014 beherbergt er das Museu del Disseny, das Designmuseum Barcelonas. Drinnen vereint es die Sammlungen von vier älteren Museen: Kunsthandwerk, Keramik, Textil und Mode sowie Grafik, mehr als siebzigtausend Objekte. Schau dich nun um. Glòries war jahrzehntelang ein riesiger Verkehrsknoten und wird nach und nach zu einem Park.",
+          "long": "Schau dir dieses dunkle Gebäude an, das in der Luft zu schweben scheint, mit einer riesigen Auskragung über dem Platz. Man nennt es den Tacker, und von der Seite verstehst du sofort, warum. Es ist der Disseny Hub, entworfen vom Büro MBM, das die Architekten Josep Martorell, Oriol Bohigas und David Mackay gegründet haben, und zwischen 2008 und 2013 gebaut. Außen ist es mit Zink und großen Fensterflächen verkleidet, und ein Teil des Gebäudes liegt unter dem Niveau des Platzes. Seit 2014 beherbergt es das Museu del Disseny, das Designmuseum Barcelonas. Drinnen vereint es die Sammlungen von vier älteren Museen, die früher über die Stadt verstreut waren: Kunsthandwerk, Keramik, Textil und Mode sowie Grafik, mehr als siebzigtausend Objekte, von Stühlen und Kleidern bis zu Plakaten. Schau dich nun um. In Ildefons Cerdàs Plan für das Eixample sollte Glòries das neue Zentrum der Stadt werden. Stattdessen war es jahrzehntelang ein riesiger Verkehrsknoten, mit dem Verkehr über den Köpfen. Nach und nach wird es zu einem Park und einem Treffpunkt zwischen Eixample, Poblenou und Clot, und der hohe, abgerundete Turm daneben, die Torre Glòries, ist eines seiner Wahrzeichen geworden."
+        }
+      },
+      "srcHash": "manual-b2efc247c0",
+      "audio": {
+        "base": {
+          "file": "audio/de/disseny-hub.m4a",
+          "hash": "4aa1eefd9c"
+        }
+      }
     }
   },
   "activities": {
@@ -2197,7 +2214,7 @@
             "tapas": "Tapas",
             "seafood": "Fisch und Meeresfrüchte",
             "rice": "Reisgerichte (arrossos)",
-            "esmorzar": "Esmorzar de forquilla (herzhaftes Frühstück)",
+            "esmorzar": "Esmorzar (herzhaftes Frühstück)",
             "menu": "Menú del dia (Mittagsmenü)",
             "veggie": "Vegetarische Optionen"
           }
@@ -2257,7 +2274,9 @@
         "Bar Gelida": "Familienbar im Eixample seit 1946, heute vom Enkel des Gründers geführt. Kein festes Menü: eine lange Liste hausgemachter katalanischer Gerichte, dazu ab etwa 13 Uhr Tagesgerichte an der Tafel.",
         "Bar Bodega Can Ros": "1971 von Esteve Ros gegründete Bodega, heute von seinen Söhnen geführt und Sitz einer Sant-Medir-Festgruppe. Traditionelle Tapas und herzhaftes Frühstück in der Carrer de Roger de Flor.",
         "La Sosenga": "Kleines, 2023 eröffnetes Restaurant nahe der Kathedrale mit zeitgenössischer katalanischer Küche aus saisonalen Produkten. Der Name stammt von einem Gericht aus dem mittelalterlichen katalanischen Kochbuch Sent Soví.",
-        "Can Lluís": "1929 gegründetes Restaurant im Raval. 2021 geschlossen, im Dezember 2025 mit neuen Besitzern wiedereröffnet, die die traditionelle katalanische Küche beibehalten haben. Täglich mittags und abends geöffnet."
+        "Can Lluís": "1929 gegründetes Restaurant im Raval. 2021 geschlossen, im Dezember 2025 mit neuen Besitzern wiedereröffnet, die die traditionelle katalanische Küche beibehalten haben. Täglich mittags und abends geöffnet.",
+        "Biocenter": "Vegetarisches Familienrestaurant im Raval seit 1980, mit gekennzeichneten veganen Gerichten und einem Mittagsmenü unter der Woche.",
+        "Veg World India": "Vegetarisches indisches Familienrestaurant in Gràcia seit 2005; der Großteil der Karte ist vegan. Montags geschlossen."
       }
     },
     "nightlife": {
@@ -2561,5 +2580,5 @@
       }
     }
   },
-  "activitiesHash": "7db13e8075"
+  "activitiesHash": "77cf047399"
 }

@@ -1,0 +1,95 @@
+{
+  "id": "disseny-hub",
+  "tip": {
+    "en": "The square outside is a public space; the museum has a ticket and opening hours. Keep cycle lanes and the park paths clear.",
+    "ca": "La plaça de fora és espai públic; el museu té entrada i horaris. Deixa lliures els carrils bici i els camins del parc.",
+    "es": "La plaza de fuera es espacio público; el museo tiene entrada y horarios. Deja libres los carriles bici y los caminos del parque.",
+    "fr": "La place devant est un espace public ; le musée a un billet et des horaires. Laissez libres les pistes cyclables et les allées du parc.",
+    "de": "Der Platz davor ist öffentlich; das Museum hat Eintritt und Öffnungszeiten. Halte Radwege und Parkwege frei.",
+    "it": "La piazza fuori è spazio pubblico; il museo ha biglietto e orari. Lascia liberi le piste ciclabili e i sentieri del parco.",
+    "zh": "外面的广场是公共空间；博物馆需购票，有开放时间。请让出自行车道和公园步道。"
+  },
+  "stories": {
+    "en": {
+      "short": "This dark building that seems to hang in the air is the Disseny Hub, home of Barcelona's Design Museum since 2014. People nicknamed it the stapler. It was designed by the studio MBM, and inside it gathers the collections of four older museums: decorative arts, ceramics, textiles and fashion, and graphic arts.",
+      "normal": "Look at this dark building that seems to hang in the air, with a huge overhang reaching out over the square. People nicknamed it the stapler. It is the Disseny Hub, designed by the studio MBM and built between 2008 and 2013, and since 2014 it has been home to the Museu del Disseny, Barcelona's design museum. Inside, it brings together the collections of four older museums: decorative arts, ceramics, textiles and fashion, and graphic arts, more than seventy thousand objects. Now look around you. Glòries was for decades a huge road junction, and it is slowly being turned into a park.",
+      "long": "Look at this dark building that seems to hang in the air, with a huge overhang reaching out over the square. People nicknamed it the stapler, and once you see it from the side you will understand why. It is the Disseny Hub, designed by the studio MBM, founded by the architects Josep Martorell, Oriol Bohigas and David Mackay, and built between 2008 and 2013. Its outside is covered in zinc and large windows, and part of the building sits below the level of the square. Since 2014 it has been home to the Museu del Disseny, Barcelona's design museum. Inside, it brings together the collections of four older museums that used to be scattered across the city: decorative arts, ceramics, textiles and fashion, and graphic arts, more than seventy thousand objects, from chairs and dresses to posters. Now look around you. In Ildefons Cerdà's plan for the Eixample, Glòries was imagined as the new centre of the city. For decades it became instead a huge road junction, with traffic flying overhead. Little by little it is being turned into a park and a meeting point between the Eixample, Poblenou and the Clot, and the tall rounded tower beside you, the Torre Glòries, has become one of its landmarks."
+    },
+    "ca": {
+      "short": "Aquest edifici fosc que sembla suspès a l'aire és el Disseny Hub, seu del Museu del Disseny de Barcelona des del 2014. La gent li diu la grapadora. El va projectar l'estudi MBM, i a dins reuneix les col·leccions de quatre museus antics: arts decoratives, ceràmica, tèxtil i indumentària, i arts gràfiques.",
+      "normal": "Mira aquest edifici fosc que sembla suspès a l'aire, amb un gran voladís que avança sobre la plaça. La gent li diu la grapadora. És el Disseny Hub, projectat per l'estudi MBM i construït entre el 2008 i el 2013, i des del 2014 és la seu del Museu del Disseny de Barcelona. A dins reuneix les col·leccions de quatre museus anteriors: arts decoratives, ceràmica, tèxtil i indumentària, i arts gràfiques, més de setanta mil objectes. Ara mira al teu voltant. Les Glòries van ser durant dècades un gran nus de carreteres, i a poc a poc s'estan convertint en un parc.",
+      "long": "Mira aquest edifici fosc que sembla suspès a l'aire, amb un gran voladís que avança sobre la plaça. La gent li diu la grapadora, i quan el veus de costat entens per què. És el Disseny Hub, projectat per l'estudi MBM, fundat pels arquitectes Josep Martorell, Oriol Bohigas i David Mackay, i construït entre el 2008 i el 2013. Per fora està revestit de zinc i de grans vidrieres, i una part de l'edifici queda per sota del nivell de la plaça. Des del 2014 és la seu del Museu del Disseny de Barcelona. A dins reuneix les col·leccions de quatre museus anteriors que estaven repartits per la ciutat: arts decoratives, ceràmica, tèxtil i indumentària, i arts gràfiques, més de setanta mil objectes, des de cadires i vestits fins a cartells. Ara mira al teu voltant. En el pla de l'Eixample d'Ildefons Cerdà, les Glòries s'imaginaven com el nou centre de la ciutat. Durant dècades, en canvi, van ser un gran nus de carreteres, amb el trànsit passant per damunt. A poc a poc s'estan convertint en un parc i en un punt de trobada entre l'Eixample, el Poblenou i el Clot, i la torre alta i arrodonida del costat, la Torre Glòries, n'és una de les icones."
+    },
+    "es": {
+      "short": "Este edificio oscuro que parece suspendido en el aire es el Disseny Hub, sede del Museo del Diseño de Barcelona desde 2014. La gente lo llama la grapadora. Lo proyectó el estudio MBM, y dentro reúne las colecciones de cuatro museos anteriores: artes decorativas, cerámica, textil e indumentaria, y artes gráficas.",
+      "normal": "Mira este edificio oscuro que parece suspendido en el aire, con un gran voladizo que avanza sobre la plaza. La gente lo llama la grapadora. Es el Disseny Hub, proyectado por el estudio MBM y construido entre 2008 y 2013, y desde 2014 es la sede del Museu del Disseny, el museo del diseño de Barcelona. Dentro reúne las colecciones de cuatro museos anteriores: artes decorativas, cerámica, textil e indumentaria, y artes gráficas, más de setenta mil objetos. Ahora mira a tu alrededor. Glòries fue durante décadas un gran nudo de carreteras, y poco a poco se está convirtiendo en un parque.",
+      "long": "Mira este edificio oscuro que parece suspendido en el aire, con un gran voladizo que avanza sobre la plaza. La gente lo llama la grapadora, y cuando lo ves de lado entiendes por qué. Es el Disseny Hub, proyectado por el estudio MBM, fundado por los arquitectos Josep Martorell, Oriol Bohigas y David Mackay, y construido entre 2008 y 2013. Por fuera está revestido de zinc y grandes ventanales, y una parte del edificio queda por debajo del nivel de la plaza. Desde 2014 es la sede del Museu del Disseny, el museo del diseño de Barcelona. Dentro reúne las colecciones de cuatro museos anteriores que estaban repartidos por la ciudad: artes decorativas, cerámica, textil e indumentaria, y artes gráficas, más de setenta mil objetos, desde sillas y vestidos hasta carteles. Ahora mira a tu alrededor. En el plan del Eixample de Ildefons Cerdà, Glòries se imaginaba como el nuevo centro de la ciudad. Durante décadas, en cambio, fue un gran nudo de carreteras, con el tráfico pasando por encima. Poco a poco se está convirtiendo en un parque y en un punto de encuentro entre el Eixample, el Poblenou y el Clot, y la torre alta y redondeada de al lado, la Torre Glòries, es uno de sus iconos."
+    },
+    "fr": {
+      "short": "Ce bâtiment sombre qui semble suspendu dans les airs est le Disseny Hub, siège du musée du Design de Barcelone depuis 2014. On le surnomme l'agrafeuse. Conçu par l'agence MBM, il réunit les collections de quatre anciens musées : arts décoratifs, céramique, textile et mode, et arts graphiques.",
+      "normal": "Regardez ce bâtiment sombre qui semble suspendu dans les airs, avec un immense porte-à-faux au-dessus de la place. On le surnomme l'agrafeuse. C'est le Disseny Hub, conçu par l'agence MBM et construit entre 2008 et 2013 ; depuis 2014, il abrite le Museu del Disseny, le musée du design de Barcelone. À l'intérieur, il réunit les collections de quatre anciens musées : arts décoratifs, céramique, textile et mode, et arts graphiques, plus de soixante-dix mille objets. Regardez maintenant autour de vous. Glòries a longtemps été un énorme nœud routier, et il se transforme peu à peu en parc.",
+      "long": "Regardez ce bâtiment sombre qui semble suspendu dans les airs, avec un immense porte-à-faux au-dessus de la place. On le surnomme l'agrafeuse, et en le voyant de profil, vous comprendrez pourquoi. C'est le Disseny Hub, conçu par l'agence MBM, fondée par les architectes Josep Martorell, Oriol Bohigas et David Mackay, et construit entre 2008 et 2013. Il est revêtu de zinc et de grandes baies vitrées, et une partie du bâtiment se trouve sous le niveau de la place. Depuis 2014, il abrite le Museu del Disseny, le musée du design de Barcelone. À l'intérieur, il réunit les collections de quatre anciens musées autrefois dispersés dans la ville : arts décoratifs, céramique, textile et mode, et arts graphiques, plus de soixante-dix mille objets, des chaises et des robes aux affiches. Regardez maintenant autour de vous. Dans le plan de l'Eixample d'Ildefons Cerdà, Glòries devait être le nouveau centre de la ville. Pendant des décennies, ce fut au contraire un énorme nœud routier, avec la circulation passant au-dessus. Peu à peu, il devient un parc et un lieu de rencontre entre l'Eixample, Poblenou et le Clot, et la haute tour arrondie à côté, la Torre Glòries, en est devenue un emblème."
+    },
+    "de": {
+      "short": "Dieses dunkle Gebäude, das in der Luft zu schweben scheint, ist der Disseny Hub, seit 2014 Sitz des Designmuseums von Barcelona. Man nennt es den Tacker. Entworfen hat es das Büro MBM, und drinnen vereint es die Sammlungen von vier älteren Museen: Kunsthandwerk, Keramik, Textil und Mode sowie Grafik.",
+      "normal": "Schau dir dieses dunkle Gebäude an, das in der Luft zu schweben scheint, mit einer riesigen Auskragung über dem Platz. Man nennt es den Tacker. Es ist der Disseny Hub, entworfen vom Büro MBM und zwischen 2008 und 2013 gebaut; seit 2014 beherbergt er das Museu del Disseny, das Designmuseum Barcelonas. Drinnen vereint es die Sammlungen von vier älteren Museen: Kunsthandwerk, Keramik, Textil und Mode sowie Grafik, mehr als siebzigtausend Objekte. Schau dich nun um. Glòries war jahrzehntelang ein riesiger Verkehrsknoten und wird nach und nach zu einem Park.",
+      "long": "Schau dir dieses dunkle Gebäude an, das in der Luft zu schweben scheint, mit einer riesigen Auskragung über dem Platz. Man nennt es den Tacker, und von der Seite verstehst du sofort, warum. Es ist der Disseny Hub, entworfen vom Büro MBM, das die Architekten Josep Martorell, Oriol Bohigas und David Mackay gegründet haben, und zwischen 2008 und 2013 gebaut. Außen ist es mit Zink und großen Fensterflächen verkleidet, und ein Teil des Gebäudes liegt unter dem Niveau des Platzes. Seit 2014 beherbergt es das Museu del Disseny, das Designmuseum Barcelonas. Drinnen vereint es die Sammlungen von vier älteren Museen, die früher über die Stadt verstreut waren: Kunsthandwerk, Keramik, Textil und Mode sowie Grafik, mehr als siebzigtausend Objekte, von Stühlen und Kleidern bis zu Plakaten. Schau dich nun um. In Ildefons Cerdàs Plan für das Eixample sollte Glòries das neue Zentrum der Stadt werden. Stattdessen war es jahrzehntelang ein riesiger Verkehrsknoten, mit dem Verkehr über den Köpfen. Nach und nach wird es zu einem Park und einem Treffpunkt zwischen Eixample, Poblenou und Clot, und der hohe, abgerundete Turm daneben, die Torre Glòries, ist eines seiner Wahrzeichen geworden."
+    },
+    "it": {
+      "short": "Questo edificio scuro che sembra sospeso nell'aria è il Disseny Hub, sede del Museo del Design di Barcellona dal 2014. La gente lo chiama la spillatrice. Lo ha progettato lo studio MBM, e dentro riunisce le collezioni di quattro musei precedenti: arti decorative, ceramica, tessuti e moda, e arti grafiche.",
+      "normal": "Guarda questo edificio scuro che sembra sospeso nell'aria, con un enorme sbalzo che avanza sopra la piazza. La gente lo chiama la spillatrice. È il Disseny Hub, progettato dallo studio MBM e costruito tra il 2008 e il 2013; dal 2014 ospita il Museu del Disseny, il museo del design di Barcellona. All'interno riunisce le collezioni di quattro musei precedenti: arti decorative, ceramica, tessuti e moda, e arti grafiche, più di settantamila oggetti. Ora guardati intorno. Glòries è stata per decenni un enorme nodo stradale, e poco a poco si sta trasformando in un parco.",
+      "long": "Guarda questo edificio scuro che sembra sospeso nell'aria, con un enorme sbalzo che avanza sopra la piazza. La gente lo chiama la spillatrice, e quando lo vedi di lato capisci perché. È il Disseny Hub, progettato dallo studio MBM, fondato dagli architetti Josep Martorell, Oriol Bohigas e David Mackay, e costruito tra il 2008 e il 2013. All'esterno è rivestito di zinco e grandi vetrate, e una parte dell'edificio si trova sotto il livello della piazza. Dal 2014 ospita il Museu del Disseny, il museo del design di Barcellona. All'interno riunisce le collezioni di quattro musei precedenti, un tempo sparsi per la città: arti decorative, ceramica, tessuti e moda, e arti grafiche, più di settantamila oggetti, dalle sedie agli abiti ai manifesti. Ora guardati intorno. Nel piano dell'Eixample di Ildefons Cerdà, Glòries doveva essere il nuovo centro della città. Per decenni è stata invece un enorme nodo stradale, con il traffico che passava sopra. Poco a poco si sta trasformando in un parco e in un punto d'incontro tra l'Eixample, il Poblenou e il Clot, e l'alta torre arrotondata accanto, la Torre Glòries, ne è diventata un simbolo."
+    },
+    "zh": {
+      "short": "这座仿佛悬在半空的深色建筑是设计中心（Disseny Hub），自2014年起是巴塞罗那设计博物馆的所在地。人们给它起了个外号叫“订书机”。它由 MBM 事务所设计，馆内汇集了四座旧博物馆的藏品：装饰艺术、陶瓷、纺织与服装，以及平面艺术。",
+      "normal": "看看这座仿佛悬在半空的深色建筑，它巨大的悬挑部分伸到广场上方。人们给它起了个外号叫“订书机”。这是设计中心（Disseny Hub），由 MBM 事务所设计，建于2008至2013年；自2014年起，这里是巴塞罗那设计博物馆（Museu del Disseny）。馆内汇集了四座旧博物馆的藏品：装饰艺术、陶瓷、纺织与服装，以及平面艺术，共七万多件。现在看看四周。几十年来，荣耀广场（Glòries）一直是一个巨大的交通枢纽，如今正逐步变成一座公园。",
+      "long": "看看这座仿佛悬在半空的深色建筑，它巨大的悬挑部分伸到广场上方。人们给它起了个外号叫“订书机”，从侧面看你就会明白为什么。这是设计中心（Disseny Hub），由建筑师何塞普·马托雷尔（Josep Martorell）、奥里奥尔·博伊加斯（Oriol Bohigas）和大卫·麦凯（David Mackay）创立的 MBM 事务所设计，建于2008至2013年。建筑外立面覆盖着锌板和大面积玻璃，部分建筑位于广场地面以下。自2014年起，这里是巴塞罗那设计博物馆（Museu del Disseny）。馆内汇集了四座过去分散在城里各处的旧博物馆的藏品：装饰艺术、陶瓷、纺织与服装，以及平面艺术，共七万多件，从椅子、服装到海报。现在看看四周。在伊尔德方斯·塞尔达（Ildefons Cerdà）的扩展区规划中，荣耀广场（Glòries）本应成为城市的新中心。然而几十年来，它却成了一个巨大的交通枢纽，车流从头顶驶过。如今它正逐步变成一座公园，成为扩展区、新村区和克洛特区之间的交汇点，旁边那座高高的圆顶塔楼——荣耀塔（Torre Glòries）——已成为这里的地标之一。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": [],
+    "official": null,
+    "img2": "Barcelona- Museu del Disseny.jpg",
+    "look": {
+      "en": "The huge overhang over the square (the 'stapler'), the zinc and glass skin, and the Torre Glòries beside it.",
+      "ca": "El gran voladís sobre la plaça (la «grapadora»), la pell de zinc i vidre, i la Torre Glòries al costat.",
+      "es": "El gran voladizo sobre la plaza (la «grapadora»), la piel de zinc y vidrio, y la Torre Glòries al lado.",
+      "fr": "L'immense porte-à-faux au-dessus de la place (l'« agrafeuse »), la peau de zinc et de verre, et la Torre Glòries à côté.",
+      "de": "Die riesige Auskragung über dem Platz (der „Tacker“), die Hülle aus Zink und Glas und daneben die Torre Glòries.",
+      "it": "L'enorme sbalzo sopra la piazza (la «spillatrice»), la pelle di zinco e vetro, e la Torre Glòries accanto.",
+      "zh": "伸到广场上方的巨大悬挑（“订书机”）、锌板和玻璃外立面，以及旁边的荣耀塔。"
+    },
+    "listen": {
+      "en": "On the square in front of the entrance, out of the cycle lane.",
+      "ca": "A la plaça davant de l'entrada, fora del carril bici.",
+      "es": "En la plaza frente a la entrada, fuera del carril bici.",
+      "fr": "Sur la place devant l'entrée, en dehors de la piste cyclable.",
+      "de": "Auf dem Platz vor dem Eingang, nicht auf dem Radweg.",
+      "it": "Nella piazza davanti all'ingresso, fuori dalla pista ciclabile.",
+      "zh": "在入口前的广场上收听，不要站在自行车道上。"
+    },
+    "access": {
+      "en": "The outside and the square are free. The museum has a ticket and opening hours: check its website.",
+      "ca": "L'exterior i la plaça són lliures. El museu té entrada i horaris: consulta'n el web.",
+      "es": "El exterior y la plaza son libres. El museo tiene entrada y horarios: consulta su web.",
+      "fr": "L'extérieur et la place sont libres d'accès. Le musée a un billet et des horaires : consultez son site.",
+      "de": "Außenbereich und Platz sind frei zugänglich. Das Museum hat Eintritt und Öffnungszeiten: siehe Website.",
+      "it": "L'esterno e la piazza sono liberi. Il museo ha biglietto e orari: consulta il suo sito.",
+      "zh": "外部和广场可自由参观。博物馆需购票，有开放时间：请查看官网。"
+    },
+    "cap2": {
+      "en": "Inside the Design Museum (with a ticket).",
+      "ca": "Dins del Museu del Disseny (amb entrada).",
+      "es": "Dentro del Museu del Disseny (con entrada).",
+      "fr": "À l'intérieur du musée du Design (avec billet).",
+      "de": "Im Designmuseum (mit Eintritt).",
+      "it": "All'interno del Museo del Design (con biglietto).",
+      "zh": "设计博物馆内部（需购票）。"
+    },
+    "sources": [
+      { "url": "https://arquitecturaviva.com/works/disseny-hub-barcelona", "checked": "2026-11-14" },
+      { "url": "https://www.barcelona.cat/setmanesarquitectura/en/venues/disseny-hub-barcelona", "checked": "2026-11-14" }
+    ]
+  }
+}

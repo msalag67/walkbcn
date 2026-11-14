@@ -1245,7 +1245,7 @@ window.WALKBCN_STORIES = {
     },
     "base": {
       "audio": "audio/mercat-abaceria.m4a",
-      "audioHash": "3633e90d5b"
+      "audioHash": "3a579d8e56"
     }
   },
   "mercat-ninot": {
@@ -1831,6 +1831,13 @@ window.WALKBCN_STORIES = {
     "base": {
       "audio": "audio/farinera-clot.m4a",
       "audioHash": "ee4399fe90"
+    }
+  },
+  "disseny-hub": {
+    "variants": {},
+    "base": {
+      "audio": "audio/disseny-hub.m4a",
+      "audioHash": "c7b140fa7c"
     }
   }
 };

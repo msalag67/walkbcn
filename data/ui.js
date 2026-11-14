@@ -649,7 +649,7 @@ Object.assign(window.WALKBCN_UI.zh, {
   theme_firstDay_cover: "老城区的主要景点。你可以在下方修改时间或兴趣。",
   theme_barca: "巴萨的起源", theme_barca_sub: "建队纪念牌、卡纳莱特斯、圣海梅广场 · 3站",
   theme_barca_cover: "老城区里与巴塞罗那足球俱乐部有关的三个地方：建队之地、球迷庆祝之地，以及球队展示奖杯之地。球场不在我们的步行范围内。",
-  theme_gracia: "像当地人一样逛格拉西亚", theme_gracia_sub: "广场、市场和小镇街巷 · 1小时30分",
+  theme_gracia: "像当地人一样逛格拉西亚", theme_gracia_sub: "广场、市场和小镇街巷 · 1.5–2小时",
   theme_gracia_cover: "只包含格拉西亚区的站点：广场、市场和文森之家。你可以在下方修改时间或兴趣。",
   theme_modernisme: "现代主义：高迪和他的同代人", theme_modernisme_sub: "高迪、多梅内克·蒙塔内尔、普伊赫·卡达法尔克 · 2小时30分",
   theme_modernisme_cover: "只包含现代主义建筑。勾选“跳过热门地标”可去掉巴特罗之家、米拉之家和圣家堂。",
@@ -712,8 +712,8 @@ Object.assign(window.WALKBCN_UI.en, {
   zone_poblesec: "Poble-sec & Sant Antoni",
   noRouteZone: "No stop in {zone} matches your interests. Choose other interests or all areas.",
   theme_poblenou: "Factories turned culture",
-  theme_poblenou_sub: "Poblenou–Clot · water, wool and flour · 1 h 30",
-  theme_poblenou_cover: "Only stops on the east side: a library for workers, the park's water tank, a wool factory and a flour mill, now places to read, see art and meet. One walk, between the water tank and Can Framis, takes about 25 minutes through Poblenou's grid.",
+  theme_poblenou_sub: "Poblenou–Clot · water, wool and flour · 1 h 30–2 h",
+  theme_poblenou_cover: "Only stops on the east side: a library for workers, the park's water tank, the design museum at Glòries, a wool factory and a flour mill, now places to read, see art and meet.",
   noteLongLeg: "One walk between stops takes about {m} min.",
   mustTitle: "Must-sees (optional)",
   mustHint: "Pick up to 2 places the route must include.",
@@ -794,8 +794,8 @@ Object.assign(window.WALKBCN_UI.ca, {
   zone_poblesec: "Poble-sec i Sant Antoni",
   noRouteZone: "Cap parada de {zone} encaixa amb els teus interessos. Tria altres interessos o totes les zones.",
   theme_poblenou: "De fàbriques a cultura",
-  theme_poblenou_sub: "Poblenou–Clot · aigua, llana i farina · 1 h 30",
-  theme_poblenou_cover: "Només parades de la banda est: una biblioteca per a treballadors, el dipòsit d'aigua del parc, una fàbrica de llana i una farinera, avui llocs per llegir, veure art i trobar-se. Un tram, entre el dipòsit i Can Framis, és d'uns 25 minuts per la trama del Poblenou.",
+  theme_poblenou_sub: "Poblenou–Clot · aigua, llana i farina · 1 h 30–2 h",
+  theme_poblenou_cover: "Només parades de la banda est: una biblioteca per a treballadors, el dipòsit d'aigua del parc, el museu del disseny de les Glòries, una fàbrica de llana i una farinera, avui llocs per llegir, veure art i trobar-se.",
   noteLongLeg: "Un dels trams entre parades és d'uns {m} min.",
   mustTitle: "Imprescindibles (opcional)",
   mustHint: "Tria fins a 2 llocs que la ruta ha d'incloure.",
@@ -876,8 +876,8 @@ Object.assign(window.WALKBCN_UI.es, {
   zone_poblesec: "Poble-sec y Sant Antoni",
   noRouteZone: "Ninguna parada de {zone} encaja con tus intereses. Elige otros intereses o todas las zonas.",
   theme_poblenou: "De fábricas a cultura",
-  theme_poblenou_sub: "Poblenou–Clot · agua, lana y harina · 1 h 30",
-  theme_poblenou_cover: "Solo paradas del lado este: una biblioteca para trabajadores, el depósito de agua del parque, una fábrica de lana y una harinera, hoy lugares para leer, ver arte y encontrarse. Un tramo, entre el depósito y Can Framis, es de unos 25 minutos por la trama del Poblenou.",
+  theme_poblenou_sub: "Poblenou–Clot · agua, lana y harina · 1 h 30–2 h",
+  theme_poblenou_cover: "Solo paradas del lado este: una biblioteca para trabajadores, el depósito de agua del parque, el museo del diseño de Glòries, una fábrica de lana y una harinera, hoy lugares para leer, ver arte y encontrarse.",
   noteLongLeg: "Uno de los tramos entre paradas es de unos {m} min.",
   mustTitle: "Imprescindibles (opcional)",
   mustHint: "Elige hasta 2 lugares que la ruta debe incluir.",
@@ -958,8 +958,8 @@ Object.assign(window.WALKBCN_UI.fr, {
   zone_poblesec: "Poble-sec et Sant Antoni",
   noRouteZone: "Aucune étape de {zone} ne correspond à vos intérêts. Choisissez d'autres intérêts ou tous les quartiers.",
   theme_poblenou: "Des usines à la culture",
-  theme_poblenou_sub: "Poblenou–Clot · eau, laine et farine · 1 h 30",
-  theme_poblenou_cover: "Uniquement des étapes à l'est : une bibliothèque pour les travailleurs, le réservoir d'eau du parc, une filature de laine et une minoterie, devenus des lieux pour lire, voir de l'art et se retrouver. Un trajet, entre le réservoir et Can Framis, prend environ 25 minutes à travers le quadrillage de Poblenou.",
+  theme_poblenou_sub: "Poblenou–Clot · eau, laine et farine · 1 h 30–2 h",
+  theme_poblenou_cover: "Uniquement des étapes à l'est : une bibliothèque pour les travailleurs, le réservoir d'eau du parc, le musée du design de Glòries, une filature de laine et une minoterie, devenus des lieux pour lire, voir de l'art et se retrouver.",
   noteLongLeg: "Un des trajets entre étapes prend environ {m} min.",
   mustTitle: "Incontournables (facultatif)",
   mustHint: "Choisissez jusqu'à 2 lieux que l'itinéraire doit inclure.",
@@ -1040,8 +1040,8 @@ Object.assign(window.WALKBCN_UI.de, {
   zone_poblesec: "Poble-sec und Sant Antoni",
   noRouteZone: "Keine Station in {zone} passt zu deinen Interessen. Wähle andere Interessen oder alle Gegenden.",
   theme_poblenou: "Von Fabriken zur Kultur",
-  theme_poblenou_sub: "Poblenou–Clot · Wasser, Wolle und Mehl · 1 h 30",
-  theme_poblenou_cover: "Nur Stationen im Osten: eine Bibliothek für Arbeiter, der Wasserspeicher des Parks, eine Wollfabrik und eine Mühle, heute Orte zum Lesen, für Kunst und Begegnung. Ein Abschnitt, zwischen Wasserspeicher und Can Framis, dauert etwa 25 Minuten durch das Straßenraster von Poblenou.",
+  theme_poblenou_sub: "Poblenou–Clot · Wasser, Wolle und Mehl · 1 h 30–2 h",
+  theme_poblenou_cover: "Nur Stationen im Osten: eine Bibliothek für Arbeiter, der Wasserspeicher des Parks, das Designmuseum an der Glòries, eine Wollfabrik und eine Mühle, heute Orte zum Lesen, für Kunst und Begegnung.",
   noteLongLeg: "Ein Weg zwischen zwei Stationen dauert etwa {m} Min.",
   mustTitle: "Must-sees (optional)",
   mustHint: "Wähle bis zu 2 Orte, die die Route enthalten muss.",
@@ -1122,8 +1122,8 @@ Object.assign(window.WALKBCN_UI.it, {
   zone_poblesec: "Poble-sec e Sant Antoni",
   noRouteZone: "Nessuna tappa di {zone} corrisponde ai tuoi interessi. Scegli altri interessi o tutte le zone.",
   theme_poblenou: "Dalle fabbriche alla cultura",
-  theme_poblenou_sub: "Poblenou–Clot · acqua, lana e farina · 1 h 30",
-  theme_poblenou_cover: "Solo tappe del lato est: una biblioteca per i lavoratori, il serbatoio d'acqua del parco, un lanificio e un mulino, oggi luoghi per leggere, vedere arte e incontrarsi. Un tratto, tra il serbatoio e Can Framis, dura circa 25 minuti attraverso la griglia del Poblenou.",
+  theme_poblenou_sub: "Poblenou–Clot · acqua, lana e farina · 1 h 30–2 h",
+  theme_poblenou_cover: "Solo tappe del lato est: una biblioteca per i lavoratori, il serbatoio d'acqua del parco, il museo del design di Glòries, un lanificio e un mulino, oggi luoghi per leggere, vedere arte e incontrarsi.",
   noteLongLeg: "Uno dei tratti tra le tappe dura circa {m} min.",
   mustTitle: "Imperdibili (facoltativo)",
   mustHint: "Scegli fino a 2 luoghi che il percorso deve includere.",
@@ -1204,8 +1204,8 @@ Object.assign(window.WALKBCN_UI.zh, {
   zone_poblesec: "干村和圣安东尼",
   noRouteZone: "{zone}没有符合你兴趣的站点。请选择其他兴趣或所有区域。",
   theme_poblenou: "从工厂到文化",
-  theme_poblenou_sub: "新村–克洛特 · 水、羊毛和面粉 · 1小时30分",
-  theme_poblenou_cover: "只包括城东的站点：一座为劳动者开办的图书馆、公园的蓄水池、一座羊毛厂和一座面粉厂，如今都是阅读、看艺术和聚会的地方。其中一段路，从蓄水池到弗拉米斯博物馆，要穿过新村区的棋盘街道步行约25分钟。",
+  theme_poblenou_sub: "新村–克洛特 · 水、羊毛和面粉 · 1.5–2小时",
+  theme_poblenou_cover: "只包括城东的站点：一座为劳动者开办的图书馆、公园的蓄水池、荣耀广场的设计博物馆、一座羊毛厂和一座面粉厂，如今都是阅读、看艺术和聚会的地方。",
   noteLongLeg: "其中一段站间步行约{m}分钟。",
   mustTitle: "必去地点（可选）",
   mustHint: "最多选择2个路线必须包含的地点。",
@@ -1274,3 +1274,19 @@ Object.assign(window.WALKBCN_UI.fr, { licenceLink: "licence" });
 Object.assign(window.WALKBCN_UI.de, { licenceLink: "Lizenz" });
 Object.assign(window.WALKBCN_UI.it, { licenceLink: "licenza" });
 Object.assign(window.WALKBCN_UI.zh, { licenceLink: "许可协议" });
+
+// ---- Added 14 November 2026 (round 2): offline walks, anonymous counts, survey link.
+Object.assign(window.WALKBCN_UI.en, {"privacyCount": "Anonymous counts: WalkBCN counts what gets used (for example a walk finished or a story played) with GoatCounter, without cookies or personal data, to learn what helps visitors. Tick the box above to stop it.", "doneSurvey": "Answer 4 quick questions", "doneSurveyHint": "Did it help? One minute of your opinion tells us what to improve.", "offlineSave": "Save this walk for offline use", "offlineSaving": "Saving… {n} of {total}", "offlineSaved": "Saved ✓ Stories, audio and photos of this walk work without a connection. The map only shows the parts you've already seen.", "offlineFail": "Only {n} of {total} files were saved. Try again with a connection.", "offlineNow": "You're offline: a walk you saved still works, the map may be incomplete."});
+Object.assign(window.WALKBCN_UI.ca, {"privacyCount": "Recompte anònim: WalkBCN compta què es fa servir (per exemple, un passeig acabat o una història escoltada) amb GoatCounter, sense galetes ni dades personals, per saber què ajuda els visitants. Marca la casella de dalt per aturar-ho.", "doneSurvey": "Respon 4 preguntes ràpides", "doneSurveyHint": "T'ha estat útil? Un minut de la teva opinió ens diu què millorar.", "offlineSave": "Desa aquest passeig per fer-lo sense connexió", "offlineSaving": "Desant… {n} de {total}", "offlineSaved": "Desat ✓ Les històries, l'àudio i les fotos d'aquest passeig funcionen sense connexió. El mapa només mostra les parts que ja has vist.", "offlineFail": "Només s'han desat {n} de {total} fitxers. Torna-ho a provar amb connexió.", "offlineNow": "No tens connexió: un passeig desat continua funcionant, però el mapa pot quedar incomplet."});
+Object.assign(window.WALKBCN_UI.es, {"privacyCount": "Recuento anónimo: WalkBCN cuenta qué se usa (por ejemplo, un paseo terminado o una historia escuchada) con GoatCounter, sin cookies ni datos personales, para saber qué ayuda a los visitantes. Marca la casilla de arriba para detenerlo.", "doneSurvey": "Responde 4 preguntas rápidas", "doneSurveyHint": "¿Te ha servido? Un minuto de tu opinión nos dice qué mejorar.", "offlineSave": "Guardar este paseo para usarlo sin conexión", "offlineSaving": "Guardando… {n} de {total}", "offlineSaved": "Guardado ✓ Las historias, el audio y las fotos de este paseo funcionan sin conexión. El mapa solo muestra las partes que ya has visto.", "offlineFail": "Solo se han guardado {n} de {total} archivos. Vuelve a intentarlo con conexión.", "offlineNow": "No tienes conexión: un paseo guardado sigue funcionando, pero el mapa puede estar incompleto."});
+Object.assign(window.WALKBCN_UI.fr, {"privacyCount": "Comptage anonyme : WalkBCN compte ce qui est utilisé (par exemple une balade terminée ou une histoire écoutée) avec GoatCounter, sans cookies ni données personnelles, pour savoir ce qui aide les visiteurs. Cochez la case ci-dessus pour l'arrêter.", "doneSurvey": "Répondre à 4 questions rapides", "doneSurveyHint": "Cela vous a été utile ? Une minute de votre avis nous dit quoi améliorer.", "offlineSave": "Enregistrer cette balade pour l'utiliser hors ligne", "offlineSaving": "Enregistrement… {n} sur {total}", "offlineSaved": "Enregistré ✓ Les histoires, l'audio et les photos de cette balade fonctionnent hors ligne. La carte n'affiche que les zones déjà vues.", "offlineFail": "Seuls {n} fichiers sur {total} ont été enregistrés. Réessayez avec une connexion.", "offlineNow": "Vous êtes hors ligne : une balade enregistrée fonctionne toujours, la carte peut être incomplète."});
+Object.assign(window.WALKBCN_UI.de, {"privacyCount": "Anonyme Zählung: WalkBCN zählt mit GoatCounter, was genutzt wird (zum Beispiel ein beendeter Spaziergang oder eine gehörte Geschichte), ohne Cookies und ohne persönliche Daten, um zu lernen, was Besuchern hilft. Setze oben das Häkchen, um es zu stoppen.", "doneSurvey": "4 kurze Fragen beantworten", "doneSurveyHint": "War es hilfreich? Eine Minute deiner Meinung zeigt uns, was wir verbessern sollen.", "offlineSave": "Diesen Spaziergang offline speichern", "offlineSaving": "Wird gespeichert… {n} von {total}", "offlineSaved": "Gespeichert ✓ Geschichten, Audio und Fotos dieses Spaziergangs funktionieren ohne Verbindung. Die Karte zeigt nur die Teile, die du schon gesehen hast.", "offlineFail": "Nur {n} von {total} Dateien wurden gespeichert. Versuch es mit Verbindung noch einmal.", "offlineNow": "Du bist offline: Ein gespeicherter Spaziergang funktioniert weiter, die Karte kann unvollständig sein."});
+Object.assign(window.WALKBCN_UI.it, {"privacyCount": "Conteggio anonimo: WalkBCN conta cosa viene usato (per esempio una passeggiata finita o una storia ascoltata) con GoatCounter, senza cookie né dati personali, per capire cosa aiuta i visitatori. Spunta la casella qui sopra per fermarlo.", "doneSurvey": "Rispondi a 4 domande veloci", "doneSurveyHint": "Ti è servito? Un minuto della tua opinione ci dice cosa migliorare.", "offlineSave": "Salva questa passeggiata per usarla offline", "offlineSaving": "Salvataggio… {n} di {total}", "offlineSaved": "Salvato ✓ Storie, audio e foto di questa passeggiata funzionano senza connessione. La mappa mostra solo le parti già viste.", "offlineFail": "Sono stati salvati solo {n} file su {total}. Riprova con una connessione.", "offlineNow": "Sei offline: una passeggiata salvata funziona ancora, la mappa potrebbe essere incompleta."});
+Object.assign(window.WALKBCN_UI.zh, {"privacyCount": "匿名统计：WalkBCN 使用 GoatCounter 统计功能使用情况（例如完成的路线或播放的故事），不使用 cookie，也不收集个人数据，用来了解什么对游客有帮助。勾选上方方框即可停止。", "doneSurvey": "回答4个简短问题", "doneSurveyHint": "对你有帮助吗？一分钟的意见能告诉我们该改进什么。", "offlineSave": "保存这条路线以便离线使用", "offlineSaving": "正在保存… {n}/{total}", "offlineSaved": "已保存 ✓ 这条路线的故事、音频和照片可离线使用。地图只显示你已看过的部分。", "offlineFail": "只保存了 {n}/{total} 个文件。请在有网络时重试。", "offlineNow": "你已离线：已保存的路线仍可使用，地图可能不完整。"});
+Object.assign(window.WALKBCN_UI.en, { offlineNoSupport: "This browser couldn't prepare offline use. Reload the page once and try again (works in Chrome and Safari)." });
+Object.assign(window.WALKBCN_UI.ca, { offlineNoSupport: "Aquest navegador no ha pogut preparar l'ús sense connexió. Torna a carregar la pàgina i prova-ho de nou (funciona a Chrome i Safari)." });
+Object.assign(window.WALKBCN_UI.es, { offlineNoSupport: "Este navegador no ha podido preparar el uso sin conexión. Recarga la página y vuelve a intentarlo (funciona en Chrome y Safari)." });
+Object.assign(window.WALKBCN_UI.fr, { offlineNoSupport: "Ce navigateur n'a pas pu préparer l'utilisation hors ligne. Rechargez la page et réessayez (fonctionne dans Chrome et Safari)." });
+Object.assign(window.WALKBCN_UI.de, { offlineNoSupport: "Dieser Browser konnte die Offline-Nutzung nicht vorbereiten. Lade die Seite neu und versuch es noch einmal (funktioniert in Chrome und Safari)." });
+Object.assign(window.WALKBCN_UI.it, { offlineNoSupport: "Questo browser non è riuscito a preparare l'uso offline. Ricarica la pagina e riprova (funziona in Chrome e Safari)." });
+Object.assign(window.WALKBCN_UI.zh, { offlineNoSupport: "此浏览器无法准备离线使用。请刷新页面后重试（Chrome 和 Safari 可用）。" });

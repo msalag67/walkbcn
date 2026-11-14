@@ -38,7 +38,7 @@ window.WALKBCN_ACTIVITIES = {
           },
           {
             "id": "esmorzar",
-            "label": "Esmorzar de forquilla (hearty breakfast)"
+            "label": "Fork breakfast (esmorzar)"
           },
           {
             "id": "menu",
@@ -559,6 +559,49 @@ window.WALKBCN_ACTIVITIES = {
           }
         ],
         "desc": "Raval restaurant founded in 1929. It closed in 2021 and reopened in December 2025 with new owners, who kept its traditional Catalan cooking. Open every day for lunch and dinner."
+      },
+      {
+        "name": "Biocenter",
+        "lat": 41.3826,
+        "lng": 2.1694,
+        "area": "raval",
+        "price": "2",
+        "food": [
+          "veggie",
+          "menu"
+        ],
+        "note": "weekdayMenu",
+        "why": "Family-run vegetarian and vegan restaurant open since 1980, one of the oldest in the city.",
+        "priceEvidence": "Weekday lunch menu 16.50 € incl. water or a glass of wine; à la carte mains about 10–15 € (restaurant's own menu page).",
+        "sources": [
+          {
+            "url": "https://www.restaurantebiocenter.es/carta-menu",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.restaurantebiocenter.es/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Family-run vegetarian restaurant in the Raval since 1980, with vegan dishes marked on the menu and a weekday lunch menu."
+      },
+      {
+        "name": "Veg World India",
+        "lat": 41.4046,
+        "lng": 2.1607,
+        "area": "gracia",
+        "food": [
+          "veggie"
+        ],
+        "why": "Family-run vegetarian Indian restaurant in Gràcia since 2005 (about 90% of the menu is vegan).",
+        "priceEvidence": "No current prices published (menu images dated 2023), so no price band is shown.",
+        "sources": [
+          {
+            "url": "https://www.vegworld.es/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Family-run vegetarian Indian restaurant in Gràcia since 2005; most of the menu is vegan. Closed on Mondays."
       }
     ],
     "priceNote": {
@@ -588,6 +631,15 @@ window.WALKBCN_ACTIVITIES = {
         "de": "Esmorzars gibt es morgens; prüf vorher die Öffnungstage.",
         "it": "Gli esmorzars si servono al mattino; controlla i giorni di apertura prima di andare.",
         "zh": "早午餐在上午供应；出发前请查询营业日。"
+      },
+      "weekdayMenu": {
+        "en": "The set lunch menu is served Monday to Friday at midday.",
+        "ca": "El menú de migdia se serveix de dilluns a divendres.",
+        "es": "El menú de mediodía se sirve de lunes a viernes.",
+        "fr": "Le menu du midi est servi du lundi au vendredi.",
+        "de": "Das Mittagsmenü gibt es Montag bis Freitag.",
+        "it": "Il menù del pranzo si serve dal lunedì al venerdì.",
+        "zh": "午市套餐周一至周五中午供应。"
       }
     }
   },

@@ -278,6 +278,9 @@ async function recordAudio(lang, data) {
       const prev = entry.audio[k];
       const h = useEleven ? hash(`${elevenVoice}|${spoken}`) : hash(spoken); // a new ElevenLabs voice re-records
       if (!FORCE && prev?.file === rel && prev.hash === h && fs.existsSync(path.join(ROOT, rel))) continue;
+      // Without the ElevenLabs key, keep a natural-voice recording whose text hasn't changed
+      // (its hash includes the voice), instead of replacing it with the macOS voice.
+      if (!FORCE && !useEleven && elevenVoice && prev?.file?.endsWith(".mp3") && prev.hash === hash(`${elevenVoice}|${spoken}`) && fs.existsSync(path.join(ROOT, prev.file))) continue;
       try {
         if (useEleven) await recordEleven(spoken, elevenVoice, path.join(ROOT, rel));
         else record(spoken, voice, path.join(ROOT, rel));

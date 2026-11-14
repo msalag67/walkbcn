@@ -1,9 +1,22 @@
 {
   "_about": "Hand-written Activities changes (14 Nov 2026), applied by scripts/import-manual.mjs to data/activities.js and to the translations in content/i18n. Each added place records why it was chosen, the price evidence and the sources with the date checked.",
-  "remove": { "restaurants": ["Teresa Carles", "Flax & Kale"] },
+  "remove": {
+    "restaurants": [
+      "Teresa Carles",
+      "Flax & Kale"
+    ]
+  },
   "categoryLabels": {
     "shops": {
-      "label": { "en": "Local shops", "ca": "Comerç local", "es": "Comercio local", "fr": "Commerces locaux", "de": "Lokale Läden", "it": "Negozi locali", "zh": "本地小店" },
+      "label": {
+        "en": "Local shops",
+        "ca": "Comerç local",
+        "es": "Comercio local",
+        "fr": "Commerces locaux",
+        "de": "Lokale Läden",
+        "it": "Negozi locali",
+        "zh": "本地小店"
+      },
       "intro": {
         "en": "Family and independent shops, some open for generations, others new. Buying something helps them stay open.",
         "ca": "Botigues familiars i independents, algunes obertes des de fa generacions i d'altres de noves. Comprar-hi alguna cosa les ajuda a seguir obertes.",
@@ -18,21 +31,128 @@
   "filters": {
     "restaurants": {
       "food": [
-        { "id": "catalan", "label": { "en": "Catalan cooking", "ca": "Cuina catalana", "es": "Cocina catalana", "fr": "Cuisine catalane", "de": "Katalanische Küche", "it": "Cucina catalana", "zh": "加泰罗尼亚菜" } },
-        { "id": "tapas", "label": { "en": "Tapas", "ca": "Tapes", "es": "Tapas", "fr": "Tapas", "de": "Tapas", "it": "Tapas", "zh": "Tapas 小吃" } },
-        { "id": "seafood", "label": { "en": "Seafood", "ca": "Peix i marisc", "es": "Pescado y marisco", "fr": "Poissons et fruits de mer", "de": "Fisch und Meeresfrüchte", "it": "Pesce e frutti di mare", "zh": "海鲜" } },
-        { "id": "rice", "label": { "en": "Rice dishes (arrossos)", "ca": "Arrossos", "es": "Arroces", "fr": "Plats de riz (arrossos)", "de": "Reisgerichte (arrossos)", "it": "Risi (arrossos)", "zh": "米饭料理（arrossos）" } },
-        { "id": "esmorzar", "label": { "en": "Esmorzar de forquilla (hearty breakfast)", "ca": "Esmorzar de forquilla", "es": "Esmorzar de forquilla (almuerzo de tenedor)", "fr": "Esmorzar de forquilla (petit-déjeuner copieux)", "de": "Esmorzar de forquilla (herzhaftes Frühstück)", "it": "Esmorzar de forquilla (colazione salata)", "zh": "Esmorzar de forquilla（丰盛早午餐）" } },
-        { "id": "menu", "label": { "en": "Menú del dia (set lunch)", "ca": "Menú del dia", "es": "Menú del día", "fr": "Menú del dia (menu du midi)", "de": "Menú del dia (Mittagsmenü)", "it": "Menú del dia (menù del pranzo)", "zh": "Menú del dia（午市套餐）" } },
-        { "id": "veggie", "label": { "en": "Vegetarian options", "ca": "Opcions vegetarianes", "es": "Opciones vegetarianas", "fr": "Options végétariennes", "de": "Vegetarische Optionen", "it": "Opzioni vegetariane", "zh": "素食选择" } }
+        {
+          "id": "catalan",
+          "label": {
+            "en": "Catalan cooking",
+            "ca": "Cuina catalana",
+            "es": "Cocina catalana",
+            "fr": "Cuisine catalane",
+            "de": "Katalanische Küche",
+            "it": "Cucina catalana",
+            "zh": "加泰罗尼亚菜"
+          }
+        },
+        {
+          "id": "tapas",
+          "label": {
+            "en": "Tapas",
+            "ca": "Tapes",
+            "es": "Tapas",
+            "fr": "Tapas",
+            "de": "Tapas",
+            "it": "Tapas",
+            "zh": "Tapas 小吃"
+          }
+        },
+        {
+          "id": "seafood",
+          "label": {
+            "en": "Seafood",
+            "ca": "Peix i marisc",
+            "es": "Pescado y marisco",
+            "fr": "Poissons et fruits de mer",
+            "de": "Fisch und Meeresfrüchte",
+            "it": "Pesce e frutti di mare",
+            "zh": "海鲜"
+          }
+        },
+        {
+          "id": "rice",
+          "label": {
+            "en": "Rice dishes (arrossos)",
+            "ca": "Arrossos",
+            "es": "Arroces",
+            "fr": "Plats de riz (arrossos)",
+            "de": "Reisgerichte (arrossos)",
+            "it": "Risi (arrossos)",
+            "zh": "米饭料理（arrossos）"
+          }
+        },
+        {
+          "id": "esmorzar",
+          "label": {
+            "en": "Fork breakfast (esmorzar)",
+            "ca": "Esmorzar de forquilla",
+            "es": "Esmorzar de forquilla",
+            "fr": "Esmorzar (petit-déj. salé)",
+            "de": "Esmorzar (herzhaftes Frühstück)",
+            "it": "Esmorzar (colazione salata)",
+            "zh": "丰盛早午餐（esmorzar）"
+          }
+        },
+        {
+          "id": "menu",
+          "label": {
+            "en": "Menú del dia (set lunch)",
+            "ca": "Menú del dia",
+            "es": "Menú del día",
+            "fr": "Menú del dia (menu du midi)",
+            "de": "Menú del dia (Mittagsmenü)",
+            "it": "Menú del dia (menù del pranzo)",
+            "zh": "Menú del dia（午市套餐）"
+          }
+        },
+        {
+          "id": "veggie",
+          "label": {
+            "en": "Vegetarian options",
+            "ca": "Opcions vegetarianes",
+            "es": "Opciones vegetarianas",
+            "fr": "Options végétariennes",
+            "de": "Vegetarische Optionen",
+            "it": "Opzioni vegetariane",
+            "zh": "素食选择"
+          }
+        }
       ]
     },
     "shops": {
       "type": {
-        "label": { "en": "What kind of shop?", "ca": "Quina mena de botiga?", "es": "¿Qué tipo de tienda?", "fr": "Quel genre de boutique ?", "de": "Was für ein Laden?", "it": "Che tipo di negozio?", "zh": "哪类小店？" },
+        "label": {
+          "en": "What kind of shop?",
+          "ca": "Quina mena de botiga?",
+          "es": "¿Qué tipo de tienda?",
+          "fr": "Quel genre de boutique ?",
+          "de": "Was für ein Laden?",
+          "it": "Che tipo di negozio?",
+          "zh": "哪类小店？"
+        },
         "options": [
-          { "id": "historic", "label": { "en": "Historic (open for generations)", "ca": "Històrica (oberta des de fa generacions)", "es": "Histórica (abierta desde hace generaciones)", "fr": "Historique (ouverte depuis des générations)", "de": "Traditionsreich (seit Generationen)", "it": "Storico (aperto da generazioni)", "zh": "老字号（经营数代）" } },
-          { "id": "independent", "label": { "en": "Independent, more recent", "ca": "Independent, més recent", "es": "Independiente, más reciente", "fr": "Indépendante, plus récente", "de": "Unabhängig, jünger", "it": "Indipendente, più recente", "zh": "较新的独立小店" } }
+          {
+            "id": "historic",
+            "label": {
+              "en": "Historic (open for generations)",
+              "ca": "Històrica (oberta des de fa generacions)",
+              "es": "Histórica (abierta desde hace generaciones)",
+              "fr": "Historique (ouverte depuis des générations)",
+              "de": "Traditionsreich (seit Generationen)",
+              "it": "Storico (aperto da generazioni)",
+              "zh": "老字号（经营数代）"
+            }
+          },
+          {
+            "id": "independent",
+            "label": {
+              "en": "Independent, more recent",
+              "ca": "Independent, més recent",
+              "es": "Independiente, más reciente",
+              "fr": "Indépendante, plus récente",
+              "de": "Unabhängig, jünger",
+              "it": "Indipendente, più recente",
+              "zh": "较新的独立小店"
+            }
+          }
         ]
       }
     }
@@ -50,12 +170,46 @@
   },
   "retag": {
     "restaurants": {
-      "7 Portes": { "food": ["seafood", "rice", "catalan"] },
-      "Can Solé": { "food": ["seafood", "rice"] },
-      "Can Majó": { "food": ["seafood", "rice"] },
-      "La Pubilla": { "food": ["catalan", "esmorzar", "menu"], "note": "esmorzar-menu" }
+      "7 Portes": {
+        "food": [
+          "seafood",
+          "rice",
+          "catalan"
+        ]
+      },
+      "Can Solé": {
+        "food": [
+          "seafood",
+          "rice"
+        ]
+      },
+      "Can Majó": {
+        "food": [
+          "seafood",
+          "rice"
+        ]
+      },
+      "La Pubilla": {
+        "food": [
+          "catalan",
+          "esmorzar",
+          "menu"
+        ],
+        "note": "esmorzar-menu"
+      }
     },
-    "shops": { "*": { "type": ["historic"] }, "Llibreria Altaïr": { "type": ["independent"] } }
+    "shops": {
+      "*": {
+        "type": [
+          "historic"
+        ]
+      },
+      "Llibreria Altaïr": {
+        "type": [
+          "independent"
+        ]
+      }
+    }
   },
   "notes": {
     "esmorzar-menu": {
@@ -75,97 +229,336 @@
       "de": "Esmorzars gibt es morgens; prüf vorher die Öffnungstage.",
       "it": "Gli esmorzars si servono al mattino; controlla i giorni di apertura prima di andare.",
       "zh": "早午餐在上午供应；出发前请查询营业日。"
+    },
+    "weekdayMenu": {
+      "en": "The set lunch menu is served Monday to Friday at midday.",
+      "ca": "El menú de migdia se serveix de dilluns a divendres.",
+      "es": "El menú de mediodía se sirve de lunes a viernes.",
+      "fr": "Le menu du midi est servi du lundi au vendredi.",
+      "de": "Das Mittagsmenü gibt es Montag bis Freitag.",
+      "it": "Il menù del pranzo si serve dal lunedì al venerdì.",
+      "zh": "午市套餐周一至周五中午供应。"
     }
   },
   "add": {
     "restaurants": [
-      { "name": "Can Vilaró", "lat": 41.3779, "lng": 2.1617, "area": "eixample", "price": "1", "food": ["catalan", "esmorzar"], "note": "mornings",
+      {
+        "name": "Can Vilaró",
+        "lat": 41.3779,
+        "lng": 2.1617,
+        "area": "eixample",
+        "price": "1",
+        "food": [
+          "catalan",
+          "esmorzar"
+        ],
+        "note": "mornings",
         "why": "Long-running neighbourhood bar-restaurant in Sant Antoni for popular Catalan cooking at fair prices.",
         "priceEvidence": "Low-priced classic dishes (VilaWeb); a 13 € weekday menu is reported by a third-party guide, not confirmed.",
-        "sources": [{ "url": "https://www.vilaweb.cat/noticies/can-vilaro-el-cap-i-pota-i-els-plats-de-sempre-que-mai-no-fallen/", "checked": "2026-11-14" }, { "url": "https://barcelona.cat/ciutatcuidadora/es/detail/75990331633", "checked": "2026-11-14" }],
-        "desc": { "en": "Neighbourhood bar-restaurant in Sant Antoni for classic Catalan cooking, from cap i pota to hearty fork breakfasts. Open Monday to Saturday, until mid-afternoon.",
+        "sources": [
+          {
+            "url": "https://www.vilaweb.cat/noticies/can-vilaro-el-cap-i-pota-i-els-plats-de-sempre-que-mai-no-fallen/",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://barcelona.cat/ciutatcuidadora/es/detail/75990331633",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Neighbourhood bar-restaurant in Sant Antoni for classic Catalan cooking, from cap i pota to hearty fork breakfasts. Open Monday to Saturday, until mid-afternoon.",
           "ca": "Bar-restaurant de barri a Sant Antoni per a la cuina catalana de sempre, del cap i pota als esmorzars de forquilla. Obre de dilluns a dissabte, fins a mitja tarda.",
           "es": "Bar-restaurante de barrio en Sant Antoni para la cocina catalana de siempre, del cap i pota a los esmorzars de forquilla. Abre de lunes a sábado, hasta media tarde.",
           "fr": "Bar-restaurant de quartier à Sant Antoni pour la cuisine catalane de toujours, du cap i pota aux petits-déjeuners copieux. Ouvert du lundi au samedi, jusqu'en milieu d'après-midi.",
           "de": "Nachbarschafts-Bar-Restaurant in Sant Antoni mit klassischer katalanischer Küche, vom cap i pota bis zum herzhaften Frühstück. Montag bis Samstag bis zum Nachmittag geöffnet.",
           "it": "Bar-ristorante di quartiere a Sant Antoni per la cucina catalana di sempre, dal cap i pota alle colazioni salate. Aperto dal lunedì al sabato, fino a metà pomeriggio.",
-          "zh": "圣安东尼区（Sant Antoni）的街坊餐馆，供应传统加泰罗尼亚家常菜，从炖牛杂（cap i pota）到丰盛早午餐。周一至周六营业，到下午为止。" } },
-      { "name": "Bar Gelida", "lat": 41.3829, "lng": 2.1570, "area": "eixample", "price": "1", "food": ["catalan"],
+          "zh": "圣安东尼区（Sant Antoni）的街坊餐馆，供应传统加泰罗尼亚家常菜，从炖牛杂（cap i pota）到丰盛早午餐。周一至周六营业，到下午为止。"
+        }
+      },
+      {
+        "name": "Bar Gelida",
+        "lat": 41.3829,
+        "lng": 2.157,
+        "area": "eixample",
+        "price": "1",
+        "food": [
+          "catalan"
+        ],
         "why": "Family bar since 1946, run by the founder's grandson, with home-style Catalan dishes.",
         "priceEvidence": "Most dishes under 6 € (Time Out); average around 15 € (Directo al Paladar).",
-        "sources": [{ "url": "https://www.timeout.es/barcelona/es/restaurantes/gelida", "checked": "2026-11-14" }, { "url": "https://www.vilaweb.cat/noticies/del-gelida-al-migrat-cal-que-tot-canvii-perque-tot-continui-igual/", "checked": "2026-11-14" }],
-        "desc": { "en": "Family bar in the Eixample since 1946, now run by the founder's grandson. No set menu: a long list of home-style Catalan dishes, plus daily specials on the board from about 1 pm.",
+        "sources": [
+          {
+            "url": "https://www.timeout.es/barcelona/es/restaurantes/gelida",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.vilaweb.cat/noticies/del-gelida-al-migrat-cal-que-tot-canvii-perque-tot-continui-igual/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Family bar in the Eixample since 1946, now run by the founder's grandson. No set menu: a long list of home-style Catalan dishes, plus daily specials on the board from about 1 pm.",
           "ca": "Bar familiar de l'Eixample des del 1946, que ara porta el nét del fundador. No hi ha menú: una llarga llista de plats catalans casolans i els plats del dia a la pissarra cap a la una.",
           "es": "Bar familiar del Eixample desde 1946, que ahora lleva el nieto del fundador. No hay menú: una larga lista de platos catalanes caseros y los platos del día en la pizarra hacia la una.",
           "fr": "Bar familial de l'Eixample depuis 1946, tenu aujourd'hui par le petit-fils du fondateur. Pas de menu fixe : une longue liste de plats catalans maison, et les plats du jour à l'ardoise vers 13 h.",
           "de": "Familienbar im Eixample seit 1946, heute vom Enkel des Gründers geführt. Kein festes Menü: eine lange Liste hausgemachter katalanischer Gerichte, dazu ab etwa 13 Uhr Tagesgerichte an der Tafel.",
           "it": "Bar di famiglia nell'Eixample dal 1946, oggi gestito dal nipote del fondatore. Nessun menù fisso: una lunga lista di piatti catalani casalinghi, più i piatti del giorno sulla lavagna verso l'una.",
-          "zh": "扩展区自1946年起经营的家族酒吧，如今由创办人的孙子打理。没有固定套餐：有一长串加泰罗尼亚家常菜，约下午一点起黑板上还有每日特色菜。" } },
-      { "name": "Bar Bodega Can Ros", "lat": 41.4050, "lng": 2.1642, "area": "gracia", "price": "1", "food": ["tapas", "esmorzar", "catalan"], "note": "mornings",
+          "zh": "扩展区自1946年起经营的家族酒吧，如今由创办人的孙子打理。没有固定套餐：有一长串加泰罗尼亚家常菜，约下午一点起黑板上还有每日特色菜。"
+        }
+      },
+      {
+        "name": "Bar Bodega Can Ros",
+        "lat": 41.405,
+        "lng": 2.1642,
+        "area": "gracia",
+        "price": "1",
+        "food": [
+          "tapas",
+          "esmorzar",
+          "catalan"
+        ],
+        "note": "mornings",
         "why": "Neighbourhood bodega founded in 1971 and still run by the founder's sons; listed by the city's local-commerce programme.",
         "priceEvidence": "Neighbourhood bodega prices (city local-commerce listing, Time Out).",
-        "sources": [{ "url": "https://ajuntament.barcelona.cat/comerc/en/bar-bodega-can-ros", "checked": "2026-11-14" }, { "url": "https://www.timeout.es/barcelona/es/restaurantes/bar-bodega-can-ros", "checked": "2026-11-14" }],
-        "desc": { "en": "Bodega founded in 1971 by Esteve Ros and run by his sons, home to a local Sant Medir festival group. Traditional tapas and fork breakfasts, on Carrer de Roger de Flor.",
+        "sources": [
+          {
+            "url": "https://ajuntament.barcelona.cat/comerc/en/bar-bodega-can-ros",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.timeout.es/barcelona/es/restaurantes/bar-bodega-can-ros",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Bodega founded in 1971 by Esteve Ros and run by his sons, home to a local Sant Medir festival group. Traditional tapas and fork breakfasts, on Carrer de Roger de Flor.",
           "ca": "Bodega fundada el 1971 per Esteve Ros i portada pels seus fills, seu d'una colla de Sant Medir. Tapes tradicionals i esmorzars de forquilla, al carrer de Roger de Flor.",
           "es": "Bodega fundada en 1971 por Esteve Ros y llevada por sus hijos, sede de una colla de Sant Medir. Tapas tradicionales y esmorzars de forquilla, en la calle Roger de Flor.",
           "fr": "Bodega fondée en 1971 par Esteve Ros et tenue par ses fils, siège d'une colla de la fête de Sant Medir. Tapas traditionnelles et petits-déjeuners copieux, Carrer de Roger de Flor.",
           "de": "1971 von Esteve Ros gegründete Bodega, heute von seinen Söhnen geführt und Sitz einer Sant-Medir-Festgruppe. Traditionelle Tapas und herzhaftes Frühstück in der Carrer de Roger de Flor.",
           "it": "Bodega fondata nel 1971 da Esteve Ros e gestita dai figli, sede di una colla della festa di Sant Medir. Tapas tradizionali e colazioni salate, in Carrer de Roger de Flor.",
-          "zh": "1971年由埃斯特维·罗斯（Esteve Ros）创办、如今由他的儿子们经营的老酒馆，也是圣梅迪尔节一个民间团体的据点。供应传统 tapas 和丰盛早午餐，位于 Roger de Flor 街。" } },
-      { "name": "La Sosenga", "lat": 41.3860, "lng": 2.1742, "area": "gothic-born", "price": "2", "food": ["catalan"],
+          "zh": "1971年由埃斯特维·罗斯（Esteve Ros）创办、如今由他的儿子们经营的老酒馆，也是圣梅迪尔节一个民间团体的据点。供应传统 tapas 和丰盛早午餐，位于 Roger de Flor 街。"
+        }
+      },
+      {
+        "name": "La Sosenga",
+        "lat": 41.386,
+        "lng": 2.1742,
+        "area": "gothic-born",
+        "price": "2",
+        "food": [
+          "catalan"
+        ],
         "why": "Small independent restaurant (opened 2023) cooking contemporary Catalan food from seasonal produce.",
         "priceEvidence": "€€ in Time Out's listing.",
-        "sources": [{ "url": "https://www.timeout.es/barcelona/es/restaurantes/la-sosenga", "checked": "2026-11-14" }, { "url": "https://thisisbarcelona.com/gastronomy/restaurants/la-sosenga", "checked": "2026-11-14" }],
-        "desc": { "en": "Small restaurant opened in 2023 near the cathedral, cooking contemporary Catalan food from seasonal produce. Its name comes from a dish in the medieval Catalan cookbook Sent Soví.",
+        "sources": [
+          {
+            "url": "https://www.timeout.es/barcelona/es/restaurantes/la-sosenga",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://thisisbarcelona.com/gastronomy/restaurants/la-sosenga",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Small restaurant opened in 2023 near the cathedral, cooking contemporary Catalan food from seasonal produce. Its name comes from a dish in the medieval Catalan cookbook Sent Soví.",
           "ca": "Restaurant petit obert el 2023 a prop de la catedral, amb cuina catalana contemporània de producte de temporada. El nom ve d'un plat del receptari medieval català Sent Soví.",
           "es": "Restaurante pequeño abierto en 2023 cerca de la catedral, con cocina catalana contemporánea de producto de temporada. Su nombre viene de un plato del recetario medieval catalán Sent Soví.",
           "fr": "Petit restaurant ouvert en 2023 près de la cathédrale, cuisine catalane contemporaine de saison. Son nom vient d'un plat du livre de cuisine catalan médiéval Sent Soví.",
           "de": "Kleines, 2023 eröffnetes Restaurant nahe der Kathedrale mit zeitgenössischer katalanischer Küche aus saisonalen Produkten. Der Name stammt von einem Gericht aus dem mittelalterlichen katalanischen Kochbuch Sent Soví.",
           "it": "Piccolo ristorante aperto nel 2023 vicino alla cattedrale, con cucina catalana contemporanea di stagione. Il nome viene da un piatto del ricettario medievale catalano Sent Soví.",
-          "zh": "2023年在大教堂附近开业的小餐馆，用当季食材做现代加泰罗尼亚菜。店名来自中世纪加泰罗尼亚食谱《Sent Soví》中的一道菜。" } },
-      { "name": "Can Lluís", "lat": 41.3781, "lng": 2.1654, "area": "raval", "price": "2", "food": ["catalan"],
+          "zh": "2023年在大教堂附近开业的小餐馆，用当季食材做现代加泰罗尼亚菜。店名来自中世纪加泰罗尼亚食谱《Sent Soví》中的一道菜。"
+        }
+      },
+      {
+        "name": "Can Lluís",
+        "lat": 41.3781,
+        "lng": 2.1654,
+        "area": "raval",
+        "price": "2",
+        "food": [
+          "catalan"
+        ],
         "why": "Raval restaurant founded in 1929; closed in 2021 and reopened in December 2025 under new owners who kept its traditional Catalan cooking.",
         "priceEvidence": "Traditional house menu at 28.90 € (New Barcelona Post, Aug 2026).",
-        "sources": [{ "url": "https://www.canlluis.com/", "checked": "2026-11-14" }, { "url": "https://www.thenewbarcelonapost.com/en/the-resurrection-of-can-lluis-in-barcelona/", "checked": "2026-11-14" }],
-        "desc": { "en": "Raval restaurant founded in 1929. It closed in 2021 and reopened in December 2025 with new owners, who kept its traditional Catalan cooking. Open every day for lunch and dinner.",
+        "sources": [
+          {
+            "url": "https://www.canlluis.com/",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.thenewbarcelonapost.com/en/the-resurrection-of-can-lluis-in-barcelona/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Raval restaurant founded in 1929. It closed in 2021 and reopened in December 2025 with new owners, who kept its traditional Catalan cooking. Open every day for lunch and dinner.",
           "ca": "Restaurant del Raval fundat el 1929. Va tancar el 2021 i va reobrir el desembre del 2025 amb nous propietaris, que n'han mantingut la cuina catalana tradicional. Obre cada dia per dinar i sopar.",
           "es": "Restaurante del Raval fundado en 1929. Cerró en 2021 y reabrió en diciembre de 2025 con nuevos propietarios, que han mantenido su cocina catalana tradicional. Abre cada día a mediodía y por la noche.",
           "fr": "Restaurant du Raval fondé en 1929. Fermé en 2021, il a rouvert en décembre 2025 avec de nouveaux propriétaires, qui ont gardé sa cuisine catalane traditionnelle. Ouvert tous les jours midi et soir.",
           "de": "1929 gegründetes Restaurant im Raval. 2021 geschlossen, im Dezember 2025 mit neuen Besitzern wiedereröffnet, die die traditionelle katalanische Küche beibehalten haben. Täglich mittags und abends geöffnet.",
           "it": "Ristorante del Raval fondato nel 1929. Chiuso nel 2021, ha riaperto nel dicembre 2025 con nuovi proprietari, che ne hanno mantenuto la cucina catalana tradizionale. Aperto tutti i giorni a pranzo e a cena.",
-          "zh": "拉巴尔区一家创办于1929年的餐馆。2021年关闭，2025年12月由新店主重新开业，保留了传统加泰罗尼亚菜。每天午餐和晚餐营业。" } }
+          "zh": "拉巴尔区一家创办于1929年的餐馆。2021年关闭，2025年12月由新店主重新开业，保留了传统加泰罗尼亚菜。每天午餐和晚餐营业。"
+        }
+      },
+      {
+        "name": "Biocenter",
+        "lat": 41.3826,
+        "lng": 2.1694,
+        "area": "raval",
+        "price": "2",
+        "food": [
+          "veggie",
+          "menu"
+        ],
+        "note": "weekdayMenu",
+        "why": "Family-run vegetarian and vegan restaurant open since 1980, one of the oldest in the city.",
+        "priceEvidence": "Weekday lunch menu 16.50 € incl. water or a glass of wine; à la carte mains about 10–15 € (restaurant's own menu page).",
+        "sources": [
+          {
+            "url": "https://www.restaurantebiocenter.es/carta-menu",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.restaurantebiocenter.es/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Family-run vegetarian restaurant in the Raval since 1980, with vegan dishes marked on the menu and a weekday lunch menu.",
+          "ca": "Restaurant vegetarià familiar al Raval des del 1980, amb plats vegans marcats a la carta i menú de migdia entre setmana.",
+          "es": "Restaurante vegetariano familiar en el Raval desde 1980, con platos veganos marcados en la carta y menú de mediodía entre semana.",
+          "fr": "Restaurant végétarien familial dans le Raval depuis 1980, avec des plats végans signalés sur la carte et un menu du midi en semaine.",
+          "de": "Vegetarisches Familienrestaurant im Raval seit 1980, mit gekennzeichneten veganen Gerichten und einem Mittagsmenü unter der Woche.",
+          "it": "Ristorante vegetariano di famiglia nel Raval dal 1980, con piatti vegani segnalati in carta e un menù del pranzo nei giorni feriali.",
+          "zh": "拉巴尔区自1980年起经营的家族素食餐厅，菜单上标注了纯素菜品，工作日中午有套餐。"
+        }
+      },
+      {
+        "name": "Veg World India",
+        "lat": 41.4046,
+        "lng": 2.1607,
+        "area": "gracia",
+        "food": [
+          "veggie"
+        ],
+        "why": "Family-run vegetarian Indian restaurant in Gràcia since 2005 (about 90% of the menu is vegan).",
+        "priceEvidence": "No current prices published (menu images dated 2023), so no price band is shown.",
+        "sources": [
+          {
+            "url": "https://www.vegworld.es/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Family-run vegetarian Indian restaurant in Gràcia since 2005; most of the menu is vegan. Closed on Mondays.",
+          "ca": "Restaurant indi vegetarià familiar a Gràcia des del 2005; la major part de la carta és vegana. Tanca els dilluns.",
+          "es": "Restaurante indio vegetariano familiar en Gràcia desde 2005; la mayor parte de la carta es vegana. Cierra los lunes.",
+          "fr": "Restaurant indien végétarien familial à Gràcia depuis 2005 ; la plupart de la carte est végane. Fermé le lundi.",
+          "de": "Vegetarisches indisches Familienrestaurant in Gràcia seit 2005; der Großteil der Karte ist vegan. Montags geschlossen.",
+          "it": "Ristorante indiano vegetariano di famiglia a Gràcia dal 2005; la maggior parte del menù è vegana. Chiuso il lunedì.",
+          "zh": "格拉西亚区自2005年起经营的家族印度素食餐厅，菜单大部分是纯素。周一休息。"
+        }
+      }
     ],
     "shops": [
-      { "name": "Llibreria Calders", "lat": 41.3767, "lng": 2.1622, "area": "eixample", "kind": ["books"], "type": ["independent"],
+      {
+        "name": "Llibreria Calders",
+        "lat": 41.3767,
+        "lng": 2.1622,
+        "area": "eixample",
+        "kind": [
+          "books"
+        ],
+        "type": [
+          "independent"
+        ],
         "why": "Independent bookshop with a strong Catalan-language selection and a cultural programme for its neighbourhood.",
-        "sources": [{ "url": "https://www.timeout.com/barcelona/shopping/llibreria-calders", "checked": "2026-11-14" }, { "url": "https://ajuntament.barcelona.cat/dones/en/Guide/99400367648", "checked": "2026-11-14" }],
-        "desc": { "en": "Independent bookshop in a former button factory, in a small passage of Sant Antoni named after the writer Pere Calders. Many books in Catalan and a busy programme of talks.",
+        "sources": [
+          {
+            "url": "https://www.timeout.com/barcelona/shopping/llibreria-calders",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://ajuntament.barcelona.cat/dones/en/Guide/99400367648",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Independent bookshop in a former button factory, in a small passage of Sant Antoni named after the writer Pere Calders. Many books in Catalan and a busy programme of talks.",
           "ca": "Llibreria independent en una antiga fàbrica de botons, en un passatge de Sant Antoni dedicat a l'escriptor Pere Calders. Molts llibres en català i moltes presentacions.",
           "es": "Librería independiente en una antigua fábrica de botones, en un pasaje de Sant Antoni dedicado al escritor Pere Calders. Muchos libros en catalán y muchas presentaciones.",
           "fr": "Librairie indépendante dans une ancienne fabrique de boutons, dans un passage de Sant Antoni dédié à l'écrivain Pere Calders. Beaucoup de livres en catalan et de nombreuses rencontres.",
           "de": "Unabhängige Buchhandlung in einer ehemaligen Knopffabrik, in einer kleinen Passage in Sant Antoni, benannt nach dem Schriftsteller Pere Calders. Viele Bücher auf Katalanisch und viele Lesungen.",
           "it": "Libreria indipendente in un'antica fabbrica di bottoni, in un passaggio di Sant Antoni dedicato allo scrittore Pere Calders. Molti libri in catalano e tante presentazioni.",
-          "zh": "开在旧纽扣厂里的独立书店，位于圣安东尼区一条以作家佩雷·卡尔德斯（Pere Calders）命名的小巷。有很多加泰罗尼亚语书籍，经常举办读书活动。" } },
-      { "name": "Queviures Múrria", "lat": 41.3948, "lng": 2.1665, "area": "eixample", "kind": ["food"], "type": ["historic"],
+          "zh": "开在旧纽扣厂里的独立书店，位于圣安东尼区一条以作家佩雷·卡尔德斯（Pere Calders）命名的小巷。有很多加泰罗尼亚语书籍，经常举办读书活动。"
+        }
+      },
+      {
+        "name": "Queviures Múrria",
+        "lat": 41.3948,
+        "lng": 2.1665,
+        "area": "eixample",
+        "kind": [
+          "food"
+        ],
+        "type": [
+          "historic"
+        ],
         "why": "Family grocery with its original Modernista shopfront, run by the Múrria family since 1943.",
-        "sources": [{ "url": "https://www.barcelonaturisme.com/wv3/en/enjoy/213/six-colmados-where-you-can-purchase-and-taste-gourmet-produce-in-barcelona-.html", "checked": "2026-11-14" }, { "url": "https://barcelona.cat/en/conocebcn/pics/queviures-murria-75990074268", "checked": "2026-11-14" }],
-        "desc": { "en": "A grocery from the end of the 19th century on Carrer de Roger de Llúria, with its original Modernista shopfront and painted-glass adverts. The Múrria family has run it since 1943.",
+        "sources": [
+          {
+            "url": "https://www.barcelonaturisme.com/wv3/en/enjoy/213/six-colmados-where-you-can-purchase-and-taste-gourmet-produce-in-barcelona-.html",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://barcelona.cat/en/conocebcn/pics/queviures-murria-75990074268",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "A grocery from the end of the 19th century on Carrer de Roger de Llúria, with its original Modernista shopfront and painted-glass adverts. The Múrria family has run it since 1943.",
           "ca": "Un colmado de finals del segle XIX al carrer de Roger de Llúria, amb l'aparador modernista original i anuncis de vidre pintat. La família Múrria el porta des del 1943.",
           "es": "Un colmado de finales del siglo XIX en la calle Roger de Llúria, con su escaparate modernista original y anuncios de vidrio pintado. La familia Múrria lo lleva desde 1943.",
           "fr": "Une épicerie de la fin du XIXe siècle, Carrer de Roger de Llúria, avec sa devanture moderniste d'origine et ses réclames sur verre peint. La famille Múrria la tient depuis 1943.",
           "de": "Ein Lebensmittelladen vom Ende des 19. Jahrhunderts in der Carrer de Roger de Llúria, mit originaler modernistischer Ladenfront und bemalten Glasreklamen. Seit 1943 führt ihn die Familie Múrria.",
           "it": "Una drogheria della fine dell'Ottocento in Carrer de Roger de Llúria, con la vetrina modernista originale e insegne in vetro dipinto. La famiglia Múrria la gestisce dal 1943.",
-          "zh": "罗赫·德·略里亚街（Roger de Llúria）上一家19世纪末的杂货铺，保留着原有的现代主义橱窗和彩绘玻璃广告。自1943年起由穆里亚（Múrria）家族经营。" } },
-      { "name": "Torrons La Campana", "lat": 41.3859, "lng": 2.1813, "area": "old-town", "kind": ["food"], "type": ["historic"],
+          "zh": "罗赫·德·略里亚街（Roger de Llúria）上一家19世纪末的杂货铺，保留着原有的现代主义橱窗和彩绘玻璃广告。自1943年起由穆里亚（Múrria）家族经营。"
+        }
+      },
+      {
+        "name": "Torrons La Campana",
+        "lat": 41.3859,
+        "lng": 2.1813,
+        "area": "old-town",
+        "kind": [
+          "food"
+        ],
+        "type": [
+          "historic"
+        ],
         "why": "Family turrón makers since 1890, the same family for four generations; on Carrer de la Princesa since 1920.",
-        "sources": [{ "url": "https://www.timeout.es/barcelona/es/noticias/la-campana-de-barcelona-130-anos-de-horchata-y-turrones-en-el-born-071825", "checked": "2026-11-14" }, { "url": "https://es.ara.cat/comer/campana-matriarcado-calle-princesa-endulza-navidad-siglo_1_5234829.html", "checked": "2026-11-14" }],
-        "desc": { "en": "Turrón makers since 1890, run by the same family for four generations, at Carrer de la Princesa, 36 since 1920. In summer, horchata and ice cream.",
+        "sources": [
+          {
+            "url": "https://www.timeout.es/barcelona/es/noticias/la-campana-de-barcelona-130-anos-de-horchata-y-turrones-en-el-born-071825",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://es.ara.cat/comer/campana-matriarcado-calle-princesa-endulza-navidad-siglo_1_5234829.html",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": {
+          "en": "Turrón makers since 1890, run by the same family for four generations, at Carrer de la Princesa, 36 since 1920. In summer, horchata and ice cream.",
           "ca": "Torroners des del 1890, portats per la mateixa família des de fa quatre generacions, al carrer de la Princesa, 36 des del 1920. A l'estiu, orxata i gelats.",
           "es": "Turroneros desde 1890, llevados por la misma familia desde hace cuatro generaciones, en la calle Princesa, 36 desde 1920. En verano, horchata y helados.",
           "fr": "Fabricants de turrón depuis 1890, tenus par la même famille depuis quatre générations, au 36 Carrer de la Princesa depuis 1920. L'été, horchata et glaces.",
           "de": "Turrón-Hersteller seit 1890, in vierter Generation von derselben Familie geführt, seit 1920 in der Carrer de la Princesa 36. Im Sommer Horchata und Eis.",
           "it": "Produttori di torrone dal 1890, gestiti dalla stessa famiglia da quattro generazioni, in Carrer de la Princesa 36 dal 1920. D'estate, horchata e gelati.",
-          "zh": "自1890年起制作牛轧糖（turrón），已由同一家族经营四代，1920年起位于公主街（Carrer de la Princesa）36号。夏天还有欧洽塔（horchata）和冰淇淋。" } }
+          "zh": "自1890年起制作牛轧糖（turrón），已由同一家族经营四代，1920年起位于公主街（Carrer de la Princesa）36号。夏天还有欧洽塔（horchata）和冰淇淋。"
+        }
+      }
     ]
   },
   "edit": {

@@ -1393,12 +1393,12 @@
       }
     },
     "mercat-abaceria": {
-      "tip": "Antes de ir, comprueba dónde están los puestos ese día: el mercado ha estado en obras.",
+      "tip": "Si te entretienes, compra algo: los puestos son el sustento de quien trabaja en ellos. Las primeras semanas tras la reapertura algunos puestos aún se están instalando.",
       "stories": {
         "base": {
-          "short": "Este es el mercado más grande de Gràcia, y desde finales del siglo XIX las familias del barrio vienen aquí a por la fruta, el pescado y el pan. Tras una larga reforma, es posible que los puestos estén en un espacio provisional aquí cerca. Sea como sea, fíjate en los carritos y en la clientela de siempre: esto es la Gràcia del día a día, lejos de las rutas turísticas.",
-          "normal": "Este es el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda la ciudad. Lleva dando servicio a las familias del barrio desde finales del siglo XIX. Ha pasado por una larga reforma, así que puede que los puestos estén en un espacio provisional aquí cerca. Sea como sea, aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas.",
-          "long": "Estás delante del Mercat de l'Abaceria Central, el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda Barcelona. Lleva dando de comer a las familias del barrio desde finales del siglo XIX. Hasta el nombre te dice para qué sirve: «abaceria» es una palabra catalana antigua que significa tienda de comestibles, un sitio para la compra de todos los días, y eso es exactamente lo que sigue siendo. El mercado ha pasado por una larga reforma, así que, según cuándo vengas, puede que los puestos estén funcionando en un espacio provisional aquí cerca. Que eso no te eche para atrás. Un mercado son, sobre todo, sus paradistas y su clientela de siempre, no su tejado. Tómate un momento para mirar antes de entrar. Fíjate en quién entra y quién sale: gente mayor con su carrito de la compra, padres y madres con un crío de la mano, alguien con una barra de pan bajo el brazo. Aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas, y muchos clientes habituales conocen a sus paradistas por su nombre. Como los demás mercados municipales de la ciudad, forma parte de la rutina diaria, no es un monumento para tachar de la lista. Así que, si entras, muévete con calma, ve por el lateral de los pasillos y pide permiso antes de fotografiar a nadie. Y si algo te entra por los ojos, cómpralo. Comerte una pieza de fruta en un banco aquí al lado es una de las formas más sencillas de sentir, durante unos minutos, que vives aquí."
+          "short": "Este es el mercado más grande de Gràcia, y desde finales del siglo XIX las familias del barrio vienen aquí a por la fruta, el pescado y el pan. Tras años en una carpa provisional, reabrió en su edificio renovado en noviembre de 2026. Sea como sea, fíjate en los carritos y en la clientela de siempre: esto es la Gràcia del día a día, lejos de las rutas turísticas.",
+          "normal": "Este es el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda la ciudad. Lleva dando servicio a las familias del barrio desde finales del siglo XIX. Tras una larga reforma y años en una carpa provisional, reabrió en su edificio renovado en noviembre de 2026. Sea como sea, aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas.",
+          "long": "Estás delante del Mercat de l'Abaceria Central, el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda Barcelona. Lleva dando de comer a las familias del barrio desde finales del siglo XIX. Hasta el nombre te dice para qué sirve: «abaceria» es una palabra catalana antigua que significa tienda de comestibles, un sitio para la compra de todos los días, y eso es exactamente lo que sigue siendo. El mercado pasó años en una carpa provisional durante una larga reforma, y en noviembre de 2026 los puestos volvieron a este edificio renovado. Un mercado son, sobre todo, sus paradistas y su clientela de siempre, no su tejado. Tómate un momento para mirar antes de entrar. Fíjate en quién entra y quién sale: gente mayor con su carrito de la compra, padres y madres con un crío de la mano, alguien con una barra de pan bajo el brazo. Aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas, y muchos clientes habituales conocen a sus paradistas por su nombre. Como los demás mercados municipales de la ciudad, forma parte de la rutina diaria, no es un monumento para tachar de la lista. Así que, si entras, muévete con calma, ve por el lateral de los pasillos y pide permiso antes de fotografiar a nadie. Y si algo te entra por los ojos, cómpralo. Comerte una pieza de fruta en un banco aquí al lado es una de las formas más sencillas de sentir, durante unos minutos, que vives aquí."
         },
         "food": {
           "short": "Fíjate en lo que más se amontona en los puestos: suele ser lo mejor del momento, porque el género va con la temporada. Gràcia compra aquí la fruta, el pescado y el pan desde finales del siglo XIX. Llévate una pieza de fruta bien madura para disfrutarla fuera, y deja libres los pasillos.",
@@ -1414,8 +1414,8 @@
       "srcHash": "1f9a7805df",
       "audio": {
         "base": {
-          "file": "audio/es/mercat-abaceria.mp3",
-          "hash": "4c5845b4b3"
+          "file": "audio/es/mercat-abaceria.m4a",
+          "hash": "4245bc073b"
         },
         "food": {
           "file": "audio/es/mercat-abaceria--food.mp3",
@@ -2183,6 +2183,23 @@
           "hash": "1031380eda"
         }
       }
+    },
+    "disseny-hub": {
+      "tip": "La plaza de fuera es espacio público; el museo tiene entrada y horarios. Deja libres los carriles bici y los caminos del parque.",
+      "stories": {
+        "base": {
+          "short": "Este edificio oscuro que parece suspendido en el aire es el Disseny Hub, sede del Museo del Diseño de Barcelona desde 2014. La gente lo llama la grapadora. Lo proyectó el estudio MBM, y dentro reúne las colecciones de cuatro museos anteriores: artes decorativas, cerámica, textil e indumentaria, y artes gráficas.",
+          "normal": "Mira este edificio oscuro que parece suspendido en el aire, con un gran voladizo que avanza sobre la plaza. La gente lo llama la grapadora. Es el Disseny Hub, proyectado por el estudio MBM y construido entre 2008 y 2013, y desde 2014 es la sede del Museu del Disseny, el museo del diseño de Barcelona. Dentro reúne las colecciones de cuatro museos anteriores: artes decorativas, cerámica, textil e indumentaria, y artes gráficas, más de setenta mil objetos. Ahora mira a tu alrededor. Glòries fue durante décadas un gran nudo de carreteras, y poco a poco se está convirtiendo en un parque.",
+          "long": "Mira este edificio oscuro que parece suspendido en el aire, con un gran voladizo que avanza sobre la plaza. La gente lo llama la grapadora, y cuando lo ves de lado entiendes por qué. Es el Disseny Hub, proyectado por el estudio MBM, fundado por los arquitectos Josep Martorell, Oriol Bohigas y David Mackay, y construido entre 2008 y 2013. Por fuera está revestido de zinc y grandes ventanales, y una parte del edificio queda por debajo del nivel de la plaza. Desde 2014 es la sede del Museu del Disseny, el museo del diseño de Barcelona. Dentro reúne las colecciones de cuatro museos anteriores que estaban repartidos por la ciudad: artes decorativas, cerámica, textil e indumentaria, y artes gráficas, más de setenta mil objetos, desde sillas y vestidos hasta carteles. Ahora mira a tu alrededor. En el plan del Eixample de Ildefons Cerdà, Glòries se imaginaba como el nuevo centro de la ciudad. Durante décadas, en cambio, fue un gran nudo de carreteras, con el tráfico pasando por encima. Poco a poco se está convirtiendo en un parque y en un punto de encuentro entre el Eixample, el Poblenou y el Clot, y la torre alta y redondeada de al lado, la Torre Glòries, es uno de sus iconos."
+        }
+      },
+      "srcHash": "manual-b2efc247c0",
+      "audio": {
+        "base": {
+          "file": "audio/es/disseny-hub.m4a",
+          "hash": "4b6509db1e"
+        }
+      }
     }
   },
   "activities": {
@@ -2197,7 +2214,7 @@
             "tapas": "Tapas",
             "seafood": "Pescado y marisco",
             "rice": "Arroces",
-            "esmorzar": "Esmorzar de forquilla (almuerzo de tenedor)",
+            "esmorzar": "Esmorzar de forquilla",
             "menu": "Menú del día",
             "veggie": "Opciones vegetarianas"
           }
@@ -2257,7 +2274,9 @@
         "Bar Gelida": "Bar familiar del Eixample desde 1946, que ahora lleva el nieto del fundador. No hay menú: una larga lista de platos catalanes caseros y los platos del día en la pizarra hacia la una.",
         "Bar Bodega Can Ros": "Bodega fundada en 1971 por Esteve Ros y llevada por sus hijos, sede de una colla de Sant Medir. Tapas tradicionales y esmorzars de forquilla, en la calle Roger de Flor.",
         "La Sosenga": "Restaurante pequeño abierto en 2023 cerca de la catedral, con cocina catalana contemporánea de producto de temporada. Su nombre viene de un plato del recetario medieval catalán Sent Soví.",
-        "Can Lluís": "Restaurante del Raval fundado en 1929. Cerró en 2021 y reabrió en diciembre de 2025 con nuevos propietarios, que han mantenido su cocina catalana tradicional. Abre cada día a mediodía y por la noche."
+        "Can Lluís": "Restaurante del Raval fundado en 1929. Cerró en 2021 y reabrió en diciembre de 2025 con nuevos propietarios, que han mantenido su cocina catalana tradicional. Abre cada día a mediodía y por la noche.",
+        "Biocenter": "Restaurante vegetariano familiar en el Raval desde 1980, con platos veganos marcados en la carta y menú de mediodía entre semana.",
+        "Veg World India": "Restaurante indio vegetariano familiar en Gràcia desde 2005; la mayor parte de la carta es vegana. Cierra los lunes."
       }
     },
     "nightlife": {
@@ -2561,5 +2580,5 @@
       }
     }
   },
-  "activitiesHash": "7db13e8075"
+  "activitiesHash": "77cf047399"
 }

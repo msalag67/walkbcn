@@ -66,6 +66,9 @@ Abre `content/review.md`: tiene todas las historias generadas y, para cada una, 
 | `data/cards.js` | Generado: ficha práctica de cada parada (qué mirar, dónde escuchar, visita, sensibilidad, segunda foto, fuentes) y autor + licencia de cada foto |
 | `data/activities.js` | Activities: filtros, sitios y descripciones. Los sitios nuevos llevan `why`, `priceEvidence` y `sources` con fecha |
 | `content/manual/` | Contenido escrito por el equipo, sin IA: una parada por archivo (historia en 3 longitudes × 7 idiomas, consejo, ficha), `_cards.json`, `_tips.json`, `_activities.json`, `_photos.json` |
+| `sw.js`, `manifest.webmanifest` | Uso sin conexión: guarda lo que la página usa; "Guardar este paseo para usarlo sin conexión" descarga textos, audio y fotos del paseo. Se puede añadir a la pantalla de inicio |
+| `docs/prueba-con-turistas.md`, `docs/tarjetas-qr.pdf` | Cómo probar con turistas reales y tarjetas con QR (`?src=qr1…3`) |
+| `docs/revision-de-datos.md` | Los 20 datos de más riesgo para la revisión humana |
 | `scripts/import-manual.mjs` | Pasa `content/manual/` a `content/i18n/`, `data/activities.js` y `data/cards.js` (`--photos` vuelve a consultar autor y licencia en Wikimedia Commons) |
 | `data/tips.js` | Pestaña Consejos: los tips en los 7 idiomas y `formUrl`, el enlace al formulario de "Propón un consejo" (vacío = botón oculto). Para añadir un tip aprobado, se edita aquí |
 | `content/stories.json` | Historias generadas (fuente) — `stories.js` es la copia que lee la web |
@@ -96,3 +99,18 @@ En `data/stops.js`, `WALKBCN_NOTICES` guarda avisos prácticos (obras, traslados
 ### Comunicar un problema
 
 Cada parada y cada sitio de Activities tiene "Comunicar un problema": abre el formulario de sugerencias que ya usamos para los consejos (`formUrl` de `data/tips.js`), rellenado con el lugar, el tipo de problema y el idioma. El correo es opcional. Nada se publica sin que el equipo lo revise. Si se cambia el formulario, hay que actualizar `REPORT_FIELD` en `index.html` (el identificador de la pregunta de texto).
+
+### Medir el uso (desactivado por defecto)
+
+`index.html` tiene `ANALYTICS.goatcounter`: vacío = no se carga nada y no se envía nada. Con un código de GoatCounter (gratis, sin cookies) cuenta eventos anónimos (`Walk finished`, `Directions opened`, `Survey opened`…) con el `src` del enlace. Respeta "No aprender de lo que hago" y la ventana de privacidad lo explica. Al terminar un paseo, la web ofrece la encuesta de la sesión 9 (`SURVEY_URL`).
+
+### Repetir el juez de IA con la app de hoy
+
+`evals/judge/cases-today-nov14.json` tiene las 15 peticiones respondidas por la app del 14/11/2026 (67 paradas). Con tu clave en tu terminal (unos céntimos):
+
+```bash
+node scripts/judge.mjs --version=3 --today=nov14
+```
+
+Guarda `evals/judge/today-v3-nov14.json` sin tocar los resultados de la sesión 9.
+

@@ -1393,12 +1393,12 @@
       }
     },
     "mercat-abaceria": {
-      "tip": "Mireu on són les parades el dia que hi aneu: el mercat ha estat en obres.",
+      "tip": "Si t'hi entretens, compra alguna cosa: les parades són el sustent de qui hi treballa. Les primeres setmanes després de la reobertura algunes parades encara s'estan instal·lant.",
       "stories": {
         "base": {
-          "short": "Aquest és el mercat més gran de Gràcia, i des de finals del segle XIX les famílies del barri hi vénen a comprar la fruita, el peix i el pa. Després d'unes obres llargues, és possible que les parades siguin en un espai provisional aquí a prop. Sigui com sigui, fixeu-vos en els carrets i en la clientela de sempre: això és la Gràcia de cada dia, lluny dels circuits turístics.",
-          "normal": "Aquest és el mercat més gran de Gràcia i un dels mercats de barri amb més vida de tota la ciutat, que serveix les famílies del barri des de finals del segle XIX. Ha passat per unes obres llargues, així que és possible que les parades siguin en un espai provisional aquí a prop. Sigui com sigui, és on Gràcia compra la fruita, el peix i el pa, lluny dels circuits turístics.",
-          "long": "Sou davant del Mercat de l'Abaceria Central, el mercat més gran de Gràcia i un dels mercats de barri amb més vida de tot Barcelona. Fa de rebost de les famílies del barri des de finals del segle XIX. Ja el nom us diu per a què serveix. Una abaceria és una paraula catalana antiga per dir botiga de queviures, un lloc per a les compres de cada dia, i això és exactament el que continua sent. El mercat ha passat per unes obres llargues, així que, segons quan hi aneu, potser trobareu les parades funcionant en un espai provisional aquí a prop. No us en feu enrere. Un mercat són, de debò, els seus paradistes i la seva clientela, no pas la teulada. Abans d'entrar, preneu-vos un moment per mirar. Fixeu-vos en qui entra i qui surt: gent gran amb el carret de la compra, pares i mares amb una criatura de la mà, algú amb una barra de pa sota el braç. Aquí és on Gràcia compra la fruita, el peix i el pa, lluny dels circuits turístics, i molts clients de tota la vida coneixen els paradistes pel nom. Com els altres mercats municipals de la ciutat, forma part de la rutina diària, no és un monument per anar marcant de la llista. Així que, si hi entreu, aneu amb calma, camineu pel costat dels passadissos i demaneu permís abans de fer una foto a ningú. I si alguna cosa us fa el pes, compreu-la. Una peça de fruita menjada en un banc aquí a prop és una de les maneres més senzilles de sentir, durant uns minuts, que viviu aquí."
+          "short": "Aquest és el mercat més gran de Gràcia, i des de finals del segle XIX les famílies del barri hi vénen a comprar la fruita, el peix i el pa. Després d'anys en una carpa provisional, va reobrir a l'edifici renovat el novembre del 2026. Sigui com sigui, fixeu-vos en els carrets i en la clientela de sempre: això és la Gràcia de cada dia, lluny dels circuits turístics.",
+          "normal": "Aquest és el mercat més gran de Gràcia i un dels mercats de barri amb més vida de tota la ciutat, que serveix les famílies del barri des de finals del segle XIX. Després d'unes obres llargues i d'anys en una carpa provisional, va reobrir a l'edifici renovat el novembre del 2026. Sigui com sigui, és on Gràcia compra la fruita, el peix i el pa, lluny dels circuits turístics.",
+          "long": "Sou davant del Mercat de l'Abaceria Central, el mercat més gran de Gràcia i un dels mercats de barri amb més vida de tot Barcelona. Fa de rebost de les famílies del barri des de finals del segle XIX. Ja el nom us diu per a què serveix. Una abaceria és una paraula catalana antiga per dir botiga de queviures, un lloc per a les compres de cada dia, i això és exactament el que continua sent. El mercat va passar anys en una carpa provisional durant unes obres llargues, i el novembre del 2026 les parades van tornar a aquest edifici renovat. Un mercat són, de debò, els seus paradistes i la seva clientela, no pas la teulada. Abans d'entrar, preneu-vos un moment per mirar. Fixeu-vos en qui entra i qui surt: gent gran amb el carret de la compra, pares i mares amb una criatura de la mà, algú amb una barra de pa sota el braç. Aquí és on Gràcia compra la fruita, el peix i el pa, lluny dels circuits turístics, i molts clients de tota la vida coneixen els paradistes pel nom. Com els altres mercats municipals de la ciutat, forma part de la rutina diària, no és un monument per anar marcant de la llista. Així que, si hi entreu, aneu amb calma, camineu pel costat dels passadissos i demaneu permís abans de fer una foto a ningú. I si alguna cosa us fa el pes, compreu-la. Una peça de fruita menjada en un banc aquí a prop és una de les maneres més senzilles de sentir, durant uns minuts, que viviu aquí."
         },
         "food": {
           "short": "Mireu què hi ha més amuntegat a les parades: normalment és el que està més bo ara mateix, perquè el que s'exposa va seguint les estacions. Gràcia compra aquí la fruita, el peix i el pa des de finals del segle XIX. Agafeu una peça de fruita ben madura per menjar-vos-la fora, i deixeu els passadissos lliures.",
@@ -1415,7 +1415,7 @@
       "audio": {
         "base": {
           "file": "audio/ca/mercat-abaceria.m4a",
-          "hash": "c62973c606"
+          "hash": "d92e7f1d4a"
         },
         "food": {
           "file": "audio/ca/mercat-abaceria--food.m4a",
@@ -2183,6 +2183,23 @@
           "hash": "b26bf9c633"
         }
       }
+    },
+    "disseny-hub": {
+      "tip": "La plaça de fora és espai públic; el museu té entrada i horaris. Deixa lliures els carrils bici i els camins del parc.",
+      "stories": {
+        "base": {
+          "short": "Aquest edifici fosc que sembla suspès a l'aire és el Disseny Hub, seu del Museu del Disseny de Barcelona des del 2014. La gent li diu la grapadora. El va projectar l'estudi MBM, i a dins reuneix les col·leccions de quatre museus antics: arts decoratives, ceràmica, tèxtil i indumentària, i arts gràfiques.",
+          "normal": "Mira aquest edifici fosc que sembla suspès a l'aire, amb un gran voladís que avança sobre la plaça. La gent li diu la grapadora. És el Disseny Hub, projectat per l'estudi MBM i construït entre el 2008 i el 2013, i des del 2014 és la seu del Museu del Disseny de Barcelona. A dins reuneix les col·leccions de quatre museus anteriors: arts decoratives, ceràmica, tèxtil i indumentària, i arts gràfiques, més de setanta mil objectes. Ara mira al teu voltant. Les Glòries van ser durant dècades un gran nus de carreteres, i a poc a poc s'estan convertint en un parc.",
+          "long": "Mira aquest edifici fosc que sembla suspès a l'aire, amb un gran voladís que avança sobre la plaça. La gent li diu la grapadora, i quan el veus de costat entens per què. És el Disseny Hub, projectat per l'estudi MBM, fundat pels arquitectes Josep Martorell, Oriol Bohigas i David Mackay, i construït entre el 2008 i el 2013. Per fora està revestit de zinc i de grans vidrieres, i una part de l'edifici queda per sota del nivell de la plaça. Des del 2014 és la seu del Museu del Disseny de Barcelona. A dins reuneix les col·leccions de quatre museus anteriors que estaven repartits per la ciutat: arts decoratives, ceràmica, tèxtil i indumentària, i arts gràfiques, més de setanta mil objectes, des de cadires i vestits fins a cartells. Ara mira al teu voltant. En el pla de l'Eixample d'Ildefons Cerdà, les Glòries s'imaginaven com el nou centre de la ciutat. Durant dècades, en canvi, van ser un gran nus de carreteres, amb el trànsit passant per damunt. A poc a poc s'estan convertint en un parc i en un punt de trobada entre l'Eixample, el Poblenou i el Clot, i la torre alta i arrodonida del costat, la Torre Glòries, n'és una de les icones."
+        }
+      },
+      "srcHash": "manual-b2efc247c0",
+      "audio": {
+        "base": {
+          "file": "audio/ca/disseny-hub.m4a",
+          "hash": "030e0f1696"
+        }
+      }
     }
   },
   "activities": {
@@ -2257,7 +2274,9 @@
         "Bar Gelida": "Bar familiar de l'Eixample des del 1946, que ara porta el nét del fundador. No hi ha menú: una llarga llista de plats catalans casolans i els plats del dia a la pissarra cap a la una.",
         "Bar Bodega Can Ros": "Bodega fundada el 1971 per Esteve Ros i portada pels seus fills, seu d'una colla de Sant Medir. Tapes tradicionals i esmorzars de forquilla, al carrer de Roger de Flor.",
         "La Sosenga": "Restaurant petit obert el 2023 a prop de la catedral, amb cuina catalana contemporània de producte de temporada. El nom ve d'un plat del receptari medieval català Sent Soví.",
-        "Can Lluís": "Restaurant del Raval fundat el 1929. Va tancar el 2021 i va reobrir el desembre del 2025 amb nous propietaris, que n'han mantingut la cuina catalana tradicional. Obre cada dia per dinar i sopar."
+        "Can Lluís": "Restaurant del Raval fundat el 1929. Va tancar el 2021 i va reobrir el desembre del 2025 amb nous propietaris, que n'han mantingut la cuina catalana tradicional. Obre cada dia per dinar i sopar.",
+        "Biocenter": "Restaurant vegetarià familiar al Raval des del 1980, amb plats vegans marcats a la carta i menú de migdia entre setmana.",
+        "Veg World India": "Restaurant indi vegetarià familiar a Gràcia des del 2005; la major part de la carta és vegana. Tanca els dilluns."
       }
     },
     "nightlife": {
@@ -2561,5 +2580,5 @@
       }
     }
   },
-  "activitiesHash": "7db13e8075"
+  "activitiesHash": "77cf047399"
 }

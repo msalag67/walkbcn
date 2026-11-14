@@ -387,6 +387,58 @@ window.WALKBCN_CARDS = {
    }
   ]
  },
+ "disseny-hub": {
+  "outside": "yes",
+  "sensitive": [],
+  "official": null,
+  "img2": "Barcelona- Museu del Disseny.jpg",
+  "look": {
+   "en": "The huge overhang over the square (the 'stapler'), the zinc and glass skin, and the Torre Glòries beside it.",
+   "ca": "El gran voladís sobre la plaça (la «grapadora»), la pell de zinc i vidre, i la Torre Glòries al costat.",
+   "es": "El gran voladizo sobre la plaza (la «grapadora»), la piel de zinc y vidrio, y la Torre Glòries al lado.",
+   "fr": "L'immense porte-à-faux au-dessus de la place (l'« agrafeuse »), la peau de zinc et de verre, et la Torre Glòries à côté.",
+   "de": "Die riesige Auskragung über dem Platz (der „Tacker“), die Hülle aus Zink und Glas und daneben die Torre Glòries.",
+   "it": "L'enorme sbalzo sopra la piazza (la «spillatrice»), la pelle di zinco e vetro, e la Torre Glòries accanto.",
+   "zh": "伸到广场上方的巨大悬挑（“订书机”）、锌板和玻璃外立面，以及旁边的荣耀塔。"
+  },
+  "listen": {
+   "en": "On the square in front of the entrance, out of the cycle lane.",
+   "ca": "A la plaça davant de l'entrada, fora del carril bici.",
+   "es": "En la plaza frente a la entrada, fuera del carril bici.",
+   "fr": "Sur la place devant l'entrée, en dehors de la piste cyclable.",
+   "de": "Auf dem Platz vor dem Eingang, nicht auf dem Radweg.",
+   "it": "Nella piazza davanti all'ingresso, fuori dalla pista ciclabile.",
+   "zh": "在入口前的广场上收听，不要站在自行车道上。"
+  },
+  "access": {
+   "en": "The outside and the square are free. The museum has a ticket and opening hours: check its website.",
+   "ca": "L'exterior i la plaça són lliures. El museu té entrada i horaris: consulta'n el web.",
+   "es": "El exterior y la plaza son libres. El museo tiene entrada y horarios: consulta su web.",
+   "fr": "L'extérieur et la place sont libres d'accès. Le musée a un billet et des horaires : consultez son site.",
+   "de": "Außenbereich und Platz sind frei zugänglich. Das Museum hat Eintritt und Öffnungszeiten: siehe Website.",
+   "it": "L'esterno e la piazza sono liberi. Il museo ha biglietto e orari: consulta il suo sito.",
+   "zh": "外部和广场可自由参观。博物馆需购票，有开放时间：请查看官网。"
+  },
+  "cap2": {
+   "en": "Inside the Design Museum (with a ticket).",
+   "ca": "Dins del Museu del Disseny (amb entrada).",
+   "es": "Dentro del Museu del Disseny (con entrada).",
+   "fr": "À l'intérieur du musée du Design (avec billet).",
+   "de": "Im Designmuseum (mit Eintritt).",
+   "it": "All'interno del Museo del Design (con biglietto).",
+   "zh": "设计博物馆内部（需购票）。"
+  },
+  "sources": [
+   {
+    "url": "https://arquitecturaviva.com/works/disseny-hub-barcelona",
+    "checked": "2026-11-14"
+   },
+   {
+    "url": "https://www.barcelona.cat/setmanesarquitectura/en/venues/disseny-hub-barcelona",
+    "checked": "2026-11-14"
+   }
+  ]
+ },
  "escola-industrial": {
   "outside": "partly",
   "sensitive": [
@@ -711,6 +763,11 @@ window.WALKBCN_PHOTOS = {
   "licence": "CC0",
   "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
  },
+ "Barcelona - Disseny Hub Barcelona, Museu del Disseny de Barcelona 1.jpg": {
+  "author": "Zarateman",
+  "licence": "CC0",
+  "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ },
  "Barcelona - Església de Sant Pere de Puelles.jpg": {
   "author": "Carquinyol from Badalona, Catalunya",
   "licence": "CC BY-SA 2.0",
@@ -758,6 +815,11 @@ window.WALKBCN_PHOTOS = {
  },
  "Barcelona, casa Vicens (Antoni Gaudí) balcón.jpg": {
   "author": "ctsnow",
+  "licence": "CC BY 2.0",
+  "licenceUrl": "https://creativecommons.org/licenses/by/2.0"
+ },
+ "Barcelona- Museu del Disseny.jpg": {
+  "author": "Jorge Franganillo",
   "licence": "CC BY 2.0",
   "licenceUrl": "https://creativecommons.org/licenses/by/2.0"
  },

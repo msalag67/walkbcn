@@ -122,8 +122,8 @@ window.WALKBCN_STOPS = [
     tip: "Buy something if you linger: the stalls are people's livelihoods, not a museum." },
   { id: "mercat-abaceria", name: "Mercat de l'Abaceria Central", img: "Mercat de l'Abaceria Central.JPG", area: "Gràcia", lat: 41.4021, lng: 2.1595, tags: ["food", "local"],
     address: "Travessera de Gràcia, 186 · Carrer de Puigmartí",
-    story: "This is Gràcia's biggest market and one of the busiest neighbourhood markets in the city, serving local families since the end of the 19th century. It has gone through a long renovation, so the stalls may be in a temporary space nearby. Either way, it's where Gràcia buys its fruit, fish and bread, far from the tourist routes.",
-    tip: "Check where the stalls are on the day you visit: the market has been under renovation." },
+    story: "This is Gràcia's biggest market and one of the busiest neighbourhood markets in the city, serving local families since the end of the 19th century. After a long renovation and years in a temporary tent, it reopened in its rebuilt building in November 2026. Either way, it's where Gràcia buys its fruit, fish and bread, far from the tourist routes.",
+    tip: "Buy something if you linger: the stalls are people's livelihoods. In the first weeks after the reopening, some stalls may still be settling in." },
   { id: "mercat-ninot", name: "Mercat del Ninot", img: "01 Mercat del Ninot, c. Mallorca.jpg", area: "Eixample", lat: 41.3882, lng: 2.1542, tags: ["food"],
     story: "Ninot means a little figure or doll in Catalan. The market takes its name from a carved wooden figurehead from a ship that once hung outside a nearby tavern. Today the market has a modern building, rebuilt in the 2010s, and it's a favourite with local food lovers for its fish, seafood and good-quality produce.",
     tip: "Mornings are best: that's when the stalls are full and the neighbourhood does its shopping." },
@@ -215,8 +215,11 @@ window.WALKBCN_STOPS = [
     address: "Gran Via de les Corts Catalanes, 837",
     story: "Look at this red-brick building with its ceramic details. It was a flour mill, the Farinera de Sant Jaume. A mill was first planned here in 1879, and in 1908 the architect Josep Maria Pericas built the Modernista factory you see now. Flour was made here until 1991. Then the city bought the site, kept the main building and turned it into a cultural centre, which opened in 1999. Since 2004 it has been run by the Clot's own associations, the first cultural centre in Barcelona managed by a federation of local groups. Instead of flour, it now makes concerts, classes and exhibitions.",
     tip: "It is the neighbourhood's own cultural centre: keep the entrance clear and don't interrupt classes or rehearsals." },
+  { id: "disseny-hub", name: "Disseny Hub (Museu del Disseny)", img: "Barcelona - Disseny Hub Barcelona, Museu del Disseny de Barcelona 1.jpg", area: "El Clot", lat: 41.4025, lng: 2.1881, tags: ["architecture", "art"],
+    address: "Plaça de les Glòries Catalanes, 37–38",
+    story: "Look at this dark building that seems to hang in the air, with a huge overhang reaching out over the square. People nicknamed it the stapler. It is the Disseny Hub, designed by the studio MBM and built between 2008 and 2013, and since 2014 it has been home to the Museu del Disseny, Barcelona's design museum. Inside, it brings together the collections of four older museums: decorative arts, ceramics, textiles and fashion, and graphic arts, more than seventy thousand objects. Now look around you. Glòries was for decades a huge road junction, and it is slowly being turned into a park.",
+    tip: "The square outside is a public space; the museum has a ticket and opening hours. Keep cycle lanes and the park paths clear." },
 ];
-
 // Practical notices shown on a stop's card, only between `from` and `until` (inclusive,
 // local dates). Each one says where the fact comes from (`source`) and when we checked it
 // (`checked`). Editorial rules, applied by index.html:
@@ -229,28 +232,16 @@ window.WALKBCN_STOPS = [
 //   closed     true: while active, the stop is left out of new routes (it stays in the guide).
 window.WALKBCN_NOTICES = {
   "mercat-abaceria": [
-    { until: "2026-11-16", checked: "2026-11-13", review: "2026-11-16",
-      source: "https://beteve.cat/politica/mercat-abaceria-tornara-casa-17-novembre-despres-8-anys-carpa-provisional/",
-      at: { lat: 41.4031, lng: 2.1647, label: "Passeig de Sant Joan, 168" },
-      text: {
-        en: "Until 16 November 2026 the stalls are in the temporary market at Passeig de Sant Joan, 168, about 8 minutes' walk east: your route and the Directions button take you there. The renovated building here (photo) is due to reopen on 17 November.",
-        ca: "Fins al 16 de novembre de 2026 les parades són al mercat provisional del passeig de Sant Joan, 168, a uns 8 minuts a peu cap a l'est: la ruta i el botó d'indicacions et porten allà. L'edifici renovat d'aquí (foto) ha de reobrir el 17 de novembre.",
-        es: "Hasta el 16 de noviembre de 2026 los puestos están en el mercado provisional del paseo de Sant Joan, 168, a unos 8 minutos a pie hacia el este: la ruta y el botón de indicaciones te llevan allí. El edificio renovado de aquí (foto) debe reabrir el 17 de noviembre.",
-        fr: "Jusqu'au 16 novembre 2026, les étals sont dans le marché provisoire du passeig de Sant Joan, 168, à environ 8 minutes à pied vers l'est : votre itinéraire et le bouton d'itinéraire vous y mènent. Le bâtiment rénové d'ici (photo) doit rouvrir le 17 novembre.",
-        de: "Bis zum 16. November 2026 sind die Stände in der provisorischen Markthalle am Passeig de Sant Joan 168, etwa 8 Minuten zu Fuß Richtung Osten: Route und Wegbeschreibung führen dorthin. Das renovierte Gebäude hier (Foto) soll am 17. November wieder öffnen.",
-        it: "Fino al 16 novembre 2026 i banchi sono nel mercato provvisorio del passeig de Sant Joan, 168, a circa 8 minuti a piedi verso est: il percorso e il pulsante Indicazioni ti portano lì. L'edificio rinnovato qui (foto) dovrebbe riaprire il 17 novembre.",
-        zh: "2026年11月16日之前，摊位位于圣胡安大道168号的临时市场（向东步行约8分钟）：路线和导航按钮会带你去那里。这里翻新后的市场大楼（照片）预计于11月17日重新开放。",
-      } },
-    { from: "2026-11-17", until: "2026-12-31", checked: "2026-11-13", review: "2026-11-20", confirmed: false,
+    { from: "2026-11-14", until: "2026-12-31", checked: "2026-11-14", review: "2026-12-15", confirmed: true,
       source: "https://www.independent.cat/noticia/160842/lestrena-del-nou-mercat-de-labaceria-es-mante-pel-17-de-novembre",
       text: {
-        en: "The reopening of the renovated building was announced for 17 November 2026, after years in a temporary tent. We have not confirmed it yet; in the first weeks some stalls may still be moving in.",
-        ca: "La reobertura de l'edifici renovat es va anunciar per al 17 de novembre de 2026, després d'anys en una carpa provisional. Encara no ho hem confirmat; les primeres setmanes algunes parades encara poden estar-se traslladant.",
-        es: "La reapertura del edificio renovado se anunció para el 17 de noviembre de 2026, tras años en una carpa provisional. Aún no lo hemos confirmado; las primeras semanas algunos puestos pueden estar trasladándose todavía.",
-        fr: "La réouverture du bâtiment rénové a été annoncée pour le 17 novembre 2026, après des années sous un chapiteau provisoire. Nous ne l'avons pas encore confirmée ; les premières semaines, certains étals peuvent encore être en cours d'installation.",
-        de: "Die Wiedereröffnung des renovierten Gebäudes wurde für den 17. November 2026 angekündigt, nach Jahren im provisorischen Zelt. Wir haben sie noch nicht bestätigt; in den ersten Wochen ziehen manche Stände eventuell noch um.",
-        it: "La riapertura dell'edificio rinnovato è stata annunciata per il 17 novembre 2026, dopo anni in una tenda provvisoria. Non l'abbiamo ancora confermata; nelle prime settimane alcuni banchi potrebbero essere ancora in trasloco.",
-        zh: "翻新后的市场大楼已宣布将于2026年11月17日重新开放（此前多年在临时帐篷中经营）。我们尚未确认；最初几周，部分摊位可能仍在搬迁中。",
+        en: "The market has reopened in its renovated building, after years in a temporary tent (confirmed by the WalkBCN team on 14 November 2026). In the first weeks some stalls may still be settling in.",
+        ca: "El mercat ha reobert a l'edifici renovat, després d'anys en una carpa provisional (confirmat per l'equip de WalkBCN el 14 de novembre de 2026). Les primeres setmanes algunes parades encara s'estan instal·lant.",
+        es: "El mercado ha reabierto en su edificio renovado, tras años en una carpa provisional (confirmado por el equipo de WalkBCN el 14 de noviembre de 2026). Las primeras semanas algunos puestos aún se están instalando.",
+        fr: "Le marché a rouvert dans son bâtiment rénové, après des années sous un chapiteau provisoire (confirmé par l'équipe WalkBCN le 14 novembre 2026). Les premières semaines, certains étals s'installent encore.",
+        de: "Der Markt hat in seinem renovierten Gebäude wieder geöffnet, nach Jahren im provisorischen Zelt (vom WalkBCN-Team am 14. November 2026 bestätigt). In den ersten Wochen richten sich manche Stände noch ein.",
+        it: "Il mercato ha riaperto nel suo edificio rinnovato, dopo anni in una tenda provvisoria (confermato dal team di WalkBCN il 14 novembre 2026). Nelle prime settimane alcuni banchi si stanno ancora sistemando.",
+        zh: "市场在临时帐篷中经营多年后，已在翻新后的大楼重新开放（WalkBCN 团队于2026年11月14日确认）。最初几周，部分摊位可能仍在安顿中。",
       } },
   ],
   "via-sepulcral-romana": [

@@ -1393,12 +1393,12 @@
       }
     },
     "mercat-abaceria": {
-      "tip": "Controllate dove si trovano i banchi il giorno della vostra visita: il mercato è stato oggetto di lavori di ristrutturazione.",
+      "tip": "Se ti fermi, compra qualcosa: i banchi sono il sostentamento di chi ci lavora. Nelle prime settimane dopo la riapertura alcuni banchi si stanno ancora sistemando.",
       "stories": {
         "base": {
-          "short": "Questo è il mercato più grande di Gràcia, e dalla fine dell'Ottocento le famiglie del quartiere vengono qui a comprare frutta, pesce e pane. Dopo una lunga ristrutturazione, i banchi potrebbero trovarsi in uno spazio provvisorio qui vicino. In ogni caso, guardate i carrelli della spesa e i clienti abituali: questa è la Gràcia di tutti i giorni, lontana dai percorsi turistici.",
-          "normal": "Questo è il mercato più grande di Gràcia e uno dei mercati di quartiere più frequentati della città: serve le famiglie della zona dalla fine dell'Ottocento. È stato sottoposto a una lunga ristrutturazione, quindi i banchi potrebbero trovarsi in uno spazio provvisorio qui vicino. In ogni caso, è qui che Gràcia compra la frutta, il pesce e il pane, lontano dai percorsi turistici.",
-          "long": "Vi trovate al Mercat de l'Abaceria Central, il mercato più grande di Gràcia e uno dei mercati di quartiere più frequentati di tutta Barcellona. Sfama le famiglie della zona dalla fine dell'Ottocento. Già il nome vi dice a cosa serve. Abaceria è un'antica parola catalana che indica una drogheria, un negozio di alimentari per le provviste di tutti i giorni, ed è esattamente ciò che questo posto è ancora oggi. Il mercato è stato sottoposto a una lunga ristrutturazione, quindi, a seconda di quando venite, i banchi potrebbero lavorare in uno spazio provvisorio qui vicino. Non lasciatevi scoraggiare. Un mercato, in fondo, sono i suoi commercianti e i suoi clienti abituali, non il suo tetto. Prima di entrare, prendetevi un momento per osservare. Guardate chi va e chi viene: anziani del quartiere con i carrelli della spesa a rotelle, genitori con un bambino per mano, qualcuno con una pagnotta sotto il braccio. È qui che Gràcia compra la frutta, il pesce e il pane, lontano dai percorsi turistici, e molti clienti abituali conoscono i loro commercianti per nome. Come gli altri mercati municipali della città, fa parte della routine quotidiana, non è un'attrazione da spuntare dalla lista. Quindi, se entrate, muovetevi con discrezione, tenetevi ai lati dei corridoi e chiedete il permesso prima di fotografare qualcuno. E se qualcosa vi ispira, compratelo. Un frutto mangiato su una panchina qui vicino è uno dei modi più semplici per sentirvi, per qualche minuto, come se abitaste qui."
+          "short": "Questo è il mercato più grande di Gràcia, e dalla fine dell'Ottocento le famiglie del quartiere vengono qui a comprare frutta, pesce e pane. Dopo anni in una tenda provvisoria, ha riaperto nel suo edificio rinnovato nel novembre 2026. In ogni caso, guardate i carrelli della spesa e i clienti abituali: questa è la Gràcia di tutti i giorni, lontana dai percorsi turistici.",
+          "normal": "Questo è il mercato più grande di Gràcia e uno dei mercati di quartiere più frequentati della città: serve le famiglie della zona dalla fine dell'Ottocento. Dopo una lunga ristrutturazione e anni in una tenda provvisoria, ha riaperto nel suo edificio rinnovato nel novembre 2026. In ogni caso, è qui che Gràcia compra la frutta, il pesce e il pane, lontano dai percorsi turistici.",
+          "long": "Vi trovate al Mercat de l'Abaceria Central, il mercato più grande di Gràcia e uno dei mercati di quartiere più frequentati di tutta Barcellona. Sfama le famiglie della zona dalla fine dell'Ottocento. Già il nome vi dice a cosa serve. Abaceria è un'antica parola catalana che indica una drogheria, un negozio di alimentari per le provviste di tutti i giorni, ed è esattamente ciò che questo posto è ancora oggi. Il mercato ha passato anni in una tenda provvisoria durante una lunga ristrutturazione, e nel novembre 2026 i banchi sono tornati in questo edificio rinnovato. Un mercato, in fondo, sono i suoi commercianti e i suoi clienti abituali, non il suo tetto. Prima di entrare, prendetevi un momento per osservare. Guardate chi va e chi viene: anziani del quartiere con i carrelli della spesa a rotelle, genitori con un bambino per mano, qualcuno con una pagnotta sotto il braccio. È qui che Gràcia compra la frutta, il pesce e il pane, lontano dai percorsi turistici, e molti clienti abituali conoscono i loro commercianti per nome. Come gli altri mercati municipali della città, fa parte della routine quotidiana, non è un'attrazione da spuntare dalla lista. Quindi, se entrate, muovetevi con discrezione, tenetevi ai lati dei corridoi e chiedete il permesso prima di fotografare qualcuno. E se qualcosa vi ispira, compratelo. Un frutto mangiato su una panchina qui vicino è uno dei modi più semplici per sentirvi, per qualche minuto, come se abitaste qui."
         },
         "food": {
           "short": "Guardate cosa è ammucchiato più in alto sui banchi: di solito è quello che c'è di meglio in questo momento, perché le esposizioni seguono le stagioni. Gràcia compra qui frutta, pesce e pane dalla fine dell'Ottocento. Prendete un frutto bello maturo da gustare fuori, e lasciate liberi i corridoi.",
@@ -1415,7 +1415,7 @@
       "audio": {
         "base": {
           "file": "audio/it/mercat-abaceria.m4a",
-          "hash": "56999c3029"
+          "hash": "6f18f79607"
         },
         "food": {
           "file": "audio/it/mercat-abaceria--food.m4a",
@@ -2183,6 +2183,23 @@
           "hash": "01b28d7eb2"
         }
       }
+    },
+    "disseny-hub": {
+      "tip": "La piazza fuori è spazio pubblico; il museo ha biglietto e orari. Lascia liberi le piste ciclabili e i sentieri del parco.",
+      "stories": {
+        "base": {
+          "short": "Questo edificio scuro che sembra sospeso nell'aria è il Disseny Hub, sede del Museo del Design di Barcellona dal 2014. La gente lo chiama la spillatrice. Lo ha progettato lo studio MBM, e dentro riunisce le collezioni di quattro musei precedenti: arti decorative, ceramica, tessuti e moda, e arti grafiche.",
+          "normal": "Guarda questo edificio scuro che sembra sospeso nell'aria, con un enorme sbalzo che avanza sopra la piazza. La gente lo chiama la spillatrice. È il Disseny Hub, progettato dallo studio MBM e costruito tra il 2008 e il 2013; dal 2014 ospita il Museu del Disseny, il museo del design di Barcellona. All'interno riunisce le collezioni di quattro musei precedenti: arti decorative, ceramica, tessuti e moda, e arti grafiche, più di settantamila oggetti. Ora guardati intorno. Glòries è stata per decenni un enorme nodo stradale, e poco a poco si sta trasformando in un parco.",
+          "long": "Guarda questo edificio scuro che sembra sospeso nell'aria, con un enorme sbalzo che avanza sopra la piazza. La gente lo chiama la spillatrice, e quando lo vedi di lato capisci perché. È il Disseny Hub, progettato dallo studio MBM, fondato dagli architetti Josep Martorell, Oriol Bohigas e David Mackay, e costruito tra il 2008 e il 2013. All'esterno è rivestito di zinco e grandi vetrate, e una parte dell'edificio si trova sotto il livello della piazza. Dal 2014 ospita il Museu del Disseny, il museo del design di Barcellona. All'interno riunisce le collezioni di quattro musei precedenti, un tempo sparsi per la città: arti decorative, ceramica, tessuti e moda, e arti grafiche, più di settantamila oggetti, dalle sedie agli abiti ai manifesti. Ora guardati intorno. Nel piano dell'Eixample di Ildefons Cerdà, Glòries doveva essere il nuovo centro della città. Per decenni è stata invece un enorme nodo stradale, con il traffico che passava sopra. Poco a poco si sta trasformando in un parco e in un punto d'incontro tra l'Eixample, il Poblenou e il Clot, e l'alta torre arrotondata accanto, la Torre Glòries, ne è diventata un simbolo."
+        }
+      },
+      "srcHash": "manual-b2efc247c0",
+      "audio": {
+        "base": {
+          "file": "audio/it/disseny-hub.m4a",
+          "hash": "d695402cef"
+        }
+      }
     }
   },
   "activities": {
@@ -2197,7 +2214,7 @@
             "tapas": "Tapas",
             "seafood": "Pesce e frutti di mare",
             "rice": "Risi (arrossos)",
-            "esmorzar": "Esmorzar de forquilla (colazione salata)",
+            "esmorzar": "Esmorzar (colazione salata)",
             "menu": "Menú del dia (menù del pranzo)",
             "veggie": "Opzioni vegetariane"
           }
@@ -2257,7 +2274,9 @@
         "Bar Gelida": "Bar di famiglia nell'Eixample dal 1946, oggi gestito dal nipote del fondatore. Nessun menù fisso: una lunga lista di piatti catalani casalinghi, più i piatti del giorno sulla lavagna verso l'una.",
         "Bar Bodega Can Ros": "Bodega fondata nel 1971 da Esteve Ros e gestita dai figli, sede di una colla della festa di Sant Medir. Tapas tradizionali e colazioni salate, in Carrer de Roger de Flor.",
         "La Sosenga": "Piccolo ristorante aperto nel 2023 vicino alla cattedrale, con cucina catalana contemporanea di stagione. Il nome viene da un piatto del ricettario medievale catalano Sent Soví.",
-        "Can Lluís": "Ristorante del Raval fondato nel 1929. Chiuso nel 2021, ha riaperto nel dicembre 2025 con nuovi proprietari, che ne hanno mantenuto la cucina catalana tradizionale. Aperto tutti i giorni a pranzo e a cena."
+        "Can Lluís": "Ristorante del Raval fondato nel 1929. Chiuso nel 2021, ha riaperto nel dicembre 2025 con nuovi proprietari, che ne hanno mantenuto la cucina catalana tradizionale. Aperto tutti i giorni a pranzo e a cena.",
+        "Biocenter": "Ristorante vegetariano di famiglia nel Raval dal 1980, con piatti vegani segnalati in carta e un menù del pranzo nei giorni feriali.",
+        "Veg World India": "Ristorante indiano vegetariano di famiglia a Gràcia dal 2005; la maggior parte del menù è vegana. Chiuso il lunedì."
       }
     },
     "nightlife": {
@@ -2561,5 +2580,5 @@
       }
     }
   },
-  "activitiesHash": "7db13e8075"
+  "activitiesHash": "77cf047399"
 }
