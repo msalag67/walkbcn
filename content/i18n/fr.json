@@ -1480,7 +1480,7 @@
       }
     },
     "bunkers-carmel": {
-      "tip": "Les habitants du quartier souffrent de la foule et du bruit ici en haut : venez plutôt aux heures calmes, et pensez à vérifier les horaires d'ouverture.",
+      "tip": "Un site patrimonial au-dessus de maisons habitées : pas de fête ni de musique, remportez vos déchets et parlez bas en montant.",
       "stories": {
         "base": {
           "short": "Du haut de cette colline, on voit presque toute la ville, de la mer jusqu'aux montagnes. C'est justement pour cette vue que des canons antiaériens ont été installés ici pendant la guerre civile espagnole. Plus tard, des familles qui n'avaient nulle part où vivre ont construit des baraques au milieu des ruines, et elles y sont restées jusqu'à la fin des années 1980. Ces plateformes de béton, c'est ce qu'il en reste.",
@@ -2047,6 +2047,142 @@
           "hash": "7b11537b99"
         }
       }
+    },
+    "biblioteca-arus": {
+      "tip": "C'est une bibliothèque en activité : écoutez l'histoire ici dehors, et à l'intérieur gardez le silence et ne photographiez pas les lecteurs.",
+      "stories": {
+        "base": {
+          "short": "Cherchez l'enseigne en fer : Biblioteca Pública Arús. À sa mort en 1891, l'écrivain et franc-maçon Rossend Arús légua son appartement et ses livres pour créer une bibliothèque destinée aux travailleurs. Elle ouvrit ici en 1895 et conserve aujourd'hui un grand fonds sur le mouvement ouvrier, l'anarchisme et la franc-maçonnerie.",
+          "normal": "Cherchez l'enseigne en fer sur la façade : Biblioteca Pública Arús. Derrière cet immeuble d'apparence ordinaire se cache une bibliothèque née d'un testament. À sa mort en 1891, l'écrivain et franc-maçon Rossend Arús légua son propre appartement et ses livres pour créer une bibliothèque destinée à l'instruction des travailleurs. Elle ouvrit en 1895. Aujourd'hui, ses rayonnages abritent l'un des grands fonds sur le mouvement ouvrier, l'anarchisme et la franc-maçonnerie, et, surprise, une collection consacrée à Sherlock Holmes. Dans le vestibule, une petite statue de la Liberté en bronze accueille les lecteurs. C'est toujours une bibliothèque en activité, une salle de lecture avant d'être un monument.",
+          "long": "Cherchez l'enseigne en fer sur la façade : Biblioteca Pública Arús. Derrière cet immeuble d'apparence ordinaire du passeig de Sant Joan se cache une bibliothèque née d'un testament. À sa mort en 1891, l'écrivain et franc-maçon Rossend Arús demanda à ses exécuteurs testamentaires de transformer son propre appartement et ses livres en une bibliothèque destinée à l'instruction des travailleurs. Elle ouvrit le 24 mars 1895, avec environ vingt-quatre mille volumes. Imaginez ce que cela signifiait alors : un lieu gratuit pour lire, pour des gens qui ne pouvaient pas acheter de livres, dans une ville pleine d'usines et d'idées nouvelles sur le travail, l'éducation et la liberté. Aujourd'hui, la bibliothèque compte quelque soixante-neuf mille volumes et c'est un centre de recherche sur le mouvement ouvrier, l'anarchisme et la franc-maçonnerie, avec des journaux et des brochures introuvables ailleurs. Elle conserve aussi une importante collection consacrée à Sherlock Holmes. Dans le vestibule, au fond de l'entrée, une petite réplique en bronze de la statue de la Liberté accueille les lecteurs. Son histoire a aussi connu des silences : après 1939, elle fut fermée au public et ne rouvrit qu'en 1967. N'oubliez pas que c'est toujours une bibliothèque en activité : on y vient pour étudier."
+        }
+      },
+      "srcHash": "manual-bd05d4911b",
+      "audio": {
+        "base": {
+          "file": "audio/fr/biblioteca-arus.m4a",
+          "hash": "0e6dd06281"
+        }
+      }
+    },
+    "can-framis": {
+      "tip": "La place devant est ouverte à tous ; le musée lui-même a un billet d'entrée et des horaires.",
+      "stories": {
+        "base": {
+          "short": "Cette usine de brique avec sa cheminée était la filature de laine de la famille Framis, à l'époque où le Poblenou était rempli d'usines. Deux de ses trois bâtiments ont été restaurés, le troisième reconstruit en béton. Depuis 2009, c'est un musée de peinture catalane contemporaine de la Fundació Vila Casas.",
+          "normal": "Regardez les bâtiments de brique et la haute cheminée derrière eux. C'était la filature de laine de la famille Framis, à l'époque où le Poblenou était si rempli d'usines qu'on l'appelait le Manchester catalan. Lors de la transformation des anciens terrains industriels, deux des trois bâtiments furent restaurés et le troisième reconstruit en béton, par les architectes de BAAS. Depuis 2009, c'est un musée de peinture contemporaine de la Fundació Vila Casas : environ deux cent cinquante œuvres d'artistes catalans des années 1960 à nos jours. Près de l'entrée, cherchez la sculpture Dell'Arte, de Jaume Plensa.",
+          "long": "Regardez les bâtiments de brique et la haute cheminée derrière eux. C'était la filature de laine de la famille Framis, à l'époque où le Poblenou était si rempli d'usines, de fumée et de logements ouvriers qu'on l'appelait le Manchester catalan. La plupart de ces usines fermèrent dans la seconde moitié du XXe siècle, et les anciens terrains industriels autour de vous sont devenus un quartier de bureaux, d'universités et de logements. Can Framis est l'une des usines qui ont survécu à ce changement. L'architecte Jordi Badia, de BAAS, en restaura deux bâtiments sur trois et reconstruisit le troisième en béton : brique ancienne et béton neuf se côtoient désormais. Remarquez que la partie nouvelle ne cherche pas à imiter l'ancienne. Le 27 avril 2009, le lieu ouvrit comme musée de la Fundació Vila Casas, créée par l'entrepreneur et collectionneur Antoni Vila Casas. À l'intérieur, quelque deux cent cinquante œuvres présentent la peinture catalane des années 1960 à nos jours, sur trois étages et plus de trente salles, avec aussi un espace pour les expositions temporaires. Près de l'entrée se dresse la sculpture Dell'Arte, de Jaume Plensa, offerte au musée en 2012. Une usine qui filait la laine montre aujourd'hui comment les artistes de Catalogne ont vu le monde."
+        }
+      },
+      "srcHash": "manual-f923c047ab",
+      "audio": {
+        "base": {
+          "file": "audio/fr/can-framis.m4a",
+          "hash": "d5ca3625b7"
+        }
+      }
+    },
+    "diposit-aigues": {
+      "tip": "C'est une bibliothèque universitaire : admirez-la depuis la rue et laissez l'entrée libre aux étudiants.",
+      "stories": {
+        "base": {
+          "short": "Ce géant de brique, avec une tour à chaque angle, fut construit entre 1874 et 1880 comme réservoir d'eau. Josep Fontserè, l'architecte du parc de la Ciutadella, le conçut pour alimenter la cascade du parc et arroser ses jardins. Depuis 1999, c'est une bibliothèque de l'Universitat Pompeu Fabra.",
+          "normal": "Regardez cet immense bâtiment de brique avec une tour à chaque angle. Il fut construit entre 1874 et 1880 comme réservoir d'eau, conçu par Josep Fontserè, l'architecte du parc de la Ciutadella, pour alimenter la grande cascade du parc et arroser ses jardins. L'eau était stockée en haut, et dessous une forêt de piliers et d'arcs de brique en portait le poids. Ensuite, le bâtiment eut bien des vies : asile pour les pauvres, entrepôt des pompiers, garage de véhicules de police. Depuis 1999, c'est une bibliothèque de l'Universitat Pompeu Fabra, où les étudiants lisent parmi ces mêmes arcs de brique.",
+          "long": "Regardez cet immense bâtiment de brique avec une tour à chaque angle. Il fut construit entre 1874 et 1880 comme réservoir d'eau, conçu par Josep Fontserè, l'architecte du parc de la Ciutadella situé de l'autre côté de la rue, pour alimenter la grande cascade du parc et arroser ses jardins. L'eau était stockée en haut, et dessous une forêt de piliers et d'arcs de brique portait ce poids énorme. On raconte qu'un jeune étudiant en architecture nommé Antoni Gaudí aida aux calculs. Le réservoir ne resta pas longtemps un réservoir. De 1896 à 1977, le bâtiment fut un asile municipal pour les pauvres : au-dessus de l'entrée de cette rue, on peut encore lire Asilo Municipal del Parque. Puis il devint entrepôt des pompiers, garage de véhicules de police et archive judiciaire. À la fin des années 1980, la réhabilitation fut confiée aux architectes Lluís Clotet et Ignacio Paricio ; l'Universitat Pompeu Fabra l'acheta en 1992 et, en 1999, il ouvrit comme bibliothèque de l'université. Ils conservèrent les piliers et les arcs de brique et placèrent les niveaux de lecture entre eux. En 2024, il fut déclaré bien culturel d'intérêt national. C'est aujourd'hui un lieu d'étude : admirez-le de l'extérieur."
+        }
+      },
+      "srcHash": "manual-de7027000a",
+      "audio": {
+        "base": {
+          "file": "audio/fr/diposit-aigues.m4a",
+          "hash": "19c254ec6f"
+        }
+      }
+    },
+    "escola-industrial": {
+      "tip": "C'est un campus en activité : restez sur les allées ouvertes, n'entrez pas dans les bâtiments et parlez bas près des salles de cours.",
+      "stories": {
+        "base": {
+          "short": "Ces longs bâtiments de brique étaient une usine textile de la famille Batlló, conçue par l'architecte Rafael Guastavino à la fin des années 1860. Au début du XXe siècle, le site fut acheté pour créer l'Escola Industrial, une école pour les techniciens dont la Catalogne industrielle avait besoin. Les murs qui abritaient des métiers à tisser abritent aujourd'hui des salles de cours.",
+          "normal": "Regardez les longs bâtiments de brique autour de vous. À la fin des années 1860, c'était l'usine textile de la famille Batlló, conçue par l'architecte Rafael Guastavino, à une époque où Barcelone se remplissait d'usines. L'usine ne dura pas longtemps. Au début du XXe siècle, le site fut acheté pour créer l'Escola Industrial, une école pour former les ingénieurs et techniciens dont la Catalogne industrielle avait besoin. Cherchez l'horloge qui donne son nom à l'un des bâtiments, l'Edifici del Rellotge. Aujourd'hui, les murs qui abritaient des métiers à tisser abritent des salles de cours, des laboratoires et une résidence étudiante.",
+          "long": "Regardez les longs bâtiments de brique autour de vous, alignés comme des rues. À la fin des années 1860, c'était l'usine textile de la famille Batlló, conçue par l'architecte Rafael Guastavino, alors que l'Eixample grandissait et que Barcelone se couvrait d'usines et de cheminées. L'usine ne dura pas longtemps : elle ferma vers la fin du XIXe siècle. Au début du XXe siècle, un organisme public acheta tout le site pour créer l'Escola Industrial, une école chargée de former les ingénieurs, les techniciens et les ouvriers qualifiés dont la Catalogne industrielle avait besoin. Cette décision a façonné le lieu que vous voyez : au lieu d'être démolie, l'usine devint un campus de près de soixante mille mètres carrés. Cherchez l'horloge qui donne son nom à l'un des bâtiments, l'Edifici del Rellotge. Certaines écoles universitaires ont débuté ici avant de partir vers de plus grands campus, et aujourd'hui le site, propriété de la Diputació de Barcelona, accueille toujours des écoles, des laboratoires et une résidence étudiante. Et l'architecte ? Rafael Guastavino émigra plus tard aux États-Unis, où ses voûtes de brique devinrent célèbres. Ici, son usine de brique continue de faire ce que l'école s'était fixé : enseigner."
+        }
+      },
+      "srcHash": "manual-3a8d76ff2d",
+      "audio": {
+        "base": {
+          "file": "audio/fr/escola-industrial.m4a",
+          "hash": "a816025c68"
+        }
+      }
+    },
+    "farinera-clot": {
+      "tip": "C'est le centre culturel du quartier : laissez l'entrée libre et n'interrompez ni cours ni répétitions.",
+      "stories": {
+        "base": {
+          "short": "Ce bâtiment de brique rouge aux détails de céramique était une minoterie. L'usine moderniste que vous voyez fut construite en 1908 par l'architecte Josep Maria Pericas, et on y fit de la farine jusqu'en 1991. Depuis 1999, c'est un centre culturel géré par les associations du quartier.",
+          "normal": "Regardez ce bâtiment de brique rouge et ses détails de céramique. C'était une minoterie, la Farinera de Sant Jaume. Un moulin fut demandé ici dès 1879, et en 1908 l'architecte Josep Maria Pericas construisit l'usine moderniste que vous voyez. On y fabriqua de la farine jusqu'en 1991. La ville acheta ensuite le terrain, conserva le bâtiment principal et le transforma en centre culturel, ouvert en 1999. Depuis 2004, il est géré par les associations du Clot : le premier centre culturel de Barcelone géré par une fédération d'associations de quartier. Au lieu de farine, il produit aujourd'hui des concerts, des cours et des expositions.",
+          "long": "Regardez ce bâtiment de brique rouge et ses détails de céramique. C'était une minoterie, la Farinera de Sant Jaume, au cœur du Clot, un quartier qui a grandi avec les usines, les voies ferrées et les maisons ouvrières. Un moulin fut demandé ici dès 1879, et en 1908 l'architecte Josep Maria Pericas construisit l'usine moderniste que vous voyez : remarquez que même un bâtiment pour moudre le blé reçut des briques décorées et des céramiques colorées. On y fabriqua de la farine pendant plus de quatre-vingts ans, jusqu'en 1991. À sa fermeture, le quartier aurait pu la perdre. Au contraire, la ville acheta le terrain en 1995. Le silo et les entrepôts furent démolis, un lycée fut construit sur une partie du terrain, et les architectes Carles Sanfeliu et José Abascal restaurèrent le bâtiment principal. Il ouvrit comme centre culturel en mai 1999. Puis vint quelque chose d'inhabituel : depuis 2004, le centre est géré par la fédération des associations du Clot et du Camp de l'Arpa, le premier centre culturel de Barcelone géré par une fédération d'associations. Ainsi, les habitants des alentours décident d'une grande partie de ce qui s'y passe : concerts, théâtre, cours et expositions, d'abord pour le quartier."
+        }
+      },
+      "srcHash": "manual-7b4cffd094",
+      "audio": {
+        "base": {
+          "file": "audio/fr/farinera-clot.m4a",
+          "hash": "018244583c"
+        }
+      }
+    },
+    "sant-pau-del-camp": {
+      "tip": "C'est toujours une église paroissiale : si vous entrez, évitez les heures d'office et parlez bas.",
+      "stories": {
+        "base": {
+          "short": "Cette petite église de pierre est l'un des plus anciens bâtiments de Barcelone. Sant Pau del Camp signifie Saint-Paul-des-Champs : elle se trouvait hors des remparts médiévaux. Pillée en 985, elle fut reconstruite dans le style roman. Regardez le portail : ses deux chapiteaux de marbre sont des pièces wisigothiques réemployées.",
+          "normal": "Regardez la petite église de pierre devant vous : c'est l'un des plus anciens bâtiments de Barcelone. Elle s'appelle Sant Pau del Camp, Saint-Paul-des-Champs, parce qu'elle se dressait en pleine campagne, hors des remparts médiévaux. Le monastère est attesté dès le Xe siècle, et il fut pillé en 985, lorsque les troupes d'al-Mansur attaquèrent Barcelone. Ce que vous voyez aujourd'hui est surtout une reconstruction romane. Regardez maintenant le portail de près : les deux chapiteaux de ses colonnes sont bien plus anciens, des pièces de marbre d'époque wisigothique réemployées. Au-dessus, le Christ trône entre saint Pierre et saint Paul.",
+          "long": "Regardez la petite église de pierre devant vous : c'est l'un des plus anciens bâtiments de Barcelone. Elle s'appelle Sant Pau del Camp, Saint-Paul-des-Champs, car lorsqu'on la construisit, c'était ici la campagne, hors des remparts médiévaux, et le Raval qui vous entoure n'existait pas encore. Le monastère est attesté dès le Xe siècle. En 985, lorsque les troupes d'al-Mansur attaquèrent Barcelone, il fut pillé, et les moines le rebâtirent à partir de la fin du XIe siècle dans le style roman que vous voyez : murs épais, petites fenêtres et très peu de décor. Observez bien le portail. Les deux chapiteaux de ses colonnes sont bien plus anciens que l'église : ce sont des pièces de marbre d'époque wisigothique réemployées par les bâtisseurs. Au-dessus, le Christ en majesté trône entre saint Pierre et saint Paul. À l'intérieur, une inscription funéraire découverte en 1596 est traditionnellement associée au comte Guifred Borrell, mort en 911 et considéré comme le fondateur possible du monastère. Derrière l'église se cache un petit cloître du XIIIe siècle aux arcs polylobés. Les moines partirent en 1835, et en 1879 l'édifice fut déclaré monument national. C'est toujours une église paroissiale."
+        }
+      },
+      "srcHash": "manual-e23005ac70",
+      "audio": {
+        "base": {
+          "file": "audio/fr/sant-pau-del-camp.m4a",
+          "hash": "985b5ef9d0"
+        }
+      }
+    },
+    "sant-pere-puelles": {
+      "tip": "Des habitants vivent tout autour de cette place, et c'est toujours une église : écoutez depuis le côté dégagé, loin des portes et des marches.",
+      "stories": {
+        "base": {
+          "short": "Cette place, et les rues de Sant Pere autour, tiennent leur nom de cette église. Au Xe siècle se trouvait ici un couvent de moniales bénédictines, hors des remparts ; son église fut consacrée en 945. Ne vous fiez pas à son air ancien : l'église a été reconstruite maintes fois, et il reste très peu du premier édifice.",
+          "normal": "Cette place, et les rues de Sant Pere autour, tiennent leur nom de l'église devant vous. Au Xe siècle, le comte Sunyer et la comtesse Riquilda fondèrent ici un couvent de moniales bénédictines, hors des remparts, et son église fut consacrée en 945. On appelait les religieuses les puel·les, du mot latin qui signifie jeunes filles. Ne vous fiez pas à l'air médiéval. Le couvent fut attaqué en 985, une nouvelle église fut consacrée au XIIe siècle, et les incendies de 1909 et de la guerre civile imposèrent d'autres reconstructions. Il reste très peu du premier édifice.",
+          "long": "Cette place, et les trois rues de Sant Pere autour, tiennent leur nom de l'église devant vous. Au Xe siècle, le comte Sunyer et la comtesse Riquilda fondèrent ici un couvent de moniales bénédictines, hors des remparts, et son église fut consacrée en 945. On appelait les religieuses les puel·les, du mot latin qui signifie jeunes filles. Le couvent a façonné tout le quartier : pendant des siècles, maisons, jardins et ateliers ont poussé autour de lui. Ne vous fiez pas à l'air médiéval de la façade. En 985, le couvent fut attaqué lors du raid d'al-Mansur, et le comte Borrell II le restaura. Une nouvelle église, plus grande, fut consacrée au XIIe siècle. En 1835, les religieuses durent partir et le couvent devint une prison ; en 1879, la communauté s'installa à Sarrià, où se trouve toujours son monastère. L'église brûla en 1909, perdant son ancien clocher, et fut de nouveau endommagée pendant la guerre civile. Ce que vous voyez résulte de toutes ces réparations : il reste très peu du premier édifice, même si une chapelle intérieure conserve les vestiges d'une église encore plus ancienne. Lisez donc cette façade comme un bâtiment fait de nombreuses couches, et non comme un seul moment."
+        }
+      },
+      "srcHash": "manual-7b52557c80",
+      "audio": {
+        "base": {
+          "file": "audio/fr/sant-pere-puelles.m4a",
+          "hash": "6f660377da"
+        }
+      }
+    },
+    "via-sepulcral-romana": {
+      "tip": "Pas besoin de billet pour voir les tombes depuis la place : chacun son tour à la balustrade, laissez de la place aux autres.",
+      "stories": {
+        "base": {
+          "short": "Appuyez-vous à la balustrade et regardez en bas : ce sont des tombes romaines. Les Romains enterraient leurs morts hors de la ville, le long des routes qui en sortaient, et c'était l'une des routes quittant Barcino. On y plaça des tombes du Ier au IIIe siècle. Cherchez les pierres en forme de demi-tonneau : ce sont des tombes romaines appelées cupae.",
+          "normal": "Appuyez-vous à la balustrade et regardez en bas : vous voyez des tombes romaines. À l'époque romaine, on enterrait les morts hors de la ville, le long des routes qui en sortaient, et c'était l'une des routes quittant la colonie de Barcino. On y plaça des tombes du Ier au IIIe siècle. Cherchez les pierres en forme de demi-tonneau couchées au sol : ce sont des cupae, un type de tombe romaine. Bien plus tard, un couvent occupa cet endroit. Les vestiges apparurent lors de la reconstruction du terrain après la guerre civile, et on les laissa en place : la place fut construite autour d'eux.",
+          "long": "Appuyez-vous à la balustrade et regardez en bas : vous voyez des tombes romaines. À l'époque romaine, la loi interdisait d'enterrer les morts à l'intérieur de la ville ; les familles plaçaient donc les tombes à l'extérieur, le long des routes, là où chaque voyageur les voyait et se souvenait des noms gravés. C'était l'une de ces routes, une voie secondaire quittant la colonie de Barcino, la ville romaine qui occupait l'actuel quartier gothique. On y plaça des tombes du Ier au IIIe siècle. Observez leurs formes différentes. Les pierres en forme de demi-tonneau couchées au sol sont des cupae, un type de tombe courant dans cette partie du monde romain. D'autres sont de petits autels et des pierres dressées portant des inscriptions. Voyez comme les vestiges sont bas par rapport à la place : cette différence, c'est la terre et la ville accumulées pendant près de deux mille ans. En 1588, un couvent de carmélites fut construit ici. Après les bombardements de la guerre civile, le couvent déménagea, et lors de la reconstruction du terrain, les tombes réapparurent. Au lieu de les retirer, la ville les laissa en place et construisit la place autour d'elles, avec un petit espace d'exposition en dessous."
+        }
+      },
+      "srcHash": "manual-eef56760e5",
+      "audio": {
+        "base": {
+          "file": "audio/fr/via-sepulcral-romana.m4a",
+          "hash": "7403691898"
+        }
+      }
     }
   },
   "activities": {
@@ -2057,10 +2193,13 @@
         "food": {
           "label": "Quel genre de cuisine ?",
           "options": {
-            "catalan": "Classiques catalans",
+            "catalan": "Cuisine catalane",
             "tapas": "Tapas",
-            "seafood": "Fruits de mer et riz",
-            "veggie": "Bonnes options végétariennes"
+            "seafood": "Poissons et fruits de mer",
+            "rice": "Plats de riz (arrossos)",
+            "esmorzar": "Esmorzar de forquilla (petit-déjeuner copieux)",
+            "menu": "Menú del dia (menu du midi)",
+            "veggie": "Options végétariennes"
           }
         },
         "area": {
@@ -2091,8 +2230,6 @@
         "Cal Pep": "On s'installe au comptoir et les tapas de fruits de mer sont cuisinées sous vos yeux. Si c'est aussi populaire, ce n'est pas pour rien : arrivez tôt ou préparez-vous à faire la queue.",
         "Bar del Pla": "Un bar décontracté du Born qui mêle tapas classiques et créatives, avec une belle carte des vins. Les gens du coin l'adorent.",
         "Bar Cañete": "Un bar à comptoir animé et soigné, près de l'opéra du Liceu, qui sert des tapas classiques vraiment très bien faites.",
-        "Teresa Carles": "Un restaurant végétarien qui a fait ses preuves depuis longtemps, près de la Plaça de Catalunya, avec une cuisine méditerranéenne végétale et créative.",
-        "Flax & Kale": "Un restaurant lumineux, tourné vers le bien-manger, de la famille Teresa Carles. Surtout végétal, avec quelques plats de poisson.",
         "Quimet & Quimet": "Un bar familial où l'on mange debout, aux murs tapissés de bouteilles, célèbre pour ses petits montaditos garnis de conserves de la mer de toute première qualité.",
         "Bar Mut": "Un petit bar haut de gamme, avec une ardoise qui change au gré du marché. Idéal pour une soirée un peu spéciale.",
         "Cervecería Catalana": "Un grand bar à tapas plein d'animation, que les habitants comme les visiteurs adorent. Venez tôt ou attendez-vous à patienter.",
@@ -2115,7 +2252,12 @@
         "La Bombeta": "Un bar sans fioritures de la Barceloneta, célèbre pour ses bombas et ses patatas bravas.",
         "Bodega Quimet": "Une vieille bodega de Gràcia, avec ses tonneaux, son vermouth à la pression et ses tapas toutes simples.",
         "Bar Tomàs": "Un bar de quartier à Sarrià, dont les patatas bravas sont, pour beaucoup d'habitants, les meilleures de la ville.",
-        "Bodega l'Electricitat": "Une bodega de la Barceloneta où l'on prend un vermouth et quelques tapas toutes simples, comme les voisins le font le week-end."
+        "Bodega l'Electricitat": "Une bodega de la Barceloneta où l'on prend un vermouth et quelques tapas toutes simples, comme les voisins le font le week-end.",
+        "Can Vilaró": "Bar-restaurant de quartier à Sant Antoni pour la cuisine catalane de toujours, du cap i pota aux petits-déjeuners copieux. Ouvert du lundi au samedi, jusqu'en milieu d'après-midi.",
+        "Bar Gelida": "Bar familial de l'Eixample depuis 1946, tenu aujourd'hui par le petit-fils du fondateur. Pas de menu fixe : une longue liste de plats catalans maison, et les plats du jour à l'ardoise vers 13 h.",
+        "Bar Bodega Can Ros": "Bodega fondée en 1971 par Esteve Ros et tenue par ses fils, siège d'une colla de la fête de Sant Medir. Tapas traditionnelles et petits-déjeuners copieux, Carrer de Roger de Flor.",
+        "La Sosenga": "Petit restaurant ouvert en 2023 près de la cathédrale, cuisine catalane contemporaine de saison. Son nom vient d'un plat du livre de cuisine catalan médiéval Sent Soví.",
+        "Can Lluís": "Restaurant du Raval fondé en 1929. Fermé en 2021, il a rouvert en décembre 2025 avec de nouveaux propriétaires, qui ont gardé sa cuisine catalane traditionnelle. Ouvert tous les jours midi et soir."
       }
     },
     "nightlife": {
@@ -2175,7 +2317,7 @@
         "Bar Marsella": "Ouvert depuis 1820 et célèbre pour son absinthe. Miroirs patinés, bouteilles poussiéreuses et un charme d'antan à revendre.",
         "Jamboree": "Une cave de jazz mythique sur la Plaça Reial. Concerts en soirée, puis ça se transforme en club tard dans la nuit.",
         "Jazz Si Club": "Un minuscule bar musical à petits prix, tenu par une école de musique, avec des jam sessions de styles différents tout au long de la semaine.",
-        "Los Tarantos": "De courts spectacles de flamenco dans une petite salle de la Plaça Reial. Une façon facile de découvrir le flamenco.",
+        "Los Tarantos": "Le plus ancien tablao flamenco de Barcelone, sur la Plaça Reial depuis 1963, avec des spectacles courts d'environ 40 minutes. Le flamenco est né en Andalousie ; à Barcelone, il s'est enraciné avec l'immigration et la communauté gitane de la ville, qui a aussi donné la rumba catalane.",
         "Marula Café": "Un petit club pour le funk, la soul et les rythmes latins. Public sympa, et on danse beaucoup.",
         "Sidecar": "Une salle en sous-sol à côté de la Plaça Reial, pour l'indé et le rock : concerts d'abord, DJ ensuite.",
         "Sala Apolo": "Une salle de bal historique sur le Paral·lel, avec des concerts et différentes soirées à thème selon les jours de la semaine.",
@@ -2336,8 +2478,8 @@
       }
     },
     "shops": {
-      "label": "Boutiques historiques",
-      "intro": "Des boutiques qui font partie de la ville depuis des générations. Y faire vos achats, c'est les aider à rester ouvertes.",
+      "label": "Commerces locaux",
+      "intro": "Des boutiques familiales et indépendantes, certaines ouvertes depuis des générations, d'autres récentes. Y acheter quelque chose les aide à rester ouvertes.",
       "filters": {
         "kind": {
           "label": "Que cherchez-vous ?",
@@ -2356,6 +2498,13 @@
             "seafront": "Front de mer et Poblenou",
             "eixample": "Eixample"
           }
+        },
+        "type": {
+          "label": "Quel genre de boutique ?",
+          "options": {
+            "historic": "Historique (ouverte depuis des générations)",
+            "independent": "Indépendante, plus récente"
+          }
         }
       },
       "places": {
@@ -2371,7 +2520,10 @@
         "Casa Beethoven": "Une boutique de partitions sur la Rambla depuis 1880, qui vend toujours des partitions aux musiciens de toute la ville.",
         "Planelles Donat": "Fabricants de turrón depuis 1850, sur le Portal de l'Àngel ; en été, ils servent aussi de l'horchata et des glaces.",
         "Colmado Quílez": "Une épicerie sur la Rambla de Catalunya depuis 1908, avec des étagères jusqu'au plafond remplies de vins, de conserves et de produits fins.",
-        "Llibreria Altaïr": "Une grande librairie indépendante entièrement consacrée au voyage, aux cartes et aux guides."
+        "Llibreria Altaïr": "Une grande librairie indépendante entièrement consacrée au voyage, aux cartes et aux guides.",
+        "Llibreria Calders": "Librairie indépendante dans une ancienne fabrique de boutons, dans un passage de Sant Antoni dédié à l'écrivain Pere Calders. Beaucoup de livres en catalan et de nombreuses rencontres.",
+        "Queviures Múrria": "Une épicerie de la fin du XIXe siècle, Carrer de Roger de Llúria, avec sa devanture moderniste d'origine et ses réclames sur verre peint. La famille Múrria la tient depuis 1943.",
+        "Torrons La Campana": "Fabricants de turrón depuis 1890, tenus par la même famille depuis quatre générations, au 36 Carrer de la Princesa depuis 1920. L'été, horchata et glaces."
       }
     },
     "sports": {
@@ -2409,5 +2561,5 @@
       }
     }
   },
-  "activitiesHash": "f3687f7932"
+  "activitiesHash": "7db13e8075"
 }

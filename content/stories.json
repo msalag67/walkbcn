@@ -1775,5 +1775,61 @@
       "audio": "audio/la-central.m4a",
       "audioHash": "1739f91d06"
     }
+  },
+  "sant-pau-del-camp": {
+    "variants": {},
+    "base": {
+      "audio": "audio/sant-pau-del-camp.m4a",
+      "audioHash": "651c0ceac0"
+    }
+  },
+  "sant-pere-puelles": {
+    "variants": {},
+    "base": {
+      "audio": "audio/sant-pere-puelles.m4a",
+      "audioHash": "541189c572"
+    }
+  },
+  "biblioteca-arus": {
+    "variants": {},
+    "base": {
+      "audio": "audio/biblioteca-arus.m4a",
+      "audioHash": "c4ed4c3908"
+    }
+  },
+  "via-sepulcral-romana": {
+    "variants": {},
+    "base": {
+      "audio": "audio/via-sepulcral-romana.m4a",
+      "audioHash": "107871e425"
+    }
+  },
+  "escola-industrial": {
+    "variants": {},
+    "base": {
+      "audio": "audio/escola-industrial.m4a",
+      "audioHash": "5bab0486c6"
+    }
+  },
+  "diposit-aigues": {
+    "variants": {},
+    "base": {
+      "audio": "audio/diposit-aigues.m4a",
+      "audioHash": "a72e599f4b"
+    }
+  },
+  "can-framis": {
+    "variants": {},
+    "base": {
+      "audio": "audio/can-framis.m4a",
+      "audioHash": "add2f50aab"
+    }
+  },
+  "farinera-clot": {
+    "variants": {},
+    "base": {
+      "audio": "audio/farinera-clot.m4a",
+      "audioHash": "ee4399fe90"
+    }
   }
 }

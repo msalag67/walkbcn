@@ -1,0 +1,95 @@
+{
+  "id": "can-framis",
+  "tip": {
+    "en": "The square in front is open to everyone; the museum itself has a ticket and opening hours.",
+    "ca": "La plaça del davant és oberta a tothom; el museu té entrada i horaris.",
+    "es": "La plaza de delante está abierta a todo el mundo; el museo tiene entrada y horarios.",
+    "fr": "La place devant est ouverte à tous ; le musée lui-même a un billet d'entrée et des horaires.",
+    "de": "Der Platz davor ist für alle offen; das Museum selbst hat Eintritt und Öffnungszeiten.",
+    "it": "La piazza davanti è aperta a tutti; il museo ha un biglietto e degli orari.",
+    "zh": "门前的广场对所有人开放；博物馆本身需购票，并有开放时间。"
+  },
+  "stories": {
+    "en": {
+      "short": "This brick factory with its chimney was the wool factory of the Framis family, from the days when Poblenou was full of mills. Two of its three buildings were restored and the third rebuilt in concrete. Since 2009 it has been a museum of contemporary Catalan painting, run by the Fundació Vila Casas.",
+      "normal": "Look at the brick buildings and the tall chimney behind them. This was the wool factory of the Framis family, from the days when Poblenou was so full of mills that people called it the Catalan Manchester. When the old industrial land was transformed, two of the three factory buildings were restored and the third was rebuilt in concrete, by the architects of BAAS. Since 2009 it has been a museum of contemporary painting run by the Fundació Vila Casas: around two hundred and fifty works by Catalan artists from the 1960s onwards. By the entrance, look for the sculpture Dell'Arte, by Jaume Plensa.",
+      "long": "Look at the brick buildings and the tall chimney behind them. This was the wool factory of the Framis family, from the days when Poblenou was so full of mills, smoke and workers' housing that people called it the Catalan Manchester. Most of those factories closed in the second half of the 20th century, and the old industrial land around you has been transformed into a district of offices, universities and housing. Can Framis is one of the factories that survived that change. The architect Jordi Badia, of BAAS, restored two of its three buildings and rebuilt the third in concrete, so old brick and new concrete now stand side by side. Notice how the new part does not try to imitate the old one. On 27 April 2009 it opened as a museum of the Fundació Vila Casas, created by the businessman and collector Antoni Vila Casas. Inside, about two hundred and fifty works show Catalan painting from the 1960s onwards, across three floors and more than thirty rooms, with space for temporary exhibitions too. By the entrance stands the sculpture Dell'Arte, by Jaume Plensa, given to the museum in 2012. A factory that once spun wool now shows how artists from Catalonia have seen the world."
+    },
+    "ca": {
+      "short": "Aquesta fàbrica de maó amb xemeneia era la fàbrica de llana de la família Framis, de l'època en què el Poblenou era ple de fàbriques. Dos dels seus tres edificis es van restaurar i el tercer es va refer de formigó. Des del 2009 és un museu de pintura catalana contemporània de la Fundació Vila Casas.",
+      "normal": "Mira els edificis de maó i l'alta xemeneia del darrere. Això era la fàbrica de llana de la família Framis, de l'època en què el Poblenou estava tan ple de fàbriques que li deien el Manchester català. Quan es van transformar els antics terrenys industrials, dos dels tres edificis de la fàbrica es van restaurar i el tercer es va refer de formigó, obra dels arquitectes de BAAS. Des del 2009 és un museu de pintura contemporània de la Fundació Vila Casas: uns dos-cents cinquanta obres d'artistes catalans dels anys seixanta ençà. Al costat de l'entrada, busca l'escultura Dell'Arte, de Jaume Plensa.",
+      "long": "Mira els edificis de maó i l'alta xemeneia del darrere. Això era la fàbrica de llana de la família Framis, de l'època en què el Poblenou estava tan ple de fàbriques, fum i habitatges obrers que li deien el Manchester català. La majoria d'aquelles fàbriques van tancar a la segona meitat del segle XX, i els antics terrenys industrials que t'envolten s'han transformat en un barri d'oficines, universitats i habitatges. Can Framis és una de les fàbriques que van sobreviure a aquest canvi. L'arquitecte Jordi Badia, de BAAS, en va restaurar dos dels tres edificis i va refer el tercer de formigó, de manera que ara el maó antic i el formigó nou conviuen. Fixa't que la part nova no intenta imitar la vella. El 27 d'abril del 2009 va obrir com a museu de la Fundació Vila Casas, creada per l'empresari i col·leccionista Antoni Vila Casas. A dins, unes dos-centes cinquanta obres mostren la pintura catalana dels anys seixanta ençà, en tres plantes i més de trenta sales, amb espai també per a exposicions temporals. Al costat de l'entrada hi ha l'escultura Dell'Arte, de Jaume Plensa, donada al museu el 2012. Una fàbrica que abans filava llana ara mostra com han vist el món els artistes de Catalunya."
+    },
+    "es": {
+      "short": "Esta fábrica de ladrillo con chimenea era la fábrica de lana de la familia Framis, de la época en que el Poblenou estaba lleno de fábricas. Dos de sus tres edificios se restauraron y el tercero se rehízo en hormigón. Desde 2009 es un museo de pintura catalana contemporánea de la Fundació Vila Casas.",
+      "normal": "Mira los edificios de ladrillo y la alta chimenea de detrás. Esto era la fábrica de lana de la familia Framis, de la época en que el Poblenou estaba tan lleno de fábricas que lo llamaban el Manchester catalán. Cuando se transformaron los antiguos terrenos industriales, dos de los tres edificios de la fábrica se restauraron y el tercero se rehízo en hormigón, obra de los arquitectos de BAAS. Desde 2009 es un museo de pintura contemporánea de la Fundació Vila Casas: unas doscientas cincuenta obras de artistas catalanes de los años sesenta en adelante. Junto a la entrada, busca la escultura Dell'Arte, de Jaume Plensa.",
+      "long": "Mira los edificios de ladrillo y la alta chimenea de detrás. Esto era la fábrica de lana de la familia Framis, de la época en que el Poblenou estaba tan lleno de fábricas, humo y viviendas obreras que lo llamaban el Manchester catalán. La mayoría de aquellas fábricas cerraron en la segunda mitad del siglo XX, y los antiguos terrenos industriales que te rodean se han transformado en un barrio de oficinas, universidades y viviendas. Can Framis es una de las fábricas que sobrevivieron a ese cambio. El arquitecto Jordi Badia, de BAAS, restauró dos de sus tres edificios y rehízo el tercero en hormigón, de modo que ahora el ladrillo antiguo y el hormigón nuevo conviven. Fíjate en que la parte nueva no intenta imitar la vieja. El 27 de abril de 2009 abrió como museo de la Fundació Vila Casas, creada por el empresario y coleccionista Antoni Vila Casas. Dentro, unas doscientas cincuenta obras muestran la pintura catalana de los años sesenta en adelante, en tres plantas y más de treinta salas, con espacio también para exposiciones temporales. Junto a la entrada está la escultura Dell'Arte, de Jaume Plensa, donada al museo en 2012. Una fábrica que antes hilaba lana muestra ahora cómo han visto el mundo los artistas de Cataluña."
+    },
+    "fr": {
+      "short": "Cette usine de brique avec sa cheminée était la filature de laine de la famille Framis, à l'époque où le Poblenou était rempli d'usines. Deux de ses trois bâtiments ont été restaurés, le troisième reconstruit en béton. Depuis 2009, c'est un musée de peinture catalane contemporaine de la Fundació Vila Casas.",
+      "normal": "Regardez les bâtiments de brique et la haute cheminée derrière eux. C'était la filature de laine de la famille Framis, à l'époque où le Poblenou était si rempli d'usines qu'on l'appelait le Manchester catalan. Lors de la transformation des anciens terrains industriels, deux des trois bâtiments furent restaurés et le troisième reconstruit en béton, par les architectes de BAAS. Depuis 2009, c'est un musée de peinture contemporaine de la Fundació Vila Casas : environ deux cent cinquante œuvres d'artistes catalans des années 1960 à nos jours. Près de l'entrée, cherchez la sculpture Dell'Arte, de Jaume Plensa.",
+      "long": "Regardez les bâtiments de brique et la haute cheminée derrière eux. C'était la filature de laine de la famille Framis, à l'époque où le Poblenou était si rempli d'usines, de fumée et de logements ouvriers qu'on l'appelait le Manchester catalan. La plupart de ces usines fermèrent dans la seconde moitié du XXe siècle, et les anciens terrains industriels autour de vous sont devenus un quartier de bureaux, d'universités et de logements. Can Framis est l'une des usines qui ont survécu à ce changement. L'architecte Jordi Badia, de BAAS, en restaura deux bâtiments sur trois et reconstruisit le troisième en béton : brique ancienne et béton neuf se côtoient désormais. Remarquez que la partie nouvelle ne cherche pas à imiter l'ancienne. Le 27 avril 2009, le lieu ouvrit comme musée de la Fundació Vila Casas, créée par l'entrepreneur et collectionneur Antoni Vila Casas. À l'intérieur, quelque deux cent cinquante œuvres présentent la peinture catalane des années 1960 à nos jours, sur trois étages et plus de trente salles, avec aussi un espace pour les expositions temporaires. Près de l'entrée se dresse la sculpture Dell'Arte, de Jaume Plensa, offerte au musée en 2012. Une usine qui filait la laine montre aujourd'hui comment les artistes de Catalogne ont vu le monde."
+    },
+    "de": {
+      "short": "Diese Backsteinfabrik mit Schornstein war die Wollspinnerei der Familie Framis, aus der Zeit, als Poblenou voller Fabriken war. Zwei ihrer drei Gebäude wurden restauriert, das dritte in Beton neu gebaut. Seit 2009 ist sie ein Museum für zeitgenössische katalanische Malerei der Fundació Vila Casas.",
+      "normal": "Schau dir die Backsteinbauten und den hohen Schornstein dahinter an. Dies war die Wollfabrik der Familie Framis, aus der Zeit, als Poblenou so voller Fabriken war, dass man es das katalanische Manchester nannte. Als das alte Industriegelände umgestaltet wurde, restaurierten die Architekten von BAAS zwei der drei Fabrikgebäude und bauten das dritte in Beton neu. Seit 2009 ist es ein Museum für zeitgenössische Malerei der Fundació Vila Casas: rund zweihundertfünfzig Werke katalanischer Künstlerinnen und Künstler ab den 1960er-Jahren. Neben dem Eingang steht die Skulptur Dell'Arte von Jaume Plensa.",
+      "long": "Schau dir die Backsteinbauten und den hohen Schornstein dahinter an. Dies war die Wollfabrik der Familie Framis, aus der Zeit, als Poblenou so voller Fabriken, Rauch und Arbeiterwohnungen war, dass man es das katalanische Manchester nannte. Die meisten dieser Fabriken schlossen in der zweiten Hälfte des 20. Jahrhunderts, und das alte Industriegelände um dich herum wurde zu einem Viertel mit Büros, Hochschulen und Wohnungen. Can Framis ist eine der Fabriken, die diesen Wandel überlebt haben. Der Architekt Jordi Badia von BAAS restaurierte zwei der drei Gebäude und baute das dritte in Beton neu, sodass alter Backstein und neuer Beton nun nebeneinanderstehen. Achte darauf, dass der neue Teil den alten nicht nachahmt. Am 27. April 2009 öffnete es als Museum der Fundació Vila Casas, gegründet vom Unternehmer und Sammler Antoni Vila Casas. Drinnen zeigen rund zweihundertfünfzig Werke die katalanische Malerei ab den 1960er-Jahren, auf drei Etagen und in mehr als dreißig Räumen, dazu Platz für Wechselausstellungen. Neben dem Eingang steht die Skulptur Dell'Arte von Jaume Plensa, die dem Museum 2012 geschenkt wurde. Eine Fabrik, die einst Wolle spann, zeigt heute, wie Künstler aus Katalonien die Welt gesehen haben."
+    },
+    "it": {
+      "short": "Questa fabbrica di mattoni con la ciminiera era il lanificio della famiglia Framis, dei tempi in cui il Poblenou era pieno di fabbriche. Due dei suoi tre edifici sono stati restaurati e il terzo ricostruito in cemento. Dal 2009 è un museo di pittura catalana contemporanea della Fundació Vila Casas.",
+      "normal": "Guarda gli edifici di mattoni e l'alta ciminiera dietro di loro. Questo era il lanificio della famiglia Framis, dei tempi in cui il Poblenou era così pieno di fabbriche che lo chiamavano la Manchester catalana. Quando le vecchie aree industriali furono trasformate, gli architetti di BAAS restaurarono due dei tre edifici e ricostruirono il terzo in cemento. Dal 2009 è un museo di pittura contemporanea della Fundació Vila Casas: circa duecentocinquanta opere di artisti catalani dagli anni Sessanta in poi. Accanto all'ingresso, cerca la scultura Dell'Arte di Jaume Plensa.",
+      "long": "Guarda gli edifici di mattoni e l'alta ciminiera dietro di loro. Questo era il lanificio della famiglia Framis, dei tempi in cui il Poblenou era così pieno di fabbriche, fumo e case operaie che lo chiamavano la Manchester catalana. La maggior parte di quelle fabbriche chiuse nella seconda metà del Novecento, e le vecchie aree industriali intorno a te sono diventate un quartiere di uffici, università e abitazioni. Can Framis è una delle fabbriche sopravvissute a questo cambiamento. L'architetto Jordi Badia, dello studio BAAS, ne restaurò due edifici su tre e ricostruì il terzo in cemento, così oggi il vecchio mattone e il nuovo cemento convivono. Nota che la parte nuova non cerca di imitare quella vecchia. Il 27 aprile 2009 aprì come museo della Fundació Vila Casas, creata dall'imprenditore e collezionista Antoni Vila Casas. All'interno, circa duecentocinquanta opere mostrano la pittura catalana dagli anni Sessanta in poi, su tre piani e più di trenta sale, con spazio anche per mostre temporanee. Accanto all'ingresso c'è la scultura Dell'Arte di Jaume Plensa, donata al museo nel 2012. Una fabbrica che un tempo filava la lana oggi mostra come gli artisti della Catalogna hanno visto il mondo."
+    },
+    "zh": {
+      "short": "这座带烟囱的砖砌工厂，原是弗拉米斯（Framis）家族的羊毛厂，建于新村区（Poblenou）遍布工厂的年代。三栋厂房中有两栋被修复，第三栋用混凝土重建。自2009年起，这里是比拉·卡萨斯基金会（Fundació Vila Casas）的加泰罗尼亚当代绘画博物馆。",
+      "normal": "看看这些砖砌厂房和后面高高的烟囱。这里原是弗拉米斯（Framis）家族的羊毛厂；那时新村区（Poblenou）工厂林立，人们称它为“加泰罗尼亚的曼彻斯特”。旧工业用地改造时，BAAS 事务所的建筑师修复了三栋厂房中的两栋，第三栋则用混凝土重建。自2009年起，这里是比拉·卡萨斯基金会（Fundació Vila Casas）的当代绘画博物馆：约二百五十件20世纪60年代以来加泰罗尼亚艺术家的作品。入口旁，找找海梅·普伦萨（Jaume Plensa）的雕塑《Dell'Arte》。",
+      "long": "看看这些砖砌厂房和后面高高的烟囱。这里原是弗拉米斯（Framis）家族的羊毛厂；那时新村区（Poblenou）到处是工厂、烟雾和工人住宅，人们称它为“加泰罗尼亚的曼彻斯特”。这些工厂大多在20世纪下半叶关闭，你周围的旧工业用地已改造成一个有办公室、大学和住宅的城区。弗拉米斯厂是在这场变化中幸存下来的工厂之一。BAAS 事务所的建筑师霍尔迪·巴迪亚（Jordi Badia）修复了三栋厂房中的两栋，第三栋用混凝土重建，于是老砖墙和新混凝土如今并肩而立。注意，新的部分并没有去模仿旧的部分。2009年4月27日，这里作为比拉·卡萨斯基金会（Fundació Vila Casas）的博物馆开放，基金会由企业家、收藏家安东尼·比拉·卡萨斯（Antoni Vila Casas）创立。馆内约二百五十件作品展示了20世纪60年代以来的加泰罗尼亚绘画，分布在三层楼、三十多个展厅中，另有临时展览空间。入口旁矗立着海梅·普伦萨（Jaume Plensa）的雕塑《Dell'Arte》，于2012年捐赠给博物馆。一座曾经纺羊毛的工厂，如今展示着加泰罗尼亚艺术家眼中的世界。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": [],
+    "official": "https://www.fundaciovilacasas.com/en/museum-guided-visit/painting-permanent-collection-the-can-framis-museum/can-framis-museum-barcelona",
+    "img2": "Can Framis BCN.JPG",
+    "look": {
+      "en": "The restored brick buildings, the new concrete one and the factory chimney behind them; Plensa's sculpture by the entrance.",
+      "ca": "Els edificis de maó restaurats, el nou de formigó i la xemeneia de la fàbrica al darrere; l'escultura de Plensa al costat de l'entrada.",
+      "es": "Los edificios de ladrillo restaurados, el nuevo de hormigón y la chimenea de la fábrica detrás; la escultura de Plensa junto a la entrada.",
+      "fr": "Les bâtiments de brique restaurés, le nouveau bâtiment en béton et la cheminée de l'usine derrière ; la sculpture de Plensa près de l'entrée.",
+      "de": "Die restaurierten Backsteinbauten, der neue Betonbau und der Fabrikschornstein dahinter; Plensas Skulptur am Eingang.",
+      "it": "Gli edifici di mattoni restaurati, quello nuovo in cemento e la ciminiera della fabbrica dietro; la scultura di Plensa accanto all'ingresso.",
+      "zh": "修复后的砖砌厂房、新的混凝土建筑和后面的工厂烟囱；入口旁普伦萨的雕塑。"
+    },
+    "listen": {
+      "en": "In the open square in front of the entrance.",
+      "ca": "A la plaça oberta davant de l'entrada.",
+      "es": "En la plaza abierta frente a la entrada.",
+      "fr": "Sur la place dégagée devant l'entrée.",
+      "de": "Auf dem offenen Platz vor dem Eingang.",
+      "it": "Nella piazza aperta davanti all'ingresso.",
+      "zh": "在入口前的开阔广场上收听。"
+    },
+    "access": {
+      "en": "The outside can be enjoyed freely. The museum has a ticket and opening hours (closed on Mondays and in August): check the Fundació Vila Casas website.",
+      "ca": "L'exterior es pot gaudir lliurement. El museu té entrada i horaris (tancat els dilluns i a l'agost): consulta el web de la Fundació Vila Casas.",
+      "es": "El exterior se puede disfrutar libremente. El museo tiene entrada y horarios (cerrado los lunes y en agosto): consulta la web de la Fundació Vila Casas.",
+      "fr": "L'extérieur se découvre librement. Le musée a un billet et des horaires (fermé le lundi et en août) : consultez le site de la Fundació Vila Casas.",
+      "de": "Von außen frei zugänglich. Das Museum hat Eintritt und Öffnungszeiten (montags und im August geschlossen): siehe Website der Fundació Vila Casas.",
+      "it": "L'esterno si può godere liberamente. Il museo ha biglietto e orari (chiuso il lunedì e ad agosto): consulta il sito della Fundació Vila Casas.",
+      "zh": "外部可自由参观。博物馆需购票，有开放时间（周一和8月闭馆）：请查看比拉·卡萨斯基金会官网。"
+    },
+    "cap2": {
+      "en": "The new concrete building, beside the restored brick ones.",
+      "ca": "El nou edifici de formigó, al costat dels de maó restaurats.",
+      "es": "El nuevo edificio de hormigón, junto a los de ladrillo restaurados.",
+      "fr": "Le nouveau bâtiment en béton, à côté des bâtiments de brique restaurés.",
+      "de": "Der neue Betonbau neben den restaurierten Backsteinbauten.",
+      "it": "Il nuovo edificio in cemento, accanto a quelli in mattoni restaurati.",
+      "zh": "新的混凝土建筑，紧挨着修复后的砖砌厂房。"
+    },
+    "sources": [
+      { "url": "https://ca.wikipedia.org/wiki/Museu_Can_Framis", "checked": "2026-11-14" },
+      { "url": "https://www.fundaciovilacasas.com/en/museum-guided-visit/painting-permanent-collection-the-can-framis-museum/can-framis-museum-barcelona", "checked": "2026-11-14" }
+    ]
+  }
+}

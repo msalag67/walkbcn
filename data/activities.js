@@ -1,10 +1,14 @@
 // Activities: hand-picked places, shown by category and filters.
-// No live availability and no booking inside WalkBCN (MVP): "See & book" opens
-// the place on Google Maps, where its own website / booking options are listed.
+// No live availability and no booking inside WalkBCN: "See on Google Maps" opens a Maps
+// search for the place, where its own website and opening times are listed.
 // lat/lng: map position, looked up on OpenStreetMap (Nominatim) by name or address.
-// Every place was checked on OpenStreetMap, which confirms it is registered there,
-// not that it is still open: check before showing this to users.
-// Local businesses only: no chains and no places aimed mainly at expats.
+// Editorial rules: local, family or independent businesses only (no chains, no places aimed
+// mainly at expats), no commissions or affiliate links. Price bands (restaurants) are per
+// person for a meal with one drink, see priceNote. A business's history and its current owners
+// can differ: say so in the description (e.g. Can Lluís, reopened in 2025 by new owners).
+// Places added from 14 Nov 2026 carry `why` (reason for choosing it), `priceEvidence` and
+// `sources` with the date checked; they are maintained in content/manual/_activities.json
+// and applied by scripts/import-manual.mjs. Older places were checked on OpenStreetMap.
 // Nightlife "dress" is a guide (smart / smartcasual / casual); door policies change.
 window.WALKBCN_ACTIVITIES = {
   "restaurants": {
@@ -18,7 +22,7 @@ window.WALKBCN_ACTIVITIES = {
         "options": [
           {
             "id": "catalan",
-            "label": "Catalan classics"
+            "label": "Catalan cooking"
           },
           {
             "id": "tapas",
@@ -26,11 +30,23 @@ window.WALKBCN_ACTIVITIES = {
           },
           {
             "id": "seafood",
-            "label": "Seafood & rice"
+            "label": "Seafood"
+          },
+          {
+            "id": "rice",
+            "label": "Rice dishes (arrossos)"
+          },
+          {
+            "id": "esmorzar",
+            "label": "Esmorzar de forquilla (hearty breakfast)"
+          },
+          {
+            "id": "menu",
+            "label": "Menú del dia (set lunch)"
           },
           {
             "id": "veggie",
-            "label": "Vegetarian-friendly"
+            "label": "Vegetarian options"
           }
         ]
       },
@@ -157,28 +173,6 @@ window.WALKBCN_ACTIVITIES = {
         "desc": "Lively, polished counter bar near the Liceu opera house, serving classic tapas done very well."
       },
       {
-        "name": "Teresa Carles",
-        "lat": 41.38514,
-        "lng": 2.16804,
-        "area": "raval",
-        "price": "2",
-        "food": [
-          "veggie"
-        ],
-        "desc": "Long-running vegetarian restaurant near Plaça de Catalunya with creative, plant-based Mediterranean dishes."
-      },
-      {
-        "name": "Flax & Kale",
-        "lat": 41.38515,
-        "lng": 2.16553,
-        "area": "raval",
-        "price": "2",
-        "food": [
-          "veggie"
-        ],
-        "desc": "Bright, health-focused restaurant from the Teresa Carles family. Mostly plant-based, with a few fish dishes."
-      },
-      {
         "name": "Quimet & Quimet",
         "lat": 41.37422,
         "lng": 2.16574,
@@ -220,9 +214,12 @@ window.WALKBCN_ACTIVITIES = {
         "area": "gracia",
         "price": "2",
         "food": [
-          "catalan"
+          "catalan",
+          "esmorzar",
+          "menu"
         ],
-        "desc": "Next to the Mercat de la Llibertat. Hearty Catalan market cooking, best known for its traditional \"fork breakfasts\"."
+        "desc": "Next to the Mercat de la Llibertat. Hearty Catalan market cooking, best known for its traditional \"fork breakfasts\".",
+        "note": "esmorzar-menu"
       },
       {
         "name": "La Pepita",
@@ -255,7 +252,8 @@ window.WALKBCN_ACTIVITIES = {
         "area": "barceloneta",
         "price": "3",
         "food": [
-          "seafood"
+          "seafood",
+          "rice"
         ],
         "desc": "A Barceloneta classic for over a century, known for seafood, rice dishes and paella."
       },
@@ -311,6 +309,7 @@ window.WALKBCN_ACTIVITIES = {
         "price": "3",
         "food": [
           "seafood",
+          "rice",
           "catalan"
         ],
         "desc": "Opened in 1836 and famous for its rice dishes and paella, served in grand, old-fashioned dining rooms."
@@ -322,7 +321,8 @@ window.WALKBCN_ACTIVITIES = {
         "area": "barceloneta",
         "price": "3",
         "food": [
-          "seafood"
+          "seafood",
+          "rice"
         ],
         "desc": "Seafood and rice dishes by the beach in Barceloneta, run by the same family for decades."
       },
@@ -439,8 +439,157 @@ window.WALKBCN_ACTIVITIES = {
           "tapas"
         ],
         "desc": "Barceloneta bodega for a vermouth and a few simple tapas, the way neighbours do on weekends."
+      },
+      {
+        "name": "Can Vilaró",
+        "lat": 41.3779,
+        "lng": 2.1617,
+        "area": "eixample",
+        "price": "1",
+        "food": [
+          "catalan",
+          "esmorzar"
+        ],
+        "note": "mornings",
+        "why": "Long-running neighbourhood bar-restaurant in Sant Antoni for popular Catalan cooking at fair prices.",
+        "priceEvidence": "Low-priced classic dishes (VilaWeb); a 13 € weekday menu is reported by a third-party guide, not confirmed.",
+        "sources": [
+          {
+            "url": "https://www.vilaweb.cat/noticies/can-vilaro-el-cap-i-pota-i-els-plats-de-sempre-que-mai-no-fallen/",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://barcelona.cat/ciutatcuidadora/es/detail/75990331633",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Neighbourhood bar-restaurant in Sant Antoni for classic Catalan cooking, from cap i pota to hearty fork breakfasts. Open Monday to Saturday, until mid-afternoon."
+      },
+      {
+        "name": "Bar Gelida",
+        "lat": 41.3829,
+        "lng": 2.157,
+        "area": "eixample",
+        "price": "1",
+        "food": [
+          "catalan"
+        ],
+        "why": "Family bar since 1946, run by the founder's grandson, with home-style Catalan dishes.",
+        "priceEvidence": "Most dishes under 6 € (Time Out); average around 15 € (Directo al Paladar).",
+        "sources": [
+          {
+            "url": "https://www.timeout.es/barcelona/es/restaurantes/gelida",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.vilaweb.cat/noticies/del-gelida-al-migrat-cal-que-tot-canvii-perque-tot-continui-igual/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Family bar in the Eixample since 1946, now run by the founder's grandson. No set menu: a long list of home-style Catalan dishes, plus daily specials on the board from about 1 pm."
+      },
+      {
+        "name": "Bar Bodega Can Ros",
+        "lat": 41.405,
+        "lng": 2.1642,
+        "area": "gracia",
+        "price": "1",
+        "food": [
+          "tapas",
+          "esmorzar",
+          "catalan"
+        ],
+        "note": "mornings",
+        "why": "Neighbourhood bodega founded in 1971 and still run by the founder's sons; listed by the city's local-commerce programme.",
+        "priceEvidence": "Neighbourhood bodega prices (city local-commerce listing, Time Out).",
+        "sources": [
+          {
+            "url": "https://ajuntament.barcelona.cat/comerc/en/bar-bodega-can-ros",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.timeout.es/barcelona/es/restaurantes/bar-bodega-can-ros",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Bodega founded in 1971 by Esteve Ros and run by his sons, home to a local Sant Medir festival group. Traditional tapas and fork breakfasts, on Carrer de Roger de Flor."
+      },
+      {
+        "name": "La Sosenga",
+        "lat": 41.386,
+        "lng": 2.1742,
+        "area": "gothic-born",
+        "price": "2",
+        "food": [
+          "catalan"
+        ],
+        "why": "Small independent restaurant (opened 2023) cooking contemporary Catalan food from seasonal produce.",
+        "priceEvidence": "€€ in Time Out's listing.",
+        "sources": [
+          {
+            "url": "https://www.timeout.es/barcelona/es/restaurantes/la-sosenga",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://thisisbarcelona.com/gastronomy/restaurants/la-sosenga",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Small restaurant opened in 2023 near the cathedral, cooking contemporary Catalan food from seasonal produce. Its name comes from a dish in the medieval Catalan cookbook Sent Soví."
+      },
+      {
+        "name": "Can Lluís",
+        "lat": 41.3781,
+        "lng": 2.1654,
+        "area": "raval",
+        "price": "2",
+        "food": [
+          "catalan"
+        ],
+        "why": "Raval restaurant founded in 1929; closed in 2021 and reopened in December 2025 under new owners who kept its traditional Catalan cooking.",
+        "priceEvidence": "Traditional house menu at 28.90 € (New Barcelona Post, Aug 2026).",
+        "sources": [
+          {
+            "url": "https://www.canlluis.com/",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://www.thenewbarcelonapost.com/en/the-resurrection-of-can-lluis-in-barcelona/",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Raval restaurant founded in 1929. It closed in 2021 and reopened in December 2025 with new owners, who kept its traditional Catalan cooking. Open every day for lunch and dinner."
       }
-    ]
+    ],
+    "priceNote": {
+      "en": "Per person for a meal with one drink: € under 20 €, €€ 20–40 €, €€€ over 40 €. A guide, not a quote.",
+      "ca": "Per persona, un àpat amb una beguda: € menys de 20 €, €€ de 20 a 40 €, €€€ més de 40 €. És orientatiu.",
+      "es": "Por persona, una comida con una bebida: € menos de 20 €, €€ de 20 a 40 €, €€€ más de 40 €. Es orientativo.",
+      "fr": "Par personne, un repas avec une boisson : € moins de 20 €, €€ de 20 à 40 €, €€€ plus de 40 €. À titre indicatif.",
+      "de": "Pro Person für ein Essen mit einem Getränk: € unter 20 €, €€ 20–40 €, €€€ über 40 €. Nur ein Richtwert.",
+      "it": "A persona, un pasto con una bevanda: € meno di 20 €, €€ 20–40 €, €€€ oltre 40 €. Solo indicativo.",
+      "zh": "每人一餐含一杯饮料：€ 低于20欧元，€€ 20–40欧元，€€€ 高于40欧元。仅供参考。"
+    },
+    "notes": {
+      "esmorzar-menu": {
+        "en": "Fork breakfasts in the morning and a set lunch on weekdays; check the day's board.",
+        "ca": "Esmorzars de forquilla al matí i menú de migdia entre setmana; mira la pissarra del dia.",
+        "es": "Esmorzars de forquilla por la mañana y menú de mediodía entre semana; mira la pizarra del día.",
+        "fr": "Petits-déjeuners copieux le matin et menu du midi en semaine ; regardez l'ardoise du jour.",
+        "de": "Morgens herzhaftes Frühstück, werktags ein Mittagsmenü; schau auf die Tafel des Tages.",
+        "it": "Colazioni salate al mattino e menù del pranzo nei giorni feriali; guarda la lavagna del giorno.",
+        "zh": "早上供应丰盛早午餐，工作日中午有套餐；请看当天的黑板菜单。"
+      },
+      "mornings": {
+        "en": "Esmorzars are served in the morning; check opening days before going.",
+        "ca": "Els esmorzars se serveixen al matí; consulta els dies d'obertura abans d'anar-hi.",
+        "es": "Los esmorzars se sirven por la mañana; consulta los días de apertura antes de ir.",
+        "fr": "Les esmorzars se servent le matin ; vérifiez les jours d'ouverture avant d'y aller.",
+        "de": "Esmorzars gibt es morgens; prüf vorher die Öffnungstage.",
+        "it": "Gli esmorzars si servono al mattino; controlla i giorni di apertura prima di andare.",
+        "zh": "早午餐在上午供应；出发前请查询营业日。"
+      }
+    }
   },
   "nightlife": {
     "label": "Nightlife",
@@ -699,7 +848,7 @@ window.WALKBCN_ACTIVITIES = {
         "music": [
           "latin"
         ],
-        "desc": "Short flamenco shows in a small room on Plaça Reial. An easy first taste of flamenco.",
+        "desc": "Barcelona's oldest flamenco tablao, on Plaça Reial since 1963, with short shows of about 40 minutes. Flamenco was born in Andalusia; in Barcelona it took root through migration and the city's Roma (gitano) community, which also gave the city Catalan rumba.",
         "style": [
           "casual"
         ],
@@ -1663,9 +1812,9 @@ window.WALKBCN_ACTIVITIES = {
     ]
   },
   "shops": {
-    "label": "Historic shops",
+    "label": "Local shops",
     "img": "060 Casa Gispert, c. Sombrerers 23 (Barcelona).jpg",
-    "intro": "Shops that have been part of the city for generations. Buying here keeps them alive.",
+    "intro": "Family and independent shops, some open for generations, others new. Buying something helps them stay open.",
     "filters": [
       {
         "id": "kind",
@@ -1690,6 +1839,20 @@ window.WALKBCN_ACTIVITIES = {
           {
             "id": "market",
             "label": "Flea market"
+          }
+        ]
+      },
+      {
+        "id": "type",
+        "label": "What kind of shop?",
+        "options": [
+          {
+            "id": "historic",
+            "label": "Historic (open for generations)"
+          },
+          {
+            "id": "independent",
+            "label": "Independent, more recent"
           }
         ]
       },
@@ -1721,7 +1884,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "crafts"
         ],
-        "desc": "A candle shop open since 1761, often called the oldest shop in Barcelona, with a beautiful 19th-century interior."
+        "desc": "A candle shop open since 1761, often called the oldest shop in Barcelona, with a beautiful 19th-century interior.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "La Manual Alpargatera",
@@ -1731,7 +1897,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "crafts"
         ],
-        "desc": "Handmade espadrilles since the 1940s, still made in the traditional way."
+        "desc": "Handmade espadrilles since the 1940s, still made in the traditional way.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Casa Gispert",
@@ -1741,7 +1910,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "food"
         ],
-        "desc": "Nuts, dried fruit and coffee roasted in a wood-fired oven since 1851, in the Born."
+        "desc": "Nuts, dried fruit and coffee roasted in a wood-fired oven since 1851, in the Born.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "El Rei de la Màgia",
@@ -1751,7 +1923,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "crafts"
         ],
-        "desc": "A magic shop open since 1881, full of tricks, posters and history."
+        "desc": "A magic shop open since 1881, full of tricks, posters and history.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Vila Viniteca",
@@ -1761,7 +1936,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "food"
         ],
-        "desc": "A family wine shop in the Born with a huge selection of Catalan and Spanish wines, and a deli next door."
+        "desc": "A family wine shop in the Born with a huge selection of Catalan and Spanish wines, and a deli next door.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Els Encants",
@@ -1771,7 +1949,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "market"
         ],
-        "desc": "One of the oldest flea markets in Europe, now under a huge mirrored roof at Glòries. Open a few days a week."
+        "desc": "One of the oldest flea markets in Europe, now under a huge mirrored roof at Glòries. Open a few days a week.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Herboristeria del Rei",
@@ -1781,7 +1962,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "crafts"
         ],
-        "desc": "A herbalist's shop open since 1823, just off Plaça Reial, with its original carved wooden interior full of drawers and jars."
+        "desc": "A herbalist's shop open since 1823, just off Plaça Reial, with its original carved wooden interior full of drawers and jars.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Ganiveteria Roca",
@@ -1791,7 +1975,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "crafts"
         ],
-        "desc": "A knife and cutlery shop on Plaça del Pi since 1911, with a beautiful Modernista façade."
+        "desc": "A knife and cutlery shop on Plaça del Pi since 1911, with a beautiful Modernista façade.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Sombrereria Mil",
@@ -1801,7 +1988,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "fashion"
         ],
-        "desc": "A traditional hat shop near Plaça Urquinaona, with berets, fedoras and Panama hats."
+        "desc": "A traditional hat shop near Plaça Urquinaona, with berets, fedoras and Panama hats.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Casa Beethoven",
@@ -1811,7 +2001,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "books"
         ],
-        "desc": "A sheet-music shop on the Rambla since 1880, still selling scores to musicians from all over the city."
+        "desc": "A sheet-music shop on the Rambla since 1880, still selling scores to musicians from all over the city.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Planelles Donat",
@@ -1821,7 +2014,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "food"
         ],
-        "desc": "Turrón makers since 1850 on Portal de l'Àngel; in summer they also serve horchata and ice cream."
+        "desc": "Turrón makers since 1850 on Portal de l'Àngel; in summer they also serve horchata and ice cream.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Colmado Quílez",
@@ -1831,7 +2027,10 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "food"
         ],
-        "desc": "A grocery on Rambla de Catalunya since 1908, with shelves to the ceiling full of wines, preserves and delicatessen."
+        "desc": "A grocery on Rambla de Catalunya since 1908, with shelves to the ceiling full of wines, preserves and delicatessen.",
+        "type": [
+          "historic"
+        ]
       },
       {
         "name": "Llibreria Altaïr",
@@ -1841,7 +2040,82 @@ window.WALKBCN_ACTIVITIES = {
         "kind": [
           "books"
         ],
-        "desc": "A large independent bookshop dedicated entirely to travel, maps and guidebooks."
+        "desc": "A large independent bookshop dedicated entirely to travel, maps and guidebooks.",
+        "type": [
+          "independent"
+        ]
+      },
+      {
+        "name": "Llibreria Calders",
+        "lat": 41.3767,
+        "lng": 2.1622,
+        "area": "eixample",
+        "kind": [
+          "books"
+        ],
+        "type": [
+          "independent"
+        ],
+        "why": "Independent bookshop with a strong Catalan-language selection and a cultural programme for its neighbourhood.",
+        "sources": [
+          {
+            "url": "https://www.timeout.com/barcelona/shopping/llibreria-calders",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://ajuntament.barcelona.cat/dones/en/Guide/99400367648",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Independent bookshop in a former button factory, in a small passage of Sant Antoni named after the writer Pere Calders. Many books in Catalan and a busy programme of talks."
+      },
+      {
+        "name": "Queviures Múrria",
+        "lat": 41.3948,
+        "lng": 2.1665,
+        "area": "eixample",
+        "kind": [
+          "food"
+        ],
+        "type": [
+          "historic"
+        ],
+        "why": "Family grocery with its original Modernista shopfront, run by the Múrria family since 1943.",
+        "sources": [
+          {
+            "url": "https://www.barcelonaturisme.com/wv3/en/enjoy/213/six-colmados-where-you-can-purchase-and-taste-gourmet-produce-in-barcelona-.html",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://barcelona.cat/en/conocebcn/pics/queviures-murria-75990074268",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "A grocery from the end of the 19th century on Carrer de Roger de Llúria, with its original Modernista shopfront and painted-glass adverts. The Múrria family has run it since 1943."
+      },
+      {
+        "name": "Torrons La Campana",
+        "lat": 41.3859,
+        "lng": 2.1813,
+        "area": "old-town",
+        "kind": [
+          "food"
+        ],
+        "type": [
+          "historic"
+        ],
+        "why": "Family turrón makers since 1890, the same family for four generations; on Carrer de la Princesa since 1920.",
+        "sources": [
+          {
+            "url": "https://www.timeout.es/barcelona/es/noticias/la-campana-de-barcelona-130-anos-de-horchata-y-turrones-en-el-born-071825",
+            "checked": "2026-11-14"
+          },
+          {
+            "url": "https://es.ara.cat/comer/campana-matriarcado-calle-princesa-endulza-navidad-siglo_1_5234829.html",
+            "checked": "2026-11-14"
+          }
+        ],
+        "desc": "Turrón makers since 1890, run by the same family for four generations, at Carrer de la Princesa, 36 since 1920. In summer, horchata and ice cream."
       }
     ]
   },

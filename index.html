@@ -843,6 +843,60 @@
     .nav { margin-left: 0; width: 100%; }
     .nav button { flex: 1; }
   }
+  /* Practical card: what to look at, where to listen, visiting, sensitivity, second photo */
+  .practical { margin-top: 18px; padding: 14px 16px; background: var(--bg); border-radius: 16px; font-size: 15px; color: var(--navy); }
+  .practical dl { margin: 0; display: grid; gap: 10px; }
+  .practical dt { font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .practical dd { margin: 2px 0 0; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .badges span { font-size: 13px; padding: 3px 10px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--navy); }
+  .badges .out { background: #e5f3ea; border-color: #b8dcc6; color: #1d5c3a; }
+  .badges .sens { background: #fff6d6; border-color: #f0dc92; }
+  .practical .meta { margin-top: 10px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 12px; }
+  .practical .meta a { color: var(--cobalt); }
+  .photo2 { margin: 14px 0 0; }
+  .photo2 img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 12px; display: block; background: var(--mist); }
+  .photo2 figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .photo2.broken { display: none; }
+  .credit-line { font-size: 12px; color: var(--muted); margin: -12px 0 12px; }
+  .credit-line a { color: inherit; }
+  .notice.stale { border-left-color: #c96b00; }
+  .notice .tagline { display: inline-block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 4px; color: #8a5a00; }
+  .report-btn { border: 0; background: none; padding: 14px 0 0; color: var(--muted); font: 500 14px var(--sans); text-decoration: underline; cursor: pointer; }
+  dialog.report { max-width: 440px; border: 0; border-radius: 20px; padding: 22px; color: var(--navy); }
+  dialog.report h2 { margin: 0 0 12px; font-size: 22px; padding: 0; border: 0; }
+  dialog.report label { display: flex; gap: 10px; align-items: center; padding: 8px 0; font-size: 16px; }
+  dialog.report .actions { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 14px; }
+  dialog.report .actions .book { margin-top: 0; }
+  .story.loading { color: var(--muted); font-style: italic; }
+  /* Must-sees */
+  .must { margin-top: 14px; }
+  .must-picked { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .must-picked button { border: 1px solid var(--cobalt); background: var(--accent-soft); color: var(--navy); border-radius: 999px; padding: 6px 12px; font: 500 14px var(--sans); cursor: pointer; min-height: 36px; }
+  .must input { width: 100%; max-width: 420px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; font: 16px var(--sans); background: #fff; color: var(--navy); }
+  .must-results { list-style: none; margin: 6px 0 0; padding: 0; max-width: 420px; }
+  .must-results button { width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--line); background: none; padding: 10px 4px; font: 15px var(--sans); color: var(--navy); cursor: pointer; }
+  .must-results small { color: var(--muted); }
+  /* Route editing */
+  .edit-bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-top: 14px; }
+  .edit-bar .ghost { padding-top: 0; }
+  ol.stops li .edit-actions { display: flex; gap: 6px; margin: 0 0 10px 0; flex-wrap: wrap; }
+  ol.stops li .edit-actions button, ol.stops li .replace-box button { width: auto; min-height: 36px; }
+  ol.stops li .replace-box li button { width: 100%; }
+  ol.stops li .edit-actions button { border: 1px solid var(--line); background: #fff; color: var(--navy); border-radius: 999px; padding: 6px 12px; font: 500 14px var(--sans); cursor: pointer; min-height: 36px; }
+  .replace-box { margin: 0 0 12px; padding: 12px 14px; background: var(--bg); border-radius: 14px; font-size: 15px; }
+  .replace-box p { margin: 0 0 6px; }
+  .replace-box ul { list-style: none; margin: 0; padding: 0; }
+  .replace-box li button { width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--line); background: none; padding: 9px 2px; font: 15px var(--sans); color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; gap: 10px; }
+  .replace-box li small { color: var(--muted); white-space: nowrap; }
+  .replace-box .confirm { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+  .replace-box .confirm .book { margin-top: 0; }
+  .edited-note { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+  /* Activities: price guide, notes, sources */
+  .price-note { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+  .place .note { font-size: 14px; color: var(--navy); margin-top: 8px; }
+  .place .src { font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .place .src a { color: inherit; }
   :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 2px; }
 </style>
 </head>
@@ -934,7 +988,21 @@
       <p class="hint" data-i18n="distHint">Total walking distance.</p>
     </div>
 
+    <!-- Must-sees: up to two stops the route has to include -->
+    <div class="must" id="mustBox">
+      <span class="opt-label" data-i18n="mustTitle">Must-sees (optional)</span>
+      <p class="hint" data-i18n="mustHint">Pick up to 2 places the route must include.</p>
+      <div class="must-picked" id="mustPicked"></div>
+      <input type="search" id="mustQuery" autocomplete="off" enterkeyhint="search">
+      <ul class="must-results" id="mustResults" hidden></ul>
+    </div>
+
     <h2 data-i18n="startFinishTitle">Where do you start and finish?</h2>
+    <div class="opt-row">
+      <span class="opt-label" data-i18n="zoneTitle">Area</span>
+      <div class="chips" id="zoneChips"></div>
+    </div>
+    <p class="hint" data-i18n="zoneHint">Keeps the whole walk in one part of the city.</p>
     <div class="opt-row">
       <span class="opt-label" data-i18n="start">Start</span>
       <div class="chips" id="startChips">
@@ -999,6 +1067,7 @@
     <div class="walk-done" id="walkDone" role="status" hidden></div>
 
     <p class="listened-count" id="listenedCount"></p>
+    <div class="edit-bar"><button type="button" class="ghost" id="editRoute"></button><p class="edited-note" id="editedNote" role="status" hidden></p></div>
     <ol class="stops" id="stopList"></ol>
     <button class="ghost" id="restart" data-i18n="restart">← Change interests</button>
   </section>
@@ -1091,6 +1160,17 @@
       <button type="button" class="close" id="privacyClose" data-i18n="close">Close</button>
     </div>
   </dialog>
+
+  <!-- Report a problem with a stop or a place: opens the team's form, already filled in -->
+  <dialog id="report" class="report" aria-labelledby="reportTitle">
+    <h2 id="reportTitle"></h2>
+    <div id="reportKinds" role="radiogroup"></div>
+    <p class="hint" id="reportHint"></p>
+    <div class="actions">
+      <a class="book" id="reportGo" target="_blank" rel="noopener"></a>
+      <button type="button" class="ghost" id="reportCancel" style="padding-top:0"></button>
+    </div>
+  </dialog>
 </div>
 
 <!-- Fixed bottom bars: mini player while a story plays off-screen; "Create my route" while choosing -->
@@ -1105,12 +1185,13 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg=" crossorigin=""></script>
-<script src="data/stops.js?v=4"></script>
-<script src="data/activities.js?v=7"></script>
-<script src="data/ui.js?v=13"></script>
+<script src="data/stops.js?v=5"></script>
+<script src="data/cards.js?v=1"></script>
+<script src="data/activities.js?v=8"></script>
+<script src="data/ui.js?v=14"></script>
 <script src="data/tips.js?v=2"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
-<script src="content/stories.js?v=7"></script>
+<script src="content/stories.js?v=8"></script>
 <script>
 // Photos come from Wikimedia Commons (free licences); credit links point to each file page.
 const photo = (file, w = 800) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
@@ -1135,7 +1216,7 @@ const THEMES = {
   firstDay:   { img: 'Barcelona - Carrer del Bisbe.jpg', interests: ['architecture', 'history', 'art', 'local'], mode: 'time', minutes: 120,
                 pool: ['santa-maria-del-mar', 'barcelona-cathedral', 'placa-del-rei', 'placa-sant-jaume', 'placa-sant-felip-neri', 'temple-august',
                        'placa-reial', 'liceu', 'font-canaletes', 'palau-de-la-musica-catalana', 'mercat-de-santa-caterina', 'museu-picasso',
-                       'palau-guell', 'antic-hospital', 'port-vell', 'fossar-moreres'] },
+                       'palau-guell', 'antic-hospital', 'port-vell', 'fossar-moreres', 'via-sepulcral-romana', 'sant-pere-puelles'] },
   barca:      { img: '34 Fundació del F.C. Barcelona, c. Montjuïc del Carme.jpg', interests: ['sports', 'history'], mode: 'stops', n: 3,
                 pool: ['gimnas-sole', 'font-canaletes', 'placa-sant-jaume'], act: 'sports' },
   gracia:     { img: 'Young adults sit and talk in Plaza del Sol in Barcelona.jpg', interests: ['local', 'food', 'history', 'architecture'], mode: 'time', minutes: 90,
@@ -1143,10 +1224,46 @@ const THEMES = {
   modernisme: { img: 'Casa Batllo Overview Barcelona Spain cut.jpg', interests: ['architecture', 'art'], mode: 'time', minutes: 150,
                 pool: ['sagrada-familia', 'recinte-modernista-de-sant-pau', 'casa-mila', 'casa-batllo', 'palau-de-la-musica-catalana', 'casa-vicens',
                        'casa-punxes', 'fundacio-tapies', 'palau-guell', 'park-guell', 'arc-de-triomf'] },
+  // The east side: from the workers' library to the flour mill. Dipòsit → Can Framis is a
+  // ~25 min walk with nothing approved in between (Glòries would need review), so this theme
+  // allows one longer leg (legMax) and the route says so.
+  poblenou:   { img: '111 La Farinera del Clot (Barcelona), des del c. Independència.jpg', interests: ['history', 'architecture', 'art'], mode: 'time', minutes: 90,
+                legMax: 30,
+                pool: ['biblioteca-arus', 'parc-estacio-nord', 'diposit-aigues', 'can-framis', 'farinera-clot'] },
 };
 
 const STOPS = window.WALKBCN_STOPS;
 const STORIES = window.WALKBCN_STORIES || {};
+const CARDS = window.WALKBCN_CARDS || {};
+const PHOTOS = window.WALKBCN_PHOTOS || {};
+
+// Areas of the city a walk can be kept in. A stop's area decides its zone, unless the stop
+// says otherwise (e.g. the Dipòsit de les Aigües belongs with the Poblenou–Clot walk).
+const ZONE_OF_AREA = {
+  'Gothic Quarter': 'oldtown', 'El Born': 'oldtown', 'El Raval': 'oldtown', 'Sant Pere': 'oldtown', 'La Rambla': 'oldtown', 'Ciutadella': 'oldtown',
+  'Eixample': 'eixample',
+  'Gràcia': 'gracia', 'El Carmel': 'gracia', 'El Guinardó': 'gracia',
+  'Poblenou': 'poblenou', 'El Clot': 'poblenou',
+  'Port Vell': 'seafront', 'La Barceloneta': 'seafront', 'Vila Olímpica': 'seafront',
+  'Poble-sec': 'poblesec', 'Sant Antoni': 'poblesec',
+};
+const ZONES = ['any', 'oldtown', 'eixample', 'gracia', 'poblenou', 'seafront', 'poblesec'];
+STOPS.forEach(s => { s.zone ||= ZONE_OF_AREA[s.area] || 'any'; });
+
+// ---- Editorial rules from the notices (data/stops.js) ----
+const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+function noticesFor(s) {
+  const day = todayISO();
+  return (window.WALKBCN_NOTICES?.[s.id] || []).filter(n => (!n.from || n.from <= day) && (!n.until || day <= n.until));
+}
+// While a notice with `at` applies (e.g. stalls in a temporary market), routes and directions
+// use that point; the stop keeps its own photo and story. `closed` keeps it out of new routes.
+STOPS.forEach(s => {
+  const moved = noticesFor(s).find(n => n.at);
+  if (moved) { s.home = { lat: s.lat, lng: s.lng }; s.lat = moved.at.lat; s.lng = moved.at.lng; s.movedTo = moved.at.label; }
+  s.closedNow = noticesFor(s).some(n => n.closed);
+});
+const sensitive = (s, kind) => (CARDS[s.id]?.sensitive || []).includes(kind);
 
 // ---- Languages ----
 // Interface texts come from data/ui.js. Stories, tips and Activities texts for each
@@ -1172,13 +1289,14 @@ const interestLabel = id => t(`int_${id}`);
 // Interest names go lower case inside a sentence, except in German and Chinese.
 const inSentence = text => (['de', 'zh'].includes(lang) ? text : text.toLowerCase());
 const langMeta = code => LANGS.find(l => l.code === code);
-const loadingLang = {};
+const loadingLang = {}, langFailed = {};
 function loadLangData(code) {
   if (I18N[code]) return Promise.resolve();
   return (loadingLang[code] ||= new Promise(resolve => {
     const el = document.createElement('script');
-    el.src = `content/i18n/${code}.js?v=4`;
-    el.onload = el.onerror = () => resolve(); // no file yet: English is used instead
+    el.src = `content/i18n/${code}.js?v=5`;
+    el.onload = () => resolve();
+    el.onerror = () => { langFailed[code] = true; resolve(); }; // no file: English is used instead
     document.head.appendChild(el);
   }));
 }
@@ -1236,7 +1354,18 @@ function storyFor(s) {
   return { ...storyText(s, angle), angle, learned: !!angle && angle !== first };
 }
 // The text, recording and tip of one version of a stop's story, in the current language.
+// True while the texts for the current language (or the English short/long versions) are
+// still downloading: the card says so instead of showing the previous language's text.
+const langPending = () => (lang !== 'en' && !I18N[lang] && !!loadingLang[lang] && !langFailed[lang]) ||
+  (lang === 'en' && plan.length !== 'normal' && !I18N.en && !!loadingLang.en && !langFailed.en);
+function storyBlockHtml(st) {
+  if (st.loading) return `<p class="story loading" role="status">${t('storyLoading', { lang: langMeta(lang).name })}</p>`;
+  return `${playerHtml()}
+    <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
+    <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>`;
+}
 function storyText(s, angle = null) {
+  if (langPending()) return { text: '', audio: null, tip: '', speech: langMeta(lang).speech, loading: true };
   const gen = STORIES[s.id] || {};
   const key = angle || 'base';
   const length = plan.length;
@@ -1313,7 +1442,7 @@ addEventListener('scroll', checkBottomBars, { passive: true });
 addEventListener('resize', checkBottomBars);
 document.getElementById('createBarBtn').onclick = () => showRoute();
 // ---- Route options: how long, where to start and finish, pace ----
-const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal', theme: null };
+const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal', theme: null, zone: 'any', must: [] };
 const BCN_CENTER = [41.3874, 2.1686];
 
 // Two-finger zoom on every map.
@@ -1361,6 +1490,38 @@ onChoice('paceSeg', d => { plan.pace = +d.v; });
 onChoice('lengthSeg', d => { plan.length = d.v; if (lang === 'en' && d.v !== 'normal') loadLangData('en'); refreshStoryCard(); });
 document.getElementById('avoidCrowded').onchange = e => { plan.avoidCrowded = e.target.checked; };
 
+// ---- Area: keeps the walk in one part of the city ----
+function renderZones() {
+  const box = document.getElementById('zoneChips');
+  box.innerHTML = ZONES.map(z => `<button type="button" class="chip" data-v="${z}" aria-pressed="${plan.zone === z}">${t(`zone_${z}`)}</button>`).join('');
+  box.querySelectorAll('button').forEach(b => b.onclick = () => { plan.zone = b.dataset.v; renderZones(); setStatus(''); });
+}
+// ---- Must-sees: up to two stops the route has to include ----
+const MUST_MAX = 2;
+const stopById = id => STOPS.find(s => s.id === id);
+function renderMust() {
+  plan.must = (plan.must || []).filter(stopById).slice(0, MUST_MAX);
+  const picked = document.getElementById('mustPicked');
+  picked.innerHTML = plan.must.map(id => `<button type="button" data-id="${id}" aria-label="${escHtml(t('mustRemove', { name: stopById(id).name }))}">${escHtml(stopById(id).name)} ✕</button>`).join('');
+  picked.querySelectorAll('button').forEach(b => b.onclick = () => { plan.must = plan.must.filter(x => x !== b.dataset.id); renderMust(); setStatus(''); });
+  const q = document.getElementById('mustQuery');
+  q.placeholder = t('mustPh'); q.setAttribute('aria-label', t('mustPh'));
+  q.disabled = plan.must.length >= MUST_MAX;
+  if (q.disabled) { q.value = ''; document.getElementById('mustResults').hidden = true; q.placeholder = t('mustMax'); }
+}
+document.getElementById('mustQuery').addEventListener('input', e => {
+  const q = fold(e.target.value.trim());
+  const list = document.getElementById('mustResults');
+  if (q.length < 2) { list.hidden = true; return; }
+  const found = STOPS.filter(s => !plan.must.includes(s.id) && fold(`${s.name} ${s.area}`).includes(q)).slice(0, 6);
+  list.hidden = false;
+  list.innerHTML = found.length ? found.map(s => `<li><button type="button" data-id="${s.id}">${escHtml(s.name)} <small>· ${escHtml(areaName(s.area))}</small></button></li>`).join('') : `<li class="hint">${t('mustNoMatch')}</li>`;
+  list.querySelectorAll('button').forEach(b => b.onclick = () => {
+    plan.must = [...plan.must, b.dataset.id].slice(0, MUST_MAX);
+    e.target.value = ''; list.hidden = true; renderMust(); setStatus('');
+  });
+});
+
 // Put the buttons back in line with `selected`, `plan` and `stopsCount` (themes, restored routes).
 function syncPlanControls() {
   document.querySelectorAll('#interests .tile').forEach(b => b.setAttribute('aria-pressed', selected.has(b.dataset.id)));
@@ -1371,6 +1532,7 @@ function syncPlanControls() {
   ['stops', 'time', 'distance'].forEach(m => { document.getElementById(`panel-${m}`).hidden = m !== plan.mode; });
   document.getElementById('avoidCrowded').checked = !!plan.avoidCrowded;
   document.getElementById('build').disabled = selected.size === 0;
+  renderZones(); renderMust();
   renderThemes();
   updateCreateBar();
 }
@@ -1402,6 +1564,7 @@ function applyTheme(id) {
   plan.mode = th.mode;
   if (th.minutes) plan.minutes = th.minutes;
   if (th.n) stopsCount = th.n;
+  plan.zone = 'any';   // a theme has its own list of places; the area filter would only cut it
   syncPlanControls();
   track('Theme picked', { theme: id });
   document.getElementById('themeActive').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1554,35 +1717,41 @@ function dist(a, b) { // km, haversine
   const h = Math.sin(dLat/2)**2 + Math.cos(a.lat*r) * Math.cos(b.lat*r) * Math.sin(dLng/2)**2;
   return 2 * R * Math.asin(Math.sqrt(h));
 }
+// Places with homes all around (squares, narrow streets) get a small penalty, so they are
+// chosen for what they offer, never as filler between other stops.
 function score(s) {
   const matches = s.tags.filter(t => selected.has(t)).length;
-  return matches ? matches + learningNudge(s) : 0;
+  return matches ? matches + learningNudge(s) - (sensitive(s, 'residential') ? 0.25 : 0) : 0;
 }
 
 // Builds a route from the options. Rules: only stops that match a chosen interest, no
-// leg over 20 min on foot (30 min from a chosen start point to the first stop), stay
-// within the time / distance / stop budget, try to include every chosen interest, and
-// leave enough budget to reach the chosen finish. If too few stops fit, the route is
-// shorter rather than padded with unrelated places.
+// leg over 20 min on foot (30 min from a chosen start point to the first stop; a theme may
+// allow one longer leg), stay within the time / distance / stop budget, try to include
+// every chosen interest, and leave enough budget to reach the chosen finish. If too few
+// stops fit, the route is shorter rather than padded with unrelated places.
+// Also: only stops in the chosen area, never a stop closed by a notice, and the visitor's
+// must-sees are always included (conflicts are explained before building, see mustConflict).
 // Minutes at each stop: the story (about 30 s, 1 min or 2 min) plus a few minutes to look
 // around. Going inside a building and queues are not included (the route screen says so).
 const STOP_MINUTES = { short: 5, normal: 6, long: 8 };
 const stopMinutes = () => STOP_MINUTES[plan.length] || 6;
 const LEG_MAX_MIN = 20;       // longest walk between two stops
 const FIRST_LEG_MAX_MIN = 30; // longest walk from a chosen start point to the first stop
+const fitsOptions = (s, o) => !s.closedNow && !(o.avoidCrowded && s.crowded) && (!o.pool || o.pool.includes(s.id)) && (!o.zone || o.zone === 'any' || s.zone === o.zone);
 function buildRoute(opts) {
-  const o = { mode: 'stops', pace: 4.5, avoidCrowded: false, start: null, end: null, stopMin: stopMinutes(), pool: null, ...(typeof opts === 'number' ? { n: opts } : opts) };
+  const o = { mode: 'stops', pace: 4.5, avoidCrowded: false, start: null, end: null, stopMin: stopMinutes(), pool: null, zone: 'any', must: [], legMax: LEG_MAX_MIN, ...(typeof opts === 'number' ? { n: opts } : opts) };
   const STOP_MIN = o.stopMin;
+  const must = (o.must || []).filter(Boolean);
   const W = 1.2;     // how many "interest points" one km of walking costs
   const COVER = 2;   // bonus for a stop that adds an interest the route doesn't have yet
   const walkMin = km => km * 1.3 / o.pace * 60; // straight-line km -> minutes on foot
-  const target = o.mode === 'stops' ? o.n : 12;
+  const target = o.mode === 'stops' ? Math.max(o.n, must.length) : 12;
   const budgetOk = (km, stops) => {
     if (o.mode === 'time') return walkMin(km) + stops * STOP_MIN <= o.minutes;
     if (o.mode === 'distance') return km * 1.3 <= o.km;
-    return walkMin(km) <= (o.n <= 6 ? 60 : o.n * 10);
+    return walkMin(km) <= (target <= 6 ? 60 : target * 10);
   };
-  const candidates = STOPS.filter(s => score(s) > 0 && !(o.avoidCrowded && s.crowded) && (!o.pool || o.pool.includes(s.id)));
+  const candidates = [...new Set([...must, ...STOPS.filter(s => score(s) > 0 && fitsOptions(s, o))])];
   let best = null;
   for (const seed of o.start ? [null] : candidates) {
     const path = seed ? [seed] : [];
@@ -1591,17 +1760,17 @@ function buildRoute(opts) {
     const finish = () => (o.end === 'loop' ? (o.start || path[0]) : o.end);
     const closeKm = p => { const f = finish() || null; return f ? dist(p, f) : 0; };
     let km = 0;
-    if (seed && !budgetOk(closeKm(seed), 1)) continue;
+    if (seed && !must.length && !budgetOk(closeKm(seed), 1)) continue;
     while (path.length < target) {
       const last = path.length ? path[path.length - 1] : o.start;
-      const legMax = path.length ? LEG_MAX_MIN : FIRST_LEG_MAX_MIN;
+      const legMax = path.length ? o.legMax : Math.max(FIRST_LEG_MAX_MIN, o.legMax);
       let bi = -1, bv = -Infinity;
       left.forEach((s, i) => {
         const d = dist(last, s);
         if (walkMin(d) > legMax + 0.5) return;
         if (!budgetOk(km + d + closeKm(s), path.length + 1)) return;
         const addsInterest = s.tags.some(t => selected.has(t) && !covered.has(t));
-        const v = score(s) * 1.5 + (addsInterest ? COVER : 0) - W * d;
+        const v = score(s) * 1.5 + (addsInterest ? COVER : 0) + (must.includes(s) ? 6 : 0) - W * d;
         if (v > bv) { bv = v; bi = i; }
       });
       if (bi < 0) break;
@@ -1610,10 +1779,36 @@ function buildRoute(opts) {
       path.push(next);
       next.tags.forEach(t => { if (selected.has(t)) covered.add(t); });
     }
+    // Must-sees the greedy walk didn't reach: put each where it adds least walking, then drop
+    // the least useful other stops until the walk fits the time / distance again.
+    for (const m of must) {
+      if (path.includes(m)) continue;
+      let bestAt = path.length, bestAdd = Infinity;
+      for (let i = 0; i <= path.length; i++) {
+        const prev = i ? path[i - 1] : o.start, next = path[i] || null;
+        const add = (prev ? dist(prev, m) : 0) + (next ? dist(m, next) : 0) - (prev && next ? dist(prev, next) : 0);
+        if (add < bestAdd) { bestAdd = add; bestAt = i; }
+      }
+      path.splice(bestAt, 0, m);
+    }
+    const totalOf = () => pathKm(path, o.start) + (path.length ? closeKm(path[path.length - 1]) : 0);
+    while (path.length > must.length && (!budgetOk(totalOf(), path.length) || path.length > target)) {
+      let worst = -1, worstV = Infinity;
+      path.forEach((s, i) => {
+        if (must.includes(s)) return;
+        const prev = i ? path[i - 1] : o.start, next = path[i + 1] || null;
+        const saves = (prev ? dist(prev, s) : 0) + (next ? dist(s, next) : 0) - (prev && next ? dist(prev, next) : 0);
+        const v = score(s) - W * saves;
+        if (v < worstV) { worstV = v; worst = i; }
+      });
+      if (worst < 0) break;
+      path.splice(worst, 1);
+    }
     if (!path.length) continue;
     untangle(path, o.start, finish());
     km = pathKm(path, o.start);
     const totalKm = km + closeKm(path[path.length - 1]);
+    covered.clear(); path.forEach(s => s.tags.forEach(t => { if (selected.has(t)) covered.add(t); }));
     // Prefer routes with more stops (up to what was asked), then more interests, then less walking.
     const value = path.length * 10 + covered.size * COVER + path.reduce((a, s) => a + score(s), 0) * 1.5 - W * totalKm;
     if (!best || value > best.value) best = { path, km: totalKm, value, start: o.start, end: finish() };
@@ -1649,7 +1844,9 @@ function untangle(path, start, end) {
 
 // ---- Step 2 UI ----
 function routeOptionsFromPlan() {
-  const opts = { mode: plan.mode, n: stopsCount, minutes: plan.minutes, km: plan.km, pace: plan.pace, avoidCrowded: plan.avoidCrowded, stopMin: stopMinutes(), pool: THEMES[plan.theme]?.pool || null };
+  const th = THEMES[plan.theme];
+  const opts = { mode: plan.mode, n: stopsCount, minutes: plan.minutes, km: plan.km, pace: plan.pace, avoidCrowded: plan.avoidCrowded, stopMin: stopMinutes(),
+    pool: th?.pool || null, zone: plan.zone || 'any', legMax: th?.legMax || LEG_MAX_MIN, must: (plan.must || []).map(stopById).filter(Boolean) };
   if (plan.start !== 'best') opts.start = plan.startPt;
   opts.end = plan.end === 'loop' ? 'loop' : plan.end === 'map' ? plan.endPt : null;
   return opts;
@@ -1659,9 +1856,11 @@ const pointIcon = (cls, label) => L.divIcon({ className: '', html: `<div class="
 
 // Why no route came out, in words that match the options the visitor picked.
 function explainNoRoute(o) {
-  const all = STOPS.filter(s => score(s) > 0 && (!o.pool || o.pool.includes(s.id)));
+  const all = STOPS.filter(s => score(s) > 0 && (!o.pool || o.pool.includes(s.id)) && !s.closedNow);
   if (!all.length) return { text: t('statusNoRoute') };
-  const free = all.filter(s => !(o.avoidCrowded && s.crowded));
+  if (o.zone && o.zone !== 'any' && !all.some(s => s.zone === o.zone))
+    return { text: t('noRouteZone', { zone: t(`zone_${o.zone}`) }), actions: [{ label: t('zone_any'), run: () => { plan.zone = 'any'; renderZones(); showRoute(); } }] };
+  const free = all.filter(s => !(o.avoidCrowded && s.crowded) && (!o.zone || o.zone === 'any' || s.zone === o.zone));
   if (!free.length) return { text: t('noRouteCrowded'), actions: [{ label: t('allowIcons'), run: () => { document.getElementById('avoidCrowded').click(); showRoute(); } }] };
   const walk = km => km * 1.3 / o.pace * 60;
   if (o.start) {
@@ -1675,6 +1874,33 @@ function explainNoRoute(o) {
   if (o.mode === 'distance') return { text: t('noRouteKm', { km: Math.max(1, Math.ceil(need * 1.3)) }) };
   if (o.mode === 'time') return { text: t('noRouteTime', { t: fmtMin(Math.ceil((walk(need) + o.stopMin) / 15) * 15) }) };
   return { text: t('statusNoRoute') };
+}
+
+// Must-sees that can't fit the other choices: say which choice blocks them and offer the
+// two ways out (change that choice, or drop the must-see). Never silently ignored.
+function mustConflict(o) {
+  const drop = m => ({ label: t('mustDrop', { name: m.name }), run: () => { plan.must = plan.must.filter(id => id !== m.id); renderMust(); showRoute(); } });
+  for (const m of o.must) {
+    if (o.avoidCrowded && m.crowded) return { text: t('mustCrowded', { name: m.name }), actions: [{ label: t('allowIcons'), run: () => { document.getElementById('avoidCrowded').click(); showRoute(); } }, drop(m)] };
+    if (o.zone !== 'any' && m.zone !== o.zone) return { text: t('mustZone', { name: m.name, zone: t(`zone_${o.zone}`) }), actions: [{ label: t('zone_any'), run: () => { plan.zone = 'any'; renderZones(); showRoute(); } }, drop(m)] };
+    if (o.pool && !o.pool.includes(m.id)) return { text: t('mustTheme', { name: m.name }), actions: [{ label: t('themeClear'), run: () => { clearTheme(); showRoute(); } }, drop(m)] };
+  }
+  if (!o.must.length || o.mode === 'stops') return null;
+  // Time or distance: is there room for the must-sees alone (with the start and finish)?
+  const path = untangle([...o.must], o.start, o.end === 'loop' ? (o.start || o.must[0]) : o.end);
+  const fin = o.end === 'loop' ? (o.start || path[0]) : o.end;
+  const km = pathKm(path, o.start) + (fin ? dist(path[path.length - 1], fin) : 0);
+  const walk = km * 1.3 / o.pace * 60;
+  const last = o.must[o.must.length - 1];
+  if (o.mode === 'time' && walk + path.length * o.stopMin > o.minutes) {
+    const need = Math.ceil((walk + path.length * o.stopMin) / 30) * 30;
+    return { text: t('mustTime', { t: fmtMin(need) }), actions: [{ label: t('mustMoreTime', { t: fmtMin(need) }), run: () => { plan.minutes = need; syncPlanControls(); showRoute(); } }, drop(last)] };
+  }
+  if (o.mode === 'distance' && km * 1.3 > o.km) {
+    const need = Math.ceil(km * 1.3);
+    return { text: t('mustTime', { t: `${need} km` }), actions: [{ label: t('mustMoreTime', { t: `${need} km` }), run: () => { plan.km = need; syncPlanControls(); showRoute(); } }, drop(last)] };
+  }
+  return null;
 }
 
 function showRoute() {
@@ -1692,6 +1918,12 @@ function showRoute() {
   }
   routeAngles = {};
   const opts = routeOptionsFromPlan();
+  const clash = mustConflict(opts);
+  if (clash) {
+    setStatus(clash.text, clash.actions);
+    locStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
   const r = buildRoute(opts);
   if (!r.path.length) {
     const why = explainNoRoute(opts);
@@ -1768,15 +2000,16 @@ function drawLine(r) {
     : L.polyline(pts, { color: '#0026b8', weight: 4, dashArray: '2 8', lineCap: 'round' }).addTo(map);
 }
 
-function drawRoute(r, startAt = 0) {
+function drawRoute(r, startAt = 0, keepScroll = false) {
   route = r.path; current = startAt;
   lastRoute = r;
   street = null; streetState = 'loading';
+  if (!keepScroll) { editing = false; replacing = -1; pendingSwap = null; document.getElementById('editedNote').hidden = true; }
 
   document.getElementById('pick').hidden = true;
   document.getElementById('route').hidden = false;
   updateCreateBar();
-  window.scrollTo(0, 0);
+  if (!keepScroll) window.scrollTo(0, 0);
   checkBottomBars();
 
   if (!map) {
@@ -1841,6 +2074,8 @@ function restoreRoute() {
   Object.assign(plan, d.plan || {});
   if (!STOP_MINUTES[plan.length]) plan.length = keep.length;
   if (plan.theme && !THEMES[plan.theme]) plan.theme = null;
+  if (!ZONES.includes(plan.zone)) plan.zone = 'any';
+  plan.must = (Array.isArray(plan.must) ? plan.must : []).filter(id => stopById(id)).slice(0, MUST_MAX);   // removed places drop out
   stopsCount = +d.stopsCount || stopsCount;
   syncPlanControls();
   if (plan.length !== 'normal') loadLangData('en');
@@ -1857,7 +2092,7 @@ function routeFromLink() {
   if (!path.length) return false;
   selected = new Set((m[2] ? decodeURIComponent(m[2]).split(',') : path.flatMap(s => s.tags)).filter(id => INTERESTS.some(i => i.id === id)));
   if (STOP_MINUTES[m[3]]) plan.length = m[3];
-  plan.mode = 'stops'; stopsCount = Math.max(2, Math.min(10, path.length)); plan.start = 'best'; plan.end = 'any'; plan.theme = null;
+  plan.mode = 'stops'; stopsCount = Math.max(2, Math.min(10, path.length)); plan.start = 'best'; plan.end = 'any'; plan.theme = null; plan.zone = 'any'; plan.must = [];
   syncPlanControls();
   routeAngles = {}; walk = { visited: {}, skipped: {}, finished: false };
   drawRoute({ path, km: pathKm(path, null), start: null, end: null }, 0);
@@ -1919,6 +2154,12 @@ function renderRouteTexts() {
   if (plan.mode !== 'stops' && route.length < 2) notes.push(t('noteOne'));
   if (r.end) notes.push(t(plan.end === 'loop' ? 'noteFinishLoop' : 'noteFinish', { m: Math.round(legMin(legKm(r, routePoints(r).length - 2))) }));
   if (plan.avoidCrowded) notes.push(t('noteIcons'));
+  // Legs longer than the usual 20 minutes (only a theme allows them): say so.
+  const longest = Math.max(0, ...routePoints(r).slice(1).map((_, k) => legMin(legKm(r, k))));
+  if (longest > LEG_MAX_MIN + 2) notes.push(t('noteLongLeg', { m: Math.round(longest / 5) * 5 }));
+  const musts = (plan.must || []).map(stopById).filter(s => s && route.includes(s));
+  if (musts.length) notes.push(t('noteMust', { list: musts.map(s => s.name).join(', ') }));
+  if (plan.mode === 'time' && walkMins + atStops < plan.minutes - 20) notes.push(t('noteFits', { t: fmtMin(plan.minutes) }));
   const bold = (key, vars) => t(key, Object.fromEntries(Object.entries(vars).map(([k, v]) => [k, `<b>${v}</b>`])));
   const km = fmtKm(walkKm, streetState !== 'streets');
   document.getElementById('summary').innerHTML =
@@ -1936,18 +2177,94 @@ function renderRouteTexts() {
 // "≈ 2.3 km" for straight-line estimates, "2.4 km" when measured along the streets.
 const fmtNum = n => n.toFixed(1).replace('.', lang === 'en' || lang === 'zh' ? '.' : ',');
 const fmtKm = (km, approx) => `${approx ? '≈ ' : ''}${km < 0.95 ? `${Math.max(10, Math.round(km * 100) * 10)} m` : `${km.toFixed(1).replace('.', lang === 'en' || lang === 'zh' ? '.' : ',')} km`}`;
+// ---- Editing the stops before (or during) the walk ----
+// Remove a stop, or replace it with another one that fits the same choices. The walk is
+// redrawn with new times; stops already visited or skipped keep their progress, and the
+// stops still ahead are reordered so the route doesn't double back.
+let editing = false, replacing = -1, pendingSwap = null;
+function editCandidates(i) {
+  const o = routeOptionsFromPlan();
+  const pts = routePoints(lastRoute);
+  const k = legInto(lastRoute, i);
+  const prev = k >= 0 ? pts[k] : null;
+  const next = route[i + 1] || (lastRoute.end && lastRoute.end !== route[i] ? lastRoute.end : null);
+  const cost = p => (prev ? dist(prev, p) : 0) + (next ? dist(p, next) : 0);
+  const now = cost(route[i]);
+  return STOPS.filter(c => !route.includes(c) && score(c) > 0 && fitsOptions(c, o))
+    .map(c => ({ c, add: legMin((cost(c) - now) * 1.3), leg: Math.max(prev ? legMin(dist(prev, c) * 1.3) : 0, next ? legMin(dist(c, next) * 1.3) : 0) }))
+    .filter(x => x.leg <= (o.legMax || LEG_MAX_MIN) + 5)
+    .sort((a, b) => (a.add - score(a.c) * 2) - (b.add - score(b.c) * 2))
+    .slice(0, 4);
+}
+const detourLabel = m => (m > 2 ? t('detourMore', { m: Math.round(m) }) : m < -2 ? t('detourLess', { m: Math.round(-m) }) : t('detourSame'));
+function applyEdit(path) {
+  if (!path.length) return;
+  const keepId = route[current]?.id;
+  // Visited or skipped stops stay where they are; the ones still ahead are put in a sensible order.
+  const done = s => walk.visited[s.id] || walk.skipped[s.id];
+  const lastDone = path.reduce((k, s, i) => (done(s) ? i : k), -1);
+  const end = plan.end === 'loop' ? (lastRoute.start || path[0]) : lastRoute.end;
+  if (lastDone >= 0 && lastDone < path.length - 2) {
+    const rest = path.slice(lastDone + 1);
+    untangle(rest, path[lastDone], end);
+    path.splice(lastDone + 1, rest.length, ...rest);
+  } else if (lastDone < 0) untangle(path, lastRoute.start, end);
+  const ids = new Set(path.map(s => s.id));
+  for (const key of ['visited', 'skipped']) Object.keys(walk[key]).forEach(id => { if (!ids.has(id)) delete walk[key][id]; });
+  const r = { path, km: pathKm(path, lastRoute.start), start: lastRoute.start, end: plan.end === 'loop' ? (lastRoute.start || path[0]) : lastRoute.end };
+  replacing = -1; pendingSwap = null;
+  const at = Math.max(0, path.findIndex(s => s.id === keepId));
+  drawRoute(r, at, true);
+  const note = document.getElementById('editedNote');
+  note.hidden = false; note.textContent = t('editedNote');
+  track('Route edited', { stops: path.length });
+}
+function renderEditBar() {
+  const b = document.getElementById('editRoute');
+  b.textContent = t(editing ? 'editDone' : 'editRoute');
+  b.setAttribute('aria-pressed', editing);
+  b.onclick = () => { editing = !editing; replacing = -1; pendingSwap = null; renderStopList(); };
+}
 function renderStopList() {
   const list = document.getElementById('stopList');
   list.innerHTML = '';
+  renderEditBar();
   route.forEach((s, i) => {
     const li = document.createElement('li');
     const k = legInto(lastRoute, i);
     const leg = k >= 0 ? t('legWalk', { m: Math.max(1, Math.round(legMin(legKm(lastRoute, k)))) }) : t('legStart');
     const state = walk.visited[s.id] ? `<span class="st visited">${t('visited')}</span>` : walk.skipped[s.id] ? `<span class="st skipped">${t('skipped')}</span>` : '';
-    li.innerHTML = `<button type="button"><span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><span class="n">${i+1}</span><span class="ok" aria-hidden="true">✓</span></span><span class="nm">${escHtml(s.name)}${state}</span><span class="d">${leg}</span></button>`;
+    li.innerHTML = `<button type="button" class="stop-btn"><span class="thumb"><img src="${photo(s.img, 160)}" alt="" loading="lazy"><span class="n">${i+1}</span><span class="ok" aria-hidden="true">✓</span></span><span class="nm">${escHtml(s.name)}${state}</span><span class="d">${leg}</span></button>`;
     li.classList.toggle('visited', !!walk.visited[s.id]);
     li.classList.toggle('skipped', !!walk.skipped[s.id]);
     li.firstChild.onclick = () => { goTo(i); document.getElementById('map').scrollIntoView({ behavior: 'smooth' }); };
+    if (editing) {
+      const acts = document.createElement('div');
+      acts.className = 'edit-actions';
+      acts.innerHTML = `<button type="button" data-a="remove" ${route.length < 2 ? `disabled title="${escHtml(t('editMin'))}"` : ''}>${t('removeStop')}</button><button type="button" data-a="replace" aria-expanded="${replacing === i}">${t('replaceStop')}</button>`;
+      acts.querySelector('[data-a="remove"]').onclick = () => applyEdit(route.filter((_, j) => j !== i));
+      acts.querySelector('[data-a="replace"]').onclick = () => { replacing = replacing === i ? -1 : i; pendingSwap = null; renderStopList(); };
+      li.appendChild(acts);
+      if (replacing === i) {
+        const box = document.createElement('div');
+        box.className = 'replace-box';
+        const opts = editCandidates(i);
+        box.innerHTML = pendingSwap
+          ? `<p>${t('confirmDetour', { m: Math.round(pendingSwap.add), name: escHtml(s.name), other: escHtml(pendingSwap.c.name) })}</p>
+             <div class="confirm"><button type="button" class="book" data-a="yes">${t('confirmYes')}</button><button type="button" class="ghost" data-a="no" style="padding-top:0">${t('cancel')}</button></div>`
+          : `<p>${t('replaceTitle', { name: escHtml(s.name) })}</p>` + (opts.length
+            ? `<ul>${opts.map((x, j) => `<li><button type="button" data-j="${j}"><span>${escHtml(x.c.name)}</span><small>${detourLabel(x.add)}</small></button></li>`).join('')}</ul>`
+            : `<p class="hint">${t('replaceNone')}</p>`);
+        const swap = c => applyEdit(route.map((x, j) => (j === i ? c : x)));
+        box.querySelectorAll('[data-j]').forEach(b => b.onclick = () => {
+          const x = opts[+b.dataset.j];
+          if (x.add > 5) { pendingSwap = x; renderStopList(); } else swap(x.c);   // a real detour: explain first
+        });
+        box.querySelector('[data-a="yes"]')?.addEventListener('click', () => swap(pendingSwap.c));
+        box.querySelector('[data-a="no"]')?.addEventListener('click', () => { pendingSwap = null; renderStopList(); });
+        li.appendChild(box);
+      }
+    }
     list.appendChild(li);
   });
   // Back to the start, or on to the chosen finish, as a last line.
@@ -1958,24 +2275,92 @@ function renderStopList() {
     li.innerHTML = `<span class="pin end">F</span><span class="nm">${t(plan.end === 'loop' ? 'backToStart' : 'toFinish')}</span><span class="d">${t('legWalk', { m: Math.max(1, Math.round(legMin(legKm(lastRoute, k)))) })}</span>`;
     list.appendChild(li);
   }
-  document.querySelectorAll('#stopList button').forEach((b, j) => b.classList.toggle('current', j === current));
+  document.querySelectorAll('#stopList .stop-btn').forEach((b, j) => b.classList.toggle('current', j === current));
   renderListened();
 }
 
 // Neighbourhoods keep their local names; only the English page says "Gothic Quarter".
 const areaName = a => (lang !== 'en' && a === 'Gothic Quarter' ? 'Barri Gòtic' : a);
 const directionsUrl = p => `https://www.google.com/maps/dir/?api=1&destination=${p.lat.toFixed(6)},${p.lng.toFixed(6)}&travelmode=walking`;
-// Notices for a stop that apply today (see WALKBCN_NOTICES in data/stops.js).
-const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
-function noticesFor(s) {
-  const day = todayISO();
-  return (window.WALKBCN_NOTICES?.[s.id] || []).filter(n => (!n.from || n.from <= day) && (!n.until || day <= n.until));
-}
+// A date from the data (YYYY-MM-DD) in the visitor's language.
+const fmtDate = iso => { try { return new Date(`${iso}T12:00:00`).toLocaleDateString(lang, { day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return iso; } };
+// Notices that apply today (noticesFor is defined at the top). An announcement not yet
+// confirmed says so; a notice past its review date says when it was last checked.
 function noticeHtml(s) {
-  return noticesFor(s).map(n => `<div class="notice" role="note">
+  const day = todayISO();
+  return noticesFor(s).map(n => {
+    const stale = n.review && n.review < day;
+    const where = n.go || n.at;
+    return `<div class="notice${stale ? ' stale' : ''}" role="note">
+    ${n.confirmed === false ? `<span class="tagline">${t('noticeAnnounced')}</span>` : ''}
     <p>${escHtml(n.text[lang] || n.text.en)}</p>
-    <p class="notice-meta">${n.go ? `<a href="${directionsUrl(n.go)}" target="_blank" rel="noopener">${t('directionsTo', { place: escHtml(n.go.label) })}</a> · ` : ''}<a href="${n.source}" target="_blank" rel="noopener">${t('noticeSource')}</a> · ${t('noticeChecked', { d: n.checked })}</p>
-  </div>`).join('');
+    ${stale ? `<p class="notice-meta"><b>${t('noticeStale', { d: fmtDate(n.checked) })}</b></p>` : ''}
+    <p class="notice-meta">${where ? `<a href="${directionsUrl(where)}" target="_blank" rel="noopener">${t('directionsTo', { place: escHtml(where.label) })}</a> · ` : ''}<a href="${n.source}" target="_blank" rel="noopener">${t('noticeSource')}</a> · ${t('noticeChecked', { d: fmtDate(n.checked) })}</p>
+  </div>`;
+  }).join('');
+}
+// Photo with author and licence (Wikimedia Commons), sized for the screen. A photo that fails
+// to load hides itself; the card keeps working.
+// Standard Wikimedia thumbnail widths (500, 960): other widths are generated on demand and
+// can be refused (HTTP 429) when many are asked for at once.
+const photoSet = file => `src="${photo(file, 960)}" srcset="${photo(file, 500)} 500w, ${photo(file, 960)} 960w" sizes="(max-width: 640px) 100vw, 720px"`;
+function creditHtml(file) {
+  const c = PHOTOS[file];
+  const who = c ? t('photoBy', { author: escHtml(c.author), licence: escHtml(c.licence || '') }) : t('photoCredit');
+  return `<p class="credit-line"><a href="${credit(file)}" target="_blank" rel="noopener">${who}</a>${c?.licenceUrl ? ` · <a href="${escHtml(c.licenceUrl)}" target="_blank" rel="noopener">${t('licenceLink')}</a>` : ''}</p>`;
+}
+function stopPhotoHtml(s) {
+  return `<figure class="stop-photo">
+      <img ${photoSet(s.img)} alt="${escHtml(s.name)}" onerror="this.closest('figure').classList.add('broken')">
+    </figure>${creditHtml(s.img)}`;
+}
+// The practical card: can you enjoy it from outside, what to look at, where to stand,
+// visiting conditions, a second photo of the detail the story talks about, sources.
+const cardT = o => (o && (o[lang] || o.en)) || '';
+function practicalHtml(s) {
+  const c = CARDS[s.id];
+  if (!c) return '';
+  const badges = [
+    c.outside ? `<span class="out">${t(`outside_${c.outside}`)}</span>` : '',
+    ...(c.sensitive || []).map(k => `<span class="sens">${t(`sens_${k}`)}</span>`),
+  ].join('');
+  const rows = [['lookTitle', c.look], ['listenTitle', c.listen], ['accessTitle', c.access]]
+    .filter(([, v]) => v).map(([k, v]) => `<div><dt>${t(k)}</dt><dd>${escHtml(cardT(v))}</dd></div>`).join('');
+  const checked = (c.sources || []).map(x => x.checked).sort().pop();
+  const p2 = c.img2 ? `<figure class="photo2"><img ${photoSet(c.img2)} alt="${escHtml(cardT(c.cap2) || s.name)}" loading="lazy" onerror="this.closest('figure').classList.add('broken')">
+      <figcaption>${escHtml(cardT(c.cap2))} ${creditHtml(c.img2).replace('class="credit-line"', 'class="credit-line" style="margin:2px 0 0"')}</figcaption></figure>` : '';
+  return `<div class="practical">
+    ${badges ? `<div class="badges" style="margin:0 0 10px">${badges}</div>` : ''}
+    ${rows ? `<dl>${rows}</dl>` : ''}
+    ${p2}
+    ${c.official || checked ? `<div class="meta">${c.official ? `<a href="${escHtml(c.official)}" target="_blank" rel="noopener">${t('officialLink')} ↗</a>` : ''}${checked ? `<span>${t('sourcesChecked', { d: fmtDate(checked) })}</span>` : ''}</div>` : ''}
+  </div>`;
+}
+// "Report a problem": a short form the team already reads (the Tips suggestion form), filled
+// in with the place and the kind of problem. Nothing is published before the team checks it.
+const REPORT_KINDS = ['location', 'closed', 'photo', 'audio', 'text', 'other'];
+const REPORT_FIELD = 'entry.1948554191';   // the form's text question
+function reportBtnHtml() { return /^https:\/\//.test(window.WALKBCN_TIPS?.formUrl || '') ? `<button type="button" class="report-btn" data-report>${t('reportBtn')}</button>` : ''; }
+function openReport(name, ref) {
+  const dlg = document.getElementById('report');
+  document.getElementById('reportTitle').textContent = t('reportTitle', { name });
+  const box = document.getElementById('reportKinds');
+  box.innerHTML = REPORT_KINDS.map((k, i) => `<label><input type="radio" name="reportKind" value="${k}" ${i ? '' : 'checked'}> ${t(`report_${k}`)}</label>`).join('');
+  document.getElementById('reportHint').textContent = t('reportHint');
+  const go = document.getElementById('reportGo');
+  go.textContent = t('reportGo') + ' ↗';
+  const url = () => {
+    const kind = box.querySelector('input:checked')?.value || 'other';
+    const text = `[WalkBCN problem] ${name} (${ref}) · ${UI.en[`report_${kind}`]} · lang ${lang}\nDetails: `;
+    return `${window.WALKBCN_TIPS.formUrl}?usp=pp_url&${REPORT_FIELD}=${encodeURIComponent(text)}`;
+  };
+  go.href = url();
+  box.onchange = () => { go.href = url(); };
+  go.onclick = () => { track('Problem report opened', { ref }); setTimeout(() => dlg.close(), 0); };
+  const cancel = document.getElementById('reportCancel');
+  cancel.textContent = t('cancel');
+  cancel.onclick = () => dlg.close();
+  dlg.showModal();
 }
 function addressHtml(s) { return s.address ? `<div class="stop-address">${escHtml(s.address)}</div>` : ''; }
 // Hand-picked Activities places close to a point (the overview list, one entry per place).
@@ -1998,16 +2383,13 @@ function goTo(i, pan = true) {
   const last = i === route.length - 1;
   const r = lastRoute;
   markers.forEach((m, j) => m.getElement()?.firstChild?.classList.toggle('active', j === i));
-  document.querySelectorAll('#stopList button').forEach((b, j) => b.classList.toggle('current', j === i));
+  document.querySelectorAll('#stopList .stop-btn').forEach((b, j) => b.classList.toggle('current', j === i));
   if (pan) map.panTo([s.lat, s.lng]);
   // Where each button takes you: Google Maps (walking) to this stop; on the last stop, also
   // back to the start or on to the chosen finish.
   const goBack = last && r.end ? (plan.end === 'loop' ? (r.start || route[0]) : r.end) : null;
   document.getElementById('stopCard').innerHTML = `
-    <figure class="stop-photo">
-      <img src="${photo(s.img, 900)}" alt="${escHtml(s.name)}" onerror="this.closest('figure').classList.add('broken')">
-      <a class="credit" href="${credit(s.img)}" target="_blank" rel="noopener">${t('photoCredit')}</a>
-    </figure>
+    ${stopPhotoHtml(s)}
     <div class="stop-head">
       <div class="stop-num">${i+1}</div>
       <div><h3 class="stop-title">${escHtml(s.name)}</h3><div class="stop-area">${escHtml(areaName(s.area))}</div>${addressHtml(s)}</div>
@@ -2021,10 +2403,10 @@ function goTo(i, pan = true) {
     </div>
     ${angleLabel ? `<p class="angle">${t('toldFor', { interest: angleLabel })}</p>` : ''}
     ${st.learned ? `<p class="learned">${t('learned')}</p>` : ''}
-    ${playerHtml()}
-    <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
-    <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>
+    ${storyBlockHtml(st)}
+    ${practicalHtml(s)}
     ${nearHtml(s)}
+    ${reportBtnHtml()}
     <div class="visit-row" role="group" aria-label="${t('visitGroup')}">
       <button type="button" id="markVisited" aria-pressed="${!!walk.visited[s.id]}">${t(walk.visited[s.id] ? 'visitedDone' : 'markVisited')}</button>
       <button type="button" id="skipStop">${t(walk.skipped[s.id] ? 'unskip' : 'skipStop')}</button>
@@ -2043,8 +2425,9 @@ function goTo(i, pan = true) {
     </div>`}`;
   renderRating();
   document.querySelectorAll('.feedback button').forEach(b => b.onclick = () => rateStory(+b.dataset.rating));
+  document.querySelector('#stopCard [data-report]')?.addEventListener('click', () => openReport(s.name, `stop:${s.id}`));
   plRoot = document.getElementById('stopCard');
-  setupPlayer();
+  if (st.loading) playerIdle(); else setupPlayer();
   saveRoute();
   renderWalkDone();
   document.getElementById('prev').onclick = () => goTo(current - 1);
@@ -2404,6 +2787,8 @@ function updateProgress() {
   const mini = document.getElementById('miniProgress');
   if (mini) mini.style.width = `${seek.value / 10}%`;
 }
+// No player on screen (the story is still loading): forget the previous one.
+function playerIdle() { player = null; tts = null; audioKey = null; pstate = 'idle'; speaking = false; updateMini(); }
 function stopAudio() {
   if (player) { player.pause(); savePos(true); }
   if (tts) { tts.run++; savePos(true); }
@@ -2557,6 +2942,8 @@ function openCategory(id, keepSelection = false) {
       };
       g.lastChild.appendChild(c);
     });
+    // What €, €€ and €€€ mean, under the budget filter.
+    if (f.id === 'price' && cat.priceNote) g.insertAdjacentHTML('beforeend', `<p class="price-note">${escHtml(cat.priceNote[lang] || cat.priceNote.en)}</p>`);
     groups.appendChild(g);
   });
   document.getElementById('actPick').hidden = true;
@@ -2608,6 +2995,7 @@ function renderPlaces() {
       `${filterLabel(actCat, x.which)} → ${[].concat(x.p[x.which.id] || []).map(v => optionLabel(cat, x.which.id, v)).filter(Boolean).join(', ') || '—'}`)).join('')}` : '');
   el.querySelectorAll('.book').forEach(a => a.onclick = () => track('Book click', { category: actCat, place: a.dataset.place }));
   el.querySelector('.clear-filters')?.addEventListener('click', clearActFilters);
+  el.querySelectorAll('[data-report-place]').forEach(b => b.onclick = () => openReport(b.dataset.reportPlace, `place:${actCat}`));
   // On the map, alternatives (miss one filter) get a dashed, faded pin and a note,
   // so they are never mistaken for real matches.
   const near = close.length && exact.length < 3 ? close : [];
@@ -2652,7 +3040,10 @@ function placeCard(cat, p, missed = null) {
     <div class="tags">${tags.map(t => `<span>${t}</span>`).join('')}</div>
     <p>${placeDesc(actCat, p)}</p>
     ${p.dress ? `<p class="dress"><b>${t('dressCode')}</b> ${t(`dress_${p.dress}`)}</p>` : ''}
-    <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${p.name}">${t('seeMaps')}</a>
+    ${p.note && cat.notes?.[p.note] ? `<p class="note">${escHtml(cat.notes[p.note][lang] || cat.notes[p.note].en)}</p>` : ''}
+    <a class="book" href="${maps}" target="_blank" rel="noopener" data-place="${escHtml(p.name)}">${t('seeMaps')}</a>
+    ${p.sources?.length ? `<p class="src">${p.sources.map((x, i) => `<a href="${escHtml(x.url)}" target="_blank" rel="noopener">${t('noticeSource')}${p.sources.length > 1 ? ` ${i + 1}` : ''}</a>`).join(' · ')} · ${t('checkedOn', { d: fmtDate(p.sources.map(x => x.checked).sort().pop()) })}</p>` : ''}
+    ${reportBtnHtml().replace('data-report', `data-report-place="${escHtml(p.name)}"`)}
   </article>`;
 }
 
@@ -2942,10 +3333,7 @@ function openGuideStop(s, scroll = true) {
   card.hidden = false;
   card.innerHTML = `
     <button type="button" class="guide-close" id="guideClose" aria-label="${t('guideClose')}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
-    <figure class="stop-photo">
-      <img src="${photo(s.img, 900)}" alt="${escHtml(s.name)}" onerror="this.closest('figure').classList.add('broken')">
-      <a class="credit" href="${credit(s.img)}" target="_blank" rel="noopener">${t('photoCredit')}</a>
-    </figure>
+    ${stopPhotoHtml(s)}
     <div class="stop-head">
       <div class="stop-num guide-icon" style="--c:${c}">${icon}</div>
       <div><h3 class="stop-title">${escHtml(s.name)}</h3><div class="stop-area">${escHtml(areaName(s.area))}${away != null ? ` · ${fmtDist(away)} · ${t('guideWalk', { m: walkMin(away) })}` : ''}</div>${addressHtml(s)}</div>
@@ -2953,12 +3341,13 @@ function openGuideStop(s, scroll = true) {
     </div>
     ${noticeHtml(s)}
     <div class="go-row"><a class="book go" href="${dest}" target="_blank" rel="noopener">${t('directionsHere')}</a></div>
-    ${playerHtml()}
-    <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
-    <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>
-    ${nearHtml(s)}`;
+    ${storyBlockHtml(st)}
+    ${practicalHtml(s)}
+    ${nearHtml(s)}
+    ${reportBtnHtml()}`;
+  card.querySelector('[data-report]')?.addEventListener('click', () => openReport(s.name, `stop:${s.id}`));
   plRoot = card;
-  setupPlayer(s, st);
+  if (st.loading) playerIdle(); else setupPlayer(s, st);
   document.getElementById('guideClose').onclick = closeGuideStop;
   renderGuideNear();
   if (scroll) {
@@ -3045,7 +3434,7 @@ function applyLang() {
   if (actCat && !document.getElementById('actFilters').hidden) openCategory(actCat, true);
   else drawActMap(actItems, false);
   if (!document.getElementById('pickBox').hidden) renderPickTargets();
-  renderThemes();
+  renderThemes(); renderZones(); renderMust();
   if (lastRoute && !document.getElementById('route').hidden) { renderRouteTexts(); renderStopList(); refreshStoryCard(); }
   refreshGuideTexts();
   if (privacy.open) renderPrivacy();
@@ -3056,8 +3445,10 @@ async function setLang(code) {
   stopAudio();
   lang = code;
   try { localStorage.setItem(LANG_KEY, code); } catch (e) {}
+  // Start the download first, so an open story card shows "loading" instead of the old text.
+  const loads = Promise.all([code === 'en' ? null : loadLangData(code), plan.length !== 'normal' ? loadLangData('en') : null]);
   applyLang();
-  await Promise.all([loadLangData(code), plan.length !== 'normal' ? loadLangData('en') : null]);
+  await loads;
   applyLang();
 }
 setLang(lang);

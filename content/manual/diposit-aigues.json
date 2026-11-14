@@ -1,0 +1,95 @@
+{
+  "id": "diposit-aigues",
+  "tip": {
+    "en": "It is a university library: enjoy it from the street and keep the entrance clear for students.",
+    "ca": "És una biblioteca universitària: gaudeix-ne des del carrer i deixa l'entrada lliure per als estudiants.",
+    "es": "Es una biblioteca universitaria: disfrútala desde la calle y deja la entrada libre para los estudiantes.",
+    "fr": "C'est une bibliothèque universitaire : admirez-la depuis la rue et laissez l'entrée libre aux étudiants.",
+    "de": "Es ist eine Universitätsbibliothek: Genieße sie von der Straße aus und halte den Eingang für Studierende frei.",
+    "it": "È una biblioteca universitaria: goditela dalla strada e lascia libero l'ingresso agli studenti.",
+    "zh": "这是一座大学图书馆：请在街上欣赏，并为学生让出入口。"
+  },
+  "stories": {
+    "en": {
+      "short": "This brick giant with a tower at each corner was built between 1874 and 1880 as a water tank. Josep Fontserè, the architect of the Ciutadella park, designed it to feed the park's cascade and water its gardens. Since 1999 it has been a library of the Universitat Pompeu Fabra.",
+      "normal": "Look at this huge brick building with a tower at each corner. It was built between 1874 and 1880 as a water tank, designed by Josep Fontserè, the architect of the Ciutadella park, to feed the park's great cascade and water its gardens. The water was held up on top, and underneath a forest of brick pillars and arches carried its weight. Later the building had many lives: a shelter for poor people, a store for the fire brigade, a garage for police vehicles. Since 1999 it has been a library of the Universitat Pompeu Fabra, where students read among those same brick arches.",
+      "long": "Look at this huge brick building with a tower at each corner. It was built between 1874 and 1880 as a water tank, designed by Josep Fontserè, the architect of the Ciutadella park across the street, to feed the park's great cascade and water its gardens. The water was held up on top, and underneath a forest of brick pillars and arches carried that enormous weight. A young architecture student called Antoni Gaudí is said to have helped with the calculations. The tank did not stay a tank for long. From 1896 to 1977 the building was a municipal shelter for poor people: over the entrance on this street you can still read the old words Asilo Municipal del Parque. Then it became a store for the fire brigade, a garage for police vehicles and a judicial archive. In the late 1980s the architects Lluís Clotet and Ignacio Paricio were asked to rehabilitate it, the Universitat Pompeu Fabra bought it in 1992, and in 1999 it opened as the university's library. They kept the brick pillars and arches and placed the reading floors between them. In 2024 it was declared a cultural asset of national interest. Today it is a place to study, so enjoy it from outside."
+    },
+    "ca": {
+      "short": "Aquest gegant de maó amb una torre a cada cantonada es va construir entre el 1874 i el 1880 com a dipòsit d'aigua. Josep Fontserè, l'arquitecte del parc de la Ciutadella, el va projectar per alimentar la cascada del parc i regar-ne els jardins. Des del 1999 és una biblioteca de la Universitat Pompeu Fabra.",
+      "normal": "Mira aquest enorme edifici de maó amb una torre a cada cantonada. Es va construir entre el 1874 i el 1880 com a dipòsit d'aigua, projectat per Josep Fontserè, l'arquitecte del parc de la Ciutadella, per alimentar la gran cascada del parc i regar-ne els jardins. L'aigua es guardava a dalt, i a sota un bosc de pilars i arcs de maó n'aguantava el pes. Després l'edifici va tenir moltes vides: asil per a gent pobra, magatzem dels bombers, garatge de vehicles de la policia. Des del 1999 és una biblioteca de la Universitat Pompeu Fabra, on els estudiants llegeixen entre els mateixos arcs de maó.",
+      "long": "Mira aquest enorme edifici de maó amb una torre a cada cantonada. Es va construir entre el 1874 i el 1880 com a dipòsit d'aigua, projectat per Josep Fontserè, l'arquitecte del parc de la Ciutadella que tens a l'altra banda del carrer, per alimentar la gran cascada del parc i regar-ne els jardins. L'aigua es guardava a dalt, i a sota un bosc de pilars i arcs de maó n'aguantava l'enorme pes. Es diu que un jove estudiant d'arquitectura anomenat Antoni Gaudí va ajudar en els càlculs. El dipòsit no va ser dipòsit gaire temps. Del 1896 al 1977 l'edifici va ser un asil municipal per a gent pobra: damunt de l'entrada d'aquest carrer encara s'hi pot llegir Asilo Municipal del Parque. Després va ser magatzem dels bombers, garatge de vehicles de la policia i arxiu judicial. A finals dels anys vuitanta es va encarregar la rehabilitació als arquitectes Lluís Clotet i Ignacio Paricio, la Universitat Pompeu Fabra el va comprar el 1992, i el 1999 va obrir com a biblioteca de la universitat. Van conservar els pilars i els arcs de maó i hi van col·locar les plantes de lectura entremig. El 2024 va ser declarat bé cultural d'interès nacional. Avui és un lloc per estudiar, així que gaudeix-ne des de fora."
+    },
+    "es": {
+      "short": "Este gigante de ladrillo con una torre en cada esquina se construyó entre 1874 y 1880 como depósito de agua. Josep Fontserè, el arquitecto del parque de la Ciutadella, lo proyectó para alimentar la cascada del parque y regar sus jardines. Desde 1999 es una biblioteca de la Universitat Pompeu Fabra.",
+      "normal": "Mira este enorme edificio de ladrillo con una torre en cada esquina. Se construyó entre 1874 y 1880 como depósito de agua, proyectado por Josep Fontserè, el arquitecto del parque de la Ciutadella, para alimentar la gran cascada del parque y regar sus jardines. El agua se guardaba arriba, y debajo un bosque de pilares y arcos de ladrillo sostenía su peso. Después el edificio tuvo muchas vidas: asilo para gente pobre, almacén de los bomberos, garaje de vehículos de la policía. Desde 1999 es una biblioteca de la Universitat Pompeu Fabra, donde los estudiantes leen entre esos mismos arcos de ladrillo.",
+      "long": "Mira este enorme edificio de ladrillo con una torre en cada esquina. Se construyó entre 1874 y 1880 como depósito de agua, proyectado por Josep Fontserè, el arquitecto del parque de la Ciutadella que tienes al otro lado de la calle, para alimentar la gran cascada del parque y regar sus jardines. El agua se guardaba arriba, y debajo un bosque de pilares y arcos de ladrillo sostenía ese enorme peso. Se dice que un joven estudiante de arquitectura llamado Antoni Gaudí ayudó con los cálculos. El depósito no fue depósito mucho tiempo. De 1896 a 1977 el edificio fue un asilo municipal para gente pobre: encima de la entrada de esta calle aún se puede leer Asilo Municipal del Parque. Después fue almacén de los bomberos, garaje de vehículos de la policía y archivo judicial. A finales de los ochenta se encargó la rehabilitación a los arquitectos Lluís Clotet e Ignacio Paricio, la Universitat Pompeu Fabra lo compró en 1992, y en 1999 abrió como biblioteca de la universidad. Conservaron los pilares y arcos de ladrillo y colocaron las plantas de lectura entre ellos. En 2024 fue declarado bien cultural de interés nacional. Hoy es un lugar para estudiar, así que disfrútalo desde fuera."
+    },
+    "fr": {
+      "short": "Ce géant de brique, avec une tour à chaque angle, fut construit entre 1874 et 1880 comme réservoir d'eau. Josep Fontserè, l'architecte du parc de la Ciutadella, le conçut pour alimenter la cascade du parc et arroser ses jardins. Depuis 1999, c'est une bibliothèque de l'Universitat Pompeu Fabra.",
+      "normal": "Regardez cet immense bâtiment de brique avec une tour à chaque angle. Il fut construit entre 1874 et 1880 comme réservoir d'eau, conçu par Josep Fontserè, l'architecte du parc de la Ciutadella, pour alimenter la grande cascade du parc et arroser ses jardins. L'eau était stockée en haut, et dessous une forêt de piliers et d'arcs de brique en portait le poids. Ensuite, le bâtiment eut bien des vies : asile pour les pauvres, entrepôt des pompiers, garage de véhicules de police. Depuis 1999, c'est une bibliothèque de l'Universitat Pompeu Fabra, où les étudiants lisent parmi ces mêmes arcs de brique.",
+      "long": "Regardez cet immense bâtiment de brique avec une tour à chaque angle. Il fut construit entre 1874 et 1880 comme réservoir d'eau, conçu par Josep Fontserè, l'architecte du parc de la Ciutadella situé de l'autre côté de la rue, pour alimenter la grande cascade du parc et arroser ses jardins. L'eau était stockée en haut, et dessous une forêt de piliers et d'arcs de brique portait ce poids énorme. On raconte qu'un jeune étudiant en architecture nommé Antoni Gaudí aida aux calculs. Le réservoir ne resta pas longtemps un réservoir. De 1896 à 1977, le bâtiment fut un asile municipal pour les pauvres : au-dessus de l'entrée de cette rue, on peut encore lire Asilo Municipal del Parque. Puis il devint entrepôt des pompiers, garage de véhicules de police et archive judiciaire. À la fin des années 1980, la réhabilitation fut confiée aux architectes Lluís Clotet et Ignacio Paricio ; l'Universitat Pompeu Fabra l'acheta en 1992 et, en 1999, il ouvrit comme bibliothèque de l'université. Ils conservèrent les piliers et les arcs de brique et placèrent les niveaux de lecture entre eux. En 2024, il fut déclaré bien culturel d'intérêt national. C'est aujourd'hui un lieu d'étude : admirez-le de l'extérieur."
+    },
+    "de": {
+      "short": "Dieser Backsteinriese mit einem Turm an jeder Ecke wurde zwischen 1874 und 1880 als Wasserspeicher gebaut. Josep Fontserè, der Architekt des Ciutadella-Parks, entwarf ihn, um die Kaskade des Parks zu speisen und die Gärten zu bewässern. Seit 1999 ist er eine Bibliothek der Universitat Pompeu Fabra.",
+      "normal": "Schau dir dieses riesige Backsteingebäude mit einem Turm an jeder Ecke an. Es wurde zwischen 1874 und 1880 als Wasserspeicher gebaut, entworfen von Josep Fontserè, dem Architekten des Ciutadella-Parks, um die große Kaskade des Parks zu speisen und die Gärten zu bewässern. Das Wasser lag oben, und darunter trug ein Wald aus Backsteinpfeilern und Bögen sein Gewicht. Später hatte das Gebäude viele Leben: Armenasyl, Lager der Feuerwehr, Garage für Polizeifahrzeuge. Seit 1999 ist es eine Bibliothek der Universitat Pompeu Fabra, in der Studierende zwischen denselben Backsteinbögen lesen.",
+      "long": "Schau dir dieses riesige Backsteingebäude mit einem Turm an jeder Ecke an. Es wurde zwischen 1874 und 1880 als Wasserspeicher gebaut, entworfen von Josep Fontserè, dem Architekten des Ciutadella-Parks auf der anderen Straßenseite, um die große Kaskade des Parks zu speisen und die Gärten zu bewässern. Das Wasser lag oben, und darunter trug ein Wald aus Backsteinpfeilern und Bögen dieses enorme Gewicht. Ein junger Architekturstudent namens Antoni Gaudí soll bei den Berechnungen geholfen haben. Der Speicher blieb nicht lange ein Speicher. Von 1896 bis 1977 war das Gebäude ein städtisches Armenasyl: Über dem Eingang an dieser Straße liest man noch heute die alten Worte Asilo Municipal del Parque. Danach diente es als Lager der Feuerwehr, als Garage für Polizeifahrzeuge und als Justizarchiv. Ende der 1980er-Jahre wurden die Architekten Lluís Clotet und Ignacio Paricio mit der Sanierung beauftragt, die Universitat Pompeu Fabra kaufte es 1992, und 1999 öffnete es als Bibliothek der Universität. Die Backsteinpfeiler und Bögen blieben erhalten, die Lesegeschosse wurden dazwischen eingefügt. 2024 wurde es zum Kulturgut von nationalem Interesse erklärt. Heute ist es ein Ort zum Lernen: Genieße es von außen."
+    },
+    "it": {
+      "short": "Questo gigante di mattoni con una torre a ogni angolo fu costruito tra il 1874 e il 1880 come serbatoio d'acqua. Josep Fontserè, l'architetto del parco della Ciutadella, lo progettò per alimentare la cascata del parco e irrigarne i giardini. Dal 1999 è una biblioteca dell'Universitat Pompeu Fabra.",
+      "normal": "Guarda questo enorme edificio di mattoni con una torre a ogni angolo. Fu costruito tra il 1874 e il 1880 come serbatoio d'acqua, progettato da Josep Fontserè, l'architetto del parco della Ciutadella, per alimentare la grande cascata del parco e irrigarne i giardini. L'acqua stava in alto, e sotto una foresta di pilastri e archi di mattoni ne reggeva il peso. Poi l'edificio ebbe molte vite: ricovero per i poveri, magazzino dei pompieri, garage dei veicoli della polizia. Dal 1999 è una biblioteca dell'Universitat Pompeu Fabra, dove gli studenti leggono tra quegli stessi archi di mattoni.",
+      "long": "Guarda questo enorme edificio di mattoni con una torre a ogni angolo. Fu costruito tra il 1874 e il 1880 come serbatoio d'acqua, progettato da Josep Fontserè, l'architetto del parco della Ciutadella che si trova dall'altra parte della strada, per alimentare la grande cascata del parco e irrigarne i giardini. L'acqua stava in alto, e sotto una foresta di pilastri e archi di mattoni ne reggeva l'enorme peso. Si dice che un giovane studente di architettura di nome Antoni Gaudí abbia aiutato nei calcoli. Il serbatoio non rimase a lungo un serbatoio. Dal 1896 al 1977 l'edificio fu un ricovero municipale per i poveri: sopra l'ingresso su questa strada si legge ancora la vecchia scritta Asilo Municipal del Parque. Poi divenne magazzino dei pompieri, garage dei veicoli della polizia e archivio giudiziario. Alla fine degli anni Ottanta il recupero fu affidato agli architetti Lluís Clotet e Ignacio Paricio; l'Universitat Pompeu Fabra lo acquistò nel 1992 e nel 1999 aprì come biblioteca dell'università. Conservarono pilastri e archi di mattoni e inserirono i piani di lettura tra di essi. Nel 2024 è stato dichiarato bene culturale di interesse nazionale. Oggi è un luogo di studio, quindi goditelo dall'esterno."
+    },
+    "zh": {
+      "short": "这座四角各有一座塔楼的砖砌巨型建筑，建于1874至1880年，原是一座蓄水池。休达德拉公园（Ciutadella）的建筑师何塞普·丰特塞雷（Josep Fontserè）设计了它，为公园的瀑布供水并灌溉园林。自1999年起，它是庞培法布拉大学（Universitat Pompeu Fabra）的图书馆。",
+      "normal": "看看这座四角各有一座塔楼的巨大砖砌建筑。它建于1874至1880年，原是一座蓄水池，由休达德拉公园（Ciutadella）的建筑师何塞普·丰特塞雷（Josep Fontserè）设计，用来为公园的大瀑布供水并灌溉园林。水储存在顶部，下面由一片砖柱和拱券组成的“森林”承受它的重量。后来这栋建筑有过许多用途：穷人收容所、消防队仓库、警车车库。自1999年起，它成为庞培法布拉大学（Universitat Pompeu Fabra）的图书馆，学生们就在这些砖拱之间读书。",
+      "long": "看看这座四角各有一座塔楼的巨大砖砌建筑。它建于1874至1880年，原是一座蓄水池，由街对面休达德拉公园（Ciutadella）的建筑师何塞普·丰特塞雷（Josep Fontserè）设计，用来为公园的大瀑布供水并灌溉园林。水储存在顶部，下面由一片砖柱和拱券组成的“森林”承受着巨大的重量。据说，一位名叫安东尼·高迪的年轻建筑系学生曾参与计算。蓄水池并没有用多久。1896年至1977年，这栋建筑是一座市立穷人收容所：在这条街的入口上方，至今仍能读到旧字样“Asilo Municipal del Parque”。后来它又做过消防队仓库、警车车库和司法档案馆。20世纪80年代末，建筑师路易斯·克洛特（Lluís Clotet）和伊格纳西奥·帕里西奥（Ignacio Paricio）受托对其进行改造；1992年庞培法布拉大学买下了它，1999年作为大学图书馆开放。他们保留了砖柱和拱券，把阅览楼层安置在其间。2024年，它被宣布为国家级文化遗产。如今这里是学习的地方，请在外面欣赏。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": ["study"],
+    "official": null,
+    "img2": "Biblioteca ‘Dipòsit de les Aigües’ Barcelona.jpg",
+    "look": {
+      "en": "The four corner towers and the arches of the façade; over the entrance on Carrer de Wellington, the old inscription 'Asilo Municipal del Parque'.",
+      "ca": "Les quatre torres de les cantonades i els arcs de la façana; damunt de l'entrada del carrer de Wellington, l'antiga inscripció «Asilo Municipal del Parque».",
+      "es": "Las cuatro torres de las esquinas y los arcos de la fachada; encima de la entrada de la calle Wellington, la antigua inscripción «Asilo Municipal del Parque».",
+      "fr": "Les quatre tours d'angle et les arcs de la façade ; au-dessus de l'entrée du Carrer de Wellington, l'ancienne inscription « Asilo Municipal del Parque ».",
+      "de": "Die vier Ecktürme und die Bögen der Fassade; über dem Eingang in der Carrer de Wellington die alte Inschrift „Asilo Municipal del Parque“.",
+      "it": "Le quattro torri d'angolo e gli archi della facciata; sopra l'ingresso di Carrer de Wellington, l'antica scritta «Asilo Municipal del Parque».",
+      "zh": "四角的塔楼和立面上的拱券；Carrer de Wellington 入口上方的旧字样“Asilo Municipal del Parque”。"
+    },
+    "listen": {
+      "en": "On the park side of Carrer de Wellington, opposite the building, not at the library entrance.",
+      "ca": "A la banda del parc del carrer de Wellington, davant de l'edifici, no a l'entrada de la biblioteca.",
+      "es": "En el lado del parque de la calle Wellington, frente al edificio, no en la entrada de la biblioteca.",
+      "fr": "Du côté du parc du Carrer de Wellington, face au bâtiment, pas à l'entrée de la bibliothèque.",
+      "de": "Auf der Parkseite der Carrer de Wellington, gegenüber dem Gebäude, nicht am Eingang der Bibliothek.",
+      "it": "Sul lato del parco di Carrer de Wellington, di fronte all'edificio, non all'ingresso della biblioteca.",
+      "zh": "在 Carrer de Wellington 靠公园的一侧、建筑对面收听，不要站在图书馆入口。"
+    },
+    "access": {
+      "en": "A library for the university community: the building is meant to be enjoyed from outside. Occasional open days.",
+      "ca": "Una biblioteca per a la comunitat universitària: l'edifici es gaudeix des de fora. De tant en tant, jornades de portes obertes.",
+      "es": "Una biblioteca para la comunidad universitaria: el edificio se disfruta desde fuera. De vez en cuando, jornadas de puertas abiertas.",
+      "fr": "Une bibliothèque pour la communauté universitaire : le bâtiment s'apprécie de l'extérieur. Journées portes ouvertes occasionnelles.",
+      "de": "Eine Bibliothek für die Universitätsangehörigen: Das Gebäude genießt man von außen. Gelegentlich Tage der offenen Tür.",
+      "it": "Una biblioteca per la comunità universitaria: l'edificio si ammira dall'esterno. Occasionali giornate di porte aperte.",
+      "zh": "这是供大学师生使用的图书馆：建筑适合从外面欣赏。偶尔会有开放日。"
+    },
+    "cap2": {
+      "en": "Reading among the brick arches (inside, for university users).",
+      "ca": "Llegir entre els arcs de maó (a dins, per a usuaris de la universitat).",
+      "es": "Leer entre los arcos de ladrillo (dentro, para usuarios de la universidad).",
+      "fr": "Lire parmi les arcs de brique (à l'intérieur, pour les usagers de l'université).",
+      "de": "Lesen zwischen den Backsteinbögen (innen, für Universitätsangehörige).",
+      "it": "Leggere tra gli archi di mattoni (all'interno, per gli utenti dell'università).",
+      "zh": "在砖拱之间阅读（室内，仅限大学用户）。"
+    },
+    "sources": [
+      { "url": "https://ca.wikipedia.org/wiki/Dip%C3%B2sit_de_les_Aig%C3%BCes", "checked": "2026-11-14" },
+      { "url": "https://www.barcelona.cat/en/conocebcn/pics/el-campus-ciutadella-99400387426", "checked": "2026-11-14" }
+    ]
+  }
+}

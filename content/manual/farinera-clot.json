@@ -1,0 +1,95 @@
+{
+  "id": "farinera-clot",
+  "tip": {
+    "en": "It is the neighbourhood's own cultural centre: keep the entrance clear and don't interrupt classes or rehearsals.",
+    "ca": "És el centre cultural del barri: deixa l'entrada lliure i no interrompis classes ni assajos.",
+    "es": "Es el centro cultural del barrio: deja la entrada libre y no interrumpas clases ni ensayos.",
+    "fr": "C'est le centre culturel du quartier : laissez l'entrée libre et n'interrompez ni cours ni répétitions.",
+    "de": "Es ist das Kulturzentrum des Viertels: Halte den Eingang frei und stör keine Kurse oder Proben.",
+    "it": "È il centro culturale del quartiere: lascia libero l'ingresso e non interrompere corsi o prove.",
+    "zh": "这是街区自己的文化中心：请让出入口，不要打扰课程或排练。"
+  },
+  "stories": {
+    "en": {
+      "short": "This red-brick building with ceramic details was a flour mill. The Modernista factory you see was built in 1908 by the architect Josep Maria Pericas, and flour was made here until 1991. Since 1999 it has been a cultural centre, run by the neighbourhood's own associations.",
+      "normal": "Look at this red-brick building with its ceramic details. It was a flour mill, the Farinera de Sant Jaume. A mill was first planned here in 1879, and in 1908 the architect Josep Maria Pericas built the Modernista factory you see now. Flour was made here until 1991. Then the city bought the site, kept the main building and turned it into a cultural centre, which opened in 1999. Since 2004 it has been run by the Clot's own associations, the first cultural centre in Barcelona managed by a federation of local groups. Instead of flour, it now makes concerts, classes and exhibitions.",
+      "long": "Look at this red-brick building with its ceramic details. It was a flour mill, the Farinera de Sant Jaume, in the middle of the Clot, a neighbourhood that grew with factories, railways and workers' homes. A mill was first planned here in 1879, and in 1908 the architect Josep Maria Pericas built the Modernista factory you see now: notice how even a building for grinding wheat was given decorated brickwork and coloured ceramics. Flour was made here for more than eighty years, until 1991. When the mill closed, the neighbourhood could have lost it. Instead, the city bought the site in 1995. The silo and the warehouses were demolished, a secondary school was built on part of the land, and the main building was restored by the architects Carles Sanfeliu and José Abascal. It opened as a cultural centre in May 1999. Then came something unusual: since 2004 the centre has been run by the federation of the Clot and Camp de l'Arpa associations, the first cultural centre in Barcelona managed by a federation of local groups. So the people who live around it decide much of what happens inside: concerts, theatre, classes and exhibitions, for the neighbourhood first."
+    },
+    "ca": {
+      "short": "Aquest edifici de maó vermell amb detalls de ceràmica era una farinera. La fàbrica modernista que veus la va construir el 1908 l'arquitecte Josep Maria Pericas, i s'hi va fer farina fins al 1991. Des del 1999 és un centre cultural, gestionat per les mateixes entitats del barri.",
+      "normal": "Mira aquest edifici de maó vermell amb els seus detalls de ceràmica. Era una farinera, la Farinera de Sant Jaume. El 1879 ja es va demanar d'instal·lar-hi un molí, i el 1908 l'arquitecte Josep Maria Pericas va construir la fàbrica modernista que veus ara. S'hi va fer farina fins al 1991. Després l'Ajuntament va comprar el solar, va conservar l'edifici principal i el va convertir en un centre cultural, que va obrir el 1999. Des del 2004 el gestionen les entitats del Clot, el primer centre cultural de Barcelona gestionat per una federació d'entitats del barri. En lloc de farina, ara hi fan concerts, cursos i exposicions.",
+      "long": "Mira aquest edifici de maó vermell amb els seus detalls de ceràmica. Era una farinera, la Farinera de Sant Jaume, al bell mig del Clot, un barri que va créixer amb fàbriques, vies de tren i cases obreres. El 1879 ja es va demanar d'instal·lar-hi un molí, i el 1908 l'arquitecte Josep Maria Pericas va construir la fàbrica modernista que veus ara: fixa't que fins i tot un edifici per moldre blat va tenir maó decorat i ceràmica de colors. S'hi va fer farina durant més de vuitanta anys, fins al 1991. Quan va tancar, el barri la podia haver perdut. En canvi, l'Ajuntament va comprar el solar el 1995. Es van enderrocar la sitja i els magatzems, en una part del terreny es va construir un institut, i els arquitectes Carles Sanfeliu i José Abascal van restaurar l'edifici principal. Va obrir com a centre cultural el maig del 1999. Després va arribar una cosa poc habitual: des del 2004 el centre el gestiona la federació d'entitats del Clot i el Camp de l'Arpa, el primer centre cultural de Barcelona gestionat per una federació d'entitats. Així, la gent que hi viu al voltant decideix bona part del que passa a dins: concerts, teatre, cursos i exposicions, primer de tot per al barri."
+    },
+    "es": {
+      "short": "Este edificio de ladrillo rojo con detalles de cerámica era una harinera. La fábrica modernista que ves la construyó en 1908 el arquitecto Josep Maria Pericas, y aquí se hizo harina hasta 1991. Desde 1999 es un centro cultural, gestionado por las propias entidades del barrio.",
+      "normal": "Mira este edificio de ladrillo rojo con sus detalles de cerámica. Era una harinera, la Farinera de Sant Jaume. En 1879 ya se pidió instalar aquí un molino, y en 1908 el arquitecto Josep Maria Pericas construyó la fábrica modernista que ves ahora. Aquí se hizo harina hasta 1991. Después el Ayuntamiento compró el solar, conservó el edificio principal y lo convirtió en un centro cultural, que abrió en 1999. Desde 2004 lo gestionan las entidades del Clot: fue el primer centro cultural de Barcelona gestionado por una federación de entidades del barrio. En lugar de harina, ahora hace conciertos, cursos y exposiciones.",
+      "long": "Mira este edificio de ladrillo rojo con sus detalles de cerámica. Era una harinera, la Farinera de Sant Jaume, en pleno Clot, un barrio que creció con fábricas, vías de tren y casas obreras. En 1879 ya se pidió instalar aquí un molino, y en 1908 el arquitecto Josep Maria Pericas construyó la fábrica modernista que ves ahora: fíjate en que incluso un edificio para moler trigo tuvo ladrillo decorado y cerámica de colores. Aquí se hizo harina durante más de ochenta años, hasta 1991. Cuando cerró, el barrio podía haberla perdido. En cambio, el Ayuntamiento compró el solar en 1995. Se derribaron el silo y los almacenes, en parte del terreno se construyó un instituto, y los arquitectos Carles Sanfeliu y José Abascal restauraron el edificio principal. Abrió como centro cultural en mayo de 1999. Después llegó algo poco habitual: desde 2004 el centro lo gestiona la federación de entidades del Clot y el Camp de l'Arpa, el primer centro cultural de Barcelona gestionado por una federación de entidades. Así, la gente que vive alrededor decide buena parte de lo que pasa dentro: conciertos, teatro, cursos y exposiciones, primero de todo para el barrio."
+    },
+    "fr": {
+      "short": "Ce bâtiment de brique rouge aux détails de céramique était une minoterie. L'usine moderniste que vous voyez fut construite en 1908 par l'architecte Josep Maria Pericas, et on y fit de la farine jusqu'en 1991. Depuis 1999, c'est un centre culturel géré par les associations du quartier.",
+      "normal": "Regardez ce bâtiment de brique rouge et ses détails de céramique. C'était une minoterie, la Farinera de Sant Jaume. Un moulin fut demandé ici dès 1879, et en 1908 l'architecte Josep Maria Pericas construisit l'usine moderniste que vous voyez. On y fabriqua de la farine jusqu'en 1991. La ville acheta ensuite le terrain, conserva le bâtiment principal et le transforma en centre culturel, ouvert en 1999. Depuis 2004, il est géré par les associations du Clot : le premier centre culturel de Barcelone géré par une fédération d'associations de quartier. Au lieu de farine, il produit aujourd'hui des concerts, des cours et des expositions.",
+      "long": "Regardez ce bâtiment de brique rouge et ses détails de céramique. C'était une minoterie, la Farinera de Sant Jaume, au cœur du Clot, un quartier qui a grandi avec les usines, les voies ferrées et les maisons ouvrières. Un moulin fut demandé ici dès 1879, et en 1908 l'architecte Josep Maria Pericas construisit l'usine moderniste que vous voyez : remarquez que même un bâtiment pour moudre le blé reçut des briques décorées et des céramiques colorées. On y fabriqua de la farine pendant plus de quatre-vingts ans, jusqu'en 1991. À sa fermeture, le quartier aurait pu la perdre. Au contraire, la ville acheta le terrain en 1995. Le silo et les entrepôts furent démolis, un lycée fut construit sur une partie du terrain, et les architectes Carles Sanfeliu et José Abascal restaurèrent le bâtiment principal. Il ouvrit comme centre culturel en mai 1999. Puis vint quelque chose d'inhabituel : depuis 2004, le centre est géré par la fédération des associations du Clot et du Camp de l'Arpa, le premier centre culturel de Barcelone géré par une fédération d'associations. Ainsi, les habitants des alentours décident d'une grande partie de ce qui s'y passe : concerts, théâtre, cours et expositions, d'abord pour le quartier."
+    },
+    "de": {
+      "short": "Dieses rote Backsteingebäude mit Keramikdetails war eine Mühle. Die modernistische Fabrik, die du siehst, baute 1908 der Architekt Josep Maria Pericas, und bis 1991 wurde hier Mehl gemahlen. Seit 1999 ist sie ein Kulturzentrum, das die Vereine des Viertels selbst führen.",
+      "normal": "Schau dir dieses rote Backsteingebäude mit seinen Keramikdetails an. Es war eine Getreidemühle, die Farinera de Sant Jaume. Schon 1879 wurde hier eine Mühle beantragt, und 1908 baute der Architekt Josep Maria Pericas die modernistische Fabrik, die du heute siehst. Bis 1991 wurde hier Mehl hergestellt. Dann kaufte die Stadt das Gelände, erhielt das Hauptgebäude und machte daraus ein Kulturzentrum, das 1999 öffnete. Seit 2004 führen es die Vereine des Clot: das erste Kulturzentrum Barcelonas, das von einem Verband lokaler Vereine geleitet wird. Statt Mehl entstehen hier heute Konzerte, Kurse und Ausstellungen.",
+      "long": "Schau dir dieses rote Backsteingebäude mit seinen Keramikdetails an. Es war eine Getreidemühle, die Farinera de Sant Jaume, mitten im Clot, einem Viertel, das mit Fabriken, Bahnlinien und Arbeiterhäusern wuchs. Schon 1879 wurde hier eine Mühle beantragt, und 1908 baute der Architekt Josep Maria Pericas die modernistische Fabrik, die du heute siehst: Selbst ein Gebäude zum Mahlen von Weizen bekam verzierten Backstein und farbige Keramik. Über achtzig Jahre lang wurde hier Mehl hergestellt, bis 1991. Als die Mühle schloss, hätte das Viertel sie verlieren können. Stattdessen kaufte die Stadt 1995 das Gelände. Silo und Lagerhallen wurden abgerissen, auf einem Teil des Grundstücks entstand eine weiterführende Schule, und die Architekten Carles Sanfeliu und José Abascal restaurierten das Hauptgebäude. Im Mai 1999 öffnete es als Kulturzentrum. Dann kam etwas Ungewöhnliches: Seit 2004 führt der Verband der Vereine von Clot und Camp de l'Arpa das Zentrum, das erste Kulturzentrum Barcelonas unter der Leitung eines Vereinsverbands. So bestimmen die Menschen, die hier wohnen, vieles von dem, was drinnen passiert: Konzerte, Theater, Kurse und Ausstellungen, zuerst für das Viertel."
+    },
+    "it": {
+      "short": "Questo edificio di mattoni rossi con dettagli in ceramica era un mulino per la farina. La fabbrica modernista che vedi fu costruita nel 1908 dall'architetto Josep Maria Pericas, e qui si produsse farina fino al 1991. Dal 1999 è un centro culturale gestito dalle associazioni del quartiere.",
+      "normal": "Guarda questo edificio di mattoni rossi con i suoi dettagli in ceramica. Era un mulino, la Farinera de Sant Jaume. Già nel 1879 si chiese di installare qui un mulino, e nel 1908 l'architetto Josep Maria Pericas costruì la fabbrica modernista che vedi ora. Qui si produsse farina fino al 1991. Poi il Comune acquistò l'area, conservò l'edificio principale e lo trasformò in un centro culturale, aperto nel 1999. Dal 2004 lo gestiscono le associazioni del Clot: è stato il primo centro culturale di Barcellona gestito da una federazione di associazioni di quartiere. Invece della farina, oggi produce concerti, corsi e mostre.",
+      "long": "Guarda questo edificio di mattoni rossi con i suoi dettagli in ceramica. Era un mulino, la Farinera de Sant Jaume, nel cuore del Clot, un quartiere cresciuto con fabbriche, ferrovie e case operaie. Già nel 1879 si chiese di installare qui un mulino, e nel 1908 l'architetto Josep Maria Pericas costruì la fabbrica modernista che vedi ora: nota come perfino un edificio per macinare il grano ricevette mattoni decorati e ceramiche colorate. Qui si produsse farina per più di ottant'anni, fino al 1991. Quando chiuse, il quartiere avrebbe potuto perderlo. Invece il Comune acquistò l'area nel 1995. Il silo e i magazzini furono demoliti, su una parte del terreno fu costruita una scuola superiore, e gli architetti Carles Sanfeliu e José Abascal restaurarono l'edificio principale. Aprì come centro culturale nel maggio 1999. Poi arrivò qualcosa di insolito: dal 2004 il centro è gestito dalla federazione delle associazioni del Clot e del Camp de l'Arpa, il primo centro culturale di Barcellona gestito da una federazione di associazioni. Così chi abita qui intorno decide buona parte di ciò che succede dentro: concerti, teatro, corsi e mostre, prima di tutto per il quartiere."
+    },
+    "zh": {
+      "short": "这座带陶瓷装饰的红砖建筑曾是一座面粉厂。你看到的现代主义风格厂房由建筑师何塞普·玛丽亚·佩里卡斯（Josep Maria Pericas）于1908年建造，这里一直生产面粉到1991年。自1999年起，它成为由街区社团自己管理的文化中心。",
+      "normal": "看看这座带陶瓷装饰的红砖建筑。它曾是一座面粉厂，名叫圣哈梅面粉厂（Farinera de Sant Jaume）。早在1879年就有人申请在这里建磨坊，1908年，建筑师何塞普·玛丽亚·佩里卡斯（Josep Maria Pericas）建造了你现在看到的现代主义风格厂房。这里一直生产面粉，直到1991年。之后市政府买下了这块地，保留了主楼，把它改造成文化中心，于1999年开放。自2004年起，它由克洛特区（Clot）的社团管理，是巴塞罗那第一个由街区社团联合会管理的文化中心。如今这里不再磨面粉，而是举办音乐会、课程和展览。",
+      "long": "看看这座带陶瓷装饰的红砖建筑。它曾是一座面粉厂，名叫圣哈梅面粉厂（Farinera de Sant Jaume），位于克洛特区（Clot）的中心；这个街区是随着工厂、铁路和工人住宅发展起来的。早在1879年就有人申请在这里建磨坊，1908年，建筑师何塞普·玛丽亚·佩里卡斯（Josep Maria Pericas）建造了你现在看到的现代主义风格厂房：注意，就连一座用来磨小麦的建筑，也用上了装饰性的砖砌和彩色陶瓷。这里生产面粉八十多年，直到1991年。工厂关闭时，街区本可能失去它。然而，市政府在1995年买下了这块地。筒仓和仓库被拆除，部分土地上建起了一所中学，建筑师卡莱斯·圣费利乌（Carles Sanfeliu）和何塞·阿巴斯卡尔（José Abascal）修复了主楼。1999年5月，它作为文化中心开放。随后发生了一件不寻常的事：自2004年起，中心由克洛特和坎普德拉尔帕（Camp de l'Arpa）社团联合会管理，成为巴塞罗那第一个由社团联合会管理的文化中心。因此，住在周围的人决定着这里的大部分活动：音乐会、戏剧、课程和展览，首先为街区服务。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": [],
+    "official": "https://farinera.org/centre-cultural/",
+    "img2": "Centre Cultural La Farinera del Clot.jpg",
+    "look": {
+      "en": "The Modernista brick façade with its ceramic inlays and the tall body of the old mill.",
+      "ca": "La façana modernista de maó amb incrustacions de ceràmica i el cos alt de l'antiga farinera.",
+      "es": "La fachada modernista de ladrillo con incrustaciones de cerámica y el cuerpo alto de la antigua harinera.",
+      "fr": "La façade moderniste en brique avec ses incrustations de céramique et le haut corps de l'ancienne minoterie.",
+      "de": "Die modernistische Backsteinfassade mit Keramikeinlagen und der hohe Baukörper der alten Mühle.",
+      "it": "La facciata modernista in mattoni con intarsi di ceramica e l'alto corpo dell'antico mulino.",
+      "zh": "带陶瓷镶嵌的现代主义砖砌立面，以及旧面粉厂高耸的主体。"
+    },
+    "listen": {
+      "en": "In the pedestrian space in front of the centre, away from the door.",
+      "ca": "A l'espai de vianants davant del centre, lluny de la porta.",
+      "es": "En el espacio peatonal frente al centro, lejos de la puerta.",
+      "fr": "Dans l'espace piéton devant le centre, à l'écart de la porte.",
+      "de": "Im Fußgängerbereich vor dem Zentrum, nicht direkt an der Tür.",
+      "it": "Nello spazio pedonale davanti al centro, lontano dalla porta.",
+      "zh": "在中心前的步行区收听，远离大门。"
+    },
+    "access": {
+      "en": "Public areas open during the centre's opening hours (closed in August); activities are run by neighbourhood groups.",
+      "ca": "Les zones públiques són obertes en l'horari del centre (tancat a l'agost); les activitats les organitzen les entitats del barri.",
+      "es": "Las zonas públicas están abiertas en el horario del centro (cerrado en agosto); las actividades las organizan las entidades del barrio.",
+      "fr": "Espaces publics ouverts aux heures d'ouverture du centre (fermé en août) ; les activités sont organisées par les associations du quartier.",
+      "de": "Öffentliche Bereiche zu den Öffnungszeiten des Zentrums zugänglich (im August geschlossen); die Angebote organisieren Vereine des Viertels.",
+      "it": "Spazi pubblici aperti negli orari del centro (chiuso ad agosto); le attività sono organizzate dalle associazioni del quartiere.",
+      "zh": "公共区域在中心开放时间内开放（8月闭馆）；活动由街区社团组织。"
+    },
+    "cap2": {
+      "en": "The cultural centre today.",
+      "ca": "El centre cultural avui.",
+      "es": "El centro cultural hoy.",
+      "fr": "Le centre culturel aujourd'hui.",
+      "de": "Das Kulturzentrum heute.",
+      "it": "Il centro culturale oggi.",
+      "zh": "今天的文化中心。"
+    },
+    "sources": [
+      { "url": "https://ca.wikipedia.org/wiki/La_Farinera_del_Clot", "checked": "2026-11-14" },
+      { "url": "https://farinera.org/centre-cultural/", "checked": "2026-11-14" }
+    ]
+  }
+}

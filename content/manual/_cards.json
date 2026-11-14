@@ -1,0 +1,194 @@
+{
+  "bunkers-carmel": {
+    "outside": "yes",
+    "sensitive": ["residential", "limited"],
+    "official": "https://www.barcelona.cat/museuhistoria/ca/patrimonis-i-recerca/els-espais-del-museu/turo-de-la-rovira",
+    "look": {
+      "en": "The concrete platforms of the 1938 anti-aircraft battery, and the city from the sea to Collserola.",
+      "ca": "Les plataformes de formigó de la bateria antiaèria del 1938, i la ciutat del mar a Collserola.",
+      "es": "Las plataformas de hormigón de la batería antiaérea de 1938, y la ciudad del mar a Collserola.",
+      "fr": "Les plateformes en béton de la batterie antiaérienne de 1938, et la ville de la mer à Collserola.",
+      "de": "Die Betonplattformen der Flakbatterie von 1938 und die Stadt vom Meer bis zur Collserola.",
+      "it": "Le piattaforme di cemento della batteria antiaerea del 1938, e la città dal mare a Collserola.",
+      "zh": "1938年防空炮台的混凝土平台，以及从大海到科尔塞罗拉山（Collserola）的全城景色。"
+    },
+    "listen": {
+      "en": "On the platforms at the top, away from the houses on the way up. Not with music or as a group at night.",
+      "ca": "A les plataformes de dalt, lluny de les cases de la pujada. Sense música ni en grup de nit.",
+      "es": "En las plataformas de arriba, lejos de las casas de la subida. Sin música ni en grupo de noche.",
+      "fr": "Sur les plateformes du sommet, loin des maisons de la montée. Pas de musique ni de groupe la nuit.",
+      "de": "Oben auf den Plattformen, fern von den Häusern am Aufstieg. Keine Musik, nachts nicht in Gruppen.",
+      "it": "Sulle piattaforme in cima, lontano dalle case della salita. Niente musica né gruppi di notte.",
+      "zh": "在山顶平台上收听，远离上山路旁的住宅。不要放音乐，夜间不要结伴聚集。"
+    },
+    "access": {
+      "en": "Free, open-air heritage site of the MUHBA (City History Museum). Its small exhibition spaces open Wed, Fri, Sat and Sun: 10–14 h from October to May, 16–19 h from June to September. Steep uphill walk; not accessible with reduced mobility.",
+      "ca": "Espai patrimonial del MUHBA, a l'aire lliure i gratuït. Els petits espais expositius obren dimecres, divendres, dissabte i diumenge: de 10 a 14 h d'octubre a maig i de 16 a 19 h de juny a setembre. Pujada forta; no és accessible per a mobilitat reduïda.",
+      "es": "Espacio patrimonial del MUHBA, al aire libre y gratuito. Sus pequeños espacios expositivos abren miércoles, viernes, sábado y domingo: de 10 a 14 h de octubre a mayo y de 16 a 19 h de junio a septiembre. Subida fuerte; no es accesible para movilidad reducida.",
+      "fr": "Site patrimonial du MUHBA, en plein air et gratuit. Ses petits espaces d'exposition ouvrent mercredi, vendredi, samedi et dimanche : 10 h–14 h d'octobre à mai, 16 h–19 h de juin à septembre. Montée raide ; non accessible aux personnes à mobilité réduite.",
+      "de": "Kostenloser Freiluft-Gedenkort des MUHBA (Stadtgeschichtliches Museum). Die kleinen Ausstellungsräume öffnen Mi, Fr, Sa und So: 10–14 Uhr von Oktober bis Mai, 16–19 Uhr von Juni bis September. Steiler Aufstieg; nicht barrierefrei.",
+      "it": "Sito patrimoniale del MUHBA, all'aperto e gratuito. I piccoli spazi espositivi aprono mercoledì, venerdì, sabato e domenica: 10–14 da ottobre a maggio, 16–19 da giugno a settembre. Salita ripida; non accessibile a persone con mobilità ridotta.",
+      "zh": "巴塞罗那城市历史博物馆（MUHBA）的露天遗址，免费参观。小型展览空间周三、周五、周六和周日开放：10月至5月10:00–14:00，6月至9月16:00–19:00。上山坡道陡峭；行动不便者无法通行。"
+    },
+    "sources": [
+      { "url": "https://www.barcelona.cat/museuhistoria/ca/patrimonis-i-recerca/els-espais-del-museu/turo-de-la-rovira", "checked": "2026-11-14" },
+      { "url": "https://ca.wikipedia.org/wiki/Tur%C3%B3_de_la_Rovira", "checked": "2026-11-14" }
+    ]
+  },
+  "placa-del-sol": {
+    "outside": "yes",
+    "sensitive": ["residential"],
+    "listen": {
+      "en": "Before you enter the square, at the corner of Carrer de Maspons, rather than under the balconies or between the terrace tables.",
+      "ca": "Abans d'entrar a la plaça, a la cantonada del carrer de Maspons, millor que sota els balcons o entre les taules de les terrasses.",
+      "es": "Antes de entrar en la plaza, en la esquina de la calle Maspons, mejor que bajo los balcones o entre las mesas de las terrazas.",
+      "fr": "Avant d'entrer sur la place, au coin du Carrer de Maspons, plutôt que sous les balcons ou entre les tables des terrasses.",
+      "de": "Bevor du den Platz betrittst, an der Ecke Carrer de Maspons, statt unter den Balkonen oder zwischen den Terrassentischen.",
+      "it": "Prima di entrare nella piazza, all'angolo di Carrer de Maspons, piuttosto che sotto i balconi o tra i tavolini dei dehors.",
+      "zh": "在进入广场之前，在 Carrer de Maspons 街角收听，不要站在阳台下或露台餐桌之间。"
+    },
+    "look": {
+      "en": "The balconies all around: these are homes. The square has a Civil War shelter beneath it, not visible from above.",
+      "ca": "Els balcons de tot el voltant: són habitatges. Sota la plaça hi ha un refugi de la Guerra Civil, que no es veu des de dalt.",
+      "es": "Los balcones de alrededor: son viviendas. Bajo la plaza hay un refugio de la Guerra Civil, que no se ve desde arriba.",
+      "fr": "Les balcons tout autour : ce sont des logements. Sous la place se trouve un abri de la guerre civile, invisible d'en haut.",
+      "de": "Die Balkone ringsum: Das sind Wohnungen. Unter dem Platz liegt ein Luftschutzbunker aus dem Bürgerkrieg, von oben nicht sichtbar.",
+      "it": "I balconi tutt'intorno: sono abitazioni. Sotto la piazza c'è un rifugio della guerra civile, non visibile dall'alto.",
+      "zh": "四周的阳台：都是住户。广场下面有一个内战时期的防空洞，从地面上看不到。"
+    }
+  },
+  "placa-virreina": {
+    "outside": "yes",
+    "sensitive": ["residential", "worship"],
+    "listen": {
+      "en": "On a bench in the middle of the square, not on the church steps.",
+      "ca": "En un banc al mig de la plaça, no a les escales de l'església.",
+      "es": "En un banco en medio de la plaza, no en los escalones de la iglesia.",
+      "fr": "Sur un banc au milieu de la place, pas sur les marches de l'église.",
+      "de": "Auf einer Bank in der Mitte des Platzes, nicht auf den Kirchenstufen.",
+      "it": "Su una panchina al centro della piazza, non sui gradini della chiesa.",
+      "zh": "坐在广场中间的长椅上收听，不要坐在教堂台阶上。"
+    },
+    "look": {
+      "en": "The church of Sant Joan closing the square, and how neighbours use it: benches, prams, terraces.",
+      "ca": "L'església de Sant Joan que tanca la plaça, i com la fan servir els veïns: bancs, cotxets, terrasses.",
+      "es": "La iglesia de Sant Joan que cierra la plaza, y cómo la usan los vecinos: bancos, carritos, terrazas.",
+      "fr": "L'église Sant Joan qui ferme la place, et la façon dont les habitants l'utilisent : bancs, poussettes, terrasses.",
+      "de": "Die Kirche Sant Joan am Ende des Platzes und wie die Nachbarschaft ihn nutzt: Bänke, Kinderwagen, Terrassen.",
+      "it": "La chiesa di Sant Joan che chiude la piazza, e come la usano i residenti: panchine, passeggini, dehors.",
+      "zh": "广场尽头的圣胡安教堂，以及邻居们如何使用这个广场：长椅、婴儿车、露台。"
+    }
+  },
+  "placa-sant-felip-neri": {
+    "outside": "yes",
+    "sensitive": ["study", "residential", "worship"],
+    "listen": {
+      "en": "Listen to the story before you go in, in Carrer de Montjuïc del Bisbe, then enter the square quietly and in small groups.",
+      "ca": "Escolta la història abans d'entrar, al carrer de Montjuïc del Bisbe, i després entra a la plaça en silenci i en grups petits.",
+      "es": "Escucha la historia antes de entrar, en la calle Montjuïc del Bisbe, y después entra en la plaza en silencio y en grupos pequeños.",
+      "fr": "Écoutez l'histoire avant d'entrer, dans le Carrer de Montjuïc del Bisbe, puis entrez sur la place en silence et en petits groupes.",
+      "de": "Hör die Geschichte, bevor du hineingehst, in der Carrer de Montjuïc del Bisbe, und betritt den Platz dann leise und in kleinen Gruppen.",
+      "it": "Ascolta la storia prima di entrare, in Carrer de Montjuïc del Bisbe, poi entra nella piazza in silenzio e in piccoli gruppi.",
+      "zh": "先在 Carrer de Montjuïc del Bisbe 街上听完故事，再安静地、以小团体进入广场。"
+    },
+    "look": {
+      "en": "The pitted church wall: the marks of the 1938 bombing, kept as a memorial.",
+      "ca": "La paret de l'església plena de forats: les marques del bombardeig del 1938, conservades com a memorial.",
+      "es": "La pared de la iglesia llena de agujeros: las marcas del bombardeo de 1938, conservadas como memorial.",
+      "fr": "Le mur criblé de l'église : les traces du bombardement de 1938, conservées comme mémorial.",
+      "de": "Die zernarbte Kirchenmauer: die Spuren des Bombenangriffs von 1938, als Mahnmal erhalten.",
+      "it": "Il muro della chiesa crivellato: i segni del bombardamento del 1938, conservati come memoriale.",
+      "zh": "布满坑洞的教堂墙面：1938年轰炸留下的痕迹，作为纪念被保留下来。"
+    }
+  },
+  "carrer-de-blai": {
+    "outside": "yes",
+    "sensitive": ["residential"],
+    "listen": {
+      "en": "At the wide end by Plaça del Sortidor, not in front of doorways. Better early evening, and not as a big group.",
+      "ca": "Al tram ample de la banda de la plaça del Sortidor, no davant dels portals. Millor a primera hora del vespre i no en grup gran.",
+      "es": "En el tramo ancho junto a la plaza del Sortidor, no delante de los portales. Mejor a primera hora de la tarde-noche y no en grupo grande.",
+      "fr": "Du côté large, près de la Plaça del Sortidor, pas devant les portes d'immeubles. Plutôt en début de soirée, et pas en grand groupe.",
+      "de": "Am breiten Ende bei der Plaça del Sortidor, nicht vor Hauseingängen. Besser am frühen Abend und nicht als große Gruppe.",
+      "it": "Nel tratto largo vicino a Plaça del Sortidor, non davanti ai portoni. Meglio a inizio serata e non in un gruppo numeroso.",
+      "zh": "在靠近 Plaça del Sortidor 的较宽路段收听，不要站在住宅门口。最好在傍晚时分来，不要大批人结伴。"
+    },
+    "look": {
+      "en": "The pintxos on the counters, and the balconies above the bars: people live here.",
+      "ca": "Els pintxos a les barres, i els balcons damunt dels bars: aquí hi viu gent.",
+      "es": "Los pintxos en las barras, y los balcones encima de los bares: aquí vive gente.",
+      "fr": "Les pintxos sur les comptoirs, et les balcons au-dessus des bars : des gens vivent ici.",
+      "de": "Die Pintxos auf den Theken und die Balkone über den Bars: Hier wohnen Menschen.",
+      "it": "I pintxos sui banconi, e i balconi sopra i bar: qui vive gente.",
+      "zh": "吧台上的 pintxos 小吃，以及酒吧楼上的阳台：这里有人居住。"
+    }
+  },
+  "barceloneta-beach": {
+    "outside": "yes",
+    "sensitive": ["residential"],
+    "listen": {
+      "en": "On the promenade facing the sea, not inside the narrow streets of the neighbourhood.",
+      "ca": "Al passeig, de cara al mar, no dins dels carrers estrets del barri.",
+      "es": "En el paseo, de cara al mar, no dentro de las calles estrechas del barrio.",
+      "fr": "Sur la promenade face à la mer, pas dans les ruelles du quartier.",
+      "de": "Auf der Promenade mit Blick aufs Meer, nicht in den engen Gassen des Viertels.",
+      "it": "Sul lungomare, di fronte al mare, non dentro le strade strette del quartiere.",
+      "zh": "在海滨步道上面朝大海收听，不要在街区的狭窄街道里。"
+    }
+  },
+  "sagrada-familia": {
+    "outside": "yes",
+    "sensitive": ["worship"],
+    "official": "https://sagradafamilia.org/",
+    "access": {
+      "en": "The façades are free to see from the street. Going inside needs a timed ticket, usually booked ahead.",
+      "ca": "Les façanes es veuen gratis des del carrer. Per entrar cal una entrada amb hora, que normalment s'ha de reservar abans.",
+      "es": "Las fachadas se ven gratis desde la calle. Para entrar hace falta una entrada con hora, que normalmente hay que reservar antes.",
+      "fr": "Les façades se voient gratuitement depuis la rue. Pour entrer, il faut un billet horodaté, généralement réservé à l'avance.",
+      "de": "Die Fassaden sieht man kostenlos von der Straße. Für den Eintritt braucht man ein Zeitfensterticket, meist im Voraus gebucht.",
+      "it": "Le facciate si vedono gratis dalla strada. Per entrare serve un biglietto a orario, di solito prenotato in anticipo.",
+      "zh": "从街上可免费观赏立面。入内需购买限时门票，通常需要提前预订。"
+    }
+  },
+  "park-guell": {
+    "outside": "partly",
+    "sensitive": ["residential", "limited"],
+    "official": "https://parkguell.barcelona/",
+    "access": {
+      "en": "The monumental zone (the bench, the stairs and the dragon) needs a timed ticket; the rest of the park is a public park.",
+      "ca": "La zona monumental (el banc, les escales i el drac) necessita entrada amb hora; la resta del parc és un parc públic.",
+      "es": "La zona monumental (el banco, las escaleras y el dragón) necesita entrada con hora; el resto del parque es un parque público.",
+      "fr": "La zone monumentale (le banc, l'escalier et le dragon) exige un billet horodaté ; le reste est un parc public.",
+      "de": "Die Monumentalzone (Bank, Treppe und Drache) braucht ein Zeitfensterticket; der Rest ist ein öffentlicher Park.",
+      "it": "La zona monumentale (la panchina, le scale e il drago) richiede un biglietto a orario; il resto del parco è pubblico.",
+      "zh": "纪念区（长椅、台阶和蜥蜴雕塑）需购买限时门票；公园其余部分是公共公园。"
+    }
+  },
+  "casa-batllo": {
+    "outside": "yes",
+    "official": "https://www.casabatllo.es/",
+    "access": {
+      "en": "The façade is free to see from Passeig de Gràcia. The house can be visited with a ticket.",
+      "ca": "La façana es veu gratis des del passeig de Gràcia. La casa es pot visitar amb entrada.",
+      "es": "La fachada se ve gratis desde el paseo de Gràcia. La casa se puede visitar con entrada.",
+      "fr": "La façade se voit gratuitement depuis le Passeig de Gràcia. La maison se visite avec un billet.",
+      "de": "Die Fassade sieht man kostenlos vom Passeig de Gràcia. Das Haus ist mit Ticket zu besichtigen.",
+      "it": "La facciata si vede gratis dal Passeig de Gràcia. La casa si visita con biglietto.",
+      "zh": "从格拉西亚大道上可免费观赏立面。入内参观需购票。"
+    }
+  },
+  "casa-mila": {
+    "outside": "yes",
+    "sensitive": ["residential"],
+    "official": "https://www.lapedrera.com/",
+    "access": {
+      "en": "The façade is free to see from the street. The roof and the visit inside need a ticket; people still live in some flats.",
+      "ca": "La façana es veu gratis des del carrer. El terrat i la visita interior necessiten entrada; en alguns pisos encara hi viu gent.",
+      "es": "La fachada se ve gratis desde la calle. La azotea y la visita interior necesitan entrada; en algunos pisos aún vive gente.",
+      "fr": "La façade se voit gratuitement depuis la rue. Le toit et la visite intérieure exigent un billet ; certains appartements sont encore habités.",
+      "de": "Die Fassade sieht man kostenlos von der Straße. Dach und Innenbesichtigung brauchen ein Ticket; einige Wohnungen sind noch bewohnt.",
+      "it": "La facciata si vede gratis dalla strada. La terrazza e la visita interna richiedono un biglietto; in alcuni appartamenti vive ancora gente.",
+      "zh": "从街上可免费观赏立面。屋顶和室内参观需购票；部分公寓至今仍有人居住。"
+    }
+  }
+}

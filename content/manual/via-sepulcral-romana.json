@@ -1,0 +1,94 @@
+{
+  "id": "via-sepulcral-romana",
+  "tip": {
+    "en": "You don't need a ticket to see the graves from the square: take your turn at the railing and leave room for others.",
+    "ca": "No cal entrada per veure les tombes des de la plaça: fes torn a la barana i deixa lloc als altres.",
+    "es": "No hace falta entrada para ver las tumbas desde la plaza: haz turno en la barandilla y deja sitio a los demás.",
+    "fr": "Pas besoin de billet pour voir les tombes depuis la place : chacun son tour à la balustrade, laissez de la place aux autres.",
+    "de": "Für den Blick vom Platz auf die Gräber brauchst du kein Ticket: Wechsle dich am Geländer ab und lass anderen Platz.",
+    "it": "Non serve il biglietto per vedere le tombe dalla piazza: fai a turno alla ringhiera e lascia spazio agli altri.",
+    "zh": "从广场上观看墓葬无需门票：请在栏杆边轮流观看，给别人留出位置。"
+  },
+  "stories": {
+    "en": {
+      "short": "Lean on the railing and look down: these are Roman graves. The Romans buried their dead outside the town, along the roads leaving it, and this was one of the roads out of Barcino. Graves were placed here from the 1st to the 3rd century. Look for the stones shaped like half-barrels: they are Roman tombs called cupae.",
+      "normal": "Lean on the railing and look down: you are looking at Roman graves. In Roman times the dead were buried outside the town, along the roads that led out of it, and this was one of the roads leaving the colony of Barcino. Graves were placed along it from the 1st to the 3rd century. Look for the stones shaped like half-barrels lying on the ground: they are cupae, a kind of Roman tomb. Much later a convent stood on this spot. The remains were found when the site was rebuilt after the Civil War, and they were left where they lay, so the square was built around them.",
+      "long": "Lean on the railing and look down: you are looking at Roman graves. In Roman times, the law did not allow the dead to be buried inside the town, so families placed their tombs outside it, along the roads, where every traveller would see them and remember the names carved on them. This was one of those roads, a secondary way leaving the colony of Barcino, the Roman town that lay where the Gothic Quarter is today. Graves were placed along it from the 1st to the 3rd century. Look at their different shapes. The stones shaped like half-barrels lying on the ground are cupae, a type of tomb common in this part of the Roman world. Others are small altars and upright stones with inscriptions. Notice how low the remains are compared with the square: that difference is the earth and the city that piled up over almost two thousand years. In 1588 a Carmelite convent was built here. After the bombings of the Civil War the convent moved away, and when the site was being rebuilt the graves appeared. Instead of removing them, the city left them where they were and built the square around them, with a small display space below."
+    },
+    "ca": {
+      "short": "Recolza't a la barana i mira avall: són tombes romanes. Els romans enterraven els morts fora de la ciutat, al costat dels camins que en sortien, i aquest era un dels camins de sortida de Barcino. S'hi van posar tombes del segle I al III. Busca les pedres en forma de mitja bóta: són tombes romanes anomenades cupae.",
+      "normal": "Recolza't a la barana i mira avall: estàs veient tombes romanes. En època romana els morts s'enterraven fora de la ciutat, al costat dels camins que en sortien, i aquest era un dels camins que sortien de la colònia de Barcino. Al seu costat s'hi van posar tombes del segle I al III. Busca les pedres en forma de mitja bóta estirades a terra: són cupae, un tipus de tomba romana. Molt més tard, aquí hi va haver un convent. Les restes van aparèixer quan es reconstruïa el solar després de la Guerra Civil, i es van deixar on eren, així que la plaça es va construir al seu voltant.",
+      "long": "Recolza't a la barana i mira avall: estàs veient tombes romanes. En època romana, la llei no permetia enterrar els morts dins de la ciutat, així que les famílies posaven les tombes a fora, al costat dels camins, on tots els viatgers les veien i recordaven els noms que hi havia gravats. Aquest era un d'aquests camins, una via secundària que sortia de la colònia de Barcino, la ciutat romana que ocupava l'actual barri Gòtic. Al seu costat s'hi van posar tombes del segle I al III. Fixa't en les seves formes diferents. Les pedres en forma de mitja bóta estirades a terra són cupae, un tipus de tomba habitual en aquesta part del món romà. D'altres són petits altars i pedres dretes amb inscripcions. Mira que baixes queden les restes respecte de la plaça: aquesta diferència és la terra i la ciutat que s'hi van anar acumulant durant gairebé dos mil anys. El 1588 s'hi va construir un convent de carmelites. Després dels bombardeigs de la Guerra Civil el convent es va traslladar, i quan es reconstruïa el solar van aparèixer les tombes. En lloc de treure-les, la ciutat les va deixar on eren i va construir la plaça al seu voltant, amb un petit espai expositiu a sota."
+    },
+    "es": {
+      "short": "Apóyate en la barandilla y mira abajo: son tumbas romanas. Los romanos enterraban a sus muertos fuera de la ciudad, junto a los caminos que salían de ella, y este era uno de los caminos de salida de Barcino. Se colocaron tumbas aquí del siglo I al III. Busca las piedras en forma de media barrica: son tumbas romanas llamadas cupae.",
+      "normal": "Apóyate en la barandilla y mira abajo: estás viendo tumbas romanas. En época romana los muertos se enterraban fuera de la ciudad, junto a los caminos que salían de ella, y este era uno de los caminos que salían de la colonia de Barcino. A su lado se colocaron tumbas del siglo I al III. Busca las piedras en forma de media barrica tumbadas en el suelo: son cupae, un tipo de tumba romana. Mucho más tarde, aquí hubo un convento. Los restos aparecieron cuando se reconstruía el solar después de la Guerra Civil, y se dejaron donde estaban, así que la plaza se construyó a su alrededor.",
+      "long": "Apóyate en la barandilla y mira abajo: estás viendo tumbas romanas. En época romana, la ley no permitía enterrar a los muertos dentro de la ciudad, así que las familias colocaban las tumbas fuera, junto a los caminos, donde todos los viajeros las veían y recordaban los nombres grabados en ellas. Este era uno de esos caminos, una vía secundaria que salía de la colonia de Barcino, la ciudad romana que ocupaba el actual barrio Gótico. A su lado se colocaron tumbas del siglo I al III. Fíjate en sus formas distintas. Las piedras en forma de media barrica tumbadas en el suelo son cupae, un tipo de tumba habitual en esta parte del mundo romano. Otras son pequeños altares y piedras verticales con inscripciones. Mira qué bajos quedan los restos respecto a la plaza: esa diferencia es la tierra y la ciudad que se fueron acumulando durante casi dos mil años. En 1588 se construyó aquí un convento de carmelitas. Después de los bombardeos de la Guerra Civil el convento se trasladó, y cuando se reconstruía el solar aparecieron las tumbas. En lugar de retirarlas, la ciudad las dejó donde estaban y construyó la plaza a su alrededor, con un pequeño espacio expositivo debajo."
+    },
+    "fr": {
+      "short": "Appuyez-vous à la balustrade et regardez en bas : ce sont des tombes romaines. Les Romains enterraient leurs morts hors de la ville, le long des routes qui en sortaient, et c'était l'une des routes quittant Barcino. On y plaça des tombes du Ier au IIIe siècle. Cherchez les pierres en forme de demi-tonneau : ce sont des tombes romaines appelées cupae.",
+      "normal": "Appuyez-vous à la balustrade et regardez en bas : vous voyez des tombes romaines. À l'époque romaine, on enterrait les morts hors de la ville, le long des routes qui en sortaient, et c'était l'une des routes quittant la colonie de Barcino. On y plaça des tombes du Ier au IIIe siècle. Cherchez les pierres en forme de demi-tonneau couchées au sol : ce sont des cupae, un type de tombe romaine. Bien plus tard, un couvent occupa cet endroit. Les vestiges apparurent lors de la reconstruction du terrain après la guerre civile, et on les laissa en place : la place fut construite autour d'eux.",
+      "long": "Appuyez-vous à la balustrade et regardez en bas : vous voyez des tombes romaines. À l'époque romaine, la loi interdisait d'enterrer les morts à l'intérieur de la ville ; les familles plaçaient donc les tombes à l'extérieur, le long des routes, là où chaque voyageur les voyait et se souvenait des noms gravés. C'était l'une de ces routes, une voie secondaire quittant la colonie de Barcino, la ville romaine qui occupait l'actuel quartier gothique. On y plaça des tombes du Ier au IIIe siècle. Observez leurs formes différentes. Les pierres en forme de demi-tonneau couchées au sol sont des cupae, un type de tombe courant dans cette partie du monde romain. D'autres sont de petits autels et des pierres dressées portant des inscriptions. Voyez comme les vestiges sont bas par rapport à la place : cette différence, c'est la terre et la ville accumulées pendant près de deux mille ans. En 1588, un couvent de carmélites fut construit ici. Après les bombardements de la guerre civile, le couvent déménagea, et lors de la reconstruction du terrain, les tombes réapparurent. Au lieu de les retirer, la ville les laissa en place et construisit la place autour d'elles, avec un petit espace d'exposition en dessous."
+    },
+    "de": {
+      "short": "Lehn dich ans Geländer und schau hinunter: Das sind römische Gräber. Die Römer bestatteten ihre Toten außerhalb der Stadt, entlang der Straßen, die hinausführten, und dies war eine der Straßen aus Barcino. Vom 1. bis zum 3. Jahrhundert wurden hier Gräber angelegt. Such die Steine in Form halber Fässer: Das sind römische Gräber, cupae genannt.",
+      "normal": "Lehn dich ans Geländer und schau hinunter: Du siehst römische Gräber. In römischer Zeit wurden die Toten außerhalb der Stadt bestattet, entlang der Straßen, die hinausführten, und dies war eine der Straßen, die die Kolonie Barcino verließen. Vom 1. bis zum 3. Jahrhundert wurden an ihr Gräber angelegt. Such die Steine in Form halber Fässer, die am Boden liegen: Das sind cupae, eine Art römischer Gräber. Viel später stand hier ein Kloster. Die Reste kamen zum Vorschein, als das Gelände nach dem Bürgerkrieg neu bebaut wurde, und man ließ sie an Ort und Stelle: Der Platz wurde um sie herum gebaut.",
+      "long": "Lehn dich ans Geländer und schau hinunter: Du siehst römische Gräber. In römischer Zeit erlaubte das Gesetz keine Bestattungen innerhalb der Stadt. Deshalb legten die Familien die Gräber draußen an, entlang der Straßen, wo jeder Reisende sie sah und sich an die eingemeißelten Namen erinnerte. Dies war eine dieser Straßen, ein Nebenweg, der die Kolonie Barcino verließ, die römische Stadt dort, wo heute das gotische Viertel liegt. Vom 1. bis zum 3. Jahrhundert wurden an ihr Gräber angelegt. Achte auf ihre verschiedenen Formen. Die Steine in Form halber Fässer am Boden sind cupae, ein in diesem Teil der römischen Welt verbreiteter Grabtyp. Andere sind kleine Altäre und aufrechte Steine mit Inschriften. Sieh, wie tief die Reste unter dem Platz liegen: Dieser Unterschied ist die Erde und die Stadt, die sich in fast zweitausend Jahren angehäuft haben. 1588 wurde hier ein Karmeliterinnenkloster gebaut. Nach den Bombenangriffen des Bürgerkriegs zog das Kloster um, und als das Gelände neu bebaut wurde, kamen die Gräber zum Vorschein. Statt sie zu entfernen, ließ die Stadt sie an Ort und Stelle und baute den Platz um sie herum, mit einem kleinen Ausstellungsraum darunter."
+    },
+    "it": {
+      "short": "Appoggiati alla ringhiera e guarda giù: sono tombe romane. I romani seppellivano i morti fuori dalla città, lungo le strade che ne uscivano, e questa era una delle strade che lasciavano Barcino. Qui furono collocate tombe dal I al III secolo. Cerca le pietre a forma di mezza botte: sono tombe romane chiamate cupae.",
+      "normal": "Appoggiati alla ringhiera e guarda giù: stai guardando tombe romane. In epoca romana i morti si seppellivano fuori dalla città, lungo le strade che ne uscivano, e questa era una delle strade che lasciavano la colonia di Barcino. Lungo di essa furono collocate tombe dal I al III secolo. Cerca le pietre a forma di mezza botte distese a terra: sono cupae, un tipo di tomba romana. Molto più tardi qui sorse un convento. I resti emersero quando l'area fu ricostruita dopo la guerra civile e furono lasciati dov'erano: la piazza fu costruita intorno a loro.",
+      "long": "Appoggiati alla ringhiera e guarda giù: stai guardando tombe romane. In epoca romana la legge non permetteva di seppellire i morti dentro la città, così le famiglie collocavano le tombe fuori, lungo le strade, dove ogni viaggiatore le vedeva e ricordava i nomi incisi. Questa era una di quelle strade, una via secondaria che lasciava la colonia di Barcino, la città romana che occupava l'attuale quartiere Gotico. Lungo di essa furono collocate tombe dal I al III secolo. Osserva le loro forme diverse. Le pietre a forma di mezza botte distese a terra sono cupae, un tipo di tomba diffuso in questa parte del mondo romano. Altre sono piccoli altari e pietre verticali con iscrizioni. Guarda quanto sono basse le rovine rispetto alla piazza: quella differenza è la terra e la città che si sono accumulate in quasi duemila anni. Nel 1588 qui fu costruito un convento di carmelitane. Dopo i bombardamenti della guerra civile il convento si trasferì e, mentre l'area veniva ricostruita, apparvero le tombe. Invece di rimuoverle, la città le lasciò dov'erano e costruì la piazza intorno a loro, con un piccolo spazio espositivo sotto."
+    },
+    "zh": {
+      "short": "靠在栏杆上往下看：这些是古罗马墓葬。罗马人把死者葬在城外、沿着出城的道路，这里就是离开巴尔基诺（Barcino）的一条路。1至3世纪，人们在这里安放墓葬。找找那些半个酒桶形状的石头：它们是一种叫 cupae 的罗马墓。",
+      "normal": "靠在栏杆上往下看：你看到的是古罗马墓葬。罗马时代，死者被葬在城外、沿着出城的道路，而这里就是离开巴尔基诺（Barcino）殖民城的一条路。1至3世纪，人们沿路安放了墓葬。找找地上那些半个酒桶形状的石头：它们叫 cupae，是一种罗马墓。很久以后，这里建起了一座修道院。内战后重建这块地时，遗迹重见天日，并被原地保留，于是广场就围绕它们建了起来。",
+      "long": "靠在栏杆上往下看：你看到的是古罗马墓葬。罗马时代，法律不允许在城内埋葬死者，所以家人们把坟墓建在城外、沿着道路，让每个路过的旅人都能看到，记住刻在上面的名字。这里就是其中一条路，一条离开巴尔基诺（Barcino）殖民城的支路；巴尔基诺就是今天哥特区所在的罗马城市。1至3世纪，人们沿路安放了墓葬。看看它们不同的形状。地上那些半个酒桶形状的石头叫 cupae，是罗马世界这一带常见的墓葬类型。其他的是小祭坛和刻有铭文的竖立石碑。注意这些遗迹比广场低了多少：这段高差，就是近两千年来不断堆积的泥土和城市。1588年，这里建起了一座加尔默罗会修道院。内战轰炸之后，修道院迁走了；重建这块地时，墓葬重见天日。城市没有把它们移走，而是原地保留，并围绕它们建起了广场，下方还有一个小小的展示空间。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": [],
+    "official": "https://www.barcelona.cat/museuhistoria/en/heritages/museum-spaces/roman-funeral-way",
+    "img2": "MUHBA- Via Sepulcral Romana003.JPG",
+    "look": {
+      "en": "The half-barrel tombs (cupae), the small altars and the upright inscribed stones, lined up along the old road.",
+      "ca": "Les tombes en forma de mitja bóta (cupae), els petits altars i les pedres dretes amb inscripcions, en filera al llarg del camí antic.",
+      "es": "Las tumbas en forma de media barrica (cupae), los pequeños altares y las piedras verticales con inscripciones, en fila a lo largo del antiguo camino.",
+      "fr": "Les tombes en demi-tonneau (cupae), les petits autels et les pierres dressées inscrites, alignés le long de l'ancienne route.",
+      "de": "Die Gräber in Form halber Fässer (cupae), die kleinen Altäre und die aufrechten Inschriftsteine entlang der alten Straße.",
+      "it": "Le tombe a mezza botte (cupae), i piccoli altari e le pietre verticali con iscrizioni, allineati lungo l'antica strada.",
+      "zh": "沿着古道排列的半桶形墓（cupae）、小祭坛和刻有铭文的竖立石碑。"
+    },
+    "listen": {
+      "en": "At the railing of the square, above the remains.",
+      "ca": "A la barana de la plaça, damunt de les restes.",
+      "es": "En la barandilla de la plaza, sobre los restos.",
+      "fr": "À la balustrade de la place, au-dessus des vestiges.",
+      "de": "Am Geländer des Platzes, über den Resten.",
+      "it": "Alla ringhiera della piazza, sopra i resti.",
+      "zh": "在广场栏杆旁、遗迹上方收听。"
+    },
+    "access": {
+      "en": "The graves can be seen from the square at any time. The small display space below belongs to the MUHBA (City History Museum) and opens with a ticket at set hours.",
+      "ca": "Les tombes es veuen des de la plaça a qualsevol hora. El petit espai expositiu de sota és del MUHBA (Museu d'Història de Barcelona) i obre amb entrada en horaris fixos.",
+      "es": "Las tumbas se ven desde la plaza a cualquier hora. El pequeño espacio expositivo de abajo es del MUHBA (Museu d'Història de Barcelona) y abre con entrada en horarios fijos.",
+      "fr": "Les tombes se voient depuis la place à toute heure. Le petit espace d'exposition en contrebas appartient au MUHBA (musée d'histoire de Barcelone) et ouvre avec billet à heures fixes.",
+      "de": "Die Gräber sind jederzeit vom Platz aus zu sehen. Der kleine Ausstellungsraum unten gehört zum MUHBA (Stadtgeschichtliches Museum) und öffnet mit Ticket zu festen Zeiten.",
+      "it": "Le tombe si vedono dalla piazza a qualsiasi ora. Il piccolo spazio espositivo sottostante appartiene al MUHBA (Museo di Storia di Barcellona) e apre con biglietto in orari fissi.",
+      "zh": "任何时间都可以从广场上看到墓葬。下方的小展示空间属于巴塞罗那城市历史博物馆（MUHBA），需购票并在固定时间开放。"
+    },
+    "cap2": {
+      "en": "Tombs along the Roman road, seen from the square.",
+      "ca": "Tombes al llarg del camí romà, vistes des de la plaça.",
+      "es": "Tumbas a lo largo del camino romano, vistas desde la plaza.",
+      "fr": "Tombes le long de la route romaine, vues depuis la place.",
+      "de": "Gräber entlang der römischen Straße, vom Platz aus gesehen.",
+      "it": "Tombe lungo la strada romana, viste dalla piazza.",
+      "zh": "从广场上看到的罗马道路旁的墓葬。"
+    },
+    "sources": [
+      { "url": "https://www.barcelona.cat/museuhistoria/en/heritages/museum-spaces/roman-funeral-way", "checked": "2026-11-14" }
+    ]
+  }
+}

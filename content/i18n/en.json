@@ -1770,7 +1770,7 @@
           ]
         }
       },
-      "tip": "Neighbours have suffered from crowds and noise up here: come at quiet times, and check the opening hours."
+      "tip": "A heritage site above people's homes: no parties or music, take your rubbish with you, and keep voices down on the way up."
     },
     "port-vell": {
       "stories": {
@@ -2430,6 +2430,86 @@
         }
       },
       "tip": "Browse quietly, as you would in a library, and support the shop if you find something you like."
+    },
+    "biblioteca-arus": {
+      "tip": "It is a working library: listen out here, and inside keep silent and don't photograph readers.",
+      "stories": {
+        "base": {
+          "short": "Look for the iron sign: Biblioteca Pública Arús. When the writer and freemason Rossend Arús died in 1891, he left his flat and his books to create a library for working people. It opened here in 1895, and today it holds a great collection on the workers' movement, anarchism and freemasonry.",
+          "normal": "Look for the iron sign on the façade: Biblioteca Pública Arús. Behind this ordinary-looking building is a library born from a will. When the writer and freemason Rossend Arús died in 1891, he left his own flat and his books to create a library for the education of working people. It opened in 1895. Today its shelves hold one of the great collections on the workers' movement, anarchism and freemasonry, and, as a surprise, a collection devoted to Sherlock Holmes. In the hall, a small bronze Statue of Liberty welcomes readers. It is still a working library, a reading room before it is a sight.",
+          "long": "Look for the iron sign on the façade: Biblioteca Pública Arús. Behind this ordinary-looking building on Passeig de Sant Joan is a library born from a will. When the writer and freemason Rossend Arús died in 1891, he asked his executors to turn his own flat and his books into a library for the education of working people. It opened on 24 March 1895, with about twenty-four thousand volumes. Think of what that meant at the time: a free place to read for people who could not buy books, in a city full of factories and of new ideas about work, education and freedom. Today the library holds around sixty-nine thousand volumes and is a research centre on the workers' movement, anarchism and freemasonry, with newspapers and pamphlets that are hard to find anywhere else. It also keeps a large collection devoted to Sherlock Holmes. In the hall, at the end of the entrance, a small bronze replica of the Statue of Liberty welcomes readers. Its history has had silences too: after 1939 it was closed to the public and only reopened in 1967. Remember that it is still a working library: people come here to study."
+        }
+      }
+    },
+    "can-framis": {
+      "tip": "The square in front is open to everyone; the museum itself has a ticket and opening hours.",
+      "stories": {
+        "base": {
+          "short": "This brick factory with its chimney was the wool factory of the Framis family, from the days when Poblenou was full of mills. Two of its three buildings were restored and the third rebuilt in concrete. Since 2009 it has been a museum of contemporary Catalan painting, run by the Fundació Vila Casas.",
+          "normal": "Look at the brick buildings and the tall chimney behind them. This was the wool factory of the Framis family, from the days when Poblenou was so full of mills that people called it the Catalan Manchester. When the old industrial land was transformed, two of the three factory buildings were restored and the third was rebuilt in concrete, by the architects of BAAS. Since 2009 it has been a museum of contemporary painting run by the Fundació Vila Casas: around two hundred and fifty works by Catalan artists from the 1960s onwards. By the entrance, look for the sculpture Dell'Arte, by Jaume Plensa.",
+          "long": "Look at the brick buildings and the tall chimney behind them. This was the wool factory of the Framis family, from the days when Poblenou was so full of mills, smoke and workers' housing that people called it the Catalan Manchester. Most of those factories closed in the second half of the 20th century, and the old industrial land around you has been transformed into a district of offices, universities and housing. Can Framis is one of the factories that survived that change. The architect Jordi Badia, of BAAS, restored two of its three buildings and rebuilt the third in concrete, so old brick and new concrete now stand side by side. Notice how the new part does not try to imitate the old one. On 27 April 2009 it opened as a museum of the Fundació Vila Casas, created by the businessman and collector Antoni Vila Casas. Inside, about two hundred and fifty works show Catalan painting from the 1960s onwards, across three floors and more than thirty rooms, with space for temporary exhibitions too. By the entrance stands the sculpture Dell'Arte, by Jaume Plensa, given to the museum in 2012. A factory that once spun wool now shows how artists from Catalonia have seen the world."
+        }
+      }
+    },
+    "diposit-aigues": {
+      "tip": "It is a university library: enjoy it from the street and keep the entrance clear for students.",
+      "stories": {
+        "base": {
+          "short": "This brick giant with a tower at each corner was built between 1874 and 1880 as a water tank. Josep Fontserè, the architect of the Ciutadella park, designed it to feed the park's cascade and water its gardens. Since 1999 it has been a library of the Universitat Pompeu Fabra.",
+          "normal": "Look at this huge brick building with a tower at each corner. It was built between 1874 and 1880 as a water tank, designed by Josep Fontserè, the architect of the Ciutadella park, to feed the park's great cascade and water its gardens. The water was held up on top, and underneath a forest of brick pillars and arches carried its weight. Later the building had many lives: a shelter for poor people, a store for the fire brigade, a garage for police vehicles. Since 1999 it has been a library of the Universitat Pompeu Fabra, where students read among those same brick arches.",
+          "long": "Look at this huge brick building with a tower at each corner. It was built between 1874 and 1880 as a water tank, designed by Josep Fontserè, the architect of the Ciutadella park across the street, to feed the park's great cascade and water its gardens. The water was held up on top, and underneath a forest of brick pillars and arches carried that enormous weight. A young architecture student called Antoni Gaudí is said to have helped with the calculations. The tank did not stay a tank for long. From 1896 to 1977 the building was a municipal shelter for poor people: over the entrance on this street you can still read the old words Asilo Municipal del Parque. Then it became a store for the fire brigade, a garage for police vehicles and a judicial archive. In the late 1980s the architects Lluís Clotet and Ignacio Paricio were asked to rehabilitate it, the Universitat Pompeu Fabra bought it in 1992, and in 1999 it opened as the university's library. They kept the brick pillars and arches and placed the reading floors between them. In 2024 it was declared a cultural asset of national interest. Today it is a place to study, so enjoy it from outside."
+        }
+      }
+    },
+    "escola-industrial": {
+      "tip": "It is a working campus: stay on the open paths, don't go into the buildings, and keep your voice down near the classrooms.",
+      "stories": {
+        "base": {
+          "short": "These long brick buildings were a textile factory of the Batlló family, designed by the architect Rafael Guastavino in the late 1860s. At the beginning of the 20th century the site was bought to create the Escola Industrial, a school for the technicians industrial Catalonia needed. The walls that once held looms now hold classrooms.",
+          "normal": "Look at the long brick buildings around you. In the late 1860s this was the textile factory of the Batlló family, designed by the architect Rafael Guastavino, at a time when Barcelona was filling up with mills. The factory did not last long. At the beginning of the 20th century the site was bought to create the Escola Industrial, a school to train the engineers and technicians that industrial Catalonia needed. Look for the clock that gives one of the buildings its name, the Edifici del Rellotge. Today the same walls that once held looms hold classrooms, laboratories and a student residence.",
+          "long": "Look at the long brick buildings around you, laid out like streets. In the late 1860s this was the textile factory of the Batlló family, designed by the architect Rafael Guastavino, at a time when the new Eixample was growing and Barcelona was filling up with mills and chimneys. The factory did not last long: it closed towards the end of the 19th century. At the beginning of the 20th century, a public board bought the whole site to create the Escola Industrial, a school to train the engineers, technicians and skilled workers that industrial Catalonia needed. That decision shaped the place you see now: instead of being demolished, the factory became a campus of almost sixty thousand square metres. Look for the clock that gives one of the buildings its name, the Edifici del Rellotge. Some university schools began here before moving to bigger campuses, and today the site, owned by the Diputació de Barcelona, still houses schools, laboratories and a student residence. And the architect? Rafael Guastavino later emigrated to the United States, where his tile vaults became famous. Here, though, his brick factory is still doing what the school set out to do: teaching."
+        }
+      }
+    },
+    "farinera-clot": {
+      "tip": "It is the neighbourhood's own cultural centre: keep the entrance clear and don't interrupt classes or rehearsals.",
+      "stories": {
+        "base": {
+          "short": "This red-brick building with ceramic details was a flour mill. The Modernista factory you see was built in 1908 by the architect Josep Maria Pericas, and flour was made here until 1991. Since 1999 it has been a cultural centre, run by the neighbourhood's own associations.",
+          "normal": "Look at this red-brick building with its ceramic details. It was a flour mill, the Farinera de Sant Jaume. A mill was first planned here in 1879, and in 1908 the architect Josep Maria Pericas built the Modernista factory you see now. Flour was made here until 1991. Then the city bought the site, kept the main building and turned it into a cultural centre, which opened in 1999. Since 2004 it has been run by the Clot's own associations, the first cultural centre in Barcelona managed by a federation of local groups. Instead of flour, it now makes concerts, classes and exhibitions.",
+          "long": "Look at this red-brick building with its ceramic details. It was a flour mill, the Farinera de Sant Jaume, in the middle of the Clot, a neighbourhood that grew with factories, railways and workers' homes. A mill was first planned here in 1879, and in 1908 the architect Josep Maria Pericas built the Modernista factory you see now: notice how even a building for grinding wheat was given decorated brickwork and coloured ceramics. Flour was made here for more than eighty years, until 1991. When the mill closed, the neighbourhood could have lost it. Instead, the city bought the site in 1995. The silo and the warehouses were demolished, a secondary school was built on part of the land, and the main building was restored by the architects Carles Sanfeliu and José Abascal. It opened as a cultural centre in May 1999. Then came something unusual: since 2004 the centre has been run by the federation of the Clot and Camp de l'Arpa associations, the first cultural centre in Barcelona managed by a federation of local groups. So the people who live around it decide much of what happens inside: concerts, theatre, classes and exhibitions, for the neighbourhood first."
+        }
+      }
+    },
+    "sant-pau-del-camp": {
+      "tip": "It is still a parish church: if you go in, avoid service times and keep your voice down.",
+      "stories": {
+        "base": {
+          "short": "This small stone church is one of the oldest buildings in Barcelona. Sant Pau del Camp means Saint Paul in the fields: it stood in open country, outside the medieval walls. It was sacked in 985 and later rebuilt in Romanesque style. Look at the doorway: its two marble capitals are reused pieces from Visigothic times.",
+          "normal": "Look at the small stone church in front of you: it is one of the oldest buildings in Barcelona. Its name, Sant Pau del Camp, means Saint Paul in the fields, because it stood in open country, outside the medieval city walls. The monastery is documented from the 10th century, and it was sacked in 985, when al-Mansur's troops attacked Barcelona. What you see today is mostly a Romanesque rebuilding. Now look closely at the doorway: the two capitals on its columns are much older, reused marble pieces from Visigothic times. Above them, Christ sits between Saint Peter and Saint Paul.",
+          "long": "Look at the small stone church in front of you: it is one of the oldest buildings in Barcelona. Its name, Sant Pau del Camp, means Saint Paul in the fields. When it was built, this was open country, outside the medieval walls, and the Raval around you did not exist yet. The monastery is documented from the 10th century. In 985, when al-Mansur's troops attacked Barcelona, it was sacked, and the monks rebuilt it from the end of the 11th century in the Romanesque style you see now: thick walls, small windows and very little decoration. Look closely at the doorway. The two capitals on its columns are much older than the church: they are marble pieces from Visigothic times, reused by the builders. Above them, Christ sits in majesty between Saint Peter and Saint Paul. Inside, a funerary inscription found in 1596 is traditionally linked to Count Guifré Borrell, who died in 911 and is considered the monastery's possible founder. Behind the church hides a small 13th-century cloister with lobed arches. The monks left in 1835, and in 1879 the building was declared a national monument. It is still a parish church today."
+        }
+      }
+    },
+    "sant-pere-puelles": {
+      "tip": "Neighbours live all around this square and it is still a church: listen from the open side, away from the doors and steps.",
+      "stories": {
+        "base": {
+          "short": "This square, and the streets of Sant Pere around it, take their name from this church. In the 10th century a convent of Benedictine nuns stood here, outside the walls; its church was consecrated in 945. Don't be fooled by the old look: the church was rebuilt again and again, and very little of the first building survives.",
+          "normal": "This square, and the streets of Sant Pere around it, take their name from the church in front of you. In the 10th century, Count Sunyer and Countess Riquilda founded a convent of Benedictine nuns here, outside the city walls, and its church was consecrated in 945. The nuns were known as puel·les, from the Latin word for young women. Don't be fooled by the medieval look. The convent was attacked in 985, a new church was consecrated in the 12th century, and fires in 1909 and during the Civil War forced more rebuilding. Very little of the first building survives.",
+          "long": "This square, and the three streets of Sant Pere around it, take their name from the church in front of you. In the 10th century, Count Sunyer and Countess Riquilda founded a convent of Benedictine nuns here, outside the city walls, and its church was consecrated in 945. The nuns were known as puel·les, from the Latin word for young women. The convent shaped the whole area: for centuries, houses, gardens and workshops grew around it. Now, don't be fooled by the medieval look of the façade. In 985 the convent was attacked during al-Mansur's raid, and the count Borrell the Second restored it. A new, larger church was consecrated in the 12th century. In 1835 the nuns had to leave and the convent became a prison, and in 1879 the community moved to Sarrià, where their monastery still stands. The church burned in 1909, losing its old bell tower, and was damaged again during the Civil War. What you see is the result of all those repairs: very little of the first building survives, though a chapel inside keeps remains of an even older church. So read this façade as a building with many layers, not as a single moment in time."
+        }
+      }
+    },
+    "via-sepulcral-romana": {
+      "tip": "You don't need a ticket to see the graves from the square: take your turn at the railing and leave room for others.",
+      "stories": {
+        "base": {
+          "short": "Lean on the railing and look down: these are Roman graves. The Romans buried their dead outside the town, along the roads leaving it, and this was one of the roads out of Barcino. Graves were placed here from the 1st to the 3rd century. Look for the stones shaped like half-barrels: they are Roman tombs called cupae.",
+          "normal": "Lean on the railing and look down: you are looking at Roman graves. In Roman times the dead were buried outside the town, along the roads that led out of it, and this was one of the roads leaving the colony of Barcino. Graves were placed along it from the 1st to the 3rd century. Look for the stones shaped like half-barrels lying on the ground: they are cupae, a kind of Roman tomb. Much later a convent stood on this spot. The remains were found when the site was rebuilt after the Civil War, and they were left where they lay, so the square was built around them.",
+          "long": "Lean on the railing and look down: you are looking at Roman graves. In Roman times, the law did not allow the dead to be buried inside the town, so families placed their tombs outside it, along the roads, where every traveller would see them and remember the names carved on them. This was one of those roads, a secondary way leaving the colony of Barcino, the Roman town that lay where the Gothic Quarter is today. Graves were placed along it from the 1st to the 3rd century. Look at their different shapes. The stones shaped like half-barrels lying on the ground are cupae, a type of tomb common in this part of the Roman world. Others are small altars and upright stones with inscriptions. Notice how low the remains are compared with the square: that difference is the earth and the city that piled up over almost two thousand years. In 1588 a Carmelite convent was built here. After the bombings of the Civil War the convent moved away, and when the site was being rebuilt the graves appeared. Instead of removing them, the city left them where they were and built the square around them, with a small display space below."
+        }
+      }
     }
   },
   "activities": null

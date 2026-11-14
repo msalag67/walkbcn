@@ -10,7 +10,8 @@ WalkBCN is a personalised virtual travel guide that helps tourists discover Barc
 - Each stop provides a short, engaging audio story, **told from the angle of the interests the user picked**.
 - **Languages and lengths:** the app and its stories are available in Catalan, Spanish, English, French, German, Italian and Chinese, with short, normal or long stories.
 - **Learning from use:** the app remembers, in the visitor's own browser, which stories they finish and rate, and uses that to choose later story versions. Visitors can opt out or erase it.
-- **Activities:** users pick a category (Restaurants, Nightlife, Museums & culture, Viewpoints, Cafés & granjas, With kids, Historic shops) and their preferences, and get a hand-picked list of places. "See & book" opens the place on Google Maps. This exists to test demand; there is no booking inside the app.
+- **Activities:** users pick a category (Restaurants, Nightlife, Museums & culture, Viewpoints, Cafés & granjas, With kids, Local shops, Sports) and their preferences, and get a hand-picked list of places. "See on Google Maps" opens the place on Google Maps. This exists to test demand; there is no booking inside the app.
+- **Coverage:** central Barcelona and Poblenou–Clot, on foot. Visitors can keep a walk in one area, pick up to two must-see places, and edit the route (remove or replace stops) before or during the walk.
 - **Local tips:** a "Tips" tab with short etiquette and practical advice from locals (names, rules such as no drinking in the street or going shirtless, meal times, safety, festivals), written and checked by the team in all 7 languages. Visitors can suggest a tip through an external form; the team reviews each one and adds it by hand. Nothing a visitor sends is published automatically.
 
 ## What it deliberately does NOT do
@@ -28,6 +29,8 @@ For the MVP, we will not include:
 - Coverage of the whole city
 
 **Rule for adding later:** We only add a feature if user testing shows that it solves a real user need or provides significant value.
+
+**Change log (14 Nov 2026):** after an external review we added 8 verified stops and a Poblenou–Clot walk (the survey's top request was places beyond the obvious ones), areas, must-sees and route editing, practical cards (what to look at, where to listen, visiting conditions), dated notices that expire, and a "report a problem" link; following that review we removed two restaurants (Teresa Carles and Flax & Kale). All content was written and recorded without paid AI or voice services.
 
 **Change log:** After the November 2026 audit we added directions to each stop, routes drawn along the streets, four themed starting points and search in the audio guide; these fix problems found when using the product (getting lost between stops, unclear time and distance), which our survey also asked for (a clearer map and directions). We moved "personalised story versions" and a limited "Activities" list into the MVP. Activities was not backed by user testing, which breaks our own rule above; we keep it only as a demand test (we will measure clicks on "See & book") and will remove it if users do not use it.
 

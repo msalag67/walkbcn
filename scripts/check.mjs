@@ -4,13 +4,16 @@
 // - notices: valid dates, a source, a check date and text in every language
 // - every recorded audio file the stories point to exists
 // - themes only use stops that exist
+// - practical cards and photo credits (author + licence) for every photo shown
+// - Activities: retired places are gone everywhere, new places carry why + sources + date
+// - every stop has a story and tip in every language (short, normal, long)
 import fs from 'node:fs';
 import vm from 'node:vm';
 
 const root = new URL('..', import.meta.url).pathname;
 const ctx = { window: {} };
 vm.createContext(ctx);
-for (const f of ['data/ui.js', 'data/stops.js', 'data/activities.js', 'content/stories.js']) {
+for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'content/stories.js']) {
   vm.runInContext(fs.readFileSync(root + f, 'utf8'), ctx, { filename: f });
 }
 for (const l of ['ca', 'es', 'en', 'fr', 'de', 'it', 'zh']) {
@@ -48,8 +51,53 @@ for (const [id, list] of Object.entries(W.WALKBCN_NOTICES || {})) {
     if (!iso.test(n.checked || '')) fail(`notice ${id}: needs a "checked" date`);
     if (!/^https:\/\//.test(n.source || '')) fail(`notice ${id}: needs a source link`);
     for (const l of langs) if (!n.text?.[l]) fail(`notice ${id}: no text in ${l}`);
+    if (n.review && !iso.test(n.review)) fail(`notice ${id}: bad review date ${n.review}`);
+    if (!n.review && n.until) fail(`notice ${id}: a temporary notice needs a "review" date`);
+    if (n.at && !(n.at.lat > 41.33 && n.at.lat < 41.46 && n.at.label)) fail(`notice ${id}: "at" needs lat, lng and label`);
   }
 }
+
+// Practical cards and photo credits
+const CARDS = W.WALKBCN_CARDS || {}, PHOTOS = W.WALKBCN_PHOTOS || {};
+const SENS = ['worship', 'study', 'residential', 'limited', 'works'];
+for (const [id, c] of Object.entries(CARDS)) {
+  if (!ids.has(id)) fail(`card: unknown stop ${id}`);
+  if (c.outside && !['yes', 'partly', 'no'].includes(c.outside)) fail(`card ${id}: outside must be yes, partly or no`);
+  for (const k of c.sensitive || []) if (!SENS.includes(k)) fail(`card ${id}: unknown sensitivity "${k}"`);
+  for (const f of ['look', 'listen', 'access', 'cap2']) if (c[f]) for (const l of langs) if (!c[f][l]) fail(`card ${id}: ${f} missing in ${l}`);
+  if (c.img2 && !c.cap2) fail(`card ${id}: second photo needs a caption`);
+  for (const src of c.sources || []) if (!/^https:\/\//.test(src.url) || !iso.test(src.checked || '')) fail(`card ${id}: source needs https url and checked date`);
+}
+for (const f of [...STOPS.map(s => s.img), ...Object.values(CARDS).map(c => c.img2).filter(Boolean)]) {
+  if (!PHOTOS[f]?.licence || !PHOTOS[f]?.author) fail(`photo "${f}": author and licence not recorded (node scripts/import-manual.mjs --photos)`);
+}
+
+// Every stop speaks every language: story (3 lengths) and tip
+const I18N = W.WALKBCN_I18N || {};
+for (const s of STOPS) for (const l of langs) {
+  const d = I18N[l]?.stops?.[s.id];
+  if (l !== 'en' && !d?.tip) fail(`stop ${s.id}: tip missing in ${l}`);
+  for (const len of ['short', 'normal', 'long']) if (l !== 'en' || len !== 'normal') if (!d?.stories?.base?.[len]) fail(`stop ${s.id}: ${len} story missing in ${l}`);
+  if (l !== 'en' && !d?.audio?.base?.file) fail(`stop ${s.id}: no recorded audio in ${l}`);
+}
+for (const s of STOPS) if (!W.WALKBCN_STORIES?.[s.id]?.base?.audio) fail(`stop ${s.id}: no recorded English audio`);
+
+// Activities
+const ACT = W.WALKBCN_ACTIVITIES;
+const RETIRED = ['Teresa Carles', 'Flax & Kale'];
+const actText = JSON.stringify(ACT) + JSON.stringify(Object.values(I18N).map(d => d.activities)) + fs.readFileSync(root + 'data/tips.js', 'utf8');
+for (const r of RETIRED) if (actText.includes(r)) fail(`activities: retired place "${r}" still appears`);
+for (const [cat, c] of Object.entries(ACT)) {
+  for (const p of c.places) {
+    for (const f of c.filters) for (const v of [].concat(p[f.id] || [])) if (!f.options.some(o => o.id === v)) fail(`activities ${cat}/${p.name}: unknown ${f.id} "${v}"`);
+    if (p.lat == null || !(p.lat > 41.3 && p.lat < 41.5)) fail(`activities ${cat}/${p.name}: bad position`);
+    if (p.sources && (!p.why || p.sources.some(x => !iso.test(x.checked || '')))) fail(`activities ${cat}/${p.name}: needs why + dated sources`);
+    if (p.note && !c.notes?.[p.note]) fail(`activities ${cat}/${p.name}: unknown note ${p.note}`);
+    for (const l of langs) if (l !== 'en' && I18N[l]?.activities && !I18N[l].activities[cat]?.places?.[p.name]) fail(`activities ${cat}/${p.name}: no ${l} description`);
+  }
+  for (const f of c.filters) for (const l of langs) if (l !== 'en' && I18N[l]?.activities) for (const o of f.options) if (!I18N[l].activities[cat]?.filters?.[f.id]?.options?.[o.id]) fail(`activities ${cat}: option ${f.id}/${o.id} not translated in ${l}`);
+}
+if (!ACT.restaurants.priceNote) fail('activities: restaurants need a priceNote explaining €, €€, €€€');
 
 // Audio files referenced by stories
 let audioRefs = 0;
@@ -65,7 +113,7 @@ for (const [l, d] of Object.entries(W.WALKBCN_I18N || {})) {
 const themeBlock = html.match(/const THEMES = \{([\s\S]*?)\n\};/)?.[1] || '';
 for (const m of themeBlock.matchAll(/'([a-z0-9-]+)'/g)) {
   const v = m[1];
-  if (INTERESTS.includes(v) || ['time', 'stops', 'distance', 'sports'].includes(v)) continue;
+  if (INTERESTS.includes(v) || ['time', 'stops', 'distance', 'sports', 'poblenou'].includes(v)) continue;
   if (!ids.has(v)) fail(`theme uses unknown stop "${v}"`);
 }
 
