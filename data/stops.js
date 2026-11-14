@@ -146,7 +146,7 @@ window.WALKBCN_STOPS = [
   { id: "font-canaletes", name: "Font de Canaletes", img: "Barcelona - Rambla de Canaletes - View NE.jpg", area: "La Rambla", lat: 41.3852, lng: 2.1702, tags: ["sports", "local"], crowded: true,
     story: "This iron fountain at the top of the Rambla carries two traditions. The first is a legend: whoever drinks from it will always come back to Barcelona. The second belongs to football. For decades, Barça fans have gathered right here to celebrate every big win, singing and waving flags until late at night. On an ordinary day it's just a fountain where neighbours fill a bottle; on a title night, the whole Rambla turns blue and red.",
     tip: "On match nights this spot gets packed: if you come to celebrate, respect the people who live on the Rambla." },
-  { id: "gimnas-sole", name: "Gimnàs Solé", img: "34 Fundació del F.C. Barcelona, c. Montjuïc del Carme.jpg", area: "El Raval", lat: 41.3828, lng: 2.17, tags: ["sports", "history"],
+  { id: "gimnas-sole", name: "Gimnàs Solé", img: "34 Fundació del F.C. Barcelona, c. Montjuïc del Carme.jpg", area: "El Raval", lat: 41.3828, lng: 2.17, tags: ["sports"],
     address: "Carrer de Montjuïc del Carme, 5 · Carrer del Pintor Fortuny",
     story: "Nothing about this narrow street suggests history, yet FC Barcelona was born here. On 29 November 1899, a group of football enthusiasts led by the Swiss Joan Gamper met at the Gimnàs Solé, a gymnasium in this street, and founded the club after Gamper had placed an advert in a sports newspaper looking for players. Today a plaque recalls that evening. From a small gym in the Raval to one of the most famous clubs in the world.",
     tip: "It's a residential street: look for the plaque quietly and don't block doorways." },
