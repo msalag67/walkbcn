@@ -53,9 +53,14 @@ const results = [];
 for (const c of todo) {
   const prompt = template.replace("{{REQUEST}}", c.request).replace("{{ANSWER}}", c.answer);
   process.stdout.write(`Case ${c.id} … `);
-  const res = await client.messages.create({ model: MODEL, max_tokens: 1000, messages: [{ role: "user", content: prompt }] });
-  const text = res.content.filter((b) => b.type === "text").map((b) => b.text).join("").trim();
-  const last = text.split("\n").filter(Boolean).pop().replace(/[^A-Z]/g, "");
+  // An empty answer (e.g. the model ran out of tokens) is retried twice, then counts as UNKNOWN.
+  let res, text = "";
+  for (let attempt = 1; attempt <= 3 && !text; attempt++) {
+    res = await client.messages.create({ model: MODEL, max_tokens: 4000, messages: [{ role: "user", content: prompt }] });
+    text = res.content.filter((b) => b.type === "text").map((b) => b.text).join("").trim();
+    if (!text) process.stdout.write(`(empty answer, stop: ${res.stop_reason}${attempt < 3 ? ", retrying" : ""}) `);
+  }
+  const last = (text.split("\n").filter(Boolean).pop() || "").replace(/[^A-Z]/g, "");
   const judge = ["PASS", "FAIL", "UNKNOWN"].includes(last) ? last : "UNKNOWN";
   const code = codeCheck(c);
   const system = code ? "FAIL" : judge;
