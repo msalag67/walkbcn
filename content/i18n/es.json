@@ -1393,12 +1393,12 @@
       }
     },
     "mercat-abaceria": {
-      "tip": "Antes de ir, comprueba dónde están los puestos ese día: el mercado ha estado en obras.",
+      "tip": "Si te entretienes, compra algo: los puestos son el sustento de quien trabaja en ellos. Las primeras semanas tras la reapertura algunos puestos aún se están instalando.",
       "stories": {
         "base": {
-          "short": "Este es el mercado más grande de Gràcia, y desde finales del siglo XIX las familias del barrio vienen aquí a por la fruta, el pescado y el pan. Tras una larga reforma, es posible que los puestos estén en un espacio provisional aquí cerca. Sea como sea, fíjate en los carritos y en la clientela de siempre: esto es la Gràcia del día a día, lejos de las rutas turísticas.",
-          "normal": "Este es el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda la ciudad. Lleva dando servicio a las familias del barrio desde finales del siglo XIX. Ha pasado por una larga reforma, así que puede que los puestos estén en un espacio provisional aquí cerca. Sea como sea, aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas.",
-          "long": "«Abaceria» es una palabra catalana antigua que significa tienda de comestibles: un sitio para la compra de todos los días. Y eso es exactamente lo que sigue siendo el Mercat de l'Abaceria Central, el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda Barcelona. Lleva dando de comer a las familias del barrio desde finales del siglo XIX. Ha pasado por una reforma larga, así que, según cuándo vengas, puede que los puestos estén funcionando en un espacio provisional aquí cerca. Que eso no te eche para atrás. Un mercado son, sobre todo, sus paradistas y su clientela de siempre, no su tejado. Tómate un momento para mirar antes de entrar. Fíjate en quién entra y quién sale: gente mayor con su carrito de la compra, padres y madres con un crío de la mano, alguien con una barra de pan bajo el brazo. Aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas, y muchos clientes habituales conocen a sus paradistas por el nombre. Como los demás mercados municipales de la ciudad, forma parte de la rutina diaria. No es un monumento para tachar de la lista. Si entras, muévete con calma, ve por el lateral de los pasillos y pide permiso antes de fotografiar a nadie. Y si algo te entra por los ojos, cómpralo. Comerte una pieza de fruta en un banco aquí al lado es una de las formas más sencillas de sentir, durante unos minutos, que vives aquí."
+          "short": "Este es el mercado más grande de Gràcia, y desde finales del siglo XIX las familias del barrio vienen aquí a por la fruta, el pescado y el pan. Tras años en una carpa provisional, reabrió en su edificio renovado en noviembre de 2026. Sea como sea, fíjate en los carritos y en la clientela de siempre: esto es la Gràcia del día a día, lejos de las rutas turísticas.",
+          "normal": "Este es el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda la ciudad. Lleva dando servicio a las familias del barrio desde finales del siglo XIX. Tras una larga reforma y años en una carpa provisional, reabrió en su edificio renovado en noviembre de 2026. Sea como sea, aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas.",
+          "long": "«Abaceria» es una palabra catalana antigua que significa tienda de comestibles: un sitio para la compra de todos los días. Y eso es exactamente lo que sigue siendo el Mercat de l'Abaceria Central, el mercado más grande de Gràcia y uno de los mercados de barrio con más vida de toda Barcelona. Lleva dando de comer a las familias del barrio desde finales del siglo XIX. Pasó años en una carpa provisional durante una reforma larga, y en noviembre de 2026 los puestos volvieron a este edificio renovado. Aun así, un mercado son, sobre todo, sus paradistas y su clientela de siempre, no su tejado. Tómate un momento para mirar antes de entrar. Fíjate en quién entra y quién sale: gente mayor con su carrito de la compra, padres y madres con un crío de la mano, alguien con una barra de pan bajo el brazo. Aquí es donde Gràcia compra la fruta, el pescado y el pan, lejos de las rutas turísticas, y muchos clientes habituales conocen a sus paradistas por el nombre. Como los demás mercados municipales de la ciudad, forma parte de la rutina diaria. No es un monumento para tachar de la lista. Si entras, muévete con calma, ve por el lateral de los pasillos y pide permiso antes de fotografiar a nadie. Y si algo te entra por los ojos, cómpralo. Comerte una pieza de fruta en un banco aquí al lado es una de las formas más sencillas de sentir, durante unos minutos, que vives aquí."
         },
         "food": {
           "short": "Fíjate en lo que más se amontona en los puestos: suele ser lo mejor del momento, porque el género va con la temporada. Gràcia compra aquí la fruta, el pescado y el pan desde finales del siglo XIX. Llévate una pieza de fruta bien madura para disfrutarla fuera, y deja libres los pasillos.",
@@ -1414,8 +1414,8 @@
       "srcHash": "1f9a7805df",
       "audio": {
         "base": {
-          "file": "audio/es/mercat-abaceria.mp3",
-          "hash": "4c5845b4b3"
+          "file": "audio/es/mercat-abaceria.m4a",
+          "hash": "4245bc073b"
         },
         "food": {
           "file": "audio/es/mercat-abaceria--food.mp3",
@@ -1454,7 +1454,7 @@
       }
     },
     "bunkers-carmel": {
-      "tip": "Los vecinos de esta zona sufren las aglomeraciones y el ruido: ven en horas tranquilas y consulta el horario de apertura.",
+      "tip": "Un espacio patrimonial encima de casas donde vive gente: nada de fiestas ni música, llévate la basura y habla bajo en la subida.",
       "stories": {
         "base": {
           "short": "Desde lo alto de esta colina se ve casi toda la ciudad, del mar a las montañas. Precisamente por esas vistas se instalaron aquí cañones antiaéreos durante la Guerra Civil. Más tarde, familias que no tenían otro sitio donde vivir levantaron barracas entre las ruinas y se quedaron hasta finales de los años ochenta. Lo que queda son esas plataformas de hormigón.",
@@ -2047,6 +2047,227 @@
           "hash": "67b821b793"
         }
       }
+    },
+    "biblioteca-arus": {
+      "tip": "Es una biblioteca en funcionamiento: escucha la historia aquí fuera, y dentro guarda silencio y no fotografíes a los lectores.",
+      "stories": {
+        "base": {
+          "short": "Busca el rótulo de hierro: Biblioteca Pública Arús. Cuando el escritor y masón Rossend Arús murió en 1891, dejó su piso y sus libros para crear una biblioteca para la gente trabajadora. Abrió aquí en 1895, y hoy guarda un gran fondo sobre el movimiento obrero, el anarquismo y la masonería.",
+          "normal": "Busca el rótulo de hierro de la fachada: Biblioteca Pública Arús. Detrás de este edificio de aspecto corriente hay una biblioteca nacida de un testamento. Cuando el escritor y masón Rossend Arús murió en 1891, dejó su propio piso y sus libros para crear una biblioteca para la instrucción del pueblo trabajador. Abrió en 1895. Hoy sus estanterías guardan uno de los grandes fondos sobre el movimiento obrero, el anarquismo y la masonería, y, por sorpresa, una colección dedicada a Sherlock Holmes. En el vestíbulo, una pequeña Estatua de la Libertad de bronce recibe a los lectores. Sigue siendo una biblioteca en funcionamiento, una sala de lectura antes que un monumento.",
+          "long": "Busca el rótulo de hierro de la fachada: Biblioteca Pública Arús. Detrás de este edificio de aspecto corriente del paseo de Sant Joan hay una biblioteca nacida de un testamento. Cuando el escritor y masón Rossend Arús murió en 1891, pidió a sus albaceas que convirtieran su propio piso y sus libros en una biblioteca para la instrucción del pueblo trabajador. Abrió el 24 de marzo de 1895, con unos veinticuatro mil volúmenes. Piensa en lo que significaba entonces: un lugar gratuito para leer para gente que no podía comprar libros, en una ciudad llena de fábricas y de ideas nuevas sobre el trabajo, la educación y la libertad. Hoy la biblioteca tiene unos sesenta y nueve mil volúmenes y es un centro de investigación sobre el movimiento obrero, el anarquismo y la masonería, con periódicos y folletos difíciles de encontrar en otro lugar. También guarda una gran colección dedicada a Sherlock Holmes. En el vestíbulo, al fondo de la entrada, una pequeña réplica de bronce de la Estatua de la Libertad recibe a los lectores. Su historia también ha tenido silencios: después de 1939 quedó cerrada al público y no volvió a abrir hasta 1967. Recuerda que sigue siendo una biblioteca en funcionamiento: aquí viene gente a estudiar."
+        }
+      },
+      "srcHash": "manual-bd05d4911b",
+      "audio": {
+        "base": {
+          "file": "audio/es/biblioteca-arus.m4a",
+          "hash": "bb25c42f19"
+        }
+      }
+    },
+    "can-framis": {
+      "tip": "La plaza de delante está abierta a todo el mundo; el museo tiene entrada y horarios.",
+      "stories": {
+        "base": {
+          "short": "Esta fábrica de ladrillo con chimenea era la fábrica de lana de la familia Framis, de la época en que el Poblenou estaba lleno de fábricas. Dos de sus tres edificios se restauraron y el tercero se rehízo en hormigón. Desde 2009 es un museo de pintura catalana contemporánea de la Fundació Vila Casas.",
+          "normal": "Mira los edificios de ladrillo y la alta chimenea de detrás. Esto era la fábrica de lana de la familia Framis, de la época en que el Poblenou estaba tan lleno de fábricas que lo llamaban el Manchester catalán. Cuando se transformaron los antiguos terrenos industriales, dos de los tres edificios de la fábrica se restauraron y el tercero se rehízo en hormigón, obra de los arquitectos de BAAS. Desde 2009 es un museo de pintura contemporánea de la Fundació Vila Casas: unas doscientas cincuenta obras de artistas catalanes de los años sesenta en adelante. Junto a la entrada, busca la escultura Dell'Arte, de Jaume Plensa.",
+          "long": "Mira los edificios de ladrillo y la alta chimenea de detrás. Esto era la fábrica de lana de la familia Framis, de la época en que el Poblenou estaba tan lleno de fábricas, humo y viviendas obreras que lo llamaban el Manchester catalán. La mayoría de aquellas fábricas cerraron en la segunda mitad del siglo XX, y los antiguos terrenos industriales que te rodean se han transformado en un barrio de oficinas, universidades y viviendas. Can Framis es una de las fábricas que sobrevivieron a ese cambio. El arquitecto Jordi Badia, de BAAS, restauró dos de sus tres edificios y rehízo el tercero en hormigón, de modo que ahora el ladrillo antiguo y el hormigón nuevo conviven. Fíjate en que la parte nueva no intenta imitar la vieja. El 27 de abril de 2009 abrió como museo de la Fundació Vila Casas, creada por el empresario y coleccionista Antoni Vila Casas. Dentro, unas doscientas cincuenta obras muestran la pintura catalana de los años sesenta en adelante, en tres plantas y más de treinta salas, con espacio también para exposiciones temporales. Junto a la entrada está la escultura Dell'Arte, de Jaume Plensa, donada al museo en 2012. Una fábrica que antes hilaba lana muestra ahora cómo han visto el mundo los artistas de Cataluña."
+        }
+      },
+      "srcHash": "manual-f923c047ab",
+      "audio": {
+        "base": {
+          "file": "audio/es/can-framis.m4a",
+          "hash": "1a3690aa31"
+        }
+      }
+    },
+    "diposit-aigues": {
+      "tip": "Es una biblioteca universitaria: disfrútala desde la calle y deja la entrada libre para los estudiantes.",
+      "stories": {
+        "base": {
+          "short": "Este gigante de ladrillo con una torre en cada esquina se construyó entre 1874 y 1880 como depósito de agua. Josep Fontserè, el arquitecto del parque de la Ciutadella, lo proyectó para alimentar la cascada del parque y regar sus jardines. Desde 1999 es una biblioteca de la Universitat Pompeu Fabra.",
+          "normal": "Mira este enorme edificio de ladrillo con una torre en cada esquina. Se construyó entre 1874 y 1880 como depósito de agua, proyectado por Josep Fontserè, el arquitecto del parque de la Ciutadella, para alimentar la gran cascada del parque y regar sus jardines. El agua se guardaba arriba, y debajo un bosque de pilares y arcos de ladrillo sostenía su peso. Después el edificio tuvo muchas vidas: asilo para gente pobre, almacén de los bomberos, garaje de vehículos de la policía. Desde 1999 es una biblioteca de la Universitat Pompeu Fabra, donde los estudiantes leen entre esos mismos arcos de ladrillo.",
+          "long": "Mira este enorme edificio de ladrillo con una torre en cada esquina. Se construyó entre 1874 y 1880 como depósito de agua, proyectado por Josep Fontserè, el arquitecto del parque de la Ciutadella que tienes al otro lado de la calle, para alimentar la gran cascada del parque y regar sus jardines. El agua se guardaba arriba, y debajo un bosque de pilares y arcos de ladrillo sostenía ese enorme peso. Se dice que un joven estudiante de arquitectura llamado Antoni Gaudí ayudó con los cálculos. El depósito no fue depósito mucho tiempo. De 1896 a 1977 el edificio fue un asilo municipal para gente pobre: encima de la entrada de esta calle aún se puede leer Asilo Municipal del Parque. Después fue almacén de los bomberos, garaje de vehículos de la policía y archivo judicial. A finales de los ochenta se encargó la rehabilitación a los arquitectos Lluís Clotet e Ignacio Paricio, la Universitat Pompeu Fabra lo compró en 1992, y en 1999 abrió como biblioteca de la universidad. Conservaron los pilares y arcos de ladrillo y colocaron las plantas de lectura entre ellos. En 2024 fue declarado bien cultural de interés nacional. Hoy es un lugar para estudiar, así que disfrútalo desde fuera."
+        }
+      },
+      "srcHash": "manual-de7027000a",
+      "audio": {
+        "base": {
+          "file": "audio/es/diposit-aigues.m4a",
+          "hash": "8c57777a1f"
+        }
+      }
+    },
+    "escola-industrial": {
+      "tip": "Es un campus en funcionamiento: quédate en los caminos abiertos, no entres en los edificios y habla bajo cerca de las aulas.",
+      "stories": {
+        "base": {
+          "short": "Estos largos edificios de ladrillo eran una fábrica textil de la familia Batlló, proyectada por el arquitecto Rafael Guastavino a finales de la década de 1860. A principios del siglo XX se compró el recinto para crear la Escola Industrial, una escuela para los técnicos que necesitaba la Cataluña industrial. Las paredes que tenían telares ahora tienen aulas.",
+          "normal": "Mira los largos edificios de ladrillo que te rodean. A finales de la década de 1860, esto era la fábrica textil de la familia Batlló, proyectada por el arquitecto Rafael Guastavino, cuando Barcelona se llenaba de fábricas. La fábrica no duró mucho. A principios del siglo XX se compró el recinto para crear la Escola Industrial, una escuela para formar a los ingenieros y técnicos que necesitaba la Cataluña industrial. Busca el reloj que da nombre a uno de los edificios, el Edifici del Rellotge. Hoy, las mismas paredes que tenían telares tienen aulas, laboratorios y una residencia de estudiantes.",
+          "long": "Mira los largos edificios de ladrillo que te rodean, dispuestos como si fueran calles. A finales de la década de 1860, esto era la fábrica textil de la familia Batlló, proyectada por el arquitecto Rafael Guastavino, cuando el Eixample crecía y Barcelona se llenaba de fábricas y chimeneas. La fábrica no duró mucho: cerró hacia finales del siglo XIX. A principios del siglo XX, un patronato público compró todo el recinto para crear la Escola Industrial, una escuela para formar a los ingenieros, los técnicos y los obreros cualificados que necesitaba la Cataluña industrial. Aquella decisión dio forma al lugar que ves: en lugar de derribarla, la fábrica se convirtió en un campus de casi sesenta mil metros cuadrados. Busca el reloj que da nombre a uno de los edificios, el Edifici del Rellotge. Algunas escuelas universitarias empezaron aquí antes de trasladarse a campus más grandes, y hoy el recinto, propiedad de la Diputació de Barcelona, sigue acogiendo escuelas, laboratorios y una residencia de estudiantes. ¿Y el arquitecto? Rafael Guastavino emigró más tarde a Estados Unidos, donde sus bóvedas de ladrillo se hicieron famosas. Aquí, en cambio, su fábrica de ladrillo sigue haciendo lo que la escuela se propuso: enseñar."
+        }
+      },
+      "srcHash": "manual-3a8d76ff2d",
+      "audio": {
+        "base": {
+          "file": "audio/es/escola-industrial.m4a",
+          "hash": "84db294d6a"
+        }
+      }
+    },
+    "farinera-clot": {
+      "tip": "Es el centro cultural del barrio: deja la entrada libre y no interrumpas clases ni ensayos.",
+      "stories": {
+        "base": {
+          "short": "Este edificio de ladrillo rojo con detalles de cerámica era una harinera. La fábrica modernista que ves la construyó en 1908 el arquitecto Josep Maria Pericas, y aquí se hizo harina hasta 1991. Desde 1999 es un centro cultural, gestionado por las propias entidades del barrio.",
+          "normal": "Mira este edificio de ladrillo rojo con sus detalles de cerámica. Era una harinera, la Farinera de Sant Jaume. En 1879 ya se pidió instalar aquí un molino, y en 1908 el arquitecto Josep Maria Pericas construyó la fábrica modernista que ves ahora. Aquí se hizo harina hasta 1991. Después el Ayuntamiento compró el solar, conservó el edificio principal y lo convirtió en un centro cultural, que abrió en 1999. Desde 2004 lo gestionan las entidades del Clot: fue el primer centro cultural de Barcelona gestionado por una federación de entidades del barrio. En lugar de harina, ahora hace conciertos, cursos y exposiciones.",
+          "long": "Mira este edificio de ladrillo rojo con sus detalles de cerámica. Era una harinera, la Farinera de Sant Jaume, en pleno Clot, un barrio que creció con fábricas, vías de tren y casas obreras. En 1879 ya se pidió instalar aquí un molino, y en 1908 el arquitecto Josep Maria Pericas construyó la fábrica modernista que ves ahora: fíjate en que incluso un edificio para moler trigo tuvo ladrillo decorado y cerámica de colores. Aquí se hizo harina durante más de ochenta años, hasta 1991. Cuando cerró, el barrio podía haberla perdido. En cambio, el Ayuntamiento compró el solar en 1995. Se derribaron el silo y los almacenes, en parte del terreno se construyó un instituto, y los arquitectos Carles Sanfeliu y José Abascal restauraron el edificio principal. Abrió como centro cultural en mayo de 1999. Después llegó algo poco habitual: desde 2004 el centro lo gestiona la federación de entidades del Clot y el Camp de l'Arpa, el primer centro cultural de Barcelona gestionado por una federación de entidades. Así, la gente que vive alrededor decide buena parte de lo que pasa dentro: conciertos, teatro, cursos y exposiciones, primero de todo para el barrio."
+        }
+      },
+      "srcHash": "manual-7b4cffd094",
+      "audio": {
+        "base": {
+          "file": "audio/es/farinera-clot.m4a",
+          "hash": "0718cea7bd"
+        }
+      }
+    },
+    "sant-pau-del-camp": {
+      "tip": "Sigue siendo una iglesia parroquial: si entras, evita las horas de culto y habla bajo.",
+      "stories": {
+        "base": {
+          "short": "Esta pequeña iglesia de piedra es uno de los edificios más antiguos de Barcelona. Sant Pau del Camp significa San Pablo del campo: estaba fuera de las murallas medievales. La saquearon en el 985 y después la rehicieron en estilo románico. Fíjate en la puerta: sus dos capiteles de mármol son piezas visigodas reaprovechadas.",
+          "normal": "Mira la pequeña iglesia de piedra que tienes delante: es uno de los edificios más antiguos de Barcelona. Se llama Sant Pau del Camp, San Pablo del campo, porque se alzaba en pleno campo, fuera de las murallas medievales. El monasterio está documentado desde el siglo X, y en el 985 lo saquearon, cuando las tropas de Almanzor atacaron Barcelona. Lo que ves hoy es sobre todo una reconstrucción románica. Ahora fíjate bien en la puerta: los dos capiteles de las columnas son mucho más antiguos, piezas de mármol de época visigoda reaprovechadas. Encima, Cristo está sentado entre san Pedro y san Pablo.",
+          "long": "Mira la pequeña iglesia de piedra que tienes delante: es uno de los edificios más antiguos de Barcelona. Se llama Sant Pau del Camp, San Pablo del campo, porque cuando la construyeron esto era campo abierto, fuera de las murallas medievales, y el Raval que te rodea aún no existía. El monasterio está documentado desde el siglo X. En el 985, cuando las tropas de Almanzor atacaron Barcelona, lo saquearon, y los monjes lo rehicieron a partir de finales del siglo XI en el estilo románico que ves ahora: muros gruesos, ventanas pequeñas y muy poca decoración. Fíjate bien en la puerta. Los dos capiteles de las columnas son mucho más antiguos que la iglesia: son piezas de mármol de época visigoda que los constructores reaprovecharon. Encima, Cristo en majestad está sentado entre san Pedro y san Pablo. Dentro, una inscripción funeraria encontrada en 1596 se relaciona tradicionalmente con el conde Guifré Borrell, muerto en el 911 y considerado el posible fundador del monasterio. Detrás de la iglesia se esconde un pequeño claustro del siglo XIII con arcos lobulados. Los monjes lo dejaron en 1835, y en 1879 el edificio fue declarado monumento nacional. Hoy sigue siendo una iglesia parroquial."
+        }
+      },
+      "srcHash": "manual-e23005ac70",
+      "audio": {
+        "base": {
+          "file": "audio/es/sant-pau-del-camp.m4a",
+          "hash": "2e3aa841d5"
+        }
+      }
+    },
+    "sant-pere-puelles": {
+      "tip": "Alrededor de esta plaza viven vecinos y sigue siendo una iglesia: escucha desde el lado abierto, lejos de las puertas y los escalones.",
+      "stories": {
+        "base": {
+          "short": "Esta plaza, y las calles de Sant Pere de alrededor, toman el nombre de esta iglesia. En el siglo X había aquí un convento de monjas benedictinas, fuera de las murallas; su iglesia se consagró en el 945. No te dejes engañar por su aspecto antiguo: la iglesia se rehízo muchas veces y del edificio original queda muy poco.",
+          "normal": "Esta plaza, y las calles de Sant Pere de alrededor, toman el nombre de la iglesia que tienes delante. En el siglo X, el conde Sunyer y la condesa Riquilda fundaron aquí un convento de monjas benedictinas, fuera de las murallas, y su iglesia se consagró en el 945. A las monjas se las conocía como las puel·les, de la palabra latina que significa muchachas. No te dejes engañar por el aspecto medieval. El convento fue atacado en el 985, en el siglo XII se consagró una iglesia nueva, y los incendios de 1909 y de la Guerra Civil obligaron a rehacerla aún más. Del edificio original queda muy poco.",
+          "long": "Esta plaza, y las tres calles de Sant Pere de alrededor, toman el nombre de la iglesia que tienes delante. En el siglo X, el conde Sunyer y la condesa Riquilda fundaron aquí un convento de monjas benedictinas, fuera de las murallas, y su iglesia se consagró en el 945. A las monjas se las conocía como las puel·les, de la palabra latina que significa muchachas. El convento dio forma a toda la zona: durante siglos, casas, huertos y talleres crecieron a su alrededor. Ahora, no te dejes engañar por el aspecto medieval de la fachada. En el 985 el convento fue atacado durante la razia de Almanzor, y el conde Borrell II lo restauró. En el siglo XII se consagró una iglesia nueva y más grande. En 1835 las monjas tuvieron que marcharse y el convento se convirtió en cárcel, y en 1879 la comunidad se trasladó a Sarrià, donde aún está su monasterio. La iglesia ardió en 1909, cuando perdió su antiguo campanario, y volvió a sufrir daños durante la Guerra Civil. Lo que ves es el resultado de todas esas reparaciones: del edificio original queda muy poco, aunque una capilla del interior conserva restos de una iglesia todavía más antigua. Así que lee esta fachada como un edificio con muchas capas, no como un solo momento."
+        }
+      },
+      "srcHash": "manual-7b52557c80",
+      "audio": {
+        "base": {
+          "file": "audio/es/sant-pere-puelles.m4a",
+          "hash": "561c079e4c"
+        }
+      }
+    },
+    "via-sepulcral-romana": {
+      "tip": "No hace falta entrada para ver las tumbas desde la plaza: haz turno en la barandilla y deja sitio a los demás.",
+      "stories": {
+        "base": {
+          "short": "Apóyate en la barandilla y mira abajo: son tumbas romanas. Los romanos enterraban a sus muertos fuera de la ciudad, junto a los caminos que salían de ella, y este era uno de los caminos de salida de Barcino. Se colocaron tumbas aquí del siglo I al III. Busca las piedras en forma de media barrica: son tumbas romanas llamadas cupae.",
+          "normal": "Apóyate en la barandilla y mira abajo: estás viendo tumbas romanas. En época romana los muertos se enterraban fuera de la ciudad, junto a los caminos que salían de ella, y este era uno de los caminos que salían de la colonia de Barcino. A su lado se colocaron tumbas del siglo I al III. Busca las piedras en forma de media barrica tumbadas en el suelo: son cupae, un tipo de tumba romana. Mucho más tarde, aquí hubo un convento. Los restos aparecieron cuando se reconstruía el solar después de la Guerra Civil, y se dejaron donde estaban, así que la plaza se construyó a su alrededor.",
+          "long": "Apóyate en la barandilla y mira abajo: estás viendo tumbas romanas. En época romana, la ley no permitía enterrar a los muertos dentro de la ciudad, así que las familias colocaban las tumbas fuera, junto a los caminos, donde todos los viajeros las veían y recordaban los nombres grabados en ellas. Este era uno de esos caminos, una vía secundaria que salía de la colonia de Barcino, la ciudad romana que ocupaba el actual barrio Gótico. A su lado se colocaron tumbas del siglo I al III. Fíjate en sus formas distintas. Las piedras en forma de media barrica tumbadas en el suelo son cupae, un tipo de tumba habitual en esta parte del mundo romano. Otras son pequeños altares y piedras verticales con inscripciones. Mira qué bajos quedan los restos respecto a la plaza: esa diferencia es la tierra y la ciudad que se fueron acumulando durante casi dos mil años. En 1588 se construyó aquí un convento de carmelitas. Después de los bombardeos de la Guerra Civil el convento se trasladó, y cuando se reconstruía el solar aparecieron las tumbas. En lugar de retirarlas, la ciudad las dejó donde estaban y construyó la plaza a su alrededor, con un pequeño espacio expositivo debajo."
+        }
+      },
+      "srcHash": "manual-eef56760e5",
+      "audio": {
+        "base": {
+          "file": "audio/es/via-sepulcral-romana.m4a",
+          "hash": "1031380eda"
+        }
+      }
+    },
+    "disseny-hub": {
+      "tip": "La plaza de fuera es espacio público; el museo tiene entrada y horarios. Deja libres los carriles bici y los caminos del parque.",
+      "stories": {
+        "base": {
+          "short": "Este edificio oscuro que parece suspendido en el aire es el Disseny Hub, sede del Museo del Diseño de Barcelona desde 2014. La gente lo llama la grapadora. Lo proyectó el estudio MBM, y dentro reúne las colecciones de cuatro museos anteriores: artes decorativas, cerámica, textil e indumentaria, y artes gráficas.",
+          "normal": "Mira este edificio oscuro que parece suspendido en el aire, con un gran voladizo que avanza sobre la plaza. La gente lo llama la grapadora. Es el Disseny Hub, proyectado por el estudio MBM y construido entre 2008 y 2013, y desde 2014 es la sede del Museu del Disseny, el museo del diseño de Barcelona. Dentro reúne las colecciones de cuatro museos anteriores: artes decorativas, cerámica, textil e indumentaria, y artes gráficas, más de setenta mil objetos. Ahora mira a tu alrededor. Glòries fue durante décadas un gran nudo de carreteras, y poco a poco se está convirtiendo en un parque.",
+          "long": "Mira este edificio oscuro que parece suspendido en el aire, con un gran voladizo que avanza sobre la plaza. La gente lo llama la grapadora, y cuando lo ves de lado entiendes por qué. Es el Disseny Hub, proyectado por el estudio MBM, fundado por los arquitectos Josep Martorell, Oriol Bohigas y David Mackay, y construido entre 2008 y 2013. Por fuera está revestido de zinc y grandes ventanales, y una parte del edificio queda por debajo del nivel de la plaza. Desde 2014 es la sede del Museu del Disseny, el museo del diseño de Barcelona. Dentro reúne las colecciones de cuatro museos anteriores que estaban repartidos por la ciudad: artes decorativas, cerámica, textil e indumentaria, y artes gráficas, más de setenta mil objetos, desde sillas y vestidos hasta carteles. Ahora mira a tu alrededor. En el plan del Eixample de Ildefons Cerdà, Glòries se imaginaba como el nuevo centro de la ciudad. Durante décadas, en cambio, fue un gran nudo de carreteras, con el tráfico pasando por encima. Poco a poco se está convirtiendo en un parque y en un punto de encuentro entre el Eixample, el Poblenou y el Clot, y la torre alta y redondeada de al lado, la Torre Glòries, es uno de sus iconos."
+        }
+      },
+      "srcHash": "manual-b2efc247c0",
+      "audio": {
+        "base": {
+          "file": "audio/es/disseny-hub.m4a",
+          "hash": "4b6509db1e"
+        }
+      }
+    },
+    "mercat-boqueria": {
+      "tip": "Es un mercado en funcionamiento y muy concurrido: ven temprano un día laborable, compra algo si te paras y pide permiso antes de fotografiar a los paradistas.",
+      "stories": {
+        "base": {
+          "short": "Aquí se vende comida, junto al antiguo portal de la Boqueria en la Rambla, al menos desde el siglo XIII. El mercado cubierto se empezó en 1840 y lleva el nombre de san José. Mira el arco de hierro de la entrada, de 1913, con el escudo de la ciudad en vidriera.",
+          "normal": "En este lugar se vende comida, junto al antiguo portal de la Boqueria de la muralla, al menos desde el siglo XIII, primero como un mercado al aire libre en la Rambla. En 1840 la ciudad empezó aquí una plaza de mercado, y la primera piedra se puso el 19 de marzo, día de San José: por eso su nombre oficial es Mercat de Sant Josep. Ahora mira la entrada: el arco de hierro con cristales de colores y el escudo de la ciudad se añadió en 1913, y la gran cubierta metálica se inauguró en 1914. Dentro, más de trescientos puestos siguen vendiendo pescado, carne, fruta y pan.",
+          "long": "En este lugar se vende comida al menos desde el siglo XIII. Empezó como un mercado al aire libre delante del portal de la Boqueria de la antigua muralla, en la actual Rambla. En 1840 la ciudad aprobó una plaza de mercado porticada del arquitecto municipal Josep Mas i Vila, y la primera piedra se puso el 19 de marzo, día de San José. Por eso su nombre oficial es Mercat de Sant Josep, aunque todo el mundo lo llama la Boqueria. Mira la entrada: el arco de hierro con cristales de colores y el escudo de la ciudad lo construyó en 1913 el arquitecto Antoni de Falguera, y la gran cubierta metálica, fabricada por La Maquinista Terrestre y Marítima, se inauguró en 1914. Dentro hay más de trescientos puestos. Se ha convertido en uno de los lugares más visitados de la ciudad, pero para muchos vecinos sigue siendo donde compran el pescado, la carne y la fruta. Así que compra como ellos: temprano, rápido y sin tapar los puestos."
+        }
+      },
+      "srcHash": "manual-818592f2d0",
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-boqueria.m4a",
+          "hash": "5591782b73"
+        }
+      }
+    },
+    "mirador-poble-sec": {
+      "tip": "Es el parque del barrio: comparte los caminos con los niños y con quien pasea al perro, y nada de música ni gritos.",
+      "stories": {
+        "base": {
+          "short": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles del Poble-sec. La parte de arriba parece un pequeño bosque, con caminos de sablón y miradores; más abajo se convierte en un jardín de barrio. Sigue el agua: un riachuelo baja por un canal de hierro hasta un estanque y una cascada escalonada.",
+          "normal": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles apretadas del Poble-sec. Son dos parques en uno. La parte de arriba parece un pequeño bosque, con caminos anchos de sablón, escaleras y miradores en lo alto. La parte de abajo es un jardín de barrio, con pistas de petanca, una zona de juegos y una pérgola cubierta de glicinas. Ahora sigue el agua: un riachuelo baja por un canal de hierro de veintiocho metros hasta un pequeño estanque, y más abajo una cascada escalonada de dieciocho metros de altura la lleva hasta el fondo. Busca las jacarandas, moradas a finales de primavera.",
+          "long": "Este parque cuelga de la ladera de Montjuïc, justo encima de las calles apretadas del Poble-sec, un barrio con poco verde propio. Son dos parques en uno. La parte de arriba parece un pequeño bosque, con caminos anchos de sablón, escaleras y miradores en los niveles más altos, entre pinos carrascos. La parte de abajo es un jardín urbano pensado para la vida diaria: pistas de petanca, una zona de juegos, una mesa de ping-pong, un espacio para perros y una pérgola cubierta de glicinas y parra virgen. Ahora sigue el agua, que une las dos partes. Un riachuelo que nace de un muro baja por un canal de hierro de veintiocho metros hasta un pequeño estanque, y más abajo otro estanque con plantas acuáticas la envía por una cascada escalonada de dieciocho metros de altura. Fíjate también en los árboles: jacarandas, que se vuelven moradas a finales de primavera, árboles del amor y koelreuterias. Escucha un momento: aquí los sonidos son vecinos jugando a la petanca y niños en los columpios, no tráfico. Es donde el Poble-sec viene a respirar, así que disfrútalo con calma."
+        }
+      },
+      "srcHash": "manual-6ce547688e",
+      "audio": {
+        "base": {
+          "file": "audio/es/mirador-poble-sec.m4a",
+          "hash": "0211adb95a"
+        }
+      }
+    },
+    "moll-de-la-fusta": {
+      "tip": "Corredores, ciclistas y familias comparten este paseo: camina por el lado de peatones y no te pares en el carril bici.",
+      "stories": {
+        "base": {
+          "short": "Este paseo de palmeras es el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona. Antes descargaban aquí los barcos; hoy es un lugar para pasear junto al agua, entre el monumento a Colón y la gran escultura del Cap de Barcelona.",
+          "normal": "Estás en el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona. Durante mucho tiempo este borde de la ciudad fue un muelle de trabajo, separado de las calles de detrás por almacenes y tráfico. En los años ochenta el arquitecto Manuel de Solà-Morales lo rediseñó como un paseo, con palmeras y espacio para caminar junto al agua. Mira hacia un extremo y verás el monumento a Colón; mira hacia el otro y encontrarás la gran cara de cerámica del Cap de Barcelona. En medio, los barcos del puerto viejo están amarrados justo delante de ti.",
+          "long": "Estás en el Moll de la Fusta, el muelle de la madera, parte del Port Vell, la zona más antigua del puerto de Barcelona, en uso desde hace más de cuatro siglos. Durante mucho tiempo este borde de la ciudad fue un muelle de trabajo, separado de las calles de detrás por cobertizos, almacenes y tráfico: la ciudad vieja vivía de espaldas al mar. En los años ochenta, cuando la ciudad empezó a abrir su frente marítimo, el arquitecto Manuel de Solà-Morales rediseñó este muelle como un paseo en varios niveles, con palmeras, bancos y espacio para caminar junto al agua, manteniendo el tráfico aparte. Mira hacia el suroeste y verás el monumento a Colón al final de la Rambla; mira hacia el otro lado y encontrarás la gran cara de cerámica del Cap de Barcelona. Delante de ti, veleros y barcos antiguos están amarrados donde antes se descargaba la mercancía. Es uno de los lugares de Ciutat Vella donde más fácilmente se nota el mar: siéntate un rato, mira el agua y deja que el ruido de la ciudad quede atrás."
+        }
+      },
+      "srcHash": "manual-5e04f36ced",
+      "audio": {
+        "base": {
+          "file": "audio/es/moll-de-la-fusta.m4a",
+          "hash": "b80a12d608"
+        }
+      }
+    },
+    "placa-del-pi": {
+      "tip": "Encima de las terrazas vive gente y la iglesia está en uso: habla bajo y deja libres los escalones de la iglesia.",
+      "stories": {
+        "base": {
+          "short": "Esta placita toma el nombre de un pino, y todavía hay uno. El que ves se plantó en 1985 para sustituir a uno más antiguo. Detrás se alza la iglesia gótica de Santa Maria del Pi, y a su alrededor los vecinos se cruzan camino de las tiendas de Ciutat Vella.",
+          "normal": "Esta placita toma el nombre de un pino. Ya en el siglo XVI crecía aquí uno tan alto que se veía por encima de las casas, y el que ves ahora se plantó en 1985 para mantener la tradición. Detrás se alza la iglesia gótica de Santa Maria del Pi. Frente a la iglesia, fíjate en la antigua casa gremial con dibujos grabados en el revoque de la fachada, una técnica llamada esgrafiado. Aquí se encuentran tres calles, y es donde los vecinos de Ciutat Vella se cruzan camino del trabajo, la escuela o las tiendas.",
+          "long": "Esta placita toma el nombre de un pino. La leyenda habla de una palma y un pino en este lugar, y en el siglo XVI ya crecía aquí un pino tan alto que se veía por encima de las casas. El que ves ahora se plantó en 1985 para mantener la tradición. Detrás se alza la iglesia gótica de Santa Maria del Pi, que dio nombre a todo el barrio. Ahora date la vuelta. Frente a la iglesia está la antigua casa del gremio de revendedores: fíjate en su fachada, decorada con dibujos grabados en el revoque, una técnica llamada esgrafiado. En la esquina con la calle del Cardenal Casañas, la Casa de la Confraria de la Sang es un ejemplo de las casas de la ciudad de principios del siglo XVII. Aquí se encuentran tres calles, Petritxol, del Pi y Cardenal Casañas, y es uno de los lugares donde la gente que vive en Ciutat Vella se cruza cada día, camino del trabajo, la escuela o las tiendas. Párate un momento en un lado de la plaza y mira cómo funciona."
+        }
+      },
+      "srcHash": "manual-6d221f06bb",
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-del-pi.m4a",
+          "hash": "d5aa136a9b"
+        }
+      }
     }
   },
   "activities": {
@@ -2057,9 +2278,12 @@
         "food": {
           "label": "¿Qué tipo de comida?",
           "options": {
-            "catalan": "Clásicos de la cocina catalana",
+            "catalan": "Cocina catalana",
             "tapas": "Tapas",
-            "seafood": "Marisco y arroces",
+            "seafood": "Pescado y marisco",
+            "rice": "Arroces",
+            "esmorzar": "Esmorzar de forquilla",
+            "menu": "Menú del día",
             "veggie": "Opciones vegetarianas"
           }
         },
@@ -2091,8 +2315,6 @@
         "Cal Pep": "Taburetes en la barra y tapas de marisco fresco cocinadas delante de ti. Tiene mucho éxito, y con razón, así que llega pronto o prepárate para hacer cola.",
         "Bar del Pla": "Bar tranquilo del Born que combina tapas clásicas y creativas, con una buena carta de vinos. Uno de los favoritos de la gente de aquí.",
         "Bar Cañete": "Bar de barra animado y cuidado, cerca del Liceu, que sirve tapas clásicas muy bien hechas.",
-        "Teresa Carles": "Un vegetariano de toda la vida cerca de la Plaça de Catalunya, con platos mediterráneos creativos a base de vegetales.",
-        "Flax & Kale": "Restaurante luminoso y centrado en la comida saludable, de la familia de Teresa Carles. Casi todo es vegetal, con algunos platos de pescado.",
         "Quimet & Quimet": "Bar familiar para tomar de pie, con las paredes llenas de botellas, famoso por sus montaditos hechos con conservas de marisco de primerísima calidad.",
         "Bar Mut": "Bar pequeño y de nivel, con una carta en pizarra que cambia según el mercado. Ideal para una noche especial.",
         "Cervecería Catalana": "Bar de tapas grande y con mucho ambiente, que encanta tanto a la gente de aquí como a los visitantes. Ve pronto o te tocará esperar.",
@@ -2115,7 +2337,14 @@
         "La Bombeta": "Bar sin pretensiones de la Barceloneta, famoso por sus bombas y sus patatas bravas.",
         "Bodega Quimet": "Bodega antigua en Gràcia, con barricas, vermut de grifo y tapas sencillas.",
         "Bar Tomàs": "Bar de barrio en Sarrià cuyas patatas bravas son, según muchos de aquí, las mejores de la ciudad.",
-        "Bodega l'Electricitat": "Bodega de la Barceloneta para tomarse un vermut y unas tapas sencillas, como hacen los vecinos los fines de semana."
+        "Bodega l'Electricitat": "Bodega de la Barceloneta para tomarse un vermut y unas tapas sencillas, como hacen los vecinos los fines de semana.",
+        "Can Vilaró": "Bar-restaurante de barrio en Sant Antoni para la cocina catalana de siempre, del cap i pota a los esmorzars de forquilla. Abre de lunes a sábado, hasta media tarde.",
+        "Bar Gelida": "Bar familiar del Eixample desde 1946, que ahora lleva el nieto del fundador. No hay menú: una larga lista de platos catalanes caseros y los platos del día en la pizarra hacia la una.",
+        "Bar Bodega Can Ros": "Bodega fundada en 1971 por Esteve Ros y llevada por sus hijos, sede de una colla de Sant Medir. Tapas tradicionales y esmorzars de forquilla, en la calle Roger de Flor.",
+        "La Sosenga": "Restaurante pequeño abierto en 2023 cerca de la catedral, con cocina catalana contemporánea de producto de temporada. Su nombre viene de un plato del recetario medieval catalán Sent Soví.",
+        "Can Lluís": "Restaurante del Raval fundado en 1929. Cerró en 2021 y reabrió en diciembre de 2025 con nuevos propietarios, que han mantenido su cocina catalana tradicional. Abre cada día a mediodía y por la noche.",
+        "Biocenter": "Restaurante vegetariano familiar en el Raval desde 1980, con platos veganos marcados en la carta y menú de mediodía entre semana.",
+        "Veg World India": "Restaurante indio vegetariano familiar en Gràcia desde 2005; la mayor parte de la carta es vegana. Cierra los lunes."
       }
     },
     "nightlife": {
@@ -2175,7 +2404,7 @@
         "Bar Marsella": "Abierto desde 1820 y famoso por su absenta. Espejos desgastados, botellas polvorientas y muchísimo encanto de otra época.",
         "Jamboree": "Mítico sótano de jazz en la Plaça Reial. Conciertos por la tarde-noche y, ya de madrugada, se convierte en discoteca.",
         "Jazz Si Club": "Bar musical diminuto y económico, gestionado por una escuela de música, con jam sessions de distintos estilos a lo largo de la semana.",
-        "Los Tarantos": "Espectáculos cortos de flamenco en una sala pequeña de la Plaça Reial. Una forma fácil de probar el flamenco por primera vez.",
+        "Los Tarantos": "El tablao flamenco más antiguo de Barcelona, en la plaza Reial desde 1963, con espectáculos cortos de unos 40 minutos. El flamenco nació en Andalucía; en Barcelona arraigó con la inmigración y la comunidad gitana de la ciudad, que también dio la rumba catalana.",
         "Marula Café": "Discoteca pequeña de funk, soul y ritmos latinos. Público simpático y mucho baile.",
         "Sidecar": "Sala en un sótano junto a la Plaça Reial, de indie y rock: primero conciertos y después DJ.",
         "Sala Apolo": "Antiguo salón de baile histórico en el Paral·lel, con conciertos y distintas sesiones temáticas de discoteca a lo largo de la semana.",
@@ -2336,8 +2565,8 @@
       }
     },
     "shops": {
-      "label": "Tiendas históricas",
-      "intro": "Tiendas que forman parte de la ciudad desde hace generaciones. Comprar aquí ayuda a que sigan vivas.",
+      "label": "Comercio local",
+      "intro": "Tiendas familiares e independientes, algunas abiertas desde hace generaciones y otras nuevas. Comprar algo las ayuda a seguir abiertas.",
       "filters": {
         "kind": {
           "label": "¿Qué buscas?",
@@ -2356,6 +2585,13 @@
             "seafront": "Frente marítimo y Poblenou",
             "eixample": "Eixample"
           }
+        },
+        "type": {
+          "label": "¿Qué tipo de tienda?",
+          "options": {
+            "historic": "Histórica (abierta desde hace generaciones)",
+            "independent": "Independiente, más reciente"
+          }
         }
       },
       "places": {
@@ -2371,7 +2607,10 @@
         "Casa Beethoven": "Una tienda de partituras en la Rambla desde 1880, que sigue vendiendo partituras a músicos de toda la ciudad.",
         "Planelles Donat": "Turroneros desde 1850 en el Portal de l'Àngel; en verano también sirven horchata y helados.",
         "Colmado Quílez": "Un colmado en la Rambla de Catalunya desde 1908, con estanterías hasta el techo repletas de vinos, conservas y productos delicatessen.",
-        "Llibreria Altaïr": "Una gran librería independiente dedicada por completo a los viajes, los mapas y las guías."
+        "Llibreria Altaïr": "Una gran librería independiente dedicada por completo a los viajes, los mapas y las guías.",
+        "Llibreria Calders": "Librería independiente en una antigua fábrica de botones, en un pasaje de Sant Antoni dedicado al escritor Pere Calders. Muchos libros en catalán y muchas presentaciones.",
+        "Queviures Múrria": "Un colmado de finales del siglo XIX en la calle Roger de Llúria, con su escaparate modernista original y anuncios de vidrio pintado. La familia Múrria lo lleva desde 1943.",
+        "Torrons La Campana": "Turroneros desde 1890, llevados por la misma familia desde hace cuatro generaciones, en la calle Princesa, 36 desde 1920. En verano, horchata y helados."
       }
     },
     "sports": {
@@ -2409,5 +2648,5 @@
       }
     }
   },
-  "activitiesHash": "f3687f7932"
+  "activitiesHash": "77cf047399"
 }

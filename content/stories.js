@@ -1245,7 +1245,7 @@ window.WALKBCN_STORIES = {
     },
     "base": {
       "audio": "audio/mercat-abaceria.m4a",
-      "audioHash": "3633e90d5b"
+      "audioHash": "3a579d8e56"
     }
   },
   "mercat-ninot": {
@@ -1775,6 +1775,97 @@ window.WALKBCN_STORIES = {
     "base": {
       "audio": "audio/la-central.m4a",
       "audioHash": "1739f91d06"
+    }
+  },
+  "sant-pau-del-camp": {
+    "variants": {},
+    "base": {
+      "audio": "audio/sant-pau-del-camp.m4a",
+      "audioHash": "651c0ceac0"
+    }
+  },
+  "sant-pere-puelles": {
+    "variants": {},
+    "base": {
+      "audio": "audio/sant-pere-puelles.m4a",
+      "audioHash": "541189c572"
+    }
+  },
+  "biblioteca-arus": {
+    "variants": {},
+    "base": {
+      "audio": "audio/biblioteca-arus.m4a",
+      "audioHash": "c4ed4c3908"
+    }
+  },
+  "via-sepulcral-romana": {
+    "variants": {},
+    "base": {
+      "audio": "audio/via-sepulcral-romana.m4a",
+      "audioHash": "107871e425"
+    }
+  },
+  "escola-industrial": {
+    "variants": {},
+    "base": {
+      "audio": "audio/escola-industrial.m4a",
+      "audioHash": "5bab0486c6"
+    }
+  },
+  "diposit-aigues": {
+    "variants": {},
+    "base": {
+      "audio": "audio/diposit-aigues.m4a",
+      "audioHash": "a72e599f4b"
+    }
+  },
+  "can-framis": {
+    "variants": {},
+    "base": {
+      "audio": "audio/can-framis.m4a",
+      "audioHash": "add2f50aab"
+    }
+  },
+  "farinera-clot": {
+    "variants": {},
+    "base": {
+      "audio": "audio/farinera-clot.m4a",
+      "audioHash": "ee4399fe90"
+    }
+  },
+  "disseny-hub": {
+    "variants": {},
+    "base": {
+      "audio": "audio/disseny-hub.m4a",
+      "audioHash": "c7b140fa7c"
+    }
+  },
+  "mercat-boqueria": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mercat-boqueria.m4a",
+      "audioHash": "ee63d9a49f"
+    }
+  },
+  "placa-del-pi": {
+    "variants": {},
+    "base": {
+      "audio": "audio/placa-del-pi.m4a",
+      "audioHash": "96d9ce3cfe"
+    }
+  },
+  "moll-de-la-fusta": {
+    "variants": {},
+    "base": {
+      "audio": "audio/moll-de-la-fusta.m4a",
+      "audioHash": "c891e2fc4a"
+    }
+  },
+  "mirador-poble-sec": {
+    "variants": {},
+    "base": {
+      "audio": "audio/mirador-poble-sec.m4a",
+      "audioHash": "0786594114"
     }
   }
 };

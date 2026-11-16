@@ -1,0 +1,95 @@
+{
+  "id": "sant-pere-puelles",
+  "tip": {
+    "en": "Neighbours live all around this square and it is still a church: listen from the open side, away from the doors and steps.",
+    "ca": "Al voltant d'aquesta plaça hi viuen veïns i encara és una església: escolta des del costat obert, lluny de les portes i les escales.",
+    "es": "Alrededor de esta plaza viven vecinos y sigue siendo una iglesia: escucha desde el lado abierto, lejos de las puertas y los escalones.",
+    "fr": "Des habitants vivent tout autour de cette place, et c'est toujours une église : écoutez depuis le côté dégagé, loin des portes et des marches.",
+    "de": "Rund um diesen Platz wohnen Menschen, und es ist bis heute eine Kirche: Hör von der offenen Seite aus zu, fern von Türen und Stufen.",
+    "it": "Intorno a questa piazza vivono dei residenti ed è ancora una chiesa: ascolta dal lato aperto, lontano da porte e gradini.",
+    "zh": "这个广场四周住着居民，教堂也仍在使用：请在广场开阔的一侧收听，远离教堂大门和台阶。"
+  },
+  "stories": {
+    "en": {
+      "short": "This square, and the streets of Sant Pere around it, take their name from this church. In the 10th century a convent of Benedictine nuns stood here, outside the walls; its church was consecrated in 945. Don't be fooled by the old look: the church was rebuilt again and again, and very little of the first building survives.",
+      "normal": "This square, and the streets of Sant Pere around it, take their name from the church in front of you. In the 10th century, Count Sunyer and Countess Riquilda founded a convent of Benedictine nuns here, outside the city walls, and its church was consecrated in 945. The nuns were known as puel·les, from the Latin word for young women. Don't be fooled by the medieval look. The convent was attacked in 985, a new church was consecrated in the 12th century, and fires in 1909 and during the Civil War forced more rebuilding. Very little of the first building survives.",
+      "long": "This square, and the three streets of Sant Pere around it, take their name from the church in front of you. In the 10th century, Count Sunyer and Countess Riquilda founded a convent of Benedictine nuns here, outside the city walls, and its church was consecrated in 945. The nuns were known as puel·les, from the Latin word for young women. The convent shaped the whole area: for centuries, houses, gardens and workshops grew around it. Now, don't be fooled by the medieval look of the façade. In 985 the convent was attacked during al-Mansur's raid, and the count Borrell the Second restored it. A new, larger church was consecrated in the 12th century. In 1835 the nuns had to leave and the convent became a prison, and in 1879 the community moved to Sarrià, where their monastery still stands. The church burned in 1909, losing its old bell tower, and was damaged again during the Civil War. What you see is the result of all those repairs: very little of the first building survives, though a chapel inside keeps remains of an even older church. So read this façade as a building with many layers, not as a single moment in time."
+    },
+    "ca": {
+      "short": "Aquesta plaça, i els carrers de Sant Pere del voltant, prenen el nom d'aquesta església. Al segle X hi havia aquí un monestir de monges benedictines, fora muralles; la seva església es va consagrar el 945. No et deixis enganyar per l'aspecte antic: l'església s'ha refet moltes vegades i de l'edifici original en queda molt poc.",
+      "normal": "Aquesta plaça, i els carrers de Sant Pere del voltant, prenen el nom de l'església que tens al davant. Al segle X, el comte Sunyer i la comtessa Riquilda hi van fundar un monestir de monges benedictines, fora de les muralles, i la seva església es va consagrar el 945. Les monges eren conegudes com les puel·les, del mot llatí que vol dir noies. No et deixis enganyar per l'aspecte medieval. El monestir va ser atacat el 985, al segle XII es va consagrar una església nova, i els incendis del 1909 i de la Guerra Civil van obligar a refer-la encara més. De l'edifici original en queda molt poc.",
+      "long": "Aquesta plaça, i els tres carrers de Sant Pere del voltant, prenen el nom de l'església que tens al davant. Al segle X, el comte Sunyer i la comtessa Riquilda hi van fundar un monestir de monges benedictines, fora de les muralles, i la seva església es va consagrar el 945. Les monges eren conegudes com les puel·les, del mot llatí que vol dir noies. El monestir va donar forma a tota la zona: durant segles, cases, horts i tallers van créixer al seu voltant. Ara, no et deixis enganyar per l'aspecte medieval de la façana. El 985 el monestir va ser atacat durant la ràtzia d'al-Mansur, i el comte Borrell II el va restaurar. Al segle XII es va consagrar una església nova i més gran. El 1835 les monges van haver de marxar i el monestir es va convertir en presó, i el 1879 la comunitat es va traslladar a Sarrià, on encara hi ha el seu monestir. L'església es va cremar el 1909, quan va perdre l'antic campanar, i va patir danys de nou durant la Guerra Civil. El que veus és el resultat de totes aquestes reparacions: de l'edifici original en queda molt poc, tot i que una capella de dins conserva restes d'una església encara més antiga. Llegeix, doncs, aquesta façana com un edifici amb moltes capes, no com un sol moment."
+    },
+    "es": {
+      "short": "Esta plaza, y las calles de Sant Pere de alrededor, toman el nombre de esta iglesia. En el siglo X había aquí un convento de monjas benedictinas, fuera de las murallas; su iglesia se consagró en el 945. No te dejes engañar por su aspecto antiguo: la iglesia se rehízo muchas veces y del edificio original queda muy poco.",
+      "normal": "Esta plaza, y las calles de Sant Pere de alrededor, toman el nombre de la iglesia que tienes delante. En el siglo X, el conde Sunyer y la condesa Riquilda fundaron aquí un convento de monjas benedictinas, fuera de las murallas, y su iglesia se consagró en el 945. A las monjas se las conocía como las puel·les, de la palabra latina que significa muchachas. No te dejes engañar por el aspecto medieval. El convento fue atacado en el 985, en el siglo XII se consagró una iglesia nueva, y los incendios de 1909 y de la Guerra Civil obligaron a rehacerla aún más. Del edificio original queda muy poco.",
+      "long": "Esta plaza, y las tres calles de Sant Pere de alrededor, toman el nombre de la iglesia que tienes delante. En el siglo X, el conde Sunyer y la condesa Riquilda fundaron aquí un convento de monjas benedictinas, fuera de las murallas, y su iglesia se consagró en el 945. A las monjas se las conocía como las puel·les, de la palabra latina que significa muchachas. El convento dio forma a toda la zona: durante siglos, casas, huertos y talleres crecieron a su alrededor. Ahora, no te dejes engañar por el aspecto medieval de la fachada. En el 985 el convento fue atacado durante la razia de Almanzor, y el conde Borrell II lo restauró. En el siglo XII se consagró una iglesia nueva y más grande. En 1835 las monjas tuvieron que marcharse y el convento se convirtió en cárcel, y en 1879 la comunidad se trasladó a Sarrià, donde aún está su monasterio. La iglesia ardió en 1909, cuando perdió su antiguo campanario, y volvió a sufrir daños durante la Guerra Civil. Lo que ves es el resultado de todas esas reparaciones: del edificio original queda muy poco, aunque una capilla del interior conserva restos de una iglesia todavía más antigua. Así que lee esta fachada como un edificio con muchas capas, no como un solo momento."
+    },
+    "fr": {
+      "short": "Cette place, et les rues de Sant Pere autour, tiennent leur nom de cette église. Au Xe siècle se trouvait ici un couvent de moniales bénédictines, hors des remparts ; son église fut consacrée en 945. Ne vous fiez pas à son air ancien : l'église a été reconstruite maintes fois, et il reste très peu du premier édifice.",
+      "normal": "Cette place, et les rues de Sant Pere autour, tiennent leur nom de l'église devant vous. Au Xe siècle, le comte Sunyer et la comtesse Riquilda fondèrent ici un couvent de moniales bénédictines, hors des remparts, et son église fut consacrée en 945. On appelait les religieuses les puel·les, du mot latin qui signifie jeunes filles. Ne vous fiez pas à l'air médiéval. Le couvent fut attaqué en 985, une nouvelle église fut consacrée au XIIe siècle, et les incendies de 1909 et de la guerre civile imposèrent d'autres reconstructions. Il reste très peu du premier édifice.",
+      "long": "Cette place, et les trois rues de Sant Pere autour, tiennent leur nom de l'église devant vous. Au Xe siècle, le comte Sunyer et la comtesse Riquilda fondèrent ici un couvent de moniales bénédictines, hors des remparts, et son église fut consacrée en 945. On appelait les religieuses les puel·les, du mot latin qui signifie jeunes filles. Le couvent a façonné tout le quartier : pendant des siècles, maisons, jardins et ateliers ont poussé autour de lui. Ne vous fiez pas à l'air médiéval de la façade. En 985, le couvent fut attaqué lors du raid d'al-Mansur, et le comte Borrell II le restaura. Une nouvelle église, plus grande, fut consacrée au XIIe siècle. En 1835, les religieuses durent partir et le couvent devint une prison ; en 1879, la communauté s'installa à Sarrià, où se trouve toujours son monastère. L'église brûla en 1909, perdant son ancien clocher, et fut de nouveau endommagée pendant la guerre civile. Ce que vous voyez résulte de toutes ces réparations : il reste très peu du premier édifice, même si une chapelle intérieure conserve les vestiges d'une église encore plus ancienne. Lisez donc cette façade comme un bâtiment fait de nombreuses couches, et non comme un seul moment."
+    },
+    "de": {
+      "short": "Dieser Platz und die Straßen von Sant Pere ringsum sind nach dieser Kirche benannt. Im 10. Jahrhundert stand hier ein Kloster benediktinischer Nonnen, außerhalb der Mauern; seine Kirche wurde 945 geweiht. Lass dich vom alten Aussehen nicht täuschen: Die Kirche wurde immer wieder neu aufgebaut, vom ersten Bau ist kaum etwas erhalten.",
+      "normal": "Dieser Platz und die Straßen von Sant Pere ringsum sind nach der Kirche vor dir benannt. Im 10. Jahrhundert gründeten Graf Sunyer und Gräfin Riquilda hier ein Kloster benediktinischer Nonnen, außerhalb der Stadtmauer; seine Kirche wurde 945 geweiht. Die Nonnen nannte man puel·les, nach dem lateinischen Wort für junge Frauen. Lass dich vom mittelalterlichen Aussehen nicht täuschen. Das Kloster wurde 985 angegriffen, im 12. Jahrhundert wurde eine neue Kirche geweiht, und Brände 1909 und im Bürgerkrieg erzwangen weitere Neubauten. Vom ersten Gebäude ist kaum etwas erhalten.",
+      "long": "Dieser Platz und die drei Straßen von Sant Pere ringsum sind nach der Kirche vor dir benannt. Im 10. Jahrhundert gründeten Graf Sunyer und Gräfin Riquilda hier ein Kloster benediktinischer Nonnen, außerhalb der Stadtmauer; seine Kirche wurde 945 geweiht. Die Nonnen nannte man puel·les, nach dem lateinischen Wort für junge Frauen. Das Kloster prägte das ganze Viertel: Über Jahrhunderte wuchsen Häuser, Gärten und Werkstätten um es herum. Lass dich nun vom mittelalterlichen Aussehen der Fassade nicht täuschen. 985 wurde das Kloster beim Raubzug al-Mansurs angegriffen, und Graf Borrell II. stellte es wieder her. Im 12. Jahrhundert wurde eine neue, größere Kirche geweiht. 1835 mussten die Nonnen gehen und das Kloster wurde ein Gefängnis; 1879 zog die Gemeinschaft nach Sarrià, wo ihr Kloster noch heute steht. Die Kirche brannte 1909 und verlor ihren alten Glockenturm, und im Bürgerkrieg wurde sie erneut beschädigt. Was du siehst, ist das Ergebnis all dieser Reparaturen: Vom ersten Gebäude ist kaum etwas erhalten, auch wenn eine Kapelle im Inneren Reste einer noch älteren Kirche bewahrt. Lies diese Fassade also als ein Gebäude mit vielen Schichten, nicht als einen einzigen Moment."
+    },
+    "it": {
+      "short": "Questa piazza, e le vie di Sant Pere intorno, prendono il nome da questa chiesa. Nel X secolo qui sorgeva un convento di monache benedettine, fuori dalle mura; la sua chiesa fu consacrata nel 945. Non farti ingannare dall'aspetto antico: la chiesa è stata ricostruita molte volte e del primo edificio resta pochissimo.",
+      "normal": "Questa piazza, e le vie di Sant Pere intorno, prendono il nome dalla chiesa davanti a te. Nel X secolo il conte Sunyer e la contessa Riquilda vi fondarono un convento di monache benedettine, fuori dalle mura, e la sua chiesa fu consacrata nel 945. Le monache erano chiamate puel·les, dalla parola latina che significa fanciulle. Non farti ingannare dall'aspetto medievale. Il convento fu attaccato nel 985, nel XII secolo fu consacrata una nuova chiesa, e gli incendi del 1909 e della guerra civile imposero altre ricostruzioni. Del primo edificio resta pochissimo.",
+      "long": "Questa piazza, e le tre vie di Sant Pere intorno, prendono il nome dalla chiesa davanti a te. Nel X secolo il conte Sunyer e la contessa Riquilda vi fondarono un convento di monache benedettine, fuori dalle mura, e la sua chiesa fu consacrata nel 945. Le monache erano chiamate puel·les, dalla parola latina che significa fanciulle. Il convento diede forma a tutta la zona: per secoli case, orti e botteghe crebbero intorno a esso. Ora, non farti ingannare dall'aspetto medievale della facciata. Nel 985 il convento fu attaccato durante la razzia di al-Mansur, e il conte Borrell II lo restaurò. Nel XII secolo fu consacrata una chiesa nuova e più grande. Nel 1835 le monache dovettero andarsene e il convento diventò un carcere; nel 1879 la comunità si trasferì a Sarrià, dove il suo monastero esiste ancora. La chiesa bruciò nel 1909, perdendo l'antico campanile, e fu di nuovo danneggiata durante la guerra civile. Quello che vedi è il risultato di tutte queste riparazioni: del primo edificio resta pochissimo, anche se una cappella interna conserva resti di una chiesa ancora più antica. Leggi quindi questa facciata come un edificio fatto di molti strati, non come un solo momento."
+    },
+    "zh": {
+      "short": "这个广场以及周围的 Sant Pere 街道，都得名于这座教堂。10世纪时，这里是城墙外一座本笃会修女院，其教堂于945年祝圣。别被它古老的外表迷惑：教堂经过多次重建，最初的建筑几乎已荡然无存。",
+      "normal": "这个广场以及周围的 Sant Pere 街道，都得名于你面前这座教堂。10世纪，苏涅尔伯爵（Sunyer）和里基尔达伯爵夫人（Riquilda）在城墙外创建了一座本笃会修女院，其教堂于945年祝圣。修女们被称为 puel·les，源自拉丁语中意为“少女”的词。别被它中世纪的外观迷惑。修女院在985年遭到攻击，12世纪祝圣了一座新教堂，1909年和内战期间的火灾又迫使教堂一再重建。最初的建筑几乎已荡然无存。",
+      "long": "这个广场以及周围三条 Sant Pere 街道，都得名于你面前这座教堂。10世纪，苏涅尔伯爵（Sunyer）和里基尔达伯爵夫人（Riquilda）在城墙外创建了一座本笃会修女院，其教堂于945年祝圣。修女们被称为 puel·les，源自拉丁语中意为“少女”的词。修女院塑造了整个街区：几百年间，房屋、菜园和作坊围绕着它发展起来。现在，别被立面中世纪的外观迷惑。985年，修女院在曼苏尔的突袭中遭到攻击，后来由博雷尔二世伯爵修复。12世纪，一座更大的新教堂被祝圣。1835年修女们被迫离开，修女院变成了监狱；1879年，修女团体迁往萨里亚（Sarrià），她们的修道院至今仍在那里。1909年教堂被大火焚毁，失去了古老的钟楼，内战期间又再次受损。你看到的是这一切修复的结果：最初的建筑几乎荡然无存，不过教堂内的一座小礼拜堂保留着一座更古老教堂的遗迹。所以，请把这座立面看作一座层层叠加的建筑，而不是某个单一时刻的作品。"
+    }
+  },
+  "card": {
+    "outside": "yes",
+    "sensitive": ["worship", "residential"],
+    "official": "https://www.barcelonaturisme.com/wv3/en/page/500/sant-pere-de-les-puelles.html",
+    "img2": "SantPerePuellesBarcelona-ant1909.jpg",
+    "look": {
+      "en": "The plain stone façade and the octagonal bell tower. Compare them with the old photo below, taken before the 1909 fire.",
+      "ca": "La façana senzilla de pedra i el campanar octogonal. Compara'ls amb la foto antiga de sota, d'abans de l'incendi del 1909.",
+      "es": "La fachada sencilla de piedra y el campanario octogonal. Compáralos con la foto antigua de abajo, anterior al incendio de 1909.",
+      "fr": "La façade de pierre dépouillée et le clocher octogonal. Comparez-les avec la photo ancienne ci-dessous, prise avant l'incendie de 1909.",
+      "de": "Die schlichte Steinfassade und der achteckige Glockenturm. Vergleiche sie mit dem alten Foto unten, aufgenommen vor dem Brand von 1909.",
+      "it": "La sobria facciata di pietra e il campanile ottagonale. Confrontali con la vecchia foto qui sotto, scattata prima dell'incendio del 1909.",
+      "zh": "朴素的石头立面和八角形钟楼。和下面这张1909年火灾前的老照片比较一下。"
+    },
+    "listen": {
+      "en": "On the open side of the square, near the fountain, leaving the church steps and the doorways of the houses clear.",
+      "ca": "Al costat obert de la plaça, prop de la font, deixant lliures les escales de l'església i les portes de les cases.",
+      "es": "En el lado abierto de la plaza, cerca de la fuente, dejando libres los escalones de la iglesia y los portales de las casas.",
+      "fr": "Du côté dégagé de la place, près de la fontaine, en laissant libres les marches de l'église et les portes des maisons.",
+      "de": "Auf der offenen Seite des Platzes beim Brunnen; Kirchenstufen und Hauseingänge freilassen.",
+      "it": "Sul lato aperto della piazza, vicino alla fontana, lasciando liberi i gradini della chiesa e i portoni delle case.",
+      "zh": "在广场开阔的一侧、喷泉附近收听，不要挡住教堂台阶和住宅大门。"
+    },
+    "access": {
+      "en": "Best enjoyed from outside. The church opens for services; if you go in, do so quietly and not during Mass.",
+      "ca": "Millor des de fora. L'església obre per al culte; si hi entres, fes-ho en silenci i no durant la missa.",
+      "es": "Mejor desde fuera. La iglesia abre para el culto; si entras, hazlo en silencio y no durante la misa.",
+      "fr": "À apprécier de l'extérieur. L'église ouvre pour les offices ; si vous entrez, faites-le en silence et pas pendant la messe.",
+      "de": "Am besten von außen. Die Kirche öffnet für Gottesdienste; wenn du hineingehst, dann leise und nicht während der Messe.",
+      "it": "Meglio dall'esterno. La chiesa apre per le funzioni; se entri, fallo in silenzio e non durante la messa.",
+      "zh": "最好从外面欣赏。教堂在宗教仪式时开放；如果进去，请保持安静，不要在弥撒期间进入。"
+    },
+    "cap2": {
+      "en": "The church before the 1909 fire, with its old bell tower (historic photo, public domain).",
+      "ca": "L'església abans de l'incendi del 1909, amb l'antic campanar (foto històrica, domini públic).",
+      "es": "La iglesia antes del incendio de 1909, con su antiguo campanario (foto histórica, dominio público).",
+      "fr": "L'église avant l'incendie de 1909, avec son ancien clocher (photo historique, domaine public).",
+      "de": "Die Kirche vor dem Brand von 1909, mit dem alten Glockenturm (historisches Foto, gemeinfrei).",
+      "it": "La chiesa prima dell'incendio del 1909, con il vecchio campanile (foto storica, pubblico dominio).",
+      "zh": "1909年火灾前的教堂及其旧钟楼（历史照片，公有领域）。"
+    },
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Sant_Pere_de_les_Puelles", "checked": "2026-11-14" },
+      { "url": "https://www.barcelonaturisme.com/wv3/en/page/500/sant-pere-de-les-puelles.html", "checked": "2026-11-14" }
+    ]
+  }
+}

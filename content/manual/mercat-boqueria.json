@@ -1,0 +1,97 @@
+{
+  "id": "mercat-boqueria",
+  "tip": {
+    "en": "It is a working market and very busy: come early on a weekday, buy something if you stop, and ask before photographing stallholders.",
+    "ca": "És un mercat en funcionament i molt concorregut: vine aviat un dia feiner, compra alguna cosa si t'atures i demana permís abans de fotografiar els paradistes.",
+    "es": "Es un mercado en funcionamiento y muy concurrido: ven temprano un día laborable, compra algo si te paras y pide permiso antes de fotografiar a los paradistas.",
+    "fr": "C'est un marché en activité et très fréquenté : venez tôt en semaine, achetez quelque chose si vous vous arrêtez et demandez avant de photographier les commerçants.",
+    "de": "Ein aktiver und sehr voller Markt: Komm früh an einem Werktag, kauf etwas, wenn du stehen bleibst, und frag, bevor du Standbetreiber fotografierst.",
+    "it": "È un mercato in funzione e molto affollato: vieni presto in un giorno feriale, compra qualcosa se ti fermi e chiedi prima di fotografare i commercianti.",
+    "zh": "这是一座仍在营业、非常繁忙的市场：最好工作日早点来，停下来就买点东西，拍摄摊主前请先征得同意。"
+  },
+  "stories": {
+    "en": {
+      "short": "Food has been sold here, by the old Boqueria gate on the Rambla, since at least the 13th century. The covered market was begun in 1840 and named after Saint Joseph. Look up at the iron entrance arch of 1913, with the city's coat of arms in stained glass.",
+      "normal": "Food has been sold on this spot, by the old Boqueria gate in the city wall, since at least the 13th century, first as an open-air market on the Rambla. In 1840 the city began a proper market square here, and its first stone was laid on 19 March, Saint Joseph's day, which is why its official name is the Mercat de Sant Josep. Now look up at the entrance: the iron arch with coloured glass and the city's coat of arms was added in 1913, and the great metal roof was opened in 1914. Inside, more than three hundred stalls still sell fish, meat, fruit and bread.",
+      "long": "Food has been sold on this spot since at least the 13th century. It began as an open-air market outside the Boqueria gate in the old city wall, on what is now the Rambla. In 1840 the city approved a covered market square designed by the municipal architect Josep Mas i Vila, and its first stone was laid on 19 March, Saint Joseph's day. That is why its official name is the Mercat de Sant Josep, even though everyone calls it la Boqueria. Look up at the entrance: the iron arch with coloured glass and the city's coat of arms was built in 1913 by the architect Antoni de Falguera, and the great metal roof, made by the Barcelona engineering firm La Maquinista, was opened in 1914. Inside there are more than three hundred stalls. It has become one of the most visited places in the city, but for many neighbours it is still where they buy their fish, meat and fruit. So shop like them: early, quickly, and without blocking the stalls."
+    },
+    "ca": {
+      "short": "Aquí s'hi ven menjar, al costat de l'antic portal de la Boqueria a la Rambla, almenys des del segle XIII. El mercat cobert es va començar el 1840 i porta el nom de sant Josep. Mira l'arc de ferro de l'entrada, del 1913, amb l'escut de la ciutat en vitrall.",
+      "normal": "En aquest lloc s'hi ven menjar, al costat de l'antic portal de la Boqueria de la muralla, almenys des del segle XIII, primer com un mercat a l'aire lliure a la Rambla. El 1840 la ciutat hi va començar una plaça de mercat, i la primera pedra es va posar el 19 de març, dia de Sant Josep: per això el seu nom oficial és Mercat de Sant Josep. Ara mira l'entrada: l'arc de ferro amb vidres de colors i l'escut de la ciutat es va afegir el 1913, i la gran coberta metàl·lica es va inaugurar el 1914. A dins, més de tres-centes parades encara venen peix, carn, fruita i pa.",
+      "long": "En aquest lloc s'hi ven menjar almenys des del segle XIII. Va començar com un mercat a l'aire lliure davant del portal de la Boqueria de l'antiga muralla, a l'actual Rambla. El 1840 la ciutat va aprovar una plaça de mercat porxada de l'arquitecte municipal Josep Mas i Vila, i la primera pedra es va posar el 19 de març, dia de Sant Josep. Per això el seu nom oficial és Mercat de Sant Josep, tot i que tothom en diu la Boqueria. Mira l'entrada: l'arc de ferro amb vidres de colors i l'escut de la ciutat el va construir el 1913 l'arquitecte Antoni de Falguera, i la gran coberta metàl·lica, feta per la Maquinista Terrestre i Marítima, es va inaugurar el 1914. A dins hi ha més de tres-centes parades. S'ha convertit en un dels llocs més visitats de la ciutat, però per a molts veïns encara és on compren el peix, la carn i la fruita. Així que compra com ells: aviat, de pressa i sense tapar les parades."
+    },
+    "es": {
+      "short": "Aquí se vende comida, junto al antiguo portal de la Boqueria en la Rambla, al menos desde el siglo XIII. El mercado cubierto se empezó en 1840 y lleva el nombre de san José. Mira el arco de hierro de la entrada, de 1913, con el escudo de la ciudad en vidriera.",
+      "normal": "En este lugar se vende comida, junto al antiguo portal de la Boqueria de la muralla, al menos desde el siglo XIII, primero como un mercado al aire libre en la Rambla. En 1840 la ciudad empezó aquí una plaza de mercado, y la primera piedra se puso el 19 de marzo, día de San José: por eso su nombre oficial es Mercat de Sant Josep. Ahora mira la entrada: el arco de hierro con cristales de colores y el escudo de la ciudad se añadió en 1913, y la gran cubierta metálica se inauguró en 1914. Dentro, más de trescientos puestos siguen vendiendo pescado, carne, fruta y pan.",
+      "long": "En este lugar se vende comida al menos desde el siglo XIII. Empezó como un mercado al aire libre delante del portal de la Boqueria de la antigua muralla, en la actual Rambla. En 1840 la ciudad aprobó una plaza de mercado porticada del arquitecto municipal Josep Mas i Vila, y la primera piedra se puso el 19 de marzo, día de San José. Por eso su nombre oficial es Mercat de Sant Josep, aunque todo el mundo lo llama la Boqueria. Mira la entrada: el arco de hierro con cristales de colores y el escudo de la ciudad lo construyó en 1913 el arquitecto Antoni de Falguera, y la gran cubierta metálica, fabricada por La Maquinista Terrestre y Marítima, se inauguró en 1914. Dentro hay más de trescientos puestos. Se ha convertido en uno de los lugares más visitados de la ciudad, pero para muchos vecinos sigue siendo donde compran el pescado, la carne y la fruta. Así que compra como ellos: temprano, rápido y sin tapar los puestos."
+    },
+    "fr": {
+      "short": "On vend de la nourriture ici, près de l'ancienne porte de la Boqueria sur la Rambla, depuis au moins le XIIIe siècle. Le marché couvert fut commencé en 1840 et porte le nom de saint Joseph. Levez les yeux vers l'arc d'entrée en fer de 1913, avec les armoiries de la ville en vitrail.",
+      "normal": "On vend de la nourriture à cet endroit, près de l'ancienne porte de la Boqueria dans le rempart, depuis au moins le XIIIe siècle, d'abord sous forme de marché en plein air sur la Rambla. En 1840, la ville y commença une véritable place de marché, dont la première pierre fut posée le 19 mars, jour de la Saint-Joseph : d'où son nom officiel, Mercat de Sant Josep. Regardez l'entrée : l'arc en fer aux vitraux colorés et aux armoiries de la ville date de 1913, et la grande toiture métallique fut inaugurée en 1914. À l'intérieur, plus de trois cents étals vendent toujours poisson, viande, fruits et pain.",
+      "long": "On vend de la nourriture à cet endroit depuis au moins le XIIIe siècle. Tout commença par un marché en plein air devant la porte de la Boqueria de l'ancien rempart, sur l'actuelle Rambla. En 1840, la ville approuva une place de marché à arcades conçue par l'architecte municipal Josep Mas i Vila, dont la première pierre fut posée le 19 mars, jour de la Saint-Joseph. Voilà pourquoi son nom officiel est Mercat de Sant Josep, même si tout le monde l'appelle la Boqueria. Regardez l'entrée : l'arc en fer aux vitraux colorés et aux armoiries de la ville fut construit en 1913 par l'architecte Antoni de Falguera, et la grande toiture métallique, fabriquée par l'entreprise barcelonaise La Maquinista, fut inaugurée en 1914. À l'intérieur, plus de trois cents étals. C'est devenu l'un des lieux les plus visités de la ville, mais pour beaucoup d'habitants c'est toujours là qu'ils achètent leur poisson, leur viande et leurs fruits. Faites donc comme eux : tôt, vite et sans bloquer les étals."
+    },
+    "de": {
+      "short": "Hier, am alten Boqueria-Tor an der Rambla, wird seit mindestens dem 13. Jahrhundert Essen verkauft. Die Markthalle wurde 1840 begonnen und nach dem heiligen Josef benannt. Schau hinauf zum eisernen Eingangsbogen von 1913 mit dem Stadtwappen in Buntglas.",
+      "normal": "An dieser Stelle, am alten Boqueria-Tor der Stadtmauer, wird seit mindestens dem 13. Jahrhundert Essen verkauft, zuerst als offener Markt auf der Rambla. 1840 begann die Stadt hier einen richtigen Marktplatz, und der Grundstein wurde am 19. März gelegt, dem Josefstag: Deshalb heißt er offiziell Mercat de Sant Josep. Schau nun auf den Eingang: Der eiserne Bogen mit farbigem Glas und dem Stadtwappen kam 1913 hinzu, das große Metalldach wurde 1914 eröffnet. Drinnen verkaufen noch heute mehr als dreihundert Stände Fisch, Fleisch, Obst und Brot.",
+      "long": "An dieser Stelle wird seit mindestens dem 13. Jahrhundert Essen verkauft. Es begann als offener Markt vor dem Boqueria-Tor der alten Stadtmauer, auf der heutigen Rambla. 1840 genehmigte die Stadt einen Marktplatz mit Arkaden nach Plänen des Stadtarchitekten Josep Mas i Vila, und der Grundstein wurde am 19. März gelegt, dem Josefstag. Deshalb heißt er offiziell Mercat de Sant Josep, auch wenn alle ihn Boqueria nennen. Schau auf den Eingang: Den eisernen Bogen mit farbigem Glas und dem Stadtwappen baute 1913 der Architekt Antoni de Falguera, und das große Metalldach der Barceloneser Maschinenbaufirma La Maquinista wurde 1914 eröffnet. Drinnen gibt es mehr als dreihundert Stände. Der Markt gehört heute zu den meistbesuchten Orten der Stadt, doch für viele Nachbarn ist er noch immer der Ort, wo sie Fisch, Fleisch und Obst kaufen. Mach es also wie sie: früh, zügig und ohne die Stände zu blockieren."
+    },
+    "it": {
+      "short": "Qui, accanto all'antica porta della Boqueria sulla Rambla, si vende cibo almeno dal XIII secolo. Il mercato coperto fu iniziato nel 1840 e porta il nome di san Giuseppe. Guarda l'arco d'ingresso in ferro del 1913, con lo stemma della città in vetrata.",
+      "normal": "In questo luogo, accanto all'antica porta della Boqueria nelle mura, si vende cibo almeno dal XIII secolo, all'inizio come mercato all'aperto sulla Rambla. Nel 1840 la città vi iniziò una vera piazza del mercato, e la prima pietra fu posata il 19 marzo, giorno di San Giuseppe: per questo il nome ufficiale è Mercat de Sant Josep. Ora guarda l'ingresso: l'arco di ferro con vetri colorati e lo stemma della città fu aggiunto nel 1913, e la grande copertura metallica fu inaugurata nel 1914. Dentro, più di trecento banchi vendono ancora pesce, carne, frutta e pane.",
+      "long": "In questo luogo si vende cibo almeno dal XIII secolo. Tutto iniziò come un mercato all'aperto davanti alla porta della Boqueria delle antiche mura, sull'attuale Rambla. Nel 1840 la città approvò una piazza del mercato porticata progettata dall'architetto municipale Josep Mas i Vila, e la prima pietra fu posata il 19 marzo, giorno di San Giuseppe. Per questo il nome ufficiale è Mercat de Sant Josep, anche se tutti la chiamano Boqueria. Guarda l'ingresso: l'arco di ferro con vetri colorati e lo stemma della città fu costruito nel 1913 dall'architetto Antoni de Falguera, e la grande copertura metallica, realizzata dall'azienda barcellonese La Maquinista, fu inaugurata nel 1914. Dentro ci sono più di trecento banchi. È diventato uno dei luoghi più visitati della città, ma per molti residenti è ancora il posto dove comprano pesce, carne e frutta. Quindi fai come loro: presto, in fretta e senza bloccare i banchi."
+    },
+    "zh": {
+      "short": "至少从13世纪起，人们就在兰布拉大道旧博克利亚城门（Boqueria）旁卖食物。室内市场始建于1840年，以圣约瑟命名。抬头看看1913年的铁制入口拱门，上面有彩色玻璃的城市徽章。",
+      "normal": "至少从13世纪起，人们就在城墙旧博克利亚城门（Boqueria）旁的这块地方卖食物，最初是兰布拉大道上的露天市场。1840年，市政府在这里开始兴建正式的市场广场，奠基石于3月19日圣约瑟节放下，所以它的正式名称是圣约瑟市场（Mercat de Sant Josep）。现在看看入口：带彩色玻璃和城市徽章的铁拱门是1913年加上的，巨大的金属屋顶于1914年落成。市场里三百多个摊位至今仍在卖鱼、肉、水果和面包。",
+      "long": "至少从13世纪起，这里就有人卖食物。它最初是旧城墙博克利亚城门（Boqueria）前的露天市场，就在今天的兰布拉大道上。1840年，市政府批准了市政建筑师何塞普·马斯·伊·维拉（Josep Mas i Vila）设计的带柱廊市场广场，奠基石于3月19日圣约瑟节放下。所以它的正式名称是圣约瑟市场（Mercat de Sant Josep），虽然大家都叫它博克利亚。看看入口：带彩色玻璃和城市徽章的铁拱门由建筑师安东尼·德·法尔格拉（Antoni de Falguera）于1913年建造；由巴塞罗那机械公司 La Maquinista 制造的巨大金属屋顶于1914年落成。市场里有三百多个摊位。如今它已成为城里游客最多的地方之一，但对许多居民来说，这里仍是买鱼、买肉、买水果的地方。所以，像他们一样购物吧：早点来，动作快，不要挡住摊位。"
+    }
+  },
+  "card": {
+    "outside": "partly",
+    "sensitive": [],
+    "official": null,
+    "img2": "La boqueria a contraluz.JPG",
+    "look": {
+      "en": "The 1913 iron entrance arch with coloured glass and the city's coat of arms; inside, the five naves under the 1914 metal roof.",
+      "ca": "L'arc de ferro de l'entrada, del 1913, amb vidres de colors i l'escut de la ciutat; a dins, les cinc naus sota la coberta metàl·lica del 1914.",
+      "es": "El arco de hierro de la entrada, de 1913, con cristales de colores y el escudo de la ciudad; dentro, las cinco naves bajo la cubierta metálica de 1914.",
+      "fr": "L'arc d'entrée en fer de 1913, avec ses vitraux et les armoiries de la ville ; à l'intérieur, les cinq nefs sous la toiture métallique de 1914.",
+      "de": "Der eiserne Eingangsbogen von 1913 mit Buntglas und Stadtwappen; drinnen die fünf Hallenschiffe unter dem Metalldach von 1914.",
+      "it": "L'arco d'ingresso in ferro del 1913, con vetri colorati e lo stemma della città; dentro, le cinque navate sotto la copertura metallica del 1914.",
+      "zh": "1913年的铁制入口拱门，带彩色玻璃和城市徽章；市场内是1914年金属屋顶下的五条通道。"
+    },
+    "listen": {
+      "en": "On the Rambla's central walk, opposite the entrance, not inside the arch where people go in and out.",
+      "ca": "Al passeig central de la Rambla, davant de l'entrada, no a dins de l'arc per on entra i surt la gent.",
+      "es": "En el paseo central de la Rambla, frente a la entrada, no dentro del arco por donde entra y sale la gente.",
+      "fr": "Sur l'allée centrale de la Rambla, face à l'entrée, pas sous l'arc où les gens entrent et sortent.",
+      "de": "Auf dem Mittelweg der Rambla gegenüber dem Eingang, nicht im Bogen, wo die Leute ein- und ausgehen.",
+      "it": "Sul viale centrale della Rambla, di fronte all'ingresso, non sotto l'arco dove la gente entra ed esce.",
+      "zh": "在兰布拉大道中央步道、入口对面收听，不要站在人们进出的拱门下。"
+    },
+    "access": {
+      "en": "Free to enter during market hours; most stalls are open in the morning. Very crowded at midday: it is one of the city's big icons.",
+      "ca": "Entrada lliure en l'horari del mercat; la majoria de parades obren al matí. Molt ple al migdia: és un dels grans icones de la ciutat.",
+      "es": "Entrada libre en horario de mercado; la mayoría de puestos abren por la mañana. Muy lleno a mediodía: es uno de los grandes iconos de la ciudad.",
+      "fr": "Entrée libre aux heures du marché ; la plupart des étals ouvrent le matin. Très bondé à midi : c'est l'un des grands sites de la ville.",
+      "de": "Freier Eintritt zu den Marktzeiten; die meisten Stände haben vormittags geöffnet. Mittags sehr voll: eine der großen Sehenswürdigkeiten.",
+      "it": "Ingresso libero negli orari del mercato; la maggior parte dei banchi apre al mattino. Affollatissimo a mezzogiorno: è una delle grandi icone della città.",
+      "zh": "市场营业时间内可免费进入；大部分摊位上午营业。中午非常拥挤：这里是城市的热门地标之一。"
+    },
+    "cap2": {
+      "en": "The coat of arms on the 1913 entrance arch.",
+      "ca": "L'escut de l'arc de l'entrada, del 1913.",
+      "es": "El escudo del arco de la entrada, de 1913.",
+      "fr": "Les armoiries de l'arc d'entrée de 1913.",
+      "de": "Das Wappen am Eingangsbogen von 1913.",
+      "it": "Lo stemma dell'arco d'ingresso del 1913.",
+      "zh": "1913年入口拱门上的徽章。"
+    },
+    "sources": [
+      {
+        "url": "https://ca.wikipedia.org/wiki/Mercat_de_la_Boqueria",
+        "checked": "2026-11-14"
+      }
+    ]
+  }
+}

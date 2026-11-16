@@ -940,7 +940,7 @@ Check:
 - [ ] The market is especially known for its fish and seafood
 - [ ] Fish is displayed on ice at the counters (general description, confirm it suits this market)
 
-## Bunkers del Carmel
+## Turó de la Rovira (Bunkers del Carmel)
 
 **outdoors**
 
