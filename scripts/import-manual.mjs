@@ -116,13 +116,22 @@ function translateActivities(lang, data) {
 
 // ---- stop texts into content/i18n ----
 const tips = read(path.join(MANUAL, "_tips.json"));
+const kept = [];
 for (const lang of LANGS) {
   const file = path.join(I18N, `${lang}.json`);
   const data = read(file);
   for (const m of manual) {
     const prev = data.stops[m.id] || {};
+    // Texts edited by hand after the last import (e.g. the Spanish guide-voice rewrite of
+    // 16–17 Nov 2026) are kept: same source hash, different text. --force-texts overwrites.
+    const srcHash = `manual-${hash(JSON.stringify([m.stories.en, m.tip.en]))}`;
+    const prevBase = prev.stories?.base;
+    if (lang !== "en" && prev.srcHash === srcHash && prevBase && JSON.stringify(prevBase) !== JSON.stringify(m.stories[lang]) && !process.argv.includes("--force-texts")) {
+      kept.push(`${lang}/${m.id}`);
+      continue;
+    }
     const entry = { tip: m.tip[lang], stories: { base: { ...m.stories[lang] } } };
-    if (lang !== "en") { entry.srcHash = `manual-${hash(JSON.stringify([m.stories.en, m.tip.en]))}`; entry.audio = prev.audio ?? {}; }
+    if (lang !== "en") { entry.srcHash = srcHash; entry.audio = prev.audio ?? {}; }
     data.stops[m.id] = entry;
   }
   for (const [id, t] of Object.entries(tips)) if (data.stops[id] && t[lang]) data.stops[id].tip = t[lang];
@@ -174,4 +183,5 @@ fs.writeFileSync(path.join(ROOT, "data/cards.js"),
   `// WALKBCN_CARDS: practical card per stop (what to look at, where to listen, access, sensitivity,\n` +
   `// second photo, sources with the date checked). WALKBCN_PHOTOS: author and licence of every photo.\n` +
   `window.WALKBCN_CARDS = ${JSON.stringify(cards, null, 1)};\nwindow.WALKBCN_PHOTOS = ${JSON.stringify(keptPhotos, null, 1)};\n`);
+if (kept.length) console.log(`Kept texts edited by hand (use --force-texts to overwrite): ${kept.join(", ")}`);
 console.log(`Imported ${manual.length} stops, ${Object.keys(cards).length} cards, ${Object.keys(keptPhotos).length} photo credits.`);

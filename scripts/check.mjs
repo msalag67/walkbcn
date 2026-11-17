@@ -74,13 +74,16 @@ for (const f of [...STOPS.map(s => s.img), ...Object.values(CARDS).map(c => c.im
 
 // Every stop speaks every language: story (3 lengths) and tip
 const I18N = W.WALKBCN_I18N || {};
+const noAudio = {};
 for (const s of STOPS) for (const l of langs) {
   const d = I18N[l]?.stops?.[s.id];
   if (l !== 'en' && !d?.tip) fail(`stop ${s.id}: tip missing in ${l}`);
   for (const len of ['short', 'normal', 'long']) if (l !== 'en' || len !== 'normal') if (!d?.stories?.base?.[len]) fail(`stop ${s.id}: ${len} story missing in ${l}`);
-  if (l !== 'en' && !d?.audio?.base?.file) fail(`stop ${s.id}: no recorded audio in ${l}`);
+  if (l !== 'en' && !d?.audio?.base?.file) (noAudio[l] ||= []).push(s.id);
 }
-for (const s of STOPS) if (!W.WALKBCN_STORIES?.[s.id]?.base?.audio) fail(`stop ${s.id}: no recorded English audio`);
+// A missing recording is not an error (the phone's voice reads the story), but it is reported:
+// e.g. the Spanish texts rewritten on 16–17 Nov 2026 play with the device voice until re-recorded.
+for (const s of STOPS) if (!W.WALKBCN_STORIES?.[s.id]?.base?.audio) (noAudio.en ||= []).push(s.id);
 
 // Activities
 const ACT = W.WALKBCN_ACTIVITIES;
@@ -117,6 +120,7 @@ for (const m of themeBlock.matchAll(/'([a-z0-9-]+)'/g)) {
   if (!ids.has(v)) fail(`theme uses unknown stop "${v}"`);
 }
 
+for (const [l, ids] of Object.entries(noAudio)) console.log(`! ${ids.length} stops have no recording in ${l} (device voice instead)`);
 console.log(`${STOPS.length} stops · ${Object.keys(UI.en).length} interface texts × ${langs.length} languages · ${audioRefs} audio files`);
 if (errors.length) { console.error(errors.map(e => '✗ ' + e).join('\n')); process.exit(1); }
 console.log('✓ all checks passed');
