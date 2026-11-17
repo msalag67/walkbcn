@@ -81,7 +81,7 @@ const [refs, systems, locations] = [await listOf("toprefs"), await listOf("syste
 
 const ev = (s, name) => s.events[name] || 0;
 const pct = (a, b) => (b ? `${Math.round((a / b) * 100)} %` : "–");
-const delta = (a, b) => (b ? `${a >= b ? "+" : ""}${a - b}` : "nuevo");
+const delta = (a, b) => (b ? `${a >= b ? "+" : ""}${a - b}` : a ? "nuevo" : "=");
 const FUNNEL = [
   ["Visitas", (s) => s.visits],
   ["Paseos terminados (Walk finished)", (s) => ev(s, "Walk finished")],
