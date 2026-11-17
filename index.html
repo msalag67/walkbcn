@@ -1304,7 +1304,7 @@ function loadLangData(code) {
   if (I18N[code]) return Promise.resolve();
   return (loadingLang[code] ||= new Promise(resolve => {
     const el = document.createElement('script');
-    el.src = `content/i18n/${code}.js?v=8`;
+    el.src = `content/i18n/${code}.js?v=9`;
     el.onload = () => resolve();
     el.onerror = () => { langFailed[code] = true; resolve(); }; // no file: English is used instead
     document.head.appendChild(el);
@@ -3551,8 +3551,8 @@ async function saveOffline() {
   const status = document.getElementById('offlineStatus');
   const urls = new Set([location.pathname, 'manifest.webmanifest', ...[...document.scripts].map(x => x.src).filter(Boolean),
     ...[...document.querySelectorAll('link[rel="stylesheet"]')].map(x => x.href)]);
-  if (lang !== 'en') urls.add(`content/i18n/${lang}.js?v=8`);
-  if (plan.length !== 'normal') urls.add('content/i18n/en.js?v=8');
+  if (lang !== 'en') urls.add(`content/i18n/${lang}.js?v=9`);
+  if (plan.length !== 'normal') urls.add('content/i18n/en.js?v=9');
   route.forEach(s => {
     const st = storyFor(s);
     if (st.audio) urls.add(st.audio);
