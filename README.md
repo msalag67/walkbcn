@@ -114,3 +114,7 @@ node scripts/judge.mjs --version=3 --today=nov14
 
 Guarda `evals/judge/today-v3-nov14.json` sin tocar los resultados de la sesión 9.
 
+### Informe semanal de uso
+
+`node scripts/weekly-report.mjs` lee los recuentos anónimos de GoatCounter de los últimos 7 días (embudo visitas → paseos terminados → encuestas, eventos, origen por QR) y guarda el informe en `_summary/informes/` (privado, no se publica). Necesita un token de GoatCounter con permiso para leer estadísticas en `~/.config/walkbcn/goatcounter-token`; el token nunca se muestra ni se sube al repositorio. Una tarea programada lo ejecuta cada lunes a las 9:00 (con la app de Claude abierta) y deja un resumen.
+
