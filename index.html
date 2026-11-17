@@ -3370,8 +3370,10 @@ function openGuideStop(s, scroll = true) {
   if (!guideMarkers[s.id] && guideMap) drawGuideMap();
   guideMarkers[s.id]?.setIcon(guideIcon(s)).setZIndexOffset(500);
   if (guideLayer?.zoomToShowLayer && guideMarkers[s.id] && guideView === 'map' && scroll) guideLayer.zoomToShowLayer(guideMarkers[s.id], () => {});
-  // The audio guide always tells the medium version (about a minute), whatever the routes use.
-  const st = { ...storyText(s, null, 'normal'), angle: null };
+  // English long versions live in en.js: load it, then redraw this card with them.
+  if (lang === 'en' && !I18N.en) loadLangData('en').then(() => { if (guideStop === s) openGuideStop(s, false); });
+  // The audio guide always tells the long version (about two minutes), whatever the routes use.
+  const st = { ...storyText(s, null, 'long'), angle: null };
   const [icon, c] = INT_STYLE[guideInterest(s)];
   const away = mePos ? metres(mePos, s) : null;
   const dest = directionsUrl(s);
