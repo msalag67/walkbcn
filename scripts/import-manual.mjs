@@ -67,7 +67,7 @@ for (const [cat, fs_] of Object.entries(AM.filters || {})) {
     const opts = Array.isArray(def) ? def : def.options;
     const options = opts.map((o) => ({ id: o.id, label: en(o.label) }));
     const existing = A[cat].filters.find((f) => f.id === fid);
-    if (existing) existing.options = options;
+    if (existing) { existing.options = options; if (!Array.isArray(def)) existing.label = en(def.label); }
     else A[cat].filters.splice(Math.max(0, A[cat].filters.findIndex((f) => f.id === "area")), 0, { id: fid, label: en(def.label), options });
   }
 }
@@ -184,4 +184,7 @@ fs.writeFileSync(path.join(ROOT, "data/cards.js"),
   `// second photo, sources with the date checked). WALKBCN_PHOTOS: author and licence of every photo.\n` +
   `window.WALKBCN_CARDS = ${JSON.stringify(cards, null, 1)};\nwindow.WALKBCN_PHOTOS = ${JSON.stringify(keptPhotos, null, 1)};\n`);
 if (kept.length) console.log(`Kept texts edited by hand (use --force-texts to overwrite): ${kept.join(", ")}`);
+// New content, new addresses: see scripts/stamp-versions.mjs (audit F9).
+const { stampVersions } = await import("./stamp-versions.mjs");
+stampVersions();
 console.log(`Imported ${manual.length} stops, ${Object.keys(cards).length} cards, ${Object.keys(keptPhotos).length} photo credits.`);

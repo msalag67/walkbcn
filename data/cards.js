@@ -44,6 +44,11 @@ window.WALKBCN_CARDS = {
    {
     "url": "https://ca.wikipedia.org/wiki/Tur%C3%B3_de_la_Rovira",
     "checked": "2026-11-14"
+   },
+   {
+    "url": "https://guia.barcelona.cat/detall/turo-de-la-rovira-museu-d-historia-de-barcelona_99400267435.html",
+    "checked": "2026-11-22",
+    "claim": "After the war the battery's structures were used to build the Canons shanty neighbourhood, which lasted until 1990."
    }
   ]
  },

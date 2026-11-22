@@ -7,8 +7,10 @@
 // - practical cards and photo credits (author + licence) for every photo shown
 // - Activities: retired places are gone everywhere, new places carry why + sources + date
 // - every stop has a story and tip in every language (short, normal, long)
+// - every data file is loaded at an address that matches its content (stamp-versions.mjs)
 import fs from 'node:fs';
 import vm from 'node:vm';
+import crypto from 'node:crypto';
 
 const root = new URL('..', import.meta.url).pathname;
 const ctx = { window: {} };
@@ -44,6 +46,7 @@ for (const s of STOPS) {
 
 // Notices
 const iso = /^\d{4}-\d{2}-\d{2}$/;
+const today = new Date().toISOString().slice(0, 10);
 for (const [id, list] of Object.entries(W.WALKBCN_NOTICES || {})) {
   if (!ids.has(id)) fail(`notice: unknown stop ${id}`);
   for (const n of list) {
@@ -54,6 +57,10 @@ for (const [id, list] of Object.entries(W.WALKBCN_NOTICES || {})) {
     if (n.review && !iso.test(n.review)) fail(`notice ${id}: bad review date ${n.review}`);
     if (!n.review && n.until) fail(`notice ${id}: a temporary notice needs a "review" date`);
     if (n.at && !(n.at.lat > 41.33 && n.at.lat < 41.46 && n.at.label)) fail(`notice ${id}: "at" needs lat, lng and label`);
+    if (n.resolved && !iso.test(n.resolved)) fail(`notice ${id}: bad resolved date ${n.resolved}`);
+    // Editorial reminders (not failures): the app shows these as "not checked again yet".
+    if (n.until && n.until < today && !n.resolved) console.log(`! notice ${id}: ended ${n.until} and hasn't been checked again (add "resolved" or a new notice)`);
+    else if (n.review && n.review < today && !(n.until && n.until < today)) console.log(`! notice ${id}: review date ${n.review} has passed`);
   }
 }
 
@@ -67,6 +74,15 @@ for (const [id, c] of Object.entries(CARDS)) {
   for (const f of ['look', 'listen', 'access', 'cap2']) if (c[f]) for (const l of langs) if (!c[f][l]) fail(`card ${id}: ${f} missing in ${l}`);
   if (c.img2 && !c.cap2) fail(`card ${id}: second photo needs a caption`);
   for (const src of c.sources || []) if (!/^https:\/\//.test(src.url) || !iso.test(src.checked || '')) fail(`card ${id}: source needs https url and checked date`);
+  // Optional per-claim link (audit F6): which sentence of the story this source backs.
+  for (const src of c.sources || []) if (src.claim != null && (typeof src.claim !== 'string' || src.claim.length < 10)) fail(`card ${id}: "claim" must be the sentence the source backs`);
+}
+// Editorial coverage (audit F6): how many stops have dated sources. Reported, not failed:
+// adding sources means checking them, which is editorial work, not something to invent.
+{
+  const withSources = STOPS.filter(s => (CARDS[s.id]?.sources || []).length).length;
+  const claims = Object.values(CARDS).flatMap(c => c.sources || []).filter(x => x.claim).length;
+  console.log(`! sources: ${withSources}/${STOPS.length} stops have dated sources on their card; ${claims} claim(s) linked to a source`);
 }
 for (const f of [...STOPS.map(s => s.img), ...Object.values(CARDS).map(c => c.img2).filter(Boolean)]) {
   if (!PHOTOS[f]?.licence || !PHOTOS[f]?.author) fail(`photo "${f}": author and licence not recorded (node scripts/import-manual.mjs --photos)`);
@@ -112,6 +128,26 @@ for (const [l, d] of Object.entries(W.WALKBCN_I18N || {})) {
   for (const [id, s] of Object.entries(d.stops || {})) for (const a of Object.values(s.audio || {})) { audioRefs++; if (!exists(a.file)) fail(`audio missing: ${a.file} (${l}/${id})`); }
 }
 
+// Recordings that no longer match their text (audit F5/F6, 22 Nov 2026): each recording stores
+// a hash of what was read out (the stop name + the normal story). A different hash means the
+// text was changed after recording, so the listener hears something the screen doesn't say.
+// Reported, not failed: re-record with generate.mjs / translate.mjs --audio --only=<id>.
+{
+  const h = t => crypto.createHash('sha1').update(t).digest('hex').slice(0, 10);
+  const stale = [];
+  for (const s of STOPS) {
+    const g = W.WALKBCN_STORIES?.[s.id] || {};
+    if (g.base?.audioHash && g.base.audioHash !== h(`${s.name}. ${s.story}`)) stale.push(`en/${s.id}`);
+    for (const [k, v] of Object.entries(g.variants || {})) if (v.audioHash && v.audioHash !== h(`${s.name}. ${v.story}`)) stale.push(`en/${s.id}--${k}`);
+    for (const [l, d] of Object.entries(W.WALKBCN_I18N || {})) {
+      if (l === 'en') continue;
+      const e = d.stops?.[s.id];
+      for (const [k, a] of Object.entries(e?.audio || {})) if (a.file.endsWith('.m4a') && e.stories?.[k] && a.hash !== h(`${s.name}. ${e.stories[k].normal}`)) stale.push(`${l}/${s.id}--${k}`);
+    }
+  }
+  if (stale.length) console.log(`! ${stale.length} recordings don't match their current text: ${stale.slice(0, 12).join(', ')}${stale.length > 12 ? ', …' : ''}`);
+}
+
 // Themes in index.html
 const themeBlock = html.match(/const THEMES = \{([\s\S]*?)\n\};/)?.[1] || '';
 for (const m of themeBlock.matchAll(/'([a-z0-9-]+)'/g)) {
@@ -122,5 +158,9 @@ for (const m of themeBlock.matchAll(/'([a-z0-9-]+)'/g)) {
 
 for (const [l, ids] of Object.entries(noAudio)) console.log(`! ${ids.length} stops have no recording in ${l} (device voice instead)`);
 console.log(`${STOPS.length} stops · ${Object.keys(UI.en).length} interface texts × ${langs.length} languages · ${audioRefs} audio files`);
+// Data files must be loaded at an address that matches their content (audit F9).
+const { stampVersions } = await import('./stamp-versions.mjs');
+const stale = stampVersions({ check: true });
+if (stale.length) fail(`versions out of date for ${stale.join(', ')}: run node scripts/stamp-versions.mjs`);
 if (errors.length) { console.error(errors.map(e => '✗ ' + e).join('\n')); process.exit(1); }
 console.log('✓ all checks passed');

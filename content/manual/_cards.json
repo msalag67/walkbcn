@@ -1,7 +1,10 @@
 {
   "bunkers-carmel": {
     "outside": "yes",
-    "sensitive": ["residential", "limited"],
+    "sensitive": [
+      "residential",
+      "limited"
+    ],
     "official": "https://www.barcelona.cat/museuhistoria/ca/patrimonis-i-recerca/els-espais-del-museu/turo-de-la-rovira",
     "look": {
       "en": "The concrete platforms of the 1938 anti-aircraft battery, and the city from the sea to Collserola.",
@@ -31,13 +34,26 @@
       "zh": "巴塞罗那城市历史博物馆（MUHBA）的露天遗址，免费参观。小型展览空间周三、周五、周六和周日开放：10月至5月10:00–14:00，6月至9月16:00–19:00。上山坡道陡峭；行动不便者无法通行。"
     },
     "sources": [
-      { "url": "https://www.barcelona.cat/museuhistoria/ca/patrimonis-i-recerca/els-espais-del-museu/turo-de-la-rovira", "checked": "2026-11-14" },
-      { "url": "https://ca.wikipedia.org/wiki/Tur%C3%B3_de_la_Rovira", "checked": "2026-11-14" }
+      {
+        "url": "https://www.barcelona.cat/museuhistoria/ca/patrimonis-i-recerca/els-espais-del-museu/turo-de-la-rovira",
+        "checked": "2026-11-14"
+      },
+      {
+        "url": "https://ca.wikipedia.org/wiki/Tur%C3%B3_de_la_Rovira",
+        "checked": "2026-11-14"
+      },
+      {
+        "url": "https://guia.barcelona.cat/detall/turo-de-la-rovira-museu-d-historia-de-barcelona_99400267435.html",
+        "checked": "2026-11-22",
+        "claim": "After the war the battery's structures were used to build the Canons shanty neighbourhood, which lasted until 1990."
+      }
     ]
   },
   "placa-del-sol": {
     "outside": "yes",
-    "sensitive": ["residential"],
+    "sensitive": [
+      "residential"
+    ],
     "listen": {
       "en": "Before you enter the square, at the corner of Carrer de Maspons, rather than under the balconies or between the terrace tables.",
       "ca": "Abans d'entrar a la plaça, a la cantonada del carrer de Maspons, millor que sota els balcons o entre les taules de les terrasses.",
@@ -59,7 +75,10 @@
   },
   "placa-virreina": {
     "outside": "yes",
-    "sensitive": ["residential", "worship"],
+    "sensitive": [
+      "residential",
+      "worship"
+    ],
     "listen": {
       "en": "On a bench in the middle of the square, not on the church steps.",
       "ca": "En un banc al mig de la plaça, no a les escales de l'església.",
@@ -81,7 +100,11 @@
   },
   "placa-sant-felip-neri": {
     "outside": "yes",
-    "sensitive": ["study", "residential", "worship"],
+    "sensitive": [
+      "study",
+      "residential",
+      "worship"
+    ],
     "listen": {
       "en": "Listen to the story before you go in, in Carrer de Montjuïc del Bisbe, then enter the square quietly and in small groups.",
       "ca": "Escolta la història abans d'entrar, al carrer de Montjuïc del Bisbe, i després entra a la plaça en silenci i en grups petits.",
@@ -103,7 +126,9 @@
   },
   "carrer-de-blai": {
     "outside": "yes",
-    "sensitive": ["residential"],
+    "sensitive": [
+      "residential"
+    ],
     "listen": {
       "en": "At the wide end by Plaça del Sortidor, not in front of doorways. Better early evening, and not as a big group.",
       "ca": "Al tram ample de la banda de la plaça del Sortidor, no davant dels portals. Millor a primera hora del vespre i no en grup gran.",
@@ -125,7 +150,9 @@
   },
   "barceloneta-beach": {
     "outside": "yes",
-    "sensitive": ["residential"],
+    "sensitive": [
+      "residential"
+    ],
     "listen": {
       "en": "On the promenade facing the sea, not inside the narrow streets of the neighbourhood.",
       "ca": "Al passeig, de cara al mar, no dins dels carrers estrets del barri.",
@@ -138,7 +165,9 @@
   },
   "sagrada-familia": {
     "outside": "yes",
-    "sensitive": ["worship"],
+    "sensitive": [
+      "worship"
+    ],
     "official": "https://sagradafamilia.org/",
     "access": {
       "en": "The façades are free to see from the street. Going inside needs a timed ticket, usually booked ahead.",
@@ -152,7 +181,10 @@
   },
   "park-guell": {
     "outside": "partly",
-    "sensitive": ["residential", "limited"],
+    "sensitive": [
+      "residential",
+      "limited"
+    ],
     "official": "https://parkguell.barcelona/",
     "access": {
       "en": "The monumental zone (the bench, the stairs and the dragon) needs a timed ticket; the rest of the park is a public park.",
@@ -179,7 +211,9 @@
   },
   "casa-mila": {
     "outside": "yes",
-    "sensitive": ["residential"],
+    "sensitive": [
+      "residential"
+    ],
     "official": "https://www.lapedrera.com/",
     "access": {
       "en": "The façade is free to see from the street. The roof and the visit inside need a ticket; people still live in some flats.",

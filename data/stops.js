@@ -25,7 +25,9 @@ window.WALKBCN_STOPS = [
     tip: "Look for the mosaic columns on the corner — each has a different floral pattern." },
   { id: 'mercat-de-santa-caterina', name: 'Mercat de Santa Caterina', img: "Market Roof (5832285437) (2).jpg", area: 'Sant Pere', lat: 41.3862, lng: 2.1786, tags: ['food','architecture'],
     story: "That wavy, colourful roof is made from over 300,000 ceramic tiles, in the colours of fruit and vegetables sold below. The market is the oldest covered one in the city, built on the site of a medieval convent. When it was renovated in 2005, archaeologists found the convent's foundations — you can still see them inside.",
-    tip: "A good local alternative to the crowded Boqueria — same quality, far fewer queues." },
+    // 22 Nov 2026 (audit F8): the old tip compared it with the Boqueria ("same quality, far fewer
+    // queues"), which nobody had checked.
+    tip: "Come in the morning, when the stalls are busiest, and look inside for the excavated foundations of the old convent." },
   { id: 'barcelona-cathedral', name: 'Barcelona Cathedral', img: "Barcelona Cathedral Saint Eulalia.jpg", area: 'Gothic Quarter', lat: 41.3840, lng: 2.1762, tags: ['history','architecture'], crowded: true,
     story: "The cathedral took over 600 years to finish — the main façade was only completed in the late 1800s. Step into the cloister and you'll hear geese. There are always thirteen of them, one for each year of Saint Eulàlia's life. She was a young martyr from Roman times, and the city's original patron saint.",
     tip: "On Sunday mornings locals dance the sardana in the square in front." },
@@ -128,7 +130,7 @@ window.WALKBCN_STOPS = [
     story: "Ninot means a little figure or doll in Catalan. The market takes its name from a carved wooden figurehead from a ship that once hung outside a nearby tavern. Today the market has a modern building, rebuilt in the 2010s, and it's a favourite with local food lovers for its fish, seafood and good-quality produce.",
     tip: "Mornings are best: that's when the stalls are full and the neighbourhood does its shopping." },
   { id: "bunkers-carmel", name: "Turó de la Rovira (Bunkers del Carmel)", img: "Bunkers del Carmel Barcelona.jpg", area: "El Carmel", lat: 41.4194, lng: 2.1617, tags: ["outdoors", "history"], crowded: true,
-    story: "From this hilltop you can see almost the whole city, from the sea to the mountains. That's exactly why anti-aircraft guns were placed here during the Spanish Civil War, to defend Barcelona from bombing raids. After the war, families who had nowhere else to live built shacks among the ruins, and they lived here until the late 1980s. The concrete platforms are what remains.",
+    story: "From this hilltop you can see almost the whole city, from the sea to the mountains. That's exactly why anti-aircraft guns were placed here during the Spanish Civil War, to defend Barcelona from bombing raids. After the war, families who had nowhere else to live built shacks among the ruins, and they lived here until 1990. The concrete platforms are what remains.",
     tip: "A heritage site above people's homes: no parties or music, take your rubbish with you, and keep voices down on the way up." },
   { id: "port-vell", name: "Port Vell", img: "Port Vell, Barcelona, Spain - Jan 2007.jpg", area: "Port Vell", lat: 41.3759, lng: 2.1793, tags: ["outdoors"],
     story: "This is Barcelona's old port, where the city met the sea for centuries. The wooden walkway in front of you, the Rambla de Mar, swings open to let boats pass. Look back towards the city: the Columbus monument stands at the end of the Rambla. Since the 1992 Olympics, this old working harbour has become a promenade for walking, cycling and watching the boats.",
@@ -248,18 +250,24 @@ window.WALKBCN_STOPS = [
 //   at         {lat,lng,label}: while active, routes use this point instead of the stop's own
 //              (e.g. market stalls in a temporary building), and Directions go there.
 //   closed     true: while active, the stop is left out of new routes (it stays in the guide).
+//   resolved   date the team checked a notice again after its `until` date. Until then, an
+//              expired notice keeps showing for up to 60 days, marked "was due to end on …, not
+//              checked again yet", but no longer moves the stop or closes it (audit F7).
 window.WALKBCN_NOTICES = {
   "mercat-abaceria": [
-    { from: "2026-11-14", until: "2026-12-31", checked: "2026-11-14", review: "2026-12-15", confirmed: true,
-      source: "https://www.independent.cat/noticia/160842/lestrena-del-nou-mercat-de-labaceria-es-mante-pel-17-de-novembre",
+    // 22 Nov 2026 (audit F7/E5): the council's market guide says the new market is open from
+    // 17 November at Travessera de Gràcia 186. The earlier text said "confirmed by the team on
+    // 14 November", a date the linked source didn't support; now it says what the source says.
+    { from: "2026-11-14", until: "2026-12-31", checked: "2026-11-22", review: "2026-12-15", confirmed: true,
+      source: "https://guia.barcelona.cat/detall/mercat-abaceria-central_92086009463.html",
       text: {
-        en: "The market has reopened in its renovated building, after years in a temporary tent (confirmed by the WalkBCN team on 14 November 2026). In the first weeks some stalls may still be settling in.",
-        ca: "El mercat ha reobert a l'edifici renovat, després d'anys en una carpa provisional (confirmat per l'equip de WalkBCN el 14 de novembre de 2026). Les primeres setmanes algunes parades encara s'estan instal·lant.",
-        es: "El mercado ha reabierto en su edificio renovado, tras años en una carpa provisional (confirmado por el equipo de WalkBCN el 14 de noviembre de 2026). Las primeras semanas algunos puestos aún se están instalando.",
-        fr: "Le marché a rouvert dans son bâtiment rénové, après des années sous un chapiteau provisoire (confirmé par l'équipe WalkBCN le 14 novembre 2026). Les premières semaines, certains étals s'installent encore.",
-        de: "Der Markt hat in seinem renovierten Gebäude wieder geöffnet, nach Jahren im provisorischen Zelt (vom WalkBCN-Team am 14. November 2026 bestätigt). In den ersten Wochen richten sich manche Stände noch ein.",
-        it: "Il mercato ha riaperto nel suo edificio rinnovato, dopo anni in una tenda provvisoria (confermato dal team di WalkBCN il 14 novembre 2026). Nelle prime settimane alcuni banchi si stanno ancora sistemando.",
-        zh: "市场在临时帐篷中经营多年后，已在翻新后的大楼重新开放（WalkBCN 团队于2026年11月14日确认）。最初几周，部分摊位可能仍在安顿中。",
+        en: "The market reopened on 17 November 2026 in its renovated building at Travessera de Gràcia 186, after years in a temporary tent (Barcelona City Council market guide). In the first weeks some stalls may still be settling in.",
+        ca: "El mercat va reobrir el 17 de novembre de 2026 a l'edifici renovat de la Travessera de Gràcia, 186, després d'anys en una carpa provisional (guia de mercats de l'Ajuntament de Barcelona). Les primeres setmanes algunes parades encara s'estan instal·lant.",
+        es: "El mercado reabrió el 17 de noviembre de 2026 en su edificio renovado de la Travessera de Gràcia, 186, tras años en una carpa provisional (guía de mercados del Ayuntamiento de Barcelona). Las primeras semanas algunos puestos aún se están instalando.",
+        fr: "Le marché a rouvert le 17 novembre 2026 dans son bâtiment rénové, Travessera de Gràcia 186, après des années sous un chapiteau provisoire (guide des marchés de la mairie de Barcelone). Les premières semaines, certains étals s'installent encore.",
+        de: "Der Markt hat am 17. November 2026 in seinem renovierten Gebäude in der Travessera de Gràcia 186 wieder geöffnet, nach Jahren im provisorischen Zelt (Marktführer der Stadt Barcelona). In den ersten Wochen richten sich manche Stände noch ein.",
+        it: "Il mercato ha riaperto il 17 novembre 2026 nel suo edificio rinnovato in Travessera de Gràcia 186, dopo anni in una tenda provvisoria (guida ai mercati del Comune di Barcellona). Nelle prime settimane alcuni banchi si stanno ancora sistemando.",
+        zh: "市场在临时帐篷中经营多年后，于2026年11月17日在翻新后的大楼（Travessera de Gràcia 186号）重新开放（巴塞罗那市政府市场指南）。最初几周，部分摊位可能仍在安顿中。",
       } },
   ],
   "via-sepulcral-romana": [

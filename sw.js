@@ -45,6 +45,17 @@ async function networkFirst(req, name) {
     return (await cache.match(req, { ignoreSearch: req.mode === 'navigate' })) || Response.error();
   }
 }
+// Translations (?v=<hash>) and recordings (?h=<hash>) get a new address when they change.
+// Once the new copy is stored, older copies of the same file are deleted, so the cache holds
+// one version of each (audit F9). Other files (photos, libraries, fonts) are left alone.
+async function dropOlderCopies(cache, href) {
+  const u = new URL(href);
+  if (u.origin !== location.origin || !/\/(audio|content\/i18n)\//.test(u.pathname)) return;
+  for (const k of await cache.keys()) {
+    const ku = new URL(k.url);
+    if (ku.pathname === u.pathname && ku.search !== u.search) await cache.delete(k);
+  }
+}
 async function cacheFirst(req, name, trim = false) {
   const cache = await caches.open(name);
   const hit = await cache.match(req);
@@ -53,6 +64,7 @@ async function cacheFirst(req, name, trim = false) {
     const res = await fetch(req);
     if (res.ok || res.type === 'opaque') {
       await cache.put(req, res.clone());
+      await dropOlderCopies(cache, req.url);
       if (trim) { const keys = await cache.keys(); for (const k of keys.slice(0, Math.max(0, keys.length - MAX_TILES))) cache.delete(k); }
     }
     return res;
@@ -71,6 +83,7 @@ async function audio(req) {
       const res = await fetch(key);
       if (!res.ok) return res;
       await cache.put(key, res.clone());
+      await dropOlderCopies(cache, key.url);
       full = res;
     } catch (err) {
       return Response.error();

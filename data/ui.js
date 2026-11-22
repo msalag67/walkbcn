@@ -1298,3 +1298,29 @@ Object.assign(window.WALKBCN_UI.fr, { privacyP2b: "Ces données ne sont jamais e
 Object.assign(window.WALKBCN_UI.de, { privacyP2b: "Diese Daten werden nie an uns oder andere gesendet, und es gibt kein Konto. Gesendet wird nur die unten erklärte anonyme Zählung." });
 Object.assign(window.WALKBCN_UI.it, { privacyP2b: "Questi dati non vengono mai inviati a noi né a nessun altro, e non c'è nessun account. L'unica cosa inviata è il conteggio anonimo spiegato qui sotto." });
 Object.assign(window.WALKBCN_UI.zh, { privacyP2b: "这些记录不会发送给我们或任何人，也不需要账户。唯一发送的是下面说明的匿名统计。" });
+
+// ---- Added 22 November 2026 (Phase 1 audit fixes) ----
+// F2: a language file that fails to download shows English with a "Try again" button.
+Object.assign(window.WALKBCN_UI.en, { retry: "Try again", langLoadError: "The texts in {lang} couldn't be downloaded, so this is the English version.", longLoadError: "The longer version couldn't be downloaded, so this is the standard one." });
+Object.assign(window.WALKBCN_UI.ca, { retry: "Torna-ho a provar", langLoadError: "No s'han pogut descarregar els textos en {lang}; es mostra la versió en anglès.", longLoadError: "No s'ha pogut descarregar la versió llarga; es mostra l'estàndard." });
+Object.assign(window.WALKBCN_UI.es, { retry: "Volver a intentarlo", langLoadError: "No se han podido descargar los textos en {lang}; se muestra la versión en inglés.", longLoadError: "No se ha podido descargar la versión larga; se muestra la estándar." });
+Object.assign(window.WALKBCN_UI.fr, { retry: "Réessayer", langLoadError: "Les textes en {lang} n'ont pas pu être téléchargés ; voici la version anglaise.", longLoadError: "La version longue n'a pas pu être téléchargée ; voici la version standard." });
+Object.assign(window.WALKBCN_UI.de, { retry: "Erneut versuchen", langLoadError: "Die Texte auf {lang} konnten nicht geladen werden; hier ist die englische Fassung.", longLoadError: "Die lange Fassung konnte nicht geladen werden; hier ist die Standardfassung." });
+Object.assign(window.WALKBCN_UI.it, { retry: "Riprova", langLoadError: "Non è stato possibile scaricare i testi in {lang}; ecco la versione inglese.", longLoadError: "Non è stato possibile scaricare la versione lunga; ecco quella standard." });
+Object.assign(window.WALKBCN_UI.zh, { retry: "重试", langLoadError: "无法下载{lang}版文本，现显示英文版。", longLoadError: "无法下载详细版，现显示标准版。" });
+// F4: an edited route says how many stops it now has, not "only {n} stops match your interests".
+Object.assign(window.WALKBCN_UI.en, { noteEditedStops: "You edited this route: it now has {n} stops." });
+Object.assign(window.WALKBCN_UI.ca, { noteEditedStops: "Has editat aquesta ruta: ara té {n} parades." });
+Object.assign(window.WALKBCN_UI.es, { noteEditedStops: "Has editado esta ruta: ahora tiene {n} paradas." });
+Object.assign(window.WALKBCN_UI.fr, { noteEditedStops: "Vous avez modifié cet itinéraire : il compte maintenant {n} arrêts." });
+Object.assign(window.WALKBCN_UI.de, { noteEditedStops: "Du hast diese Route bearbeitet: Sie hat jetzt {n} Stopps." });
+Object.assign(window.WALKBCN_UI.it, { noteEditedStops: "Hai modificato questo percorso: ora ha {n} tappe." });
+Object.assign(window.WALKBCN_UI.zh, { noteEditedStops: "你已编辑此路线：现在共有 {n} 站。" });
+// F7: a notice whose end date has passed and that hasn't been checked again stays visible, marked.
+Object.assign(window.WALKBCN_UI.en, { noticeExpiredTag: "Pending verification", noticeExpired: "This was due to end on {d} and we haven't checked again yet: confirm with the source before you go." });
+Object.assign(window.WALKBCN_UI.ca, { noticeExpiredTag: "Pendent de verificar", noticeExpired: "Havia d'acabar el {d} i encara no ho hem tornat a comprovar: confirma-ho a la font abans d'anar-hi." });
+Object.assign(window.WALKBCN_UI.es, { noticeExpiredTag: "Pendiente de verificar", noticeExpired: "Debía terminar el {d} y aún no lo hemos vuelto a comprobar: confírmalo en la fuente antes de ir." });
+Object.assign(window.WALKBCN_UI.fr, { noticeExpiredTag: "À vérifier", noticeExpired: "Ceci devait se terminer le {d} et nous ne l'avons pas encore revérifié : confirmez auprès de la source avant d'y aller." });
+Object.assign(window.WALKBCN_UI.de, { noticeExpiredTag: "Noch zu prüfen", noticeExpired: "Das sollte am {d} enden, und wir haben es noch nicht erneut geprüft: Bitte vor dem Besuch bei der Quelle nachsehen." });
+Object.assign(window.WALKBCN_UI.it, { noticeExpiredTag: "Da verificare", noticeExpired: "Doveva finire il {d} e non l'abbiamo ancora ricontrollato: verifica alla fonte prima di andarci." });
+Object.assign(window.WALKBCN_UI.zh, { noticeExpiredTag: "待核实", noticeExpired: "此信息原定于{d}结束，我们尚未再次核实：前往前请先查看来源确认。" });

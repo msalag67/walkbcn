@@ -255,7 +255,7 @@
       }
     },
     "mercat-de-santa-caterina": {
-      "tip": "Una bona alternativa local a la Boqueria, sempre plena de gent: la mateixa qualitat i moltes menys cues.",
+      "tip": "Vine al matí, quan les parades tenen més vida, i busca a dins els fonaments excavats de l'antic convent.",
       "stories": {
         "base": {
           "short": "Mireu amunt, a aquesta teulada ondulada i plena de colors. Està feta amb més de 300.000 rajoles de ceràmica, amb els colors de la fruita i la verdura que es venen a sota. És el mercat cobert més antic de la ciutat, i es va construir on abans hi havia un convent medieval. Preneu-vos un moment per seguir les onades d'una punta a l'altra.",
@@ -1483,9 +1483,9 @@
       "tip": "Un espai patrimonial damunt de cases on viu gent: res de festes ni música, emporta't les deixalles i parla baix a la pujada.",
       "stories": {
         "base": {
-          "short": "Des d'aquest turó es veu gairebé tota la ciutat, del mar a la muntanya. Per aquesta vista hi havia canons antiaeris durant la Guerra Civil espanyola. Més tard, famílies que no tenien on viure van aixecar barraques entre les ruïnes i s'hi van quedar fins a finals dels anys vuitanta. Aquestes plataformes de formigó són el que en queda.",
-          "normal": "Des d'aquest turó es veu gairebé tota la ciutat, del mar a la muntanya. Precisament per això, durant la Guerra Civil espanyola s'hi van instal·lar canons antiaeris, per defensar Barcelona dels bombardejos. Després de la guerra, famílies que no tenien on viure van construir barraques entre les ruïnes, i hi van viure fins a finals dels anys vuitanta. Les plataformes de formigó són el que en queda.",
-          "long": "Sou al capdamunt del Turó de la Rovira, i des d'aquí es veu gairebé tota la ciutat, del mar a la muntanya. Preneu-vos un moment per resseguir-la. Busqueu la Mediterrània brillant a l'horitzó. Després gireu-vos cap als turons boscosos de Collserola, amb l'església del Tibidabo al cim. A un costat, Montjuïc s'ajeu baixet al costat del port, i més a prop potser veureu les agulles de la Sagrada Família alçant-se per damunt de les teulades. Aquesta vista tan àmplia és precisament el motiu pel qual s'hi van instal·lar canons antiaeris durant la Guerra Civil espanyola. Barcelona va ser bombardejada des de l'aire una vegada i una altra, i des d'aquest turó els artillers podien vigilar el cel i defensar la ciutat. Mireu les plataformes de formigó que teniu al voltant. Algunes sostenien els canons, i encara se'n pot endevinar la forma. La història no es va aturar quan es va acabar la guerra. En els anys durs que van venir després, famílies que no tenien on viure van construir barraques entre les ruïnes, aprofitant les antigues estructures militars com a parets i terres. La gent hi cuinava, hi criava els fills i hi va fer comunitat, i van viure en aquest turó fins a finals dels anys vuitanta. Avui les plataformes de formigó són el que en queda, i l'indret es conserva com a part del museu d'història de la ciutat. Mentre seieu i gaudiu de la vista, recordeu que els vessants d'aquí sota continuen sent un barri ben viu. El Carmel és ple de cases de gent, així que, de baixada, parleu fluixet."
+          "short": "Des d'aquest turó es veu gairebé tota la ciutat, del mar a la muntanya. Per aquesta vista hi havia canons antiaeris durant la Guerra Civil espanyola. Més tard, famílies que no tenien on viure van aixecar barraques entre les ruïnes i s'hi van quedar fins al 1990. Aquestes plataformes de formigó són el que en queda.",
+          "normal": "Des d'aquest turó es veu gairebé tota la ciutat, del mar a la muntanya. Precisament per això, durant la Guerra Civil espanyola s'hi van instal·lar canons antiaeris, per defensar Barcelona dels bombardejos. Després de la guerra, famílies que no tenien on viure van construir barraques entre les ruïnes, i hi van viure fins al 1990. Les plataformes de formigó són el que en queda.",
+          "long": "Sou al capdamunt del Turó de la Rovira, i des d'aquí es veu gairebé tota la ciutat, del mar a la muntanya. Preneu-vos un moment per resseguir-la. Busqueu la Mediterrània brillant a l'horitzó. Després gireu-vos cap als turons boscosos de Collserola, amb l'església del Tibidabo al cim. A un costat, Montjuïc s'ajeu baixet al costat del port, i més a prop potser veureu les agulles de la Sagrada Família alçant-se per damunt de les teulades. Aquesta vista tan àmplia és precisament el motiu pel qual s'hi van instal·lar canons antiaeris durant la Guerra Civil espanyola. Barcelona va ser bombardejada des de l'aire una vegada i una altra, i des d'aquest turó els artillers podien vigilar el cel i defensar la ciutat. Mireu les plataformes de formigó que teniu al voltant. Algunes sostenien els canons, i encara se'n pot endevinar la forma. La història no es va aturar quan es va acabar la guerra. En els anys durs que van venir després, famílies que no tenien on viure van construir barraques entre les ruïnes, aprofitant les antigues estructures militars com a parets i terres. La gent hi cuinava, hi criava els fills i hi va fer comunitat, i van viure en aquest turó fins al 1990. Avui les plataformes de formigó són el que en queda, i l'indret es conserva com a part del museu d'història de la ciutat. Mentre seieu i gaudiu de la vista, recordeu que els vessants d'aquí sota continuen sent un barri ben viu. El Carmel és ple de cases de gent, així que, de baixada, parleu fluixet."
         },
         "outdoors": {
           "short": "Feu una volta sencera a poc a poc. Gairebé tota la ciutat s'estén als vostres peus, del mar brillant a les muntanyes verdes. Busqueu entre les teulades les agulles de la Sagrada Família. Després seieu a les plataformes de formigó, noteu la brisa i gaudiu de la vista en silenci, perquè en aquests vessants hi viuen famílies de veritat.",
@@ -1493,24 +1493,24 @@
           "long": "Feu una volta sencera a poc a poc i deixeu que la ciutat se us presenti sencera. Des d'aquest turó, el Turó de la Rovira, gairebé tota Barcelona s'estén als vostres peus, de la línia brillant del mar a les muntanyes verdes del darrere. Comenceu per l'aigua. Seguiu la Mediterrània al llarg de l'horitzó i veureu els vaixells i les grues del port. Després torneu amb la mirada per damunt de les teulades. En algun lloc d'aquest mar d'edificis podreu distingir les agulles de la Sagrada Família, que encara creix després de més d'un segle. A un costat, la muntanya de Montjuïc s'alça al costat del port. Continueu girant, i la carena boscosa de Collserola omple l'horitzó, amb l'església del Tibidabo enfilada al punt més alt. Ara busqueu un racó a les plataformes de formigó i seieu una estona. Aquestes lloses són les restes de posicions antiaèries de la Guerra Civil espanyola, i precisament per això són en un lloc amb una vista tan àmplia. Observeu com la llum es mou pels carrers. Quan passen els núvols, barris sencers s'enfosqueixen i s'il·luminen, i la quadrícula de l'Eixample, amb les seves illes regulars, es llegeix més fàcilment des d'aquí dalt. Fixeu-vos també en la brisa. Sembla a anys llum del centre atrafegat, tot i que el centre és just aquí sota. A mesura que avança el dia, puja més gent a compartir la vista, sobretot cap a la posta de sol. I recordeu que les cases d'aquests vessants són la llar de famílies de veritat, així que gaudiu-ne en silenci, i emporteu-vos la calma quan marxeu."
         },
         "history": {
-          "short": "Mireu el formigó que trepitgeu. Durant la Guerra Civil espanyola aquí hi havia canons antiaeris que defensaven Barcelona dels bombardejos. Després, famílies que no tenien on viure van aixecar barraques entre les ruïnes i s'hi van quedar fins a finals dels anys vuitanta. Imagineu-vos-hi cuines i nens jugant. Aquí sota, el Carmel continua ple de cases.",
-          "normal": "Mireu el formigó que trepitgeu. Durant la Guerra Civil espanyola, en aquest turó hi havia canons antiaeris. Es va triar perquè des d'aquí es veu gairebé tota la ciutat, del mar a la muntanya, i era un bon punt de vigilància per defensar Barcelona dels bombardejos. Però la història no es va acabar amb la guerra. Famílies que no tenien on viure van construir barraques entre les ruïnes, i la gent hi va tenir casa seva fins a finals dels anys vuitanta. Imagineu cuines i nens jugant just on sou ara. Avui el Carmel, aquí sota, continua sent un barri ben viu, ple de cases de gent.",
-          "long": "Mireu el formigó que trepitgeu. Durant la Guerra Civil espanyola, en aquest turó, el Turó de la Rovira, hi havia canons antiaeris. Es va triar perquè des d'aquí es veu gairebé tota la ciutat, del mar a la muntanya, i era un bon punt de vigilància per defensar Barcelona dels bombardejos. Aquells bombardejos van ser reals i terribles. La ciutat va ser bombardejada durament des de l'aire, en bona part per avions italians que venien de Mallorca travessant el mar. Gireu-vos cap a l'aigua i imagineu-vos escrutant aquell horitzó, esperant sentir el soroll dels motors. Ara mireu bé les plataformes. Algunes són les bases on es muntaven els canons, i a prop hi trobareu les restes de les estances que feien servir els soldats destinats aquí. Però la història no es va acabar amb la guerra. En els anys durs que van venir després, a Barcelona faltava habitatge. Famílies que no tenien on viure van construir barraques entre les ruïnes, aprofitant el formigó militar com a fonaments i parets. Amb el temps això es va convertir en un veritable assentament, i la gent hi va tenir casa seva fins a finals dels anys vuitanta. Imagineu cuines, roba estesa i nens jugant just on sou ara. Si us hi fixeu bé, potser també veureu rastres d'aquelles cases, com trossos de rajoles velles a terra. Avui l'indret es conserva com a part del museu d'història de la ciutat, i el Carmel, aquí sota, continua sent un barri ben viu, ple de cases de gent. Tingueu-ho present quan baixeu pels seus carrers, i parleu fluixet."
+          "short": "Mireu el formigó que trepitgeu. Durant la Guerra Civil espanyola aquí hi havia canons antiaeris que defensaven Barcelona dels bombardejos. Després, famílies que no tenien on viure van aixecar barraques entre les ruïnes i s'hi van quedar fins al 1990. Imagineu-vos-hi cuines i nens jugant. Aquí sota, el Carmel continua ple de cases.",
+          "normal": "Mireu el formigó que trepitgeu. Durant la Guerra Civil espanyola, en aquest turó hi havia canons antiaeris. Es va triar perquè des d'aquí es veu gairebé tota la ciutat, del mar a la muntanya, i era un bon punt de vigilància per defensar Barcelona dels bombardejos. Però la història no es va acabar amb la guerra. Famílies que no tenien on viure van construir barraques entre les ruïnes, i la gent hi va tenir casa seva fins al 1990. Imagineu cuines i nens jugant just on sou ara. Avui el Carmel, aquí sota, continua sent un barri ben viu, ple de cases de gent.",
+          "long": "Mireu el formigó que trepitgeu. Durant la Guerra Civil espanyola, en aquest turó, el Turó de la Rovira, hi havia canons antiaeris. Es va triar perquè des d'aquí es veu gairebé tota la ciutat, del mar a la muntanya, i era un bon punt de vigilància per defensar Barcelona dels bombardejos. Aquells bombardejos van ser reals i terribles. La ciutat va ser bombardejada durament des de l'aire, en bona part per avions italians que venien de Mallorca travessant el mar. Gireu-vos cap a l'aigua i imagineu-vos escrutant aquell horitzó, esperant sentir el soroll dels motors. Ara mireu bé les plataformes. Algunes són les bases on es muntaven els canons, i a prop hi trobareu les restes de les estances que feien servir els soldats destinats aquí. Però la història no es va acabar amb la guerra. En els anys durs que van venir després, a Barcelona faltava habitatge. Famílies que no tenien on viure van construir barraques entre les ruïnes, aprofitant el formigó militar com a fonaments i parets. Amb el temps això es va convertir en un veritable assentament, i la gent hi va tenir casa seva fins al 1990. Imagineu cuines, roba estesa i nens jugant just on sou ara. Si us hi fixeu bé, potser també veureu rastres d'aquelles cases, com trossos de rajoles velles a terra. Avui l'indret es conserva com a part del museu d'història de la ciutat, i el Carmel, aquí sota, continua sent un barri ben viu, ple de cases de gent. Tingueu-ho present quan baixeu pels seus carrers, i parleu fluixet."
         }
       },
       "srcHash": "7761a6c045",
       "audio": {
         "base": {
           "file": "audio/ca/bunkers-carmel.m4a",
-          "hash": "2a47ad274b"
+          "hash": "87664abd34"
         },
         "outdoors": {
           "file": "audio/ca/bunkers-carmel--outdoors.m4a",
-          "hash": "b63e125cc3"
+          "hash": "a654173999"
         },
         "history": {
           "file": "audio/ca/bunkers-carmel--history.m4a",
-          "hash": "609acf41dd"
+          "hash": "3e7e6d0713"
         }
       }
     },
@@ -2368,7 +2368,7 @@
           }
         },
         "crowd": {
-          "label": "Qui hi va?",
+          "label": "Qui hi va? (la nostra impressió)",
           "options": {
             "locals": "Sobretot gent d'aquí",
             "mixed": "Gent d'aquí i visitants"
@@ -2482,7 +2482,7 @@
         }
       },
       "places": {
-        "Bunkers del Carmel": "Una vista de 360° des d'una antiga bateria antiaèria de la Guerra Civil. Molt concorregut a la posta de sol; els veïns han demanat als visitants que no facin soroll.",
+        "Bunkers del Carmel": "Turó de la Rovira: vista de 360° des d'una bateria antiaèria del 1938, de la Guerra Civil, avui espai a l'aire lliure i gratuït del Museu d'Història de Barcelona (MUHBA). Pujada forta, no accessible per a mobilitat reduïda. Hi viu gent just a sota: sense música i parlant fluix, sobretot al vespre.",
         "Mirador del Palau Nacional": "La terrassa de davant del MNAC mira de dret avinguda avall fins a la plaça d'Espanya i per sobre de tota la ciutat.",
         "Castell de Montjuïc": "Una fortalesa del segle XVII dalt de tot de Montjuïc, amb vistes al port per una banda i a la ciutat per l'altra.",
         "Arenas de Barcelona": "Una antiga plaça de toros convertida en centre comercial, amb un passeig circular al terrat que domina la plaça d'Espanya i Montjuïc.",
@@ -2648,5 +2648,5 @@
       }
     }
   },
-  "activitiesHash": "77cf047399"
+  "activitiesHash": "bbe4afb1ae"
 }

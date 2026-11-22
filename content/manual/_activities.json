@@ -1,5 +1,5 @@
 {
-  "_about": "Hand-written Activities changes (14 Nov 2026), applied by scripts/import-manual.mjs to data/activities.js and to the translations in content/i18n. Each added place records why it was chosen, the price evidence and the sources with the date checked.",
+  "_about": "Hand-written Activities changes (14 Nov 2026), applied by scripts/import-manual.mjs to data/activities.js and to the translations in content/i18n. Each added place records why it was chosen, the price evidence and the sources with the date checked. 22 Nov 2026 (audit F8): Bunkers del Carmel aligned with the Turó de la Rovira stop card (MUHBA site, access, neighbours); the nightlife 'Who goes?' filter is labelled as the team's impression, not a measured fact.",
   "remove": {
     "restaurants": [
       "Teresa Carles",
@@ -151,6 +151,45 @@
               "de": "Unabhängig, jünger",
               "it": "Indipendente, più recente",
               "zh": "较新的独立小店"
+            }
+          }
+        ]
+      }
+    },
+    "nightlife": {
+      "crowd": {
+        "label": {
+          "en": "Who goes? (our impression)",
+          "ca": "Qui hi va? (la nostra impressió)",
+          "es": "¿Quién va? (nuestra impresión)",
+          "fr": "Qui y va ? (notre impression)",
+          "de": "Wer geht hin? (unser Eindruck)",
+          "it": "Chi ci va? (la nostra impressione)",
+          "zh": "去的都是谁？（我们的印象）"
+        },
+        "options": [
+          {
+            "id": "locals",
+            "label": {
+              "en": "Mostly locals",
+              "ca": "Sobretot gent d'aquí",
+              "es": "Sobre todo gente de aquí",
+              "fr": "Surtout des habitants",
+              "de": "Vor allem Einheimische",
+              "it": "Soprattutto gente del posto",
+              "zh": "以本地人为主"
+            }
+          },
+          {
+            "id": "mixed",
+            "label": {
+              "en": "Locals & visitors",
+              "ca": "Gent d'aquí i visitants",
+              "es": "Gente de aquí y visitantes",
+              "fr": "Habitants et visiteurs",
+              "de": "Einheimische & Besucher",
+              "it": "Gente del posto e visitatori",
+              "zh": "本地人和游客都有"
             }
           }
         ]
@@ -571,6 +610,17 @@
         "de": "Barcelonas ältestes Flamenco-Tablao, seit 1963 an der Plaça Reial, mit kurzen Shows von etwa 40 Minuten. Flamenco entstand in Andalusien; in Barcelona schlug er Wurzeln durch Zuwanderung und die Gitano-Gemeinschaft der Stadt, aus der auch die katalanische Rumba kommt.",
         "it": "Il tablao di flamenco più antico di Barcellona, in Plaça Reial dal 1963, con spettacoli brevi di circa 40 minuti. Il flamenco è nato in Andalusia; a Barcellona ha messo radici con l'immigrazione e la comunità gitana della città, da cui è nata anche la rumba catalana.",
         "zh": "巴塞罗那最古老的弗拉明戈表演场（tablao），1963年起位于皇家广场，演出约40分钟。弗拉明戈起源于安达卢西亚；在巴塞罗那，它随着移民和本地吉卜赛（gitano）社群扎下根来，加泰罗尼亚伦巴（rumba catalana）也由此诞生。"
+      }
+    },
+    "viewpoints": {
+      "Bunkers del Carmel": {
+        "en": "Turó de la Rovira: a 360° view from a 1938 Civil War anti-aircraft battery, now a free open-air site of the City History Museum (MUHBA). Steep climb, not accessible with reduced mobility. People live just below: no music, and keep voices down, especially in the evening.",
+        "ca": "Turó de la Rovira: vista de 360° des d'una bateria antiaèria del 1938, de la Guerra Civil, avui espai a l'aire lliure i gratuït del Museu d'Història de Barcelona (MUHBA). Pujada forta, no accessible per a mobilitat reduïda. Hi viu gent just a sota: sense música i parlant fluix, sobretot al vespre.",
+        "es": "Turó de la Rovira: vistas de 360° desde una batería antiaérea de 1938, de la Guerra Civil, hoy espacio al aire libre y gratuito del Museo de Historia de Barcelona (MUHBA). Subida fuerte, no accesible para movilidad reducida. Justo debajo vive gente: sin música y hablando bajo, sobre todo al anochecer.",
+        "fr": "Turó de la Rovira : une vue à 360° depuis une batterie antiaérienne de 1938, de la guerre civile, aujourd'hui site gratuit en plein air du Musée d'histoire de Barcelone (MUHBA). Montée raide, non accessible aux personnes à mobilité réduite. Des gens habitent juste en dessous : pas de musique et parlez bas, surtout le soir.",
+        "de": "Turó de la Rovira: 360°-Blick von einer Flakbatterie aus dem Bürgerkrieg (1938), heute ein kostenloser Freiluftort des Stadtgeschichtsmuseums (MUHBA). Steiler Aufstieg, nicht barrierefrei. Direkt darunter wohnen Menschen: keine Musik und leise sprechen, besonders am Abend.",
+        "it": "Turó de la Rovira: vista a 360° da una batteria antiaerea del 1938, della Guerra Civile, oggi sito gratuito all'aperto del Museo di Storia di Barcellona (MUHBA). Salita ripida, non accessibile a chi ha mobilità ridotta. Subito sotto vive gente: niente musica e voce bassa, soprattutto la sera.",
+        "zh": "罗维拉山（Turó de la Rovira）：在1938年西班牙内战时期的防空炮台上360°环视全城，如今是巴塞罗那城市历史博物馆（MUHBA）免费开放的露天遗址。上山坡陡，行动不便者无法到达。山下就是住宅：请勿放音乐，说话放低声音，傍晚尤其如此。"
       }
     }
   }

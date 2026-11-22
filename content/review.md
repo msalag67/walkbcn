@@ -952,12 +952,12 @@ Check:
 
 **history**
 
-Look down at the concrete under your feet. During the Spanish Civil War, anti-aircraft guns stood on this hilltop. It was chosen because from here you can see almost the whole city, from the sea to the mountains, making it a lookout to defend Barcelona from bombing raids. But the story didn't end with the war. Families with nowhere else to live built shacks among the ruins, and people made their homes right here until the late 1980s. Picture kitchens and children's games where you stand now. Today El Carmel below is still a living neighbourhood, full of people's homes.
+Look down at the concrete under your feet. During the Spanish Civil War, anti-aircraft guns stood on this hilltop. It was chosen because from here you can see almost the whole city, from the sea to the mountains, making it a lookout to defend Barcelona from bombing raids. But the story didn't end with the war. Families with nowhere else to live built shacks among the ruins, and people made their homes right here until 1990. Picture kitchens and children's games where you stand now. Today El Carmel below is still a living neighbourhood, full of people's homes.
 
 Check: 
 - [ ] Anti-aircraft guns were placed here during the Spanish Civil War to defend Barcelona from bombing raids
 - [ ] After the war, families built shacks among the ruins
-- [ ] People lived in the shacks here until the late 1980s
+- [ ] People lived in the shacks here until 1990
 - [ ] The concrete platforms are remains of the anti-aircraft battery
 
 ## Port Vell
