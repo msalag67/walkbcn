@@ -893,8 +893,6 @@
   .pause-list .book { justify-self: start; margin-top: 4px; }
   .surprise-intro { font: 400 20px/1.3 var(--display); margin: 10px 0; }
   .clues { padding-left: 22px; margin: 8px 0; display: grid; gap: 8px; font-size: 15px; }
-  dialog.adapt .stop-photo { margin: 10px 0; }
-  dialog.adapt .stop-photo img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 12px; }
   .adapt .linkish { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; text-decoration: underline; color: inherit; cursor: pointer; }
   .story.loading { color: var(--muted); font-style: italic; }
   /* Challenges (Phase 3A) */
@@ -915,9 +913,10 @@
   .ch-body b { font: 400 22px/1.15 var(--display); }
   .ch-meta { font-size: 13px; color: var(--muted); }
   .ch-meta em { font-style: normal; font-weight: 700; color: inherit; }
-  #chalRoot .stop-photo { margin: 12px 0; max-width: 100%; }
-  #chalRoot .stop-photo img { width: 100%; max-height: 260px; object-fit: cover; border-radius: 14px; }
-  .ch-cover img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 16px; }
+  /* the figure keeps the photo's own height (no 16:9 box around a shorter image) */
+  #chalRoot .stop-photo, dialog.adapt .stop-photo { aspect-ratio: auto; background: none; margin: 12px 0; max-width: 100%; }
+  #chalRoot .stop-photo .credit-line, dialog.adapt .stop-photo .credit-line { margin: 6px 0 0; }
+  #chalRoot .stop-photo img, dialog.adapt .stop-photo img { width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 360px; object-fit: cover; border-radius: 14px; }
   .ch-fiction { border: 1px dashed currentColor; border-radius: 12px; padding: 10px 12px; font-size: 15px; }
   .ch-how { border-left: 3px solid var(--accent); padding: 2px 12px; margin: 14px 0; }
   .ch-how p { margin: 6px 0; }
@@ -1021,10 +1020,10 @@
 
   <nav class="tabs" role="tablist">
     <button type="button" role="tab" id="tabWalk" aria-selected="true" data-i18n="tabWalk">Walking routes</button>
+    <button type="button" role="tab" id="tabChal" class="tab-chal" aria-selected="false" data-i18n="tabChal">Challenges</button>
     <button type="button" role="tab" id="tabGuide" aria-selected="false" data-i18n="tabGuide">Audio guide</button>
     <button type="button" role="tab" id="tabAct" aria-selected="false" data-i18n="tabAct">Activities</button>
     <button type="button" role="tab" id="tabTips" aria-selected="false">Tips</button>
-    <button type="button" role="tab" id="tabChal" class="tab-chal" aria-selected="false" data-i18n="tabChal">Challenges</button>
   </nav>
 
   <div id="walkView">
