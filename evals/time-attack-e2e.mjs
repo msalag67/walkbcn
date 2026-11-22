@@ -4,7 +4,10 @@
 // Not a test between real phones (see docs/multijugador.md).
 // Usage: python3 -m http.server 8642, then PGLITE=<folder> node evals/time-attack-e2e.mjs
 import fs from "node:fs"; import os from "node:os"; import path from "node:path"; import { spawn } from "node:child_process";
-const BASE = "http://localhost:8642", EMU = "http://localhost:8650";
+const BASE = process.env.BASE || "http://localhost:8642", EMU = "http://localhost:8650";
+// REAL=1: the two-browser game uses the real project in data/multiplayer-config.js (no stand-in);
+// the time-up part is skipped there (it would take 30 real minutes) and checked locally instead.
+const REAL = process.env.REAL === "1";
 setTimeout(() => { console.error("time limit"); process.exit(2); }, 240000);
 const root = new URL("..", import.meta.url).pathname;
 const npx = path.join(os.homedir(), ".npm/_npx");
@@ -73,11 +76,11 @@ const report = (name, ok, detail) => { results.push(ok); console.log(`${ok ? "PA
 
 // ---------------------------------------------------------------- 2. real game, two browsers
 {
-  const emu = spawn("node", [path.join(root, "evals/mp-emulator.mjs"), path.join(root, "supabase/multiplayer.sql"), "8650", "200"], { env: process.env, stdio: ["ignore", "pipe", "inherit"] });
-  await new Promise((ok) => emu.stdout.on("data", (x) => /emulator on/.test(x) && ok()));
+  const emu = REAL ? { kill() {} } : spawn("node", [path.join(root, "evals/mp-emulator.mjs"), path.join(root, "supabase/multiplayer.sql"), "8650", "200"], { env: process.env, stdio: ["ignore", "pipe", "inherit"] });
+  if (!REAL) await new Promise((ok) => emu.stdout.on("data", (x) => /emulator on/.test(x) && ok()));
   const STOP = { 0: [41.3916, 2.165], 5: [41.4114, 2.1744], 6: [41.4035, 2.1506], 3: [41.398, 2.164] };
   const mk = async () => { const ctx = await browser.newContext({ serviceWorkers: "block", locale: "en-GB", viewport: { width: 375, height: 812 }, permissions: ["geolocation"], geolocation: { latitude: 41.385, longitude: 2.17, accuracy: 20 } });
-    await ctx.route("**/data/multiplayer-config.js*", (r) => r.fulfill({ contentType: "application/javascript", body: `window.WALKBCN_MP = { url: '${EMU}', anonKey: 'test-anon' };` }));
+    if (!REAL) await ctx.route("**/data/multiplayer-config.js*", (r) => r.fulfill({ contentType: "application/javascript", body: `window.WALKBCN_MP = { url: '${EMU}', anonKey: 'test-anon' };` }));
     const p = await ctx.newPage(); const errors = []; p.on("pageerror", (e) => errors.push(e.message));
     await p.addInitScript(() => { try { if (!localStorage.getItem("walkbcn_lang")) localStorage.setItem("walkbcn_lang", "en"); } catch (e) {} }); return { ctx, p, errors }; };
   const A = await mk(), B = await mk(), d = {};
@@ -115,6 +118,7 @@ const report = (name, ok, detail) => { results.push(ok); console.log(`${ok ? "PA
     d.forgeOther = await B.p.evaluate(async (c) => { try { await mpRpc("mp_start", { p_code: c }); return "?!"; } catch (e) { return e.message; } }, code);
     await B.p.reload(); await until(B.p, () => !!document.getElementById("taClock"), 15000);
     d.bobAfterReload = await B.p.evaluate(() => document.querySelectorAll(".ta-head b")[1].textContent);
+    if (REAL) { await A.p.evaluate(() => mpLeave()); await B.p.evaluate(() => { window.confirm = () => true; return mpLeave(); }); d.errors = [...A.errors, ...B.errors]; throw new Error("REAL_DONE"); }
     // time runs out (test route), then a late answer
     await fetch(EMU + "/test/expire", { method: "POST", headers: { apikey: "x", "Content-Type": "application/json" }, body: JSON.stringify({ code }) });
     d.late = await B.p.evaluate(async (c) => { try { await mpRpc("mp_ta_complete", { p_code: c, p_mission: 0, p_method: "gps" }); return "scored?!"; } catch (e) { return e.message; } }, code);
@@ -122,11 +126,11 @@ const report = (name, ok, detail) => { results.push(ok); console.log(`${ok ? "PA
     d.finalA = (await A.p.textContent(".ch-done")).replace(/\s+/g, " ").trim();
     d.finalRanking = (await B.p.textContent(".mp-board")).replace(/\s+/g, " ").trim();
     d.errors = [...A.errors, ...B.errors];
-  } catch (e) { d.error = e.message.split("\n")[0]; }
-  const ok = !d.error && /Time Attack · 30 min/.test(d.lobby) && d.clocks.every((c) => /^(30:00|29:5\d)$/.test(c)) && /can't score|couldn't be checked/.test(d.bobNoGps) &&
-    /Anna/.test(d.bobSeesLive) && d.dupe === 0 && /not_host|room_started/.test(d.forgeOther) && d.bobAfterReload === "100" && /time_up|not_playing/.test(d.late) &&
-    /Anna wins/.test(d.finalA) && /500 points/.test(d.finalA) && /Anna.*500.*Bob.*100/.test(d.finalRanking) && !d.errors.length;
-  report("Time Attack real game (two browsers, local Supabase stand-in)", ok, d);
+  } catch (e) { if (e.message !== "REAL_DONE") d.error = e.message.split("\n")[0]; }
+  const timeUpOk = REAL || (/time_up|not_playing/.test(d.late) && /Anna wins/.test(d.finalA) && /500 points/.test(d.finalA) && /Anna.*500.*Bob.*100/.test(d.finalRanking));
+  const ok = !d.error && timeUpOk && /Time Attack · 30 min/.test(d.lobby) && d.clocks.every((c) => /^(30:00|29:5\d)$/.test(c)) && /can't score|couldn't be checked/.test(d.bobNoGps) &&
+    /Anna/.test(d.bobSeesLive) && d.dupe === 0 && /not_host|room_started/.test(d.forgeOther) && d.bobAfterReload === "100" && !d.errors?.length;
+  report(`Time Attack real game (two browsers, ${REAL ? "REAL Supabase project, time-up not included" : "local Supabase stand-in"})`, ok, d);
   emu.kill();
 }
 await browser.close();
