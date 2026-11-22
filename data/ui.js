@@ -1324,3 +1324,53 @@ Object.assign(window.WALKBCN_UI.fr, { noticeExpiredTag: "À vérifier", noticeEx
 Object.assign(window.WALKBCN_UI.de, { noticeExpiredTag: "Noch zu prüfen", noticeExpired: "Das sollte am {d} enden, und wir haben es noch nicht erneut geprüft: Bitte vor dem Besuch bei der Quelle nachsehen." });
 Object.assign(window.WALKBCN_UI.it, { noticeExpiredTag: "Da verificare", noticeExpired: "Doveva finire il {d} e non l'abbiamo ancora ricontrollato: verifica alla fonte prima di andarci." });
 Object.assign(window.WALKBCN_UI.zh, { noticeExpiredTag: "待核实", noticeExpired: "此信息原定于{d}结束，我们尚未再次核实：前往前请先查看来源确认。" });
+// Phase 2 (22 Nov 2026): "How do you want to discover Barcelona?" — five discovery styles.
+Object.assign(window.WALKBCN_UI.en, { styleTitle: "How do you want to discover Barcelona?", style_essentials: "The essentials", style_mix: "A bit of everything", style_lesser: "Lesser-known Barcelona", style_local: "Like a local", style_stories: "Stories & curiosities",
+  styleHint_essentials: "Puts the city's best-known landmarks first, among the places that match your interests.",
+  styleHint_mix: "A balance of well-known landmarks and less usual places.",
+  styleHint_lesser: "Puts lesser-known heritage and corners first. Based on how well known a place is, not on live crowd data.",
+  styleHint_local: "Puts markets, squares and everyday neighbourhood life first.",
+  styleHint_stories: "Puts first the places with details you can spot on the spot and checked sources.",
+  noteStyleFew: "Few places with your interests suit this style, so the route also uses the best of the rest." });
+Object.assign(window.WALKBCN_UI.ca, { styleTitle: "Com vols descobrir Barcelona?", style_essentials: "L'imprescindible", style_mix: "Una mica de tot", style_lesser: "La Barcelona menys coneguda", style_local: "Com un local", style_stories: "Històries i curiositats",
+  styleHint_essentials: "Prioritza els llocs més coneguts de la ciutat, entre els que encaixen amb els teus interessos.",
+  styleHint_mix: "Un equilibri entre llocs coneguts i llocs menys habituals.",
+  styleHint_lesser: "Prioritza patrimoni i racons menys coneguts. Es basa en com de conegut és un lloc, no en dades d'afluència en temps real.",
+  styleHint_local: "Prioritza mercats, places i la vida quotidiana dels barris.",
+  styleHint_stories: "Prioritza els llocs amb detalls que pots observar allà mateix i fonts comprovades.",
+  noteStyleFew: "Pocs llocs amb els teus interessos encaixen amb aquest estil, així que la ruta també fa servir els millors de la resta." });
+Object.assign(window.WALKBCN_UI.es, { styleTitle: "¿Cómo quieres descubrir Barcelona?", style_essentials: "Lo imprescindible", style_mix: "Un poco de todo", style_lesser: "La Barcelona menos conocida", style_local: "Como un local", style_stories: "Historias y curiosidades",
+  styleHint_essentials: "Prioriza los lugares más conocidos de la ciudad, entre los que encajan con tus intereses.",
+  styleHint_mix: "Un equilibrio entre lugares conocidos y lugares menos habituales.",
+  styleHint_lesser: "Prioriza patrimonio y rincones menos conocidos. Se basa en lo conocido que es un lugar, no en datos de afluencia en tiempo real.",
+  styleHint_local: "Prioriza mercados, plazas y la vida cotidiana de los barrios.",
+  styleHint_stories: "Prioriza los lugares con detalles que puedes observar allí mismo y fuentes comprobadas.",
+  noteStyleFew: "Pocos lugares con tus intereses encajan con este estilo, así que la ruta también usa los mejores del resto." });
+Object.assign(window.WALKBCN_UI.fr, { styleTitle: "Comment voulez-vous découvrir Barcelone ?", style_essentials: "L'incontournable", style_mix: "Un peu de tout", style_lesser: "La Barcelone méconnue", style_local: "Comme un habitant", style_stories: "Histoires et curiosités",
+  styleHint_essentials: "Met d'abord en avant les lieux les plus connus de la ville, parmi ceux qui correspondent à vos centres d'intérêt.",
+  styleHint_mix: "Un équilibre entre lieux connus et lieux moins habituels.",
+  styleHint_lesser: "Met d'abord en avant un patrimoine et des recoins moins connus. Selon la notoriété d'un lieu, pas selon l'affluence en temps réel.",
+  styleHint_local: "Met d'abord en avant les marchés, les places et la vie quotidienne des quartiers.",
+  styleHint_stories: "Met d'abord en avant les lieux avec des détails à observer sur place et des sources vérifiées.",
+  noteStyleFew: "Peu de lieux correspondant à vos centres d'intérêt suivent ce style : l'itinéraire utilise aussi les meilleurs des autres." });
+Object.assign(window.WALKBCN_UI.de, { styleTitle: "Wie möchtest du Barcelona entdecken?", style_essentials: "Das Wichtigste", style_mix: "Von allem etwas", style_lesser: "Das weniger bekannte Barcelona", style_local: "Wie Einheimische", style_stories: "Geschichten & Kurioses",
+  styleHint_essentials: "Stellt die bekanntesten Orte der Stadt nach vorn, unter denen, die zu deinen Interessen passen.",
+  styleHint_mix: "Eine Mischung aus bekannten Orten und weniger üblichen.",
+  styleHint_lesser: "Stellt weniger bekanntes Erbe und versteckte Ecken nach vorn. Nach Bekanntheit eines Ortes, nicht nach aktuellem Andrang.",
+  styleHint_local: "Stellt Märkte, Plätze und das Alltagsleben der Viertel nach vorn.",
+  styleHint_stories: "Stellt Orte mit Details, die du vor Ort entdecken kannst, und geprüften Quellen nach vorn.",
+  noteStyleFew: "Nur wenige Orte zu deinen Interessen passen zu diesem Stil, deshalb nutzt die Route auch die besten übrigen." });
+Object.assign(window.WALKBCN_UI.it, { styleTitle: "Come vuoi scoprire Barcellona?", style_essentials: "L'imperdibile", style_mix: "Un po' di tutto", style_lesser: "La Barcellona meno conosciuta", style_local: "Come un locale", style_stories: "Storie e curiosità",
+  styleHint_essentials: "Mette prima i luoghi più conosciuti della città, tra quelli adatti ai tuoi interessi.",
+  styleHint_mix: "Un equilibrio tra luoghi conosciuti e luoghi meno abituali.",
+  styleHint_lesser: "Mette prima patrimonio e angoli meno conosciuti. In base a quanto è noto un luogo, non all'affluenza in tempo reale.",
+  styleHint_local: "Mette prima mercati, piazze e la vita quotidiana dei quartieri.",
+  styleHint_stories: "Mette prima i luoghi con dettagli da osservare sul posto e fonti verificate.",
+  noteStyleFew: "Pochi luoghi adatti ai tuoi interessi seguono questo stile, quindi il percorso usa anche i migliori tra gli altri." });
+Object.assign(window.WALKBCN_UI.zh, { styleTitle: "你想怎样探索巴塞罗那？", style_essentials: "必看精华", style_mix: "样样都来点", style_lesser: "小众巴塞罗那", style_local: "像本地人一样", style_stories: "故事与趣闻",
+  styleHint_essentials: "在符合你兴趣的地点中，优先选择城市最著名的地标。",
+  styleHint_mix: "著名地标与不太常见的地点兼顾。",
+  styleHint_lesser: "优先选择较少人知的遗产和角落。依据地点的知名度，而非实时人流数据。",
+  styleHint_local: "优先选择市场、广场和街区的日常生活。",
+  styleHint_stories: "优先选择有现场可见细节且来源经过核实的地点。",
+  noteStyleFew: "符合你兴趣的地点中，适合此风格的不多，所以路线也选用了其余地点中最好的。" });

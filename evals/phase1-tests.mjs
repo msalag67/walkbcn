@@ -393,6 +393,24 @@ await test("REG-off", "A walk saved for offline use reopens with the network cut
   } finally { await swCtx.close().catch(() => {}); }
 }, 60000);
 
+// ---------------------------------------------------------------- Phase 2: discovery styles
+await test("P2-style", "Discovery styles change the ranking, keep interests first, and 'mix' adds nothing", async (page) => {
+  await open(page);
+  const r = await page.evaluate(() => {
+    const build = (st) => { Object.assign(plan, { mode: "stops", start: "best", end: "any", theme: null, zone: "any", must: [], style: st }); selected = new Set(["history", "architecture"]); stopsCount = 5; routeAngles = {}; showRoute(); return route.slice(); };
+    const res = {}; for (const st of STYLE_IDS) { const rt = build(st); res[st] = { ids: rt.map((s) => s.id), fit: rt.filter(DISCOVERY_STYLES[st].fit).length, off: rt.filter((s) => !s.tags.some((t) => selected.has(t))).length }; }
+    plan.style = "mix"; const zero = STOPS.every((s) => styleBonus(s) === 0);
+    const maxBonus = Math.max(...STYLE_IDS.flatMap((st) => STOPS.map((s) => Math.abs(DISCOVERY_STYLES[st].bonus(s)))));
+    Object.assign(plan, { style: "lesser", must: ["sagrada-familia"] }); selected = new Set(["history"]); stopsCount = 4; showRoute(); const must = route.some((s) => s.id === "sagrada-familia");
+    plan.style = "mix"; plan.must = [];
+    return { res, zero, maxBonus, must };
+  });
+  const distinct = new Set(Object.values(r.res).map((x) => x.ids.join())).size;
+  const ok = r.zero && r.maxBonus < 1 && r.must && distinct >= 4 && Object.values(r.res).every((x) => x.off === 0) &&
+    r.res.essentials.fit >= 4 && r.res.lesser.fit >= 4;
+  return { ok, detail: { distinct, ...r } };
+});
+
 clearTimeout(watchdog);
 await withLimit(browser.close(), 5000, "browser close").catch(() => {});
 const failed = results.filter((r) => !r.ok);

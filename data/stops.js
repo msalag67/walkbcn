@@ -240,6 +240,15 @@ window.WALKBCN_STOPS = [
     tip: "It is the neighbourhood's park: share the paths with children and dog walkers, and keep music and voices low." },
 ];
 
+// Editorial metadata for the "How do you want to discover Barcelona?" choice (22 Nov 2026).
+// known: landmarks that most guidebooks and first-time visitors already have on their list,
+// besides the "big icons" marked `crowded` above. It is the team's editorial judgement, not a
+// visitor count: it only helps the "Essentials" and "Lesser-known" styles rank stops.
+window.WALKBCN_EDITORIAL = {
+  known: ['recinte-modernista-de-sant-pau', 'palau-de-la-musica-catalana', 'santa-maria-del-mar', 'museu-picasso',
+    'parc-de-la-ciutadella', 'arc-de-triomf', 'placa-sant-jaume', 'palau-guell', 'casa-vicens', 'port-vell', 'liceu', 'mercat-de-sant-antoni'],
+};
+
 // Practical notices shown on a stop's card, only between `from` and `until` (inclusive,
 // local dates). Each one says where the fact comes from (`source`) and when we checked it
 // (`checked`). Editorial rules, applied by index.html:

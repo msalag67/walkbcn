@@ -64,6 +64,9 @@ for (const [id, list] of Object.entries(W.WALKBCN_NOTICES || {})) {
   }
 }
 
+// Editorial list for the discovery styles: only known stops
+for (const id of W.WALKBCN_EDITORIAL?.known || []) if (!ids.has(id)) fail(`editorial: unknown stop ${id} in "known"`);
+
 // Practical cards and photo credits
 const CARDS = W.WALKBCN_CARDS || {}, PHOTOS = W.WALKBCN_PHOTOS || {};
 const SENS = ['worship', 'study', 'residential', 'limited', 'works'];
