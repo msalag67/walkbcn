@@ -411,6 +411,97 @@ await test("P2-style", "Discovery styles change the ranking, keep interests firs
   return { ok, detail: { distinct, ...r } };
 });
 
+// ---------------------------------------------------------------- Phase 2C.1: adapt my walk
+// Story-version cache (angles) is left out: a reload recomputes it, as before this feature.
+const SNAP = `window.__snap = () => { const sv = JSON.parse(localStorage.getItem('walkbcn_route_v1') || 'null'); if (sv) { delete sv.at; delete sv.angles; }
+  return JSON.stringify({ ids: route.map((s) => s.id), current, walk, sel: [...selected].sort(), plan, saved: sv, link: shareLink(), start: lastRoute.start && [lastRoute.start.lat, lastRoute.start.lng], end: lastRoute.end && [lastRoute.end.lat, lastRoute.end.lng] }); };
+  window.__click = (sel) => { const el = document.querySelector(sel); if (!el) throw new Error('no ' + sel); el.click(); };
+  window.__wait = (ms) => new Promise((r) => setTimeout(r, ms));`;
+await test("P2C-cancel", "Adapt my walk: cancelling (Keep, Esc, Back, reopen) changes nothing, also after a reload", async (page) => {
+  await open(page);
+  await page.evaluate(SNAP);
+  const r = await page.evaluate(async () => {
+    Object.assign(plan, { mode: "stops", start: "best", end: "any", zone: "any", must: [], theme: null, style: "mix" }); selected = new Set(["history", "architecture"]); stopsCount = 6; showRoute();
+    history.replaceState({ r: 1 }, "", "#ruta");
+    walk.visited[route[0].id] = true; walk.skipped[route[1].id] = true; goTo(2); await __wait(100);
+    const s0 = __snap(), res = {};
+    // 1. less time → preview → Keep my route
+    __click("#adaptRoute"); __click('#adaptBody [data-a="time"]'); __click('#adaptMin [data-v="15"]'); __click('#adaptBody [data-a="preview"]');
+    res.preview1 = document.querySelector("#adaptBody .adapt-tag")?.textContent || document.getElementById("adaptBody").textContent.slice(0, 80);
+    __click('#adaptBody [data-a="keep"]'); await __wait(150);
+    res.keep = __snap() === s0 && !document.getElementById("adapt").open;
+    // 2. change interests + style → preview → Esc (dialog close without a choice)
+    __click("#adaptRoute"); __click('#adaptBody [data-a="plan"]'); __click('#adaptStyle [data-v="lesser"]'); __click('#adaptInts [data-v="food"]'); __click('#adaptInts [data-v="history"]'); __click('#adaptBody [data-a="preview"]');
+    document.getElementById("adapt").close(); await __wait(150);
+    res.esc = __snap() === s0;
+    // 3. preview then browser Back
+    __click("#adaptRoute"); __click('#adaptBody [data-a="time"]'); __click('#adaptBody [data-a="preview"]');
+    history.back(); await __wait(300);
+    res.back = __snap() === s0 && !document.getElementById("adapt").open && !document.getElementById("route").hidden && location.hash === "#ruta";
+    // reopen: the draft starts from the original interests and style
+    __click("#adaptRoute"); __click('#adaptBody [data-a="plan"]');
+    res.reopen = [...document.querySelectorAll('#adaptInts [aria-pressed="true"]')].map((b) => b.dataset.v).sort().join() === "architecture,history" && document.querySelector('#adaptStyle [aria-pressed="true"]').dataset.v === "mix";
+    __click('#adaptBody [data-a="keep"]'); await __wait(150);
+    res.s0 = s0;
+    return res;
+  });
+  await page.reload(); await page.waitForFunction(() => typeof showRoute === "function" && route.length > 0); await page.evaluate(SNAP);
+  const after = await page.evaluate(() => __snap());
+  const ok = r.keep && r.esc && r.back && r.reopen && after === r.s0 && /Proposal/.test(r.preview1);
+  return { ok, detail: { keep: r.keep, esc: r.esc, back: r.back, reopen: r.reopen, reloadSame: after === r.s0, preview: r.preview1 } };
+}, 45000);
+await test("P2C-apply", "Adapt my walk: applying changes only the stops ahead, keeps progress, loop/finish, and survives a reload", async (page) => {
+  await open(page);
+  await page.evaluate(SNAP);
+  const r = await page.evaluate(async () => {
+    const res = {};
+    // loop from a point on the map
+    Object.assign(plan, { mode: "stops", start: "map", startPt: { lat: 41.3838, lng: 2.1766 }, end: "loop", zone: "any", must: [], theme: null, style: "mix" }); selected = new Set(["history", "architecture"]); stopsCount = 7; showRoute();
+    history.replaceState({ r: 1 }, "", "#ruta");
+    walk.visited[route[0].id] = true; walk.skipped[route[1].id] = true; goTo(2); await __wait(100);
+    const before = route.map((s) => s.id), done = before.slice(0, 2);
+    __click("#adaptRoute"); __click('#adaptBody [data-a="time"]'); __click('#adaptMin [data-v="30"]'); __click('#adaptBody [data-a="preview"]');
+    res.loopNote = /where you started/.test(document.getElementById("adaptBody").textContent);
+    res.compare = document.querySelector(".adapt-compare")?.textContent.replace(/\s+/g, " ").trim();
+    __click('#adaptBody [data-a="apply"]'); await __wait(200);
+    const after = route.map((s) => s.id);
+    res.loop = { before, after, doneKept: after.slice(0, 2).join() === done.join() && walk.visited[done[0]] && walk.skipped[done[1]], shorter: after.length < before.length,
+      planEnd: plan.end, endIsStart: lastRoute.end.lat === lastRoute.start.lat && lastRoute.end.lng === lastRoute.start.lng, current, sel: [...selected].sort().join() };
+    // custom finish + change plan (style + interests)
+    Object.assign(plan, { mode: "stops", start: "best", startPt: null, end: "map", endPt: { lat: 41.3904, lng: 2.1889 }, style: "mix" }); selected = new Set(["history"]); stopsCount = 5; showRoute();
+    walk.visited[route[0].id] = true; goTo(1); await __wait(100);
+    const b2 = route.map((s) => s.id);
+    __click("#adaptRoute"); __click('#adaptBody [data-a="plan"]'); __click('#adaptStyle [data-v="local"]'); __click('#adaptInts [data-v="local"]'); __click('#adaptBody [data-a="preview"]');
+    res.finishNote = /finish you chose/.test(document.getElementById("adaptBody").textContent);
+    const canApply = !!document.querySelector('#adaptBody [data-a="apply"]');
+    if (canApply) __click('#adaptBody [data-a="apply"]'); await __wait(200);
+    res.finish = { b2, after: route.map((s) => s.id), first: route[0].id === b2[0] && walk.visited[b2[0]], end: [lastRoute.end.lat, lastRoute.end.lng].join(), style: plan.style, sel: [...selected].sort().join(), canApply };
+    res.snap = __snap();
+    return res;
+  });
+  await page.reload(); await page.waitForFunction(() => typeof showRoute === "function" && route.length > 0); await page.evaluate(SNAP);
+  const reloaded = await page.evaluate(() => __snap());
+  const L = r.loop, F = r.finish;
+  const ok = r.loopNote && L.doneKept && L.shorter && L.planEnd === "loop" && L.endIsStart && L.current === 2 && L.sel === "architecture,history" &&
+    r.finishNote && F.first && F.end === "41.3904,2.1889" && (!F.canApply || (F.style === "local" && F.sel === "history,local")) && reloaded === r.snap;
+  return { ok, detail: { ...r, snap: undefined, reloadSame: reloaded === r.snap } };
+}, 45000);
+await test("P2C-none", "Adapt my walk: when nothing fits, it says so and the route stays intact", async (page) => {
+  await open(page);
+  await page.evaluate(SNAP);
+  const r = await page.evaluate(async () => {
+    Object.assign(plan, { start: "best", end: "any", zone: "any", must: [], style: "mix" }); applyTheme("poblenou"); showRoute(); history.replaceState({ r: 1 }, "", "#ruta"); await __wait(100);
+    const s0 = __snap();
+    __click("#adaptRoute"); __click('#adaptBody [data-a="plan"]');
+    for (const b of document.querySelectorAll('#adaptInts [aria-pressed="true"]')) if (b.dataset.v !== "sports") { if (!document.querySelector('#adaptInts [data-v="sports"]').getAttribute("aria-pressed").includes("true")) __click('#adaptInts [data-v="sports"]'); b.click(); }
+    __click('#adaptBody [data-a="preview"]');
+    const msg = document.getElementById("adaptBody").textContent, apply = !!document.querySelector('#adaptBody [data-a="apply"]');
+    __click('#adaptBody [data-a="keep"]'); await __wait(150);
+    return { msg: msg.slice(0, 90), apply, same: __snap() === s0 };
+  });
+  return { ok: /No stops/.test(r.msg) && !r.apply && r.same, detail: r };
+});
+
 clearTimeout(watchdog);
 await withLimit(browser.close(), 5000, "browser close").catch(() => {});
 const failed = results.filter((r) => !r.ok);
