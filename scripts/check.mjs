@@ -15,7 +15,7 @@ import crypto from 'node:crypto';
 const root = new URL('..', import.meta.url).pathname;
 const ctx = { window: {} };
 vm.createContext(ctx);
-for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'data/discoveries.js', 'content/stories.js']) {
+for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'data/discoveries.js', 'data/challenges.js', 'content/stories.js']) {
   vm.runInContext(fs.readFileSync(root + f, 'utf8'), ctx, { filename: f });
 }
 for (const l of ['ca', 'es', 'en', 'fr', 'de', 'it', 'zh']) {
@@ -76,6 +76,35 @@ for (const e of W.WALKBCN_DISCOVERIES || []) {
   if ((card?.sensitive || []).some(k => k === 'residential' || k === 'limited')) fail(`discovery ${e.stop}: residential or limited-access stops are not used`);
   if ((e.clues || []).length !== 3) fail(`discovery ${e.stop}: needs exactly 3 clues`);
   for (const [i, x] of [e.intro, ...(e.clues || [])].entries()) for (const l of langs) if (!x?.[l]) fail(`discovery ${e.stop}: ${i ? `clue ${i}` : 'intro'} missing in ${l}`);
+}
+
+// Challenges: known stops, sources, a valid question with the right answer among the options,
+// every visible text in 7 languages, hunt clues, mystery clue pieces, bingo board size.
+{
+  const T = ['hunt', 'mystery', 'observe', 'bingo', 'story'];
+  const all7 = (x, what) => { for (const l of langs) if (!x?.[l]) fail(`${what}: missing in ${l}`); };
+  for (const c of W.WALKBCN_CHALLENGES || []) {
+    const w = `challenge ${c.id}`;
+    if (!T.includes(c.type)) fail(`${w}: unknown type ${c.type}`);
+    for (const k of ['title', 'desc', 'intro', 'finale']) all7(c[k], `${w} ${k}`);
+    if (c.type === 'mystery') all7(c.frame, `${w} frame`);
+    if (c.type === 'bingo' && c.missions.length !== (c.cols || 3) ** 2) fail(`${w}: bingo needs ${(c.cols || 3) ** 2} squares`);
+    c.missions.forEach((m, i) => {
+      const mw = `${w} mission ${i + 1}`;
+      if (!ids.has(m.stop)) fail(`${mw}: unknown stop ${m.stop}`);
+      if (!(m.sources || []).length || m.sources.some(u => !/^https:\/\//.test(u))) fail(`${mw}: needs https sources`);
+      if ((W.WALKBCN_CARDS?.[m.stop]?.sensitive || []).includes('limited')) fail(`${mw}: limited-access stop`);
+      const q = m.q || {};
+      all7(q.prompt, `${mw} question`);
+      if (q.kind === 'choice') { (q.options || []).forEach((o, k) => all7(o, `${mw} option ${k + 1}`)); if (!(q.answer >= 0 && q.answer < (q.options || []).length)) fail(`${mw}: answer out of range`); }
+      else if (q.kind === 'truefalse') { if (typeof q.answer !== 'boolean') fail(`${mw}: true/false answer`); }
+      else if (q.kind === 'number') { if (!Number.isFinite(q.answer)) fail(`${mw}: number answer`); }
+      else fail(`${mw}: unknown question kind`);
+      if (c.type === 'hunt') { if ((m.clues || []).length < 2) fail(`${mw}: a hunt needs clues`); (m.clues || []).forEach((x, k) => all7(x, `${mw} clue ${k + 1}`)); }
+      if (c.type === 'mystery') all7(m.piece, `${mw} clue piece`);
+      if (c.type === 'story' && m.variant && !W.WALKBCN_STORIES?.[m.stop]?.variants?.[m.variant]) fail(`${mw}: no ${m.variant} story`);
+    });
+  }
 }
 
 // Practical cards and photo credits

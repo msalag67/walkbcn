@@ -897,6 +897,64 @@
   dialog.adapt .stop-photo img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 12px; }
   .adapt .linkish { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; text-decoration: underline; color: inherit; cursor: pointer; }
   .story.loading { color: var(--muted); font-style: italic; }
+  /* Challenges (Phase 3A) */
+  .tabs { flex-wrap: wrap; row-gap: 4px; }   /* five tabs: wrap on narrow screens so Challenges stays visible */
+  .tabs button { white-space: nowrap; }
+  .tab-chal { font-weight: 700 !important; }
+  #chalView { padding: 8px 0 40px; }
+  .ch-h1 { font: 400 clamp(30px, 6vw, 44px)/1.08 var(--display); margin: 12px 0 10px; }
+  .ch-kicker { font: 600 13px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 14px 0 4px; }
+  .ch-demo { position: sticky; top: 0; z-index: 5; background: #ffe58a; color: #3b2f00; font: 700 14px var(--sans); border-radius: 10px; padding: 8px 12px; margin: 10px 0; }
+  .ch-demo-toggle { margin-top: 14px; }
+  .ch-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 18px; }
+  .ch-card { display: flex; flex-direction: column; text-align: left; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--panel, #fff); color: inherit; padding: 0; cursor: pointer; font: inherit; }
+  .ch-img { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; }
+  .ch-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ch-type { position: absolute; left: 10px; top: 10px; font: 700 12px var(--sans); font-style: normal; background: var(--accent); color: #111; border-radius: 999px; padding: 4px 10px; }
+  .ch-body { display: grid; gap: 6px; padding: 14px 16px 16px; }
+  .ch-body b { font: 400 22px/1.15 var(--display); }
+  .ch-meta { font-size: 13px; color: var(--muted); }
+  .ch-meta em { font-style: normal; font-weight: 700; color: inherit; }
+  #chalRoot .stop-photo { margin: 12px 0; max-width: 100%; }
+  #chalRoot .stop-photo img { width: 100%; max-height: 260px; object-fit: cover; border-radius: 14px; }
+  .ch-cover img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 16px; }
+  .ch-fiction { border: 1px dashed currentColor; border-radius: 12px; padding: 10px 12px; font-size: 15px; }
+  .ch-how { border-left: 3px solid var(--accent); padding: 2px 12px; margin: 14px 0; }
+  .ch-how p { margin: 6px 0; }
+  .ch-dots { display: flex; gap: 6px; list-style: none; padding: 0; margin: 12px 0 0; }
+  .ch-dots li { width: 28px; height: 6px; border-radius: 3px; background: var(--line); }
+  .ch-dots li.done { background: var(--accent); }
+  .ch-dots li.now { background: var(--muted); }
+  .ch-place { font-size: 26px; margin: 8px 0; padding: 0; border: 0; }
+  .ch-step { font-weight: 600; }
+  .ch-gps { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 12px 0; }
+  .ch-gps .book, .ch-num .book { margin: 0; }
+  .ch-gps-msg, .ch-feedback { flex-basis: 100%; margin: 4px 0; font-weight: 600; }
+  .ch-gps-msg.warn, .ch-feedback.warn { color: #b3261e; }
+  .ch-gps-msg.ok, .ch-feedback.ok { color: #1b7f3b; }
+  .ch-q { border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 14px 0; }
+  .ch-prompt { font-size: 17px; font-weight: 600; margin: 0 0 10px; }
+  .ch-opts { display: grid; gap: 8px; }
+  .ch-opts .chip { text-align: left; border-radius: 12px; }
+  .ch-opts .chip:disabled { opacity: .45; text-decoration: line-through; }
+  .ch-num { display: flex; gap: 10px; align-items: center; }
+  .ch-num input { width: 90px; font: 600 20px var(--sans); padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; }
+  .ch-notebook { background: rgba(246,199,0,.12); border-radius: 14px; padding: 12px 14px; margin: 14px 0; }
+  .ch-notebook ol { margin: 6px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15px; }
+  .ch-audio { width: 100%; margin: 8px 0; }
+  .ch-src { font-size: 13px; color: var(--muted); }
+  .ch-board { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 8px; margin: 14px 0; }
+  .ch-cell { position: relative; display: grid; gap: 4px; padding: 0 0 8px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel, #fff); color: inherit; font: 600 12px/1.2 var(--sans); cursor: pointer; text-align: center; }
+  .ch-cell img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+  .ch-cell span { padding: 0 4px; }
+  .ch-cell.sel { outline: 3px solid var(--accent); }
+  .ch-cell.done img { opacity: .45; }
+  .ch-cell i { position: absolute; top: 6px; right: 6px; background: var(--accent); color: #111; border-radius: 50%; width: 26px; height: 26px; display: grid; place-items: center; font-style: normal; font-weight: 800; }
+  .ch-panel { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 6px; }
+  .ch-or { font-weight: 600; color: var(--muted); margin: 6px 0 0; }
+  .ch-done { text-align: center; padding: 20px 0; }
+  .ch-done .actions { justify-content: center; }
+  .ch-trophy { font-size: 64px; margin: 0; color: var(--accent); }
   /* Generator, Phase 2B: short lead under a question; "Personalise more" folded section */
   .hint.lead { margin: -10px 0 18px; font-size: 15px; max-width: 60ch; }
   .more { margin-top: 40px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -966,6 +1024,7 @@
     <button type="button" role="tab" id="tabGuide" aria-selected="false" data-i18n="tabGuide">Audio guide</button>
     <button type="button" role="tab" id="tabAct" aria-selected="false" data-i18n="tabAct">Activities</button>
     <button type="button" role="tab" id="tabTips" aria-selected="false">Tips</button>
+    <button type="button" role="tab" id="tabChal" class="tab-chal" aria-selected="false" data-i18n="tabChal">Challenges</button>
   </nav>
 
   <div id="walkView">
@@ -1195,6 +1254,9 @@
   </section>
 
   <!-- Local tips: written and checked by the team; visitors can suggest more -->
+  <!-- Challenges: games on foot, run by one engine (data/challenges.js) -->
+  <section id="chalView" hidden><div id="chalRoot"></div></section>
+
   <section id="tipsView" hidden>
     <h1 id="tipsTitle"></h1>
     <p class="lead" id="tipsLead"></p>
@@ -1256,9 +1318,10 @@
 <script src="data/stops.js?v=1061714f"></script>
 <script src="data/cards.js?v=3aa26f13"></script>
 <script src="data/activities.js?v=311590b9"></script>
-<script src="data/ui.js?v=07a0e5bb"></script>
+<script src="data/ui.js?v=592a793e"></script>
 <script src="data/tips.js?v=4dbc081d"></script>
 <script src="data/discoveries.js?v=c47d191e"></script>
+<script src="data/challenges.js?v=23e9978c"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=afdf06e4"></script>
 <script>
@@ -3353,7 +3416,7 @@ if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
 
 
 // ---- Tabs ----
-const TABS = { walk: 'tabWalk', guide: 'tabGuide', act: 'tabAct', tips: 'tabTips' };
+const TABS = { walk: 'tabWalk', guide: 'tabGuide', act: 'tabAct', tips: 'tabTips', chal: 'tabChal' };
 function showTab(name) {
   stopAudio();
   for (const [view, tab] of Object.entries(TABS)) {
@@ -3375,6 +3438,7 @@ document.getElementById('tabWalk').onclick = () => showTab('walk');
 document.getElementById('tabGuide').onclick = () => { showTab('guide'); track('Audio guide opened'); };
 document.getElementById('tabAct').onclick = () => { showTab('act'); track('Activities opened'); };
 document.getElementById('tabTips').onclick = () => { showTab('tips'); track('Tips opened'); };
+document.getElementById('tabChal').onclick = () => { showTab('chal'); renderCh(); track('Challenges opened'); };
 
 // ---- Local tips (data/tips.js) ----
 const TIPS = window.WALKBCN_TIPS;
@@ -3924,6 +3988,211 @@ function refreshGuideTexts() {
   if (guideStop && !document.getElementById('guideView').hidden) openGuideStop(guideStop, false);
 }
 
+
+// ---- Challenges (Phase 3A) ----
+// One engine for five games (data/challenges.js). Each challenge is a list of missions at real
+// stops; what differs is how a mission is reached and solved:
+//   hunt     clues lead to an unnamed place → location check → question → next target
+//   mystery  a labelled fiction frame; each stop gives a real clue for the notebook; the last
+//            question solves the mystery
+//   observe  the answer is in front of you (choice, true/false, counting); location optional
+//   bingo    3 × 3 board in any order; a square is marked by location or by its question; a line ends it
+//   story    go there, listen to or read the stop's existing story, answer about it
+// Location is asked only on "Check location", once (no tracking, nothing stored). If it fails,
+// is imprecise or is refused, the player continues by answering on the spot. DEMO mode uses the
+// same engine with simulated location checks, is labelled on every screen and keeps its progress
+// in memory only, never in the saved progress.
+const CHALLENGES = window.WALKBCN_CHALLENGES || [];
+CHALLENGES.forEach(c => { if (c.credit && !PHOTOS[c.img]) PHOTOS[c.img] = c.credit; });
+const CH_KEY = 'walkbcn_challenges_v1';
+const chL = o => (o && typeof o === 'object' ? o[lang] || o.en : o);
+let chSaved = (() => { try { return JSON.parse(localStorage.getItem(CH_KEY)) || {}; } catch (e) { return {}; } })();
+let chDemo = false, chDemoState = {}, chView = { id: null };
+const chStore = () => (chDemo ? chDemoState : chSaved);
+const chSave = () => { if (!chDemo) try { localStorage.setItem(CH_KEY, JSON.stringify(chSaved)); } catch (e) {} };
+const chById = id => CHALLENGES.find(c => c.id === id);
+const chState = c => (chStore()[c.id] ||= { i: 0, stage: 'start', clues: 1, done: {}, notes: [], finished: false });
+const chDoneN = (c, st) => Object.keys(st.done).length;
+function chLines(st, n = 3) {
+  const has = k => st.done[k] != null, L = [];
+  for (let r = 0; r < n; r++) L.push([...Array(n)].map((_, k) => r * n + k));
+  for (let k = 0; k < n; k++) L.push([...Array(n)].map((_, r) => r * n + k));
+  L.push([...Array(n)].map((_, k) => k * n + k), [...Array(n)].map((_, k) => k * n + n - 1 - k));
+  return L.filter(l => l.every(has));
+}
+// One location check when asked. ok if within the mission radius, allowing for part of the
+// device's reported accuracy; a reading worse than 100 m counts as imprecise, not as "far".
+const CH_GPS_SLACK = 50, CH_GPS_POOR = 100;
+function chLocate(stop, r) {
+  if (chDemo) return Promise.resolve({ ok: true, demo: true });
+  if (!navigator.geolocation) return Promise.resolve({ ok: false, why: 'error' });
+  return new Promise(res => navigator.geolocation.getCurrentPosition(p => {
+    const d = dist({ lat: p.coords.latitude, lng: p.coords.longitude }, stop) * 1000, acc = p.coords.accuracy || 0;
+    if (d <= r + Math.min(acc, CH_GPS_SLACK)) res({ ok: true });
+    else if (acc > CH_GPS_POOR) res({ ok: false, why: 'imprecise', acc: Math.round(acc) });
+    else res({ ok: false, why: 'far', m: Math.round((d - r) / 10) * 10 });
+  }, e => res({ ok: false, why: e.code === 1 ? 'denied' : 'error' }), { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }));   // a fresh reading for each check
+}
+const chRoot = () => document.getElementById('chalRoot');
+const chDemoBar = () => (chDemo ? `<p class="ch-demo" role="status">${t('chDemoBanner')}</p>` : '');
+function renderCh() {
+  if (!chView.id) return renderChHome();
+  const c = chById(chView.id), st = chState(c);
+  if (st.stage === 'start') return renderChIntro(c, st);
+  if (st.finished) return renderChDone(c, st);
+  return c.type === 'bingo' ? renderChBingo(c, st) : renderChMission(c, st);
+}
+function renderChHome() {
+  chRoot().innerHTML = `<h1 class="ch-h1">${t('chTitle')}</h1><p class="lead">${t('chIntro')}</p>
+    <label class="check ch-demo-toggle"><input type="checkbox" id="chDemoOn" ${chDemo ? 'checked' : ''}> <span>${t('chDemoLabel')}</span></label>
+    <p class="hint">${t('chDemoHint')}</p>${chDemoBar()}
+    <div class="ch-cards">${CHALLENGES.map(c => {
+      const st = chStore()[c.id], n = c.missions.length, d = st ? chDoneN(c, st) : 0;
+      const badge = st?.finished ? t('chCompleted') : st && st.stage !== 'start' ? t('chProgress', { d, n }) : '';
+      return `<button type="button" class="ch-card" data-ch="${c.id}">
+        <span class="ch-img"><img src="${photo(c.img, 500)}" alt="" loading="lazy"><i class="ch-type">${t(`chType_${c.type}`)}</i></span>
+        <span class="ch-body"><b>${escHtml(chL(c.title))}</b><span>${escHtml(chL(c.desc))}</span>
+        <span class="ch-meta">${t('chMinutes', { m: c.minutes })} · ${t(c.type === 'bingo' ? 'chSquares' : 'chMissions', { n })}${badge ? ` · <em>${badge}</em>` : ''}</span></span></button>`;
+    }).join('')}</div>`;
+  document.getElementById('chDemoOn').onchange = e => { chDemo = e.target.checked; chDemoState = {}; renderChHome(); };
+  chRoot().querySelectorAll('[data-ch]').forEach(b => b.onclick = () => { chView.id = b.dataset.ch; renderCh(); window.scrollTo(0, 0); });
+}
+const chTop = (c, st) => `<button type="button" class="ghost ch-back" data-chact="home">← ${t('chBack')}</button>${chDemoBar()}
+  <p class="ch-kicker">${t(`chType_${c.type}`)}</p><h1 class="ch-h1">${escHtml(chL(c.title))}</h1>`;
+function renderChIntro(c, st) {
+  const fresh = !chDoneN(c, st);
+  chRoot().innerHTML = `${chTop(c, st)}
+    <figure class="stop-photo ch-cover"><img src="${photo(c.img, 960)}" alt="">${creditHtml(c.img)}</figure>
+    <p class="lead">${escHtml(chL(c.intro))}</p>
+    ${c.frame ? `<p class="ch-fiction">${escHtml(chL(c.frame))}</p>` : ''}
+    <div class="ch-how"><b>${t('chHowTitle')}</b><p>${t(`chHow_${c.type}`)}</p><p class="hint">${t('chSafety')}</p></div>
+    <p class="ch-meta">${t('chMinutes', { m: c.minutes })} · ${t(c.type === 'bingo' ? 'chSquares' : 'chMissions', { n: c.missions.length })}</p>
+    <div class="actions"><button type="button" class="book go" data-chact="go">${t(fresh ? 'chStart' : 'chContinue')}</button>
+    ${fresh ? '' : `<button type="button" class="ghost" data-chact="reset">${t('chRestart')}</button>`}</div>`;
+  chWire(c, st);
+}
+// Question block, shared by every game: choice, true/false or a number to count on the spot.
+function chQuestion(q, key) {
+  const opts = q.kind === 'truefalse' ? [t('chTrue'), t('chFalse')] : (q.options || []).map(chL);
+  return `<div class="ch-q" data-q="${key}"><p class="ch-prompt">${escHtml(chL(q.prompt))}</p>
+    ${q.kind === 'number' ? `<div class="ch-num"><input type="number" inputmode="numeric" min="0" max="99" id="chNum" aria-label="${t('chAnswerLabel')}"><button type="button" class="book go" data-chans="num">${t('chCheckAnswer')}</button></div>`
+      : `<div class="ch-opts">${opts.map((o, k) => `<button type="button" class="chip" data-chans="${k}">${escHtml(o)}</button>`).join('')}</div>`}
+    <p class="ch-feedback" role="status"></p></div>`;
+}
+const chRight = (q, v) => (q.kind === 'number' ? +v === q.answer : q.kind === 'truefalse' ? (v === '0') === q.answer : +v === q.answer);
+function chMissionDots(c, st) {
+  return `<ol class="ch-dots" aria-label="${t('chProgress', { d: chDoneN(c, st), n: c.missions.length })}">${c.missions.map((_, k) => `<li class="${st.done[k] != null ? 'done' : k === st.i ? 'now' : ''}"></li>`).join('')}</ol>`;
+}
+function chGpsBlock(m, s, optional) {
+  return `<div class="ch-gps"><button type="button" class="book go" data-chact="locate">${t(chDemo ? 'chCheckDemo' : 'chCheck')}</button>
+    <a class="ghost" href="${directionsUrl(s)}" target="_blank" rel="noopener">${t('pauseGo')}</a>
+    ${optional ? `<p class="hint">${t('chGpsOptional')}</p>` : ''}<p class="ch-gps-msg" role="status"></p></div>`;
+}
+function renderChMission(c, st) {
+  const m = c.missions[st.i], s = stopById(m.stop), last = st.i === c.missions.length - 1;
+  const named = c.type !== 'hunt' || st.stage !== 'find';
+  let body = '';
+  if (st.stage === 'find' || st.stage === 'arrive') {
+    if (c.type === 'hunt' && st.stage === 'find') {
+      body = `<p class="ch-step">${t('chFindTitle')}</p><ol class="clues">${m.clues.slice(0, st.clues).map(x => `<li>${escHtml(chL(x))}</li>`).join('')}</ol>
+        <div class="actions">${st.clues < m.clues.length ? `<button type="button" class="ghost" data-chact="clue">${t('surpriseClue', { n: st.clues + 1 })}</button>` : ''}
+        <button type="button" class="book go" data-chact="locate">${t(chDemo ? 'chCheckDemo' : 'chFoundIt')}</button></div><p class="ch-gps-msg" role="status"></p>`;
+    } else body = `<p class="ch-step">${t('chGoTo', { place: escHtml(s.name) })}</p>${chGpsBlock(m, s, false)}`;
+  } else if (st.stage === 'story') {
+    const v = storyText(s, m.variant || null, 'normal');
+    body = `${v.audio ? `<audio controls preload="none" src="${v.audio}" class="ch-audio"></audio>` : ''}<p class="story">${v.text}</p>
+      <div class="actions"><button type="button" class="book go" data-chact="toq">${t('chToQuestion')}</button></div>`;
+  } else if (st.stage === 'question') {
+    body = `${c.type === 'observe' && st.done[st.i] == null && !st.seen?.[st.i] ? chGpsBlock(m, s, true) : ''}${chQuestion(m.q, st.i)}`;
+  }
+  const notebook = c.type === 'mystery' && st.notes.length ? `<div class="ch-notebook"><b>${t('chNotebook')}</b><ol>${st.notes.map(k => `<li>${escHtml(chL(c.missions[k].piece))}</li>`).join('')}</ol></div>` : '';
+  chRoot().innerHTML = `${chTop(c, st)}${chMissionDots(c, st)}
+    <p class="ch-kicker">${t('chMissionN', { n: st.i + 1, total: c.missions.length })}${last && c.type === 'mystery' ? ` · ${t('chFinalQ')}` : ''}</p>
+    ${named ? `<figure class="stop-photo"><img src="${photo(s.img, 960)}" alt="">${creditHtml(s.img)}</figure><h2 class="ch-place">${escHtml(s.name)}</h2>` : ''}
+    ${body}${notebook}
+    <p class="ch-src">${t('chSources')} ${m.sources.map((u, k) => `<a href="${u}" target="_blank" rel="noopener">${k + 1}</a>`).join(' · ')}</p>
+    <div class="actions"><button type="button" class="ghost" data-chact="home">${t('chLeave')}</button></div>`;
+  chWire(c, st);
+}
+function renderChBingo(c, st) {
+  const n = c.cols || 3, sel = st.sel, lines = chLines(st, n);
+  const cell = (m, k) => { const s = stopById(m.stop); return `<button type="button" class="ch-cell ${st.done[k] != null ? 'done' : ''} ${sel === k ? 'sel' : ''}" data-cell="${k}" aria-pressed="${st.done[k] != null}">
+    <img src="${photo(s.img, 160)}" alt="" loading="lazy"><span>${escHtml(s.name)}</span>${st.done[k] != null ? '<i aria-hidden="true">✓</i>' : ''}</button>`; };
+  let panel = '';
+  if (sel != null && st.done[sel] == null) {
+    const m = c.missions[sel], s = stopById(m.stop);
+    panel = `<div class="ch-panel"><h2 class="ch-place">${escHtml(s.name)}</h2>${chGpsBlock(m, s, false)}<p class="ch-or">${t('chOrAnswer')}</p>${chQuestion(m.q, sel)}
+      <p class="ch-src">${t('chSources')} ${m.sources.map((u, k) => `<a href="${u}" target="_blank" rel="noopener">${k + 1}</a>`).join(' · ')}</p></div>`;
+  }
+  chRoot().innerHTML = `${chTop(c, st)}<p class="hint">${t('chBingoHint')}</p>
+    <div class="ch-board" style="--n:${n}">${c.missions.map(cell).join('')}</div>
+    <p class="ch-kicker">${t('chProgress', { d: chDoneN(c, st), n: c.missions.length })}${lines.length ? ` · ${t('chBingoLines', { n: lines.length })}` : ''}</p>
+    ${lines.length ? `<div class="actions"><button type="button" class="book go" data-chact="finish">${t('chBingoFinish')}</button><span class="hint">${t('chBingoKeep')}</span></div>` : ''}
+    ${panel}<div class="actions"><button type="button" class="ghost" data-chact="home">${t('chLeave')}</button></div>`;
+  chWire(c, st);
+}
+function renderChDone(c, st) {
+  const vals = Object.values(st.done), gps = vals.filter(v => v === 'gps').length;
+  chRoot().innerHTML = `${chTop(c, st)}<div class="ch-done"><p class="ch-trophy" aria-hidden="true">★</p><h2>${t('chCompletedTitle')}</h2>
+    <p class="lead">${escHtml(chL(c.finale))}</p>
+    <p class="hint">${chDemo ? t('chStatsDemo') : t('chStats', { g: gps, n: vals.length })}</p>
+    <div class="actions"><button type="button" class="book go" data-chact="home">${t('chAll')}</button><button type="button" class="ghost" data-chact="reset">${t('chPlayAgain')}</button></div></div>`;
+  chWire(c, st);
+}
+// Next step after a mission is validated (by location, on-the-spot answer or demo).
+function chAdvance(c, st) {
+  if (c.type === 'mystery' && !st.notes.includes(st.i)) st.notes.push(st.i);
+  if (st.i >= c.missions.length - 1) { st.finished = true; track('Challenge completed', { ch: c.id, demo: chDemo ? 1 : 0 }); }
+  else { st.i++; st.clues = 1; st.stage = c.type === 'observe' ? 'question' : 'find'; if (c.type !== 'hunt' && c.type !== 'observe') st.stage = 'arrive'; }
+}
+function chWire(c, st) {
+  const root = chRoot();
+  const msg = (txt, ok) => { const el = root.querySelector('.ch-gps-msg'); if (el) { el.textContent = txt; el.className = `ch-gps-msg ${ok ? 'ok' : 'warn'}`; } };
+  root.querySelectorAll('[data-chact]').forEach(b => b.onclick = async () => {
+    const a = b.dataset.chact;
+    if (a === 'home') { chView.id = null; renderCh(); window.scrollTo(0, 0); return; }
+    if (a === 'reset') { delete chStore()[c.id]; chSave(); renderCh(); return; }
+    if (a === 'go') { if (st.stage === 'start') { st.stage = c.type === 'bingo' ? 'board' : c.type === 'observe' ? 'question' : c.type === 'hunt' ? 'find' : 'arrive'; track('Challenge started', { ch: c.id, demo: chDemo ? 1 : 0 }); } chSave(); renderCh(); window.scrollTo(0, 0); return; }
+    if (a === 'clue') { st.clues++; chSave(); renderCh(); return; }
+    if (a === 'toq') { st.stage = 'question'; chSave(); renderCh(); return; }
+    if (a === 'finish') { st.finished = true; chSave(); track('Challenge completed', { ch: c.id, demo: chDemo ? 1 : 0 }); renderCh(); window.scrollTo(0, 0); return; }
+    if (a === 'nogps') {   // fallback: continue by answering on the spot
+      if (c.type === 'bingo') return;
+      st.via = 'obs'; st.stage = c.type === 'story' ? 'story' : 'question'; chSave(); renderCh(); return;
+    }
+    if (a === 'locate') {
+      const k = c.type === 'bingo' ? st.sel : st.i, m = c.missions[k];
+      b.disabled = true; msg(t('chChecking'), true);
+      const r = await chLocate(stopById(m.stop), m.r || 70);
+      b.disabled = false;
+      if (r.ok) {
+        const how = r.demo ? 'demo' : 'gps';
+        if (c.type === 'bingo') { st.done[k] = how; st.sel = null; chSave(); renderCh(); return; }
+        if (c.type === 'observe') { (st.seen ||= {})[k] = how; msg(t(r.demo ? 'chGpsDemo' : 'chGpsOk'), true); chSave(); b.closest('.ch-gps')?.querySelector('a')?.remove(); b.remove(); return; }
+        st.via = how; st.stage = c.type === 'story' ? 'story' : 'question'; chSave(); renderCh(); return;
+      }
+      const txt = r.why === 'far' ? t('chGpsFar', { m: r.m }) : r.why === 'imprecise' ? t('chGpsImprecise', { m: r.acc }) : r.why === 'denied' ? t('chGpsDenied') : t('chGpsError');
+      msg(txt, false);
+      const box = b.closest('.ch-gps') || b.parentElement;
+      if (c.type !== 'bingo' && c.type !== 'observe' && !box.querySelector('[data-chact="nogps"]')) {
+        const alt = document.createElement('button'); alt.type = 'button'; alt.className = 'ghost'; alt.dataset.chact = 'nogps'; alt.textContent = t('chNoGps');
+        box.appendChild(alt); alt.onclick = () => { st.via = 'obs'; st.stage = c.type === 'story' ? 'story' : 'question'; chSave(); renderCh(); };
+      }
+    }
+  });
+  root.querySelectorAll('[data-cell]').forEach(b => b.onclick = () => { const k = +b.dataset.cell; st.sel = st.done[k] != null ? null : k; chSave(); renderCh(); });
+  root.querySelectorAll('[data-chans]').forEach(b => b.onclick = () => {
+    const box = b.closest('.ch-q'), k = +box.dataset.q, m = c.missions[k];
+    const v = b.dataset.chans === 'num' ? root.querySelector('#chNum').value : b.dataset.chans;
+    const fb = box.querySelector('.ch-feedback');
+    if (!chRight(m.q, v)) { fb.textContent = t('chWrong'); fb.className = 'ch-feedback warn'; if (b.classList.contains('chip')) b.disabled = true; return; }
+    fb.textContent = t('chRight'); fb.className = 'ch-feedback ok';
+    if (c.type === 'bingo') { st.done[k] = 'obs'; st.sel = null; chSave(); setTimeout(renderCh, 500); return; }
+    st.done[k] = c.type === 'observe' ? (st.seen?.[k] || 'obs') : (st.via || 'obs'); st.via = null;
+    chAdvance(c, st); chSave(); setTimeout(() => { renderCh(); window.scrollTo(0, 0); }, 600);
+  });
+}
+
 // ---- Your data & privacy ----
 const privacy = document.getElementById('privacy');
 function renderPrivacy() {
@@ -3994,6 +4263,7 @@ function applyLang() {
   if (typeof renderOfflineBtn === 'function' && document.getElementById('saveOffline')) { try { renderOfflineBtn(); renderOnline(); } catch (e) {} }
   if (lastRoute && !document.getElementById('route').hidden) { renderRouteTexts(); renderStopList(); refreshStoryCard(); }
   refreshGuideTexts();
+  if (!document.getElementById('chalView').hidden) renderCh();
   if (privacy.open) renderPrivacy();
   renderResume();
   updateCreateBar();

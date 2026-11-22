@@ -56,9 +56,9 @@ async function test(id, name, fn, limit = TEST_LIMIT) {
     ok = r === true || r?.ok === true;
     detail = r === true ? "" : JSON.stringify(r?.detail ?? r);
     if (errors.length) { ok = false; detail += ` page errors: ${errors.join(" | ")}`; }
-  } catch (e) { detail = e.message; }
+  } catch (e) { detail = e.message + (errors.length ? ` | page errors: ${errors.join(' | ')}` : ''); }
   results.push({ id, name, ok, detail });
-  console.log(`${ok ? "PASS" : "FAIL"}  ${id}  ${name}${detail ? `\n      ${detail.slice(0, 400)}` : ""}`);
+  console.log(`${ok ? "PASS" : "FAIL"}  ${id}  ${name}${detail ? `\n      ${detail.slice(0, +process.env.DETAIL_MAX || 400)}` : ""}`);
   await withLimit(ctx.close(), 5000, "close").catch(() => {});
 }
 async function open(page, hash = "", langCode = "en") {
@@ -601,6 +601,124 @@ await test("P2C2-langs", "Clues and the new panel texts show in all 7 languages"
     return out;
   });
   return { ok: Object.values(r).every((x) => x.choices && x.intro), detail: r };
+});
+
+// ---------------------------------------------------------------- Phase 3A: Challenges
+const CH_PLAY = `window.__play = async (id) => {
+  const w = (ms) => new Promise((r) => setTimeout(r, ms)), root = document.getElementById('chalRoot'), q = (sel) => root.querySelector(sel);
+  const ev = { id, screens: 0 };
+  chView.id = id; renderCh();
+  const c = chById(id);
+  ev.fiction = !!q('.ch-fiction'); ev.demoBar = !!q('.ch-demo');
+  q('[data-chact="go"]').click(); await w(30);
+  for (let n = 0; n < 80; n++) {
+    if (q('.ch-done')) break;
+    ev.screens++;
+    const st = chState(c);
+    if (!q('.ch-demo')) ev.demoBarMissing = true;
+    if (c.type === 'bingo') {
+      ev.board = root.querySelectorAll('.ch-cell').length;
+      if (chLines(st).length) { q('[data-chact="finish"]').click(); await w(30); continue; }
+      const k = [0, 1, 2].find((k) => st.done[k] == null);
+      root.querySelectorAll('.ch-cell')[k].click(); await w(30);
+      if (k === 0) { q('[data-chact="locate"]').click(); await w(60); continue; }
+      const m = c.missions[k]; root.querySelector('[data-chans="' + m.q.answer + '"]').click(); await w(650); continue;
+    }
+    if (st.stage === 'find') { ev.nameHiddenWhileSearching = !q('.ch-place'); ev.clues1 = root.querySelectorAll('.clues li').length; if (q('[data-chact="clue"]')) { q('[data-chact="clue"]').click(); await w(20); ev.clues2 = root.querySelectorAll('.clues li').length; } }
+    const loc = (st.stage === 'find' || st.stage === 'arrive') && q('[data-chact="locate"]');
+    if (loc) { loc.click(); await w(60); continue; }
+    if (q('[data-chact="toq"]')) { ev.story = (q('.story')?.textContent || '').length; ev.audio = !!q('audio'); q('[data-chact="toq"]').click(); await w(30); continue; }
+    if (c.type === 'observe' && q('.ch-gps')) ev.optionalGps = /Optional/.test(q('.ch-gps').textContent);
+    const m = c.missions[st.i];
+    // a wrong answer first: it must not advance
+    if (m.q.kind === 'choice') { const wrong = (m.q.answer + 1) % m.q.options.length; root.querySelector('[data-chans="' + wrong + '"]').click(); await w(30); ev.wrongStays = chState(c).i === st.i && /Not quite/.test(q('.ch-feedback').textContent); }
+    if (m.q.kind === 'number') { q('#chNum').value = String(m.q.answer); q('[data-chans="num"]').click(); }
+    else if (m.q.kind === 'truefalse') root.querySelector('[data-chans="' + (m.q.answer ? 0 : 1) + '"]').click();
+    else root.querySelector('[data-chans="' + m.q.answer + '"]').click();
+    await w(700);
+    if (c.type === 'mystery') ev.notebook = chState(c).notes.length;
+  }
+  ev.done = !!q('.ch-done'); ev.statsDemo = /simulated/.test(q('.ch-done')?.textContent || '');
+  return ev;
+};`;
+await test("P3A-demo", "Challenges: the 5 games play to the end in DEMO, each with its own mechanic, and DEMO saves nothing", async (page) => {
+  await open(page);
+  await page.evaluate(CH_PLAY);
+  const r = await page.evaluate(async () => {
+    showTab('chal'); renderCh();
+    const before = localStorage.getItem('walkbcn_challenges_v1');
+    const cards = document.querySelectorAll('#chalRoot .ch-card').length;
+    document.getElementById('chDemoOn').click();
+    const out = { cards, games: {} };
+    for (const c of CHALLENGES) out.games[c.type] = await __play(c.id);
+    out.savedUntouched = localStorage.getItem('walkbcn_challenges_v1') === before;
+    chView.id = null; renderCh(); document.getElementById('chDemoOn').click();
+    out.realShowsNothing = !document.querySelector('#chalRoot .ch-card em');
+    return out;
+  });
+  const g = r.games;
+  const ok = r.cards === 5 && Object.values(g).every((x) => x.done && x.statsDemo && !x.demoBarMissing && x.demoBar) &&
+    g.hunt.nameHiddenWhileSearching && g.hunt.clues1 === 1 && g.hunt.clues2 === 2 && g.hunt.wrongStays &&
+    g.mystery.fiction && g.mystery.notebook === 4 && g.observe.optionalGps && g.bingo.board === 9 && g.story.story > 200 && g.story.audio &&
+    r.savedUntouched && r.realShowsNothing;
+  return { ok, detail: r };
+}, 60000);
+await test("P3A-gps", "Challenges GPS: valid, far, imprecise and refused locations; progress survives a reload and stores no positions", async (page, ctx) => {
+  const stop = { lat: 41.3916, lng: 2.165 };   // Casa Batlló
+  const ctxG = await browser.newContext({ serviceWorkers: "block", locale: "en-GB", permissions: ["geolocation"], geolocation: { latitude: stop.lat + 0.0002, longitude: stop.lng, accuracy: 15 } });
+  const p = await ctxG.newPage();
+  const res = {};
+  try {
+    await p.addInitScript(() => { try { if (!localStorage.getItem("walkbcn_lang")) localStorage.setItem("walkbcn_lang", "en"); } catch (e) {} });
+    await p.goto(`${BASE}/?src=test`); await p.waitForFunction(() => typeof renderCh === "function");
+    const step = (fn) => p.evaluate(fn);
+    res.start = await step(() => { showTab('chal'); chView.id = 'modernisme-hunt'; renderCh(); const go = document.querySelector('[data-chact="go"]'); go?.click(); return { go: !!go, stage: chState(chById('modernisme-hunt')).stage, locate: !!document.querySelector('[data-chact="locate"]'), html: document.getElementById('chalRoot').innerText.slice(0, 120) }; });
+    if (!res.start.locate) return { ok: false, detail: res.start };
+    // far
+    await ctxG.setGeolocation({ latitude: stop.lat + 0.01, longitude: stop.lng, accuracy: 15 });
+    await step(() => { document.querySelector('.ch-gps-msg').textContent = ''; document.querySelector('[data-chact="locate"]').click(); }); await p.waitForFunction(() => !/Checking|^$/.test(document.querySelector('.ch-gps-msg')?.textContent ?? 'x') || chState(chById('modernisme-hunt')).stage !== 'find', null, { timeout: 8000 });
+    res.far = await step(() => ({ msg: document.querySelector('.ch-gps-msg').textContent, alt: !!document.querySelector('[data-chact="nogps"]'), stage: chState(chById('modernisme-hunt')).stage }));
+    // imprecise
+    await ctxG.setGeolocation({ latitude: stop.lat + 0.004, longitude: stop.lng, accuracy: 600 });
+    await step(() => { document.querySelector('.ch-gps-msg').textContent = ''; document.querySelector('[data-chact="locate"]').click(); }); await p.waitForFunction(() => !/Checking|^$/.test(document.querySelector('.ch-gps-msg')?.textContent ?? 'x') || chState(chById('modernisme-hunt')).stage !== 'find', null, { timeout: 8000 });
+    res.imprecise = await step(() => document.querySelector('.ch-gps-msg').textContent);
+    // valid
+    await ctxG.setGeolocation({ latitude: stop.lat + 0.0003, longitude: stop.lng, accuracy: 20 });
+    await step(() => { document.querySelector('.ch-gps-msg').textContent = ''; document.querySelector('[data-chact="locate"]').click(); }); await p.waitForFunction(() => !/Checking|^$/.test(document.querySelector('.ch-gps-msg')?.textContent ?? 'x') || chState(chById('modernisme-hunt')).stage !== 'find', null, { timeout: 8000 });
+    res.valid = await step(() => ({ stage: chState(chById('modernisme-hunt')).stage, name: document.querySelector('.ch-place')?.textContent }));
+    await step(() => document.querySelector('[data-chans="0"]').click()); await p.waitForTimeout(800);
+    res.after = await step(() => ({ i: chState(chById('modernisme-hunt')).i, how: chState(chById('modernisme-hunt')).done[0], saved: localStorage.getItem('walkbcn_challenges_v1') }));
+    await p.reload(); await p.waitForFunction(() => typeof renderCh === "function");
+    res.reload = await step(() => { showTab('chal'); renderCh(); const badge = document.querySelector('[data-ch="modernisme-hunt"] em')?.textContent; chView.id = 'modernisme-hunt'; renderCh(); return { badge, mission: /Mission 2 of 4/.test(document.getElementById('chalRoot').textContent), i: chState(chById('modernisme-hunt')).i }; });
+  } catch (e) { return { ok: false, detail: { at: 'granted part', error: e.message.slice(0, 200), res } }; } finally { await ctxG.close().catch(() => {}); }
+  // refused: a context without the permission
+  await open(page);
+  res.denied = await page.evaluate(async () => { showTab('chal'); chView.id = 'barcino-mystery'; renderCh(); document.querySelector('[data-chact="go"]').click(); document.querySelector('[data-chact="locate"]').click();
+    await new Promise((r) => setTimeout(r, 1500)); const msg = document.querySelector('.ch-gps-msg').textContent; const alt = document.querySelector('[data-chact="nogps"]'); alt?.click();
+    return { msg, alt: !!alt, stage: chState(chById('barcino-mystery')).stage }; });
+  const ok = /about \d+ m away/.test(res.far.msg) && res.far.alt && res.far.stage === 'find' && /imprecise/.test(res.imprecise) &&
+    res.valid.stage === 'question' && res.valid.name === 'Casa Batlló' && res.after.i === 1 && res.after.how === 'gps' && !/lat|lng|latitude/.test(res.after.saved) &&
+    /1 of 4/.test(res.reload.badge || '') && res.reload.mission && res.reload.i === 1 &&
+    /isn't allowed|couldn't be checked/.test(res.denied.msg) && res.denied.alt && res.denied.stage === 'question';
+  return { ok, detail: res };
+}, 60000);
+await test("P3A-langs", "Challenges show in all 7 languages, and fit a 375 px screen", async (page) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await open(page);
+  const r = await page.evaluate(async () => {
+    const out = {};
+    for (const l of ["en", "ca", "es", "fr", "de", "it", "zh"]) {
+      await setLang(l); showTab('chal'); chView.id = null; renderCh();
+      const title = document.querySelector('#chalRoot .ch-card b').textContent, tab = document.getElementById('tabChal').textContent;
+      chView.id = 'born-observe'; chDemo = true; chDemoState = {}; renderCh(); document.querySelector('[data-chact="go"]').click();
+      const prompt = document.querySelector('.ch-prompt').textContent;
+      out[l] = { ok: title === CHALLENGES[0].title[l] && prompt === CHALLENGES[2].missions[0].q.prompt[l] && !/^ch[A-Z]/.test(tab), wide: document.documentElement.scrollWidth > document.documentElement.clientWidth };
+      chDemo = false; chDemoState = {}; chView.id = null;
+    }
+    await setLang('en');
+    return out;
+  });
+  return { ok: Object.values(r).every((x) => x.ok && !x.wide), detail: r };
 });
 
 clearTimeout(watchdog);
