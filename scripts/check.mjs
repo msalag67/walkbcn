@@ -15,7 +15,7 @@ import crypto from 'node:crypto';
 const root = new URL('..', import.meta.url).pathname;
 const ctx = { window: {} };
 vm.createContext(ctx);
-for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'content/stories.js']) {
+for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'data/discoveries.js', 'content/stories.js']) {
   vm.runInContext(fs.readFileSync(root + f, 'utf8'), ctx, { filename: f });
 }
 for (const l of ['ca', 'es', 'en', 'fr', 'de', 'it', 'zh']) {
@@ -66,6 +66,17 @@ for (const [id, list] of Object.entries(W.WALKBCN_NOTICES || {})) {
 
 // Editorial list for the discovery styles: only known stops
 for (const id of W.WALKBCN_EDITORIAL?.known || []) if (!ids.has(id)) fail(`editorial: unknown stop ${id} in "known"`);
+
+// "Surprise me" clue catalogue: existing stop with a sourced card, not residential or limited
+// access, an intro and exactly 3 clues in every language.
+for (const e of W.WALKBCN_DISCOVERIES || []) {
+  const card = W.WALKBCN_CARDS?.[e.stop];
+  if (!ids.has(e.stop)) fail(`discovery: unknown stop ${e.stop}`);
+  else if (!(card?.sources || []).length) fail(`discovery ${e.stop}: its card needs dated sources`);
+  if ((card?.sensitive || []).some(k => k === 'residential' || k === 'limited')) fail(`discovery ${e.stop}: residential or limited-access stops are not used`);
+  if ((e.clues || []).length !== 3) fail(`discovery ${e.stop}: needs exactly 3 clues`);
+  for (const [i, x] of [e.intro, ...(e.clues || [])].entries()) for (const l of langs) if (!x?.[l]) fail(`discovery ${e.stop}: ${i ? `clue ${i}` : 'intro'} missing in ${l}`);
+}
 
 // Practical cards and photo credits
 const CARDS = W.WALKBCN_CARDS || {}, PHOTOS = W.WALKBCN_PHOTOS || {};

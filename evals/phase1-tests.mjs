@@ -502,6 +502,107 @@ await test("P2C-none", "Adapt my walk: when nothing fits, it says so and the rou
   return { ok: /No stops/.test(r.msg) && !r.apply && r.same, detail: r };
 });
 
+// ---------------------------------------------------------------- Phase 2C.2: break & surprise
+await test("P2C2-pause", "I want a break: up to 3 close places per kind with directions, and the walk doesn't change", async (page) => {
+  await open(page);
+  await page.evaluate(SNAP);
+  const r = await page.evaluate(async () => {
+    Object.assign(plan, { mode: "stops", start: "best", end: "any", zone: "any", must: [], theme: null, style: "mix" }); selected = new Set(["history"]); stopsCount = 5; showRoute();
+    history.replaceState({ r: 1 }, "", "#ruta"); walk.visited[route[0].id] = true; goTo(1); await __wait(100);
+    const s0 = __snap(), res = {};
+    __click("#adaptRoute");
+    res.options = document.querySelectorAll("#adaptBody .adapt-choices button").length;
+    __click('#adaptBody [data-a="pause"]');
+    for (const k of ["coffee", "eat", "rest"]) {
+      __click(`#pauseKinds [data-k="${k}"]`);
+      const items = [...document.querySelectorAll(".pause-list li")];
+      res[k] = { n: items.length, names: items.map((li) => li.querySelector("b").textContent), allDirections: items.every((li) => /google\.com\/maps\/dir/.test(li.querySelector("a")?.href || "")),
+        allDesc: items.every((li) => li.querySelector("span").textContent.length > 10), mins: items.map((li) => +(/(\d+) min/.exec(li.textContent) || [])[1]),
+        approx: items.every((li) => /straight-line/.test(li.textContent)), note: /opening hours/.test(document.getElementById("adaptBody").textContent),
+        noneMsg: /Nothing of this kind/.test(document.getElementById("adaptBody").textContent) };
+    }
+    __click('#adaptBody [data-a="keep"]'); await __wait(150);
+    res.same = __snap() === s0;
+    // near the Ciutadella park there are places to rest
+    Object.assign(plan, { start: "map", startPt: { lat: 41.3880, lng: 2.1835 } }); selected = new Set(["history"]); stopsCount = 4; showRoute(); walk.visited[route[0].id] = true; goTo(1); await __wait(100);
+    __click("#adaptRoute"); __click('#adaptBody [data-a="pause"]'); __click('#pauseKinds [data-k="rest"]');
+    res.restNearPark = [...document.querySelectorAll(".pause-list li b")].map((b) => b.textContent);
+    __click('#adaptBody [data-a="keep"]'); await __wait(150);
+    return res;
+  });
+  const kinds = ["coffee", "eat", "rest"].map((k) => r[k]);
+  const fine = (k) => (k.n >= 1 && k.n <= 3 && k.allDirections && k.allDesc && k.approx && k.note && k.mins.every((m) => m <= 15)) || (k.n === 0 && k.noneMsg);
+  const ok = r.options === 4 && r.same && kinds.every(fine) && r.coffee.n >= 1 && r.eat.n >= 1 && r.restNearPark.length >= 1;
+  return { ok, detail: r };
+});
+await test("P2C2-surprise", "Surprise me: catalogue stop not on the walk, 3 progressive clues, reveal; ignoring changes nothing; adding needs Apply and keeps progress", async (page) => {
+  await open(page);
+  await page.evaluate(SNAP);
+  const r = await page.evaluate(async () => {
+    Object.assign(plan, { mode: "stops", start: "map", startPt: { lat: 41.3838, lng: 2.1766 }, end: "loop", zone: "any", must: [], theme: null, style: "mix" }); selected = new Set(["history", "architecture"]); stopsCount = 5; showRoute();
+    history.replaceState({ r: 1 }, "", "#ruta"); walk.visited[route[0].id] = true; walk.skipped[route[1].id] = true; goTo(2); await __wait(100);
+    const s0 = __snap(), res = {}, ids0 = route.map((s) => s.id);
+    __click("#adaptRoute"); __click('#adaptBody [data-a="surprise"]');
+    const found = adaptDraft.found;
+    res.stop = found?.s.id; res.inCatalogue = WALKBCN_DISCOVERIES.some((e) => e.stop === res.stop); res.notOnWalk = !ids0.includes(res.stop);
+    res.nameHidden = !document.getElementById("adaptBody").textContent.includes(found.s.name);
+    res.clues = [document.querySelectorAll(".clues li").length];
+    __click('#adaptBody [data-a="clue"]'); res.clues.push(document.querySelectorAll(".clues li").length);
+    __click('#adaptBody [data-a="clue"]'); res.clues.push(document.querySelectorAll(".clues li").length);
+    res.noMoreClues = !document.querySelector('#adaptBody [data-a="clue"]');
+    __click('#adaptBody [data-a="reveal"]');
+    const body = document.getElementById("adaptBody");
+    res.reveal = { name: body.querySelector(".stop-title")?.textContent, photo: !!body.querySelector(".stop-photo img"), story: (body.querySelector(".story")?.textContent || "").length, directions: !!body.querySelector('a[href*="google.com/maps/dir"]'), add: !!body.querySelector('[data-a="add"]') };
+    // ignore: close without adding
+    __click('#adaptBody [data-a="keep"]'); await __wait(150);
+    res.ignoreSame = __snap() === s0;
+    // add → preview → back out (Keep) → unchanged
+    __click("#adaptRoute"); __click('#adaptBody [data-a="surprise"]'); __click('#adaptBody [data-a="reveal"]'); __click('#adaptBody [data-a="add"]');
+    res.previewAdded = [...document.querySelectorAll(".adapt-list .added")].map((li) => li.textContent);
+    res.previewTag = !!document.querySelector("#adaptBody .adapt-tag");
+    __click('#adaptBody [data-a="keep"]'); await __wait(150);
+    res.cancelSame = __snap() === s0;
+    // add → preview → Apply
+    __click("#adaptRoute"); __click('#adaptBody [data-a="surprise"]'); __click('#adaptBody [data-a="reveal"]'); __click('#adaptBody [data-a="add"]'); __click('#adaptBody [data-a="apply"]'); await __wait(200);
+    const ids1 = route.map((s) => s.id);
+    res.apply = { ids0, ids1, added: ids1.includes(res.stop), doneKept: ids1[0] === ids0[0] && ids1[1] === ids0[1] && walk.visited[ids0[0]] && walk.skipped[ids0[1]],
+      pendingKept: ids0.slice(2).every((id) => ids1.includes(id)), loop: plan.end === "loop" && lastRoute.end.lat === lastRoute.start.lat, sel: [...selected].sort().join(), style: plan.style };
+    // too far: a discovery far from this walk is explained, not proposed
+    const far = WALKBCN_DISCOVERIES.map((e) => stopById(e.stop)).sort((a, b) => dist(b, route[2]) - dist(a, route[2]))[0];
+    const fp = surpriseProposal({ s: far });
+    res.tooFar = { stop: far.id, tooFar: !!fp.tooFar, extra: fp.extra };
+    res.snap = __snap();
+    return res;
+  });
+  await page.reload(); await page.waitForFunction(() => typeof showRoute === "function" && route.length > 0); await page.evaluate(SNAP);
+  const reloaded = await page.evaluate(() => __snap());
+  const A = r.apply;
+  const ok = r.inCatalogue && r.notOnWalk && r.nameHidden && r.clues.join() === "1,2,3" && r.noMoreClues && r.reveal.photo && r.reveal.story > 100 && r.reveal.directions && r.reveal.add &&
+    r.ignoreSame && r.previewAdded.length === 1 && r.previewTag && r.cancelSame && A.added && A.doneKept && A.pendingKept && A.loop && A.sel === "architecture,history" && A.style === "mix" &&
+    r.tooFar.tooFar && reloaded === r.snap;
+  return { ok, detail: { ...r, snap: undefined, reloadSame: reloaded === r.snap } };
+}, 45000);
+await test("P2C2-langs", "Clues and the new panel texts show in all 7 languages", async (page) => {
+  await open(page);
+  const r = await page.evaluate(async () => {
+    Object.assign(plan, { mode: "stops", start: "best", end: "any", zone: "any", must: [], theme: null, style: "mix" }); selected = new Set(["history"]); stopsCount = 4; showRoute();
+    const out = {};
+    for (const l of ["en", "ca", "es", "fr", "de", "it", "zh"]) {
+      await setLang(l);
+      document.getElementById("adaptRoute").click();
+      const choices = [...document.querySelectorAll("#adaptBody .adapt-choices button")].map((b) => b.textContent);
+      document.querySelector('#adaptBody [data-a="surprise"]').click();
+      const intro = document.querySelector(".surprise-intro")?.textContent || "";
+      const e = adaptDraft.found?.e;
+      out[l] = { choices: choices.length === 4 && choices.every((c) => c && !/^(pause|surprise|adapt)/.test(c)), intro: !!e && intro === e.intro[l] };
+      document.querySelector('#adaptBody [data-a="keep"]').click(); await new Promise((r) => setTimeout(r, 120));
+    }
+    await setLang("en");
+    return out;
+  });
+  return { ok: Object.values(r).every((x) => x.choices && x.intro), detail: r };
+});
+
 clearTimeout(watchdog);
 await withLimit(browser.close(), 5000, "browser close").catch(() => {});
 const failed = results.filter((r) => !r.ok);
