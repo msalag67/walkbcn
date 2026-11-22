@@ -109,6 +109,19 @@ for (const e of W.WALKBCN_DISCOVERIES || []) {
   }
 }
 
+// Multiplayer: the challenges a room can play (supabase/multiplayer.sql) must match the data.
+{
+  const sql = fs.readFileSync(root + 'supabase/multiplayer.sql', 'utf8');
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}'\)/g)) {
+    const c = (W.WALKBCN_CHALLENGES || []).find(x => x.id === m[1]);
+    if (!c) { fail(`multiplayer: unknown challenge ${m[1]}`); continue; }
+    if (c.missions.length !== +m[2]) fail(`multiplayer ${m[1]}: ${m[2]} missions in SQL, ${c.missions.length} in data`);
+    if (m[3] !== c.missions.map(x => (x.clues || []).length || 1).join(',')) fail(`multiplayer ${m[1]}: clue counts differ from data`);
+  }
+  const cfg = fs.readFileSync(root + 'data/multiplayer-config.js', 'utf8');
+  if (/service_role/i.test(cfg.replace(/\/\/.*$/gm, ''))) fail('multiplayer config: never put the service_role key in the page');
+}
+
 // Practical cards and photo credits
 const CARDS = W.WALKBCN_CARDS || {}, PHOTOS = W.WALKBCN_PHOTOS || {};
 const SENS = ['worship', 'study', 'residential', 'limited', 'works'];
