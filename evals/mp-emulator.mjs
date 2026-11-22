@@ -13,7 +13,7 @@ await db.exec(fs.readFileSync(SQL, "utf8"));
 const tokens = new Map(), refresh = new Map();
 const session = (uid) => { const at = "at-" + crypto.randomUUID(), rt = "rt-" + crypto.randomUUID(); tokens.set(at, uid); refresh.set(rt, uid);
   return { access_token: at, refresh_token: rt, token_type: "bearer", expires_in: 3600, expires_at: Math.floor(Date.now() / 1000) + 3600, user: { id: uid, is_anonymous: true } }; };
-const ARGS = { mp_create_room: ["p_challenge", "p_mode", "p_name"], mp_join_room: ["p_code", "p_name"], mp_set_ready: ["p_code", "p_ready"], mp_start: ["p_code"], mp_leave: ["p_code"], mp_state: ["p_code"], mp_hint: ["p_code", "p_mission", "p_n"], mp_complete: ["p_code", "p_mission", "p_method"] };
+const ARGS = { mp_create_room: ["p_challenge", "p_mode", "p_name", "p_duration"], mp_ta_hint: ["p_code", "p_mission"], mp_ta_complete: ["p_code", "p_mission", "p_method"], mp_join_room: ["p_code", "p_name"], mp_set_ready: ["p_code", "p_ready"], mp_start: ["p_code"], mp_leave: ["p_code"], mp_state: ["p_code"], mp_hint: ["p_code", "p_mission", "p_n"], mp_complete: ["p_code", "p_mission", "p_method"] };
 const send = (res, code, body) => { res.writeHead(code, { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*", "Access-Control-Allow-Methods": "POST, OPTIONS" }); res.end(body === undefined ? "" : JSON.stringify(body)); };
 http.createServer(async (req, res) => {
   if (req.method === "OPTIONS") return send(res, 204);
@@ -22,6 +22,8 @@ http.createServer(async (req, res) => {
   if (!req.headers.apikey) return send(res, 401, { message: "no apikey" });
   if (url.pathname === "/auth/v1/signup") return send(res, 200, session(crypto.randomUUID()));
   if (url.pathname === "/auth/v1/token") { const uid = refresh.get(body.refresh_token); return uid ? send(res, 200, session(uid)) : send(res, 400, { message: "bad refresh" }); }
+  // Test only (not in Supabase): move a Time Attack room's end into the past.
+  if (url.pathname === "/test/expire") { await db.query("update public.mp_rooms set ends_at = now() - interval '1 second' where code = $1", [body.code]); return send(res, 200, true); }
   const m = url.pathname.match(/^\/rest\/v1\/rpc\/(\w+)$/);
   if (!m || !ARGS[m[1]]) return send(res, 404, { message: "not found" });
   const uid = tokens.get((req.headers.authorization || "").replace(/^Bearer /, ""));

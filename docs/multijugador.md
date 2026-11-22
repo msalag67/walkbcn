@@ -28,4 +28,13 @@ El multijugador usa **Supabase** (plan gratuito). No hay servidor propio: la web
 ## Probar
 
 - Local, sin Supabase: `python3 -m http.server 8642` y `PGLITE=<carpeta con @electric-sql/pglite> node evals/multiplayer-e2e.mjs` (dos navegadores contra el mismo SQL ejecutado en Postgres/PGlite).
-- **Pendiente: prueba real con dos móviles** en el proyecto Supabase real: crear sala en uno, unirse con el enlace en el otro, preparados, empezar, completar misiones (con GPS real en la calle), recargar a mitad, abandonar, ver la clasificación final.
+- **Hecho (22 nov 2026): prueba real con dos móviles** en el proyecto Supabase real, en la calle: sala por enlace, preparados, inicio compartido, misiones con GPS real y clasificación final. Funcionó bien.
+
+## Time Attack (fase 3C)
+
+- Mismas salas, sala de espera, sincronización y GPS que Speed Race. El anfitrión elige 30, 60 o 90 minutos; todos tienen los mismos 7 objetivos de «Cazador modernista» y los hacen en el orden que quieran.
+- Puntos por objetivo: 100 / 150 / 200 según la dificultad de la prueba; una pista extra resta 50 en ese objetivo (mínimo 50). Solo puntúan los objetivos con la ubicación comprobada. Desempate: más objetivos encontrados y, después, quién llegó antes a su puntuación. Todo se configura en `mp_modes` y `mp_challenges.points` (el servidor decide los puntos; `check.mjs` compara los puntos del SQL con `data/challenges.js`).
+- El tiempo lo marca el servidor (`ends_at`): al pasar, `mp_ta_complete` rechaza respuestas (`time_up`) y la sala se cierra al consultarla.
+- **DEMO** («Probar DEMO»): en un solo dispositivo, sin sala ni servidor; mismas misiones, preguntas y puntos, «Simular llegada», 3 rivales simulados con un horario fijo, +10 min, terminar y reiniciar. No envía ni guarda nada.
+- **Para activarlo** hay que volver a ejecutar `supabase/multiplayer.sql` en el SQL Editor (añade columnas y funciones; sustituye `mp_create_room` por una versión con duración, compatible con Speed Race). Hacerlo **antes** de publicar la web nueva.
+- Pruebas: `PGLITE=<carpeta> node evals/time-attack-e2e.mjs` (DEMO sin servidor + partida con dos navegadores contra el SQL en PGlite).

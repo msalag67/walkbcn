@@ -17,7 +17,10 @@ create table if not exists public.mp_modes (
   config jsonb not null              -- {min_players, max_players, hint_penalty_s}
 );
 insert into public.mp_modes (mode, config) values
-  ('speed_race', '{"min_players": 2, "max_players": 5, "hint_penalty_s": 60}')
+  ('speed_race', '{"min_players": 2, "max_players": 5, "hint_penalty_s": 60}'),
+  -- Time Attack: points per mission come from mp_challenges.points; an extra clue costs
+  -- hint_cost points on that mission (never below min_points); the host picks a duration.
+  ('time_attack', '{"min_players": 2, "max_players": 5, "hint_cost": 50, "min_points": 50, "durations": [30, 60, 90]}')
 on conflict (mode) do update set config = excluded.config;
 
 -- Challenges that can be played in a room: how many missions and extra clues each has
@@ -27,9 +30,12 @@ create table if not exists public.mp_challenges (
   missions int not null,
   clues int[] not null               -- number of clues per mission
 );
-insert into public.mp_challenges (id, missions, clues) values
-  ('modernisme-hunt', 4, '{2,2,2,2}')
-on conflict (id) do update set missions = excluded.missions, clues = excluded.clues;
+alter table public.mp_challenges add column if not exists mode text not null default 'speed_race';
+alter table public.mp_challenges add column if not exists points int[];   -- Time Attack: points per mission
+insert into public.mp_challenges (id, missions, clues, mode, points) values
+  ('modernisme-hunt', 4, '{2,2,2,2}', 'speed_race', null),
+  ('modernist-hunter', 7, '{2,2,2,2,2,2,2}', 'time_attack', '{150,100,100,150,150,200,150}')
+on conflict (id) do update set missions = excluded.missions, clues = excluded.clues, mode = excluded.mode, points = excluded.points;
 
 -- ---------- tables ----------
 create table if not exists public.mp_rooms (
@@ -45,6 +51,7 @@ create table if not exists public.mp_rooms (
   finished_at timestamptz,
   expires_at timestamptz not null default now() + interval '24 hours'
 );
+alter table public.mp_rooms add column if not exists ends_at timestamptz;   -- Time Attack: scoring closes then
 create table if not exists public.mp_players (
   room_id uuid not null references public.mp_rooms(id) on delete cascade,
   user_id uuid not null,
@@ -59,6 +66,8 @@ create table if not exists public.mp_players (
   finished_at timestamptz,
   primary key (room_id, user_id)
 );
+alter table public.mp_players add column if not exists points int not null default 0;          -- Time Attack
+alter table public.mp_players add column if not exists last_score_at timestamptz;              -- Time Attack tie-break
 -- One row per counted action: the unique key stops double clicks or retries counting twice.
 create table if not exists public.mp_events (
   room_id uuid not null references public.mp_rooms(id) on delete cascade,
@@ -111,14 +120,19 @@ begin
 end $$;
 
 -- ---------- room (shared by every mode) ----------
-create or replace function public.mp_create_room(p_challenge text, p_mode text, p_name text)
+drop function if exists public.mp_create_room(text, text, text);   -- replaced by the version with a duration
+create or replace function public.mp_create_room(p_challenge text, p_mode text, p_name text, p_duration int default null)
 returns text language plpgsql security definer set search_path = public as $$
 declare c text; alphabet text := 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; i int; cfg jsonb; rid uuid;
 begin
   if auth.uid() is null then raise exception 'not_signed_in'; end if;
   select config into cfg from mp_modes where mode = p_mode;
   if cfg is null then raise exception 'unknown_mode'; end if;
-  if not exists (select 1 from mp_challenges where id = p_challenge) then raise exception 'unknown_challenge'; end if;
+  if not exists (select 1 from mp_challenges where id = p_challenge and mode = p_mode) then raise exception 'unknown_challenge'; end if;
+  if p_mode = 'time_attack' then
+    if p_duration is null or not (cfg->'durations') @> to_jsonb(p_duration) then raise exception 'bad_duration'; end if;
+    cfg := cfg || jsonb_build_object('duration_min', p_duration, 'points', (select to_jsonb(points) from mp_challenges where id = p_challenge));
+  end if;
   delete from mp_rooms where expires_at < now() - interval '1 day';   -- lazy clean-up
   loop
     c := '';
@@ -172,7 +186,8 @@ begin
   select count(*), count(*) filter (where not ready) into n, notready from mp_players where room_id = r.id and status = 'waiting';
   if n < (r.config->>'min_players')::int then raise exception 'not_enough_players'; end if;
   if notready > 0 then raise exception 'not_all_ready'; end if;
-  update mp_rooms set status = 'running', started_at = now() where id = r.id;
+  update mp_rooms set status = 'running', started_at = now(),
+    ends_at = case when r.mode = 'time_attack' then now() + make_interval(mins => (r.config->>'duration_min')::int) end where id = r.id;
   update mp_players set status = 'playing' where room_id = r.id and status = 'waiting';
 end $$;
 
@@ -202,14 +217,22 @@ returns jsonb language plpgsql security definer set search_path = public as $$
 declare r public.mp_rooms; pen int;
 begin
   r := mp_room_for(p_code);
+  if r.status = 'running' and r.ends_at is not null and now() >= r.ends_at then   -- Time Attack: time is up
+    update mp_players set status = 'finished', finished_at = coalesce(finished_at, r.ends_at) where room_id = r.id and status = 'playing';
+    update mp_rooms set status = 'finished', finished_at = r.ends_at where id = r.id;
+    r := mp_room_for(p_code);
+  end if;
   update mp_players set last_seen = now() where room_id = r.id and user_id = auth.uid();
-  pen := (r.config->>'hint_penalty_s')::int;
+  pen := coalesce((r.config->>'hint_penalty_s')::int, 0);
   return jsonb_build_object(
     'code', r.code, 'challenge', r.challenge_id, 'mode', r.mode, 'status', r.status, 'config', r.config,
-    'host', r.host_id = auth.uid(), 'started_at', r.started_at, 'finished_at', r.finished_at, 'server_now', now(),
+    'host', r.host_id = auth.uid(), 'started_at', r.started_at, 'finished_at', r.finished_at, 'ends_at', r.ends_at, 'server_now', now(),
+    'my_done', coalesce((select jsonb_agg(mission order by mission) from mp_events where room_id = r.id and user_id = auth.uid() and kind = 'complete'), '[]'::jsonb),
+    'my_hints', coalesce((select jsonb_agg(distinct mission) from mp_events where room_id = r.id and user_id = auth.uid() and kind = 'hint'), '[]'::jsonb),
     'players', coalesce((select jsonb_agg(jsonb_build_object(
       'me', p.user_id = auth.uid(), 'name', p.name, 'host', p.user_id = r.host_id, 'ready', p.ready, 'status', p.status,
       'online', p.last_seen > now() - interval '20 seconds', 'progress', p.progress, 'hints', p.hints, 'alt', p.alt,
+      'points', p.points, 'last_score_s', round(extract(epoch from p.last_score_at - r.started_at)),
       'time_s', case when p.finished_at is not null then round(extract(epoch from p.finished_at - r.started_at)) end,
       'adjusted_s', case when p.finished_at is not null then round(extract(epoch from p.finished_at - r.started_at)) + p.hints * pen end
     ) order by p.joined_at) from mp_players p where p.room_id = r.id), '[]'::jsonb));
@@ -223,6 +246,7 @@ declare r public.mp_rooms; p public.mp_players; maxn int;
 begin
   r := mp_room_for(p_code);
   select * into p from mp_players where room_id = r.id and user_id = auth.uid();
+  if r.mode <> 'speed_race' then raise exception 'wrong_mode'; end if;
   if r.status <> 'running' or p.status <> 'playing' then raise exception 'not_playing'; end if;
   if p_mission <> p.progress then raise exception 'wrong_mission'; end if;
   select clues[p_mission + 1] into maxn from mp_challenges where id = r.challenge_id;
@@ -238,6 +262,7 @@ returns void language plpgsql security definer set search_path = public as $$
 declare r public.mp_rooms; p public.mp_players;
 begin
   r := mp_room_for(p_code);
+  if r.mode <> 'speed_race' then raise exception 'wrong_mode'; end if;
   if p_method not in ('gps', 'alt') then raise exception 'bad_method'; end if;
   select * into p from mp_players where room_id = r.id and user_id = auth.uid();
   if r.status <> 'running' or p.status <> 'playing' then raise exception 'not_playing'; end if;
@@ -254,11 +279,51 @@ begin
   perform mp_maybe_finish(r.id);
 end $$;
 
+-- ---------- Time Attack rules ----------
+-- Any mission, any order, once each, only while the clock runs (server time). Only missions
+-- with a location check score: in a points race an answer alone must not replace being there.
+create or replace function public.mp_ta_hint(p_code text, p_mission int)
+returns void language plpgsql security definer set search_path = public as $$
+declare r public.mp_rooms; p public.mp_players;
+begin
+  r := mp_room_for(p_code);
+  select * into p from mp_players where room_id = r.id and user_id = auth.uid();
+  if r.mode <> 'time_attack' then raise exception 'wrong_mode'; end if;
+  if r.status <> 'running' or p.status <> 'playing' then raise exception 'not_playing'; end if;
+  if now() >= r.ends_at then raise exception 'time_up'; end if;
+  if p_mission < 0 or p_mission >= (r.config->>'missions')::int then raise exception 'wrong_mission'; end if;
+  if exists (select 1 from mp_events where room_id = r.id and user_id = auth.uid() and mission = p_mission and kind = 'complete') then return; end if;
+  insert into mp_events (room_id, user_id, mission, kind, n) values (r.id, auth.uid(), p_mission, 'hint', 2) on conflict do nothing;
+  if found then update mp_players set hints = hints + 1, last_seen = now() where room_id = r.id and user_id = auth.uid(); end if;
+end $$;
+
+create or replace function public.mp_ta_complete(p_code text, p_mission int, p_method text)
+returns int language plpgsql security definer set search_path = public as $$
+declare r public.mp_rooms; p public.mp_players; base int; pts int;
+begin
+  r := mp_room_for(p_code);
+  select * into p from mp_players where room_id = r.id and user_id = auth.uid();
+  if r.mode <> 'time_attack' then raise exception 'wrong_mode'; end if;
+  if r.status <> 'running' or p.status <> 'playing' then raise exception 'not_playing'; end if;
+  if now() >= r.ends_at then raise exception 'time_up'; end if;
+  if p_mission < 0 or p_mission >= (r.config->>'missions')::int then raise exception 'wrong_mission'; end if;
+  if p_method <> 'gps' then raise exception 'location_required'; end if;
+  insert into mp_events (room_id, user_id, mission, kind, method) values (r.id, auth.uid(), p_mission, 'complete', p_method) on conflict do nothing;
+  if not found then return 0; end if;                       -- already scored: nothing more
+  base := (r.config->'points'->>p_mission)::int;
+  pts := greatest(base - (r.config->>'hint_cost')::int * (select count(*) from mp_events where room_id = r.id and user_id = auth.uid() and mission = p_mission and kind = 'hint')::int,
+                  least(base, (r.config->>'min_points')::int));
+  update mp_players set points = points + pts, progress = progress + 1, last_score_at = now(), last_seen = now() where room_id = r.id and user_id = auth.uid();
+  return pts;
+end $$;
+
 -- ---------- rights ----------
 revoke all on function public.mp_room_for(text, boolean), public.mp_maybe_finish(uuid) from public, anon, authenticated;
-grant execute on function public.mp_create_room(text, text, text), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
-  public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text)
+grant execute on function public.mp_create_room(text, text, text, int), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
+  public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text),
+  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text)
   to authenticated;
-revoke execute on function public.mp_create_room(text, text, text), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
-  public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text)
+revoke execute on function public.mp_create_room(text, text, text, int), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
+  public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text),
+  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text)
   from public, anon;

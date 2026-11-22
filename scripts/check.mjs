@@ -112,7 +112,14 @@ for (const e of W.WALKBCN_DISCOVERIES || []) {
 // Multiplayer: the challenges a room can play (supabase/multiplayer.sql) must match the data.
 {
   const sql = fs.readFileSync(root + 'supabase/multiplayer.sql', 'utf8');
-  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}'\)/g)) {
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'time_attack', '\{([\d,]+)\}'\)/g)) {
+    const ta = (W.WALKBCN_TIME_ATTACKS || []).find(x => x.id === m[1]);
+    if (!ta) { fail(`multiplayer: unknown time attack ${m[1]}`); continue; }
+    if (ta.missions.length !== +m[2]) fail(`time attack ${m[1]}: ${m[2]} missions in SQL, ${ta.missions.length} in data`);
+    if (m[4] !== ta.missions.map(x => x.points).join(',')) fail(`time attack ${m[1]}: points differ between SQL and data`);
+    ta.missions.forEach((x, i) => { if (!ids.has(x.stop)) fail(`time attack ${m[1]} target ${i + 1}: unknown stop`); for (const l of langs) { if (!x.q?.prompt?.[l] || !x.hint?.[l]) fail(`time attack ${m[1]} target ${i + 1}: text missing in ${l}`); (x.q.options || []).forEach(o => { if (!o[l]) fail(`time attack ${m[1]} target ${i + 1}: option missing in ${l}`); }); } if (!(x.q.answer >= 0 && x.q.answer < x.q.options.length)) fail(`time attack ${m[1]} target ${i + 1}: answer out of range`); });
+  }
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'speed_race', null\)/g)) {
     const c = (W.WALKBCN_CHALLENGES || []).find(x => x.id === m[1]);
     if (!c) { fail(`multiplayer: unknown challenge ${m[1]}`); continue; }
     if (c.missions.length !== +m[2]) fail(`multiplayer ${m[1]}: ${m[2]} missions in SQL, ${c.missions.length} in data`);
