@@ -20,7 +20,20 @@
         }
       },
       "srcHash": "f7a39966b0",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/recinte-modernista-de-sant-pau.mp3",
+          "hash": "c21192623a"
+        },
+        "architecture": {
+          "file": "audio/es/recinte-modernista-de-sant-pau--architecture.mp3",
+          "hash": "e996d2c5d8"
+        },
+        "history": {
+          "file": "audio/es/recinte-modernista-de-sant-pau--history.mp3",
+          "hash": "68fc650eca"
+        }
+      }
     },
     "sagrada-familia": {
       "tip": "Rodead el templo hasta el lado de la fachada de la Pasión: hay más calma y la escultura es sobria e impactante.",
@@ -42,7 +55,20 @@
         }
       },
       "srcHash": "eaffe8e73e",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/sagrada-familia.mp3",
+          "hash": "29b92fbe26"
+        },
+        "architecture": {
+          "file": "audio/es/sagrada-familia--architecture.mp3",
+          "hash": "d25b7eb8a6"
+        },
+        "history": {
+          "file": "audio/es/sagrada-familia--history.mp3",
+          "hash": "b533e553f1"
+        }
+      }
     },
     "casa-mila": {
       "tip": "Aunque sea desde la calle, fíjate bien en los balcones de hierro: no hay dos iguales.",
@@ -64,7 +90,20 @@
         }
       },
       "srcHash": "aa3d132553",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/casa-mila.mp3",
+          "hash": "fa74864a49"
+        },
+        "architecture": {
+          "file": "audio/es/casa-mila--architecture.mp3",
+          "hash": "e727ad07e0"
+        },
+        "art": {
+          "file": "audio/es/casa-mila--art.mp3",
+          "hash": "15dc524447"
+        }
+      }
     },
     "casa-batllo": {
       "tip": "Justo al lado está la Casa Amatller, obra de un arquitecto rival: por eso a esta manzana la llaman la Manzana de la Discordia.",
@@ -86,7 +125,20 @@
         }
       },
       "srcHash": "6b9fce95ed",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/casa-batllo.mp3",
+          "hash": "7fd808adf3"
+        },
+        "architecture": {
+          "file": "audio/es/casa-batllo--architecture.mp3",
+          "hash": "311ede6d1a"
+        },
+        "art": {
+          "file": "audio/es/casa-batllo--art.mp3",
+          "hash": "dbabc41aff"
+        }
+      }
     },
     "mercat-de-la-llibertat": {
       "tip": "Por las mañanas es cuando hay más gente del barrio; deja los pasillos libres y, si te entretienes un rato, compra algo.",
@@ -108,7 +160,20 @@
         }
       },
       "srcHash": "37aec739e6",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-de-la-llibertat.mp3",
+          "hash": "7735bac78e"
+        },
+        "food": {
+          "file": "audio/es/mercat-de-la-llibertat--food.mp3",
+          "hash": "40ca84c508"
+        },
+        "local": {
+          "file": "audio/es/mercat-de-la-llibertat--local.mp3",
+          "hash": "941606a9d0"
+        }
+      }
     },
     "placa-del-sol": {
       "tip": "Justo encima de las terrazas vive gente: por la noche, bajad la voz.",
@@ -130,7 +195,20 @@
         }
       },
       "srcHash": "7f36ea6c54",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-del-sol.mp3",
+          "hash": "2a2f777f1e"
+        },
+        "local": {
+          "file": "audio/es/placa-del-sol--local.mp3",
+          "hash": "705ecc95c4"
+        },
+        "history": {
+          "file": "audio/es/placa-del-sol--history.mp3",
+          "hash": "783e6fd7ef"
+        }
+      }
     },
     "palau-de-la-musica-catalana": {
       "tip": "Fíjate en las columnas de mosaico de la esquina: cada una tiene un motivo floral distinto.",
@@ -157,7 +235,24 @@
         }
       },
       "srcHash": "21d0eda844",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/palau-de-la-musica-catalana.mp3",
+          "hash": "5d9eaef897"
+        },
+        "architecture": {
+          "file": "audio/es/palau-de-la-musica-catalana--architecture.mp3",
+          "hash": "b6422a75ed"
+        },
+        "art": {
+          "file": "audio/es/palau-de-la-musica-catalana--art.mp3",
+          "hash": "fc84fe77fd"
+        },
+        "culture": {
+          "file": "audio/es/palau-de-la-musica-catalana--culture.mp3",
+          "hash": "d0f847c05c"
+        }
+      }
     },
     "mercat-de-santa-caterina": {
       "tip": "Una buena alternativa local a la abarrotada Boqueria: la misma calidad y muchas menos colas.",
@@ -179,7 +274,20 @@
         }
       },
       "srcHash": "f32540833f",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-de-santa-caterina.mp3",
+          "hash": "e4adb54430"
+        },
+        "food": {
+          "file": "audio/es/mercat-de-santa-caterina--food.mp3",
+          "hash": "3bd5662525"
+        },
+        "architecture": {
+          "file": "audio/es/mercat-de-santa-caterina--architecture.mp3",
+          "hash": "e7fb2ca1d8"
+        }
+      }
     },
     "barcelona-cathedral": {
       "tip": "Los domingos por la mañana, la gente del barrio baila sardanas en la plaza de enfrente.",
@@ -201,7 +309,20 @@
         }
       },
       "srcHash": "61ec44739e",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/barcelona-cathedral.mp3",
+          "hash": "2f1e4d7c94"
+        },
+        "history": {
+          "file": "audio/es/barcelona-cathedral--history.mp3",
+          "hash": "c11be8ebf2"
+        },
+        "architecture": {
+          "file": "audio/es/barcelona-cathedral--architecture.mp3",
+          "hash": "b5b274aed2"
+        }
+      }
     },
     "placa-del-rei": {
       "tip": "La entrada al Museo de Historia de la Ciudad (MUHBA) está justo aquí, por si queréis ver la Barcino romana.",
@@ -218,7 +339,16 @@
         }
       },
       "srcHash": "772f600929",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-del-rei.mp3",
+          "hash": "6ed75a1e59"
+        },
+        "history": {
+          "file": "audio/es/placa-del-rei--history.mp3",
+          "hash": "907bfb8538"
+        }
+      }
     },
     "santa-maria-del-mar": {
       "tip": "La entrada a la basílica suele ser gratuita en determinados horarios; consulta la información en la puerta.",
@@ -245,7 +375,24 @@
         }
       },
       "srcHash": "15de425525",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/santa-maria-del-mar.mp3",
+          "hash": "a07ca4ff37"
+        },
+        "history": {
+          "file": "audio/es/santa-maria-del-mar--history.mp3",
+          "hash": "92620c66d6"
+        },
+        "architecture": {
+          "file": "audio/es/santa-maria-del-mar--architecture.mp3",
+          "hash": "8e146ae1a1"
+        },
+        "culture": {
+          "file": "audio/es/santa-maria-del-mar--culture.mp3",
+          "hash": "28a0e5703d"
+        }
+      }
     },
     "el-born-centre-de-cultura": {
       "tip": "La entrada a la zona central, con vistas a las ruinas, es gratuita.",
@@ -262,7 +409,16 @@
         }
       },
       "srcHash": "77705715be",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/el-born-centre-de-cultura.mp3",
+          "hash": "f565e7525b"
+        },
+        "history": {
+          "file": "audio/es/el-born-centre-de-cultura--history.mp3",
+          "hash": "83c55bb074"
+        }
+      }
     },
     "museu-picasso": {
       "tip": "Entrada gratuita los jueves por la tarde y el primer domingo de cada mes (reserva con antelación).",
@@ -284,7 +440,20 @@
         }
       },
       "srcHash": "c3b10aec6e",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/museu-picasso.mp3",
+          "hash": "9e303fb6ae"
+        },
+        "art": {
+          "file": "audio/es/museu-picasso--art.mp3",
+          "hash": "3fce059c01"
+        },
+        "history": {
+          "file": "audio/es/museu-picasso--history.mp3",
+          "hash": "d438314588"
+        }
+      }
     },
     "macba": {
       "tip": "Respeta el espacio de los skaters y piérdete por las callejuelas del Raval: encontrarás pequeñas galerías independientes.",
@@ -306,7 +475,20 @@
         }
       },
       "srcHash": "2b1e8ba463",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/macba.mp3",
+          "hash": "90d3b927dd"
+        },
+        "art": {
+          "file": "audio/es/macba--art.mp3",
+          "hash": "ba345bca03"
+        },
+        "local": {
+          "file": "audio/es/macba--local.mp3",
+          "hash": "2e6f813e86"
+        }
+      }
     },
     "carrer-de-blai": {
       "tip": "Entre semana, a primera hora de la tarde, hay más tranquilidad. Y no hagáis mucho ruido: arriba vive gente.",
@@ -328,7 +510,20 @@
         }
       },
       "srcHash": "1c884bcd67",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/carrer-de-blai.mp3",
+          "hash": "c2b33f7510"
+        },
+        "food": {
+          "file": "audio/es/carrer-de-blai--food.mp3",
+          "hash": "a4f5179be7"
+        },
+        "local": {
+          "file": "audio/es/carrer-de-blai--local.mp3",
+          "hash": "1263f6cd88"
+        }
+      }
     },
     "mercat-de-sant-antoni": {
       "tip": "Ven un domingo por la mañana para el mercado de libros y luego únete a la gente del barrio para tomar el vermut por aquí cerca.",
@@ -350,7 +545,20 @@
         }
       },
       "srcHash": "4e20a316f4",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-de-sant-antoni.mp3",
+          "hash": "13c4227e75"
+        },
+        "food": {
+          "file": "audio/es/mercat-de-sant-antoni--food.mp3",
+          "hash": "286c59e0f0"
+        },
+        "local": {
+          "file": "audio/es/mercat-de-sant-antoni--local.mp3",
+          "hash": "013684f333"
+        }
+      }
     },
     "parc-de-la-ciutadella": {
       "tip": "Alquila una barca de remos en el pequeño lago o, simplemente, busca un poco de sombra bajo las palmeras.",
@@ -372,7 +580,20 @@
         }
       },
       "srcHash": "4eaee1f97b",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/parc-de-la-ciutadella.mp3",
+          "hash": "bf867b5735"
+        },
+        "outdoors": {
+          "file": "audio/es/parc-de-la-ciutadella--outdoors.mp3",
+          "hash": "2d7445778a"
+        },
+        "history": {
+          "file": "audio/es/parc-de-la-ciutadella--history.mp3",
+          "hash": "3394bf66d2"
+        }
+      }
     },
     "barceloneta-beach": {
       "tip": "Cuando pasees por las calles del barrio, ponte una camiseta: es algo que piden los vecinos, y además lo exige la ley.",
@@ -394,7 +615,20 @@
         }
       },
       "srcHash": "a053ba4158",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/barceloneta-beach.mp3",
+          "hash": "fd84fa8d87"
+        },
+        "outdoors": {
+          "file": "audio/es/barceloneta-beach--outdoors.mp3",
+          "hash": "bb51b30653"
+        },
+        "local": {
+          "file": "audio/es/barceloneta-beach--local.mp3",
+          "hash": "58c544061d"
+        }
+      }
     },
     "park-guell": {
       "tip": "Reserva una entrada con hora para la zona monumental; los caminos del bosque, más arriba, son gratuitos.",
@@ -421,7 +655,24 @@
         }
       },
       "srcHash": "087c905176",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/park-guell.mp3",
+          "hash": "b924959499"
+        },
+        "outdoors": {
+          "file": "audio/es/park-guell--outdoors.mp3",
+          "hash": "f6a3b23f98"
+        },
+        "architecture": {
+          "file": "audio/es/park-guell--architecture.mp3",
+          "hash": "7c6602d038"
+        },
+        "art": {
+          "file": "audio/es/park-guell--art.mp3",
+          "hash": "ab40b68d6c"
+        }
+      }
     },
     "placa-sant-felip-neri": {
       "tip": "En la plaza hay una escuela: por favor, hablad en voz baja.",
@@ -443,7 +694,20 @@
         }
       },
       "srcHash": "a4f6fc0b49",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-sant-felip-neri.mp3",
+          "hash": "e4e529e794"
+        },
+        "history": {
+          "file": "audio/es/placa-sant-felip-neri--history.mp3",
+          "hash": "eb9afc65d9"
+        },
+        "culture": {
+          "file": "audio/es/placa-sant-felip-neri--culture.mp3",
+          "hash": "1012ca238d"
+        }
+      }
     },
     "arc-de-triomf": {
       "tip": "Baja por el paseo hacia la Ciutadella: es uno de los paseos cortos más agradables de la ciudad.",
@@ -470,7 +734,24 @@
         }
       },
       "srcHash": "c43bd8b9a6",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/arc-de-triomf.mp3",
+          "hash": "1133b059c1"
+        },
+        "architecture": {
+          "file": "audio/es/arc-de-triomf--architecture.mp3",
+          "hash": "ad0ccd46e4"
+        },
+        "history": {
+          "file": "audio/es/arc-de-triomf--history.mp3",
+          "hash": "563e485d39"
+        },
+        "outdoors": {
+          "file": "audio/es/arc-de-triomf--outdoors.mp3",
+          "hash": "638c56eed2"
+        }
+      }
     },
     "placa-reial": {
       "tip": "En los pisos de encima de los soportales vive gente: por la noche, disfruta de la plaza sin hacer ruido.",
@@ -497,7 +778,24 @@
         }
       },
       "srcHash": "8f6a813d65",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-reial.mp3",
+          "hash": "c88a777379"
+        },
+        "architecture": {
+          "file": "audio/es/placa-reial--architecture.mp3",
+          "hash": "22850f8917"
+        },
+        "local": {
+          "file": "audio/es/placa-reial--local.mp3",
+          "hash": "7e98a666c8"
+        },
+        "history": {
+          "file": "audio/es/placa-reial--history.mp3",
+          "hash": "68106b5602"
+        }
+      }
     },
     "temple-august": {
       "tip": "La entrada al patio es gratuita; entra en silencio, que es un edificio en uso.",
@@ -514,7 +812,16 @@
         }
       },
       "srcHash": "5990d8c156",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/temple-august.mp3",
+          "hash": "e7cdcfdcd3"
+        },
+        "history": {
+          "file": "audio/es/temple-august--history.mp3",
+          "hash": "18df6c1721"
+        }
+      }
     },
     "fossar-moreres": {
       "tip": "Es un memorial, no un punto de encuentro: mantén la calma y el respeto.",
@@ -531,7 +838,16 @@
         }
       },
       "srcHash": "2247146b67",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/fossar-moreres.mp3",
+          "hash": "ee7d56c5f2"
+        },
+        "history": {
+          "file": "audio/es/fossar-moreres--history.mp3",
+          "hash": "b92ac81a51"
+        }
+      }
     },
     "placa-sant-jaume": {
       "tip": "Gira la esquina y entra en el Carrer del Bisbe para ver a Sant Jordi esculpido en la fachada gótica de la Generalitat.",
@@ -558,7 +874,24 @@
         }
       },
       "srcHash": "5197a89015",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-sant-jaume.mp3",
+          "hash": "b706c839d2"
+        },
+        "history": {
+          "file": "audio/es/placa-sant-jaume--history.mp3",
+          "hash": "8ebca59276"
+        },
+        "local": {
+          "file": "audio/es/placa-sant-jaume--local.mp3",
+          "hash": "76b2960889"
+        },
+        "sports": {
+          "file": "audio/es/placa-sant-jaume--sports.mp3",
+          "hash": "99eea6a7dd"
+        }
+      }
     },
     "refugi-307": {
       "tip": "Las visitas son guiadas y hay que reservarlas con antelación a través del Museu d'Història de Barcelona (MUHBA).",
@@ -575,7 +908,16 @@
         }
       },
       "srcHash": "d06065cb24",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/refugi-307.mp3",
+          "hash": "fb6f0e6f60"
+        },
+        "history": {
+          "file": "audio/es/refugi-307--history.mp3",
+          "hash": "3298fdc2ab"
+        }
+      }
     },
     "antic-hospital": {
       "tip": "El patio es gratuito y tiene buena sombra: el sitio perfecto para descansar un poco los pies.",
@@ -602,7 +944,24 @@
         }
       },
       "srcHash": "e80419fd5b",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/antic-hospital.mp3",
+          "hash": "c74096bba8"
+        },
+        "history": {
+          "file": "audio/es/antic-hospital--history.mp3",
+          "hash": "86449309e2"
+        },
+        "architecture": {
+          "file": "audio/es/antic-hospital--architecture.mp3",
+          "hash": "2d46eedb78"
+        },
+        "outdoors": {
+          "file": "audio/es/antic-hospital--outdoors.mp3",
+          "hash": "5857e05dca"
+        }
+      }
     },
     "palau-guell": {
       "tip": "Mira hacia arriba, a la forja de hierro que hay sobre las puertas: es una de las primeras obras maestras de Gaudí en hierro.",
@@ -624,7 +983,20 @@
         }
       },
       "srcHash": "50d2aa722f",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/palau-guell.mp3",
+          "hash": "9d399f2fe5"
+        },
+        "architecture": {
+          "file": "audio/es/palau-guell--architecture.mp3",
+          "hash": "d9e52abf41"
+        },
+        "art": {
+          "file": "audio/es/palau-guell--art.mp3",
+          "hash": "9529eb5fbb"
+        }
+      }
     },
     "casa-vicens": {
       "tip": "Está en una calle residencial estrecha: admírala desde la acera sin bloquear las puertas de los vecinos.",
@@ -646,7 +1018,20 @@
         }
       },
       "srcHash": "670665e342",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/casa-vicens.mp3",
+          "hash": "4a3fd84e5f"
+        },
+        "architecture": {
+          "file": "audio/es/casa-vicens--architecture.mp3",
+          "hash": "b8fbb89348"
+        },
+        "art": {
+          "file": "audio/es/casa-vicens--art.mp3",
+          "hash": "1481a25313"
+        }
+      }
     },
     "drassanes": {
       "tip": "Aunque no entres al museo, asómate al vestíbulo y contempla los arcos.",
@@ -668,7 +1053,20 @@
         }
       },
       "srcHash": "346c12adea",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/drassanes.mp3",
+          "hash": "cb3cd819d5"
+        },
+        "history": {
+          "file": "audio/es/drassanes--history.mp3",
+          "hash": "56c57c184b"
+        },
+        "architecture": {
+          "file": "audio/es/drassanes--architecture.mp3",
+          "hash": "b19e0c6ede"
+        }
+      }
     },
     "casa-punxes": {
       "tip": "Cruzad al otro lado de la Diagonal: desde allí se ven mejor las seis torres.",
@@ -685,7 +1083,16 @@
         }
       },
       "srcHash": "54f20f4dcc",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/casa-punxes.mp3",
+          "hash": "a802463088"
+        },
+        "architecture": {
+          "file": "audio/es/casa-punxes--architecture.mp3",
+          "hash": "17e5ba160a"
+        }
+      }
     },
     "fundacio-tapies": {
       "tip": "Aunque no entres, merece la pena detenerse un momento ante la fachada y la escultura de la azotea.",
@@ -707,7 +1114,20 @@
         }
       },
       "srcHash": "f8770973e5",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/fundacio-tapies.mp3",
+          "hash": "42f4afc781"
+        },
+        "art": {
+          "file": "audio/es/fundacio-tapies--art.mp3",
+          "hash": "8a0a95b4b2"
+        },
+        "architecture": {
+          "file": "audio/es/fundacio-tapies--architecture.mp3",
+          "hash": "d0cf1ded9d"
+        }
+      }
     },
     "cccb": {
       "tip": "La entrada al patio es gratuita y en verano suele haber actividades al aire libre.",
@@ -729,7 +1149,20 @@
         }
       },
       "srcHash": "5f188fb149",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/cccb.mp3",
+          "hash": "8714b4c2b8"
+        },
+        "art": {
+          "file": "audio/es/cccb--art.mp3",
+          "hash": "d7cc833487"
+        },
+        "local": {
+          "file": "audio/es/cccb--local.mp3",
+          "hash": "3dd0fa766a"
+        }
+      }
     },
     "rambla-raval": {
       "tip": "Esta es una auténtica calle comercial de barrio: apoya a los pequeños comercios locales.",
@@ -751,7 +1184,20 @@
         }
       },
       "srcHash": "bf98b5cedd",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/rambla-raval.mp3",
+          "hash": "64d828e6dd"
+        },
+        "local": {
+          "file": "audio/es/rambla-raval--local.mp3",
+          "hash": "bbb7939eef"
+        },
+        "art": {
+          "file": "audio/es/rambla-raval--art.mp3",
+          "hash": "832bc06602"
+        }
+      }
     },
     "cap-barcelona": {
       "tip": "Retrocede unos pasos hacia el mar para ver la cara entera recortada contra el cielo.",
@@ -773,7 +1219,20 @@
         }
       },
       "srcHash": "502a9ebeb8",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/cap-barcelona.mp3",
+          "hash": "6cdf450753"
+        },
+        "art": {
+          "file": "audio/es/cap-barcelona--art.mp3",
+          "hash": "b0615ae49f"
+        },
+        "outdoors": {
+          "file": "audio/es/cap-barcelona--outdoors.mp3",
+          "hash": "9e4ef13387"
+        }
+      }
     },
     "placa-vila-gracia": {
       "tip": "Alrededor de la plaza vive gente: por la noche, baja la voz.",
@@ -800,7 +1259,24 @@
         }
       },
       "srcHash": "8a3dc4e864",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-vila-gracia.mp3",
+          "hash": "3371721a3c"
+        },
+        "local": {
+          "file": "audio/es/placa-vila-gracia--local.mp3",
+          "hash": "95b4c4f74a"
+        },
+        "history": {
+          "file": "audio/es/placa-vila-gracia--history.mp3",
+          "hash": "79e818ef59"
+        },
+        "architecture": {
+          "file": "audio/es/placa-vila-gracia--architecture.mp3",
+          "hash": "c373b2be71"
+        }
+      }
     },
     "placa-virreina": {
       "tip": "Es una plaza tranquila y residencial: siéntate, disfruta y habla en voz baja.",
@@ -822,7 +1298,20 @@
         }
       },
       "srcHash": "7fcd9c3564",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-virreina.mp3",
+          "hash": "bf653c1dca"
+        },
+        "local": {
+          "file": "audio/es/placa-virreina--local.mp3",
+          "hash": "14227e57a7"
+        },
+        "outdoors": {
+          "file": "audio/es/placa-virreina--outdoors.mp3",
+          "hash": "a86febbabe"
+        }
+      }
     },
     "mercat-concepcio": {
       "tip": "Si te entretienes, compra algo: los puestos son el sustento de la gente, no un museo.",
@@ -844,7 +1333,20 @@
         }
       },
       "srcHash": "662fd5b7b6",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-concepcio.mp3",
+          "hash": "5164e7e35c"
+        },
+        "food": {
+          "file": "audio/es/mercat-concepcio--food.mp3",
+          "hash": "93f4c45924"
+        },
+        "local": {
+          "file": "audio/es/mercat-concepcio--local.mp3",
+          "hash": "904d952c56"
+        }
+      }
     },
     "mercat-barceloneta": {
       "tip": "La mayoría de los mercados de Barcelona cierran los domingos, y muchas paradas cierran por la tarde.",
@@ -871,7 +1373,24 @@
         }
       },
       "srcHash": "30bad97e27",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-barceloneta.mp3",
+          "hash": "7cf13f4671"
+        },
+        "food": {
+          "file": "audio/es/mercat-barceloneta--food.mp3",
+          "hash": "6c65239992"
+        },
+        "local": {
+          "file": "audio/es/mercat-barceloneta--local.mp3",
+          "hash": "eab7f1b629"
+        },
+        "architecture": {
+          "file": "audio/es/mercat-barceloneta--architecture.mp3",
+          "hash": "0c1fb97a70"
+        }
+      }
     },
     "mercat-abaceria": {
       "tip": "Si te entretienes, compra algo: los puestos son el sustento de quien trabaja en ellos. Las primeras semanas tras la reapertura algunos puestos aún se están instalando.",
@@ -893,7 +1412,20 @@
         }
       },
       "srcHash": "1f9a7805df",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-abaceria.mp3",
+          "hash": "e14824802f"
+        },
+        "food": {
+          "file": "audio/es/mercat-abaceria--food.mp3",
+          "hash": "5dbcdf2f4c"
+        },
+        "local": {
+          "file": "audio/es/mercat-abaceria--local.mp3",
+          "hash": "46a8c3a29a"
+        }
+      }
     },
     "mercat-ninot": {
       "tip": "Lo mejor es venir por la mañana: es cuando las paradas están llenas y el barrio hace la compra.",
@@ -910,7 +1442,16 @@
         }
       },
       "srcHash": "d937dd05ac",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-ninot.mp3",
+          "hash": "f62ec16e7b"
+        },
+        "food": {
+          "file": "audio/es/mercat-ninot--food.mp3",
+          "hash": "8323bae142"
+        }
+      }
     },
     "bunkers-carmel": {
       "tip": "Un espacio patrimonial encima de casas donde vive gente: nada de fiestas ni música, llévate la basura y habla bajo en la subida.",
@@ -932,7 +1473,20 @@
         }
       },
       "srcHash": "7761a6c045",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/bunkers-carmel.mp3",
+          "hash": "0f29e90319"
+        },
+        "outdoors": {
+          "file": "audio/es/bunkers-carmel--outdoors.mp3",
+          "hash": "757747d53f"
+        },
+        "history": {
+          "file": "audio/es/bunkers-carmel--history.mp3",
+          "hash": "421a4f203b"
+        }
+      }
     },
     "port-vell": {
       "tip": "Al atardecer es un sitio precioso: busca un banco y mira cómo entran los barcos.",
@@ -949,7 +1503,16 @@
         }
       },
       "srcHash": "f414a3ea82",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/port-vell.mp3",
+          "hash": "446b9f3ee6"
+        },
+        "outdoors": {
+          "file": "audio/es/port-vell--outdoors.mp3",
+          "hash": "c2816a9159"
+        }
+      }
     },
     "parc-estacio-nord": {
       "tip": "Un parque tranquilo y poco conocido: perfecto para hacer una pausa lejos de las multitudes.",
@@ -971,7 +1534,20 @@
         }
       },
       "srcHash": "5a4fb5663e",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/parc-estacio-nord.mp3",
+          "hash": "56ccc6a09a"
+        },
+        "outdoors": {
+          "file": "audio/es/parc-estacio-nord--outdoors.mp3",
+          "hash": "b061675e4a"
+        },
+        "art": {
+          "file": "audio/es/parc-estacio-nord--art.mp3",
+          "hash": "2c1217aa13"
+        }
+      }
     },
     "jardins-palau-robert": {
       "tip": "El jardín es gratuito: aprovecha para descansar aquí antes de volver al bullicio del Passeig de Gràcia.",
@@ -993,7 +1569,20 @@
         }
       },
       "srcHash": "a7b8570406",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/jardins-palau-robert.mp3",
+          "hash": "95394a77cf"
+        },
+        "outdoors": {
+          "file": "audio/es/jardins-palau-robert--outdoors.mp3",
+          "hash": "05058eb160"
+        },
+        "architecture": {
+          "file": "audio/es/jardins-palau-robert--architecture.mp3",
+          "hash": "db4e08aac7"
+        }
+      }
     },
     "platja-sant-sebastia": {
       "tip": "Ponte algo encima cuando vuelvas a las calles del barrio: es una petición de los vecinos y, además, lo exige la ley.",
@@ -1015,7 +1604,20 @@
         }
       },
       "srcHash": "49d2e7a253",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/platja-sant-sebastia.mp3",
+          "hash": "f62f8d7c4f"
+        },
+        "outdoors": {
+          "file": "audio/es/platja-sant-sebastia--outdoors.mp3",
+          "hash": "54980d8b1d"
+        },
+        "local": {
+          "file": "audio/es/platja-sant-sebastia--local.mp3",
+          "hash": "03eb301278"
+        }
+      }
     },
     "gimnas-sole": {
       "tip": "Es una calle residencial: busca la placa sin hacer ruido y no bloquees los portales.",
@@ -1037,7 +1639,20 @@
         }
       },
       "srcHash": "2e9c5ebe00",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/gimnas-sole.mp3",
+          "hash": "6efa85eaaa"
+        },
+        "sports": {
+          "file": "audio/es/gimnas-sole--sports.mp3",
+          "hash": "06947708ec"
+        },
+        "history": {
+          "file": "audio/es/gimnas-sole--history.mp3",
+          "hash": "06c288bad4"
+        }
+      }
     },
     "font-canaletes": {
       "tip": "Las noches de partido esto se llena hasta los topes: si vienes a celebrar, respeta a los vecinos que viven en la Rambla.",
@@ -1064,7 +1679,24 @@
         }
       },
       "srcHash": "e766400c22",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/font-canaletes.mp3",
+          "hash": "649c540777"
+        },
+        "sports": {
+          "file": "audio/es/font-canaletes--sports.mp3",
+          "hash": "3aab81d51a"
+        },
+        "local": {
+          "file": "audio/es/font-canaletes--local.mp3",
+          "hash": "1a5d38274b"
+        },
+        "history": {
+          "file": "audio/es/font-canaletes--history.mp3",
+          "hash": "da61593052"
+        }
+      }
     },
     "nou-sardenya": {
       "tip": "Si hay partido en casa, comprar una entrada es una forma estupenda de vivir el fútbol local de cerca.",
@@ -1086,7 +1718,20 @@
         }
       },
       "srcHash": "18b1b74ecc",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/nou-sardenya.mp3",
+          "hash": "d2c8647e0c"
+        },
+        "sports": {
+          "file": "audio/es/nou-sardenya--sports.mp3",
+          "hash": "be8c08e432"
+        },
+        "local": {
+          "file": "audio/es/nou-sardenya--local.mp3",
+          "hash": "4631d3e6ca"
+        }
+      }
     },
     "club-natacio": {
       "tip": "El club es solo para socios, pero la playa que tiene delante está abierta a todo el mundo.",
@@ -1108,7 +1753,20 @@
         }
       },
       "srcHash": "bed1fe9f2e",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/club-natacio.mp3",
+          "hash": "79dfd96941"
+        },
+        "sports": {
+          "file": "audio/es/club-natacio--sports.mp3",
+          "hash": "6451b967e5"
+        },
+        "outdoors": {
+          "file": "audio/es/club-natacio--outdoors.mp3",
+          "hash": "4753e74a40"
+        }
+      }
     },
     "port-olimpic": {
       "tip": "Pasead por el paseo marítimo hacia la Barceloneta: es uno de los mejores paseos junto al mar de toda la ciudad.",
@@ -1135,7 +1793,24 @@
         }
       },
       "srcHash": "c73056d1b0",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/port-olimpic.mp3",
+          "hash": "793639575e"
+        },
+        "sports": {
+          "file": "audio/es/port-olimpic--sports.mp3",
+          "hash": "0fb0d131b8"
+        },
+        "outdoors": {
+          "file": "audio/es/port-olimpic--outdoors.mp3",
+          "hash": "6969277c87"
+        },
+        "history": {
+          "file": "audio/es/port-olimpic--history.mp3",
+          "hash": "3fc7681a3c"
+        }
+      }
     },
     "teatre-romea": {
       "tip": "Echa un vistazo a la programación: algunas funciones tienen sobretítulos.",
@@ -1157,7 +1832,20 @@
         }
       },
       "srcHash": "1f42cbfb9c",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/teatre-romea.mp3",
+          "hash": "e29eb74e38"
+        },
+        "culture": {
+          "file": "audio/es/teatre-romea--culture.mp3",
+          "hash": "1db8d2a2f8"
+        },
+        "history": {
+          "file": "audio/es/teatre-romea--history.mp3",
+          "hash": "96fbf7ef54"
+        }
+      }
     },
     "liceu": {
       "tip": "Hay visitas guiadas casi todos los días, y las entradas de última hora pueden salir sorprendentemente baratas.",
@@ -1184,7 +1872,24 @@
         }
       },
       "srcHash": "4d6e8e54d0",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/liceu.mp3",
+          "hash": "3db34f8101"
+        },
+        "culture": {
+          "file": "audio/es/liceu--culture.mp3",
+          "hash": "f742f6c0be"
+        },
+        "history": {
+          "file": "audio/es/liceu--history.mp3",
+          "hash": "1518839230"
+        },
+        "architecture": {
+          "file": "audio/es/liceu--architecture.mp3",
+          "hash": "8b0cc3b5b8"
+        }
+      }
     },
     "filmoteca": {
       "tip": "Las entradas son baratas: ver aquí un clásico del cine es un plan de tarde-noche de lo más local y agradable.",
@@ -1201,7 +1906,16 @@
         }
       },
       "srcHash": "b905c62eb8",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/filmoteca.mp3",
+          "hash": "ef31b2b6a6"
+        },
+        "culture": {
+          "file": "audio/es/filmoteca--culture.mp3",
+          "hash": "b15dcb6123"
+        }
+      }
     },
     "el-molino": {
       "tip": "Encima de los teatros del Paral·lel vive gente: cuando terminen las funciones, mantén la calma y no hagas ruido.",
@@ -1228,7 +1942,24 @@
         }
       },
       "srcHash": "7f9e4a809a",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/el-molino.mp3",
+          "hash": "a83399d23f"
+        },
+        "culture": {
+          "file": "audio/es/el-molino--culture.mp3",
+          "hash": "13930c5f93"
+        },
+        "local": {
+          "file": "audio/es/el-molino--local.mp3",
+          "hash": "0caab21eb4"
+        },
+        "history": {
+          "file": "audio/es/el-molino--history.mp3",
+          "hash": "84dd24bdce"
+        }
+      }
     },
     "placa-orwell": {
       "tip": "Alrededor de la plaza vive gente: disfruta de las terrazas, pero por la noche baja la voz.",
@@ -1250,7 +1981,20 @@
         }
       },
       "srcHash": "b80499ff3e",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-orwell.mp3",
+          "hash": "905239b4ae"
+        },
+        "culture": {
+          "file": "audio/es/placa-orwell--culture.mp3",
+          "hash": "d680b2a6c6"
+        },
+        "history": {
+          "file": "audio/es/placa-orwell--history.mp3",
+          "hash": "50b56aac64"
+        }
+      }
     },
     "arc-teatre": {
       "tip": "Es una calle estrecha donde vive gente: por favor, no llames a las puertas buscando la biblioteca.",
@@ -1267,7 +2011,16 @@
         }
       },
       "srcHash": "f28d81bbc5",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/arc-teatre.mp3",
+          "hash": "c6718d10bc"
+        },
+        "culture": {
+          "file": "audio/es/arc-teatre--culture.mp3",
+          "hash": "2f817bb8d1"
+        }
+      }
     },
     "la-central": {
       "tip": "Curiosea en silencio, como harías en una biblioteca, y apoya a la librería si encuentras algo que te guste.",
@@ -1284,7 +2037,16 @@
         }
       },
       "srcHash": "c2341f6117",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/la-central.mp3",
+          "hash": "3242713373"
+        },
+        "culture": {
+          "file": "audio/es/la-central--culture.mp3",
+          "hash": "4316f9139c"
+        }
+      }
     },
     "biblioteca-arus": {
       "tip": "Es una biblioteca en funcionamiento: escucha la historia aquí fuera, y dentro guarda silencio y no fotografíes a los lectores.",
@@ -1296,7 +2058,12 @@
         }
       },
       "srcHash": "manual-bd05d4911b",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/biblioteca-arus.mp3",
+          "hash": "23e7059be5"
+        }
+      }
     },
     "can-framis": {
       "tip": "La plaza de delante está abierta a todo el mundo; el museo tiene entrada y horarios.",
@@ -1308,7 +2075,12 @@
         }
       },
       "srcHash": "manual-f923c047ab",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/can-framis.mp3",
+          "hash": "42a73c0c32"
+        }
+      }
     },
     "diposit-aigues": {
       "tip": "Es una biblioteca universitaria: disfrútala desde la calle y deja la entrada libre para los estudiantes.",
@@ -1320,7 +2092,12 @@
         }
       },
       "srcHash": "manual-de7027000a",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/diposit-aigues.mp3",
+          "hash": "2644526e6f"
+        }
+      }
     },
     "escola-industrial": {
       "tip": "Es un campus en funcionamiento: quédate en los caminos abiertos, no entres en los edificios y habla bajo cerca de las aulas.",
@@ -1332,7 +2109,12 @@
         }
       },
       "srcHash": "manual-3a8d76ff2d",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/escola-industrial.mp3",
+          "hash": "973ff2087d"
+        }
+      }
     },
     "farinera-clot": {
       "tip": "Es el centro cultural del barrio: deja la entrada libre y no interrumpas clases ni ensayos.",
@@ -1344,7 +2126,12 @@
         }
       },
       "srcHash": "manual-7b4cffd094",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/farinera-clot.mp3",
+          "hash": "5e0da5ec76"
+        }
+      }
     },
     "sant-pau-del-camp": {
       "tip": "Sigue siendo una iglesia parroquial: si entras, evita las horas de culto y habla bajo.",
@@ -1356,7 +2143,12 @@
         }
       },
       "srcHash": "manual-e23005ac70",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/sant-pau-del-camp.mp3",
+          "hash": "67dda77a95"
+        }
+      }
     },
     "sant-pere-puelles": {
       "tip": "Alrededor de esta plaza viven vecinos y sigue siendo una iglesia: escucha desde el lado abierto, lejos de las puertas y los escalones.",
@@ -1368,7 +2160,12 @@
         }
       },
       "srcHash": "manual-7b52557c80",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/sant-pere-puelles.mp3",
+          "hash": "0b32063e14"
+        }
+      }
     },
     "via-sepulcral-romana": {
       "tip": "No hace falta entrada para ver las tumbas desde la plaza: haz turno en la barandilla y deja sitio a los demás.",
@@ -1380,7 +2177,12 @@
         }
       },
       "srcHash": "manual-eef56760e5",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/via-sepulcral-romana.mp3",
+          "hash": "60fc89690b"
+        }
+      }
     },
     "disseny-hub": {
       "tip": "La plaza de fuera es espacio público; el museo tiene entrada y horarios. Deja libres los carriles bici y los caminos del parque.",
@@ -1392,7 +2194,12 @@
         }
       },
       "srcHash": "manual-b2efc247c0",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/disseny-hub.mp3",
+          "hash": "174fb4f393"
+        }
+      }
     },
     "mercat-boqueria": {
       "tip": "Es un mercado en funcionamiento y muy concurrido: ven temprano un día laborable, compra algo si te paras y pide permiso antes de fotografiar a los paradistas.",
@@ -1404,7 +2211,12 @@
         }
       },
       "srcHash": "manual-818592f2d0",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mercat-boqueria.mp3",
+          "hash": "c79cba9a79"
+        }
+      }
     },
     "mirador-poble-sec": {
       "tip": "Es el parque del barrio: comparte los caminos con los niños y con quien pasea al perro, y nada de música ni gritos.",
@@ -1416,7 +2228,12 @@
         }
       },
       "srcHash": "manual-6ce547688e",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/mirador-poble-sec.mp3",
+          "hash": "97b1214ab8"
+        }
+      }
     },
     "moll-de-la-fusta": {
       "tip": "Corredores, ciclistas y familias comparten este paseo: camina por el lado de peatones y no te pares en el carril bici.",
@@ -1428,7 +2245,12 @@
         }
       },
       "srcHash": "manual-5e04f36ced",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/moll-de-la-fusta.mp3",
+          "hash": "1886cbc030"
+        }
+      }
     },
     "placa-del-pi": {
       "tip": "Encima de las terrazas vive gente y la iglesia está en uso: habla bajo y deja libres los escalones de la iglesia.",
@@ -1440,7 +2262,12 @@
         }
       },
       "srcHash": "manual-6d221f06bb",
-      "audio": {}
+      "audio": {
+        "base": {
+          "file": "audio/es/placa-del-pi.mp3",
+          "hash": "9c4f18e001"
+        }
+      }
     }
   },
   "activities": {
