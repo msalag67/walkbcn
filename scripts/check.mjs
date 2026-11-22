@@ -102,6 +102,8 @@ for (const e of W.WALKBCN_DISCOVERIES || []) {
       else fail(`${mw}: unknown question kind`);
       if (c.type === 'hunt') { if ((m.clues || []).length < 2) fail(`${mw}: a hunt needs clues`); (m.clues || []).forEach((x, k) => all7(x, `${mw} clue ${k + 1}`)); }
       if (c.type === 'mystery') all7(m.piece, `${mw} clue piece`);
+      if (m.hint) all7(m.hint, `${mw} hint`);
+      if (m.goHint) all7(m.goHint, `${mw} directions hint`);
       if (c.type === 'story' && m.variant && !W.WALKBCN_STORIES?.[m.stop]?.variants?.[m.variant]) fail(`${mw}: no ${m.variant} story`);
     });
   }

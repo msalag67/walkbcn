@@ -622,14 +622,14 @@ const CH_PLAY = `window.__play = async (id) => {
       const k = [0, 1, 2].find((k) => st.done[k] == null);
       root.querySelectorAll('.ch-cell')[k].click(); await w(30);
       if (k === 0) { q('[data-chact="locate"]').click(); await w(60); continue; }
-      const m = c.missions[k]; root.querySelector('[data-chans="' + m.q.answer + '"]').click(); await w(650); continue;
+      const m = c.missions[chMi(c, st, k)]; root.querySelector('[data-chans="' + m.q.answer + '"]').click(); await w(650); continue;
     }
     if (st.stage === 'find') { ev.nameHiddenWhileSearching = !q('.ch-place'); ev.clues1 = root.querySelectorAll('.clues li').length; if (q('[data-chact="clue"]')) { q('[data-chact="clue"]').click(); await w(20); ev.clues2 = root.querySelectorAll('.clues li').length; } }
     const loc = (st.stage === 'find' || st.stage === 'arrive') && q('[data-chact="locate"]');
     if (loc) { loc.click(); await w(60); continue; }
     if (q('[data-chact="toq"]')) { ev.story = (q('.story')?.textContent || '').length; ev.audio = !!q('audio'); q('[data-chact="toq"]').click(); await w(30); continue; }
     if (c.type === 'observe' && q('.ch-gps')) ev.optionalGps = /Optional/.test(q('.ch-gps').textContent);
-    const m = c.missions[st.i];
+    const m = c.missions[chMi(c, st, st.i)];
     // a wrong answer first: it must not advance
     if (m.q.kind === 'choice') { const wrong = (m.q.answer + 1) % m.q.options.length; root.querySelector('[data-chans="' + wrong + '"]').click(); await w(30); ev.wrongStays = chState(c).i === st.i && /Not quite/.test(q('.ch-feedback').textContent); }
     if (m.q.kind === 'number') { q('#chNum').value = String(m.q.answer); q('[data-chans="num"]').click(); }
@@ -712,13 +712,52 @@ await test("P3A-langs", "Challenges show in all 7 languages, and fit a 375 px sc
       const title = document.querySelector('#chalRoot .ch-card b').textContent, tab = document.getElementById('tabChal').textContent;
       chView.id = 'born-observe'; chDemo = true; chDemoState = {}; renderCh(); document.querySelector('[data-chact="go"]').click();
       const prompt = document.querySelector('.ch-prompt').textContent;
-      out[l] = { ok: title === CHALLENGES[0].title[l] && prompt === CHALLENGES[2].missions[0].q.prompt[l] && !/^ch[A-Z]/.test(tab), wide: document.documentElement.scrollWidth > document.documentElement.clientWidth };
+      out[l] = { ok: title === CHALLENGES[0].title[l] && prompt === CHALLENGES[2].missions[chMi(CHALLENGES[2], chState(CHALLENGES[2]), 0)].q.prompt[l] && !/^ch[A-Z]/.test(tab), wide: document.documentElement.scrollWidth > document.documentElement.clientWidth };
       chDemo = false; chDemoState = {}; chView.id = null;
     }
     await setLang('en');
     return out;
   });
   return { ok: Object.values(r).every((x) => x.ok && !x.wide), detail: r };
+});
+
+await test("P3A-variety", "Challenges: each new game is a new variant (bingo board, mystery order, option order); a saved game keeps its own", async (page) => {
+  await open(page);
+  const r = await page.evaluate(() => {
+    let nextSeed = 1000;   // fixed seeds: the test doesn't depend on luck
+    const play = (id) => { chView.id = id; delete chStore()[id]; renderCh(); document.querySelector('[data-chact="go"]').click(); const c = chById(id), st = chState(c); st.seed = nextSeed++; return { order: chPlan(c, st).order.join(), opts: JSON.stringify(chPlan(c, st).opts), seed: st.seed }; };
+    showTab('chal'); chDemo = true; chDemoState = {};
+    const res = {};
+    for (const id of ['rambla-bingo', 'barcino-mystery', 'born-observe', 'modernisme-hunt', 'barca-story']) {
+      const runs = [...Array(10)].map(() => play(id));
+      res[id] = { orders: new Set(runs.map((x) => x.order)).size, opts: new Set(runs.map((x) => x.opts)).size };
+    }
+    res.mysteryLastFixed = [...Array(6)].every(() => play('barcino-mystery').order.endsWith(',3'));
+    // a game in progress keeps its variant when it is reopened
+    const c = chById('rambla-bingo'), first = play('rambla-bingo'); chView.id = null; renderCh(); chView.id = 'rambla-bingo'; renderCh();
+    res.keeps = chPlan(c, chState(c)).order.join() === first.order;
+    chDemo = false; chDemoState = {};
+    return res;
+  });
+  const ok = r['rambla-bingo'].orders > 1 && r['barcino-mystery'].orders > 1 && r['born-observe'].orders === 2 && r['modernisme-hunt'].orders === 1 && r['barca-story'].orders === 1 &&
+    Object.values(r).filter((x) => x.opts).every((x) => x.opts > 1) && r.mysteryLastFixed && r.keeps;
+  return { ok, detail: r };
+});
+
+await test("P3A-bingo-once", "Bingo: one try per question; a wrong answer locks it and only a location check marks the square", async (page) => {
+  await open(page);
+  const r = await page.evaluate(() => {
+    showTab('chal'); chDemo = true; chDemoState = {}; chView.id = 'rambla-bingo'; renderCh(); document.querySelector('[data-chact="go"]').click();
+    const c = chById('rambla-bingo'), st = chState(c);
+    document.querySelectorAll('.ch-cell')[0].click();
+    const m = c.missions[chMi(c, st, 0)], wrong = (m.q.answer + 1) % m.q.options.length;
+    document.querySelector('[data-chans="' + wrong + '"]').click();
+    const locked = !!document.querySelector('.ch-locked') && !document.querySelector('.ch-q') && st.done[0] == null;
+    return { locked, hasLocate: !!document.querySelector('[data-chact="locate"]') };
+  });
+  await page.evaluate(() => document.querySelector('[data-chact="locate"]').click()); await page.waitForTimeout(150);
+  const after = await page.evaluate(() => { const c = chById('rambla-bingo'), st = chState(c); const out = { marked: st.done[0], crossed: document.querySelectorAll('.ch-cell.done').length }; chDemo = false; chDemoState = {}; return out; });
+  return { ok: r.locked && r.hasLocate && after.marked === 'demo' && after.crossed === 1, detail: { ...r, ...after } };
 });
 
 clearTimeout(watchdog);

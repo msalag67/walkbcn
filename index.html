@@ -899,6 +899,7 @@
   .tabs { flex-wrap: wrap; row-gap: 4px; }   /* five tabs: wrap on narrow screens so Challenges stays visible */
   .tabs button { white-space: nowrap; }
   .tab-chal { font-weight: 700 !important; }
+  .tab-chal::before { content: '★ '; color: #d4a000; }
   #chalView { padding: 8px 0 40px; }
   .ch-h1 { font: 400 clamp(30px, 6vw, 44px)/1.08 var(--display); margin: 12px 0 10px; }
   .ch-kicker { font: 600 13px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 14px 0 4px; }
@@ -906,9 +907,9 @@
   .ch-demo-toggle { margin-top: 14px; }
   .ch-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 18px; }
   .ch-card { display: flex; flex-direction: column; text-align: left; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--panel, #fff); color: inherit; padding: 0; cursor: pointer; font: inherit; }
-  .ch-img { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; }
+  .ch-img { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: linear-gradient(135deg, #1d3f8f, #5a7fd6); }
   .ch-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .ch-type { position: absolute; left: 10px; top: 10px; font: 700 12px var(--sans); font-style: normal; background: var(--accent); color: #111; border-radius: 999px; padding: 4px 10px; }
+  .ch-type { position: absolute; left: 10px; top: 10px; font: 700 12px var(--sans); font-style: normal; background: #fff; color: #0a1f5c; border-radius: 999px; padding: 5px 11px; box-shadow: 0 1px 6px rgba(0,0,0,.35); }
   .ch-body { display: grid; gap: 6px; padding: 14px 16px 16px; }
   .ch-body b { font: 400 22px/1.15 var(--display); }
   .ch-meta { font-size: 13px; color: var(--muted); }
@@ -942,15 +943,31 @@
   .ch-notebook ol { margin: 6px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15px; }
   .ch-audio { width: 100%; margin: 8px 0; }
   .ch-src { font-size: 13px; color: var(--muted); }
-  .ch-board { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 8px; margin: 14px 0; }
-  .ch-cell { position: relative; display: grid; gap: 4px; padding: 0 0 8px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel, #fff); color: inherit; font: 600 12px/1.2 var(--sans); cursor: pointer; text-align: center; }
-  .ch-cell img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
-  .ch-cell span { padding: 0 4px; }
-  .ch-cell.sel { outline: 3px solid var(--accent); }
-  .ch-cell.done img { opacity: .45; }
-  .ch-cell i { position: absolute; top: 6px; right: 6px; background: var(--accent); color: #111; border-radius: 50%; width: 26px; height: 26px; display: grid; place-items: center; font-style: normal; font-weight: 800; }
+  .ch-board { position: relative; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 8px; margin: 12px 0; }
+  /* a marked square is crossed out (pen stroke over the photo, name struck through) */
+  .ch-cell.done .ch-thumb::after { content: ''; position: absolute; left: 8%; right: 8%; top: 50%; height: 3px; border-radius: 2px; background: rgba(10,31,92,.7); transform: rotate(-24deg); z-index: 1; }
+  .ch-cell.done .ch-name { text-decoration: line-through; text-decoration-thickness: 2px; }
+  /* a completed line is struck through the whole board */
+  .ch-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; overflow: visible; }
+  .ch-lines line { stroke: #0a1f5c; stroke-opacity: .85; stroke-width: 9px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .ch-cell { position: relative; display: grid; gap: 3px; padding: 0 0 6px; border: 2px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel, #fff); color: inherit; font: 600 13px/1.2 var(--sans); cursor: pointer; text-align: center; }
+  .ch-thumb { position: relative; display: block; aspect-ratio: 16 / 10; background: linear-gradient(135deg, #1d3f8f, #5a7fd6); }
+  .ch-thumb::before { content: attr(data-i); position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font: 400 28px var(--display); }
+  .ch-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ch-name { padding: 0 3px; }
+  .ch-cell.sel { outline: 3px solid #0a2a8a; outline-offset: 1px; }
+  .ch-cell.done { border-color: #1b7f3b; }
+  .ch-thumb:has(img[src]) { background: #fff; }   /* the initial only shows when the photo is missing */
+  .ch-thumb:has(img[src])::before { display: none; }
+  .ch-cell.done img { opacity: .55; }
+  .ch-cell.line { background: #fff3b0; border-color: #b8860b; }
+  .ch-cell i { position: absolute; top: 5px; right: 5px; background: #1b7f3b; color: #fff; border-radius: 50%; width: 26px; height: 26px; display: grid; place-items: center; font-style: normal; font-weight: 800; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+  .ch-reread { margin-top: 8px; font-weight: 400; color: var(--ink, inherit); }
+  .ch-reread summary { cursor: pointer; font-weight: 600; text-decoration: underline; }
+  .ch-reread p { font-size: 15px; margin: 8px 0 0; }
   .ch-panel { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 6px; }
   .ch-or { font-weight: 600; color: var(--muted); margin: 6px 0 0; }
+  .ch-locked { border-left: 3px solid #b3261e; padding: 4px 10px; font-weight: 600; }
   .ch-done { text-align: center; padding: 20px 0; }
   .ch-done .actions { justify-content: center; }
   .ch-trophy { font-size: 64px; margin: 0; color: var(--accent); }
@@ -1317,10 +1334,10 @@
 <script src="data/stops.js?v=1061714f"></script>
 <script src="data/cards.js?v=3aa26f13"></script>
 <script src="data/activities.js?v=311590b9"></script>
-<script src="data/ui.js?v=592a793e"></script>
+<script src="data/ui.js?v=1d3fc832"></script>
 <script src="data/tips.js?v=4dbc081d"></script>
 <script src="data/discoveries.js?v=c47d191e"></script>
-<script src="data/challenges.js?v=23e9978c"></script>
+<script src="data/challenges.js?v=9d529f07"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=afdf06e4"></script>
 <script>
@@ -1348,7 +1365,7 @@ const THEMES = {
                 pool: ['santa-maria-del-mar', 'barcelona-cathedral', 'placa-del-rei', 'placa-sant-jaume', 'placa-sant-felip-neri', 'temple-august',
                        'placa-reial', 'liceu', 'font-canaletes', 'palau-de-la-musica-catalana', 'mercat-de-santa-caterina', 'museu-picasso',
                        'palau-guell', 'antic-hospital', 'port-vell', 'fossar-moreres', 'via-sepulcral-romana', 'sant-pere-puelles', 'placa-del-pi'] },
-  barca:      { img: '34 Fundació del F.C. Barcelona, c. Montjuïc del Carme.jpg', interests: ['sports', 'history'], mode: 'stops', n: 3,
+  barca:      { img: 'Barça 2011 05 11 Canaletes - celebració lliga.JPG', interests: ['sports', 'history'], mode: 'stops', n: 3,
                 pool: ['gimnas-sole', 'font-canaletes', 'placa-sant-jaume'], act: 'sports' },
   gracia:     { img: 'Young adults sit and talk in Plaza del Sol in Barcelona.jpg', interests: ['local', 'food', 'history', 'architecture'], mode: 'time', minutes: 90,
                 pool: ['mercat-de-la-llibertat', 'placa-del-sol', 'casa-vicens', 'placa-vila-gracia', 'placa-virreina', 'mercat-abaceria'] },
@@ -4004,6 +4021,15 @@ function refreshGuideTexts() {
 const CHALLENGES = window.WALKBCN_CHALLENGES || [];
 CHALLENGES.forEach(c => { if (c.credit && !PHOTOS[c.img]) PHOTOS[c.img] = c.credit; });
 const CH_KEY = 'walkbcn_challenges_v1';
+// Wikimedia sometimes refuses a few photos when many are asked for at once. Try a failed one
+// again once, after a short random wait, before leaving the coloured fallback tile.
+function chImgRetry(img) {
+  if (img.dataset.retried) { img.remove(); return; }
+  img.dataset.retried = '1';
+  const src = img.src;
+  img.removeAttribute('src');
+  setTimeout(() => { img.src = src; }, 1500 + Math.random() * 2000);
+}
 const chL = o => (o && typeof o === 'object' ? o[lang] || o.en : o);
 let chSaved = (() => { try { return JSON.parse(localStorage.getItem(CH_KEY)) || {}; } catch (e) { return {}; } })();
 let chDemo = false, chDemoState = {}, chView = { id: null };
@@ -4011,6 +4037,35 @@ const chStore = () => (chDemo ? chDemoState : chSaved);
 const chSave = () => { if (!chDemo) try { localStorage.setItem(CH_KEY, JSON.stringify(chSaved)); } catch (e) {} };
 const chById = id => CHALLENGES.find(c => c.id === id);
 const chState = c => (chStore()[c.id] ||= { i: 0, stage: 'start', clues: 1, done: {}, notes: [], finished: false });
+// Each game gets its own variant from a seed (saved with the progress, so "Continue" keeps it;
+// "Start again" makes a new one; later, friends could share a seed to play the same variant).
+// What may change depends on the game, so no clue or story stops making sense:
+//   bingo    squares in new positions (different lines win)
+//   mystery  the first stops in any order (a few metres apart); the solving stop stays last
+//   observe  the walk in one direction or the other
+//   hunt, story  same order (relative clues; a chronological story)
+// In every game the answer options are shuffled.
+function chRng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+function chShuffle(arr, rnd) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+const chPlans = new WeakMap();
+function chPlan(c, st) {
+  const key = `${st.seed}`, cached = chPlans.get(st);
+  if (cached?.key === key) return cached;
+  const n = c.missions.length, ids = [...Array(n).keys()];
+  let order = ids;
+  const opts = {};
+  if (st.seed != null) {
+    const rnd = chRng(st.seed);
+    if (c.type === 'bingo') order = chShuffle(ids, rnd);
+    else if (c.type === 'mystery') order = [...chShuffle(ids.slice(0, -1), rnd), n - 1];
+    else if (c.type === 'observe') order = rnd() < 0.5 ? ids : [...ids].reverse();
+    c.missions.forEach((m, k) => { if (m.q.kind === 'choice') opts[k] = chShuffle(m.q.options.map((_, j) => j), rnd); });
+  }
+  const plan = { key, order, opts };
+  chPlans.set(st, plan);
+  return plan;
+}
+const chMi = (c, st, pos) => chPlan(c, st).order[pos];   // position in this game → mission index
 const chDoneN = (c, st) => Object.keys(st.done).length;
 function chLines(st, n = 3) {
   const has = k => st.done[k] != null, L = [];
@@ -4049,7 +4104,7 @@ function renderChHome() {
       const st = chStore()[c.id], n = c.missions.length, d = st ? chDoneN(c, st) : 0;
       const badge = st?.finished ? t('chCompleted') : st && st.stage !== 'start' ? t('chProgress', { d, n }) : '';
       return `<button type="button" class="ch-card" data-ch="${c.id}">
-        <span class="ch-img"><img src="${photo(c.img, 500)}" alt="" loading="lazy"><i class="ch-type">${t(`chType_${c.type}`)}</i></span>
+        <span class="ch-img"><img src="${photo(c.img, 500)}" alt="" loading="lazy" style="object-position:${c.imgPos || 'center'}" onerror="chImgRetry(this)"><i class="ch-type">${t(`chType_${c.type}`)}</i></span>
         <span class="ch-body"><b>${escHtml(chL(c.title))}</b><span>${escHtml(chL(c.desc))}</span>
         <span class="ch-meta">${t('chMinutes', { m: c.minutes })} · ${t(c.type === 'bingo' ? 'chSquares' : 'chMissions', { n })}${badge ? ` · <em>${badge}</em>` : ''}</span></span></button>`;
     }).join('')}</div>`;
@@ -4061,21 +4116,21 @@ const chTop = (c, st) => `<button type="button" class="ghost ch-back" data-chact
 function renderChIntro(c, st) {
   const fresh = !chDoneN(c, st);
   chRoot().innerHTML = `${chTop(c, st)}
-    <figure class="stop-photo ch-cover"><img src="${photo(c.img, 960)}" alt="">${creditHtml(c.img)}</figure>
+    <figure class="stop-photo ch-cover"><img src="${photo(c.img, 960)}" alt="" style="object-position:${c.imgPos || 'center'}">${creditHtml(c.img)}</figure>
     <p class="lead">${escHtml(chL(c.intro))}</p>
     ${c.frame ? `<p class="ch-fiction">${escHtml(chL(c.frame))}</p>` : ''}
-    <div class="ch-how"><b>${t('chHowTitle')}</b><p>${t(`chHow_${c.type}`)}</p><p class="hint">${t('chSafety')}</p></div>
+    <div class="ch-how"><b>${t('chHowTitle')}</b><p>${t(`chHow_${c.type}`)}</p><p>${t(c.type === 'hunt' || c.type === 'story' ? 'chVariantOpts' : 'chVariant')}</p><p class="hint">${t('chSafety')}</p></div>
     <p class="ch-meta">${t('chMinutes', { m: c.minutes })} · ${t(c.type === 'bingo' ? 'chSquares' : 'chMissions', { n: c.missions.length })}</p>
     <div class="actions"><button type="button" class="book go" data-chact="go">${t(fresh ? 'chStart' : 'chContinue')}</button>
     ${fresh ? '' : `<button type="button" class="ghost" data-chact="reset">${t('chRestart')}</button>`}</div>`;
   chWire(c, st);
 }
 // Question block, shared by every game: choice, true/false or a number to count on the spot.
-function chQuestion(q, key) {
+function chQuestion(q, key, perm) {
   const opts = q.kind === 'truefalse' ? [t('chTrue'), t('chFalse')] : (q.options || []).map(chL);
   return `<div class="ch-q" data-q="${key}"><p class="ch-prompt">${escHtml(chL(q.prompt))}</p>
     ${q.kind === 'number' ? `<div class="ch-num"><input type="number" inputmode="numeric" min="0" max="99" id="chNum" aria-label="${t('chAnswerLabel')}"><button type="button" class="book go" data-chans="num">${t('chCheckAnswer')}</button></div>`
-      : `<div class="ch-opts">${opts.map((o, k) => `<button type="button" class="chip" data-chans="${k}">${escHtml(o)}</button>`).join('')}</div>`}
+      : `<div class="ch-opts">${(perm || opts.map((_, k) => k)).map(k => `<button type="button" class="chip" data-chans="${k}">${escHtml(opts[k])}</button>`).join('')}</div>`}
     <p class="ch-feedback" role="status"></p></div>`;
 }
 const chRight = (q, v) => (q.kind === 'number' ? +v === q.answer : q.kind === 'truefalse' ? (v === '0') === q.answer : +v === q.answer);
@@ -4088,21 +4143,21 @@ function chGpsBlock(m, s, optional) {
     ${optional ? `<p class="hint">${t('chGpsOptional')}</p>` : ''}<p class="ch-gps-msg" role="status"></p></div>`;
 }
 function renderChMission(c, st) {
-  const m = c.missions[st.i], s = stopById(m.stop), last = st.i === c.missions.length - 1;
-  const named = c.type !== 'hunt' || st.stage !== 'find';
+  const mi = chMi(c, st, st.i), m = c.missions[mi], s = stopById(m.stop), last = st.i === c.missions.length - 1;
+  const named = (c.type !== 'hunt' || st.stage !== 'find') && !m.hideName;
   let body = '';
   if (st.stage === 'find' || st.stage === 'arrive') {
     if (c.type === 'hunt' && st.stage === 'find') {
       body = `<p class="ch-step">${t('chFindTitle')}</p><ol class="clues">${m.clues.slice(0, st.clues).map(x => `<li>${escHtml(chL(x))}</li>`).join('')}</ol>
         <div class="actions">${st.clues < m.clues.length ? `<button type="button" class="ghost" data-chact="clue">${t('surpriseClue', { n: st.clues + 1 })}</button>` : ''}
         <button type="button" class="book go" data-chact="locate">${t(chDemo ? 'chCheckDemo' : 'chFoundIt')}</button></div><p class="ch-gps-msg" role="status"></p>`;
-    } else body = `<p class="ch-step">${t('chGoTo', { place: escHtml(s.name) })}</p>${chGpsBlock(m, s, false)}`;
+    } else body = `<p class="ch-step">${m.goHint ? escHtml(chL(m.goHint)) : t('chGoTo', { place: escHtml(s.name) })}</p>${chGpsBlock(m, s, false)}`;
   } else if (st.stage === 'story') {
     const v = storyText(s, m.variant || null, 'normal');
     body = `${v.audio ? `<audio controls preload="none" src="${v.audio}" class="ch-audio"></audio>` : ''}<p class="story">${v.text}</p>
       <div class="actions"><button type="button" class="book go" data-chact="toq">${t('chToQuestion')}</button></div>`;
   } else if (st.stage === 'question') {
-    body = `${c.type === 'observe' && st.done[st.i] == null && !st.seen?.[st.i] ? chGpsBlock(m, s, true) : ''}${chQuestion(m.q, st.i)}`;
+    body = `${c.type === 'observe' && st.done[st.i] == null && !st.seen?.[st.i] ? chGpsBlock(m, s, true) : ''}${chQuestion(m.q, st.i, chPlan(c, st).opts[mi])}`;
   }
   const notebook = c.type === 'mystery' && st.notes.length ? `<div class="ch-notebook"><b>${t('chNotebook')}</b><ol>${st.notes.map(k => `<li>${escHtml(chL(c.missions[k].piece))}</li>`).join('')}</ol></div>` : '';
   chRoot().innerHTML = `${chTop(c, st)}${chMissionDots(c, st)}
@@ -4110,24 +4165,37 @@ function renderChMission(c, st) {
     ${named ? `<figure class="stop-photo"><img src="${photo(s.img, 960)}" alt="">${creditHtml(s.img)}</figure><h2 class="ch-place">${escHtml(s.name)}</h2>` : ''}
     ${body}${notebook}
     <p class="ch-src">${t('chSources')} ${m.sources.map((u, k) => `<a href="${u}" target="_blank" rel="noopener">${k + 1}</a>`).join(' · ')}</p>
-    <div class="actions"><button type="button" class="ghost" data-chact="home">${t('chLeave')}</button></div>`;
+    <div class="actions"><button type="button" class="ghost" data-chact="home">${t(chDemo ? 'chLeaveDemo' : 'chLeave')}</button></div>`;
   chWire(c, st);
 }
+// Completed lines are struck through across the board, from the first square's centre to the
+// last one's, like crossing out a line on a paper bingo card.
+function chLineSvg(lines, n) {
+  if (!lines.length) return '';
+  const at = k => [((k % n) + 0.5) / n * 100, (Math.floor(k / n) + 0.5) / n * 100];
+  return `<svg class="ch-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines.map(l => {
+    const [x1, y1] = at(l[0]), [x2, y2] = at(l[l.length - 1]);
+    return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
+  }).join('')}</svg>`;
+}
 function renderChBingo(c, st) {
-  const n = c.cols || 3, sel = st.sel, lines = chLines(st, n);
-  const cell = (m, k) => { const s = stopById(m.stop); return `<button type="button" class="ch-cell ${st.done[k] != null ? 'done' : ''} ${sel === k ? 'sel' : ''}" data-cell="${k}" aria-pressed="${st.done[k] != null}">
-    <img src="${photo(s.img, 160)}" alt="" loading="lazy"><span>${escHtml(s.name)}</span>${st.done[k] != null ? '<i aria-hidden="true">✓</i>' : ''}</button>`; };
+  const n = c.cols || 3, sel = st.sel, lines = chLines(st, n), inLine = new Set(lines.flat());
+  // Photos at the standard 500 px width the rest of the app uses (other widths are made on
+  // demand by Wikimedia and can be refused when nine are asked for at once); if one still
+  // fails, the square keeps a coloured tile with the place's initial.
+  const cell = (m, k) => { const s = stopById(m.stop); return `<button type="button" class="ch-cell ${st.done[k] != null ? 'done' : ''} ${inLine.has(k) ? 'line' : ''} ${sel === k ? 'sel' : ''}" data-cell="${k}" aria-pressed="${st.done[k] != null}">
+    <span class="ch-thumb" data-i="${escHtml(s.name.replace(/^(Mercat de la |Plaça de |Plaça |Gran Teatre del |Antic Hospital de la |Font de |Sant |Drassanes )/, '').charAt(0))}"><img src="${photo(s.img, 500)}" alt="" loading="lazy" onerror="chImgRetry(this)"></span><span class="ch-name">${escHtml(s.name)}</span>${st.done[k] != null ? '<i aria-hidden="true">✓</i>' : ''}</button>`; };
   let panel = '';
   if (sel != null && st.done[sel] == null) {
-    const m = c.missions[sel], s = stopById(m.stop);
-    panel = `<div class="ch-panel"><h2 class="ch-place">${escHtml(s.name)}</h2>${chGpsBlock(m, s, false)}<p class="ch-or">${t('chOrAnswer')}</p>${chQuestion(m.q, sel)}
+    const mi = chMi(c, st, sel), m = c.missions[mi], s = stopById(m.stop);
+    panel = `<div class="ch-panel"><h2 class="ch-place">${escHtml(s.name)}</h2>${chGpsBlock(m, s, false)}${st.failed?.[sel] ? `<p class="ch-locked">${t('chBingoLocked')}</p>` : `<p class="ch-or">${t('chOrAnswerOnce')}</p>${chQuestion(m.q, sel, chPlan(c, st).opts[mi])}`}
       <p class="ch-src">${t('chSources')} ${m.sources.map((u, k) => `<a href="${u}" target="_blank" rel="noopener">${k + 1}</a>`).join(' · ')}</p></div>`;
   }
   chRoot().innerHTML = `${chTop(c, st)}<p class="hint">${t('chBingoHint')}</p>
-    <div class="ch-board" style="--n:${n}">${c.missions.map(cell).join('')}</div>
+    <div class="ch-board" style="--n:${n}">${chPlan(c, st).order.map((mi, k) => cell(c.missions[mi], k)).join('')}${chLineSvg(lines, n)}</div>
     <p class="ch-kicker">${t('chProgress', { d: chDoneN(c, st), n: c.missions.length })}${lines.length ? ` · ${t('chBingoLines', { n: lines.length })}` : ''}</p>
     ${lines.length ? `<div class="actions"><button type="button" class="book go" data-chact="finish">${t('chBingoFinish')}</button><span class="hint">${t('chBingoKeep')}</span></div>` : ''}
-    ${panel}<div class="actions"><button type="button" class="ghost" data-chact="home">${t('chLeave')}</button></div>`;
+    ${panel}<div class="actions"><button type="button" class="ghost" data-chact="home">${t(chDemo ? 'chLeaveDemo' : 'chLeave')}</button></div>`;
   chWire(c, st);
 }
 function renderChDone(c, st) {
@@ -4140,7 +4208,7 @@ function renderChDone(c, st) {
 }
 // Next step after a mission is validated (by location, on-the-spot answer or demo).
 function chAdvance(c, st) {
-  if (c.type === 'mystery' && !st.notes.includes(st.i)) st.notes.push(st.i);
+  if (c.type === 'mystery' && !st.notes.includes(chMi(c, st, st.i))) st.notes.push(chMi(c, st, st.i));
   if (st.i >= c.missions.length - 1) { st.finished = true; track('Challenge completed', { ch: c.id, demo: chDemo ? 1 : 0 }); }
   else { st.i++; st.clues = 1; st.stage = c.type === 'observe' ? 'question' : 'find'; if (c.type !== 'hunt' && c.type !== 'observe') st.stage = 'arrive'; }
 }
@@ -4151,7 +4219,7 @@ function chWire(c, st) {
     const a = b.dataset.chact;
     if (a === 'home') { chView.id = null; renderCh(); window.scrollTo(0, 0); return; }
     if (a === 'reset') { delete chStore()[c.id]; chSave(); renderCh(); return; }
-    if (a === 'go') { if (st.stage === 'start') { st.stage = c.type === 'bingo' ? 'board' : c.type === 'observe' ? 'question' : c.type === 'hunt' ? 'find' : 'arrive'; track('Challenge started', { ch: c.id, demo: chDemo ? 1 : 0 }); } chSave(); renderCh(); window.scrollTo(0, 0); return; }
+    if (a === 'go') { if (st.stage === 'start') { st.seed = Math.floor(Math.random() * 2 ** 31); st.stage = c.type === 'bingo' ? 'board' : c.type === 'observe' ? 'question' : c.type === 'hunt' ? 'find' : 'arrive'; track('Challenge started', { ch: c.id, demo: chDemo ? 1 : 0 }); } chSave(); renderCh(); window.scrollTo(0, 0); return; }
     if (a === 'clue') { st.clues++; chSave(); renderCh(); return; }
     if (a === 'toq') { st.stage = 'question'; chSave(); renderCh(); return; }
     if (a === 'finish') { st.finished = true; chSave(); track('Challenge completed', { ch: c.id, demo: chDemo ? 1 : 0 }); renderCh(); window.scrollTo(0, 0); return; }
@@ -4160,7 +4228,7 @@ function chWire(c, st) {
       st.via = 'obs'; st.stage = c.type === 'story' ? 'story' : 'question'; chSave(); renderCh(); return;
     }
     if (a === 'locate') {
-      const k = c.type === 'bingo' ? st.sel : st.i, m = c.missions[k];
+      const k = c.type === 'bingo' ? st.sel : st.i, m = c.missions[chMi(c, st, k)];
       b.disabled = true; msg(t('chChecking'), true);
       const r = await chLocate(stopById(m.stop), m.r || 70);
       b.disabled = false;
@@ -4181,10 +4249,22 @@ function chWire(c, st) {
   });
   root.querySelectorAll('[data-cell]').forEach(b => b.onclick = () => { const k = +b.dataset.cell; st.sel = st.done[k] != null ? null : k; chSave(); renderCh(); });
   root.querySelectorAll('[data-chans]').forEach(b => b.onclick = () => {
-    const box = b.closest('.ch-q'), k = +box.dataset.q, m = c.missions[k];
+    const box = b.closest('.ch-q'), k = +box.dataset.q, m = c.missions[chMi(c, st, k)];
     const v = b.dataset.chans === 'num' ? root.querySelector('#chNum').value : b.dataset.chans;
     const fb = box.querySelector('.ch-feedback');
-    if (!chRight(m.q, v)) { fb.textContent = t('chWrong'); fb.className = 'ch-feedback warn'; if (b.classList.contains('chip')) b.disabled = true; return; }
+    // Bingo: one try per square. A wrong answer locks its question; the square can then only be
+    // marked by checking your location there.
+    if (c.type === 'bingo' && !chRight(m.q, v)) { (st.failed ||= {})[k] = true; chSave(); renderCh(); return; }
+    if (!chRight(m.q, v)) {
+      // Help from content already checked for this stop: the mission's own hint, what the
+      // practical card says to look at, and its story to read again (the answer is in it).
+      const s = stopById(m.stop), look = CARDS[s.id]?.look, story = storyText(s, m.variant || null, 'normal').text;
+      fb.className = 'ch-feedback warn';
+      fb.innerHTML = `${t('chWrongHelp')}${m.hint ? ` ${escHtml(chL(m.hint))}` : look ? ` ${t('chLookAt')} ${escHtml(chL(look))}` : ''}
+        ${story ? `<details class="ch-reread"><summary>${t('chReread')}</summary><p>${story}</p></details>` : ''}`;
+      if (b.classList.contains('chip')) b.disabled = true;
+      return;
+    }
     fb.textContent = t('chRight'); fb.className = 'ch-feedback ok';
     if (c.type === 'bingo') { st.done[k] = 'obs'; st.sel = null; chSave(); setTimeout(renderCh, 500); return; }
     st.done[k] = c.type === 'observe' ? (st.seen?.[k] || 'obs') : (st.via || 'obs'); st.via = null;
