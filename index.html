@@ -48,6 +48,11 @@
   .logo span { color: var(--accent); }
   .tag { color: var(--muted); font-size: 14px; margin-top: 6px; }
   .lang { position: relative; }
+  .head-actions { display: flex; align-items: center; gap: 8px; }
+  .head-about { padding: 7px 14px 7px 10px; white-space: nowrap; }
+  @media (max-width: 640px) { .head-about { width: 44px; padding: 0; justify-content: center; } .head-about svg { width: 22px; height: 22px; } .head-about span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
+  @media (max-width: 359px) { .head-actions { gap: 6px; } #langCode { display: none; } #langBtn { padding: 7px 10px; } }
+  .head-about svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
   .lang-btn { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 999px; padding: 7px 14px 7px 9px; font: 500 14px var(--sans); cursor: pointer; }
   .lang-btn img, .lang-menu img { width: 22px; height: 16px; border-radius: 2px; object-fit: cover; }
   .lang-menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 1000; background: var(--panel); border: 1px solid var(--line); padding: 6px; min-width: 180px; box-shadow: 0 10px 30px rgba(0,0,0,.6); }
@@ -233,6 +238,8 @@
   .privacy-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 18px; }
   .privacy-actions button { border: 1px solid #000; background: transparent; color: #000; border-radius: 999px; padding: 10px 16px; font: 500 15px var(--sans); cursor: pointer; }
   .privacy-actions .close { background: #000; color: #fff; }
+  .privacy-actions .about-write { border: 1px solid #000; color: #000; border-radius: 999px; padding: 10px 16px; font: 500 15px var(--sans); text-decoration: none; }
+  #about:not([data-form]) .about-write { display: none; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
   /* ===== Character layer: Barcelona at night ===== */
@@ -493,7 +500,7 @@
 
   /* Panels that were paper-coloured stay readable */
   dialog { background: #fff; color: var(--navy); }
-  .privacy-actions button { border-color: var(--navy); color: var(--navy); }
+  .privacy-actions button, .privacy-actions .about-write { border-color: var(--navy); color: var(--navy); }
   .privacy-actions .close { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
   .suggest { background: var(--sun); }
 
@@ -1132,11 +1139,14 @@
       <a class="logo" href="./" id="homeLink" aria-label="WalkBCN">Walk<span>BCN</span></a>
       <div class="tag" data-i18n="tagline">Your personal walking guide</div>
     </div>
+    <div class="head-actions">
+    <button type="button" class="lang-btn head-about" id="aboutHeadOpen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span data-i18n="aboutShort">About</span></button>
     <div class="lang">
       <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
         <img id="langFlag" src="assets/flags/gb.svg" alt=""><span id="langCode">EN</span>
       </button>
       <div class="lang-menu" id="langMenu" role="menu" hidden></div>
+    </div>
     </div>
   </header>
 
@@ -1389,7 +1399,21 @@
     </div>
   </section>
 
-  <footer><span data-i18n="footer">WalkBCN · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop)</span> · <button class="link-btn" id="privacyOpen" type="button" data-i18n="privacyLink">Your data &amp; privacy</button></footer>
+  <footer><span data-i18n="footer">WalkBCN · Central Barcelona only · Map © OpenStreetMap contributors · Photos from Wikimedia Commons (free licences, credited on each stop)</span> · <button class="link-btn" id="aboutOpen" type="button" data-i18n="aboutLink">About WalkBCN</button> · <button class="link-btn" id="privacyOpen" type="button" data-i18n="privacyLink">Your data &amp; privacy</button></footer>
+
+  <dialog id="about" aria-labelledby="aboutTitle">
+    <h2 id="aboutTitle" data-i18n="aboutTitle">About WalkBCN</h2>
+    <p data-i18n="aboutIntro">We're two young people from Barcelona, both students.</p>
+    <p><b data-i18n="aboutLocalB">Local businesses first.</b> <span data-i18n="aboutLocal"></span></p>
+    <p><b data-i18n="aboutQuietB">Beyond the postcard.</b> <span data-i18n="aboutQuiet"></span></p>
+    <p><b data-i18n="aboutRespectB">Respect for the city.</b> <span data-i18n="aboutRespect"></span></p>
+    <p><b data-i18n="aboutDevB">Still in development.</b> <span data-i18n="aboutDev"></span></p>
+    <p data-i18n="aboutContact"></p>
+    <div class="privacy-actions">
+      <a class="about-write" id="aboutWrite" target="_blank" rel="noopener" data-i18n="aboutWrite">Write to us</a>
+      <button type="button" class="close" id="aboutClose" data-i18n="close">Close</button>
+    </div>
+  </dialog>
 
   <dialog id="privacy" aria-labelledby="privacyTitle">
     <h2 id="privacyTitle" data-i18n="privacyTitle">Your data &amp; privacy</h2>
@@ -1439,7 +1463,7 @@
 <script src="data/stops.js?v=1061714f"></script>
 <script src="data/cards.js?v=3aa26f13"></script>
 <script src="data/activities.js?v=311590b9"></script>
-<script src="data/ui.js?v=cb1d8a38"></script>
+<script src="data/ui.js?v=5067b7db"></script>
 <script src="data/tips.js?v=4dbc081d"></script>
 <script src="data/discoveries.js?v=c47d191e"></script>
 <script src="data/challenges.js?v=7666f843"></script>
@@ -5089,6 +5113,16 @@ function refreshStoryCard() {
   if (!document.getElementById('route').hidden) { routeAngles = {}; goTo(current, false); }
 }
 document.getElementById('privacyOpen').onclick = () => { renderPrivacy(); privacy.showModal(); };
+// ---- About WalkBCN: who we are; contact goes to the team's form (the same one tips use) ----
+const about = document.getElementById('about');
+const openAbout = () => {
+  const url = window.WALKBCN_TIPS && window.WALKBCN_TIPS.formUrl;
+  if (url) { document.getElementById('aboutWrite').href = url; about.dataset.form = '1'; }
+  about.showModal(); about.scrollTop = 0;
+};
+document.getElementById('aboutOpen').onclick = openAbout;
+document.getElementById('aboutHeadOpen').onclick = openAbout;
+document.getElementById('aboutClose').onclick = () => about.close();
 document.getElementById('privacyClose').onclick = () => privacy.close();
 document.getElementById('learningOptOut').onchange = e => {
   learning.optOut = e.target.checked;
