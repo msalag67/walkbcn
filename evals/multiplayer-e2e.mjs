@@ -35,7 +35,7 @@ const A = await player("Anna"), B = await player("Bob");
 try {
   // Anna creates a room
   await A.p.goto(`${BASE}/?src=test`); await until(A.p, () => typeof renderMp === "function");
-  await A.p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); });
+  await A.p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); document.querySelector('[data-mpopen="speed"]').click(); });
   await A.p.fill("#mpHostName", "Anna"); await A.p.click("#mpCreate");
   await until(A.p, () => !!document.querySelector(".mp-code b"));
   const code = await A.p.textContent(".mp-code b"); out.code = code;

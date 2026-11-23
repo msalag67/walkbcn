@@ -39,12 +39,12 @@ const storageKey = () => JSON.stringify(Object.keys(localStorage).filter((k) => 
     const before = await p.evaluate(storageKey);
     await p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); });
     await p.click('[data-mpkind="coop"]');
-    d.picks = await p.locator("[data-smpick]").count();
+    d.picks = await p.locator('[data-mpopen^="sm:"]').count();
     const plan = [["sm-barcino-layers", 2], ["sm-modernisme-secret", 3], ["sm-poblenou-factories", 4], ["sm-port-sea", 5]];
     for (const [id, n] of plan) {
       const r = {};
       if (await p.locator('[data-sm="exit"]').count()) await p.click('[data-sm="exit"]');
-      await p.click(`[data-smpick="${id}"]`); await p.click(`#smDemoN [data-n="${n}"]`); await p.click("#smDemoBtn");
+      if (await p.locator("#mpSetupBack").count()) await p.click("#mpSetupBack"); await p.click(`[data-mpopen="sm:${id}"]`); await p.click(`#smDemoN [data-n="${n}"]`); await p.click("#smDemoBtn");
       await until(p, () => !!document.querySelector('[data-sm="begin"]'));
       r.fiction = /fiction/i.test(await p.textContent(".sm-fiction"));
       await p.click('[data-sm="begin"]');
@@ -132,7 +132,7 @@ const storageKey = () => JSON.stringify(Object.keys(localStorage).filter((k) => 
     await A.p.goto(`${BASE}/?src=test`); await until(A.p, () => typeof renderSm === "function");
     const ans = await A.p.evaluate((id) => smById(id).answers, ID);
     await A.p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); });
-    await A.p.click('[data-mpkind="coop"]'); await A.p.click(`[data-smpick="${ID}"]`);
+    await A.p.click('[data-mpkind="coop"]'); await A.p.click(`[data-mpopen="sm:${ID}"]`);
     await A.p.fill("#smHostName", "Anna"); await A.p.click("#smCreate"); await until(A.p, () => !!document.querySelector(".mp-code b"));
     const code = await A.p.textContent(".mp-code b"); d.lobby = (await A.p.textContent(".ch-kicker")).trim();
     for (const [P, name] of [[B, "Bob"], [C, "Cai"]]) { await P.p.goto(`${BASE}/?src=test#room=${code}`); await until(P.p, () => !!document.getElementById("mpJoinName")); await P.p.fill("#mpJoinName", name); await P.p.click("#mpJoin"); }

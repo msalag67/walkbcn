@@ -42,7 +42,7 @@ const stateKey = () => JSON.stringify(Object.keys(localStorage).filter((k) => /m
   try {
     await p.goto(`${BASE}/?src=test`); await until(p, () => typeof renderBb === "function");
     const before = await p.evaluate(stateKey);
-    await p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); });
+    await p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); document.querySelector('[data-mpopen="bb"]').click(); });
     d.card = await p.evaluate(() => !!document.getElementById("bbCreate") || !!document.getElementById("bbDemoBtn"));
     await p.click("#bbDemoBtn"); await until(p, () => !!document.querySelector(".bb-board"));
     d.banner = await p.textContent(".ch-demo");
@@ -111,7 +111,7 @@ const stateKey = () => JSON.stringify(Object.keys(localStorage).filter((k) => /m
   const newRoom = async (A, B, names) => {
     await A.p.goto("about:blank"); await B.p.goto("about:blank");
     await A.p.goto(`${BASE}/?src=test`); await until(A.p, () => typeof renderBb === "function");
-    await A.p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); });
+    await A.p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); document.querySelector('[data-mpopen="bb"]').click(); });
     await A.p.fill("#bbHostName", names[0]); await A.p.click("#bbCreate");
     await until(A.p, () => !!document.querySelector(".mp-code b"));
     const code = await A.p.textContent(".mp-code b"), lobby = (await A.p.textContent(".ch-kicker")).trim();

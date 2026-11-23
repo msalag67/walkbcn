@@ -31,7 +31,7 @@ const report = (name, ok, detail) => { results.push(ok); console.log(`${ok ? "PA
   try {
     await p.goto(`${BASE}/?src=test`); await until(p, () => typeof renderTa === "function");
     const before = await p.evaluate(() => JSON.stringify(Object.keys(localStorage).filter((k) => /mp_|challenges/.test(k)).map((k) => [k, localStorage.getItem(k)])));
-    await p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); });
+    await p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); document.querySelector('[data-mpopen="ta"]').click(); });
     await p.click('#taDur [data-dur="30"]').catch(() => {}); await p.click("#taDemoBtn");
     await until(p, () => !!document.getElementById("taClock"));
     d.banner = await p.textContent(".ch-demo");
@@ -94,7 +94,7 @@ const report = (name, ok, detail) => { results.push(ok); console.log(`${ok ? "PA
   try {
     await A.p.goto(`${BASE}/?src=test`); await until(A.p, () => typeof renderTa === "function");
     const ans = await A.p.evaluate(() => TA_LIST[0].missions.map((m) => m.q.answer));
-    await A.p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); });
+    await A.p.evaluate(() => { document.getElementById("tabChal").click(); document.querySelector('[data-chmode="friends"]').click(); document.querySelector('[data-mpopen="ta"]').click(); });
     await A.p.click('#taDur [data-dur="30"]'); await A.p.fill("#taHostName", "Anna"); await A.p.click("#taCreate");
     await until(A.p, () => !!document.querySelector(".mp-code b"));
     const code = await A.p.textContent(".mp-code b"); d.lobby = (await A.p.textContent(".ch-kicker")).trim();
