@@ -872,7 +872,223 @@
   dialog.report label { display: flex; gap: 10px; align-items: center; padding: 8px 0; font-size: 16px; }
   dialog.report .actions { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 14px; }
   dialog.report .actions .book { margin-top: 0; }
+  /* Adapt my walk */
+  dialog.adapt .opt-label { display: block; margin: 16px 0 8px; }
+  .adapt-choices { display: grid; gap: 10px; margin-top: 14px; }
+  .adapt-choices .book { margin: 0; text-align: center; justify-content: center; }
+  .adapt-tag { display: inline-block; font: 600 13px var(--sans); border: 1px dashed currentColor; border-radius: 999px; padding: 3px 12px; margin: 0 0 4px; }
+  .adapt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  .adapt-compare div { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; display: grid; gap: 2px; font-size: 14px; }
+  .adapt-compare .new { border-style: dashed; }
+  .adapt-list { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 4px; font-size: 15px; }
+  .adapt-list li::before { display: inline-block; width: 1.4em; font-weight: 700; }
+  .adapt-list .kept::before { content: '='; }
+  .adapt-list .removed { text-decoration: line-through; opacity: .7; }
+  .adapt-list .removed::before { content: '−'; text-decoration: none; }
+  .adapt-list .added::before { content: '+'; }
+  .adapt-warn { border-left: 3px solid #c0392b; padding-left: 10px; }
+  .adapt-choices .book.alt { background: transparent; color: inherit; border: 1px solid currentColor; }
+  .pause-list { list-style: none; padding: 0; margin: 10px 0; display: grid; gap: 12px; }
+  .pause-list li { display: grid; gap: 4px; border: 1px solid var(--line); border-radius: 12px; padding: 12px; font-size: 15px; }
+  .pause-list .book { justify-self: start; margin-top: 4px; }
+  .surprise-intro { font: 400 20px/1.3 var(--display); margin: 10px 0; }
+  .clues { padding-left: 22px; margin: 8px 0; display: grid; gap: 8px; font-size: 15px; }
+  .adapt .linkish { background: none; border: 0; padding: 0; font: inherit; font-weight: 600; text-decoration: underline; color: inherit; cursor: pointer; }
   .story.loading { color: var(--muted); font-style: italic; }
+  /* Challenges (Phase 3A) */
+  .tabs { flex-wrap: wrap; row-gap: 4px; }   /* five tabs: wrap on narrow screens so Challenges stays visible */
+  .tabs button { white-space: nowrap; }
+  .tab-chal { font-weight: 700 !important; }
+  .tab-chal::before { content: '★ '; color: #d4a000; }
+  #chalView { padding: 8px 0 40px; }
+  .ch-h1 { font: 400 clamp(30px, 6vw, 44px)/1.08 var(--display); margin: 12px 0 10px; }
+  .ch-kicker { font: 600 13px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 14px 0 4px; }
+  .ch-demo { position: sticky; top: 0; z-index: 5; background: #ffe58a; color: #3b2f00; font: 700 14px var(--sans); border-radius: 10px; padding: 8px 12px; margin: 10px 0; }
+  .ch-demo-toggle { margin-top: 14px; }
+  .ch-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 18px; }
+  .ch-card { display: flex; flex-direction: column; text-align: left; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--panel, #fff); color: inherit; padding: 0; cursor: pointer; font: inherit; }
+  .ch-img { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: linear-gradient(135deg, #1d3f8f, #5a7fd6); }
+  .ch-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ch-type { position: absolute; left: 10px; top: 10px; font: 700 12px var(--sans); font-style: normal; background: #fff; color: #0a1f5c; border-radius: 999px; padding: 5px 11px; box-shadow: 0 1px 6px rgba(0,0,0,.35); }
+  .ch-body { display: grid; gap: 6px; padding: 14px 16px 16px; }
+  @media (max-width: 640px) { .ch-cards { gap: 14px; } .ch-img { aspect-ratio: 2 / 1; } .ch-body { padding: 12px 14px 14px; } .ch-body b { font-size: 21px; } }
+  .ch-body b { font: 400 22px/1.15 var(--display); }
+  .ch-meta { font-size: 13px; color: var(--muted); }
+  .ch-meta em { font-style: normal; font-weight: 700; color: inherit; }
+  /* the figure keeps the photo's own height (no 16:9 box around a shorter image) */
+  #chalRoot .stop-photo, dialog.adapt .stop-photo { aspect-ratio: auto; background: none; margin: 12px 0; max-width: 100%; }
+  #chalRoot .stop-photo .credit-line, dialog.adapt .stop-photo .credit-line { margin: 6px 0 0; }
+  #chalRoot .stop-photo img, dialog.adapt .stop-photo img { width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 360px; object-fit: cover; border-radius: 14px; }
+  .ch-fiction { border: 1px dashed currentColor; border-radius: 12px; padding: 10px 12px; font-size: 15px; }
+  .ch-how { border-left: 3px solid var(--accent); padding: 2px 12px; margin: 14px 0; }
+  .ch-how p { margin: 6px 0; }
+  .ch-dots { display: flex; gap: 6px; list-style: none; padding: 0; margin: 12px 0 0; }
+  .ch-dots li { width: 28px; height: 6px; border-radius: 3px; background: var(--line); }
+  .ch-dots li.done { background: var(--accent); }
+  .ch-dots li.now { background: var(--muted); }
+  .ch-place { font-size: 26px; margin: 8px 0; padding: 0; border: 0; }
+  .ch-step { font-weight: 600; }
+  .ch-gps { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 12px 0; }
+  .ch-gps .book, .ch-num .book { margin: 0; }
+  .ch-gps-msg, .ch-feedback { flex-basis: 100%; margin: 4px 0; font-weight: 600; }
+  .ch-gps-msg.warn, .ch-feedback.warn { color: #b3261e; }
+  .ch-gps-msg.ok, .ch-feedback.ok { color: #1b7f3b; }
+  .ch-q { border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 14px 0; }
+  .ch-prompt { font-size: 17px; font-weight: 600; margin: 0 0 10px; }
+  .ch-opts { display: grid; gap: 8px; }
+  .ch-opts .chip { text-align: left; border-radius: 12px; }
+  .ch-opts .chip:disabled { opacity: .45; text-decoration: line-through; }
+  .ch-num { display: flex; gap: 10px; align-items: center; }
+  .ch-num input { width: 90px; font: 600 20px var(--sans); padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; }
+  .ch-notebook { background: rgba(246,199,0,.12); border-radius: 14px; padding: 12px 14px; margin: 14px 0; }
+  .ch-notebook ol { margin: 6px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15px; }
+  .ch-audio { width: 100%; margin: 8px 0; }
+  .ch-src { font-size: 13px; color: var(--muted); }
+  .ch-board { position: relative; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 8px; margin: 12px 0; }
+  /* a marked square is crossed out (pen stroke over the photo, name struck through) */
+  .ch-cell.done .ch-thumb::after { content: ''; position: absolute; left: 8%; right: 8%; top: 50%; height: 3px; border-radius: 2px; background: rgba(10,31,92,.7); transform: rotate(-24deg); z-index: 1; }
+  .ch-cell.done .ch-name { text-decoration: line-through; text-decoration-thickness: 2px; }
+  /* a completed line is struck through the whole board */
+  .ch-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; overflow: visible; }
+  .ch-lines line { stroke: #0a1f5c; stroke-opacity: .85; stroke-width: 9px; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .ch-cell { position: relative; display: grid; gap: 3px; padding: 0 0 6px; border: 2px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel, #fff); color: inherit; font: 600 13px/1.2 var(--sans); cursor: pointer; text-align: center; }
+  .ch-thumb { position: relative; display: block; aspect-ratio: 16 / 10; background: linear-gradient(135deg, #1d3f8f, #5a7fd6); }
+  .ch-thumb::before { content: attr(data-i); position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font: 400 28px var(--display); }
+  .ch-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ch-name { padding: 0 3px; }
+  .ch-cell.sel { outline: 3px solid #0a2a8a; outline-offset: 1px; }
+  .ch-cell.done { border-color: #1b7f3b; }
+  .ch-thumb:has(img[src]) { background: #fff; }   /* the initial only shows when the photo is missing */
+  .ch-thumb:has(img[src])::before { display: none; }
+  .ch-cell.done img { opacity: .55; }
+  .ch-cell.line { background: #fff3b0; border-color: #b8860b; }
+  .ch-cell i { position: absolute; top: 5px; right: 5px; background: #1b7f3b; color: #fff; border-radius: 50%; width: 26px; height: 26px; display: grid; place-items: center; font-style: normal; font-weight: 800; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+  .ch-reread { margin-top: 8px; font-weight: 400; color: var(--ink, inherit); }
+  .ch-reread summary { cursor: pointer; font-weight: 600; text-decoration: underline; }
+  .ch-reread p { font-size: 15px; margin: 8px 0 0; }
+  .ch-panel { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 6px; }
+  .ch-or { font-weight: 600; color: var(--muted); margin: 6px 0 0; }
+  .ch-locked { border-left: 3px solid #b3261e; padding: 4px 10px; font-weight: 600; }
+  .ch-done { text-align: center; padding: 20px 0; }
+  .ch-done .actions { justify-content: center; }
+  .ch-trophy { font-size: 64px; margin: 0; color: var(--accent); }
+  /* Bingo Battle */
+  .bb-board { max-width: 520px; margin: 8px auto 10px; }
+  .bb-board .ch-cell { font-size: 11.5px; }
+  .bb-board .ch-thumb { aspect-ratio: 4 / 3; }
+  .ch-cell.bb-near { border: 2px dashed #b8860b; }
+  .bb-near-tag { position: absolute; top: 5px; right: 5px; background: #f6c700; color: #0a1f5c; border-radius: 999px; font: 800 10px var(--sans); padding: 2px 7px; }
+  .ch-cell:disabled { cursor: default; }
+  /* Time Attack */
+  .ta-head { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 8px; margin: 8px 0 12px; }
+  .ta-head div { border: 1px solid var(--line); border-radius: 14px; padding: 8px 10px; display: grid; }
+  .ta-head span { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  .ta-head b { font: 700 26px/1.1 var(--sans); font-variant-numeric: tabular-nums; }
+  #taClock.low { color: #b3261e; }
+  .ta-map { height: 240px; border-radius: 16px; margin: 6px 0 12px; z-index: 0; }
+  .ta-pin { background: transparent; border: 0; box-shadow: none; font: 700 11px var(--sans); color: #0a1f5c; }
+  .ta-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .ta-item { width: 100%; display: grid; grid-template-columns: 26px 64px 1fr auto; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 14px; padding: 6px 10px 6px 8px; background: var(--panel, #fff); color: inherit; font: 600 15px var(--sans); text-align: left; cursor: pointer; }
+  .ta-item img { width: 64px; height: 48px; object-fit: cover; border-radius: 8px; }
+  .ta-n { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: #f6c700; color: #0a1f5c; font-size: 12px; }
+  .ta-item.done { border-color: #1b7f3b; }
+  .ta-item.done .ta-n { background: #1b7f3b; color: #fff; }
+  .ta-pts { font-weight: 700; white-space: nowrap; }
+  .ta-hint { background: rgba(246,199,0,.15); border-radius: 12px; padding: 10px 12px; }
+  .ta-demo-ctl { margin: -4px 0 12px; display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; border-radius: 0 0 12px 12px; background: #fff6cc; }
+  .ta-demo-ctl .ghost { padding: 6px 12px; min-height: 40px; border: 1px solid #b38f00; border-radius: 999px; background: #fff; color: #3b2f00; font-size: 14px; font-weight: 600; text-decoration: none; }
+  .ch-demo + .ta-demo-ctl, .ch-demo + .sm-views { margin-top: -10px; }
+  .sm-views { background: #fff6cc; padding: 8px; margin: 0; }
+  .sm-views + .ta-demo-ctl { margin-top: 0; }
+  .ch-rules { margin: 14px 0; border-top: 1px solid var(--line); padding-top: 4px; }
+  .ch-rules summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+  /* Play with friends (Phase 3B) */
+  .ch-modeseg { margin: 6px 0 14px; }
+  .mp-box { border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; margin: 12px 0; background: var(--panel, #fff); }
+  .mp-mode { padding: 0; overflow: hidden; display: grid; }
+  /* Shared Mystery (Phase 3E) */
+  .sm-kindseg { display: flex; width: fit-content; margin-top: 4px; }
+  .ch-modeseg + .adapt-warn, .ch-modeseg + .mp-join { margin-top: 0; }
+  .mp-h2 { font: 600 18px var(--sans); margin: 0 0 8px; }
+  .mp-join .mp-join-row { max-width: 560px; }
+  .mp-join-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0 12px; }
+  .mp-setup { display: grid; gap: 6px; justify-items: start; }
+  .mp-setup .mp-field { width: 100%; max-width: 360px; }
+  .mp-setup .opt-label { width: auto; margin: 4px 0 0; }
+  .mp-demo-opt { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 6px; width: 100%; }
+  .mp-demo-opt .ghost { padding-top: 10px; min-height: 44px; text-align: left; }
+  .sm-steps { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 6px 0 14px; }
+  .sm-steps li { font: 600 12px var(--sans); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .sm-steps li.done { color: var(--ink, inherit); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+  .sm-steps li.now { border-color: var(--accent); color: var(--accent); }
+  .sm-intro img, .sm-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; display: block; background: var(--line); }
+  .sm-fiction { display: inline-block; margin: 12px 0 0; font: 700 12px var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+  .sm-new { border-left: 4px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 10px; padding: 10px 12px; margin: 8px 0 14px; }
+  .sm-place { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: start; margin: 6px 0 10px; }
+  .sm-place .ch-thumb, .sm-connect .ch-thumb { display: block; aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: var(--line); }
+  .sm-place img, .sm-connect img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sm-place .ch-place { margin: 0; }
+  .sm-place p { margin: 4px 0 0; }
+  .sm-arrived { font-weight: 700; color: var(--ok, #1d7a46); }
+  .sm-clues { list-style: none; padding: 0; margin: 8px 0 12px; display: grid; gap: 8px; }
+  .sm-clue { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--panel, #fff); }
+  .sm-clues.board .sm-clue { background: color-mix(in srgb, var(--accent) 6%, var(--panel, #fff)); }
+  .sm-clue p { margin: 6px 0; }
+  .sm-kind { font: 700 11px var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+  .sm-shared { font: 600 13px var(--sans); color: var(--muted); }
+  .sm-opts { display: grid; gap: 8px; margin: 8px 0; }
+  .sm-opt { text-align: left; font: 500 15px/1.35 var(--sans); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel, #fff); color: inherit; cursor: pointer; }
+  .sm-opt:hover:not(:disabled) { border-color: var(--accent); }
+  .sm-opt.no { text-decoration: line-through; opacity: .55; }
+  .sm-notebook { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 12px 0; }
+  .sm-notebook summary { font-weight: 700; cursor: pointer; }
+  .sm-notebook li { margin: 8px 0; }
+  .sm-views { margin: 6px 0; }
+  .sm-hero { position: relative; margin: 6px 0 14px; }
+  .sm-hero > div { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; border-radius: 0 0 16px 16px; background: linear-gradient(transparent, rgba(0, 0, 0, .72)); color: #fff; }
+  .sm-hero span { font: 700 12px var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+  .sm-hero h2 { margin: 4px 0 0; color: #fff; font-size: 26px; line-height: 1.15; }
+  .sm-connect { list-style: none; padding: 0; display: grid; gap: 12px; }
+  .sm-connect li { display: grid; grid-template-columns: 72px 1fr; gap: 12px; }
+  .sm-connect p { margin: 4px 0; }
+  .sm-audio { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 6px 0 12px; }
+  .sm-audio [data-nar="play"] { display: inline-flex; align-items: center; gap: 8px; }
+  .sm-audio svg { width: 16px; height: 16px; fill: currentColor; }
+  .sm-nar-note { flex-basis: 100%; margin: 0; }
+  .sm-story p { font-size: 17px; line-height: 1.6; }
+  .sm-facts li { margin: 6px 0; }
+  .mp-field { display: grid; gap: 4px; font-weight: 600; font-size: 14px; margin: 10px 0; }
+  .mp-field input { font: 500 17px var(--sans); padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; text-transform: none; }
+  #mpJoinCode { text-transform: uppercase; letter-spacing: .15em; }
+  .mp-future { margin-top: 12px; }
+  .mp-code { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 8px 0; }
+  .mp-code b { font: 700 32px/1 var(--sans); letter-spacing: .18em; }
+  .mp-list { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 6px; }
+  .mp-rank { counter-reset: r; }
+  .mp-rank .mp-p::before { counter-increment: r; content: counter(r) '.'; font-weight: 800; min-width: 1.4em; }
+  .mp-p { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 15px; flex-wrap: wrap; }
+  .mp-p.me { border-color: #0a2a8a; }
+  .mp-p em { font-style: normal; font-size: 12px; font-weight: 700; color: var(--muted); }
+  .mp-p-right { margin-left: auto; font-weight: 600; }
+  .mp-dot { width: 9px; height: 9px; border-radius: 50%; background: #b8b8b8; }
+  .mp-dot.on { background: #1b7f3b; }
+  .mp-clock { display: flex; align-items: baseline; gap: 10px; margin: 6px 0 10px; }
+  .mp-clock b { font: 700 34px/1 var(--sans); font-variant-numeric: tabular-nums; }
+  .mp-board { margin-top: 18px; }
+  #chalRoot .book:disabled { opacity: .4; cursor: not-allowed; }
+  /* Generator, Phase 2B: short lead under a question; "Personalise more" folded section */
+  .hint.lead { margin: -10px 0 18px; font-size: 15px; max-width: 60ch; }
+  .more { margin-top: 40px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .more > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 18px 0; font: 600 18px var(--sans); color: var(--ink); }
+  .more > summary::-webkit-details-marker { display: none; }
+  .more > summary::after { content: '+'; margin-left: auto; font-size: 24px; font-weight: 400; line-height: 1; }
+  .more[open] > summary::after { content: '–'; }
+  .more-count { font: 500 13px var(--sans); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; color: var(--muted); }
+  .more-body { padding: 4px 0 24px; }
+  .more-body .opt-row:first-child { margin-top: 0; }
+  #timeChips + .hint { margin-bottom: 8px; }
+  .lang-error { font-size: 14px; color: var(--muted); border-left: 3px solid var(--accent, #c0392b); padding: 4px 10px; margin: 8px 0; }
+  .lang-error .linkish { background: none; border: 0; padding: 0; color: inherit; font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
   /* Must-sees */
   .must { margin-top: 14px; }
   .must-picked { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
@@ -926,6 +1142,7 @@
 
   <nav class="tabs" role="tablist">
     <button type="button" role="tab" id="tabWalk" aria-selected="true" data-i18n="tabWalk">Walking routes</button>
+    <button type="button" role="tab" id="tabChal" class="tab-chal" aria-selected="false" data-i18n="tabChal">Challenges</button>
     <button type="button" role="tab" id="tabGuide" aria-selected="false" data-i18n="tabGuide">Audio guide</button>
     <button type="button" role="tab" id="tabAct" aria-selected="false" data-i18n="tabAct">Activities</button>
     <button type="button" role="tab" id="tabTips" aria-selected="false">Tips</button>
@@ -964,29 +1181,53 @@
     <div class="themes" id="themes"></div>
     <div class="theme-active" id="themeActive" hidden></div>
 
+    <!-- Style first (what kind of places), then interests (which topics and story versions). -->
+    <h2 data-i18n="styleTitle">How do you want to discover Barcelona?</h2>
+    <p class="hint lead" data-i18n="styleIntro">Choose what kind of places you want to discover. Then pick your interests to tailor the walk and its stories.</p>
+    <div class="chips" id="styleChips" role="group">
+      <button type="button" class="chip" data-v="essentials" aria-pressed="false" data-i18n="style_essentials">The essentials</button>
+      <button type="button" class="chip" data-v="mix" aria-pressed="true" data-i18n="style_mix">A bit of everything</button>
+      <button type="button" class="chip" data-v="lesser" aria-pressed="false" data-i18n="style_lesser">Lesser-known Barcelona</button>
+      <button type="button" class="chip" data-v="local" aria-pressed="false" data-i18n="style_local">Like a local</button>
+      <button type="button" class="chip" data-v="stories" aria-pressed="false" data-i18n="style_stories">Stories & curiosities</button>
+    </div>
+    <p class="hint" id="styleHint"></p>
+
     <h2 data-i18n="interestsTitle" id="interestsTitle">What are you interested in?</h2>
+    <p class="hint lead" data-i18n="interestsHint">Pick one or more: they decide the topics of your walk and which version of each story you hear.</p>
     <div class="tiles" id="interests"></div>
 
-    <h2 data-i18n="lengthTitle">How long a walk?</h2>
-    <div class="seg" id="planMode" role="group" aria-label="Plan by">
-      <button type="button" data-mode="stops" aria-pressed="true" data-i18n="planStops">Stops</button>
-      <button type="button" data-mode="time" aria-pressed="false" data-i18n="planTime">Time</button>
-      <button type="button" data-mode="distance" aria-pressed="false" data-i18n="planDistance">Distance</button>
-    </div>
-    <div class="plan-panel" id="panel-stops">
-      <label class="range"><span><b id="stopsValue">5</b> <span data-i18n="stopsWord">stops</span></span>
-        <input type="range" id="stopsRange" min="2" max="10" value="5" aria-label="Number of stops"></label>
-    </div>
-    <div class="plan-panel" id="panel-time" hidden>
-      <div class="chips" id="timeChips">
+    <!-- The time chips plan by time; the first chip shows the current plan when it is by stops
+         or distance (set in "Personalise more"), so the active value is always visible. -->
+    <h2 data-i18n="timeTitle">How much time do you have?</h2>
+    <div class="chips" id="timeChips">
+        <button type="button" class="chip" data-v="plan" id="planChip" aria-pressed="true"></button>
         <button type="button" class="chip" data-v="30" aria-pressed="false">30 min</button>
         <button type="button" class="chip" data-v="60" aria-pressed="true">1 h</button>
         <button type="button" class="chip" data-v="90" aria-pressed="false">1 h 30</button>
         <button type="button" class="chip" data-v="120" aria-pressed="false">2 h</button>
         <button type="button" class="chip" data-v="180" aria-pressed="false">3 h</button>
-      </div>
-      <p class="hint" data-i18n="timeHint2">Includes 5–8 minutes at each stop to listen and look around (depends on the story length). Going inside and queues are not included.</p>
     </div>
+    <p class="hint" id="timeHint"></p>
+
+    <!-- Everything else, folded. Values set here stay set when it is closed; the summary
+         says how many differ from the defaults. -->
+    <details class="more" id="moreOpts">
+      <summary><span data-i18n="moreTitle">Personalise more</span> <span class="more-count" id="moreCount" hidden></span></summary>
+      <div class="more-body">
+        <div class="opt-row">
+          <span class="opt-label" data-i18n="planByTitle">Plan by</span>
+          <div class="seg" id="planMode" role="group" aria-label="Plan by">
+            <button type="button" data-mode="stops" aria-pressed="true" data-i18n="planStops">Stops</button>
+            <button type="button" data-mode="time" aria-pressed="false" data-i18n="planTime">Time</button>
+            <button type="button" data-mode="distance" aria-pressed="false" data-i18n="planDistance">Distance</button>
+          </div>
+        </div>
+    <div class="plan-panel" id="panel-stops">
+      <label class="range"><span><b id="stopsValue">5</b> <span data-i18n="stopsWord">stops</span></span>
+        <input type="range" id="stopsRange" min="2" max="10" value="5" aria-label="Number of stops"></label>
+    </div>
+    <div class="plan-panel" id="panel-time" hidden><p class="hint" data-i18n="planTimeAbove">Choose the time in "How much time do you have?" above.</p></div>
     <div class="plan-panel" id="panel-distance" hidden>
       <div class="chips" id="distChips">
         <button type="button" class="chip" data-v="1" aria-pressed="false">1 km</button>
@@ -1005,8 +1246,6 @@
       <input type="search" id="mustQuery" autocomplete="off" enterkeyhint="search">
       <ul class="must-results" id="mustResults" hidden></ul>
     </div>
-
-    <h2 data-i18n="startFinishTitle">Where do you start and finish?</h2>
     <div class="opt-row">
       <span class="opt-label" data-i18n="zoneTitle">Area</span>
       <div class="chips" id="zoneChips"></div>
@@ -1039,9 +1278,7 @@
       <p class="hint" id="pickHint">Tap the map to set your start.</p>
       <div id="pickMap" role="region" aria-label="Choose a point on the map"></div>
     </div>
-    <div class="loc-status" id="locStatus" role="status" hidden></div>
 
-    <h2 data-i18n="detailsTitle">Story length</h2>
     <div class="opt-row">
       <span class="opt-label" data-i18n="stories">Stories</span>
       <div class="seg" id="lengthSeg">
@@ -1051,6 +1288,9 @@
     </div>
     <label class="check"><input type="checkbox" id="avoidCrowded" aria-describedby="avoidCrowdedHint"> <span data-i18n="avoidIcons">Skip the big icons (Sagrada Família, Park Güell, Casa Batlló…)</span></label>
     <p class="hint" id="avoidCrowdedHint" data-i18n="avoidIconsHint">A fixed list of the most-visited sights, not live crowd data.</p>
+      </div>
+    </details>
+    <div class="loc-status" id="locStatus" role="status" hidden></div>
 
     <button class="primary" id="build" disabled><span data-i18n="build">Create my route</span><i class="arrow" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4.5 2.5 8 6l-3.5 3.5"/></svg></i></button>
     <p class="hint build-hint" id="buildHint" data-i18n="buildHint">Choose at least one interest to create your route.</p>
@@ -1068,7 +1308,7 @@
     <div class="walk-done" id="walkDone" role="status" hidden></div>
 
     <p class="listened-count" id="listenedCount"></p>
-    <div class="edit-bar"><button type="button" class="ghost" id="editRoute"></button><p class="edited-note" id="editedNote" role="status" hidden></p></div>
+    <div class="edit-bar"><button type="button" class="ghost" id="editRoute"></button><button type="button" class="ghost" id="adaptRoute"></button><p class="edited-note" id="editedNote" role="status" hidden></p></div>
     <ol class="stops" id="stopList"></ol>
     <button class="ghost" id="restart" data-i18n="restart">← Change interests</button>
   </section>
@@ -1135,6 +1375,9 @@
   </section>
 
   <!-- Local tips: written and checked by the team; visitors can suggest more -->
+  <!-- Challenges: games on foot, run by one engine (data/challenges.js) -->
+  <section id="chalView" hidden><div id="chalRoot"></div></section>
+
   <section id="tipsView" hidden>
     <h1 id="tipsTitle"></h1>
     <p class="lead" id="tipsLead"></p>
@@ -1164,6 +1407,11 @@
   </dialog>
 
   <!-- Report a problem with a stop or a place: opens the team's form, already filled in -->
+  <!-- "Adapt my walk": a provisional proposal; the walk on screen only changes on "Apply". -->
+  <dialog id="adapt" class="report adapt" aria-labelledby="adaptTitle">
+    <h2 id="adaptTitle"></h2>
+    <div id="adaptBody"></div>
+  </dialog>
   <dialog id="report" class="report" aria-labelledby="reportTitle">
     <h2 id="reportTitle"></h2>
     <div id="reportKinds" role="radiogroup"></div>
@@ -1187,13 +1435,19 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg=" crossorigin=""></script>
-<script src="data/stops.js?v=10"></script>
-<script src="data/cards.js?v=3"></script>
-<script src="data/activities.js?v=10"></script>
-<script src="data/ui.js?v=19"></script>
-<script src="data/tips.js?v=2"></script>
+<script src="data/versions.js?v=3b601293"></script>
+<script src="data/stops.js?v=1061714f"></script>
+<script src="data/cards.js?v=3aa26f13"></script>
+<script src="data/activities.js?v=311590b9"></script>
+<script src="data/ui.js?v=cb1d8a38"></script>
+<script src="data/tips.js?v=4dbc081d"></script>
+<script src="data/discoveries.js?v=c47d191e"></script>
+<script src="data/challenges.js?v=7666f843"></script>
+<script src="data/shared-mysteries.js?v=fff6ff01"></script>
+<script src="data/shared-mystery-audio.js?v=f23aead8"></script>
+<script src="data/multiplayer-config.js?v=47d9a49c"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
-<script src="content/stories.js?v=10"></script>
+<script src="content/stories.js?v=afdf06e4"></script>
 <script>
 // Photos come from Wikimedia Commons (free licences); credit links point to each file page.
 const photo = (file, w = 800) => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
@@ -1219,7 +1473,7 @@ const THEMES = {
                 pool: ['santa-maria-del-mar', 'barcelona-cathedral', 'placa-del-rei', 'placa-sant-jaume', 'placa-sant-felip-neri', 'temple-august',
                        'placa-reial', 'liceu', 'font-canaletes', 'palau-de-la-musica-catalana', 'mercat-de-santa-caterina', 'museu-picasso',
                        'palau-guell', 'antic-hospital', 'port-vell', 'fossar-moreres', 'via-sepulcral-romana', 'sant-pere-puelles', 'placa-del-pi'] },
-  barca:      { img: '34 Fundació del F.C. Barcelona, c. Montjuïc del Carme.jpg', interests: ['sports', 'history'], mode: 'stops', n: 3,
+  barca:      { img: 'Barça 2011 05 11 Canaletes - celebració lliga.JPG', interests: ['sports', 'history'], mode: 'stops', n: 3,
                 pool: ['gimnas-sole', 'font-canaletes', 'placa-sant-jaume'], act: 'sports' },
   gracia:     { img: 'Young adults sit and talk in Plaza del Sol in Barcelona.jpg', interests: ['local', 'food', 'history', 'architecture'], mode: 'time', minutes: 90,
                 pool: ['mercat-de-la-llibertat', 'placa-del-sol', 'casa-vicens', 'placa-vila-gracia', 'placa-virreina', 'mercat-abaceria'] },
@@ -1252,9 +1506,19 @@ STOPS.forEach(s => { s.zone ||= ZONE_OF_AREA[s.area] || 'any'; });
 
 // ---- Editorial rules from the notices (data/stops.js) ----
 const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
-function noticesFor(s) {
+// Notices that apply today. With withExpired, also those whose end date has passed but that
+// the team hasn't checked again yet (no `resolved` date), for up to EXPIRED_GRACE_DAYS: a
+// closure that was extended must not just vanish (audit F7). Expired notices are only shown,
+// with a warning; they never move a stop or keep it out of routes.
+const EXPIRED_GRACE_DAYS = 60;
+const daysSince = (iso, day) => Math.round((Date.parse(`${day}T12:00:00Z`) - Date.parse(`${iso}T12:00:00Z`)) / 864e5);
+function noticesFor(s, withExpired = false) {
   const day = todayISO();
-  return (window.WALKBCN_NOTICES?.[s.id] || []).filter(n => (!n.from || n.from <= day) && (!n.until || day <= n.until));
+  return (window.WALKBCN_NOTICES?.[s.id] || []).filter(n => {
+    if (n.from && day < n.from) return false;
+    if (!n.until || day <= n.until) return true;
+    return withExpired && !n.resolved && daysSince(n.until, day) <= EXPIRED_GRACE_DAYS;
+  });
 }
 // While a notice with `at` applies (e.g. stalls in a temporary market), routes and directions
 // use that point; the stop keeps its own photo and story. `closed` keeps it out of new routes.
@@ -1289,16 +1553,39 @@ const interestLabel = id => t(`int_${id}`);
 // Interest names go lower case inside a sentence, except in German and Chinese.
 const inSentence = text => (['de', 'zh'].includes(lang) ? text : text.toLowerCase());
 const langMeta = code => LANGS.find(l => l.code === code);
+// Resolves true when the texts arrived, false when they did not (network error, missing file
+// or no answer within LANG_TIMEOUT). A failure is not kept as "loading": the card shows the
+// English text with a "Try again" button, and retryLang() starts a fresh download.
 const loadingLang = {}, langFailed = {};
+const LANG_TIMEOUT = 15000;
+// The address changes with the file's content (data/versions.js, scripts/stamp-versions.mjs).
+const i18nUrl = code => `content/i18n/${code}.js?v=${window.WALKBCN_VERSIONS?.i18n?.[code] || 'none'}`;
 function loadLangData(code) {
-  if (I18N[code]) return Promise.resolve();
+  if (I18N[code]) return Promise.resolve(true);
   return (loadingLang[code] ||= new Promise(resolve => {
     const el = document.createElement('script');
-    el.src = `content/i18n/${code}.js?v=11`;
-    el.onload = () => resolve();
-    el.onerror = () => { langFailed[code] = true; resolve(); }; // no file: English is used instead
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      const ok = !!I18N[code];
+      if (ok) delete langFailed[code];
+      else { langFailed[code] = true; delete loadingLang[code]; el.remove(); }
+      resolve(ok);
+    };
+    const timer = setTimeout(finish, LANG_TIMEOUT);
+    el.src = i18nUrl(code);
+    el.onload = finish;
+    el.onerror = finish;
     document.head.appendChild(el);
   }));
+}
+function retryLang(code) {
+  delete langFailed[code];
+  const p = loadLangData(code);
+  applyLang();          // shows "loading" right away
+  return p.then(ok => { applyLang(); return ok; });
 }
 
 // ---- Learning loop ----
@@ -1356,16 +1643,28 @@ function storyFor(s) {
 // The text, recording and tip of one version of a stop's story, in the current language.
 // True while the texts for the current language (or the English short/long versions) are
 // still downloading: the card says so instead of showing the previous language's text.
-const langPending = () => (lang !== 'en' && !I18N[lang] && !!loadingLang[lang] && !langFailed[lang]) ||
-  (lang === 'en' && plan.length !== 'normal' && !I18N.en && !!loadingLang.en && !langFailed.en);
+const langPending = (length = plan.length) => (lang !== 'en' && !I18N[lang] && !!loadingLang[lang] && !langFailed[lang]) ||
+  (lang === 'en' && length !== 'normal' && !I18N.en && !!loadingLang.en && !langFailed.en);
+// When a download failed, the card says which text it is showing instead and offers a retry.
+function langErrorHtml(st) {
+  if (!st.failed) return '';
+  const msg = st.failed === 'en' ? t('longLoadError') : t('langLoadError', { lang: langMeta(st.failed).name });
+  return `<p class="lang-error" role="alert">${msg} <button type="button" class="linkish" data-retry-lang="${st.failed}">${t('retry')}</button></p>`;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest?.('[data-retry-lang]');
+  if (b) { b.disabled = true; retryLang(b.dataset.retryLang); }
+});
 function storyBlockHtml(st) {
   if (st.loading) return `<p class="story loading" role="status">${t('storyLoading', { lang: langMeta(lang).name })}</p>`;
-  return `${playerHtml()}
+  return `${langErrorHtml(st)}${playerHtml()}
     <p class="story" lang="${st.speech.slice(0, 2)}">${st.text}</p>
     <p class="tip"><b>${t('tip')}</b> ${st.tip}</p>`;
 }
 function storyText(s, angle = null, length = plan.length) {
-  if (langPending()) return { text: '', audio: null, tip: '', speech: langMeta(lang).speech, loading: true };
+  if (langPending(length)) return { text: '', audio: null, tip: '', speech: langMeta(lang).speech, loading: true };
+  const failed = lang !== 'en' && !I18N[lang] && langFailed[lang] ? lang
+    : length !== 'normal' && !I18N.en && langFailed.en && (lang === 'en' || !I18N[lang]) ? 'en' : null;
   const gen = STORIES[s.id] || {};
   const key = angle || 'base';
   // English normal version and its recorded audio: always available.
@@ -1386,7 +1685,7 @@ function storyText(s, angle = null, length = plan.length) {
     const v = I18N.en?.stops?.[s.id]?.stories?.[key]?.[length];
     if (v) { text = v; audio = null; }
   }
-  return { text, audio, tip, speech };
+  return { text, audio, tip, speech, failed };
 }
 
 // The player's buttons live in whichever card is showing a story: the route's stop card
@@ -1443,7 +1742,7 @@ addEventListener('scroll', checkBottomBars, { passive: true });
 addEventListener('resize', checkBottomBars);
 document.getElementById('createBarBtn').onclick = () => showRoute();
 // ---- Route options: how long, where to start and finish (pace is fixed at a normal 4.5 km/h) ----
-const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal', theme: null, zone: 'any', must: [] };
+const plan = { mode: 'stops', minutes: 60, km: 2, start: 'best', end: 'any', startPt: null, endPt: null, pace: 4.5, avoidCrowded: false, length: 'normal', theme: null, zone: 'any', must: [], style: 'mix' };
 const BCN_CENTER = [41.3874, 2.1686];
 
 // Two-finger zoom on every map.
@@ -1482,13 +1781,40 @@ function onChoice(id, handler) {
 onChoice('planMode', d => {
   plan.mode = d.mode;
   ['stops', 'time', 'distance'].forEach(m => { document.getElementById(`panel-${m}`).hidden = m !== d.mode; });
+  renderTimeRow();
 });
 const stopsRange = document.getElementById('stopsRange');
 stopsRange.oninput = () => { stopsCount = +stopsRange.value; document.getElementById('stopsValue').textContent = stopsCount; };
-onChoice('timeChips', d => { plan.minutes = +d.v; });
+// "How much time do you have?": a time chip plans by time; the first chip stands for the plan
+// by stops or distance (default: 5 stops) and goes back to it.
+let lastCountMode = 'stops';
+onChoice('timeChips', d => {
+  if (d.v === 'plan') plan.mode = lastCountMode; else { plan.mode = 'time'; plan.minutes = +d.v; }
+  syncPlanControls();
+});
+function renderTimeRow() {
+  if (plan.mode !== 'time') lastCountMode = plan.mode;
+  const label = lastCountMode === 'distance' ? `${plan.km} km` : `${stopsCount} ${t('stopsWord')}`;
+  const chip = document.getElementById('planChip');
+  chip.textContent = label;
+  const box = document.getElementById('timeChips');
+  pressOnly(box, plan.mode === 'time' ? box.querySelector(`button[data-v="${plan.minutes}"]`) || chip : chip);
+  document.getElementById('timeHint').textContent = plan.mode === 'time' ? t('timeHint2') : t(lastCountMode === 'distance' ? 'planChipHintKm' : 'planChipHintStops', { plan: label });
+}
+// How many options in "Personalise more" differ from the defaults (shown next to its title,
+// so a choice made there is never forgotten when the section is closed).
+function renderMore() {
+  const n = [plan.mode === 'distance' || (plan.mode === 'stops' && stopsCount !== 5), plan.zone && plan.zone !== 'any', plan.start !== 'best', plan.end !== 'any',
+    (plan.must || []).length > 0, plan.length !== 'normal', plan.avoidCrowded].filter(Boolean).length;
+  const el = document.getElementById('moreCount');
+  el.hidden = !n; el.textContent = t('moreActive', { n });
+}
+['click', 'input', 'change'].forEach(ev => document.getElementById('pick').addEventListener(ev, () => requestAnimationFrame(() => { renderTimeRow(); renderMore(); })));
 onChoice('distChips', d => { plan.km = +d.v; });
 onChoice('lengthSeg', d => { plan.length = d.v; if (lang === 'en' && d.v !== 'normal') loadLangData('en'); refreshStoryCard(); });
 document.getElementById('avoidCrowded').onchange = e => { plan.avoidCrowded = e.target.checked; };
+onChoice('styleChips', d => { plan.style = d.v; renderStyleHint(); });
+function renderStyleHint() { document.getElementById('styleHint').textContent = t(`styleHint_${plan.style}`); }
 
 // ---- Area: keeps the walk in one part of the city ----
 function renderZones() {
@@ -1528,7 +1854,7 @@ function syncPlanControls() {
   stopsRange.value = stopsCount; document.getElementById('stopsValue').textContent = stopsCount;
   const press = (id, attr, value) => { const box = document.getElementById(id); const b = box.querySelector(`button[data-${attr}="${value}"]`); if (b) pressOnly(box, b); };
   press('planMode', 'mode', plan.mode); press('lengthSeg', 'v', plan.length);
-  press('timeChips', 'v', plan.minutes); press('distChips', 'v', plan.km); press('startChips', 'v', plan.start); press('endChips', 'v', plan.end);
+  press('distChips', 'v', plan.km); renderTimeRow(); renderMore(); press('startChips', 'v', plan.start); press('endChips', 'v', plan.end); press('styleChips', 'v', plan.style); renderStyleHint();
   ['stops', 'time', 'distance'].forEach(m => { document.getElementById(`panel-${m}`).hidden = m !== plan.mode; });
   document.getElementById('avoidCrowded').checked = !!plan.avoidCrowded;
   document.getElementById('build').disabled = selected.size === 0;
@@ -1602,6 +1928,7 @@ function renderPickTargets() {
   document.getElementById('pickGo').textContent = t('pickSearchBtn');
 }
 function showPicker(target) {
+  document.getElementById('moreOpts').open = true;   // the map lives in "Personalise more"
   pickTarget = target;
   document.getElementById('pickBox').hidden = false;
   renderPickTargets();
@@ -1721,8 +2048,30 @@ function dist(a, b) { // km, haversine
 // chosen for what they offer, never as filler between other stops.
 function score(s) {
   const matches = s.tags.filter(t => selected.has(t)).length;
-  return matches ? matches + learningNudge(s) - (sensitive(s, 'residential') ? 0.25 : 0) : 0;
+  return matches ? matches + learningNudge(s) + styleBonus(s) - (sensitive(s, 'residential') ? 0.25 : 0) : 0;
 }
+
+// ---- How do you want to discover Barcelona? ----
+// A style only reorders stops that already match a chosen interest: its bonus (at most 0.75)
+// is smaller than one more matching interest (1), so interests stay the main rule. It never
+// adds a stop that matches nothing. "mix" adds nothing, so routes are the same as before the
+// choice existed. fit() says whether a stop suits the style, so the route screen can say so
+// honestly when few do. Data used, all existing or editorial (no visitor counts):
+//   crowded  the fixed list of big icons;  known  well-known landmarks (data/stops.js)
+//   local    the "local life" interest tag;  look + sources  a practical card with what to
+//            look at and dated sources (observable, checked details)
+// Kept separate from the route builder so other parts (e.g. challenges later) can reuse it.
+const KNOWN = new Set(window.WALKBCN_EDITORIAL?.known || []);
+const famous = s => s.crowded || KNOWN.has(s.id);
+const DISCOVERY_STYLES = {
+  essentials: { fit: s => famous(s), bonus: s => (s.crowded ? 0.75 : KNOWN.has(s.id) ? 0.5 : 0) },
+  mix:        { fit: () => true, bonus: () => 0 },
+  lesser:     { fit: s => !famous(s), bonus: s => (s.crowded ? -0.5 : KNOWN.has(s.id) ? -0.25 : 0.5) },
+  local:      { fit: s => s.tags.includes('local'), bonus: s => (s.tags.includes('local') ? 0.75 : 0) },
+  stories:    { fit: s => !!CARDS[s.id]?.look, bonus: s => (CARDS[s.id]?.look ? 0.4 : 0) + ((CARDS[s.id]?.sources || []).length ? 0.35 : 0) },
+};
+const STYLE_IDS = Object.keys(DISCOVERY_STYLES);
+const styleBonus = s => DISCOVERY_STYLES[plan.style]?.bonus(s) || 0;
 
 // Builds a route from the options. Rules: only stops that match a chosen interest, no
 // leg over 20 min on foot (30 min from a chosen start point to the first stop; a theme may
@@ -2049,7 +2398,7 @@ function saveRoute() {
   const pt = p => !p ? null : p.id ? { id: p.id } : { lat: p.lat, lng: p.lng };
   const data = {
     at: Date.now(), ids: route.map(s => s.id), current, km: lastRoute.km,
-    start: pt(lastRoute.start), end: pt(lastRoute.end),
+    start: pt(lastRoute.start), end: pt(lastRoute.end), edited: !!lastRoute.edited,
     selected: [...selected], angles: routeAngles, plan: { ...plan }, stopsCount, walk,
   };
   try { localStorage.setItem(ROUTE_KEY, JSON.stringify(data)); } catch (e) {}
@@ -2062,7 +2411,7 @@ function loadSavedRoute() {
   const path = d.ids.map(byId).filter(Boolean);
   if (!path.length) return null;
   const pt = p => !p ? null : p.id ? byId(p.id) || null : (isFinite(p.lat) && isFinite(p.lng) ? p : null);
-  return { d, r: { path, km: +d.km || pathKm(path, pt(d.start)), start: pt(d.start), end: pt(d.end) } };
+  return { d, r: { path, km: +d.km || pathKm(path, pt(d.start)), start: pt(d.start), end: pt(d.end), edited: !!d.edited } };
 }
 function restoreRoute() {
   const saved = loadSavedRoute();
@@ -2077,6 +2426,7 @@ function restoreRoute() {
   plan.pace = keep.pace;   // the pace choice was removed: everyone walks at the normal pace
   if (plan.theme && !THEMES[plan.theme]) plan.theme = null;
   if (!ZONES.includes(plan.zone)) plan.zone = 'any';
+  if (!STYLE_IDS.includes(plan.style)) plan.style = 'mix';   // saved before the choice existed
   plan.must = (Array.isArray(plan.must) ? plan.must : []).filter(id => stopById(id)).slice(0, MUST_MAX);   // removed places drop out
   stopsCount = +d.stopsCount || stopsCount;
   syncPlanControls();
@@ -2087,23 +2437,48 @@ function restoreRoute() {
   return true;
 }
 // A shared link (#walk=stop,stop,…&i=interests&l=length) opens the same stops in the same order.
+// Shared links: #walk=<stop ids>&i=<interests>&l=<length>, and since 22 Nov 2026 (audit F3)
+// also the start (&s=lat,lng) and the finish (&e=lat,lng, or &e=loop for "back where I
+// started"). Points are rounded, 4 decimals (about 10 m) for a point picked on the map and
+// 3 (about 100 m) for "where I am now", so a link doesn't give away exactly where its sender
+// stood. A point that can't be read or lies outside the area WalkBCN covers is ignored.
+// Links made before (without s/e) open as they always did: best start, finish anywhere.
+const fmtPt = (p, d) => `${(+p.lat).toFixed(d)},${(+p.lng).toFixed(d)}`;
+function parsePt(v) {
+  const m = /^(-?\d{1,3}(?:\.\d{1,7})?),(-?\d{1,3}(?:\.\d{1,7})?)$/.exec(v || '');
+  if (!m) return null;
+  const p = { lat: +m[1], lng: +m[2] };
+  return Math.min(...STOPS.map(s => dist(p, s))) <= FAR_KM ? p : null;
+}
 function routeFromLink() {
-  const m = location.hash.match(/^#walk=([^&]+)(?:&i=([^&]*))?(?:&l=(\w+))?/);
-  if (!m) return false;
-  const path = decodeURIComponent(m[1]).split(',').map(id => STOPS.find(s => s.id === id)).filter(Boolean);
+  if (!/^#walk=/.test(location.hash)) return false;
+  const q = new URLSearchParams(location.hash.slice(1));
+  const path = (q.get('walk') || '').split(',').map(id => STOPS.find(s => s.id === id)).filter(Boolean);
   if (!path.length) return false;
-  selected = new Set((m[2] ? decodeURIComponent(m[2]).split(',') : path.flatMap(s => s.tags)).filter(id => INTERESTS.some(i => i.id === id)));
-  if (STOP_MINUTES[m[3]]) plan.length = m[3];
-  plan.mode = 'stops'; stopsCount = Math.max(2, Math.min(10, path.length)); plan.start = 'best'; plan.end = 'any'; plan.theme = null; plan.zone = 'any'; plan.must = [];
+  const ints = q.get('i');
+  selected = new Set((ints ? ints.split(',') : path.flatMap(s => s.tags)).filter(id => INTERESTS.some(i => i.id === id)));
+  if (STOP_MINUTES[q.get('l')]) plan.length = q.get('l');
+  const start = parsePt(q.get('s')), loop = q.get('e') === 'loop';
+  const end = loop ? (start || path[0]) : parsePt(q.get('e'));
+  plan.mode = 'stops'; stopsCount = Math.max(2, Math.min(10, path.length)); plan.theme = null; plan.zone = 'any'; plan.must = [];
+  plan.style = STYLE_IDS.includes(q.get('st')) ? q.get('st') : 'mix';
+  plan.start = start ? 'map' : 'best'; plan.startPt = start;
+  plan.end = loop ? 'loop' : end ? 'map' : 'any'; plan.endPt = loop ? null : end;
   syncPlanControls();
+  if (plan.length !== 'normal') loadLangData('en');
   routeAngles = {}; walk = { visited: {}, skipped: {}, finished: false };
-  drawRoute({ path, km: pathKm(path, null), start: null, end: null }, 0);
+  drawRoute({ path, km: pathKm(path, start), start, end }, 0);
   history.replaceState({ r: 1 }, '', '#ruta');
   return true;
 }
 function shareLink() {
-  const url = `${location.origin}${location.pathname}#walk=${route.map(s => s.id).join(',')}&i=${[...selected].join(',')}&l=${plan.length}`;
-  return url;
+  const r = lastRoute || {};
+  const parts = [`walk=${route.map(s => s.id).join(',')}`, `i=${[...selected].join(',')}`, `l=${plan.length}`];
+  if (plan.style !== 'mix') parts.push(`st=${plan.style}`);
+  if (r.start) parts.push(`s=${fmtPt(r.start, plan.start === 'here' ? 3 : 4)}`);
+  if (plan.end === 'loop') parts.push('e=loop');
+  else if (r.end) parts.push(`e=${fmtPt(r.end, 4)}`);
+  return `${location.origin}${location.pathname}#${parts.join('&')}`;
 }
 async function shareRoute(btn) {
   const url = shareLink();
@@ -2152,10 +2527,13 @@ function renderRouteTexts() {
   const labels = INTERESTS.filter(i => selected.has(i.id)).map(i => interestLabel(i.id));
   document.getElementById('routeTitle').textContent = plan.theme ? t(`theme_${plan.theme}`) : t('routeTitle', { list: labels.join(' · ') });
   const notes = [];
-  if (plan.mode === 'stops' && route.length < stopsCount) notes.push(t('noteShorter', { n: route.length, asked: stopsCount }));
+  if (r.edited) notes.push(t('noteEditedStops', { n: route.length }));
+  else if (plan.mode === 'stops' && route.length < stopsCount) notes.push(t('noteShorter', { n: route.length, asked: stopsCount }));
   if (plan.mode !== 'stops' && route.length < 2) notes.push(t('noteOne'));
   if (r.end) notes.push(t(plan.end === 'loop' ? 'noteFinishLoop' : 'noteFinish', { m: Math.round(legMin(legKm(r, routePoints(r).length - 2))) }));
   if (plan.avoidCrowded) notes.push(t('noteIcons'));
+  // Few stops suit the chosen style with these interests and options: say so, don't pretend.
+  if (plan.style !== 'mix' && !r.edited && route.filter(DISCOVERY_STYLES[plan.style].fit).length * 2 < route.length) notes.push(t('noteStyleFew'));
   // Legs longer than the usual 20 minutes (only a theme allows them): say so.
   const longest = Math.max(0, ...routePoints(r).slice(1).map((_, k) => legMin(legKm(r, k))));
   if (longest > LEG_MAX_MIN + 2) notes.push(t('noteLongLeg', { m: Math.round(longest / 5) * 5 }));
@@ -2213,7 +2591,9 @@ function applyEdit(path) {
   } else if (lastDone < 0) untangle(path, lastRoute.start, end);
   const ids = new Set(path.map(s => s.id));
   for (const key of ['visited', 'skipped']) Object.keys(walk[key]).forEach(id => { if (!ids.has(id)) delete walk[key][id]; });
-  const r = { path, km: pathKm(path, lastRoute.start), start: lastRoute.start, end: plan.end === 'loop' ? (lastRoute.start || path[0]) : lastRoute.end };
+  // edited: the visitor chose these stops, so the route no longer has to match the number asked
+  // for and the "only {n} stops match" note would be wrong (audit F4).
+  const r = { path, km: pathKm(path, lastRoute.start), start: lastRoute.start, end: plan.end === 'loop' ? (lastRoute.start || path[0]) : lastRoute.end, edited: true };
   replacing = -1; pendingSwap = null;
   const at = Math.max(0, path.findIndex(s => s.id === keepId));
   drawRoute(r, at, true);
@@ -2226,6 +2606,274 @@ function renderEditBar() {
   b.textContent = t(editing ? 'editDone' : 'editRoute');
   b.setAttribute('aria-pressed', editing);
   b.onclick = () => { editing = !editing; replacing = -1; pendingSwap = null; renderStopList(); };
+  const a = document.getElementById('adaptRoute');
+  a.textContent = t('adaptOpen');
+  a.hidden = !!walk.finished || !route.some(x => !walk.visited[x.id] && !walk.skipped[x.id]);
+  a.onclick = openAdapt;
+}
+
+// ---- Adapt my walk (Phase 2C.1) ----
+// "I have less time" or "Change plan" for the stops still ahead. The proposal is computed on
+// copies with the existing route builder; the active walk (stops, order, visited/skipped,
+// stories heard, interests, style, start/finish, saved copy, shared link) only changes on
+// "Apply". Closing, "Keep my route", Esc or Back leave everything exactly as it was.
+let adaptDraft = null;   // { mode, minutes, interests:Set, style, without:Set } — never the live state
+const adaptDlg = document.getElementById('adapt');
+const doneStop = s => !!(walk.visited[s.id] || walk.skipped[s.id]);
+// Where the rest of the walk starts: the visitor's position only if the guide or map already
+// has it (no new location request), else the last stop marked visited, else the route start.
+function adaptAnchor() {
+  if (mePos) return { pt: { lat: mePos[0], lng: mePos[1] }, label: t('adaptFromHere') };
+  const last = [...route].reverse().find(x => walk.visited[x.id]);
+  if (last) return { pt: last, label: last.name };
+  return { pt: lastRoute.start || null, label: lastRoute.start ? t('adaptFromStart') : route.find(x => !doneStop(x))?.name || '' };
+}
+// Same estimate as the route screen without street data: straight line × 1.3 at the plan's pace,
+// plus the minutes at each stop.
+function adaptEstimate(path, start, end) {
+  if (!path.length) return { min: 0, km: 0 };
+  const km = (pathKm(path, start) + (end ? dist(path[path.length - 1], end) : 0)) * 1.3;
+  return { min: Math.round(legMin(km) + path.length * stopMinutes()), km };
+}
+function adaptFinish() {
+  if (plan.end === 'loop') return lastRoute.start || route[0];
+  return plan.end === 'map' ? lastRoute.end : null;
+}
+function proposeAdapt(d) {
+  const pending = route.filter(x => !doneStop(x));
+  const anchor = adaptAnchor();
+  const finish = adaptFinish();
+  const done = new Set(route.filter(doneStop).map(x => x.id));
+  const th = THEMES[plan.theme];
+  const pool = (th?.pool || STOPS.map(x => x.id)).filter(id => !done.has(id) && !d.without.has(id));
+  const must = (plan.must || []).map(stopById).filter(x => x && !done.has(x.id) && !d.without.has(x.id));
+  const opts = { mode: d.mode === 'time' ? 'time' : 'stops', minutes: d.minutes, n: Math.max(1, pending.length), pace: plan.pace,
+    avoidCrowded: plan.avoidCrowded, stopMin: stopMinutes(), pool, zone: plan.zone || 'any', legMax: th?.legMax || LEG_MAX_MIN,
+    must, start: anchor.pt, end: finish };
+  // The builder reads the interests and the style from the page state: swap them in only for
+  // this synchronous call, and always put the originals back.
+  const keepSel = selected, keepStyle = plan.style;
+  let r;
+  try { selected = new Set(d.interests); plan.style = d.style; r = buildRoute(opts); }
+  finally { selected = keepSel; plan.style = keepStyle; }
+  const next = r.path;
+  const ids = new Set(next.map(x => x.id)), had = new Set(pending.map(x => x.id));
+  const now = adaptEstimate(pending, anchor.pt, finish), then = adaptEstimate(next, anchor.pt, finish);
+  const missing = must.filter(m => !ids.has(m.id));
+  const overTime = d.mode === 'time' && then.min > d.minutes + 5 ? must.filter(m => ids.has(m.id)) : [];
+  return { pending, next, anchor, finish, now, then, missing, overTime,
+    kept: next.filter(x => had.has(x.id)), removed: pending.filter(x => !ids.has(x.id)), added: next.filter(x => !had.has(x.id)),
+    same: next.map(x => x.id).join() === pending.map(x => x.id).join() };
+}
+function openAdapt() {
+  adaptDraft = { mode: null, minutes: 30, interests: new Set(selected), style: plan.style || 'mix', without: new Set() };
+  renderAdapt('choose');
+  if (!adaptDlg.open) {
+    adaptDlg.showModal();
+    history.pushState({ r: 1, adapt: 1 }, '', '#ruta');   // Back closes the panel, not the walk
+  }
+  track('Adapt opened');
+}
+function closeAdapt() {
+  adaptDraft = null;
+  if (adaptDlg.open) adaptDlg.close();
+}
+adaptDlg.addEventListener('close', () => { adaptDraft = null; if (history.state?.adapt) history.back(); });
+window.addEventListener('popstate', () => { if (adaptDlg.open && !history.state?.adapt) adaptDlg.close(); });
+function renderAdapt(step) {
+  const d = adaptDraft, body = document.getElementById('adaptBody');
+  document.getElementById('adaptTitle').textContent = t('adaptTitle');
+  const keepBtn = `<button type="button" class="ghost" data-a="keep">${t('adaptKeep')}</button>`;
+  if (step === 'choose') {
+    body.innerHTML = `<p>${t('adaptIntro')}</p>
+      <div class="adapt-choices"><button type="button" class="book" data-a="time">${t('adaptLessTime')}</button>
+      <button type="button" class="book" data-a="plan">${t('adaptChangePlan')}</button>
+      <button type="button" class="book alt" data-a="pause">${t('pauseOpen')}</button>
+      <button type="button" class="book alt" data-a="surprise">${t('surpriseOpen')}</button></div>
+      <div class="actions">${keepBtn}</div>`;
+  } else if (step === 'time') {
+    const now = adaptEstimate(route.filter(x => !doneStop(x)), adaptAnchor().pt, adaptFinish());
+    body.innerHTML = `<p>${t('adaptTimeQ', { m: fmtMin(now.min) })}</p>
+      <div class="chips" id="adaptMin">${[15, 30, 45, 60].map(m => `<button type="button" class="chip" data-v="${m}" aria-pressed="${d.minutes === m}">${m} min</button>`).join('')}</div>
+      <div class="actions"><button type="button" class="book go" data-a="preview">${t('adaptSee')}</button>${keepBtn}</div>`;
+    body.querySelectorAll('#adaptMin .chip').forEach(b => b.onclick = () => { d.minutes = +b.dataset.v; pressOnly(body.querySelector('#adaptMin'), b); });
+  } else if (step === 'plan') {
+    body.innerHTML = `<p class="opt-label">${t('styleTitle')}</p>
+      <div class="chips" id="adaptStyle">${STYLE_IDS.map(id => `<button type="button" class="chip" data-v="${id}" aria-pressed="${d.style === id}">${t(`style_${id}`)}</button>`).join('')}</div>
+      <p class="opt-label">${t('interestsTitle')}</p>
+      <div class="chips" id="adaptInts">${INTERESTS.map(i => `<button type="button" class="chip" data-v="${i.id}" aria-pressed="${d.interests.has(i.id)}">${interestLabel(i.id)}</button>`).join('')}</div>
+      <div class="actions"><button type="button" class="book go" data-a="preview">${t('adaptSee')}</button>${keepBtn}</div>`;
+    body.querySelectorAll('#adaptStyle .chip').forEach(b => b.onclick = () => { d.style = b.dataset.v; pressOnly(body.querySelector('#adaptStyle'), b); });
+    body.querySelectorAll('#adaptInts .chip').forEach(b => b.onclick = () => {
+      if (d.interests.has(b.dataset.v)) { if (d.interests.size > 1) d.interests.delete(b.dataset.v); } else d.interests.add(b.dataset.v);
+      b.setAttribute('aria-pressed', d.interests.has(b.dataset.v));
+    });
+  } else if (step === 'preview') {
+    const p = d.forced || proposeAdapt(d);
+    d.proposal = p;
+    const li = (list, cls) => list.map(x => `<li class="${cls}">${escHtml(x.name)}</li>`).join('');
+    const arrive = plan.end === 'loop' ? t('adaptLoop') : p.finish ? t('adaptFinishKept') : '';
+    const warn = [
+      ...p.missing.map(m => `<p class="adapt-warn">${t('adaptMustOut', { name: escHtml(m.name) })} <button type="button" class="linkish" data-without="${m.id}">${t('adaptWithout', { name: escHtml(m.name) })}</button></p>`),
+      ...p.overTime.map(m => `<p class="adapt-warn">${t('adaptMustTime', { name: escHtml(m.name) })} <button type="button" class="linkish" data-without="${m.id}">${t('adaptWithout', { name: escHtml(m.name) })}</button></p>`),
+    ].join('');
+    if (!p.next.length) {
+      body.innerHTML = `<p class="adapt-warn">${t('adaptNone')}</p>${warn}<div class="actions">${keepBtn}<button type="button" class="ghost" data-a="${d.mode === 'surprise' ? 'reveal' : d.mode}">${t('adaptBack')}</button></div>`;
+    } else {
+      body.innerHTML = `<p class="adapt-tag">${t('adaptProvisional')}</p>
+        <p class="hint">${t('adaptFrom', { place: escHtml(p.anchor.label) })}</p>
+        <div class="adapt-compare">
+          <div><b>${t('adaptNow')}</b><span>${p.pending.length} ${t('stopsWord')} · ${fmtMin(p.now.min)} · ${fmtKm(p.now.km, true)}</span></div>
+          <div class="new"><b>${t('adaptProposal')}</b><span>${p.next.length} ${t('stopsWord')} · ${fmtMin(p.then.min)} · ${fmtKm(p.then.km, true)}</span></div>
+        </div>
+        ${p.same ? `<p>${t('adaptSame')}</p>` : `<ul class="adapt-list">${li(p.kept, 'kept')}${li(p.removed, 'removed')}${li(p.added, 'added')}</ul>`}
+        ${arrive ? `<p class="hint">${arrive}</p>` : ''}${warn}
+        <p class="hint">${t('adaptApprox')}</p>
+        <div class="actions">${p.same ? '' : `<button type="button" class="book go" data-a="apply">${t('adaptApply')}</button>`}${keepBtn}
+          <button type="button" class="ghost" data-a="${d.mode === 'surprise' ? 'reveal' : d.mode}">${t('adaptBack')}</button></div>`;
+    }
+    body.querySelectorAll('[data-without]').forEach(b => b.onclick = () => { d.without.add(b.dataset.without); renderAdapt('preview'); });
+  } else if (step === 'pause') {
+    renderPause(body, keepBtn);
+  } else if (step === 'surprise' || step === 'reveal') {
+    renderSurprise(body, keepBtn, step);
+  }
+  body.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
+    const a = b.dataset.a;
+    if (a === 'keep') closeAdapt();
+    else if (a === 'time' || a === 'plan') { d.mode = a; d.forced = null; renderAdapt(a); }
+    else if (a === 'pause') { d.mode = 'pause'; renderAdapt('pause'); }
+    else if (a === 'surprise') { d.mode = 'surprise'; d.forced = null; d.found = pickSurprise(); d.clues = 1; renderAdapt('surprise'); }
+    else if (a === 'reveal') { d.forced = null; renderAdapt('reveal'); }
+    else if (a === 'clue') { d.clues = Math.min(3, d.clues + 1); renderAdapt('surprise'); }
+    else if (a === 'add') { d.forced = surpriseProposal(d.found); renderAdapt(d.forced.tooFar ? 'reveal' : 'preview'); }
+    else if (a === 'choose') renderAdapt('choose');
+    else if (a === 'preview') renderAdapt('preview');
+    else if (a === 'apply') applyAdapt();
+  });
+}
+// The only place the proposal touches the live walk: done stops stay first with their
+// visited/skipped marks, the proposal replaces the stops still ahead; heard stories and story
+// versions of kept stops stay; the new interests and style become the walk's own.
+function applyAdapt() {
+  const d = adaptDraft, p = d?.proposal;
+  if (!p?.next.length) return;
+  const path = [...route.filter(doneStop), ...p.next];
+  selected = new Set(d.interests); plan.style = d.style;
+  const r = { path, km: pathKm(path, lastRoute.start), start: lastRoute.start, end: plan.end === 'loop' ? (lastRoute.start || path[0]) : lastRoute.end, edited: true };
+  closeAdapt();
+  stopAudio();
+  drawRoute(r, route.filter(doneStop).length, true);   // saves the walk (goTo → saveRoute)
+  const note = document.getElementById('editedNote');
+  note.hidden = false; note.textContent = t('adaptDone');
+  track('Route adapted', { how: d.mode, stops: path.length });
+}
+
+// ---- I want a break / Surprise me (Phase 2C.2) ----
+// Both only read the walk: nothing changes unless "Add to my walk" → preview → "Apply".
+// Distances are straight lines × 1.3 at walking pace, shown as approximate; opening hours and
+// availability are never checked, and the panel says so.
+const ptOf = x => ({ lat: x.lat, lng: x.lng });
+// The visitor's position only if the app already has it; else the last stop marked visited;
+// else the next stop still ahead (or the start).
+function nearAnchor() {
+  if (mePos) return { pt: { lat: mePos[0], lng: mePos[1] }, label: t('adaptFromHere') };
+  const last = [...route].reverse().find(x => walk.visited[x.id]);
+  if (last) return { pt: ptOf(last), label: last.name };
+  const next = route.find(x => !doneStop(x));
+  return next ? { pt: ptOf(next), label: next.name } : { pt: lastRoute.start || ptOf(route[0]), label: t('adaptFromStart') };
+}
+const walkMinOf = km => Math.max(1, Math.round(legMin(km * 1.3)));
+const PAUSE_MAX_MIN = 15;   // farthest suggestion, and largest detour, in minutes on foot
+const PAUSE_KINDS = {
+  coffee: () => ACTIVITIES.cafes.places.map(p => ({ name: p.name, lat: p.lat, lng: p.lng, desc: placeDesc('cafes', p) })),
+  eat: () => ACTIVITIES.restaurants.places.map(p => ({ name: p.name, lat: p.lat, lng: p.lng, desc: placeDesc('restaurants', p) })),
+  // Parks, gardens, promenades and beaches among the stops, never where neighbours' homes or
+  // worship come first, nor a stop closed by a notice.
+  rest: () => STOPS.filter(x => x.tags.includes('outdoors') && !x.closedNow && !sensitive(x, 'residential') && !sensitive(x, 'worship'))
+    .map(x => ({ name: x.name, lat: x.lat, lng: x.lng, desc: (storyText(x).text || '').split(/(?<=[.!?。])\s/)[0] })),
+};
+function pauseSuggestions(kind) {
+  const a = nearAnchor();
+  const next = route.find(x => !doneStop(x) && dist(x, a.pt) > 0.02);
+  return { anchor: a, list: PAUSE_KINDS[kind]().map(p => {
+    const to = dist(a.pt, p), detour = next ? to + dist(p, next) - dist(a.pt, next) : to;
+    return { ...p, to: walkMinOf(to), detour: walkMinOf(Math.max(0, detour)), rank: detour + to * 0.3 };
+  }).filter(p => p.to <= PAUSE_MAX_MIN && p.detour <= PAUSE_MAX_MIN).sort((x, y) => x.rank - y.rank).slice(0, 3) };
+}
+function renderPause(body, keepBtn) {
+  const d = adaptDraft;
+  const kind = d.pause;
+  const kinds = `<div class="chips" id="pauseKinds">${['coffee', 'eat', 'rest'].map(k => `<button type="button" class="chip" data-k="${k}" aria-pressed="${kind === k}">${t(`pause_${k}`)}</button>`).join('')}</div>`;
+  let list = '';
+  if (kind) {
+    const r = pauseSuggestions(kind);
+    list = `<p class="hint">${t('adaptFrom', { place: escHtml(r.anchor.label) })}</p>` + (r.list.length
+      ? `<ul class="pause-list">${r.list.map(p => `<li><b>${escHtml(p.name)}</b><span>${escHtml(p.desc)}</span>
+          <span class="hint">${t('pauseWalk', { m: p.to })}${p.detour !== p.to ? ` · ${t('pauseDetour', { m: p.detour })}` : ''}</span>
+          <a class="book go" href="${directionsUrl(p)}" target="_blank" rel="noopener">${t('pauseGo')}</a></li>`).join('')}</ul>
+         <p class="hint">${t('pauseNote')}</p>`
+      : `<p class="adapt-warn">${t('pauseNone', { m: PAUSE_MAX_MIN })}</p>`);
+  }
+  body.innerHTML = `<p>${t('pauseIntro')}</p>${kinds}${list}<div class="actions"><button type="button" class="ghost" data-a="choose">${t('adaptBack')}</button>${keepBtn}</div>`;
+  body.querySelectorAll('#pauseKinds .chip').forEach(b => b.onclick = () => { d.pause = b.dataset.k; renderAdapt('pause'); track('Break suggested', { kind: d.pause }); });
+}
+// Surprise: a stop from the clue catalogue (data/discoveries.js) that isn't on this walk yet,
+// within a reasonable walk, open and fine to look for from the street; the closest best match
+// for the walk's interests first.
+const DISCOVERIES = window.WALKBCN_DISCOVERIES || [];
+const SURPRISE_MAX_MIN = 20;
+function pickSurprise() {
+  const a = nearAnchor();
+  const onWalk = new Set(route.map(x => x.id));
+  const opts = DISCOVERIES.map(e => ({ e, s: stopById(e.stop) }))
+    .filter(({ s }) => s && !onWalk.has(s.id) && !s.closedNow && !sensitive(s, 'residential') && !sensitive(s, 'limited'))
+    .map(o => ({ ...o, min: walkMinOf(dist(a.pt, o.s)), match: o.s.tags.filter(x => selected.has(x)).length }))
+    .filter(o => o.min <= SURPRISE_MAX_MIN)
+    .sort((x, y) => (y.match - x.match) || (x.min - y.min));
+  return opts[0] ? { ...opts[0], anchor: a } : null;
+}
+const clueText = c => escHtml(c[lang] || c.en);
+function renderSurprise(body, keepBtn, step) {
+  const d = adaptDraft, f = d.found;
+  const back = `<button type="button" class="ghost" data-a="choose">${t('adaptBack')}</button>`;
+  if (!f) { body.innerHTML = `<p class="adapt-warn">${t('surpriseNone', { m: SURPRISE_MAX_MIN })}</p><div class="actions">${back}${keepBtn}</div>`; return; }
+  if (step === 'surprise') {
+    body.innerHTML = `<p class="adapt-tag">${t('surpriseTag')}</p>
+      <p class="surprise-intro">${clueText(f.e.intro)}</p>
+      <ol class="clues">${f.e.clues.slice(0, d.clues).map(c => `<li>${clueText(c)}</li>`).join('')}</ol>
+      <p class="hint">${t('surpriseNear', { m: f.min })}</p>
+      <div class="actions">${d.clues < 3 ? `<button type="button" class="ghost" data-a="clue">${t('surpriseClue', { n: d.clues + 1 })}</button>` : ''}
+        <button type="button" class="book go" data-a="reveal">${t('surpriseReveal')}</button>${back}${keepBtn}</div>`;
+    return;
+  }
+  const s = f.s, why = d.forced?.tooFar ? `<p class="adapt-warn">${t('surpriseTooFar', { m: d.forced.extra })}</p>` : '';
+  body.innerHTML = `<p class="adapt-tag">${t('surpriseFound')}</p>
+    ${stopPhotoHtml(s)}
+    <h3 class="stop-title">${escHtml(s.name)}</h3><p class="stop-area">${escHtml(areaName(s.area))} · ${t('pauseWalk', { m: f.min })}</p>
+    <p class="story">${(st => (st.loading || !st.text ? storyText(s) : st).text)(storyText(s, null, 'short'))}</p>${why}
+    <div class="actions"><button type="button" class="book go" data-a="add">${t('surpriseAdd')}</button>
+      <a class="book go alt" href="${directionsUrl(s)}" target="_blank" rel="noopener">${t('directionsHere')}</a>
+      <button type="button" class="ghost" data-a="listen">${t('surpriseListen')}</button>${keepBtn}</div>`;
+  track('Surprise revealed', { stop: s.id, clues: d.clues });
+  body.querySelector('[data-a="listen"]').onclick = () => { closeAdapt(); showTab('guide'); openGuideStop(s); };
+}
+// "Add to my walk": the surprise stop goes where it adds least walking among the stops ahead
+// (finish and loop kept). Too long a detour is explained instead of proposed.
+function surpriseProposal(f) {
+  const pending = route.filter(x => !doneStop(x));
+  const anchor = nearAnchor(), finish = adaptFinish();
+  let at = pending.length, add = Infinity;
+  for (let i = 0; i <= pending.length; i++) {
+    const prev = i ? pending[i - 1] : anchor.pt, next = pending[i] || finish;
+    const extra = dist(prev, f.s) + (next ? dist(f.s, next) - dist(prev, next) : 0);
+    if (extra < add) { add = extra; at = i; }
+  }
+  const extraMin = walkMinOf(add);
+  if (extraMin > SURPRISE_MAX_MIN + 5) return { tooFar: true, extra: extraMin };
+  const next = [...pending]; next.splice(at, 0, f.s);
+  return { pending, next, anchor, finish, now: adaptEstimate(pending, anchor.pt, finish), then: adaptEstimate(next, anchor.pt, finish),
+    missing: [], overTime: [], kept: pending, removed: [], added: [f.s], same: false };
 }
 function renderStopList() {
   const list = document.getElementById('stopList');
@@ -2290,12 +2938,14 @@ const fmtDate = iso => { try { return new Date(`${iso}T12:00:00`).toLocaleDateSt
 // confirmed says so; a notice past its review date says when it was last checked.
 function noticeHtml(s) {
   const day = todayISO();
-  return noticesFor(s).map(n => {
-    const stale = n.review && n.review < day;
+  return noticesFor(s, true).map(n => {
+    const expired = !!n.until && n.until < day;
+    const stale = !expired && n.review && n.review < day;
     const where = n.go || n.at;
-    return `<div class="notice${stale ? ' stale' : ''}" role="note">
-    ${n.confirmed === false ? `<span class="tagline">${t('noticeAnnounced')}</span>` : ''}
+    return `<div class="notice${stale || expired ? ' stale' : ''}${expired ? ' expired' : ''}" role="note">
+    ${expired ? `<span class="tagline">${t('noticeExpiredTag')}</span>` : n.confirmed === false ? `<span class="tagline">${t('noticeAnnounced')}</span>` : ''}
     <p>${escHtml(n.text[lang] || n.text.en)}</p>
+    ${expired ? `<p class="notice-meta"><b>${t('noticeExpired', { d: fmtDate(n.until) })}</b></p>` : ''}
     ${stale ? `<p class="notice-meta"><b>${t('noticeStale', { d: fmtDate(n.checked) })}</b></p>` : ''}
     <p class="notice-meta">${where ? `<a href="${directionsUrl(where)}" target="_blank" rel="noopener">${t('directionsTo', { place: escHtml(where.label) })}</a> · ` : ''}<a href="${n.source}" target="_blank" rel="noopener">${t('noticeSource')}</a> · ${t('noticeChecked', { d: fmtDate(n.checked) })}</p>
   </div>`;
@@ -2570,7 +3220,15 @@ function playerHtml() {
     </div>`;
 }
 
+// The recording on screen, held in memory as a blob: URL (see below). Freed as soon as another
+// story is set up; before 22 Nov 2026 every recording opened stayed in memory (audit F10).
+let playerBlob = null;
+function releasePlayer() {
+  if (player) { player.pause(); player.removeAttribute('src'); try { player.load(); } catch (e) {} }
+  if (playerBlob) { URL.revokeObjectURL(playerBlob); playerBlob = null; }
+}
 function setupPlayer(s = route[current], st = storyFor(s)) {
+  releasePlayer();
   audioKey = { stop: s.id, angle: st.angle, lang, length: plan.length, name: s.name, img: s.img };
   player = null; tts = null; playedOnce = false; heard = 0; lastTick = null; spokenChars = 0; fellBack = false;
   pstate = 'idle';
@@ -2604,7 +3262,8 @@ function setupPlayer(s = route[current], st = storyFor(s)) {
     fetch(st.audio).then(r => r.ok ? r.blob() : Promise.reject()).then(blob => {
       if (a !== player) return;
       const at = a.currentTime, resume = pstate === 'playing' || pstate === 'loading';
-      a.src = URL.createObjectURL(blob);
+      playerBlob = URL.createObjectURL(blob);
+      a.src = playerBlob;
       a.addEventListener('loadedmetadata', () => {
         if (a !== player) return;
         if (at) a.currentTime = at;
@@ -2652,7 +3311,7 @@ function wordStart(text, i, forward = false) {
 // The recording didn't load: read the story with the device voice instead, and say so.
 function fallBackToVoice(s, st) {
   const wasOn = pstate === 'playing' || pstate === 'loading';
-  player = null; fellBack = true;
+  releasePlayer(); player = null; fellBack = true;
   if (!('speechSynthesis' in window)) { setState('error', t('audioErrorNoVoice')); return; }
   setupTts(s, st);
   if (wasOn) speakFrom(0); else setState('idle');
@@ -2830,7 +3489,7 @@ function updateProgress() {
   if (mini) mini.style.width = `${seek.value / 10}%`;
 }
 // No player on screen (the story is still loading): forget the previous one.
-function playerIdle() { player = null; tts = null; audioKey = null; pstate = 'idle'; speaking = false; updateMini(); }
+function playerIdle() { releasePlayer(); player = null; tts = null; audioKey = null; pstate = 'idle'; speaking = false; updateMini(); }
 function stopAudio() {
   if (player) { player.pause(); savePos(true); }
   if (tts) { tts.pos = wordStart(tts.text, ttsPos()); tts.chunk = null; tts.run++; savePos(true); }
@@ -2881,9 +3540,9 @@ if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
 
 
 // ---- Tabs ----
-const TABS = { walk: 'tabWalk', guide: 'tabGuide', act: 'tabAct', tips: 'tabTips' };
+const TABS = { walk: 'tabWalk', guide: 'tabGuide', act: 'tabAct', tips: 'tabTips', chal: 'tabChal' };
 function showTab(name) {
-  stopAudio();
+  stopAudio(); smNarStop();
   for (const [view, tab] of Object.entries(TABS)) {
     document.getElementById(`${view}View`).hidden = name !== view;
     document.getElementById(tab).setAttribute('aria-selected', name === view);
@@ -2903,6 +3562,7 @@ document.getElementById('tabWalk').onclick = () => showTab('walk');
 document.getElementById('tabGuide').onclick = () => { showTab('guide'); track('Audio guide opened'); };
 document.getElementById('tabAct').onclick = () => { showTab('act'); track('Activities opened'); };
 document.getElementById('tabTips').onclick = () => { showTab('tips'); track('Tips opened'); };
+document.getElementById('tabChal').onclick = () => { showTab('chal'); renderCh(); track('Challenges opened'); };
 
 // ---- Local tips (data/tips.js) ----
 const TIPS = window.WALKBCN_TIPS;
@@ -3400,7 +4060,10 @@ function openGuideStop(s, scroll = true) {
   guideMarkers[s.id]?.setIcon(guideIcon(s)).setZIndexOffset(500);
   if (guideLayer?.zoomToShowLayer && guideMarkers[s.id] && guideView === 'map' && scroll) guideLayer.zoomToShowLayer(guideMarkers[s.id], () => {});
   // English long versions live in en.js: load it, then redraw this card with them.
-  if (lang === 'en' && !I18N.en) loadLangData('en').then(() => { if (guideStop === s) openGuideStop(s, false); });
+  // Redraws once the download ends. A failure is recorded in langFailed before this runs, so
+  // the redraw shows the standard version with "Try again" and does not start another download
+  // (before 22 Nov 2026 a failed download redrew and retried forever and froze the page: audit F2).
+  if (lang === 'en' && !I18N.en && !langFailed.en) loadLangData('en').then(() => { if (guideStop === s) openGuideStop(s, false); });
   // The audio guide always tells the long version (about two minutes), whatever the routes use.
   const st = { ...storyText(s, null, 'long'), angle: null };
   const [icon, c] = INT_STYLE[guideInterest(s)];
@@ -3447,6 +4110,963 @@ function refreshGuideTexts() {
   renderGuideFilter();
   renderGuideNear();
   if (guideStop && !document.getElementById('guideView').hidden) openGuideStop(guideStop, false);
+}
+
+
+// ---- Challenges (Phase 3A) ----
+// One engine for five games (data/challenges.js). Each challenge is a list of missions at real
+// stops; what differs is how a mission is reached and solved:
+//   hunt     clues lead to an unnamed place → location check → question → next target
+//   mystery  a labelled fiction frame; each stop gives a real clue for the notebook; the last
+//            question solves the mystery
+//   observe  the answer is in front of you (choice, true/false, counting); location optional
+//   bingo    3 × 3 board in any order; a square is marked by location or by its question; a line ends it
+//   story    go there, listen to or read the stop's existing story, answer about it
+// Location is asked only on "Check location", once (no tracking, nothing stored). If it fails,
+// is imprecise or is refused, the player continues by answering on the spot. DEMO mode uses the
+// same engine with simulated location checks, is labelled on every screen and keeps its progress
+// in memory only, never in the saved progress.
+const CHALLENGES = window.WALKBCN_CHALLENGES || [];
+CHALLENGES.forEach(c => { if (c.credit && !PHOTOS[c.img]) PHOTOS[c.img] = c.credit; });
+const CH_KEY = 'walkbcn_challenges_v1';
+// Wikimedia sometimes refuses a few photos when many are asked for at once. Try a failed one
+// again once, after a short random wait, before leaving the coloured fallback tile.
+function chImgRetry(img) {
+  if (img.dataset.retried) { img.remove(); return; }
+  img.dataset.retried = '1';
+  const src = img.src;
+  img.removeAttribute('src');
+  setTimeout(() => { img.src = src; }, 1500 + Math.random() * 2000);
+}
+const chL = o => (o && typeof o === 'object' ? o[lang] || o.en : o);
+let chSaved = (() => { try { return JSON.parse(localStorage.getItem(CH_KEY)) || {}; } catch (e) { return {}; } })();
+let chDemo = false, chDemoState = {}, chView = { id: null };
+const chStore = () => (chDemo ? chDemoState : chSaved);
+const chSave = () => { if (!chDemo) try { localStorage.setItem(CH_KEY, JSON.stringify(chSaved)); } catch (e) {} };
+const chById = id => CHALLENGES.find(c => c.id === id);
+const chState = c => (chStore()[c.id] ||= { i: 0, stage: 'start', clues: 1, done: {}, notes: [], finished: false });
+// Each game gets its own variant from a seed (saved with the progress, so "Continue" keeps it;
+// "Start again" makes a new one; later, friends could share a seed to play the same variant).
+// What may change depends on the game, so no clue or story stops making sense:
+//   bingo    squares in new positions (different lines win)
+//   mystery  the first stops in any order (a few metres apart); the solving stop stays last
+//   observe  the walk in one direction or the other
+//   hunt, story  same order (relative clues; a chronological story)
+// In every game the answer options are shuffled.
+function chRng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+function chShuffle(arr, rnd) { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+const chPlans = new WeakMap();
+function chPlan(c, st) {
+  const key = `${st.seed}`, cached = chPlans.get(st);
+  if (cached?.key === key) return cached;
+  const n = c.missions.length, ids = [...Array(n).keys()];
+  let order = ids;
+  const opts = {};
+  if (st.seed != null) {
+    const rnd = chRng(st.seed);
+    if (c.type === 'bingo') order = chShuffle(ids, rnd);
+    else if (c.type === 'mystery') order = [...chShuffle(ids.slice(0, -1), rnd), n - 1];
+    else if (c.type === 'observe') order = rnd() < 0.5 ? ids : [...ids].reverse();
+    c.missions.forEach((m, k) => { if (m.q.kind === 'choice') opts[k] = chShuffle(m.q.options.map((_, j) => j), rnd); });
+  }
+  const plan = { key, order, opts };
+  chPlans.set(st, plan);
+  return plan;
+}
+const chMi = (c, st, pos) => chPlan(c, st).order[pos];   // position in this game → mission index
+const chDoneN = (c, st) => Object.keys(st.done).length;
+function chLines(st, n = 3) {
+  const has = k => st.done[k] != null, L = [];
+  for (let r = 0; r < n; r++) L.push([...Array(n)].map((_, k) => r * n + k));
+  for (let k = 0; k < n; k++) L.push([...Array(n)].map((_, r) => r * n + k));
+  L.push([...Array(n)].map((_, k) => k * n + k), [...Array(n)].map((_, k) => k * n + n - 1 - k));
+  return L.filter(l => l.every(has));
+}
+// One location check when asked. ok if within the mission radius, allowing for part of the
+// device's reported accuracy; a reading worse than 100 m counts as imprecise, not as "far".
+const CH_GPS_SLACK = 50, CH_GPS_POOR = 100;
+function chLocate(stop, r) {
+  if (chDemo) return Promise.resolve({ ok: true, demo: true });
+  if (!navigator.geolocation) return Promise.resolve({ ok: false, why: 'error' });
+  return new Promise(res => navigator.geolocation.getCurrentPosition(p => {
+    const d = dist({ lat: p.coords.latitude, lng: p.coords.longitude }, stop) * 1000, acc = p.coords.accuracy || 0;
+    if (d <= r + Math.min(acc, CH_GPS_SLACK)) res({ ok: true });
+    else if (acc > CH_GPS_POOR) res({ ok: false, why: 'imprecise', acc: Math.round(acc) });
+    else res({ ok: false, why: 'far', m: Math.round((d - r) / 10) * 10 });
+  }, e => res({ ok: false, why: e.code === 1 ? 'denied' : 'error' }), { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }));   // a fresh reading for each check
+}
+const chRoot = () => document.getElementById('chalRoot');
+const chDemoBar = () => (chDemo ? `<p class="ch-demo" role="status">${t('chDemoBanner')}</p>` : '');
+function renderCh() {
+  if (!chView.id) return renderChHome();
+  const c = chById(chView.id), st = chState(c);
+  if (st.stage === 'start') return renderChIntro(c, st);
+  if (st.finished) return renderChDone(c, st);
+  return c.type === 'bingo' ? renderChBingo(c, st) : renderChMission(c, st);
+}
+const chModeSeg = () => `<div class="seg ch-modeseg" role="group">${['solo', 'friends'].map(m => `<button type="button" data-chmode="${m}" aria-pressed="${(chView.mode || 'solo') === m}">${t(m === 'solo' ? 'mpSolo' : 'mpFriends')}</button>`).join('')}</div>`;
+function wireChModeSeg() { chRoot().querySelectorAll('[data-chmode]').forEach(b => b.onclick = () => { chView.mode = b.dataset.chmode; renderCh(); }); }
+function renderChHome() {
+  if (chView.mode === 'friends') return renderMp();
+  chRoot().innerHTML = `<h1 class="ch-h1">${t('chTitle')}</h1><p class="lead">${t('chIntro')}</p>${chModeSeg()}
+    <label class="check ch-demo-toggle"><input type="checkbox" id="chDemoOn" ${chDemo ? 'checked' : ''}> <span>${t('chDemoLabel')}</span></label>
+    <p class="hint">${t('chDemoHint')}</p>${chDemoBar()}
+    <div class="ch-cards">${CHALLENGES.map(c => {
+      const st = chStore()[c.id], n = c.missions.length, d = st ? chDoneN(c, st) : 0;
+      const badge = st?.finished ? t('chCompleted') : st && st.stage !== 'start' ? t('chProgress', { d, n }) : '';
+      return `<button type="button" class="ch-card" data-ch="${c.id}">
+        <span class="ch-img">${chCardImg(c.img, c.imgPos)}<i class="ch-type">${t(`chType_${c.type}`)}</i></span>
+        <span class="ch-body"><b>${escHtml(chL(c.title))}</b><span>${escHtml(chL(c.desc))}</span>
+        <span class="ch-meta">${t('chMinutes', { m: c.minutes })} · ${t(c.type === 'bingo' ? 'chSquares' : 'chMissions', { n })}${badge ? ` · <em>${badge}</em>` : ''}</span></span></button>`;
+    }).join('')}</div>`;
+  wireChModeSeg();
+  document.getElementById('chDemoOn').onchange = e => { chDemo = e.target.checked; chDemoState = {}; renderChHome(); };
+  chRoot().querySelectorAll('[data-ch]').forEach(b => b.onclick = () => { chView.id = b.dataset.ch; renderCh(); window.scrollTo(0, 0); });
+}
+const chTop = (c, st) => `<button type="button" class="ghost ch-back" data-chact="home">← ${t('chBack')}</button>${chDemoBar()}
+  <p class="ch-kicker">${t(`chType_${c.type}`)}</p><h1 class="ch-h1">${escHtml(chL(c.title))}</h1>`;
+function renderChIntro(c, st) {
+  const fresh = !chDoneN(c, st);
+  chRoot().innerHTML = `${chTop(c, st)}
+    <figure class="stop-photo ch-cover"><img src="${photo(c.img, 960)}" alt="" style="object-position:${c.imgPos || 'center'}">${creditHtml(c.img)}</figure>
+    <p class="lead">${escHtml(chL(c.intro))}</p>
+    ${c.frame ? `<p class="ch-fiction">${escHtml(chL(c.frame))}</p>` : ''}
+    <div class="ch-how"><b>${t('chHowTitle')}</b><p>${t(`chHow_${c.type}`)}</p><p>${t(c.type === 'hunt' || c.type === 'story' ? 'chVariantOpts' : 'chVariant')}</p><p class="hint">${t('chSafety')}</p></div>
+    <p class="ch-meta">${t('chMinutes', { m: c.minutes })} · ${t(c.type === 'bingo' ? 'chSquares' : 'chMissions', { n: c.missions.length })}</p>
+    <div class="actions"><button type="button" class="book go" data-chact="go">${t(fresh ? 'chStart' : 'chContinue')}</button>
+    ${fresh ? '' : `<button type="button" class="ghost" data-chact="reset">${t('chRestart')}</button>`}</div>`;
+  chWire(c, st);
+}
+// Question block, shared by every game: choice, true/false or a number to count on the spot.
+function chQuestion(q, key, perm) {
+  const opts = q.kind === 'truefalse' ? [t('chTrue'), t('chFalse')] : (q.options || []).map(chL);
+  return `<div class="ch-q" data-q="${key}"><p class="ch-prompt">${escHtml(chL(q.prompt))}</p>
+    ${q.kind === 'number' ? `<div class="ch-num"><input type="number" inputmode="numeric" min="0" max="99" id="chNum" aria-label="${t('chAnswerLabel')}"><button type="button" class="book go" data-chans="num">${t('chCheckAnswer')}</button></div>`
+      : `<div class="ch-opts">${(perm || opts.map((_, k) => k)).map(k => `<button type="button" class="chip" data-chans="${k}">${escHtml(opts[k])}</button>`).join('')}</div>`}
+    <p class="ch-feedback" role="status"></p></div>`;
+}
+const chRight = (q, v) => (q.kind === 'number' ? +v === q.answer : q.kind === 'truefalse' ? (v === '0') === q.answer : +v === q.answer);
+function chMissionDots(c, st) {
+  return `<ol class="ch-dots" aria-label="${t('chProgress', { d: chDoneN(c, st), n: c.missions.length })}">${c.missions.map((_, k) => `<li class="${st.done[k] != null ? 'done' : k === st.i ? 'now' : ''}"></li>`).join('')}</ol>`;
+}
+function chGpsBlock(m, s, optional) {
+  return `<div class="ch-gps"><button type="button" class="book go" data-chact="locate">${t(chDemo ? 'chCheckDemo' : 'chCheck')}</button>
+    <a class="ghost" href="${directionsUrl(s)}" target="_blank" rel="noopener">${t('pauseGo')}</a>
+    ${optional ? `<p class="hint">${t('chGpsOptional')}</p>` : ''}<p class="ch-gps-msg" role="status"></p></div>`;
+}
+function renderChMission(c, st) {
+  const mi = chMi(c, st, st.i), m = c.missions[mi], s = stopById(m.stop), last = st.i === c.missions.length - 1;
+  const named = (c.type !== 'hunt' || st.stage !== 'find') && !m.hideName;
+  let body = '';
+  if (st.stage === 'find' || st.stage === 'arrive') {
+    if (c.type === 'hunt' && st.stage === 'find') {
+      body = `<p class="ch-step">${t('chFindTitle')}</p><ol class="clues">${m.clues.slice(0, st.clues).map(x => `<li>${escHtml(chL(x))}</li>`).join('')}</ol>
+        <div class="actions"><button type="button" class="book go" data-chact="locate">${t(chDemo ? 'chCheckDemo' : 'chFoundIt')}</button>
+        ${st.clues < m.clues.length ? `<button type="button" class="ghost" data-chact="clue">${t('chMoreClue', { n: st.clues + 1, total: m.clues.length })}</button>` : ''}</div><p class="ch-gps-msg" role="status"></p>`;
+    } else body = `<p class="ch-step">${m.goHint ? escHtml(chL(m.goHint)) : t('chGoTo', { place: escHtml(s.name) })}</p>${chGpsBlock(m, s, false)}`;
+  } else if (st.stage === 'story') {
+    const v = storyText(s, m.variant || null, 'normal');
+    body = `${v.audio ? `<audio controls preload="none" src="${v.audio}" class="ch-audio"></audio>` : ''}<p class="story">${v.text}</p>
+      <div class="actions"><button type="button" class="book go" data-chact="toq">${t('chToQuestion')}</button></div>`;
+  } else if (st.stage === 'question') {
+    body = `${c.type === 'observe' && st.done[st.i] == null && !st.seen?.[st.i] ? chGpsBlock(m, s, true) : ''}${chQuestion(m.q, st.i, chPlan(c, st).opts[mi])}`;
+  }
+  const notebook = c.type === 'mystery' && st.notes.length ? `<div class="ch-notebook"><b>${t('chNotebook')}</b><ol>${st.notes.map(k => `<li>${escHtml(chL(c.missions[k].piece))}</li>`).join('')}</ol></div>` : '';
+  chRoot().innerHTML = `${chTop(c, st)}${chMissionDots(c, st)}
+    <p class="ch-kicker">${t('chMissionN', { n: st.i + 1, total: c.missions.length })}${last && c.type === 'mystery' ? ` · ${t('chFinalQ')}` : ''}</p>
+    ${named ? `<figure class="stop-photo"><img src="${photo(s.img, 960)}" alt="">${creditHtml(s.img)}</figure><h2 class="ch-place">${escHtml(s.name)}</h2>` : ''}
+    ${body}${notebook}
+    <p class="ch-src">${t('chSources')} ${m.sources.map((u, k) => `<a href="${u}" target="_blank" rel="noopener">${k + 1}</a>`).join(' · ')}</p>
+    <div class="actions"><button type="button" class="ghost" data-chact="home">${t(chDemo ? 'chLeaveDemo' : 'chLeave')}</button></div>`;
+  chWire(c, st);
+}
+// Completed lines are struck through across the board, from the first square's centre to the
+// last one's, like crossing out a line on a paper bingo card.
+function chLineSvg(lines, n) {
+  if (!lines.length) return '';
+  const at = k => [((k % n) + 0.5) / n * 100, (Math.floor(k / n) + 0.5) / n * 100];
+  return `<svg class="ch-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines.map(l => {
+    const [x1, y1] = at(l[0]), [x2, y2] = at(l[l.length - 1]);
+    return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
+  }).join('')}</svg>`;
+}
+function renderChBingo(c, st) {
+  const n = c.cols || 3, sel = st.sel, lines = chLines(st, n), inLine = new Set(lines.flat());
+  // Photos at the standard 500 px width the rest of the app uses (other widths are made on
+  // demand by Wikimedia and can be refused when nine are asked for at once); if one still
+  // fails, the square keeps a coloured tile with the place's initial.
+  const cell = (m, k) => { const s = stopById(m.stop); return `<button type="button" class="ch-cell ${st.done[k] != null ? 'done' : ''} ${inLine.has(k) ? 'line' : ''} ${sel === k ? 'sel' : ''}" data-cell="${k}" aria-pressed="${st.done[k] != null}">
+    <span class="ch-thumb" data-i="${escHtml(s.name.replace(/^(Mercat de la |Plaça de |Plaça |Gran Teatre del |Antic Hospital de la |Font de |Sant |Drassanes )/, '').charAt(0))}"><img src="${photo(s.img, 500)}" alt="" loading="lazy" onerror="chImgRetry(this)"></span><span class="ch-name">${escHtml(s.name)}</span>${st.done[k] != null ? '<i aria-hidden="true">✓</i>' : ''}</button>`; };
+  let panel = '';
+  if (sel != null && st.done[sel] == null) {
+    const mi = chMi(c, st, sel), m = c.missions[mi], s = stopById(m.stop);
+    panel = `<div class="ch-panel"><h2 class="ch-place">${escHtml(s.name)}</h2>${chGpsBlock(m, s, false)}${st.failed?.[sel] ? `<p class="ch-locked">${t('chBingoLocked')}</p>` : `<p class="ch-or">${t('chOrAnswerOnce')}</p>${chQuestion(m.q, sel, chPlan(c, st).opts[mi])}`}
+      <p class="ch-src">${t('chSources')} ${m.sources.map((u, k) => `<a href="${u}" target="_blank" rel="noopener">${k + 1}</a>`).join(' · ')}</p></div>`;
+  }
+  chRoot().innerHTML = `${chTop(c, st)}<p class="hint">${t('chBingoHint')}</p>
+    <div class="ch-board" style="--n:${n}">${chPlan(c, st).order.map((mi, k) => cell(c.missions[mi], k)).join('')}${chLineSvg(lines, n)}</div>
+    <p class="ch-kicker">${t('chProgress', { d: chDoneN(c, st), n: c.missions.length })}${lines.length ? ` · ${t('chBingoLines', { n: lines.length })}` : ''}</p>
+    ${lines.length ? `<div class="actions"><button type="button" class="book go" data-chact="finish">${t('chBingoFinish')}</button><span class="hint">${t('chBingoKeep')}</span></div>` : ''}
+    ${panel}<div class="actions"><button type="button" class="ghost" data-chact="home">${t(chDemo ? 'chLeaveDemo' : 'chLeave')}</button></div>`;
+  chWire(c, st);
+}
+function renderChDone(c, st) {
+  const vals = Object.values(st.done), gps = vals.filter(v => v === 'gps').length;
+  chRoot().innerHTML = `${chTop(c, st)}<div class="ch-done"><p class="ch-trophy" aria-hidden="true">★</p><h2>${t('chCompletedTitle')}</h2>
+    <p class="lead">${escHtml(chL(c.finale))}</p>
+    <p class="hint">${chDemo ? t('chStatsDemo') : t('chStats', { g: gps, n: vals.length })}</p>
+    <div class="actions"><button type="button" class="book go" data-chact="home">${t('chAll')}</button><button type="button" class="ghost" data-chact="reset">${t('chPlayAgain')}</button></div></div>`;
+  chWire(c, st);
+}
+// Next step after a mission is validated (by location, on-the-spot answer or demo).
+function chAdvance(c, st) {
+  if (c.type === 'mystery' && !st.notes.includes(chMi(c, st, st.i))) st.notes.push(chMi(c, st, st.i));
+  if (st.i >= c.missions.length - 1) { st.finished = true; track('Challenge completed', { ch: c.id, demo: chDemo ? 1 : 0 }); }
+  else { st.i++; st.clues = 1; st.stage = c.type === 'observe' ? 'question' : 'find'; if (c.type !== 'hunt' && c.type !== 'observe') st.stage = 'arrive'; }
+}
+function chWire(c, st) {
+  const root = chRoot();
+  const msg = (txt, ok) => { const el = root.querySelector('.ch-gps-msg'); if (el) { el.textContent = txt; el.className = `ch-gps-msg ${ok ? 'ok' : 'warn'}`; } };
+  root.querySelectorAll('[data-chact]').forEach(b => b.onclick = async () => {
+    const a = b.dataset.chact;
+    if (a === 'home') { chView.id = null; renderCh(); window.scrollTo(0, 0); return; }
+    if (a === 'reset') { delete chStore()[c.id]; chSave(); renderCh(); return; }
+    if (a === 'go') { if (st.stage === 'start') { st.seed = Math.floor(Math.random() * 2 ** 31); st.stage = c.type === 'bingo' ? 'board' : c.type === 'observe' ? 'question' : c.type === 'hunt' ? 'find' : 'arrive'; track('Challenge started', { ch: c.id, demo: chDemo ? 1 : 0 }); } chSave(); renderCh(); window.scrollTo(0, 0); return; }
+    if (a === 'clue') { st.clues++; chSave(); renderCh(); return; }
+    if (a === 'toq') { st.stage = 'question'; chSave(); renderCh(); return; }
+    if (a === 'finish') { st.finished = true; chSave(); track('Challenge completed', { ch: c.id, demo: chDemo ? 1 : 0 }); renderCh(); window.scrollTo(0, 0); return; }
+    if (a === 'nogps') {   // fallback: continue by answering on the spot
+      if (c.type === 'bingo') return;
+      st.via = 'obs'; st.stage = c.type === 'story' ? 'story' : 'question'; chSave(); renderCh(); return;
+    }
+    if (a === 'locate') {
+      const k = c.type === 'bingo' ? st.sel : st.i, m = c.missions[chMi(c, st, k)];
+      b.disabled = true; msg(t('chChecking'), true);
+      const r = await chLocate(stopById(m.stop), m.r || 70);
+      b.disabled = false;
+      if (r.ok) {
+        const how = r.demo ? 'demo' : 'gps';
+        if (c.type === 'bingo') { st.done[k] = how; st.sel = null; chSave(); renderCh(); return; }
+        if (c.type === 'observe') { (st.seen ||= {})[k] = how; msg(t(r.demo ? 'chGpsDemo' : 'chGpsOk'), true); chSave(); b.closest('.ch-gps')?.querySelector('a')?.remove(); b.remove(); return; }
+        st.via = how; st.stage = c.type === 'story' ? 'story' : 'question'; chSave(); renderCh(); return;
+      }
+      const txt = r.why === 'far' ? t('chGpsFar', { m: r.m }) : r.why === 'imprecise' ? t('chGpsImprecise', { m: r.acc }) : r.why === 'denied' ? t('chGpsDenied') : t('chGpsError');
+      msg(txt, false);
+      const box = b.closest('.ch-gps') || b.parentElement;
+      if (c.type !== 'bingo' && c.type !== 'observe' && !box.querySelector('[data-chact="nogps"]')) {
+        const alt = document.createElement('button'); alt.type = 'button'; alt.className = 'ghost'; alt.dataset.chact = 'nogps'; alt.textContent = t('chNoGps');
+        box.appendChild(alt); alt.onclick = () => { st.via = 'obs'; st.stage = c.type === 'story' ? 'story' : 'question'; chSave(); renderCh(); };
+      }
+    }
+  });
+  root.querySelectorAll('[data-cell]').forEach(b => b.onclick = () => { const k = +b.dataset.cell; st.sel = st.done[k] != null ? null : k; chSave(); renderCh(); });
+  root.querySelectorAll('[data-chans]').forEach(b => b.onclick = () => {
+    const box = b.closest('.ch-q'), k = +box.dataset.q, m = c.missions[chMi(c, st, k)];
+    const v = b.dataset.chans === 'num' ? root.querySelector('#chNum').value : b.dataset.chans;
+    const fb = box.querySelector('.ch-feedback');
+    // Bingo: one try per square. A wrong answer locks its question; the square can then only be
+    // marked by checking your location there.
+    if (c.type === 'bingo' && !chRight(m.q, v)) { (st.failed ||= {})[k] = true; chSave(); renderCh(); return; }
+    if (!chRight(m.q, v)) {
+      // Help from content already checked for this stop: the mission's own hint, what the
+      // practical card says to look at, and its story to read again (the answer is in it).
+      const s = stopById(m.stop), look = CARDS[s.id]?.look, story = storyText(s, m.variant || null, 'normal').text;
+      fb.className = 'ch-feedback warn';
+      fb.innerHTML = `${t('chWrongHelp')}${m.hint ? ` ${escHtml(chL(m.hint))}` : look ? ` ${t('chLookAt')} ${escHtml(chL(look))}` : ''}
+        ${story ? `<details class="ch-reread"><summary>${t('chReread')}</summary><p>${story}</p></details>` : ''}`;
+      if (b.classList.contains('chip')) b.disabled = true;
+      return;
+    }
+    fb.textContent = t('chRight'); fb.className = 'ch-feedback ok';
+    if (c.type === 'bingo') { st.done[k] = 'obs'; st.sel = null; chSave(); setTimeout(renderCh, 500); return; }
+    st.done[k] = c.type === 'observe' ? (st.seen?.[k] || 'obs') : (st.via || 'obs'); st.via = null;
+    chAdvance(c, st); chSave(); setTimeout(() => { renderCh(); window.scrollTo(0, 0); }, 600);
+  });
+}
+
+
+// ---- Play with friends (Phase 3B) ----
+// Rooms live in Supabase (supabase/multiplayer.sql): each phone signs in anonymously and every
+// action is a database function that checks it (host-only start, own row only, missions in
+// order, each counted once) and stamps it with the server clock. The page asks for the room's
+// state every few seconds, so a reload, a lost connection or a trip to Google Maps just picks
+// up where the server is. No account, no tracking: only the room, names and progress.
+const MP = window.WALKBCN_MP || {};
+const mpReady = () => !!(MP.url && MP.anonKey);
+const MP_SESSION = 'walkbcn_mp_session', MP_ROOM = 'walkbcn_mp_room', MP_LOCAL = 'walkbcn_mp_local';
+const lsGet = k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
+const lsSet = (k, v) => { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+async function mpFetch(path, body, token) {
+  const r = await fetch(MP.url.replace(/\/$/, '') + path, { method: 'POST', headers: { apikey: MP.anonKey, 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) }, body: JSON.stringify(body || {}) });
+  const txt = await r.text(); let j = null; try { j = txt ? JSON.parse(txt) : null; } catch (e) {}
+  if (!r.ok) throw new Error(j?.message || j?.msg || j?.error_description || `HTTP ${r.status}`);
+  return j;
+}
+async function mpSession() {
+  let s = lsGet(MP_SESSION);
+  if (s?.access_token && s.expires_at * 1000 > Date.now() + 60000) return s;
+  if (s?.refresh_token) { try { s = await mpFetch('/auth/v1/token?grant_type=refresh_token', { refresh_token: s.refresh_token }); } catch (e) { s = null; } }
+  if (!s?.access_token) s = await mpFetch('/auth/v1/signup', {});   // anonymous sign-in
+  lsSet(MP_SESSION, s);
+  return s;
+}
+const mpRpc = async (fn, args) => mpFetch(`/rest/v1/rpc/${fn}`, args, (await mpSession()).access_token);
+// Server error codes → messages players understand.
+const mpErr = e => { const k = String(e?.message || e).match(/room_not_found|room_full|room_started|not_host|not_enough_players|not_all_ready|name_required|not_in_room/)?.[0]; return k ? t(`mpErr_${k}`) : t('mpErrNet'); };
+
+// Room view state (not the game result: that is always the server's).
+let mp = { code: lsGet(MP_ROOM), state: null, err: '', offset: 0, poll: null, tick: null };
+function mpStopPolling() { clearInterval(mp.poll); clearInterval(mp.tick); mp.poll = mp.tick = null; }
+function mpStartPolling() {
+  if (mp.poll) return;
+  mp.poll = setInterval(() => { if (document.getElementById('chalView').hidden || chView.mode !== 'friends') return mpStopPolling(); mpRefresh(); }, 2500);
+  mp.tick = setInterval(mpTick, 1000);
+}
+async function mpRefresh() {
+  if (!mp.code) return;
+  try {
+    const st = await mpRpc('mp_state', { p_code: mp.code });
+    mp.offset = Date.parse(st.server_now) - Date.now();     // the timer follows the server clock
+    const changed = JSON.stringify(st.players) + st.status + JSON.stringify(st.coop) !== JSON.stringify(mp.state?.players) + mp.state?.status + JSON.stringify(mp.state?.coop);
+    mp.state = st; mp.err = '';
+    if (changed) renderMp();
+  } catch (e) {
+    if (/room_not_found|not_in_room/.test(e.message)) { mp.code = null; mp.state = null; lsSet(MP_ROOM, null); mp.err = mpErr(e); renderMp(); }
+    else { mp.err = t('mpErrNet'); const el = document.getElementById('mpNet'); if (el) el.hidden = false; }
+  }
+}
+const mpFmt = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s / 3600), m = Math.floor(s / 60) % 60, x = s % 60; return `${h ? h + ':' : ''}${String(m).padStart(h ? 2 : 1, '0')}:${String(x).padStart(2, '0')}`; };
+function mpTick() {
+  const el = document.getElementById('mpClock'), st = mp.state;
+  if (!el || !st?.started_at) return;
+  const me = st.players.find(p => p.me);
+  el.textContent = mpFmt(me?.time_s ?? (Date.now() + mp.offset - Date.parse(st.started_at)) / 1000);
+}
+function renderMp() {
+  if (taDemo) return renderTa(taDemoState(), true);   // a DEMO never touches the room server
+  if (bbDemo) return renderBb(bbDemoState(), true);
+  if (smDemo) return renderSm(smDemoState(), true);
+  if (mp.state?.mode !== 'shared_mystery') smNarStop();
+  if (mp.code && !mp.state) { chRoot().innerHTML = `${chModeSeg()}<p class="hint">${t('mpLoading')}</p>`; wireChModeSeg(); mpRefresh(); mpStartPolling(); return; }
+  if (!mp.state) return renderMpHome();
+  mpStartPolling();
+  if (mp.state.status === 'waiting') return renderMpLobby();
+  return mp.state.mode === 'time_attack' ? renderTa(mp.state, false) : mp.state.mode === 'bingo_battle' ? renderBb(mp.state, false) : mp.state.mode === 'shared_mystery' ? renderSm(mp.state, false) : renderMpRace();
+}
+// A card photo sharp on 2× screens: the 500 px and 960 px sizes are the ones saved for offline use.
+const chCardImg = (file, pos, eager) => `<img src="${photo(file, 500)}" srcset="${photo(file, 500)} 500w, ${photo(file, 960)} 960w" sizes="(max-width: 640px) 92vw, 340px" alt="" ${eager ? '' : 'loading="lazy"'} style="object-position:${pos || 'center'}" onerror="chImgRetry(this)">`;
+const chCardHtml = (attr, img, pos, type, title, desc, meta) => `<button type="button" class="ch-card" ${attr}>
+  <span class="ch-img">${chCardImg(img, pos)}<i class="ch-type">${type}</i></span>
+  <span class="ch-body"><b>${title}</b><span>${desc}</span><span class="ch-meta">${meta}</span></span></button>`;
+// "Play with friends": the same compact cards as "Play solo"; a card opens its set-up screen
+// (description, rules, name, create a room, DEMO).
+const mpModes = () => {
+  const hunt = chById('modernisme-hunt'), ta = TA_LIST[0], bb = BB_LIST[0];
+  return {
+    speed: { img: hunt.img, pos: hunt.imgPos, type: 'Speed Race', title: t('mpSpeedTitle'), short: t('mpCard_speed'), desc: t('mpSpeedDesc', { n: 4 }), meta: `${escHtml(chL(hunt.title))} · ${t('mpPlayers')}` },
+    ta: { img: ta.img, pos: ta.imgPos, type: 'Time Attack', title: t('taTitle'), short: t('mpCard_ta'), desc: t('taDesc'), meta: `${escHtml(chL(ta.title))} · ${t('taTargets', { n: ta.missions.length })} · ${t('mpPlayers')}`, more: escHtml(chL(ta.desc)) },
+    bb: { img: bb.img, pos: bb.imgPos, type: 'Bingo Battle', title: t('bbTitle'), short: t('mpCard_bb'), desc: t('bbDesc'), meta: `${escHtml(chL(bb.title))} · 3 × 3 · ${bb.duration} min · ${t('mpPlayers')}` },
+  };
+};
+function renderMpHome() {
+  if (chView.mpOpen) return renderMpSetup();
+  const ready = mpReady(), linkCode = (location.hash.match(/^#room=([A-Za-z0-9]{6})/) || [])[1] || '', coop = chView.mpKind === 'coop', M = mpModes();
+  const join = `<div class="mp-box mp-join"><h2 class="mp-h2">${t('mpJoinTitle')}</h2>
+      <div class="mp-join-row"><label class="mp-field">${t('mpCode')}<input id="mpJoinCode" maxlength="6" autocapitalize="characters" autocomplete="off" value="${escHtml(linkCode)}"></label>
+      <label class="mp-field">${t('mpName')}<input id="mpJoinName" maxlength="20" autocomplete="nickname"></label></div>
+      <button type="button" class="book go" id="mpJoin">${t('mpJoin')}</button></div>`;
+  const cards = coop
+    ? SM_LIST.map(a => { const tx = smTx(a.id); return chCardHtml(`data-mpopen="sm:${a.id}"`, a.img, a.imgPos, 'Shared Mystery', escHtml(tx.title), escHtml(tx.tagline), `${escHtml(areaName(a.area))} · ${t('smMeta', { n: a.missions.length, m: a.minutes })}`); }).join('')
+    : Object.entries(M).map(([k, m]) => chCardHtml(`data-mpopen="${k}"`, m.img, m.pos, m.type, m.title, m.short, m.meta)).join('');
+  chRoot().innerHTML = `<h1 class="ch-h1">${t('chTitle')}</h1><p class="lead">${t('mpIntro')}</p>${chModeSeg()}
+    ${ready ? (mp.err ? `<p class="adapt-warn" role="alert">${escHtml(mp.err)}</p>` : '') : `<p class="adapt-warn">${t('mpNotSetUp')}</p>`}
+    ${ready && linkCode ? join : ''}
+    <div class="seg ch-modeseg sm-kindseg" role="group">${['comp', 'coop'].map(x => `<button type="button" data-mpkind="${x}" aria-pressed="${(chView.mpKind || 'comp') === x}">${t(x === 'comp' ? 'mpCompetitive' : 'mpCooperative')}</button>`).join('')}</div>
+    <p class="hint">${coop ? t('smDesc') : t('mpCompHint')}</p>
+    <div class="ch-cards">${cards}</div>
+    ${ready && !linkCode ? join : ''}`;
+  wireChModeSeg();
+  chRoot().querySelectorAll('[data-mpkind]').forEach(b => b.onclick = () => { chView.mpKind = b.dataset.mpkind; renderMpHome(); });
+  chRoot().querySelectorAll('[data-mpopen]').forEach(b => b.onclick = () => { const k = b.dataset.mpopen; if (k.startsWith('sm:')) sm.pick = k.slice(3); chView.mpOpen = k.startsWith('sm:') ? 'sm' : k; mp.err = ''; renderMpHome(); window.scrollTo(0, 0); });
+  if (ready) document.getElementById('mpJoin').onclick = e => mpGo(e.target, () => mpRpc('mp_join_room', { p_code: document.getElementById('mpJoinCode').value.trim().toUpperCase(), p_name: document.getElementById('mpJoinName').value }));
+}
+async function mpGo(btn, fn) {
+  btn.disabled = true; btn.setAttribute('aria-busy', 'true');
+  try { mp.code = await fn(); lsSet(MP_ROOM, mp.code); mp.err = ''; chView.mpOpen = null; history.replaceState(null, '', location.pathname + location.search); renderMp(); }
+  catch (e) { mp.err = mpErr(e); renderMpHome(); }
+}
+function renderMpSetup() {
+  const k = chView.mpOpen, ready = mpReady(), sma = k === 'sm' ? smById(sm.pick) : null, tx = sma && smTx(sma.id);
+  const m = sma ? { img: sma.img, pos: sma.imgPos, type: `Shared Mystery · ${t('mpCooperative')}`, title: escHtml(tx.title), desc: `${escHtml(tx.tagline)}</p><p>${t('smRules')}`, meta: `${escHtml(areaName(sma.area))} · ${t('smMeta', { n: sma.missions.length, m: sma.minutes })} · ${t('mpPlayers')}` } : mpModes()[k];
+  const nameId = { speed: 'mpHostName', ta: 'taHostName', bb: 'bbHostName', sm: 'smHostName' }[k], createId = { speed: 'mpCreate', ta: 'taCreate', bb: 'bbCreate', sm: 'smCreate' }[k];
+  const demoId = { ta: 'taDemoBtn', bb: 'bbDemoBtn', sm: 'smDemoBtn' }[k];
+  chRoot().innerHTML = `<button type="button" class="ghost ch-back" id="mpSetupBack">← ${t('mpFriends')}</button>
+    <p class="ch-kicker">${m.type}</p><h1 class="ch-h1">${m.title}</h1>
+    ${mp.err ? `<p class="adapt-warn" role="alert">${escHtml(mp.err)}</p>` : ''}
+    <figure class="stop-photo ch-cover"><img src="${photo(m.img, 960)}" alt="" style="object-position:${m.pos || 'center'}" onerror="chImgRetry(this)">${creditHtml(m.img)}</figure>
+    <p class="lead">${m.desc}</p>${m.more ? `<p class="hint">${m.more}</p>` : ''}
+    <p class="ch-meta">${m.meta}</p>
+    <div class="mp-box mp-setup">
+      ${k === 'ta' ? `<p class="opt-label" id="taDurL">${t('taDuration')}</p><div class="chips" id="taDur" role="group" aria-labelledby="taDurL">${[30, 60, 90].map(x => `<button type="button" class="chip" data-dur="${x}" aria-pressed="${x === (chView.taDur || 60)}">${x} min</button>`).join('')}</div>` : ''}
+      ${ready ? `<label class="mp-field">${t('mpName')}<input id="${nameId}" maxlength="20" autocomplete="nickname" value="${escHtml(sm.name || '')}"></label>
+      <button type="button" class="book go" id="${createId}">${t('mpCreate')}</button>` : `<p class="hint">${t('mpNotSetUp')}</p>`}
+      ${demoId ? `<div class="mp-demo-opt">${k === 'sm' ? `<p class="opt-label" id="smDemoL">${t('smDemoPlayers')}</p><div class="chips" id="smDemoN" role="group" aria-labelledby="smDemoL">${[2, 3, 4, 5].map(x => `<button type="button" class="chip" data-n="${x}" aria-pressed="${x === sm.demoN}">${x}</button>`).join('')}</div>` : ''}
+      <button type="button" class="ghost" id="${demoId}">${t('taDemoTry')}</button></div>` : ''}
+    </div>`;
+  const on = (id, fn) => { const el = document.getElementById(id); if (el) el.onclick = fn; };
+  const h1 = chRoot().querySelector('.ch-h1'); h1.tabIndex = -1; h1.focus({ preventScroll: true });
+  on('mpSetupBack', () => { const was = k === 'sm' ? `sm:${sm.pick}` : k; chView.mpOpen = null; mp.err = ''; renderMpHome(); chRoot().querySelector(`[data-mpopen="${was}"]`)?.focus(); });
+  const nm = document.getElementById(nameId); if (nm) nm.oninput = () => { sm.name = nm.value; };
+  chRoot().querySelectorAll('#taDur .chip').forEach(b => b.onclick = () => { chView.taDur = +b.dataset.dur; pressOnly(document.getElementById('taDur'), b); });
+  chRoot().querySelectorAll('#smDemoN .chip').forEach(b => b.onclick = () => { sm.demoN = +b.dataset.n; pressOnly(document.getElementById('smDemoN'), b); });
+  on('taDemoBtn', () => taDemoStart(chView.taDur || 60));
+  on('bbDemoBtn', bbDemoStart);
+  on('smDemoBtn', () => smDemoStart(sm.pick, sm.demoN));
+  const name = () => document.getElementById(nameId).value;
+  on('mpCreate', e => mpGo(e.target, () => mpRpc('mp_create_room', { p_challenge: 'modernisme-hunt', p_mode: 'speed_race', p_name: name() })));
+  on('taCreate', e => mpGo(e.target, () => mpRpc('mp_create_room', { p_challenge: TA_LIST[0].id, p_mode: 'time_attack', p_name: name(), p_duration: chView.taDur || 60 })));
+  on('bbCreate', e => mpGo(e.target, () => mpRpc('mp_create_room', { p_challenge: BB_LIST[0].id, p_mode: 'bingo_battle', p_name: name(), p_duration: BB_LIST[0].duration })));
+  on('smCreate', e => mpGo(e.target, () => mpRpc('mp_create_room', { p_challenge: sm.pick, p_mode: 'shared_mystery', p_name: name() })));
+}
+const mpPlayerRow = (p, extra = '') => `<li class="mp-p ${p.me ? 'me' : ''}"><span class="mp-dot ${p.online ? 'on' : ''}" title="${t(p.online ? 'mpOnline' : 'mpOffline')}"></span><b>${escHtml(p.name)}</b>${p.me ? ` <em>${t('mpYou')}</em>` : ''}${p.host ? ` <em>${t('mpHost')}</em>` : ''}<span class="mp-p-right">${extra}</span></li>`;
+const mpLink = () => `${location.origin}${location.pathname}#room=${mp.state.code}`;
+function renderMpLobby() {
+  const st = mp.state, me = st.players.find(p => p.me), active = st.players.filter(p => p.status !== 'left');
+  const notReady = active.filter(p => !p.ready).length, min = st.config.min_players;
+  const why = active.length < min ? t('mpNeedPlayers', { n: min }) : notReady ? t('mpWaitReady', { n: notReady }) : '';
+  const isTa = st.mode === 'time_attack', isBb = st.mode === 'bingo_battle', isSm = st.mode === 'shared_mystery', cat = mpCat(st.challenge);
+  chRoot().innerHTML = `${chModeSeg()}<p class="ch-kicker">${isTa ? `Time Attack · ${st.config.duration_min} min` : isBb ? `Bingo Battle · ${st.config.duration_min} min` : isSm ? `Shared Mystery · ${t('mpCooperative')}` : 'Speed Race'} · ${escHtml(chL(cat.title))}</p>
+    <h1 class="ch-h1">${t('mpLobby')}</h1>
+    <div class="mp-code"><span>${t('mpCode')}</span><b>${st.code}</b><button type="button" class="ghost" id="mpShare">${t('mpShare')}</button></div>
+    <p class="hint">${t('mpShareHint', { max: st.config.max_players })}</p>
+    <ul class="mp-list">${st.players.map(p => mpPlayerRow(p, p.ready ? `✓ ${t('mpReadyShort')}` : t('mpNotReadyShort'))).join('')}</ul>
+    <div class="actions"><button type="button" class="book ${me?.ready ? 'alt' : 'go'}" id="mpReadyBtn">${t(me?.ready ? 'mpNotReady' : 'mpImReady')}</button>
+    ${st.host ? `<button type="button" class="book go" id="mpStart" ${why ? 'disabled' : ''}>${t('mpStart')}</button>` : ''}</div>
+    <p class="hint">${st.host ? (why || t('mpCanStart')) : t('mpHostStarts')}</p>
+    ${isSm ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(stopById(cat.missions[0].stop).name)} · <a href="${directionsUrl(stopById(cat.missions[0].stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p><p class="hint">${t('smRules')}</p>` : isBb ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(chL(cat.start.label))} · <a href="${directionsUrl(stopById(cat.start.stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p><p class="hint">${t('bbRules', { m: st.config.duration_min })}</p>` : isTa ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(chL(cat.start.label))} · <a href="${directionsUrl(stopById(cat.start.stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p>${taRulesHtml(st.config)}` : `<p class="hint">${t('mpRules', { s: st.config.hint_penalty_s })}</p>`}
+    <p class="adapt-warn" id="mpNet" hidden>${t('mpErrNet')}</p>
+    <div class="actions"><button type="button" class="ghost" id="mpLeave">${t('mpLeave')}</button></div>`;
+  wireChModeSeg();
+  document.getElementById('mpShare').onclick = async () => { const url = mpLink(); try { if (navigator.share) await navigator.share({ title: 'WalkBCN', text: t('mpInviteText', { code: st.code }), url }); else { await navigator.clipboard.writeText(url); document.getElementById('mpShare').textContent = t('linkCopied'); } } catch (e) { if (e?.name !== 'AbortError') prompt(t('copyLink'), url); } };
+  document.getElementById('mpReadyBtn').onclick = () => mpAct('mp_set_ready', { p_code: st.code, p_ready: !me?.ready });
+  const sb = document.getElementById('mpStart'); if (sb) sb.onclick = () => mpAct('mp_start', { p_code: st.code });
+  document.getElementById('mpLeave').onclick = mpLeave;
+}
+async function mpAct(fn, args) {
+  try { await mpRpc(fn, args); await mpRefresh(); renderMp(); }
+  catch (e) { mp.err = mpErr(e); const el = document.getElementById('mpNet'); if (el) { el.textContent = mp.err; el.hidden = false; } }
+}
+async function mpLeave() {
+  if (mp.state?.status === 'running' && mp.state.players.find(p => p.me)?.status === 'playing' && !confirm(t('mpLeaveConfirm'))) return;
+  try { if (mp.code && mp.state?.status !== 'finished') await mpRpc('mp_leave', { p_code: mp.code }); } catch (e) {}
+  mp = { ...mp, code: null, state: null, err: '' }; lsSet(MP_ROOM, null); lsSet(MP_LOCAL, null); mpStopPolling(); renderMp();
+}
+// Speed Race: everyone gets the Modernista treasure hunt, in the same order. On this phone we
+// keep only what the server doesn't need: which clues are shown and whether you've arrived.
+function mpLocal(mission) {
+  const l = lsGet(MP_LOCAL);
+  return l?.code === mp.code && l.mission === mission ? l : { code: mp.code, mission, clues: 1, via: null };
+}
+// Ranking: finished players by adjusted time (time + clue penalties); results with a mission
+// done without a location check are listed apart, as not verified.
+function mpRanking(players) {
+  const done = players.filter(p => p.status === 'finished').sort((a, b) => a.adjusted_s - b.adjusted_s);
+  return { verified: done.filter(p => !p.alt), unverified: done.filter(p => p.alt), playing: players.filter(p => p.status === 'playing'), left: players.filter(p => p.status === 'left') };
+}
+function mpBoard(st) {
+  const r = mpRanking(st.players), n = st.config.missions, pen = st.config.hint_penalty_s;
+  const res = p => `${mpFmt(p.adjusted_s)}${p.hints ? ` <span class="hint">(${mpFmt(p.time_s)} + ${p.hints} × ${pen} s)</span>` : ''}`;
+  const sec = (title, list, fmt, rank) => list.length ? `<p class="ch-kicker">${title}</p><${rank ? 'ol' : 'ul'} class="mp-list ${rank ? 'mp-rank' : ''}">${list.map(fmt).join('')}</${rank ? 'ol' : 'ul'}>` : '';
+  return `${sec(t(st.status === 'finished' ? 'mpFinal' : 'mpProvisional'), r.verified, p => mpPlayerRow(p, res(p)), true)}
+    ${sec(t('mpUnverified'), r.unverified, p => mpPlayerRow(p, res(p)), true)}
+    ${sec(t('mpStillPlaying'), r.playing, p => mpPlayerRow(p, t('mpMissionsDone', { d: p.progress, n }) + (p.hints ? ` · ${t('mpHints', { h: p.hints })}` : '')))}
+    ${sec(t('mpAbandoned'), r.left, p => mpPlayerRow(p, t('mpMissionsDone', { d: p.progress, n })))}`;
+}
+function renderMpRace() {
+  const st = mp.state, me = st.players.find(p => p.me), c = chById(st.challenge), n = st.config.missions;
+  const head = `${chModeSeg()}<p class="ch-kicker">Speed Race · ${escHtml(chL(c.title))} · ${t('mpCode')} ${st.code}</p>
+    <div class="mp-clock"><span>${t('mpTime')}</span><b id="mpClock">0:00</b></div><p class="adapt-warn" id="mpNet" hidden>${t('mpErrNet')}</p>`;
+  let body = '';
+  if (me?.status === 'playing') {
+    const k = me.progress, m = c.missions[k], s = stopById(m.stop), l = mpLocal(k);
+    body = `<ol class="ch-dots" aria-label="${t('chProgress', { d: k, n: c.missions.length })}">${c.missions.map((_, i) => `<li class="${i < k ? 'done' : i === k ? 'now' : ''}"></li>`).join('')}</ol>
+      <p class="ch-kicker">${t('chMissionN', { n: k + 1, total: n })}</p>`;
+    if (!l.via) {
+      body += `<p class="ch-step">${t('chFindTitle')}</p><ol class="clues">${m.clues.slice(0, l.clues).map(x => `<li>${escHtml(chL(x))}</li>`).join('')}</ol>
+        <div class="actions">${l.clues < m.clues.length ? `<button type="button" class="ghost" id="mpClue">${t('mpClue', { s: st.config.hint_penalty_s })}</button>` : ''}
+        <button type="button" class="book go" id="mpLocate">${t('chFoundIt')}</button></div><p class="ch-gps-msg" role="status"></p>
+        ${chDemo ? `<p class="hint">${t('mpNoDemo')}</p>` : ''}`;
+    } else {
+      body += `<figure class="stop-photo"><img src="${photo(s.img, 960)}" alt="">${creditHtml(s.img)}</figure><h2 class="ch-place">${escHtml(s.name)}</h2>
+        ${l.via === 'alt' ? `<p class="hint">${t('mpAltNote')}</p>` : ''}${chQuestion(m.q, k)}`;
+    }
+  } else if (me) {
+    body = `<div class="ch-done"><p class="ch-trophy" aria-hidden="true">★</p><h2>${t(me.status === 'finished' ? 'mpYouFinished' : 'mpYouLeft')}</h2>
+      ${me.status === 'finished' ? `<p class="lead">${t('mpYourTime', { t: mpFmt(me.adjusted_s) })}${me.hints ? ` · ${t('mpHints', { h: me.hints })}` : ''}${me.alt ? ` · ${t('mpUnverifiedShort')}` : ''}</p>` : ''}
+      ${st.status === 'finished' ? `<p class="hint">${t('mpAllDone')}</p>` : `<p class="hint">${t('mpOthersPlaying')}</p>`}</div>`;
+  }
+  chRoot().innerHTML = `${head}${body}<div class="mp-board">${mpBoard(st)}</div>
+    <details class="ch-rules"><summary>${t('chHowTitle')}</summary><p class="hint">${t('mpRules', { s: st.config.hint_penalty_s })}</p></details>
+    <div class="actions"><button type="button" class="ghost" id="mpLeave">${t(me?.status === 'playing' ? 'mpAbandon' : 'mpExit')}</button></div>`;
+  wireChModeSeg(); mpTick();
+  document.getElementById('mpLeave').onclick = mpLeave;
+  if (me?.status !== 'playing') return;
+  const k = me.progress, m = c.missions[k], l = mpLocal(k), root = chRoot();
+  const cb = document.getElementById('mpClue');
+  if (cb) cb.onclick = async () => { cb.disabled = true; try { await mpRpc('mp_hint', { p_code: st.code, p_mission: k, p_n: l.clues + 1 }); lsSet(MP_LOCAL, { ...l, clues: l.clues + 1 }); await mpRefresh(); renderMp(); } catch (e) { cb.disabled = false; } };
+  const lb = document.getElementById('mpLocate');
+  if (lb) lb.onclick = async () => {
+    // Always the real location here: a simulated check never counts in a real race.
+    const msgEl = root.querySelector('.ch-gps-msg'), demo = chDemo; lb.disabled = true; msgEl.textContent = t('chChecking');
+    chDemo = false; const r = await chLocate(stopById(m.stop), m.r || 70); chDemo = demo; lb.disabled = false;
+    if (r.ok) { lsSet(MP_LOCAL, { ...l, via: 'gps' }); return renderMp(); }
+    msgEl.className = 'ch-gps-msg warn';
+    msgEl.textContent = r.why === 'far' ? t('chGpsFar', { m: r.m }) : r.why === 'imprecise' ? t('chGpsImprecise', { m: r.acc }) : r.why === 'denied' ? t('chGpsDenied') : t('chGpsError');
+    if (!root.querySelector('#mpAlt')) { const alt = document.createElement('button'); alt.type = 'button'; alt.className = 'ghost'; alt.id = 'mpAlt'; alt.textContent = t('mpNoGps'); lb.parentElement.appendChild(alt); alt.onclick = () => { lsSet(MP_LOCAL, { ...l, via: 'alt' }); renderMp(); }; }
+  };
+  root.querySelectorAll('[data-chans]').forEach(b => b.onclick = async () => {
+    const v = b.dataset.chans === 'num' ? root.querySelector('#chNum').value : b.dataset.chans, fb = b.closest('.ch-q').querySelector('.ch-feedback');
+    if (!chRight(m.q, v)) { fb.textContent = t('chWrongHelp'); fb.className = 'ch-feedback warn'; if (b.classList.contains('chip')) b.disabled = true; return; }
+    root.querySelectorAll('[data-chans]').forEach(x => x.disabled = true);
+    try { await mpRpc('mp_complete', { p_code: st.code, p_mission: k, p_method: l.via }); lsSet(MP_LOCAL, null); await mpRefresh(); renderMp(); window.scrollTo(0, 0); }
+    catch (e) { fb.textContent = t('mpErrNet'); fb.className = 'ch-feedback warn'; root.querySelectorAll('[data-chans]').forEach(x => x.disabled = false); }
+  });
+}
+
+// ---- Time Attack (Phase 3C) ----
+// Same rooms, lobby, sync and GPS as Speed Race; only the rules differ: any target, any order,
+// each once, points by difficulty (minus a hint cost), until the shared clock runs out. The
+// server (mp_ta_complete) decides every point and the end; the page only shows them.
+// taPoints mirrors the server rule, to show what a target is worth (and for the DEMO only).
+const TA_LIST = window.WALKBCN_TIME_ATTACKS || [];
+const BB_LIST = window.WALKBCN_BINGO_BATTLES || [];
+const mpCat = id => chById(id) || TA_LIST.find(x => x.id === id) || BB_LIST.find(x => x.id === id) || (smById(id) && { ...smById(id), title: smTx(id).title });
+const TA_RULES = { hint_cost: 50, min_points: 50 };   // DEMO copy of mp_modes.time_attack (real games read the room's config)
+const taPoints = (base, hinted, cfg) => Math.max(base - (hinted ? cfg.hint_cost : 0), Math.min(base, cfg.min_points));
+const taRulesHtml = cfg => `<p class="hint">${t('taRules', { h: cfg.hint_cost })}</p>`;
+// Ranking: points, then targets found, then who reached their score first.
+const taRank = players => [...players].filter(p => p.status !== 'left').sort((a, b) => (b.points - a.points) || (b.progress - a.progress) || ((a.last_score_s ?? 1e9) - (b.last_score_s ?? 1e9)) || a.name.localeCompare(b.name));
+let ta = { sel: null, map: null };
+const TA_LOCAL = 'walkbcn_ta_local';
+const taArrived = (code, m) => (lsGet(TA_LOCAL)?.code === code ? lsGet(TA_LOCAL).arrived?.[m] : null);
+const taSetArrived = (code, m, how) => { const l = lsGet(TA_LOCAL)?.code === code ? lsGet(TA_LOCAL) : { code, arrived: {} }; l.arrived[m] = how; lsSet(TA_LOCAL, l); };
+
+// DEMO: one computer, no room, no server. Same targets, questions and points; arrival is
+// simulated; three clearly simulated rivals score on a fixed timetable (fractions of the game).
+let taDemo = null;
+const TA_BOTS = [
+  { name: 'Laia', plan: [[0.08, 100], [0.2, 150], [0.37, 150], [0.55, 200], [0.8, 100]] },
+  { name: 'Marc', plan: [[0.12, 150], [0.3, 100], [0.5, 150], [0.75, 150]] },
+  { name: 'Sofia', plan: [[0.15, 100], [0.4, 150], [0.7, 100]] },
+];
+function taDemoStart(duration) { smDemo = null; taDemo = { duration, t0: Date.now(), skip: 0, done: {}, hinted: {}, arrived: {}, lastScore: null, ended: false }; ta.sel = null; mpStopPolling(); renderMp(); window.scrollTo(0, 0); }
+function taDemoState() {
+  const d = taDemo, cat = TA_LIST[0], total = d.duration * 60000, now = Date.now() + d.skip, el = Math.min(total, now - d.t0);
+  const over = d.ended || el >= total, at = ms => new Date(d.t0 + ms).toISOString();
+  const bots = TA_BOTS.map(b => { const got = b.plan.filter(([f]) => f * total <= el); return { name: b.name, sim: true, status: over ? 'finished' : 'playing', online: true, points: got.reduce((a, [, p]) => a + p, 0), progress: got.length, last_score_s: got.length ? Math.round(got[got.length - 1][0] * total / 1000) : null }; });
+  const mine = Object.values(d.done);
+  return { demo: true, code: 'DEMO', challenge: cat.id, mode: 'time_attack', status: over ? 'finished' : 'running', host: true,
+    started_at: at(0), ends_at: at(total), server_now: new Date(now).toISOString(), config: { ...TA_RULES, duration_min: d.duration, missions: cat.missions.length, points: cat.missions.map(m => m.points) },
+    my_done: Object.keys(d.done).map(Number), my_hints: Object.keys(d.hinted).map(Number),
+    players: [{ name: t('taYouDemo'), me: true, status: over ? 'finished' : 'playing', online: true, points: mine.reduce((a, b) => a + b, 0), progress: mine.length, last_score_s: d.lastScore }, ...bots] };
+}
+// The two ways a Time Attack game acts: the real room (server decides) or the local DEMO.
+const taDriver = demo => demo ? {
+  hint: async m => { taDemo.hinted[m] = true; },
+  complete: async (m, cfg) => { const st = taDemoState(); if (st.status !== 'running' || m in taDemo.done) return 0; const pts = taPoints(cfg.points[m], !!taDemo.hinted[m], cfg); taDemo.done[m] = pts; taDemo.lastScore = Math.round((Date.parse(st.server_now) - taDemo.t0) / 1000); return pts; },
+  arrived: m => taDemo.arrived[m], setArrived: m => { taDemo.arrived[m] = 'demo'; },
+} : {
+  hint: m => mpRpc('mp_ta_hint', { p_code: mp.code, p_mission: m }),
+  complete: m => mpRpc('mp_ta_complete', { p_code: mp.code, p_mission: m, p_method: 'gps' }),
+  arrived: m => taArrived(mp.code, m), setArrived: m => taSetArrived(mp.code, m, 'gps'),
+};
+function taRemaining(st) { const now = st.demo ? Date.parse(st.server_now) : Date.now() + mp.offset; return Math.max(0, (Date.parse(st.ends_at) - now) / 1000); }
+function taTick() {
+  const el = document.getElementById('taClock');
+  if (!el) { clearInterval(ta.tick); ta.tick = null; return; }
+  const st = taDemo ? taDemoState() : bbDemo ? bbDemoState() : mp.state;
+  if (!st) return;
+  if (st.mode === 'bingo_battle' && st.status === 'finished') return;   // the clock shows the game's length then
+  const left = taRemaining(st);
+  el.textContent = mpFmt(left);
+  el.classList.toggle('low', left < 300);
+  if (bbDemo) { if (st.status !== 'running') renderMp(); }
+  else if (taDemo) { const sig = JSON.stringify(st.players.map(p => p.points)) + st.status; if (sig !== ta.sig) { ta.sig = sig; renderMp(); } }
+  else if (left <= 0 && st.status === 'running') mpRefresh();   // the server closes the game
+}
+function taMapDraw(cat, done) {
+  if (ta.map) { ta.map.remove(); ta.map = null; }
+  const box = document.getElementById('taMap');
+  if (!box || typeof L === 'undefined') return;
+  ta.map = L.map(box, { zoomControl: false, attributionControl: true });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(ta.map);
+  const pts = cat.missions.map((m, k) => { const s = stopById(m.stop);
+    L.circleMarker([s.lat, s.lng], { radius: 11, color: '#0a1f5c', weight: 2, fillColor: done.includes(k) ? '#1b7f3b' : '#f6c700', fillOpacity: 0.9 })
+      .bindTooltip(`${k + 1}`, { permanent: true, direction: 'center', className: 'ta-pin' }).on('click', () => { ta.sel = k; renderMp(); window.scrollTo(0, 0); }).addTo(ta.map);
+    return [s.lat, s.lng]; });
+  ta.map.fitBounds(pts, { padding: [24, 24] });
+}
+function renderTa(st, demo) {
+  const cat = mpCat(st.challenge), cfg = st.config, drv = taDriver(demo), done = st.my_done, me = st.players.find(p => p.me);
+  const ranked = taRank(st.players), pos = ranked.indexOf(me) + 1, over = st.status === 'finished';
+  const demoBar = demo ? `<p class="ch-demo" role="status">${t('taDemoBanner')}</p>
+    <div class="ta-demo-ctl" role="group" aria-label="DEMO">${over ? '' : `<button type="button" class="ghost" data-ta="ff">${t('taDemoFF')}</button><button type="button" class="ghost" data-ta="end">${t('taDemoEnd')}</button>`}
+      <button type="button" class="ghost" data-ta="restart">${t('taDemoRestart')}</button><button type="button" class="ghost" data-ta="exit">${t('taDemoExit')}</button></div>` : '';
+  const head = `${chModeSeg()}${demoBar}<p class="ch-kicker">Time Attack · ${escHtml(chL(cat.title))}${demo ? '' : ` · ${t('mpCode')} ${st.code}`}</p>
+    <div class="ta-head"><div><span>${t('taLeft')}</span><b id="taClock">${mpFmt(taRemaining(st))}</b></div>
+      <div><span>${t('taPoints')}</span><b>${me?.points ?? 0}</b></div><div><span>${t('taPos')}</span><b>${pos ? `${pos}/${ranked.length}` : '–'}</b></div></div>
+    ${demo ? '' : `<p class="adapt-warn" id="mpNet" hidden>${t('mpErrNet')}</p>`}`;
+  const board = `<p class="ch-kicker">${t(over ? 'mpFinal' : 'taLive')}</p><ol class="mp-list mp-rank">${ranked.map(p => mpPlayerRow(p, `${p.points} ${t('taPts')} · ${t('taFound', { n: p.progress, total: cfg.missions })}${p.sim ? ` <em>${t('taSim')}</em>` : ''}`)).join('')}</ol>
+    ${st.players.filter(p => p.status === 'left').length ? `<p class="ch-kicker">${t('mpAbandoned')}</p><ul class="mp-list">${st.players.filter(p => p.status === 'left').map(p => mpPlayerRow(p, `${p.points} ${t('taPts')}`)).join('')}</ul>` : ''}`;
+  let body;
+  if (over || me?.status !== 'playing') {
+    const w = ranked[0];
+    body = `<div class="ch-done"><p class="ch-trophy" aria-hidden="true">★</p><h2>${over ? t('taWinner', { name: escHtml(w?.name || '') }) : t('mpYouLeft')}</h2>
+      <p class="lead">${t('taYourResult', { p: me?.points ?? 0, n: done.length, total: cfg.missions })}</p></div>
+      ${done.length ? `<p class="ch-kicker">${t('taYourFinds')}</p><ul class="mp-list">${done.map(k => `<li class="mp-p"><b>${escHtml(stopById(cat.missions[k].stop).name)}</b></li>`).join('')}</ul>` : ''}`;
+  } else if (ta.sel != null) {
+    const k = ta.sel, m = cat.missions[k], s = stopById(m.stop), hinted = st.my_hints.includes(k), isDone = done.includes(k), arr = drv.arrived(k);
+    body = `<button type="button" class="ghost ch-back" data-ta="list">← ${t('taAll')}</button>
+      <figure class="stop-photo"><img src="${photo(s.img, 960)}" alt="">${creditHtml(s.img)}</figure>
+      <h2 class="ch-place">${escHtml(s.name)}</h2><p class="hint">${escHtml(areaName(s.area))} · <b>${isDone ? t('taScored') : `${taPoints(m.points, hinted, cfg)} ${t('taPts')}`}</b></p>
+      ${isDone ? '' : `${hinted ? `<p class="ta-hint">💡 ${escHtml(chL(m.hint))}</p>` : `<button type="button" class="ghost" data-ta="hint">${t('taHintBtn', { h: cfg.hint_cost })}</button>`}
+      ${arr ? `${chQuestion(m.q, k)}` : `<div class="ch-gps">${demo ? `<button type="button" class="book go" data-ta="sim">${t('taSimArrive')}</button>` : `<button type="button" class="book go" data-ta="gps">${t('chCheck')}</button>`}
+        <a class="ghost" href="${directionsUrl(s)}" target="_blank" rel="noopener">${t('pauseGo')}</a><p class="ch-gps-msg" role="status"></p></div>
+        <p class="hint">${t(demo ? 'taSimNote' : 'taGpsNote')}</p>`}`}
+      <p class="ch-src">${t('chSources')} ${m.sources.map((u, i) => `<a href="${u}" target="_blank" rel="noopener">${i + 1}</a>`).join(' · ')}</p>`;
+  } else {
+    body = `<div id="taMap" class="ta-map" role="region" aria-label="${t('taMapLabel')}"></div>
+      <ul class="ta-list">${cat.missions.map((m, k) => { const s = stopById(m.stop), isDone = done.includes(k); return `<li><button type="button" class="ta-item ${isDone ? 'done' : ''}" data-sel="${k}">
+        <span class="ta-n">${k + 1}</span><img src="${photo(s.img, 500)}" alt="" loading="lazy" onerror="chImgRetry(this)"><span class="ta-name">${escHtml(s.name)}</span>
+        <span class="ta-pts">${isDone ? '✓' : `${taPoints(m.points, st.my_hints.includes(k), cfg)} ${t('taPts')}`}</span></button></li>`; }).join('')}</ul>`;
+  }
+  if (ta.map) { ta.map.remove(); ta.map = null; }
+  chRoot().innerHTML = `${head}${body}<div class="mp-board">${board}</div><details class="ch-rules"><summary>${t('chHowTitle')}</summary>${taRulesHtml(cfg)}</details>
+    ${demo ? '' : `<div class="actions"><button type="button" class="ghost" id="mpLeave">${t(over || me?.status !== 'playing' ? 'mpExit' : 'mpAbandon')}</button></div>`}`;
+  wireChModeSeg();
+  if (!over && me?.status === 'playing' && ta.sel == null) taMapDraw(cat, done);
+  if (!ta.tick) ta.tick = setInterval(taTick, 1000);
+  const lv = document.getElementById('mpLeave'); if (lv) lv.onclick = () => { ta.sel = null; mpLeave(); };
+  const root = chRoot(), rerender = () => { renderMp(); };
+  root.querySelectorAll('[data-sel]').forEach(b => b.onclick = () => { ta.sel = +b.dataset.sel; renderMp(); window.scrollTo(0, 0); });
+  root.querySelectorAll('[data-ta]').forEach(b => b.onclick = async () => {
+    const a = b.dataset.ta, k = ta.sel;
+    if (a === 'list') { ta.sel = null; return rerender(); }
+    if (a === 'ff') { taDemo.skip += 10 * 60000; return rerender(); }
+    if (a === 'end') { taDemo.ended = true; ta.sel = null; return rerender(); }
+    if (a === 'restart') return taDemoStart(taDemo.duration);
+    if (a === 'exit') { taDemo = null; ta.sel = null; return renderCh(); }
+    if (a === 'sim') { drv.setArrived(k); return rerender(); }
+    if (a === 'hint') { b.disabled = true; try { await drv.hint(k); if (!demo) await mpRefresh(); } catch (e) {} return rerender(); }
+    if (a === 'gps') {   // always the real location in a real game
+      const msg = root.querySelector('.ch-gps-msg'), d0 = chDemo; b.disabled = true; msg.textContent = t('chChecking');
+      chDemo = false; const r = await chLocate(stopById(cat.missions[k].stop), cat.missions[k].r || 80); chDemo = d0; b.disabled = false;
+      if (r.ok) { drv.setArrived(k); return rerender(); }
+      msg.className = 'ch-gps-msg warn';
+      msg.textContent = r.why === 'far' ? t('chGpsFar', { m: r.m }) : r.why === 'imprecise' ? t('chGpsImprecise', { m: r.acc }) : r.why === 'denied' ? t('taGpsDenied') : t('chGpsError');
+    }
+  });
+  root.querySelectorAll('[data-chans]').forEach(b => b.onclick = async () => {
+    const k = ta.sel, m = cat.missions[k], fb = b.closest('.ch-q').querySelector('.ch-feedback');
+    if (!chRight(m.q, b.dataset.chans)) { fb.textContent = t('chWrongHelp'); fb.className = 'ch-feedback warn'; b.disabled = true; return; }
+    root.querySelectorAll('[data-chans]').forEach(x => x.disabled = true);
+    try { const pts = await drv.complete(k, cfg); fb.textContent = t('taGot', { p: pts }); fb.className = 'ch-feedback ok'; if (!demo) await mpRefresh(); setTimeout(() => { ta.sel = null; renderMp(); window.scrollTo(0, 0); }, 900); }
+    catch (e) { fb.className = 'ch-feedback warn'; fb.textContent = /time_up/.test(e.message) ? t('taTimeUp') : t('mpErrNet'); root.querySelectorAll('[data-chans]').forEach(x => x.disabled = false); if (/time_up/.test(e.message)) mpRefresh(); }
+  });
+}
+
+
+// ---- Bingo Battle (Phase 3D) ----
+// Same rooms, sync, GPS and timer as Time Attack. Everyone has the same 3 × 3 board; any square,
+// any order; the first full line (row, column, diagonal) wins, decided by the server
+// (mp_bb_complete) in the order squares are confirmed. Rivals' squares stay hidden until the end.
+const BB_LINES = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];   // same as mp_bb_lines()
+const bbFull = done => BB_LINES.filter(l => l.every(k => done.includes(k)));
+// Squares that would complete a line, and how many squares the closest line still needs.
+const bbNear = done => { const near = new Set(); let need = 3; for (const l of BB_LINES) { const miss = l.filter(k => !done.includes(k)); need = Math.min(need, miss.length); if (miss.length === 1) near.add(miss[0]); } return { near, need }; };
+let bb = { sel: null };
+const BB_LOCAL = 'walkbcn_bb_local';
+// DEMO: one device, no room, no server. Same board, questions and line rule; arrival is
+// simulated; three labelled simulated rivals move one step each time "Advance rivals" is pressed.
+let bbDemo = null;
+const BB_BOTS = [
+  { name: 'Laia', plan: [1, 1, 2, 2, 3, 4] },
+  { name: 'Marc', plan: [1, 2, 2, 3, 4, 'win'] },   // close to a line from step 3; wins on the last step if nobody has
+  { name: 'Sofia', plan: [0, 1, 1, 2, 2, 3] },
+];
+function bbDemoStart() { smDemo = null; bbDemo = { t0: Date.now(), step: -1, done: [], arrived: {}, winner: null, ended: false, at: null }; bb.sel = null; taDemo = null; mpStopPolling(); renderMp(); window.scrollTo(0, 0); }
+function bbDemoState() {
+  const d = bbDemo, cat = BB_LIST[0], total = cat.duration * 60000, now = Date.now(), over = d.ended || !!d.winner || now - d.t0 >= total;
+  const bots = BB_BOTS.map(b => { const v = d.step >= 0 ? b.plan[Math.min(d.step, b.plan.length - 1)] : 0;
+    return { name: b.name, sim: true, online: true, status: over ? 'finished' : 'playing', progress: v === 'win' ? 3 : v, near: b.name === 'Marc' && d.step >= 2 && !d.winner, won: d.winner === b.name }; });
+  return { demo: true, code: 'DEMO', challenge: cat.id, mode: 'bingo_battle', status: over ? 'finished' : 'running', host: true,
+    started_at: new Date(d.t0).toISOString(), ends_at: new Date(d.t0 + total).toISOString(), server_now: new Date(now).toISOString(), config: { duration_min: cat.duration, missions: 9 },
+    my_done: d.done, winner: d.winner, winner_me: d.winner === t('taYouDemo'), winner_line: d.line || null, finished_at: d.at,
+    players: [{ name: t('taYouDemo'), me: true, online: true, status: over ? 'finished' : 'playing', progress: d.done.length }, ...bots] };
+}
+const bbDriver = demo => demo ? {
+  complete: async k => { const st = bbDemoState(); if (st.status !== 'running' || bbDemo.done.includes(k)) return { counted: false }; bbDemo.done.push(k);
+    const line = bbFull(bbDemo.done)[0]; if (line) { bbDemo.winner = t('taYouDemo'); bbDemo.line = line; bbDemo.at = new Date().toISOString(); } return { counted: true, line }; },
+  arrived: k => bbDemo.arrived[k], setArrived: k => { bbDemo.arrived[k] = 'demo'; },
+} : {
+  complete: k => mpRpc('mp_bb_complete', { p_code: mp.code, p_cell: k, p_method: 'gps' }),
+  arrived: k => (lsGet(BB_LOCAL)?.code === mp.code ? lsGet(BB_LOCAL).arrived?.[k] : null),
+  setArrived: k => { const l = lsGet(BB_LOCAL)?.code === mp.code ? lsGet(BB_LOCAL) : { code: mp.code, arrived: {} }; l.arrived[k] = 'gps'; lsSet(BB_LOCAL, l); },
+};
+function renderBb(st, demo) {
+  const cat = mpCat(st.challenge), drv = bbDriver(demo), done = st.my_done || [], me = st.players.find(p => p.me), over = st.status === 'finished';
+  const { near, need } = bbNear(done), myLines = bbFull(done), winLine = st.winner_line || null;
+  const demoBar = demo ? `<p class="ch-demo" role="status">${t('bbDemoBanner')}</p>
+    <div class="ta-demo-ctl" role="group" aria-label="DEMO">${over ? '' : `<button type="button" class="ghost" data-bb="adv">${t('bbAdvance')}</button><button type="button" class="ghost" data-bb="close">${t('bbRivalClose')}</button><button type="button" class="ghost" data-bb="end">${t('taDemoEnd')}</button>`}
+      <button type="button" class="ghost" data-bb="restart">${t('taDemoRestart')}</button><button type="button" class="ghost" data-bb="exit">${t('taDemoExit')}</button></div>` : '';
+  const elapsed = Math.max(0, ((st.finished_at ? Date.parse(st.finished_at) : (demo ? Date.parse(st.server_now) : Date.now() + mp.offset)) - Date.parse(st.started_at)) / 1000);
+  const head = `${chModeSeg()}${demoBar}<p class="ch-kicker">Bingo Battle · ${escHtml(chL(cat.title))}${demo ? '' : ` · ${t('mpCode')} ${st.code}`}</p>
+    <div class="ta-head"><div><span>${t(over ? 'bbGameTime' : 'taLeft')}</span><b id="taClock">${over ? mpFmt(elapsed) : mpFmt(taRemaining(st))}</b></div>
+      <div><span>${t('bbSquares')}</span><b>${done.length}/9</b></div><div><span>${t('bbForLine')}</span><b>${myLines.length ? '★' : need}</b></div></div>
+    ${demo ? '' : `<p class="adapt-warn" id="mpNet" hidden>${t('mpErrNet')}</p>`}`;
+  const shown = winLine ? [winLine] : myLines;
+  const board = `<div class="ch-board bb-board" style="--n:3">${cat.board.map((m, k) => { const s = stopById(m.stop), isDone = done.includes(k), isNear = !over && near.has(k);
+    return `<button type="button" class="ch-cell ${isDone ? 'done' : ''} ${isNear ? 'bb-near' : ''} ${winLine?.includes(k) ? 'line' : ''} ${bb.sel === k ? 'sel' : ''}" data-cell="${k}" aria-pressed="${isDone}" ${over ? 'disabled' : ''}>
+      <span class="ch-thumb" data-i="${escHtml(s.name.charAt(0))}"><img src="${photo(s.img, 500)}" alt="" loading="lazy" onerror="chImgRetry(this)"></span><span class="ch-name">${escHtml(s.name)}</span>
+      ${isDone ? '<i aria-hidden="true">✓</i>' : isNear ? `<b class="bb-near-tag">${t('bbNearTag')}</b>` : ''}</button>`; }).join('')}${chLineSvg(shown, 3)}</div>`;
+  const rivals = `<p class="ch-kicker">${t(over ? 'mpFinal' : 'bbRivals')}</p><ul class="mp-list">${st.players.map(p => mpPlayerRow(p,
+    `${p.progress}/9${(p.won || (over && st.winner === p.name)) ? ` · ★ ${t('bbLineWord')}` : ''}${p.near && !over ? ` · ${t('bbOneAway')}` : ''}${p.sim ? ` <em>${t('taSim')}</em>` : ''}`)).join('')}</ul>`;
+  let body = '';
+  if (over) {
+    const wl = winLine ? winLine.map(k => stopById(cat.board[k].stop).name).join(' · ') : '';
+    body = `<div class="ch-done"><p class="ch-trophy" aria-hidden="true">★</p><h2>${st.winner ? (st.winner_me ? t('bbYouWon') : t('taWinner', { name: escHtml(st.winner) })) : t('bbNoWinner')}</h2>
+      ${wl ? `<p class="lead">${t('bbWinLine', { list: escHtml(wl) })}</p>` : ''}<p class="hint">${t('bbGameTimeIs', { t: mpFmt(elapsed) })} · ${t('bbYourSquares', { n: done.length })}</p></div>`;
+  } else if (bb.sel != null) {
+    const k = bb.sel, m = cat.board[k], s = stopById(m.stop), isDone = done.includes(k), arr = drv.arrived(k);
+    body = `<div class="ch-panel"><h2 class="ch-place">${escHtml(s.name)}</h2><p class="hint">${escHtml(areaName(s.area))}${isDone ? ` · <b>${t('bbDone')}</b>` : near.has(k) ? ` · <b>${t('bbWouldWin')}</b>` : ''}</p>
+      ${isDone ? '' : arr ? chQuestion(m.q, k) : `<div class="ch-gps">${demo ? `<button type="button" class="book go" data-bb="sim">${t('taSimArrive')}</button>` : `<button type="button" class="book go" data-bb="gps">${t('chCheck')}</button>`}
+        <a class="ghost" href="${directionsUrl(s)}" target="_blank" rel="noopener">${t('pauseGo')}</a><p class="ch-gps-msg" role="status"></p></div><p class="hint">${t(demo ? 'taSimNote' : 'bbGpsNote')}</p>`}
+      <p class="ch-src">${t('chSources')} ${m.sources.map((u, i) => `<a href="${u}" target="_blank" rel="noopener">${i + 1}</a>`).join(' · ')}</p></div>`;
+  } else body = `<p class="hint">${t('bbPick')}</p>`;
+  chRoot().innerHTML = `${head}${board}${body}<div class="mp-board">${rivals}</div><details class="ch-rules"><summary>${t('chHowTitle')}</summary><p class="hint">${t('bbRules', { m: st.config.duration_min })}</p></details>
+    ${demo ? '' : `<div class="actions"><button type="button" class="ghost" id="mpLeave">${t(over ? 'mpExit' : 'mpAbandon')}</button></div>`}`;
+  wireChModeSeg();
+  if (!ta.tick) ta.tick = setInterval(taTick, 1000);
+  const lv = document.getElementById('mpLeave'); if (lv) lv.onclick = () => { bb.sel = null; mpLeave(); };
+  const root = chRoot(), rerender = () => renderMp();
+  root.querySelectorAll('[data-cell]').forEach(b => b.onclick = () => { const k = +b.dataset.cell; bb.sel = bb.sel === k ? null : k; rerender(); });
+  root.querySelectorAll('[data-bb]').forEach(b => b.onclick = async () => {
+    const a = b.dataset.bb, k = bb.sel;
+    if (a === 'adv') { bbDemo.step = Math.min(bbDemo.step + 1, 5); if (bbDemo.step === 5 && !bbDemo.winner) { bbDemo.winner = 'Marc'; bbDemo.line = [3, 4, 5]; bbDemo.at = new Date().toISOString(); } return rerender(); }
+    if (a === 'close') { bbDemo.step = Math.max(bbDemo.step, 2); return rerender(); }
+    if (a === 'end') { bbDemo.ended = true; bbDemo.at = new Date().toISOString(); bb.sel = null; return rerender(); }
+    if (a === 'restart') return bbDemoStart();
+    if (a === 'exit') { bbDemo = null; bb.sel = null; return renderCh(); }
+    if (a === 'sim') { drv.setArrived(k); return rerender(); }
+    if (a === 'gps') {   // always the real location in a real game
+      const msg = root.querySelector('.ch-gps-msg'), d0 = chDemo; b.disabled = true; msg.textContent = t('chChecking');
+      chDemo = false; const r = await chLocate(stopById(cat.board[k].stop), cat.board[k].r || 80); chDemo = d0; b.disabled = false;
+      if (r.ok) { drv.setArrived(k); return rerender(); }
+      msg.className = 'ch-gps-msg warn';
+      msg.textContent = r.why === 'far' ? t('chGpsFar', { m: r.m }) : r.why === 'imprecise' ? t('chGpsImprecise', { m: r.acc }) : r.why === 'denied' ? t('bbGpsDenied') : t('chGpsError');
+    }
+  });
+  root.querySelectorAll('[data-chans]').forEach(b => b.onclick = async () => {
+    const k = bb.sel, m = cat.board[k], fb = b.closest('.ch-q').querySelector('.ch-feedback');
+    if (!chRight(m.q, b.dataset.chans)) { fb.textContent = t('chWrongHelp'); fb.className = 'ch-feedback warn'; b.disabled = true; return; }
+    root.querySelectorAll('[data-chans]').forEach(x => x.disabled = true);
+    try { const r = await drv.complete(k); fb.textContent = r?.line ? t('bbLineNow') : t('bbDone'); fb.className = 'ch-feedback ok'; if (!demo) await mpRefresh(); setTimeout(() => { bb.sel = null; renderMp(); }, 900); }
+    catch (e) { fb.className = 'ch-feedback warn'; fb.textContent = /time_up/.test(e.message) ? t('taTimeUp') : /not_playing/.test(e.message) ? t('bbOver') : t('mpErrNet'); if (/time_up|not_playing/.test(e.message)) mpRefresh(); else root.querySelectorAll('[data-chans]').forEach(x => x.disabled = false); }
+  });
+}
+
+// ---- Shared Mystery (Phase 3E): cooperative ----
+// One adventure for the whole room (data/shared-mysteries.js). Each phone shows different clues:
+// clue j of place m goes to seat (j + m) % n, seats being the players still in the game in joining
+// order, so a player who leaves is covered automatically; an offline player's clues can be shown on
+// another phone. The server keeps the shared part (arrival, team board, progress) and checks
+// answers (mp_sm_arrive / mp_sm_share / mp_sm_solve). Clues are in the public page, so they are
+// "private" by convention, not secret. Positions are never sent: only that the team arrived.
+const SM_LIST = window.WALKBCN_SHARED_MYSTERIES || [];
+const SM_AUDIO = window.WALKBCN_SM_AUDIO || {};
+const smById = id => SM_LIST.find(a => a.id === id);
+const smTx = id => (window.WALKBCN_SM_TEXT?.[lang] || {})[id] || window.WALKBCN_SM_TEXT.en[id];
+const smSeatOf = (m, j, n) => (j + m) % n;
+const SM_LOCAL = 'walkbcn_sm_local';
+const SM_BOTS = ['Laia', 'Marc', 'Sofia', 'Pau'];
+let sm = { pick: SM_LIST[0]?.id, demoN: 3, name: '' };
+// DEMO: one device, no room, no server. Same adventures, clues, questions and answers; simulated
+// teammates whose screens you can switch to; simulated arrival. Kept in memory only.
+let smDemo = null;
+function smDemoStart(id, n) { smDemo = { id, n, view: 0, intro: false, take: {}, coop: { step: 0, arrived: {}, shared: {}, solved: false } }; taDemo = null; bbDemo = null; mpStopPolling(); smNarStop(); renderMp(); window.scrollTo(0, 0); }
+function smDemoState() {
+  const d = smDemo, over = d.coop.solved;
+  return { demo: true, code: 'DEMO', challenge: d.id, mode: 'shared_mystery', status: over ? 'finished' : 'running', config: { missions: smById(d.id).answers.length }, coop: d.coop,
+    players: [t('taYouDemo'), ...SM_BOTS].slice(0, d.n).map((name, i) => ({ name, me: i === d.view, sim: i > 0, online: true, status: over ? 'finished' : 'playing' })) };
+}
+const smLocal = () => { const l = lsGet(SM_LOCAL); return l?.code === mp.code ? l : { code: mp.code, intro: false, take: {} }; };
+const smDriver = demo => demo ? {
+  arrive: async (k, how) => { const c = smDemo.coop; if (k === c.step && (!c.arrived[k] || c.arrived[k] === 'manual')) c.arrived[k] = how; },
+  share: async (id, who) => { if (!smDemo.coop.shared[id]) smDemo.coop.shared[id] = who; },
+  solve: async (k, ans) => { const c = smDemo.coop, a = smById(smDemo.id);
+    if (k !== c.step) return { counted: false, correct: true };
+    if (a.answers[k] !== ans) return { counted: false, correct: false };
+    c.step++; c.solved = c.step >= a.answers.length; return { counted: true, correct: true }; },
+  local: () => smDemo, saveLocal: () => {},
+} : {
+  arrive: (k, how) => mpRpc('mp_sm_arrive', { p_code: mp.code, p_step: k, p_method: how }),
+  share: id => mpRpc('mp_sm_share', { p_code: mp.code, p_clue: id }),
+  solve: (k, ans) => mpRpc('mp_sm_solve', { p_code: mp.code, p_step: k, p_answer: ans }),
+  local: smLocal, saveLocal: l => lsSet(SM_LOCAL, l),
+};
+// Final narration: a pre-recorded file (data/shared-mystery-audio.js) when there is one for this
+// adventure and language AND it was recorded from the text shown now (same textHash); otherwise
+// the device voice reads the text. Only one narration at a time (the walk player is stopped too).
+const smHash = s => { let h = 0x811c9dc5; for (const ch of s) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
+const smRecording = (id, text) => { const r = SM_AUDIO[id]?.[lang]; return r?.file && r.textHash === smHash(text) ? r : null; };
+let nar = { key: null, a: null, state: 'idle', mode: null };
+function smNarStop() {
+  if (nar.a) { nar.a.onerror = null; nar.a.pause(); nar.a.removeAttribute('src'); }
+  if (nar.mode === 'voice' && 'speechSynthesis' in window) speechSynthesis.cancel();
+  nar = { key: null, a: null, state: 'idle', mode: null }; smNarPaint();
+}
+function smNarVoice(text) {
+  nar.mode = 'voice'; nar.a = null;
+  if (!('speechSynthesis' in window)) { nar.state = 'novoice'; return smNarPaint(); }
+  speechSynthesis.cancel();
+  const speech = langMeta(lang).speech, v = pickVoice(speech), key = nar.key;
+  const parts = text.match(/[^.!?。！？]+[.!?。！？]*\s*/g) || [text];   // short pieces: long ones stop half-way in some browsers
+  parts.forEach((p, i) => { const u = new SpeechSynthesisUtterance(p.trim()); u.lang = speech; if (v) u.voice = v;
+    if (i === parts.length - 1) u.onend = () => { if (nar.key === key) { nar.state = 'idle'; smNarPaint(); } };
+    speechSynthesis.speak(u); });
+  nar.state = 'playing'; smNarPaint();
+}
+function smNarToggle(id, text, restart) {
+  const key = `${id}:${lang}`;
+  if (!restart && nar.key === key && nar.state === 'playing') { if (nar.a) nar.a.pause(); else speechSynthesis.pause(); nar.state = 'paused'; return smNarPaint(); }
+  if (!restart && nar.key === key && nar.state === 'paused') { if (nar.a) nar.a.play(); else speechSynthesis.resume(); nar.state = 'playing'; return smNarPaint(); }
+  smNarStop(); stopAudio();
+  nar.key = key;
+  const rec = smRecording(id, text);
+  if (!rec) return smNarVoice(text);
+  const au = new Audio(`${rec.file}?v=${rec.textHash}`), fail = () => { if (nar.a === au) smNarVoice(text); };   // missing or broken file: the device voice reads instead
+  nar.a = au; nar.mode = 'rec'; nar.state = 'loading'; smNarPaint();
+  au.onended = () => { if (nar.a === au) { nar.state = 'idle'; smNarPaint(); } };
+  au.onerror = fail;
+  au.play().then(() => { if (nar.a === au) { nar.state = 'playing'; smNarPaint(); } }).catch(fail);
+}
+function smNarPaint() {
+  const box = document.getElementById('smAudio'); if (!box) return;
+  const on = nar.key === box.dataset.key, st = on ? nar.state : 'idle', b = box.querySelector('[data-nar="play"]');
+  b.innerHTML = `${st === 'playing' || st === 'loading' ? pauseIcon() : playIcon()}<span>${t(st === 'playing' || st === 'loading' ? 'smPause' : 'smListen')}</span>`;
+  const rec = on ? nar.mode === 'rec' : box.dataset.rec === '1';
+  box.querySelector('.sm-nar-note').textContent = st === 'novoice' ? t('smNoVoice') : t(rec ? 'smRec' : 'smVoice');
+  box.classList.toggle('playing', st === 'playing');
+}
+const smArrivedLabel = how => t(how === 'gps' ? 'smArrivedGps' : how === 'sim' ? 'smArrivedSim' : 'smArrivedManual');
+function smReveal(st, a, tx, demo) {
+  const c = st.coop, text = tx.reveal.story, rec = smRecording(a.id, text);
+  const imgs = [a.img, ...a.missions.map(m => stopById(m.stop).img)], P = window.WALKBCN_PHOTOS || {};
+  const credits = [...new Set(imgs)].map(f => P[f] ? `${escHtml(f.replace(/\.\w+$/, ''))} · ${escHtml(P[f].author)} · <a href="${P[f].licenceUrl}" target="_blank" rel="noopener">${escHtml(P[f].licence)}</a>` : '').filter(Boolean);
+  const srcs = [...new Set([...a.missions.flatMap(m => m.sources), ...a.sources])];
+  return `<div class="sm-hero"><img src="${photo(a.img, 900)}" alt="" style="object-position:${a.imgPos || 'center'}" onerror="chImgRetry(this)"><div><span>★ ${t('smSolvedTitle')}</span><h2>${escHtml(tx.reveal.title)}</h2></div></div>
+    <h2 class="ch-place">${t('smSolution')}</h2><p class="lead">${escHtml(tx.reveal.solution)}</p>
+    <h2 class="ch-place">${t('smConnect')}</h2><ol class="sm-connect">${a.missions.map((m, i) => { const s = stopById(m.stop);
+      return `<li><span class="ch-thumb"><img src="${photo(s.img, 300)}" alt="" loading="lazy" onerror="chImgRetry(this)"></span><div><b>${escHtml(s.name)}</b><p>${escHtml(tx.missions[i].explain)}</p><span class="hint">${smArrivedLabel(c.arrived?.[i])}</span></div></li>`; }).join('')}</ol>
+    <h2 class="ch-place">${t('smStory')}</h2>
+    <div class="sm-audio" id="smAudio" data-key="${a.id}:${lang}" data-rec="${rec ? 1 : 0}"><button type="button" class="book go" data-nar="play"></button><button type="button" class="ghost" data-nar="restart">${t('smRestart')}</button><span class="hint sm-nar-note"></span></div>
+    <div class="sm-story">${text.split(/\n\n+/).map(p => `<p>${escHtml(p)}</p>`).join('')}</div>
+    <h2 class="ch-place">${t('smFacts')}</h2><ul class="sm-facts">${tx.reveal.facts.map(f => `<li>${escHtml(f)}</li>`).join('')}</ul>
+    <p class="hint">${t('smFiction')}</p>
+    <p class="ch-src">${t('chSources')} ${srcs.map((u, i) => `<a href="${u}" target="_blank" rel="noopener">${i + 1}</a>`).join(' · ')}</p>
+    <p class="ch-src">${t('smPhotos')}: ${credits.join(' — ')}</p>`;
+}
+function renderSm(st, demo) {
+  const a = smById(st.challenge), tx = smTx(st.challenge), drv = smDriver(demo), c = st.coop || { step: 0, arrived: {}, shared: {}, solved: false };
+  const places = a.missions.length, k = Math.min(c.step, places), over = st.status === 'finished', loc = drv.local();
+  const active = st.players.filter(p => p.status !== 'left'), n = Math.max(1, active.length), seat = Math.max(0, active.findIndex(p => p.me)), me = st.players.find(p => p.me);
+  if (!over || (nar.key && nar.key !== `${a.id}:${lang}`)) smNarStop();
+  const demoBar = demo ? `<p class="ch-demo" role="status">${t('smDemoBanner')}</p>
+    <div class="sm-views"><span class="opt-label">${t('smViewAs')}</span><div class="chips">${st.players.map((p, i) => `<button type="button" class="chip" data-smview="${i}" aria-pressed="${p.me}">${escHtml(p.name)}${p.sim ? ` · ${t('taSim')}` : ''}</button>`).join('')}</div></div>
+    <div class="ta-demo-ctl" role="group" aria-label="DEMO">${over ? '' : `<button type="button" class="ghost" data-sm="allshare">${t('smAllShare')}</button>`}<button type="button" class="ghost" data-sm="restart">${t('taDemoRestart')}</button><button type="button" class="ghost" data-sm="exit">${t('taDemoExit')}</button></div>` : '';
+  const head = `${chModeSeg()}${demoBar}<p class="ch-kicker">Shared Mystery${demo ? '' : ` · ${t('mpCode')} ${st.code}`}</p><h1 class="ch-h1">${escHtml(tx.title)}</h1>
+    ${over ? '' : `<ol class="sm-steps">${[...Array(places + 1)].map((_, i) => `<li class="${i < k ? 'done' : i === k ? 'now' : ''}"${i === k ? ' aria-current="step"' : ''}>${i < k ? '✓ ' : ''}${i < places ? escHtml(stopById(a.missions[i].stop).name) : t('smFinalStep')}</li>`).join('')}</ol>`}
+    ${demo ? '' : `<p class="adapt-warn" id="mpNet" hidden>${t('mpErrNet')}</p>`}`;
+  const team = `<div class="mp-board"><p class="ch-kicker">${t('smTeam')}</p><ul class="mp-list">${st.players.map(p => mpPlayerRow(p, `${p.status === 'left' ? t('smLeft') : ''}${p.sim ? ` <em>${t('taSim')}</em>` : ''}`)).join('')}</ul></div>`;
+  const notebook = k > 0 ? `<details class="sm-notebook" ${k >= places ? 'open' : ''}><summary>${t('smNotebook')} (${k}/${places})</summary><ol>${tx.missions.slice(0, k).map((m, i) => `<li><b>${escHtml(stopById(a.missions[i].stop).name)}</b> — ${escHtml(m.explain)}</li>`).join('')}</ol></details>` : '';
+  const question = (q, opts) => `<div class="ch-q sm-q"><p class="ch-kicker">${t('smQ')}</p><p class="ch-prompt">${escHtml(q)}</p>
+    <div class="sm-opts">${opts.map((o, i) => `<button type="button" class="sm-opt" data-smans="${i}">${escHtml(o)}</button>`).join('')}</div><p class="ch-feedback" role="status"></p><p class="hint">${t('smQHint')}</p></div>`;
+  let body = '';
+  if (over) body = c.solved ? smReveal(st, a, tx, demo) : `<div class="ch-done"><p class="ch-trophy" aria-hidden="true">?</p><h2>${t('smEndedUnsolved')}</h2></div>${notebook}`;
+  else if (k === 0 && !loc.intro) body = `<div class="sm-intro"><img src="${photo(a.img, 800)}" alt="" style="object-position:${a.imgPos || 'center'}" onerror="chImgRetry(this)">
+      <p class="sm-fiction">${t('smFictionTag')}</p><p class="lead">${escHtml(tx.intro)}</p><p class="hint">${t('smRules')}</p>
+      <button type="button" class="book go" data-sm="begin">${t('smBegin')}</button></div>`;
+  else if (k < places) {
+    const m = a.missions[k], mt = tx.missions[k], s = stopById(m.stop), arr = c.arrived[k];
+    const mine = [0, 1, 2, 3].filter(j => smSeatOf(k, j, n) === seat);
+    const others = demo ? [] : active.filter(p => !p.me && !p.online).map(p => ({ p, seat: active.indexOf(p) }));
+    const taken = others.filter(o => loc.take?.[`${k}-${o.seat}`]).flatMap(o => [0, 1, 2, 3].filter(j => smSeatOf(k, j, n) === o.seat).map(j => ({ j, from: o.p.name })));
+    const shared = Object.entries(c.shared).filter(([id]) => id.startsWith(`${k}-`));
+    const clue = (j, from) => { const id = `${k}-${j}`;
+      return `<li class="sm-clue"><span class="sm-kind">${t(`smKind_${m.kinds[j]}`)}</span>${from ? ` <span class="hint">${t('smTakenFrom', { name: escHtml(from) })}</span>` : ''}<p>${escHtml(mt.clues[j])}</p>
+        ${c.shared[id] ? `<span class="sm-shared">✓ ${t('smShared')}</span>` : `<button type="button" class="ghost" data-smshare="${id}">${t('smShare')}</button>`}</li>`; };
+    body = `${k > 0 ? `<div class="sm-new"><b>${t('smNew')}</b> ${escHtml(tx.missions[k - 1].explain)}</div>` : ''}
+      <div class="sm-place"><span class="ch-thumb"><img src="${photo(s.img, 500)}" alt="" loading="lazy" onerror="chImgRetry(this)"></span>
+        <div><p class="ch-kicker">${t('smStep', { n: k + 1, total: places })}</p><h2 class="ch-place">${escHtml(s.name)}</h2><p>${escHtml(mt.lead)}</p></div></div>
+      ${arr ? `<p class="sm-arrived">✓ ${smArrivedLabel(arr)}</p>` : `<div class="ch-gps">${demo ? `<button type="button" class="book go" data-sm="sim">${t('taSimArrive')}</button>` : `<button type="button" class="book go" data-sm="gps">${t('smArrive')}</button>`}
+        <a class="ghost" href="${directionsUrl(s)}" target="_blank" rel="noopener">${t('pauseGo')}</a><p class="ch-gps-msg" role="status"></p>
+        ${demo ? '' : `<button type="button" class="ghost" data-sm="manual" hidden>${t('smArriveManual')}</button>`}</div><p class="hint">${t(demo ? 'smSimNote' : 'smGpsNote')}</p>`}
+      <h2 class="ch-place">${t('smYourClues')}${demo ? ` · ${escHtml(me.name)}` : ''}</h2>
+      ${mine.length || taken.length ? `<ul class="sm-clues">${mine.map(j => clue(j)).join('')}${taken.map(x => clue(x.j, x.from)).join('')}</ul>` : `<p class="hint">${t('smNoClues')}</p>`}
+      ${others.filter(o => !loc.take?.[`${k}-${o.seat}`] && [0, 1, 2, 3].some(j => smSeatOf(k, j, n) === o.seat)).map(o => `<button type="button" class="ghost" data-smtake="${o.seat}">${t('smOffline', { name: escHtml(o.p.name) })}</button>`).join('')}
+      <h2 class="ch-place">${t('smBoard')}</h2>
+      ${shared.length ? `<ul class="sm-clues board">${shared.map(([id, who]) => { const j = +id.split('-')[1]; return `<li class="sm-clue"><span class="sm-kind">${t(`smKind_${m.kinds[j]}`)}</span> <span class="hint">${t('smSharedBy', { name: escHtml(who) })}</span><p>${escHtml(mt.clues[j])}</p></li>`; }).join('')}</ul>` : `<p class="hint">${t('smBoardEmpty')}</p>`}
+      ${arr ? question(mt.q, mt.options) : ''}
+      ${notebook}<p class="ch-src">${t('chSources')} ${m.sources.map((u, i) => `<a href="${u}" target="_blank" rel="noopener">${i + 1}</a>`).join(' · ')}</p>`;
+  } else body = `<div class="sm-new"><b>${t('smNew')}</b> ${escHtml(tx.missions[places - 1].explain)}</div>
+      <h2 class="ch-place">${t('smFinalStep')}</h2><p class="lead">${escHtml(tx.final.lead)}</p>${notebook}${question(tx.final.q, tx.final.options)}`;
+  chRoot().innerHTML = `${head}${body}${team}
+    ${demo ? '' : `<div class="actions"><button type="button" class="ghost" id="mpLeave">${t(over ? 'mpExit' : 'mpAbandon')}</button></div>`}`;
+  wireChModeSeg();
+  smNarPaint();
+  const root = chRoot(), rerender = () => renderMp();
+  const lv = document.getElementById('mpLeave'); if (lv) lv.onclick = () => { smNarStop(); mpLeave(); };
+  root.querySelectorAll('[data-smview]').forEach(b => b.onclick = () => { smDemo.view = +b.dataset.smview; rerender(); });
+  root.querySelectorAll('[data-nar]').forEach(b => b.onclick = () => smNarToggle(a.id, tx.reveal.story, b.dataset.nar === 'restart'));
+  root.querySelectorAll('[data-smtake]').forEach(b => b.onclick = () => { const l = drv.local(); l.take = { ...(l.take || {}), [`${k}-${b.dataset.smtake}`]: 1 }; drv.saveLocal(l); rerender(); });
+  const act = async (b, fn) => { b.disabled = true; try { await fn(); if (!demo) await mpRefresh(); rerender(); } catch (e) { b.disabled = false; const el = document.getElementById('mpNet'); if (el) { el.textContent = /not_playing/.test(e.message) ? t('bbOver') : t('mpErrNet'); el.hidden = false; } } };
+  root.querySelectorAll('[data-smshare]').forEach(b => b.onclick = () => act(b, () => drv.share(b.dataset.smshare, me.name)));
+  root.querySelectorAll('[data-sm]').forEach(b => b.onclick = async () => {
+    const x = b.dataset.sm;
+    if (x === 'begin') { const l = drv.local(); l.intro = true; drv.saveLocal(l); return rerender(); }
+    if (x === 'restart') return smDemoStart(smDemo.id, smDemo.n);
+    if (x === 'exit') { smDemo = null; smNarStop(); return renderCh(); }
+    if (x === 'allshare') { [0, 1, 2, 3].forEach(j => { const id = `${k}-${j}`; if (!c.shared[id]) c.shared[id] = st.players.filter(p => p.status !== 'left')[smSeatOf(k, j, n)].name; }); return rerender(); }
+    if (x === 'sim') return act(b, () => drv.arrive(k, 'sim'));
+    if (x === 'manual') return act(b, () => drv.arrive(k, 'manual'));
+    if (x === 'gps') {   // a fresh reading on this phone; only "arrived" goes to the server, never the position
+      const msg = root.querySelector('.ch-gps-msg'); b.disabled = true; msg.className = 'ch-gps-msg'; msg.textContent = t('chChecking');
+      const s = stopById(a.missions[k].stop), r = await chLocate(s, a.missions[k].r || 80); b.disabled = false;
+      if (r.ok) return act(b, () => drv.arrive(k, 'gps'));
+      msg.className = 'ch-gps-msg warn';
+      msg.textContent = r.why === 'far' ? t('chGpsFar', { m: r.m }) : r.why === 'imprecise' ? t('chGpsImprecise', { m: r.acc }) : r.why === 'denied' ? t('smGpsDenied') : t('chGpsError');
+      root.querySelector('[data-sm="manual"]').hidden = false;
+    }
+  });
+  root.querySelectorAll('[data-smans]').forEach(b => b.onclick = async () => {
+    const fb = b.closest('.sm-q').querySelector('.ch-feedback'), all = root.querySelectorAll('[data-smans]');
+    all.forEach(x => x.disabled = true);
+    try {
+      const r = await drv.solve(k, +b.dataset.smans);
+      if (!r.correct) { fb.textContent = t('smWrong'); fb.className = 'ch-feedback warn'; all.forEach(x => x.disabled = x === b || x.classList.contains('no')); b.classList.add('no'); return; }
+      fb.textContent = t('smRight'); fb.className = 'ch-feedback ok';
+      if (!demo) await mpRefresh();
+      setTimeout(() => { rerender(); window.scrollTo(0, 0); }, 700);
+    } catch (e) { fb.className = 'ch-feedback warn'; fb.textContent = /not_playing/.test(e.message) ? t('bbOver') : t('mpErrNet'); all.forEach(x => x.disabled = false); if (/not_playing|wrong_step|not_arrived/.test(e.message) && !demo) mpRefresh(); }
+  });
+}
+
+// An invitation link (#room=CODE) opens "Play with friends" with the code filled in.
+function mpFromLink() {
+  if (!/^#room=[A-Za-z0-9]{6}/.test(location.hash)) return;
+  showTab('chal'); chView.mode = 'friends';
+  if (mp.code && mp.code !== location.hash.slice(6, 12).toUpperCase()) { mp.code = null; mp.state = null; }
+  renderCh();
 }
 
 // ---- Your data & privacy ----
@@ -3515,10 +5135,11 @@ function applyLang() {
   if (actCat && !document.getElementById('actFilters').hidden) openCategory(actCat, true);
   else drawActMap(actItems, false);
   if (!document.getElementById('pickBox').hidden) renderPickTargets();
-  renderThemes(); renderZones(); renderMust();
+  renderThemes(); renderZones(); renderMust(); renderStyleHint(); renderTimeRow(); renderMore();
   if (typeof renderOfflineBtn === 'function' && document.getElementById('saveOffline')) { try { renderOfflineBtn(); renderOnline(); } catch (e) {} }
   if (lastRoute && !document.getElementById('route').hidden) { renderRouteTexts(); renderStopList(); refreshStoryCard(); }
   refreshGuideTexts();
+  if (!document.getElementById('chalView').hidden) renderCh();
   if (privacy.open) renderPrivacy();
   renderResume();
   updateCreateBar();
@@ -3563,6 +5184,9 @@ document.getElementById('resumeBtn').onclick = () => {
 // A shared link opens that walk; otherwise back to the route if it was open (reload, locked
 // phone, coming back from Google Maps), else offer it.
 if (location.hash.startsWith('#walk=')) { if (!routeFromLink()) history.replaceState(null, '', location.pathname); }
+else if (location.hash.startsWith('#room=')) mpFromLink();
+// Back in a room after a reload or reopening the app: go straight to it (the server says where you are).
+else if (mp.code && mpReady()) { showTab('chal'); chView.mode = 'friends'; renderCh(); }
 else if (location.hash === '#ruta' && !restoreRoute()) history.replaceState(null, '', location.pathname);
 renderResume();
 loadAnalytics();
@@ -3582,8 +5206,8 @@ async function saveOffline() {
   const status = document.getElementById('offlineStatus');
   const urls = new Set([location.pathname, 'manifest.webmanifest', ...[...document.scripts].map(x => x.src).filter(Boolean),
     ...[...document.querySelectorAll('link[rel="stylesheet"]')].map(x => x.href)]);
-  if (lang !== 'en') urls.add(`content/i18n/${lang}.js?v=11`);
-  if (plan.length !== 'normal') urls.add('content/i18n/en.js?v=11');
+  if (lang !== 'en') urls.add(i18nUrl(lang));
+  if (plan.length !== 'normal') urls.add(i18nUrl('en'));
   route.forEach(s => {
     const st = storyFor(s);
     if (st.audio) urls.add(st.audio);

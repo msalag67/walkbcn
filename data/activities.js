@@ -686,7 +686,7 @@ window.WALKBCN_ACTIVITIES = {
       },
       {
         "id": "crowd",
-        "label": "Who goes?",
+        "label": "Who goes? (our impression)",
         "options": [
           {
             "id": "locals",
@@ -1478,7 +1478,7 @@ window.WALKBCN_ACTIVITIES = {
           "city",
           "sea"
         ],
-        "desc": "A 360° view from an old Civil War anti-aircraft battery. Very popular at sunset; neighbours have asked visitors to keep the noise down."
+        "desc": "Turó de la Rovira: a 360° view from a 1938 Civil War anti-aircraft battery, now a free open-air site of the City History Museum (MUHBA). Steep climb, not accessible with reduced mobility. People live just below: no music, and keep voices down, especially in the evening."
       },
       {
         "name": "Mirador del Palau Nacional",

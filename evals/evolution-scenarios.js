@@ -66,7 +66,8 @@ async () => {
   const fileOk = async f => (await fetch(f, { method: 'HEAD' })).ok;
   const sample = ['sant-pau-del-camp', 'can-framis', 'farinera-clot'];
   const audio = [];
-  for (const l of ['ca', 'es', 'zh']) { await loadLangData(l); for (const id of sample) audio.push({ l, id, ok: await fileOk(I18N[l].stops[id].audio.base.file) }); }
+  // Spanish recordings were removed on purpose on 17 Nov 2026 (texts rewritten): the device voice reads them.
+  for (const l of ['ca', 'fr', 'zh']) { await loadLangData(l); for (const id of sample) { const f = I18N[l].stops[id].audio?.base?.file; audio.push({ l, id, ok: !!f && await fileOk(f) }); } }
   for (const id of sample) audio.push({ l: 'en', id, ok: await fileOk(STORIES[id].base.audio) });
   add(14, 'Audio of new stops (sample) exists', audio.every(a => a.ok), { audio });
   // 8. Activities: combined filters, empty results, retired places

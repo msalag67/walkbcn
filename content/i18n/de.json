@@ -255,7 +255,7 @@
       }
     },
     "mercat-de-santa-caterina": {
-      "tip": "Eine gute Alternative zur überlaufenen Boqueria, wie die Einheimischen sie kennen: gleiche Qualität, aber viel kürzere Schlangen.",
+      "tip": "Komm am Vormittag, wenn an den Ständen am meisten los ist, und such drinnen die freigelegten Fundamente des alten Klosters.",
       "stories": {
         "base": {
           "short": "Schauen Sie mal nach oben auf dieses wellige, bunte Dach. Es besteht aus über 300.000 Keramikfliesen, und zwar in den Farben von Obst und Gemüse, die darunter verkauft werden. Das hier ist die älteste Markthalle der Stadt, erbaut an der Stelle, wo einst ein mittelalterliches Kloster stand. Nehmen Sie sich einen Moment Zeit und folgen Sie den Wellen mit den Augen von einem Ende zum anderen.",
@@ -1483,9 +1483,9 @@
       "tip": "Ein Gedenkort über Wohnhäusern: keine Partys, keine Musik, nimm deinen Müll mit und sei auf dem Weg nach oben leise.",
       "stories": {
         "base": {
-          "short": "Von diesem Hügel aus sieht man fast die ganze Stadt, vom Meer bis zu den Bergen. Genau wegen dieser Aussicht standen hier im Spanischen Bürgerkrieg Flugabwehrgeschütze. Später bauten Familien, die nirgendwo sonst unterkamen, Hütten zwischen den Ruinen und blieben bis Ende der 1980er-Jahre. Die Betonplattformen sind das, was davon übrig ist.",
-          "normal": "Von diesem Hügel aus sieht man fast die ganze Stadt, vom Meer bis zu den Bergen. Genau deshalb wurden hier während des Spanischen Bürgerkriegs Flugabwehrgeschütze aufgestellt, um Barcelona vor Bombenangriffen zu schützen. Nach dem Krieg bauten Familien, die nirgendwo sonst wohnen konnten, Hütten zwischen den Ruinen und lebten hier bis Ende der 1980er-Jahre. Die Betonplattformen sind das, was davon geblieben ist.",
-          "long": "Sie stehen hier oben auf dem Turó de la Rovira, und von hier aus sieht man fast die ganze Stadt, vom Meer bis zu den Bergen. Nehmen Sie sich einen Moment Zeit und lassen Sie den Blick wandern. Suchen Sie das Mittelmeer, das am Horizont glitzert. Dann drehen Sie sich zu den bewaldeten Hügeln von Collserola, ganz oben die Kirche auf dem Tibidabo. Etwas seitlich liegt Montjuïc flach neben dem Hafen, und näher dran entdecken Sie vielleicht die Türme der Sagrada Família, die über die Dächer ragen. Genau wegen dieser weiten Aussicht wurden hier während des Spanischen Bürgerkriegs Flugabwehrgeschütze aufgestellt. Barcelona wurde immer wieder aus der Luft bombardiert, und von diesem Hügel aus konnten die Kanoniere den Himmel beobachten und die Stadt darunter verteidigen. Schauen Sie sich die Betonplattformen um Sie herum an. Auf einigen davon standen die Geschütze, und ihre Form kann man noch heute erkennen. Mit dem Kriegsende war die Geschichte aber nicht vorbei. In den harten Jahren danach bauten Familien, die nirgendwo sonst wohnen konnten, Hütten zwischen den Ruinen und nutzten die alten Militäranlagen als Wände und Böden. Die Menschen kochten hier, zogen Kinder groß und bildeten eine Gemeinschaft, und sie lebten auf diesem Hügel bis Ende der 1980er-Jahre. Heute sind die Betonplattformen das, was davon geblieben ist, und der Ort wird als Teil des Stadtgeschichtsmuseums gepflegt. Während Sie hier sitzen und die Aussicht genießen, denken Sie daran: Die Hänge unter Ihnen sind nach wie vor ein lebendiges Viertel. El Carmel ist voller Wohnungen, also seien Sie auf dem Weg nach unten bitte leise."
+          "short": "Von diesem Hügel aus sieht man fast die ganze Stadt, vom Meer bis zu den Bergen. Genau wegen dieser Aussicht standen hier im Spanischen Bürgerkrieg Flugabwehrgeschütze. Später bauten Familien, die nirgendwo sonst unterkamen, Hütten zwischen den Ruinen und blieben bis 1990. Die Betonplattformen sind das, was davon übrig ist.",
+          "normal": "Von diesem Hügel aus sieht man fast die ganze Stadt, vom Meer bis zu den Bergen. Genau deshalb wurden hier während des Spanischen Bürgerkriegs Flugabwehrgeschütze aufgestellt, um Barcelona vor Bombenangriffen zu schützen. Nach dem Krieg bauten Familien, die nirgendwo sonst wohnen konnten, Hütten zwischen den Ruinen und lebten hier bis 1990. Die Betonplattformen sind das, was davon geblieben ist.",
+          "long": "Sie stehen hier oben auf dem Turó de la Rovira, und von hier aus sieht man fast die ganze Stadt, vom Meer bis zu den Bergen. Nehmen Sie sich einen Moment Zeit und lassen Sie den Blick wandern. Suchen Sie das Mittelmeer, das am Horizont glitzert. Dann drehen Sie sich zu den bewaldeten Hügeln von Collserola, ganz oben die Kirche auf dem Tibidabo. Etwas seitlich liegt Montjuïc flach neben dem Hafen, und näher dran entdecken Sie vielleicht die Türme der Sagrada Família, die über die Dächer ragen. Genau wegen dieser weiten Aussicht wurden hier während des Spanischen Bürgerkriegs Flugabwehrgeschütze aufgestellt. Barcelona wurde immer wieder aus der Luft bombardiert, und von diesem Hügel aus konnten die Kanoniere den Himmel beobachten und die Stadt darunter verteidigen. Schauen Sie sich die Betonplattformen um Sie herum an. Auf einigen davon standen die Geschütze, und ihre Form kann man noch heute erkennen. Mit dem Kriegsende war die Geschichte aber nicht vorbei. In den harten Jahren danach bauten Familien, die nirgendwo sonst wohnen konnten, Hütten zwischen den Ruinen und nutzten die alten Militäranlagen als Wände und Böden. Die Menschen kochten hier, zogen Kinder groß und bildeten eine Gemeinschaft, und sie lebten auf diesem Hügel bis 1990. Heute sind die Betonplattformen das, was davon geblieben ist, und der Ort wird als Teil des Stadtgeschichtsmuseums gepflegt. Während Sie hier sitzen und die Aussicht genießen, denken Sie daran: Die Hänge unter Ihnen sind nach wie vor ein lebendiges Viertel. El Carmel ist voller Wohnungen, also seien Sie auf dem Weg nach unten bitte leise."
         },
         "outdoors": {
           "short": "Drehen Sie sich langsam einmal ganz im Kreis. Fast die ganze Stadt liegt Ihnen zu Füßen, vom glitzernden Meer bis zu den grünen Bergen. Suchen Sie über den Dächern die Türme der Sagrada Família. Dann setzen Sie sich auf die Betonplattformen, spüren die Brise und genießen die Aussicht in aller Ruhe, denn an diesen Hängen wohnen echte Familien.",
@@ -1493,24 +1493,24 @@
           "long": "Drehen Sie sich langsam einmal ganz im Kreis und lassen Sie die Stadt auf sich wirken. Von diesem Hügel, dem Turó de la Rovira, breitet sich fast ganz Barcelona unter Ihnen aus, von der glitzernden Linie des Meeres bis zu den grünen Bergen dahinter. Fangen Sie beim Wasser an. Folgen Sie dem Mittelmeer am Horizont entlang, und Sie entdecken die Schiffe und die Kräne des Hafens. Dann lassen Sie den Blick zurück über die Dächer wandern. Irgendwo in diesem Häusermeer finden Sie die Türme der Sagrada Família, an der seit über einem Jahrhundert gebaut wird. Auf der einen Seite erhebt sich der Montjuïc neben dem Hafen. Drehen Sie sich weiter, und der bewaldete Höhenzug von Collserola füllt die Skyline, ganz oben auf dem höchsten Punkt thront die Kirche des Tibidabo. Jetzt suchen Sie sich ein Plätzchen auf den Betonplattformen und setzen sich eine Weile. Diese Platten sind die Überreste von Flugabwehrstellungen aus dem Spanischen Bürgerkrieg – und genau deshalb liegen sie an einem Ort mit so weitem Blick. Beobachten Sie, wie das Licht über die Straßen wandert. Wenn Wolken vorbeiziehen, werden ganze Viertel dunkler und wieder hell, und das Raster des Eixample mit seinen regelmäßigen Blöcken lässt sich von hier oben viel leichter erkennen. Spüren Sie auch die Brise. Hier fühlt man sich weit weg vom trubeligen Zentrum, obwohl es direkt unter Ihnen liegt. Im Laufe des Tages kommen immer mehr Leute herauf, um die Aussicht zu teilen, vor allem gegen Sonnenuntergang. Und denken Sie daran: Die Häuser an diesen Hängen sind das Zuhause echter Familien. Genießen Sie also leise, und nehmen Sie die Ruhe mit, wenn Sie gehen."
         },
         "history": {
-          "short": "Schauen Sie auf den Beton unter Ihren Füßen. Im Spanischen Bürgerkrieg standen hier Flugabwehrgeschütze, die Barcelona vor Bombenangriffen schützten. Danach bauten Familien, die nirgendwo sonst wohnen konnten, Hütten zwischen den Ruinen und blieben bis Ende der 1980er-Jahre. Stellen Sie sich hier Küchen und spielende Kinder vor. Unten ist El Carmel bis heute voller Wohnungen.",
-          "normal": "Schauen Sie auf den Beton unter Ihren Füßen. Während des Spanischen Bürgerkriegs standen auf diesem Hügel Flugabwehrgeschütze. Der Ort wurde gewählt, weil man von hier fast die ganze Stadt sieht, vom Meer bis zu den Bergen – ein idealer Beobachtungsposten, um Barcelona vor Bombenangriffen zu schützen. Doch mit dem Krieg endete die Geschichte nicht. Familien, die nirgendwo sonst wohnen konnten, bauten Hütten zwischen den Ruinen, und Menschen lebten genau hier bis Ende der 1980er-Jahre. Stellen Sie sich Küchen und spielende Kinder dort vor, wo Sie jetzt stehen. Heute ist El Carmel unter Ihnen nach wie vor ein lebendiges Viertel voller Wohnungen.",
-          "long": "Schauen Sie auf den Beton unter Ihren Füßen. Während des Spanischen Bürgerkriegs standen auf diesem Hügel, dem Turó de la Rovira, Flugabwehrgeschütze. Der Ort wurde gewählt, weil man von hier fast die ganze Stadt sieht, vom Meer bis zu den Bergen – ein idealer Beobachtungsposten, um Barcelona vor Bombenangriffen zu schützen. Diese Angriffe waren real und furchtbar. Die Stadt wurde schwer aus der Luft bombardiert, vieles davon von italienischen Flugzeugen, die von Mallorca aus übers Meer kamen. Drehen Sie sich zum Wasser und stellen Sie sich vor, wie man diesen Horizont absucht und auf das Dröhnen der Motoren wartet. Jetzt schauen Sie sich die Plattformen genauer an. Einige sind die Sockel, auf denen die Geschütze montiert waren, und gleich in der Nähe finden Sie Überreste von Räumen, die die hier stationierten Soldaten nutzten. Doch mit dem Krieg endete die Geschichte nicht. In den harten Jahren danach herrschte in Barcelona Wohnungsnot. Familien, die nirgendwo sonst wohnen konnten, bauten Hütten zwischen den Ruinen und nutzten den Militärbeton als Fundament und Wände. Mit der Zeit wurde daraus eine richtige Siedlung, und Menschen lebten genau hier bis Ende der 1980er-Jahre. Stellen Sie sich Küchen, zum Trocknen aufgehängte Wäsche und spielende Kinder dort vor, wo Sie jetzt stehen. Wenn Sie genau hinschauen, entdecken Sie vielleicht auch Spuren dieser Wohnungen, etwa Reste alter Bodenfliesen im Boden. Heute wird der Ort als Teil des Stadtgeschichtsmuseums gepflegt, und El Carmel unter Ihnen ist nach wie vor ein lebendiges Viertel voller Wohnungen. Denken Sie daran, wenn Sie durch seine Straßen wieder hinuntergehen, und seien Sie bitte leise."
+          "short": "Schauen Sie auf den Beton unter Ihren Füßen. Im Spanischen Bürgerkrieg standen hier Flugabwehrgeschütze, die Barcelona vor Bombenangriffen schützten. Danach bauten Familien, die nirgendwo sonst wohnen konnten, Hütten zwischen den Ruinen und blieben bis 1990. Stellen Sie sich hier Küchen und spielende Kinder vor. Unten ist El Carmel bis heute voller Wohnungen.",
+          "normal": "Schauen Sie auf den Beton unter Ihren Füßen. Während des Spanischen Bürgerkriegs standen auf diesem Hügel Flugabwehrgeschütze. Der Ort wurde gewählt, weil man von hier fast die ganze Stadt sieht, vom Meer bis zu den Bergen – ein idealer Beobachtungsposten, um Barcelona vor Bombenangriffen zu schützen. Doch mit dem Krieg endete die Geschichte nicht. Familien, die nirgendwo sonst wohnen konnten, bauten Hütten zwischen den Ruinen, und Menschen lebten genau hier bis 1990. Stellen Sie sich Küchen und spielende Kinder dort vor, wo Sie jetzt stehen. Heute ist El Carmel unter Ihnen nach wie vor ein lebendiges Viertel voller Wohnungen.",
+          "long": "Schauen Sie auf den Beton unter Ihren Füßen. Während des Spanischen Bürgerkriegs standen auf diesem Hügel, dem Turó de la Rovira, Flugabwehrgeschütze. Der Ort wurde gewählt, weil man von hier fast die ganze Stadt sieht, vom Meer bis zu den Bergen – ein idealer Beobachtungsposten, um Barcelona vor Bombenangriffen zu schützen. Diese Angriffe waren real und furchtbar. Die Stadt wurde schwer aus der Luft bombardiert, vieles davon von italienischen Flugzeugen, die von Mallorca aus übers Meer kamen. Drehen Sie sich zum Wasser und stellen Sie sich vor, wie man diesen Horizont absucht und auf das Dröhnen der Motoren wartet. Jetzt schauen Sie sich die Plattformen genauer an. Einige sind die Sockel, auf denen die Geschütze montiert waren, und gleich in der Nähe finden Sie Überreste von Räumen, die die hier stationierten Soldaten nutzten. Doch mit dem Krieg endete die Geschichte nicht. In den harten Jahren danach herrschte in Barcelona Wohnungsnot. Familien, die nirgendwo sonst wohnen konnten, bauten Hütten zwischen den Ruinen und nutzten den Militärbeton als Fundament und Wände. Mit der Zeit wurde daraus eine richtige Siedlung, und Menschen lebten genau hier bis 1990. Stellen Sie sich Küchen, zum Trocknen aufgehängte Wäsche und spielende Kinder dort vor, wo Sie jetzt stehen. Wenn Sie genau hinschauen, entdecken Sie vielleicht auch Spuren dieser Wohnungen, etwa Reste alter Bodenfliesen im Boden. Heute wird der Ort als Teil des Stadtgeschichtsmuseums gepflegt, und El Carmel unter Ihnen ist nach wie vor ein lebendiges Viertel voller Wohnungen. Denken Sie daran, wenn Sie durch seine Straßen wieder hinuntergehen, und seien Sie bitte leise."
         }
       },
       "srcHash": "7761a6c045",
       "audio": {
         "base": {
           "file": "audio/de/bunkers-carmel.m4a",
-          "hash": "d24a06a686"
+          "hash": "8e7583c939"
         },
         "outdoors": {
           "file": "audio/de/bunkers-carmel--outdoors.m4a",
-          "hash": "46a2f0d769"
+          "hash": "9ff4cbae9b"
         },
         "history": {
           "file": "audio/de/bunkers-carmel--history.m4a",
-          "hash": "8905597262"
+          "hash": "e0297fe782"
         }
       }
     },
@@ -2368,7 +2368,7 @@
           }
         },
         "crowd": {
-          "label": "Wer geht hin?",
+          "label": "Wer geht hin? (unser Eindruck)",
           "options": {
             "locals": "Vor allem Einheimische",
             "mixed": "Einheimische & Besucher"
@@ -2482,7 +2482,7 @@
         }
       },
       "places": {
-        "Bunkers del Carmel": "Ein 360°-Blick von einer alten Flugabwehrstellung aus dem Bürgerkrieg. Bei Sonnenuntergang sehr beliebt; die Anwohner haben die Besucher gebeten, leise zu sein.",
+        "Bunkers del Carmel": "Turó de la Rovira: 360°-Blick von einer Flakbatterie aus dem Bürgerkrieg (1938), heute ein kostenloser Freiluftort des Stadtgeschichtsmuseums (MUHBA). Steiler Aufstieg, nicht barrierefrei. Direkt darunter wohnen Menschen: keine Musik und leise sprechen, besonders am Abend.",
         "Mirador del Palau Nacional": "Von der Terrasse vor dem MNAC blickt man die Allee hinunter direkt auf die Plaça d'Espanya und über die ganze Stadt.",
         "Castell de Montjuïc": "Eine Festung aus dem 17. Jahrhundert ganz oben auf dem Montjuïc, mit Blick auf den Hafen auf der einen und die Stadt auf der anderen Seite.",
         "Arenas de Barcelona": "Eine ehemalige Stierkampfarena, heute ein Einkaufszentrum, mit einem runden Dach-Rundgang über der Plaça d'Espanya und mit Blick auf den Montjuïc.",
@@ -2648,5 +2648,5 @@
       }
     }
   },
-  "activitiesHash": "77cf047399"
+  "activitiesHash": "bbe4afb1ae"
 }

@@ -7,13 +7,15 @@
 // - practical cards and photo credits (author + licence) for every photo shown
 // - Activities: retired places are gone everywhere, new places carry why + sources + date
 // - every stop has a story and tip in every language (short, normal, long)
+// - every data file is loaded at an address that matches its content (stamp-versions.mjs)
 import fs from 'node:fs';
 import vm from 'node:vm';
+import crypto from 'node:crypto';
 
 const root = new URL('..', import.meta.url).pathname;
 const ctx = { window: {} };
 vm.createContext(ctx);
-for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'content/stories.js']) {
+for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'data/discoveries.js', 'data/challenges.js', 'data/shared-mysteries.js', 'data/shared-mystery-audio.js', 'content/stories.js']) {
   vm.runInContext(fs.readFileSync(root + f, 'utf8'), ctx, { filename: f });
 }
 for (const l of ['ca', 'es', 'en', 'fr', 'de', 'it', 'zh']) {
@@ -44,6 +46,7 @@ for (const s of STOPS) {
 
 // Notices
 const iso = /^\d{4}-\d{2}-\d{2}$/;
+const today = new Date().toISOString().slice(0, 10);
 for (const [id, list] of Object.entries(W.WALKBCN_NOTICES || {})) {
   if (!ids.has(id)) fail(`notice: unknown stop ${id}`);
   for (const n of list) {
@@ -54,7 +57,114 @@ for (const [id, list] of Object.entries(W.WALKBCN_NOTICES || {})) {
     if (n.review && !iso.test(n.review)) fail(`notice ${id}: bad review date ${n.review}`);
     if (!n.review && n.until) fail(`notice ${id}: a temporary notice needs a "review" date`);
     if (n.at && !(n.at.lat > 41.33 && n.at.lat < 41.46 && n.at.label)) fail(`notice ${id}: "at" needs lat, lng and label`);
+    if (n.resolved && !iso.test(n.resolved)) fail(`notice ${id}: bad resolved date ${n.resolved}`);
+    // Editorial reminders (not failures): the app shows these as "not checked again yet".
+    if (n.until && n.until < today && !n.resolved) console.log(`! notice ${id}: ended ${n.until} and hasn't been checked again (add "resolved" or a new notice)`);
+    else if (n.review && n.review < today && !(n.until && n.until < today)) console.log(`! notice ${id}: review date ${n.review} has passed`);
   }
+}
+
+// Editorial list for the discovery styles: only known stops
+for (const id of W.WALKBCN_EDITORIAL?.known || []) if (!ids.has(id)) fail(`editorial: unknown stop ${id} in "known"`);
+
+// "Surprise me" clue catalogue: existing stop with a sourced card, not residential or limited
+// access, an intro and exactly 3 clues in every language.
+for (const e of W.WALKBCN_DISCOVERIES || []) {
+  const card = W.WALKBCN_CARDS?.[e.stop];
+  if (!ids.has(e.stop)) fail(`discovery: unknown stop ${e.stop}`);
+  else if (!(card?.sources || []).length) fail(`discovery ${e.stop}: its card needs dated sources`);
+  if ((card?.sensitive || []).some(k => k === 'residential' || k === 'limited')) fail(`discovery ${e.stop}: residential or limited-access stops are not used`);
+  if ((e.clues || []).length !== 3) fail(`discovery ${e.stop}: needs exactly 3 clues`);
+  for (const [i, x] of [e.intro, ...(e.clues || [])].entries()) for (const l of langs) if (!x?.[l]) fail(`discovery ${e.stop}: ${i ? `clue ${i}` : 'intro'} missing in ${l}`);
+}
+
+// Challenges: known stops, sources, a valid question with the right answer among the options,
+// every visible text in 7 languages, hunt clues, mystery clue pieces, bingo board size.
+{
+  const T = ['hunt', 'mystery', 'observe', 'bingo', 'story'];
+  const all7 = (x, what) => { for (const l of langs) if (!x?.[l]) fail(`${what}: missing in ${l}`); };
+  for (const c of W.WALKBCN_CHALLENGES || []) {
+    const w = `challenge ${c.id}`;
+    if (!T.includes(c.type)) fail(`${w}: unknown type ${c.type}`);
+    for (const k of ['title', 'desc', 'intro', 'finale']) all7(c[k], `${w} ${k}`);
+    if (c.type === 'mystery') all7(c.frame, `${w} frame`);
+    if (c.type === 'bingo' && c.missions.length !== (c.cols || 3) ** 2) fail(`${w}: bingo needs ${(c.cols || 3) ** 2} squares`);
+    c.missions.forEach((m, i) => {
+      const mw = `${w} mission ${i + 1}`;
+      if (!ids.has(m.stop)) fail(`${mw}: unknown stop ${m.stop}`);
+      if (!(m.sources || []).length || m.sources.some(u => !/^https:\/\//.test(u))) fail(`${mw}: needs https sources`);
+      if ((W.WALKBCN_CARDS?.[m.stop]?.sensitive || []).includes('limited')) fail(`${mw}: limited-access stop`);
+      const q = m.q || {};
+      all7(q.prompt, `${mw} question`);
+      if (q.kind === 'choice') { (q.options || []).forEach((o, k) => all7(o, `${mw} option ${k + 1}`)); if (!(q.answer >= 0 && q.answer < (q.options || []).length)) fail(`${mw}: answer out of range`); }
+      else if (q.kind === 'truefalse') { if (typeof q.answer !== 'boolean') fail(`${mw}: true/false answer`); }
+      else if (q.kind === 'number') { if (!Number.isFinite(q.answer)) fail(`${mw}: number answer`); }
+      else fail(`${mw}: unknown question kind`);
+      if (c.type === 'hunt') { if ((m.clues || []).length < 2) fail(`${mw}: a hunt needs clues`); (m.clues || []).forEach((x, k) => all7(x, `${mw} clue ${k + 1}`)); }
+      if (c.type === 'mystery') all7(m.piece, `${mw} clue piece`);
+      if (m.hint) all7(m.hint, `${mw} hint`);
+      if (m.goHint) all7(m.goHint, `${mw} directions hint`);
+      if (c.type === 'story' && m.variant && !W.WALKBCN_STORIES?.[m.stop]?.variants?.[m.variant]) fail(`${mw}: no ${m.variant} story`);
+    });
+  }
+}
+
+// Multiplayer: the challenges a room can play (supabase/multiplayer.sql) must match the data.
+{
+  const sql = fs.readFileSync(root + 'supabase/multiplayer.sql', 'utf8');
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'time_attack', '\{([\d,]+)\}'(?:, null)?\)/g)) {
+    const ta = (W.WALKBCN_TIME_ATTACKS || []).find(x => x.id === m[1]);
+    if (!ta) { fail(`multiplayer: unknown time attack ${m[1]}`); continue; }
+    if (ta.missions.length !== +m[2]) fail(`time attack ${m[1]}: ${m[2]} missions in SQL, ${ta.missions.length} in data`);
+    if (m[4] !== ta.missions.map(x => x.points).join(',')) fail(`time attack ${m[1]}: points differ between SQL and data`);
+    ta.missions.forEach((x, i) => { if (!ids.has(x.stop)) fail(`time attack ${m[1]} target ${i + 1}: unknown stop`); for (const l of langs) { if (!x.q?.prompt?.[l] || !x.hint?.[l]) fail(`time attack ${m[1]} target ${i + 1}: text missing in ${l}`); (x.q.options || []).forEach(o => { if (!o[l]) fail(`time attack ${m[1]} target ${i + 1}: option missing in ${l}`); }); } if (!(x.q.answer >= 0 && x.q.answer < x.q.options.length)) fail(`time attack ${m[1]} target ${i + 1}: answer out of range`); });
+  }
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'bingo_battle', null(?:, null)?\)/g)) {
+    const b = (W.WALKBCN_BINGO_BATTLES || []).find(x => x.id === m[1]);
+    if (!b) { fail(`multiplayer: unknown bingo battle ${m[1]}`); continue; }
+    if (b.board.length !== +m[2] || b.board.length !== 9) fail(`bingo battle ${m[1]}: needs 9 squares in SQL and data`);
+    b.board.forEach((x, i) => { if (!x || !ids.has(x.stop)) fail(`bingo battle ${m[1]} square ${i + 1}: unknown square`); });
+  }
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'speed_race', null(?:, null)?\)/g)) {
+    const c = (W.WALKBCN_CHALLENGES || []).find(x => x.id === m[1]);
+    if (!c) { fail(`multiplayer: unknown challenge ${m[1]}`); continue; }
+    if (c.missions.length !== +m[2]) fail(`multiplayer ${m[1]}: ${m[2]} missions in SQL, ${c.missions.length} in data`);
+    if (m[3] !== c.missions.map(x => (x.clues || []).length || 1).join(',')) fail(`multiplayer ${m[1]}: clue counts differ from data`);
+  }
+  // every playable row must have been checked above (a pattern that stops matching would hide errors)
+  const rows = [...sql.matchAll(/\('([\w-]+)', \d+, '\{[\d,]+\}', '(\w+)'/g)];
+  const checked = (re) => [...sql.matchAll(re)].length;
+  if (rows.length !== checked(/'time_attack', '\{[\d,]+\}'(?:, null)?\)/g) + checked(/'(?:bingo_battle|speed_race)', null(?:, null)?\)/g) + checked(/'shared_mystery', null, '\{[\d,]+\}'\)/g)) fail('multiplayer: a challenge row in the SQL is not checked by check.mjs');
+  // Shared Mystery: SQL answers = data answers; places, clues, texts in every language, photos, sources
+  const SM = W.WALKBCN_SHARED_MYSTERIES || [], SMT = W.WALKBCN_SM_TEXT || {}, KINDS = ['history', 'visual', 'architecture', 'interpretation'];
+  const shape = o => Array.isArray(o) ? `[${o.map(shape).join(',')}]` : o && typeof o === 'object' ? `{${Object.keys(o).sort().map(k => k + ':' + shape(o[k])).join(',')}}` : typeof o === 'string' && o.trim() ? 's' : 'EMPTY';
+  for (const a of SM) {
+    const m = sql.match(new RegExp(`\\('${a.id}', (\\d+), '\\{([\\d,]+)\\}', 'shared_mystery', null, '\\{([\\d,]+)\\}'\\)`));
+    if (!m) { fail(`shared mystery ${a.id}: no row in supabase/multiplayer.sql`); continue; }
+    if (+m[1] !== a.missions.length + 1 || a.answers.length !== a.missions.length + 1) fail(`shared mystery ${a.id}: steps = places + final deduction`);
+    if (m[3] !== a.answers.join(',')) fail(`shared mystery ${a.id}: answers differ between SQL and data`);
+    a.missions.forEach((x, i) => { if (!ids.has(x.stop)) fail(`shared mystery ${a.id} place ${i + 1}: unknown stop`);
+      if (x.kinds.length !== 4 || x.kinds.some(k => !KINDS.includes(k))) fail(`shared mystery ${a.id} place ${i + 1}: needs 4 clues with known types`);
+      if (!x.sources.length || x.sources.some(u => !/^https:\/\//.test(u))) fail(`shared mystery ${a.id} place ${i + 1}: sources missing`); });
+    const ref = shape(SMT.en?.[a.id]);
+    for (const l of langs) { const tx = SMT[l]?.[a.id];
+      if (!tx || shape(tx) !== ref || ref.includes('EMPTY')) { fail(`shared mystery ${a.id}: texts missing or different in ${l}`); continue; }
+      if (tx.missions.length !== a.missions.length) fail(`shared mystery ${a.id} (${l}): ${tx.missions.length} places in the texts`);
+      tx.missions.forEach((x, i) => { if (x.clues.length !== 4) fail(`shared mystery ${a.id} (${l}) place ${i + 1}: needs 4 clues`); if (!(a.answers[i] < x.options.length)) fail(`shared mystery ${a.id} (${l}) place ${i + 1}: answer out of range`); });
+      if (!(a.answers[a.missions.length] < tx.final.options.length)) fail(`shared mystery ${a.id} (${l}): final answer out of range`); }
+    for (const f of [a.img, ...a.missions.map(x => STOPS.find(s => s.id === x.stop)?.img)]) if (!W.WALKBCN_PHOTOS?.[f]) fail(`shared mystery ${a.id}: photo without author/licence: ${f}`);
+  }
+  // Recordings of the final stories (data/shared-mystery-audio.js): file present, text unchanged, source and licence noted
+  const smHash = s => { let h = 0x811c9dc5; for (const ch of s) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
+  for (const [id, byLang] of Object.entries(W.WALKBCN_SM_AUDIO || {})) for (const [l, r] of Object.entries(byLang)) {
+    const tx = SMT[l]?.[id];
+    if (!tx) { fail(`shared mystery audio ${id}.${l}: unknown adventure or language`); continue; }
+    if (!r.file || !fs.existsSync(root + r.file)) fail(`shared mystery audio ${id}.${l}: file ${r.file} not found`);
+    if (!r.source || !r.licence) fail(`shared mystery audio ${id}.${l}: note its source and licence`);
+    if (r.textHash !== smHash(tx.reveal.story)) console.log(`! shared mystery audio ${id}.${l}: the story text changed since it was recorded (the page uses the device voice until it is recorded again)`);
+  }
+  const cfg = fs.readFileSync(root + 'data/multiplayer-config.js', 'utf8');
+  if (/service_role/i.test(cfg.replace(/\/\/.*$/gm, ''))) fail('multiplayer config: never put the service_role key in the page');
 }
 
 // Practical cards and photo credits
@@ -67,6 +177,15 @@ for (const [id, c] of Object.entries(CARDS)) {
   for (const f of ['look', 'listen', 'access', 'cap2']) if (c[f]) for (const l of langs) if (!c[f][l]) fail(`card ${id}: ${f} missing in ${l}`);
   if (c.img2 && !c.cap2) fail(`card ${id}: second photo needs a caption`);
   for (const src of c.sources || []) if (!/^https:\/\//.test(src.url) || !iso.test(src.checked || '')) fail(`card ${id}: source needs https url and checked date`);
+  // Optional per-claim link (audit F6): which sentence of the story this source backs.
+  for (const src of c.sources || []) if (src.claim != null && (typeof src.claim !== 'string' || src.claim.length < 10)) fail(`card ${id}: "claim" must be the sentence the source backs`);
+}
+// Editorial coverage (audit F6): how many stops have dated sources. Reported, not failed:
+// adding sources means checking them, which is editorial work, not something to invent.
+{
+  const withSources = STOPS.filter(s => (CARDS[s.id]?.sources || []).length).length;
+  const claims = Object.values(CARDS).flatMap(c => c.sources || []).filter(x => x.claim).length;
+  console.log(`! sources: ${withSources}/${STOPS.length} stops have dated sources on their card; ${claims} claim(s) linked to a source`);
 }
 for (const f of [...STOPS.map(s => s.img), ...Object.values(CARDS).map(c => c.img2).filter(Boolean)]) {
   if (!PHOTOS[f]?.licence || !PHOTOS[f]?.author) fail(`photo "${f}": author and licence not recorded (node scripts/import-manual.mjs --photos)`);
@@ -74,13 +193,16 @@ for (const f of [...STOPS.map(s => s.img), ...Object.values(CARDS).map(c => c.im
 
 // Every stop speaks every language: story (3 lengths) and tip
 const I18N = W.WALKBCN_I18N || {};
+const noAudio = {};
 for (const s of STOPS) for (const l of langs) {
   const d = I18N[l]?.stops?.[s.id];
   if (l !== 'en' && !d?.tip) fail(`stop ${s.id}: tip missing in ${l}`);
   for (const len of ['short', 'normal', 'long']) if (l !== 'en' || len !== 'normal') if (!d?.stories?.base?.[len]) fail(`stop ${s.id}: ${len} story missing in ${l}`);
-  if (l !== 'en' && !d?.audio?.base?.file) fail(`stop ${s.id}: no recorded audio in ${l}`);
+  if (l !== 'en' && !d?.audio?.base?.file) (noAudio[l] ||= []).push(s.id);
 }
-for (const s of STOPS) if (!W.WALKBCN_STORIES?.[s.id]?.base?.audio) fail(`stop ${s.id}: no recorded English audio`);
+// A missing recording is not an error (the phone's voice reads the story), but it is reported:
+// e.g. the Spanish texts rewritten on 16–17 Nov 2026 play with the device voice until re-recorded.
+for (const s of STOPS) if (!W.WALKBCN_STORIES?.[s.id]?.base?.audio) (noAudio.en ||= []).push(s.id);
 
 // Activities
 const ACT = W.WALKBCN_ACTIVITIES;
@@ -109,6 +231,26 @@ for (const [l, d] of Object.entries(W.WALKBCN_I18N || {})) {
   for (const [id, s] of Object.entries(d.stops || {})) for (const a of Object.values(s.audio || {})) { audioRefs++; if (!exists(a.file)) fail(`audio missing: ${a.file} (${l}/${id})`); }
 }
 
+// Recordings that no longer match their text (audit F5/F6, 22 Nov 2026): each recording stores
+// a hash of what was read out (the stop name + the normal story). A different hash means the
+// text was changed after recording, so the listener hears something the screen doesn't say.
+// Reported, not failed: re-record with generate.mjs / translate.mjs --audio --only=<id>.
+{
+  const h = t => crypto.createHash('sha1').update(t).digest('hex').slice(0, 10);
+  const stale = [];
+  for (const s of STOPS) {
+    const g = W.WALKBCN_STORIES?.[s.id] || {};
+    if (g.base?.audioHash && g.base.audioHash !== h(`${s.name}. ${s.story}`)) stale.push(`en/${s.id}`);
+    for (const [k, v] of Object.entries(g.variants || {})) if (v.audioHash && v.audioHash !== h(`${s.name}. ${v.story}`)) stale.push(`en/${s.id}--${k}`);
+    for (const [l, d] of Object.entries(W.WALKBCN_I18N || {})) {
+      if (l === 'en') continue;
+      const e = d.stops?.[s.id];
+      for (const [k, a] of Object.entries(e?.audio || {})) if (a.file.endsWith('.m4a') && e.stories?.[k] && a.hash !== h(`${s.name}. ${e.stories[k].normal}`)) stale.push(`${l}/${s.id}--${k}`);
+    }
+  }
+  if (stale.length) console.log(`! ${stale.length} recordings don't match their current text: ${stale.slice(0, 12).join(', ')}${stale.length > 12 ? ', …' : ''}`);
+}
+
 // Themes in index.html
 const themeBlock = html.match(/const THEMES = \{([\s\S]*?)\n\};/)?.[1] || '';
 for (const m of themeBlock.matchAll(/'([a-z0-9-]+)'/g)) {
@@ -117,6 +259,11 @@ for (const m of themeBlock.matchAll(/'([a-z0-9-]+)'/g)) {
   if (!ids.has(v)) fail(`theme uses unknown stop "${v}"`);
 }
 
+for (const [l, ids] of Object.entries(noAudio)) console.log(`! ${ids.length} stops have no recording in ${l} (device voice instead)`);
 console.log(`${STOPS.length} stops · ${Object.keys(UI.en).length} interface texts × ${langs.length} languages · ${audioRefs} audio files`);
+// Data files must be loaded at an address that matches their content (audit F9).
+const { stampVersions } = await import('./stamp-versions.mjs');
+const stale = stampVersions({ check: true });
+if (stale.length) fail(`versions out of date for ${stale.join(', ')}: run node scripts/stamp-versions.mjs`);
 if (errors.length) { console.error(errors.map(e => '✗ ' + e).join('\n')); process.exit(1); }
 console.log('✓ all checks passed');

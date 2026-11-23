@@ -325,4 +325,7 @@ stopIfFatal();
 if (doAudio) for (const { lang, data } of targets) await recordAudio(lang, data);
 const missing = targets.flatMap(({ lang, data }) => STOPS.filter((s) => !data.stops[s.id]).map((s) => `${lang}/${s.id}`));
 if (missing.length) console.log(`\nStill missing (run the same command again): ${missing.join(", ")}`);
+// New content, new addresses: see scripts/stamp-versions.mjs (audit F9).
+const { stampVersions } = await import("./stamp-versions.mjs");
+stampVersions();
 console.log("\nDone. Reload the web page to see the new languages.");

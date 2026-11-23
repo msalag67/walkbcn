@@ -16,7 +16,7 @@ La línea roja de WalkBCN es la **exactitud**. `content/review.md` tiene 487 dat
 | 8 | Mercat de Sant Antoni | Muralla del siglo XVII visible en el sótano | Medio | Fecha de la muralla (¿XVII o XIV?) |
 | 9 | Plaça del Rei | Colón recibido por los Reyes Católicos en 1493 | Bajo: ya va como leyenda | Mantener "la leyenda dice" |
 | 10 | Plaça Reial | Farolas, de las primeras obras públicas de Gaudí | Bajo | Fecha (1878–1879) |
-| 11 | Turó de la Rovira | Barracas "hasta finales de los años ochenta" | **Conocido: dato incorrecto** | Las fuentes dicen 1990. Cambiar texto y audio en 7 idiomas |
+| 11 | Turó de la Rovira | Barracas "hasta 1990" | **Corregido el 22 nov 2026** | Antes decía "finales de los años ochenta". Guía del Ayuntamiento (barri dels Canons "fins l'any 1990"), comprobada el 22 nov. Texto en 7 idiomas × 3 longitudes y audio regrabado (voces gratuitas de macOS) |
 | 12 | El Molino | "Abierto desde principios del siglo XX" | **Conocido: lo detectó el juez** | Estuvo cerrado de 1997 a 2010: añadirlo |
 | 13 | Nou Sardenya | El CE Europa jugó la primera liga en 1929 | Bajo | Temporada 1928–29 |
 | 14 | Antic Hospital | Gaudí traído aquí tras el tranvía de 1926 | Bajo | Fecha y lugar de la muerte |

@@ -290,7 +290,7 @@
       }
     },
     "mercat-de-santa-caterina": {
-      "tip": "Un'ottima alternativa locale all'affollatissima Boqueria: stessa qualità, molte meno code.",
+      "tip": "Vieni al mattino, quando i banchi sono più animati, e cerca all'interno le fondamenta scavate dell'antico convento.",
       "stories": {
         "base": {
           "short": "Alza lo sguardo verso quel tetto ondulato e pieno di colori. È fatto di oltre 300.000 piastrelle di ceramica, nei colori della frutta e della verdura che si vendono qui sotto. Questo è il mercato coperto più antico della città, costruito dove un tempo sorgeva un convento medievale. Prenditi un momento per seguire le onde da un capo all'altro.",
@@ -1483,9 +1483,9 @@
       "tip": "Un sito storico sopra case abitate: niente feste né musica, porta via i rifiuti e parla piano durante la salita.",
       "stories": {
         "base": {
-          "short": "Da questa collina si vede quasi tutta la città, dal mare fino alle montagne. Proprio per questa vista, durante la guerra civile spagnola qui c'erano dei cannoni antiaerei. Più tardi, famiglie che non avevano altro posto dove vivere costruirono baracche tra le rovine e ci rimasero fino alla fine degli anni Ottanta. Queste piattaforme di cemento sono ciò che resta.",
-          "normal": "Da questa collina si vede quasi tutta la città, dal mare fino alle montagne. Ed è proprio per questo che durante la guerra civile spagnola qui furono piazzati dei cannoni antiaerei, per difendere Barcellona dai bombardamenti. Dopo la guerra, famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, e abitarono qui fino alla fine degli anni Ottanta. Le piattaforme di cemento sono ciò che resta.",
-          "long": "Vi trovate in cima al Turó de la Rovira, e da qui si vede quasi tutta la città, dal mare fino alle montagne. Prendetevi un momento per seguirla con lo sguardo. Cercate il Mediterraneo che brilla lungo l'orizzonte. Poi giratevi verso le colline boscose di Collserola, con la chiesa del Tibidabo in cima. Da un lato, Montjuïc si allunga basso accanto al porto, e più vicino potreste riconoscere le guglie della Sagrada Família che spuntano sopra i tetti. È proprio per questa vista così ampia che durante la guerra civile spagnola qui furono piazzati dei cannoni antiaerei. Barcellona venne bombardata dal cielo più e più volte, e da questa collina gli artiglieri potevano sorvegliare il cielo e difendere la città sottostante. Guardate le piattaforme di cemento intorno a voi. Alcune sostenevano i cannoni, e se ne riconosce ancora la forma. Ma la storia non si è fermata con la fine della guerra. Negli anni difficili che seguirono, famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, usando le vecchie strutture militari come pareti e pavimenti. Quassù la gente cucinava, cresceva i figli e formava una comunità, e visse su questa collina fino alla fine degli anni Ottanta. Oggi le piattaforme di cemento sono ciò che resta, e il sito è curato come parte del museo di storia della città. Mentre vi sedete a godervi il panorama, ricordate che i pendii qui sotto sono ancora un quartiere vivo. El Carmel è pieno di case dove abita la gente, quindi scendendo tenete la voce bassa."
+          "short": "Da questa collina si vede quasi tutta la città, dal mare fino alle montagne. Proprio per questa vista, durante la guerra civile spagnola qui c'erano dei cannoni antiaerei. Più tardi, famiglie che non avevano altro posto dove vivere costruirono baracche tra le rovine e ci rimasero fino al 1990. Queste piattaforme di cemento sono ciò che resta.",
+          "normal": "Da questa collina si vede quasi tutta la città, dal mare fino alle montagne. Ed è proprio per questo che durante la guerra civile spagnola qui furono piazzati dei cannoni antiaerei, per difendere Barcellona dai bombardamenti. Dopo la guerra, famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, e abitarono qui fino al 1990. Le piattaforme di cemento sono ciò che resta.",
+          "long": "Vi trovate in cima al Turó de la Rovira, e da qui si vede quasi tutta la città, dal mare fino alle montagne. Prendetevi un momento per seguirla con lo sguardo. Cercate il Mediterraneo che brilla lungo l'orizzonte. Poi giratevi verso le colline boscose di Collserola, con la chiesa del Tibidabo in cima. Da un lato, Montjuïc si allunga basso accanto al porto, e più vicino potreste riconoscere le guglie della Sagrada Família che spuntano sopra i tetti. È proprio per questa vista così ampia che durante la guerra civile spagnola qui furono piazzati dei cannoni antiaerei. Barcellona venne bombardata dal cielo più e più volte, e da questa collina gli artiglieri potevano sorvegliare il cielo e difendere la città sottostante. Guardate le piattaforme di cemento intorno a voi. Alcune sostenevano i cannoni, e se ne riconosce ancora la forma. Ma la storia non si è fermata con la fine della guerra. Negli anni difficili che seguirono, famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, usando le vecchie strutture militari come pareti e pavimenti. Quassù la gente cucinava, cresceva i figli e formava una comunità, e visse su questa collina fino al 1990. Oggi le piattaforme di cemento sono ciò che resta, e il sito è curato come parte del museo di storia della città. Mentre vi sedete a godervi il panorama, ricordate che i pendii qui sotto sono ancora un quartiere vivo. El Carmel è pieno di case dove abita la gente, quindi scendendo tenete la voce bassa."
         },
         "outdoors": {
           "short": "Girate lentamente su voi stessi, facendo un giro completo. Quasi tutta la città si stende sotto di voi, dal mare scintillante alle montagne verdi. Cercate tra i tetti le guglie della Sagrada Família. Poi sedetevi sulle piattaforme di cemento, sentite la brezza e godetevi la vista in silenzio, perché su questi pendii vivono famiglie vere.",
@@ -1493,24 +1493,24 @@
           "long": "Girate lentamente su voi stessi, facendo un giro completo, e lasciate che la città vi venga incontro. Da questa collina, il Turó de la Rovira, quasi tutta Barcellona si stende sotto di voi, dalla linea scintillante del mare fino alle montagne verdi alle spalle. Cominciate dall'acqua. Seguite il Mediterraneo lungo l'orizzonte e noterete le navi e le gru del porto. Poi riportate lo sguardo indietro, sopra i tetti. Da qualche parte, in quel mare di edifici, potete individuare le guglie della Sagrada Família, che continua a crescere dopo più di un secolo. Da un lato, la collina di Montjuïc si alza accanto al porto. Continuate a girare, e il crinale boscoso di Collserola riempie l'orizzonte, con la chiesa del Tibidabo appollaiata sul punto più alto. Adesso trovate un posto sulle piattaforme di cemento e sedetevi un po'. Queste lastre sono i resti di postazioni antiaeree della guerra civile spagnola, ed è proprio per questo che si trovano in un punto con una vista così ampia. Osservate come la luce si muove sulle strade. Al passaggio delle nuvole, interi quartieri si oscurano e si illuminano, e da quassù la griglia dell'Eixample, con i suoi isolati regolari, si legge più facilmente. Fate caso anche alla brezza. Sembra lontana anni luce dal centro affollato, anche se il centro è proprio lì sotto di voi. Con il passare della giornata sale sempre più gente a condividere il panorama, soprattutto verso il tramonto. E ricordate: le case su questi pendii sono abitate da famiglie vere, quindi godetevelo in silenzio, e portate con voi un po' di questa quiete quando ve ne andate."
         },
         "history": {
-          "short": "Guardate il cemento sotto i vostri piedi. Durante la guerra civile spagnola qui c'erano dei cannoni antiaerei, che difendevano Barcellona dai bombardamenti. In seguito, famiglie senza nessun altro posto dove vivere costruirono baracche tra le rovine e ci rimasero fino alla fine degli anni Ottanta. Immaginate qui cucine e bambini che giocano. Più in basso, El Carmel è ancora pieno di case.",
-          "normal": "Guardate il cemento sotto i vostri piedi. Durante la guerra civile spagnola, su questa collina c'erano dei cannoni antiaerei. Il posto fu scelto perché da qui si vede quasi tutta la città, dal mare fino alle montagne: un punto di osservazione ideale per difendere Barcellona dai bombardamenti. Ma la storia non finì con la guerra. Famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, e la gente abitò proprio qui fino alla fine degli anni Ottanta. Immaginate cucine e bambini che giocano proprio dove siete adesso. Oggi El Carmel, qui sotto, è ancora un quartiere vivo, pieno di case dove abita la gente.",
-          "long": "Guardate il cemento sotto i vostri piedi. Durante la guerra civile spagnola, su questa collina, il Turó de la Rovira, c'erano dei cannoni antiaerei. Il posto fu scelto perché da qui si vede quasi tutta la città, dal mare fino alle montagne: un punto di osservazione ideale per difendere Barcellona dai bombardamenti. Quei bombardamenti furono reali e terrificanti. La città fu pesantemente bombardata dal cielo, in gran parte da aerei italiani che arrivavano da Mallorca, attraverso il mare. Giratevi verso l'acqua e immaginate di scrutare quell'orizzonte, in attesa del rombo dei motori. Ora guardate da vicino le piattaforme. Alcune sono le basi su cui erano montati i cannoni, e lì accanto si trovano i resti degli ambienti usati dai soldati che prestavano servizio qui. Ma la storia non finì con la guerra. Negli anni difficili che seguirono, a Barcellona mancavano le case. Famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, usando il cemento militare come fondamenta e pareti. Col tempo nacque un vero e proprio insediamento, e la gente abitò proprio qui fino alla fine degli anni Ottanta. Immaginate cucine, panni stesi ad asciugare e bambini che giocano proprio dove siete adesso. Se guardate con attenzione, potreste notare anche le tracce di quelle case, come pezzi di vecchie piastrelle rimasti nel terreno. Oggi il sito è curato come parte del museo di storia della città, ed El Carmel, qui sotto, è ancora un quartiere vivo, pieno di case dove abita la gente. Tenetelo a mente mentre riscendete per le sue strade, e parlate a bassa voce."
+          "short": "Guardate il cemento sotto i vostri piedi. Durante la guerra civile spagnola qui c'erano dei cannoni antiaerei, che difendevano Barcellona dai bombardamenti. In seguito, famiglie senza nessun altro posto dove vivere costruirono baracche tra le rovine e ci rimasero fino al 1990. Immaginate qui cucine e bambini che giocano. Più in basso, El Carmel è ancora pieno di case.",
+          "normal": "Guardate il cemento sotto i vostri piedi. Durante la guerra civile spagnola, su questa collina c'erano dei cannoni antiaerei. Il posto fu scelto perché da qui si vede quasi tutta la città, dal mare fino alle montagne: un punto di osservazione ideale per difendere Barcellona dai bombardamenti. Ma la storia non finì con la guerra. Famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, e la gente abitò proprio qui fino al 1990. Immaginate cucine e bambini che giocano proprio dove siete adesso. Oggi El Carmel, qui sotto, è ancora un quartiere vivo, pieno di case dove abita la gente.",
+          "long": "Guardate il cemento sotto i vostri piedi. Durante la guerra civile spagnola, su questa collina, il Turó de la Rovira, c'erano dei cannoni antiaerei. Il posto fu scelto perché da qui si vede quasi tutta la città, dal mare fino alle montagne: un punto di osservazione ideale per difendere Barcellona dai bombardamenti. Quei bombardamenti furono reali e terrificanti. La città fu pesantemente bombardata dal cielo, in gran parte da aerei italiani che arrivavano da Mallorca, attraverso il mare. Giratevi verso l'acqua e immaginate di scrutare quell'orizzonte, in attesa del rombo dei motori. Ora guardate da vicino le piattaforme. Alcune sono le basi su cui erano montati i cannoni, e lì accanto si trovano i resti degli ambienti usati dai soldati che prestavano servizio qui. Ma la storia non finì con la guerra. Negli anni difficili che seguirono, a Barcellona mancavano le case. Famiglie che non avevano nessun altro posto dove vivere costruirono baracche tra le rovine, usando il cemento militare come fondamenta e pareti. Col tempo nacque un vero e proprio insediamento, e la gente abitò proprio qui fino al 1990. Immaginate cucine, panni stesi ad asciugare e bambini che giocano proprio dove siete adesso. Se guardate con attenzione, potreste notare anche le tracce di quelle case, come pezzi di vecchie piastrelle rimasti nel terreno. Oggi il sito è curato come parte del museo di storia della città, ed El Carmel, qui sotto, è ancora un quartiere vivo, pieno di case dove abita la gente. Tenetelo a mente mentre riscendete per le sue strade, e parlate a bassa voce."
         }
       },
       "srcHash": "7761a6c045",
       "audio": {
         "base": {
           "file": "audio/it/bunkers-carmel.m4a",
-          "hash": "0e4e6e0212"
+          "hash": "ee9cb2ab16"
         },
         "outdoors": {
           "file": "audio/it/bunkers-carmel--outdoors.m4a",
-          "hash": "a0120e7ac2"
+          "hash": "df2a73a4b4"
         },
         "history": {
           "file": "audio/it/bunkers-carmel--history.m4a",
-          "hash": "62f71e152e"
+          "hash": "013dd679d3"
         }
       }
     },
@@ -2368,7 +2368,7 @@
           }
         },
         "crowd": {
-          "label": "Chi ci va?",
+          "label": "Chi ci va? (la nostra impressione)",
           "options": {
             "locals": "Soprattutto gente del posto",
             "mixed": "Gente del posto e visitatori"
@@ -2482,7 +2482,7 @@
         }
       },
       "places": {
-        "Bunkers del Carmel": "Una vista a 360° da una vecchia batteria antiaerea della Guerra Civile. Molto frequentato al tramonto; gli abitanti hanno chiesto ai visitatori di non fare rumore.",
+        "Bunkers del Carmel": "Turó de la Rovira: vista a 360° da una batteria antiaerea del 1938, della Guerra Civile, oggi sito gratuito all'aperto del Museo di Storia di Barcellona (MUHBA). Salita ripida, non accessibile a chi ha mobilità ridotta. Subito sotto vive gente: niente musica e voce bassa, soprattutto la sera.",
         "Mirador del Palau Nacional": "La terrazza davanti al MNAC guarda dritta lungo il viale fino a Plaça d'Espanya e su tutta la città.",
         "Castell de Montjuïc": "Una fortezza del Seicento in cima al Montjuïc, con vista sul porto da un lato e sulla città dall'altro.",
         "Arenas de Barcelona": "Un'ex arena per le corride trasformata in centro commerciale, con una passerella circolare sul tetto che si affaccia su Plaça d'Espanya e sul Montjuïc.",
@@ -2648,5 +2648,5 @@
       }
     }
   },
-  "activitiesHash": "77cf047399"
+  "activitiesHash": "bbe4afb1ae"
 }
