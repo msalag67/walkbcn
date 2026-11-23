@@ -15,7 +15,7 @@ import crypto from 'node:crypto';
 const root = new URL('..', import.meta.url).pathname;
 const ctx = { window: {} };
 vm.createContext(ctx);
-for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'data/discoveries.js', 'data/challenges.js', 'content/stories.js']) {
+for (const f of ['data/ui.js', 'data/stops.js', 'data/cards.js', 'data/activities.js', 'data/tips.js', 'data/discoveries.js', 'data/challenges.js', 'data/shared-mysteries.js', 'data/shared-mystery-audio.js', 'content/stories.js']) {
   vm.runInContext(fs.readFileSync(root + f, 'utf8'), ctx, { filename: f });
 }
 for (const l of ['ca', 'es', 'en', 'fr', 'de', 'it', 'zh']) {
@@ -112,24 +112,56 @@ for (const e of W.WALKBCN_DISCOVERIES || []) {
 // Multiplayer: the challenges a room can play (supabase/multiplayer.sql) must match the data.
 {
   const sql = fs.readFileSync(root + 'supabase/multiplayer.sql', 'utf8');
-  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'time_attack', '\{([\d,]+)\}'\)/g)) {
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'time_attack', '\{([\d,]+)\}'(?:, null)?\)/g)) {
     const ta = (W.WALKBCN_TIME_ATTACKS || []).find(x => x.id === m[1]);
     if (!ta) { fail(`multiplayer: unknown time attack ${m[1]}`); continue; }
     if (ta.missions.length !== +m[2]) fail(`time attack ${m[1]}: ${m[2]} missions in SQL, ${ta.missions.length} in data`);
     if (m[4] !== ta.missions.map(x => x.points).join(',')) fail(`time attack ${m[1]}: points differ between SQL and data`);
     ta.missions.forEach((x, i) => { if (!ids.has(x.stop)) fail(`time attack ${m[1]} target ${i + 1}: unknown stop`); for (const l of langs) { if (!x.q?.prompt?.[l] || !x.hint?.[l]) fail(`time attack ${m[1]} target ${i + 1}: text missing in ${l}`); (x.q.options || []).forEach(o => { if (!o[l]) fail(`time attack ${m[1]} target ${i + 1}: option missing in ${l}`); }); } if (!(x.q.answer >= 0 && x.q.answer < x.q.options.length)) fail(`time attack ${m[1]} target ${i + 1}: answer out of range`); });
   }
-  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'bingo_battle', null\)/g)) {
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'bingo_battle', null(?:, null)?\)/g)) {
     const b = (W.WALKBCN_BINGO_BATTLES || []).find(x => x.id === m[1]);
     if (!b) { fail(`multiplayer: unknown bingo battle ${m[1]}`); continue; }
     if (b.board.length !== +m[2] || b.board.length !== 9) fail(`bingo battle ${m[1]}: needs 9 squares in SQL and data`);
     b.board.forEach((x, i) => { if (!x || !ids.has(x.stop)) fail(`bingo battle ${m[1]} square ${i + 1}: unknown square`); });
   }
-  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'speed_race', null\)/g)) {
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'speed_race', null(?:, null)?\)/g)) {
     const c = (W.WALKBCN_CHALLENGES || []).find(x => x.id === m[1]);
     if (!c) { fail(`multiplayer: unknown challenge ${m[1]}`); continue; }
     if (c.missions.length !== +m[2]) fail(`multiplayer ${m[1]}: ${m[2]} missions in SQL, ${c.missions.length} in data`);
     if (m[3] !== c.missions.map(x => (x.clues || []).length || 1).join(',')) fail(`multiplayer ${m[1]}: clue counts differ from data`);
+  }
+  // every playable row must have been checked above (a pattern that stops matching would hide errors)
+  const rows = [...sql.matchAll(/\('([\w-]+)', \d+, '\{[\d,]+\}', '(\w+)'/g)];
+  const checked = (re) => [...sql.matchAll(re)].length;
+  if (rows.length !== checked(/'time_attack', '\{[\d,]+\}'(?:, null)?\)/g) + checked(/'(?:bingo_battle|speed_race)', null(?:, null)?\)/g) + checked(/'shared_mystery', null, '\{[\d,]+\}'\)/g)) fail('multiplayer: a challenge row in the SQL is not checked by check.mjs');
+  // Shared Mystery: SQL answers = data answers; places, clues, texts in every language, photos, sources
+  const SM = W.WALKBCN_SHARED_MYSTERIES || [], SMT = W.WALKBCN_SM_TEXT || {}, KINDS = ['history', 'visual', 'architecture', 'interpretation'];
+  const shape = o => Array.isArray(o) ? `[${o.map(shape).join(',')}]` : o && typeof o === 'object' ? `{${Object.keys(o).sort().map(k => k + ':' + shape(o[k])).join(',')}}` : typeof o === 'string' && o.trim() ? 's' : 'EMPTY';
+  for (const a of SM) {
+    const m = sql.match(new RegExp(`\\('${a.id}', (\\d+), '\\{([\\d,]+)\\}', 'shared_mystery', null, '\\{([\\d,]+)\\}'\\)`));
+    if (!m) { fail(`shared mystery ${a.id}: no row in supabase/multiplayer.sql`); continue; }
+    if (+m[1] !== a.missions.length + 1 || a.answers.length !== a.missions.length + 1) fail(`shared mystery ${a.id}: steps = places + final deduction`);
+    if (m[3] !== a.answers.join(',')) fail(`shared mystery ${a.id}: answers differ between SQL and data`);
+    a.missions.forEach((x, i) => { if (!ids.has(x.stop)) fail(`shared mystery ${a.id} place ${i + 1}: unknown stop`);
+      if (x.kinds.length !== 4 || x.kinds.some(k => !KINDS.includes(k))) fail(`shared mystery ${a.id} place ${i + 1}: needs 4 clues with known types`);
+      if (!x.sources.length || x.sources.some(u => !/^https:\/\//.test(u))) fail(`shared mystery ${a.id} place ${i + 1}: sources missing`); });
+    const ref = shape(SMT.en?.[a.id]);
+    for (const l of langs) { const tx = SMT[l]?.[a.id];
+      if (!tx || shape(tx) !== ref || ref.includes('EMPTY')) { fail(`shared mystery ${a.id}: texts missing or different in ${l}`); continue; }
+      if (tx.missions.length !== a.missions.length) fail(`shared mystery ${a.id} (${l}): ${tx.missions.length} places in the texts`);
+      tx.missions.forEach((x, i) => { if (x.clues.length !== 4) fail(`shared mystery ${a.id} (${l}) place ${i + 1}: needs 4 clues`); if (!(a.answers[i] < x.options.length)) fail(`shared mystery ${a.id} (${l}) place ${i + 1}: answer out of range`); });
+      if (!(a.answers[a.missions.length] < tx.final.options.length)) fail(`shared mystery ${a.id} (${l}): final answer out of range`); }
+    for (const f of [a.img, ...a.missions.map(x => STOPS.find(s => s.id === x.stop)?.img)]) if (!W.WALKBCN_PHOTOS?.[f]) fail(`shared mystery ${a.id}: photo without author/licence: ${f}`);
+  }
+  // Recordings of the final stories (data/shared-mystery-audio.js): file present, text unchanged, source and licence noted
+  const smHash = s => { let h = 0x811c9dc5; for (const ch of s) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
+  for (const [id, byLang] of Object.entries(W.WALKBCN_SM_AUDIO || {})) for (const [l, r] of Object.entries(byLang)) {
+    const tx = SMT[l]?.[id];
+    if (!tx) { fail(`shared mystery audio ${id}.${l}: unknown adventure or language`); continue; }
+    if (!r.file || !fs.existsSync(root + r.file)) fail(`shared mystery audio ${id}.${l}: file ${r.file} not found`);
+    if (!r.source || !r.licence) fail(`shared mystery audio ${id}.${l}: note its source and licence`);
+    if (r.textHash !== smHash(tx.reveal.story)) console.log(`! shared mystery audio ${id}.${l}: the story text changed since it was recorded (the page uses the device voice until it is recorded again)`);
   }
   const cfg = fs.readFileSync(root + 'data/multiplayer-config.js', 'utf8');
   if (/service_role/i.test(cfg.replace(/\/\/.*$/gm, ''))) fail('multiplayer config: never put the service_role key in the page');

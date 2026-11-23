@@ -23,7 +23,9 @@ insert into public.mp_modes (mode, config) values
   ('time_attack', '{"min_players": 2, "max_players": 5, "hint_cost": 50, "min_points": 50, "durations": [30, 60, 90]}'),
   -- Bingo Battle: the first player with a full line (row, column or diagonal of the 3 × 3 board)
   -- wins; the game also ends when time runs out, then without a winner.
-  ('bingo_battle', '{"min_players": 2, "max_players": 5, "durations": [60], "win": "first_line"}')
+  ('bingo_battle', '{"min_players": 2, "max_players": 5, "durations": [60], "win": "first_line"}'),
+  -- Shared Mystery (cooperative): the whole room plays one shared adventure; no clock, no ranking.
+  ('shared_mystery', '{"min_players": 2, "max_players": 5, "coop": true}')
 on conflict (mode) do update set config = excluded.config;
 
 -- Challenges that can be played in a room: how many missions and extra clues each has
@@ -35,11 +37,17 @@ create table if not exists public.mp_challenges (
 );
 alter table public.mp_challenges add column if not exists mode text not null default 'speed_race';
 alter table public.mp_challenges add column if not exists points int[];   -- Time Attack: points per mission
-insert into public.mp_challenges (id, missions, clues, mode, points) values
-  ('modernisme-hunt', 4, '{2,2,2,2}', 'speed_race', null),
-  ('modernist-hunter', 7, '{2,2,2,2,2,2,2}', 'time_attack', '{150,100,100,150,150,200,150}'),
-  ('rambla-bingo-battle', 9, '{1,1,1,1,1,1,1,1,1}', 'bingo_battle', null)
-on conflict (id) do update set missions = excluded.missions, clues = excluded.clues, mode = excluded.mode, points = excluded.points;
+alter table public.mp_challenges add column if not exists answers int[];  -- Shared Mystery: right option per step (data/shared-mysteries.js)
+insert into public.mp_challenges (id, missions, clues, mode, points, answers) values
+  ('modernisme-hunt', 4, '{2,2,2,2}', 'speed_race', null, null),
+  ('modernist-hunter', 7, '{2,2,2,2,2,2,2}', 'time_attack', '{150,100,100,150,150,200,150}', null),
+  ('rambla-bingo-battle', 9, '{1,1,1,1,1,1,1,1,1}', 'bingo_battle', null, null),
+  -- Shared Mystery: 3 places + the final deduction = 4 steps; 4 clues per place
+  ('sm-barcino-layers', 4, '{4,4,4,0}', 'shared_mystery', null, '{1,0,0,1}'),
+  ('sm-modernisme-secret', 4, '{4,4,4,0}', 'shared_mystery', null, '{1,0,2,1}'),
+  ('sm-poblenou-factories', 4, '{4,4,4,0}', 'shared_mystery', null, '{1,0,2,1}'),
+  ('sm-port-sea', 4, '{4,4,4,0}', 'shared_mystery', null, '{2,1,1,1}')
+on conflict (id) do update set missions = excluded.missions, clues = excluded.clues, mode = excluded.mode, points = excluded.points, answers = excluded.answers;
 
 -- ---------- tables ----------
 create table if not exists public.mp_rooms (
@@ -58,6 +66,9 @@ create table if not exists public.mp_rooms (
 alter table public.mp_rooms add column if not exists ends_at timestamptz;   -- Time Attack / Bingo Battle: scoring closes then
 alter table public.mp_rooms add column if not exists winner_id uuid;         -- Bingo Battle
 alter table public.mp_rooms add column if not exists winner_line int[];      -- Bingo Battle: the winning cells
+-- Shared Mystery: one shared state per room, {step, arrived: {"0": "gps"|"manual"}, shared: {"0-1": "Anna"}, solved}.
+-- No positions are stored: only that the team arrived, and how it was checked.
+alter table public.mp_rooms add column if not exists coop jsonb;
 create table if not exists public.mp_players (
   room_id uuid not null references public.mp_rooms(id) on delete cascade,
   user_id uuid not null,
@@ -194,7 +205,8 @@ begin
   if n < (r.config->>'min_players')::int then raise exception 'not_enough_players'; end if;
   if notready > 0 then raise exception 'not_all_ready'; end if;
   update mp_rooms set status = 'running', started_at = now(),
-    ends_at = case when r.config ? 'duration_min' then now() + make_interval(mins => (r.config->>'duration_min')::int) end where id = r.id;
+    ends_at = case when r.config ? 'duration_min' then now() + make_interval(mins => (r.config->>'duration_min')::int) end,
+    coop = case when r.mode = 'shared_mystery' then '{"step": 0, "arrived": {}, "shared": {}, "solved": false}'::jsonb end where id = r.id;
   update mp_players set status = 'playing' where room_id = r.id and status = 'waiting';
 end $$;
 
@@ -236,7 +248,7 @@ begin
     'host', r.host_id = auth.uid(), 'started_at', r.started_at, 'finished_at', r.finished_at, 'ends_at', r.ends_at, 'server_now', now(),
     'my_done', coalesce((select jsonb_agg(mission order by mission) from mp_events where room_id = r.id and user_id = auth.uid() and kind = 'complete'), '[]'::jsonb),
     'my_hints', coalesce((select jsonb_agg(distinct mission) from mp_events where room_id = r.id and user_id = auth.uid() and kind = 'hint'), '[]'::jsonb),
-    'winner', (select name from mp_players where room_id = r.id and user_id = r.winner_id), 'winner_me', r.winner_id = auth.uid(), 'winner_line', to_jsonb(r.winner_line),
+    'winner', (select name from mp_players where room_id = r.id and user_id = r.winner_id), 'winner_me', r.winner_id = auth.uid(), 'winner_line', to_jsonb(r.winner_line), 'coop', r.coop,
     'players', coalesce((select jsonb_agg(jsonb_build_object(
       'me', p.user_id = auth.uid(), 'name', p.name, 'host', p.user_id = r.host_id, 'ready', p.ready, 'status', p.status,
       'online', p.last_seen > now() - interval '20 seconds', 'progress', p.progress, 'hints', p.hints, 'alt', p.alt,
@@ -359,13 +371,86 @@ begin
   return jsonb_build_object('counted', true);
 end $$;
 
+-- ---------- Shared Mystery (cooperative) ----------
+-- The room shares one state (mp_rooms.coop). Each function locks the room row, so two phones acting
+-- at the same moment are handled one after the other: a step is never counted twice.
+-- Which clue each player holds is decided on the phones from the player order (clues are part of the
+-- public page anyway); the server keeps what the team has shared, the arrival and the progress.
+create or replace function public.mp_sm_room(p_code text) returns public.mp_rooms
+language plpgsql security definer set search_path = public as $$
+declare r public.mp_rooms;
+begin
+  r := mp_room_for(p_code);
+  select * into r from mp_rooms where id = r.id for update;
+  if r.mode <> 'shared_mystery' then raise exception 'wrong_mode'; end if;
+  if r.status <> 'running' then raise exception 'not_playing'; end if;
+  if not exists (select 1 from mp_players where room_id = r.id and user_id = auth.uid() and status = 'playing') then raise exception 'not_playing'; end if;
+  update mp_players set last_seen = now() where room_id = r.id and user_id = auth.uid();
+  return r;
+end $$;
+
+-- The team is at the current place: one valid check counts for everyone. 'gps' = location checked
+-- on a phone; 'manual' = the team confirmed it without a location check (shown as such).
+create or replace function public.mp_sm_arrive(p_code text, p_step int, p_method text)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare r public.mp_rooms; places int; cur text;
+begin
+  r := mp_sm_room(p_code);
+  places := (r.config->>'missions')::int - 1;   -- the last step is the final deduction, with no place
+  if p_method not in ('gps', 'manual') then raise exception 'bad_method'; end if;
+  if p_step <> (r.coop->>'step')::int or p_step >= places then return r.coop; end if;   -- late or repeated: nothing changes
+  cur := r.coop->'arrived'->>p_step::text;
+  if cur is null or (cur = 'manual' and p_method = 'gps') then
+    update mp_rooms set coop = jsonb_set(coop, array['arrived', p_step::text], to_jsonb(p_method)) where id = r.id returning coop into r.coop;
+  end if;
+  return r.coop;
+end $$;
+
+-- A player puts one of their clues on the team board ("<step>-<clue>").
+create or replace function public.mp_sm_share(p_code text, p_clue text)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare r public.mp_rooms; who text;
+begin
+  r := mp_sm_room(p_code);
+  if p_clue !~ '^[0-9]-[0-9]$' then raise exception 'bad_clue'; end if;
+  if not (r.coop->'shared' ? p_clue) then
+    select name into who from mp_players where room_id = r.id and user_id = auth.uid();
+    update mp_rooms set coop = jsonb_set(coop, array['shared', p_clue], to_jsonb(who)) where id = r.id returning coop into r.coop;
+  end if;
+  return r.coop;
+end $$;
+
+-- Anyone answers for the team. The server checks the answer; a right answer moves everyone on,
+-- once. The last step solves the mystery and finishes the room.
+create or replace function public.mp_sm_solve(p_code text, p_step int, p_answer int)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare r public.mp_rooms; n int; step int; right_answer int;
+begin
+  r := mp_sm_room(p_code);
+  n := (r.config->>'missions')::int; step := (r.coop->>'step')::int;
+  if p_step < step then return jsonb_build_object('counted', false, 'correct', true, 'coop', r.coop); end if;   -- already solved by a teammate
+  if p_step > step then raise exception 'wrong_step'; end if;
+  if step < n - 1 and not (r.coop->'arrived' ? step::text) then raise exception 'not_arrived'; end if;
+  select answers[step + 1] into right_answer from mp_challenges where id = r.challenge_id;
+  if p_answer is distinct from right_answer then return jsonb_build_object('counted', false, 'correct', false, 'coop', r.coop); end if;
+  update mp_rooms set coop = coop || jsonb_build_object('step', step + 1, 'solved', step + 1 >= n) where id = r.id returning coop into r.coop;
+  update mp_players set progress = step + 1 where room_id = r.id and status = 'playing';
+  if step + 1 >= n then
+    update mp_rooms set status = 'finished', finished_at = now() where id = r.id;
+    update mp_players set status = 'finished', finished_at = now() where room_id = r.id and status = 'playing';
+  end if;
+  return jsonb_build_object('counted', true, 'correct', true, 'coop', r.coop);
+end $$;
+
 -- ---------- rights ----------
-revoke all on function public.mp_room_for(text, boolean), public.mp_maybe_finish(uuid) from public, anon, authenticated;
+revoke all on function public.mp_room_for(text, boolean), public.mp_maybe_finish(uuid), public.mp_sm_room(text) from public, anon, authenticated;
 grant execute on function public.mp_create_room(text, text, text, int), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
   public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text),
-  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text), public.mp_bb_complete(text, int, text)
+  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text), public.mp_bb_complete(text, int, text),
+  public.mp_sm_arrive(text, int, text), public.mp_sm_share(text, text), public.mp_sm_solve(text, int, int)
   to authenticated;
 revoke execute on function public.mp_create_room(text, text, text, int), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
   public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text),
-  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text), public.mp_bb_complete(text, int, text)
+  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text), public.mp_bb_complete(text, int, text),
+  public.mp_sm_arrive(text, int, text), public.mp_sm_share(text, text), public.mp_sm_solve(text, int, int)
   from public, anon;

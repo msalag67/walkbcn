@@ -49,3 +49,14 @@ El multijugador usa **Supabase** (plan gratuito). No hay servidor propio: la web
 - **DEMO**: en un solo dispositivo, sin sala ni servidor; «Simular llegada», 3 rivales simulados, «Avanzar a los rivales», «Rival cerca de hacer línea», terminar, reiniciar y salir. No envía ni guarda nada.
 - **Para activarlo** hay que volver a ejecutar `supabase/multiplayer.sql` en el SQL Editor (añade el modo, el tablero, dos columnas en `mp_rooms` y la función `mp_bb_complete`; se puede ejecutar varias veces). Hacerlo **antes** de publicar la web nueva.
 - Pruebas: `PGLITE=<carpeta> node evals/bingo-battle-e2e.mjs` (DEMO sin servidor + partida real con dos navegadores, línea ganadora y fin de tiempo sin ganador). `REAL=1` usa el proyecto real (sin la parte del fin de tiempo).
+
+## Shared Mystery (fase 3E, cooperativo)
+
+- En «Jugar con amigos» hay dos pestañas: **Competitivo** (Speed Race, Time Attack, Bingo Battle) y **Cooperativo** (Shared Mystery, con 4 aventuras). Mismas salas, código/enlace, sala de espera, reconexión y GPS.
+- Cada aventura: 3 lugares + deducción final. En cada lugar, 4 pistas repartidas entre los jugadores: la pista *j* del lugar *m* va al jugador *(j + m) mod n* (orden de entrada, solo los que siguen en la partida). Las dos pistas necesarias para la pregunta siempre caen en jugadores distintos. Si alguien abandona, el reparto se recalcula solo; si alguien está desconectado, otro móvil puede mostrar sus pistas.
+- El servidor guarda solo el estado compartido en `mp_rooms.coop`: paso actual, llegada (`gps` o `manual`, nunca la posición), pistas puestas en el tablero del equipo y si está resuelto. `mp_sm_arrive`, `mp_sm_share` y `mp_sm_solve` bloquean la sala (`for update`): una respuesta repetida o simultánea no avanza dos veces. `mp_sm_solve` comprueba la respuesta con `mp_challenges.answers` (igual que `data/shared-mysteries.js`; lo verifica `check.mjs`).
+- Las pistas están en la página pública: son «privadas» por diseño del juego, no secretas.
+- **Para activarlo** hay que volver a ejecutar `supabase/multiplayer.sql` en el SQL Editor (añade el modo, 4 filas, la columna `answers`, la columna `coop` y 3 funciones; no borra datos). Hacerlo **antes** de publicar la web nueva.
+- **DEMO**: elegir aventura y número de jugadores (2–5); compañeros simulados, cambiar de perspectiva, simular llegada, «todos comparten», resolver, revelación final, reiniciar. Sin servidor.
+- Narraciones grabadas: ver `docs/shared-mystery-audio.md`.
+- Pruebas: `PGLITE=<carpeta> node evals/shared-mystery-e2e.mjs`.

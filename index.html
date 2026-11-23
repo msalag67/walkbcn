@@ -999,6 +999,55 @@
   .ch-modeseg { margin: 6px 0 14px; }
   .mp-box { border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; margin: 12px 0; background: var(--panel, #fff); }
   .mp-mode { padding: 0; overflow: hidden; display: grid; }
+  /* Shared Mystery (Phase 3E) */
+  .sm-kindseg { margin-top: 18px; }
+  .sm-card .opt-label, .sm-views .opt-label { width: auto; display: block; margin: 6px 0 2px; }
+  .sm-picks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 4px 0 12px; }
+  .sm-pick { display: flex; flex-direction: column; gap: 0; border: 2px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel, #fff); color: inherit; padding: 0; font: 600 13px/1.25 var(--sans); text-align: left; cursor: pointer; }
+  .sm-pick .ch-thumb { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--line); }
+  .sm-pick img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sm-pick > span:last-child { padding: 6px 8px 8px; }
+  .sm-pick[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent); }
+  .sm-steps { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 6px 0 14px; }
+  .sm-steps li { font: 600 12px var(--sans); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .sm-steps li.done { color: var(--ink, inherit); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+  .sm-steps li.now { border-color: var(--accent); color: var(--accent); }
+  .sm-intro img, .sm-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; display: block; background: var(--line); }
+  .sm-fiction { display: inline-block; margin: 12px 0 0; font: 700 12px var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+  .sm-new { border-left: 4px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 10px; padding: 10px 12px; margin: 8px 0 14px; }
+  .sm-place { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: start; margin: 6px 0 10px; }
+  .sm-place .ch-thumb, .sm-connect .ch-thumb { display: block; aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: var(--line); }
+  .sm-place img, .sm-connect img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sm-place .ch-place { margin: 0; }
+  .sm-place p { margin: 4px 0 0; }
+  .sm-arrived { font-weight: 700; color: var(--ok, #1d7a46); }
+  .sm-clues { list-style: none; padding: 0; margin: 8px 0 12px; display: grid; gap: 8px; }
+  .sm-clue { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--panel, #fff); }
+  .sm-clues.board .sm-clue { background: color-mix(in srgb, var(--accent) 6%, var(--panel, #fff)); }
+  .sm-clue p { margin: 6px 0; }
+  .sm-kind { font: 700 11px var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+  .sm-shared { font: 600 13px var(--sans); color: var(--muted); }
+  .sm-opts { display: grid; gap: 8px; margin: 8px 0; }
+  .sm-opt { text-align: left; font: 500 15px/1.35 var(--sans); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel, #fff); color: inherit; cursor: pointer; }
+  .sm-opt:hover:not(:disabled) { border-color: var(--accent); }
+  .sm-opt.no { text-decoration: line-through; opacity: .55; }
+  .sm-notebook { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 12px 0; }
+  .sm-notebook summary { font-weight: 700; cursor: pointer; }
+  .sm-notebook li { margin: 8px 0; }
+  .sm-views { margin: 6px 0; }
+  .sm-hero { position: relative; margin: 6px 0 14px; }
+  .sm-hero > div { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; border-radius: 0 0 16px 16px; background: linear-gradient(transparent, rgba(0, 0, 0, .72)); color: #fff; }
+  .sm-hero span { font: 700 12px var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+  .sm-hero h2 { margin: 4px 0 0; color: #fff; font-size: 26px; line-height: 1.15; }
+  .sm-connect { list-style: none; padding: 0; display: grid; gap: 12px; }
+  .sm-connect li { display: grid; grid-template-columns: 72px 1fr; gap: 12px; }
+  .sm-connect p { margin: 4px 0; }
+  .sm-audio { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 6px 0 12px; }
+  .sm-audio [data-nar="play"] { display: inline-flex; align-items: center; gap: 8px; }
+  .sm-audio svg { width: 16px; height: 16px; fill: currentColor; }
+  .sm-nar-note { flex-basis: 100%; margin: 0; }
+  .sm-story p { font-size: 17px; line-height: 1.6; }
+  .sm-facts li { margin: 6px 0; }
   .mp-field { display: grid; gap: 4px; font-weight: 600; font-size: 14px; margin: 10px 0; }
   .mp-field input { font: 500 17px var(--sans); padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; text-transform: none; }
   #mpJoinCode { text-transform: uppercase; letter-spacing: .15em; }
@@ -1381,10 +1430,12 @@
 <script src="data/stops.js?v=1061714f"></script>
 <script src="data/cards.js?v=3aa26f13"></script>
 <script src="data/activities.js?v=311590b9"></script>
-<script src="data/ui.js?v=2394819c"></script>
+<script src="data/ui.js?v=a85e8b87"></script>
 <script src="data/tips.js?v=4dbc081d"></script>
 <script src="data/discoveries.js?v=c47d191e"></script>
 <script src="data/challenges.js?v=ee53280f"></script>
+<script src="data/shared-mysteries.js?v=fff6ff01"></script>
+<script src="data/shared-mystery-audio.js?v=f23aead8"></script>
 <script src="data/multiplayer-config.js?v=47d9a49c"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=afdf06e4"></script>
@@ -3482,7 +3533,7 @@ if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
 // ---- Tabs ----
 const TABS = { walk: 'tabWalk', guide: 'tabGuide', act: 'tabAct', tips: 'tabTips', chal: 'tabChal' };
 function showTab(name) {
-  stopAudio();
+  stopAudio(); smNarStop();
   for (const [view, tab] of Object.entries(TABS)) {
     document.getElementById(`${view}View`).hidden = name !== view;
     document.getElementById(tab).setAttribute('aria-selected', name === view);
@@ -4367,7 +4418,7 @@ async function mpRefresh() {
   try {
     const st = await mpRpc('mp_state', { p_code: mp.code });
     mp.offset = Date.parse(st.server_now) - Date.now();     // the timer follows the server clock
-    const changed = JSON.stringify(st.players) + st.status !== JSON.stringify(mp.state?.players) + mp.state?.status;
+    const changed = JSON.stringify(st.players) + st.status + JSON.stringify(st.coop) !== JSON.stringify(mp.state?.players) + mp.state?.status + JSON.stringify(mp.state?.coop);
     mp.state = st; mp.err = '';
     if (changed) renderMp();
   } catch (e) {
@@ -4385,13 +4436,14 @@ function mpTick() {
 function renderMp() {
   if (taDemo) return renderTa(taDemoState(), true);   // a DEMO never touches the room server
   if (bbDemo) return renderBb(bbDemoState(), true);
+  if (smDemo) return renderSm(smDemoState(), true);
+  if (mp.state?.mode !== 'shared_mystery') smNarStop();
   if (mp.code && !mp.state) { chRoot().innerHTML = `${chModeSeg()}<p class="hint">${t('mpLoading')}</p>`; wireChModeSeg(); mpRefresh(); mpStartPolling(); return; }
   if (!mp.state) return renderMpHome();
   mpStartPolling();
   if (mp.state.status === 'waiting') return renderMpLobby();
-  return mp.state.mode === 'time_attack' ? renderTa(mp.state, false) : mp.state.mode === 'bingo_battle' ? renderBb(mp.state, false) : renderMpRace();
+  return mp.state.mode === 'time_attack' ? renderTa(mp.state, false) : mp.state.mode === 'bingo_battle' ? renderBb(mp.state, false) : mp.state.mode === 'shared_mystery' ? renderSm(mp.state, false) : renderMpRace();
 }
-const MP_FUTURE = ['Mystery Race', 'Team Expedition'];
 function renderMpHome() {
   const hunt = chById('modernisme-hunt'), linkCode = (location.hash.match(/^#room=([A-Za-z0-9]{6})/) || [])[1] || '';
   chRoot().innerHTML = `<h1 class="ch-h1">${t('chTitle')}</h1><p class="lead">${t('mpIntro')}</p>${chModeSeg()}
@@ -4401,7 +4453,8 @@ function renderMpHome() {
       <label class="mp-field">${t('mpCode')}<input id="mpJoinCode" maxlength="6" autocapitalize="characters" autocomplete="off" value="${escHtml(linkCode)}"></label>
       <label class="mp-field">${t('mpName')}<input id="mpJoinName" maxlength="20" autocomplete="nickname"></label>
       <button type="button" class="book go" id="mpJoin">${t('mpJoin')}</button></div>
-    <p class="ch-kicker">${t('mpCompetitive')}</p>
+    <div class="seg ch-modeseg sm-kindseg" role="group">${['comp', 'coop'].map(x => `<button type="button" data-mpkind="${x}" aria-pressed="${(chView.mpKind || 'comp') === x}">${t(x === 'comp' ? 'mpCompetitive' : 'mpCooperative')}</button>`).join('')}</div>
+    ${chView.mpKind === 'coop' ? smCard(true) : `<p class="hint">${t('mpCompHint')}</p>
     <div class="mp-box mp-mode"><span class="ch-img"><img src="${photo(hunt.img, 500)}" alt="" loading="lazy" style="object-position:${hunt.imgPos || 'center'}" onerror="chImgRetry(this)"><i class="ch-type">Speed Race</i></span>
       <div class="ch-body"><b>${t('mpSpeedTitle')}</b><span>${t('mpSpeedDesc', { n: 4 })}</span>
       <span class="ch-meta">${escHtml(chL(hunt.title))} · ${t('mpPlayers')}</span>
@@ -4420,19 +4473,24 @@ function renderMpHome() {
       <span class="ch-meta">${escHtml(chL(bb.title))} · 3 × 3 · ${bb.duration} min · ${t('mpPlayers')}</span>
       <label class="mp-field">${t('mpName')}<input id="bbHostName" maxlength="20" autocomplete="nickname"></label>
       <div class="actions"><button type="button" class="book go" id="bbCreate">${t('mpCreate')}</button>
-      <button type="button" class="ghost" id="bbDemoBtn">${t('taDemoTry')}</button></div></div></div>`)(BB_LIST[0])}
-    <p class="hint mp-future"><b>${t('mpFuture')}</b> ${MP_FUTURE.join(' · ')}</p>`
+      <button type="button" class="ghost" id="bbDemoBtn">${t('taDemoTry')}</button></div></div></div>`)(BB_LIST[0])}`}`
     : `<p class="adapt-warn">${t('mpNotSetUp')}</p>
-      <div class="actions"><button type="button" class="ghost" id="taDemoBtn">Time Attack · ${t('taDemoTry')}</button><button type="button" class="ghost" id="bbDemoBtn">Bingo Battle · ${t('taDemoTry')}</button></div>`}`;
+      <div class="actions"><button type="button" class="ghost" id="taDemoBtn">Time Attack · ${t('taDemoTry')}</button><button type="button" class="ghost" id="bbDemoBtn">Bingo Battle · ${t('taDemoTry')}</button></div>${smCard(false)}`}`;
   wireChModeSeg();
-  document.getElementById('taDemoBtn').onclick = () => { taDemoStart(+(chRoot().querySelector('#taDur [aria-pressed="true"]')?.dataset.dur || 60)); };
-  document.getElementById('bbDemoBtn').onclick = bbDemoStart;
+  const on = (id, fn) => { const el = document.getElementById(id); if (el) el.onclick = fn; };
+  on('taDemoBtn', () => { taDemoStart(+(chRoot().querySelector('#taDur [aria-pressed="true"]')?.dataset.dur || 60)); });
+  on('bbDemoBtn', bbDemoStart);
+  chRoot().querySelectorAll('[data-mpkind]').forEach(b => b.onclick = () => { chView.mpKind = b.dataset.mpkind; renderMpHome(); });
+  chRoot().querySelectorAll('[data-smpick]').forEach(b => b.onclick = () => { sm.name = document.getElementById('smHostName')?.value || sm.name; sm.pick = b.dataset.smpick; renderMpHome(); });
+  chRoot().querySelectorAll('#smDemoN .chip').forEach(b => b.onclick = () => { sm.demoN = +b.dataset.n; pressOnly(document.getElementById('smDemoN'), b); });
+  on('smDemoBtn', () => smDemoStart(sm.pick, sm.demoN));
   if (!mpReady()) return;
+  on('smCreate', e => go(e.target, () => mpRpc('mp_create_room', { p_challenge: sm.pick, p_mode: 'shared_mystery', p_name: document.getElementById('smHostName').value })));
   chRoot().querySelectorAll('#taDur .chip').forEach(b => b.onclick = () => pressOnly(document.getElementById('taDur'), b));
-  document.getElementById('bbCreate').onclick = e => go(e.target, () => mpRpc('mp_create_room', { p_challenge: BB_LIST[0].id, p_mode: 'bingo_battle', p_name: document.getElementById('bbHostName').value, p_duration: BB_LIST[0].duration }));
-  document.getElementById('taCreate').onclick = e => go(e.target, () => mpRpc('mp_create_room', { p_challenge: TA_LIST[0].id, p_mode: 'time_attack', p_name: document.getElementById('taHostName').value, p_duration: +document.querySelector('#taDur [aria-pressed="true"]').dataset.dur }));
+  on('bbCreate', e => go(e.target, () => mpRpc('mp_create_room', { p_challenge: BB_LIST[0].id, p_mode: 'bingo_battle', p_name: document.getElementById('bbHostName').value, p_duration: BB_LIST[0].duration })));
+  on('taCreate', e => go(e.target, () => mpRpc('mp_create_room', { p_challenge: TA_LIST[0].id, p_mode: 'time_attack', p_name: document.getElementById('taHostName').value, p_duration: +document.querySelector('#taDur [aria-pressed="true"]').dataset.dur })));
   const go = async (btn, fn) => { btn.disabled = true; try { mp.code = await fn(); lsSet(MP_ROOM, mp.code); mp.err = ''; history.replaceState(null, '', location.pathname + location.search); renderMp(); } catch (e) { mp.err = mpErr(e); renderMpHome(); } };
-  document.getElementById('mpCreate').onclick = e => go(e.target, () => mpRpc('mp_create_room', { p_challenge: 'modernisme-hunt', p_mode: 'speed_race', p_name: document.getElementById('mpHostName').value }));
+  on('mpCreate', e => go(e.target, () => mpRpc('mp_create_room', { p_challenge: 'modernisme-hunt', p_mode: 'speed_race', p_name: document.getElementById('mpHostName').value })));
   document.getElementById('mpJoin').onclick = e => go(e.target, () => mpRpc('mp_join_room', { p_code: document.getElementById('mpJoinCode').value.trim().toUpperCase(), p_name: document.getElementById('mpJoinName').value }));
 }
 const mpPlayerRow = (p, extra = '') => `<li class="mp-p ${p.me ? 'me' : ''}"><span class="mp-dot ${p.online ? 'on' : ''}" title="${t(p.online ? 'mpOnline' : 'mpOffline')}"></span><b>${escHtml(p.name)}</b>${p.me ? ` <em>${t('mpYou')}</em>` : ''}${p.host ? ` <em>${t('mpHost')}</em>` : ''}<span class="mp-p-right">${extra}</span></li>`;
@@ -4441,8 +4499,8 @@ function renderMpLobby() {
   const st = mp.state, me = st.players.find(p => p.me), active = st.players.filter(p => p.status !== 'left');
   const notReady = active.filter(p => !p.ready).length, min = st.config.min_players;
   const why = active.length < min ? t('mpNeedPlayers', { n: min }) : notReady ? t('mpWaitReady', { n: notReady }) : '';
-  const isTa = st.mode === 'time_attack', isBb = st.mode === 'bingo_battle', cat = mpCat(st.challenge);
-  chRoot().innerHTML = `${chModeSeg()}<p class="ch-kicker">${isTa ? `Time Attack · ${st.config.duration_min} min` : isBb ? `Bingo Battle · ${st.config.duration_min} min` : 'Speed Race'} · ${escHtml(chL(cat.title))}</p>
+  const isTa = st.mode === 'time_attack', isBb = st.mode === 'bingo_battle', isSm = st.mode === 'shared_mystery', cat = mpCat(st.challenge);
+  chRoot().innerHTML = `${chModeSeg()}<p class="ch-kicker">${isTa ? `Time Attack · ${st.config.duration_min} min` : isBb ? `Bingo Battle · ${st.config.duration_min} min` : isSm ? `Shared Mystery · ${t('mpCooperative')}` : 'Speed Race'} · ${escHtml(chL(cat.title))}</p>
     <h1 class="ch-h1">${t('mpLobby')}</h1>
     <div class="mp-code"><span>${t('mpCode')}</span><b>${st.code}</b><button type="button" class="ghost" id="mpShare">${t('mpShare')}</button></div>
     <p class="hint">${t('mpShareHint', { max: st.config.max_players })}</p>
@@ -4450,7 +4508,7 @@ function renderMpLobby() {
     <div class="actions"><button type="button" class="book ${me?.ready ? 'alt' : 'go'}" id="mpReadyBtn">${t(me?.ready ? 'mpNotReady' : 'mpImReady')}</button>
     ${st.host ? `<button type="button" class="book go" id="mpStart" ${why ? 'disabled' : ''}>${t('mpStart')}</button>` : ''}</div>
     <p class="hint">${st.host ? (why || t('mpCanStart')) : t('mpHostStarts')}</p>
-    ${isBb ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(chL(cat.start.label))} · <a href="${directionsUrl(stopById(cat.start.stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p><p class="hint">${t('bbRules', { m: st.config.duration_min })}</p>` : isTa ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(chL(cat.start.label))} · <a href="${directionsUrl(stopById(cat.start.stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p>${taRulesHtml(st.config)}` : `<p class="hint">${t('mpRules', { s: st.config.hint_penalty_s })}</p>`}
+    ${isSm ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(stopById(cat.missions[0].stop).name)} · <a href="${directionsUrl(stopById(cat.missions[0].stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p><p class="hint">${t('smRules')}</p>` : isBb ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(chL(cat.start.label))} · <a href="${directionsUrl(stopById(cat.start.stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p><p class="hint">${t('bbRules', { m: st.config.duration_min })}</p>` : isTa ? `<p class="hint"><b>${t('taStart')}</b> ${escHtml(chL(cat.start.label))} · <a href="${directionsUrl(stopById(cat.start.stop))}" target="_blank" rel="noopener">${t('pauseGo')}</a></p>${taRulesHtml(st.config)}` : `<p class="hint">${t('mpRules', { s: st.config.hint_penalty_s })}</p>`}
     <p class="adapt-warn" id="mpNet" hidden>${t('mpErrNet')}</p>
     <div class="actions"><button type="button" class="ghost" id="mpLeave">${t('mpLeave')}</button></div>`;
   wireChModeSeg();
@@ -4547,7 +4605,7 @@ function renderMpRace() {
 // taPoints mirrors the server rule, to show what a target is worth (and for the DEMO only).
 const TA_LIST = window.WALKBCN_TIME_ATTACKS || [];
 const BB_LIST = window.WALKBCN_BINGO_BATTLES || [];
-const mpCat = id => chById(id) || TA_LIST.find(x => x.id === id) || BB_LIST.find(x => x.id === id);
+const mpCat = id => chById(id) || TA_LIST.find(x => x.id === id) || BB_LIST.find(x => x.id === id) || (smById(id) && { ...smById(id), title: smTx(id).title });
 const TA_RULES = { hint_cost: 50, min_points: 50 };   // DEMO copy of mp_modes.time_attack (real games read the room's config)
 const taPoints = (base, hinted, cfg) => Math.max(base - (hinted ? cfg.hint_cost : 0), Math.min(base, cfg.min_points));
 const taRulesHtml = cfg => `<p class="hint">${t('taRules', { h: cfg.hint_cost })}</p>`;
@@ -4566,7 +4624,7 @@ const TA_BOTS = [
   { name: 'Marc', plan: [[0.12, 150], [0.3, 100], [0.5, 150], [0.75, 150]] },
   { name: 'Sofia', plan: [[0.15, 100], [0.4, 150], [0.7, 100]] },
 ];
-function taDemoStart(duration) { taDemo = { duration, t0: Date.now(), skip: 0, done: {}, hinted: {}, arrived: {}, lastScore: null, ended: false }; ta.sel = null; mpStopPolling(); renderMp(); window.scrollTo(0, 0); }
+function taDemoStart(duration) { smDemo = null; taDemo = { duration, t0: Date.now(), skip: 0, done: {}, hinted: {}, arrived: {}, lastScore: null, ended: false }; ta.sel = null; mpStopPolling(); renderMp(); window.scrollTo(0, 0); }
 function taDemoState() {
   const d = taDemo, cat = TA_LIST[0], total = d.duration * 60000, now = Date.now() + d.skip, el = Math.min(total, now - d.t0);
   const over = d.ended || el >= total, at = ms => new Date(d.t0 + ms).toISOString();
@@ -4701,7 +4759,7 @@ const BB_BOTS = [
   { name: 'Marc', plan: [1, 2, 2, 3, 4, 'win'] },   // close to a line from step 3; wins on the last step if nobody has
   { name: 'Sofia', plan: [0, 1, 1, 2, 2, 3] },
 ];
-function bbDemoStart() { bbDemo = { t0: Date.now(), step: -1, done: [], arrived: {}, winner: null, ended: false, at: null }; bb.sel = null; taDemo = null; mpStopPolling(); renderMp(); window.scrollTo(0, 0); }
+function bbDemoStart() { smDemo = null; bbDemo = { t0: Date.now(), step: -1, done: [], arrived: {}, winner: null, ended: false, at: null }; bb.sel = null; taDemo = null; mpStopPolling(); renderMp(); window.scrollTo(0, 0); }
 function bbDemoState() {
   const d = bbDemo, cat = BB_LIST[0], total = cat.duration * 60000, now = Date.now(), over = d.ended || !!d.winner || now - d.t0 >= total;
   const bots = BB_BOTS.map(b => { const v = d.step >= 0 ? b.plan[Math.min(d.step, b.plan.length - 1)] : 0;
@@ -4779,6 +4837,205 @@ function renderBb(st, demo) {
     root.querySelectorAll('[data-chans]').forEach(x => x.disabled = true);
     try { const r = await drv.complete(k); fb.textContent = r?.line ? t('bbLineNow') : t('bbDone'); fb.className = 'ch-feedback ok'; if (!demo) await mpRefresh(); setTimeout(() => { bb.sel = null; renderMp(); }, 900); }
     catch (e) { fb.className = 'ch-feedback warn'; fb.textContent = /time_up/.test(e.message) ? t('taTimeUp') : /not_playing/.test(e.message) ? t('bbOver') : t('mpErrNet'); if (/time_up|not_playing/.test(e.message)) mpRefresh(); else root.querySelectorAll('[data-chans]').forEach(x => x.disabled = false); }
+  });
+}
+
+// ---- Shared Mystery (Phase 3E): cooperative ----
+// One adventure for the whole room (data/shared-mysteries.js). Each phone shows different clues:
+// clue j of place m goes to seat (j + m) % n, seats being the players still in the game in joining
+// order, so a player who leaves is covered automatically; an offline player's clues can be shown on
+// another phone. The server keeps the shared part (arrival, team board, progress) and checks
+// answers (mp_sm_arrive / mp_sm_share / mp_sm_solve). Clues are in the public page, so they are
+// "private" by convention, not secret. Positions are never sent: only that the team arrived.
+const SM_LIST = window.WALKBCN_SHARED_MYSTERIES || [];
+const SM_AUDIO = window.WALKBCN_SM_AUDIO || {};
+const smById = id => SM_LIST.find(a => a.id === id);
+const smTx = id => (window.WALKBCN_SM_TEXT?.[lang] || {})[id] || window.WALKBCN_SM_TEXT.en[id];
+const smSeatOf = (m, j, n) => (j + m) % n;
+const SM_LOCAL = 'walkbcn_sm_local';
+const SM_BOTS = ['Laia', 'Marc', 'Sofia', 'Pau'];
+let sm = { pick: SM_LIST[0]?.id, demoN: 3, name: '' };
+// DEMO: one device, no room, no server. Same adventures, clues, questions and answers; simulated
+// teammates whose screens you can switch to; simulated arrival. Kept in memory only.
+let smDemo = null;
+// "Play with friends" → Cooperative: pick one of the adventures, create a room or try the DEMO.
+function smCard(ready) {
+  const a = smById(sm.pick), tx = smTx(a.id);
+  return `<p class="hint">${t('smDesc')}</p>
+    <div class="mp-box mp-mode sm-card"><span class="ch-img"><img src="${photo(a.img, 600)}" alt="" loading="lazy" style="object-position:${a.imgPos || 'center'}" onerror="chImgRetry(this)"><i class="ch-type">Shared Mystery</i></span>
+    <div class="ch-body"><p class="opt-label">${t('smPick')}</p>
+      <div class="sm-picks" role="group">${SM_LIST.map(x => `<button type="button" class="sm-pick" data-smpick="${x.id}" aria-pressed="${x.id === a.id}"><span class="ch-thumb"><img src="${photo(x.img, 300)}" alt="" loading="lazy" style="object-position:${x.imgPos || 'center'}" onerror="chImgRetry(this)"></span><span>${escHtml(smTx(x.id).title)}</span></button>`).join('')}</div>
+      <b>${escHtml(tx.title)}</b><span>${escHtml(tx.tagline)}</span>
+      <span class="ch-meta">${escHtml(areaName(a.area))} · ${t('smMeta', { n: a.missions.length, m: a.minutes })} · ${t('mpPlayers')}</span>
+      ${ready ? `<label class="mp-field">${t('mpName')}<input id="smHostName" maxlength="20" autocomplete="nickname" value="${escHtml(sm.name)}"></label>` : ''}
+      <p class="opt-label">${t('smDemoPlayers')}</p><div class="chips" id="smDemoN">${[2, 3, 4, 5].map(x => `<button type="button" class="chip" data-n="${x}" aria-pressed="${x === sm.demoN}">${x}</button>`).join('')}</div>
+      <div class="actions">${ready ? `<button type="button" class="book go" id="smCreate">${t('mpCreate')}</button>` : ''}<button type="button" class="ghost" id="smDemoBtn">${t('taDemoTry')}</button></div></div></div>`;
+}
+function smDemoStart(id, n) { smDemo = { id, n, view: 0, intro: false, take: {}, coop: { step: 0, arrived: {}, shared: {}, solved: false } }; taDemo = null; bbDemo = null; mpStopPolling(); smNarStop(); renderMp(); window.scrollTo(0, 0); }
+function smDemoState() {
+  const d = smDemo, over = d.coop.solved;
+  return { demo: true, code: 'DEMO', challenge: d.id, mode: 'shared_mystery', status: over ? 'finished' : 'running', config: { missions: smById(d.id).answers.length }, coop: d.coop,
+    players: [t('taYouDemo'), ...SM_BOTS].slice(0, d.n).map((name, i) => ({ name, me: i === d.view, sim: i > 0, online: true, status: over ? 'finished' : 'playing' })) };
+}
+const smLocal = () => { const l = lsGet(SM_LOCAL); return l?.code === mp.code ? l : { code: mp.code, intro: false, take: {} }; };
+const smDriver = demo => demo ? {
+  arrive: async (k, how) => { const c = smDemo.coop; if (k === c.step && (!c.arrived[k] || c.arrived[k] === 'manual')) c.arrived[k] = how; },
+  share: async (id, who) => { if (!smDemo.coop.shared[id]) smDemo.coop.shared[id] = who; },
+  solve: async (k, ans) => { const c = smDemo.coop, a = smById(smDemo.id);
+    if (k !== c.step) return { counted: false, correct: true };
+    if (a.answers[k] !== ans) return { counted: false, correct: false };
+    c.step++; c.solved = c.step >= a.answers.length; return { counted: true, correct: true }; },
+  local: () => smDemo, saveLocal: () => {},
+} : {
+  arrive: (k, how) => mpRpc('mp_sm_arrive', { p_code: mp.code, p_step: k, p_method: how }),
+  share: id => mpRpc('mp_sm_share', { p_code: mp.code, p_clue: id }),
+  solve: (k, ans) => mpRpc('mp_sm_solve', { p_code: mp.code, p_step: k, p_answer: ans }),
+  local: smLocal, saveLocal: l => lsSet(SM_LOCAL, l),
+};
+// Final narration: a pre-recorded file (data/shared-mystery-audio.js) when there is one for this
+// adventure and language AND it was recorded from the text shown now (same textHash); otherwise
+// the device voice reads the text. Only one narration at a time (the walk player is stopped too).
+const smHash = s => { let h = 0x811c9dc5; for (const ch of s) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0'); };
+const smRecording = (id, text) => { const r = SM_AUDIO[id]?.[lang]; return r?.file && r.textHash === smHash(text) ? r : null; };
+let nar = { key: null, a: null, state: 'idle', mode: null };
+function smNarStop() {
+  if (nar.a) { nar.a.onerror = null; nar.a.pause(); nar.a.removeAttribute('src'); }
+  if (nar.mode === 'voice' && 'speechSynthesis' in window) speechSynthesis.cancel();
+  nar = { key: null, a: null, state: 'idle', mode: null }; smNarPaint();
+}
+function smNarVoice(text) {
+  nar.mode = 'voice'; nar.a = null;
+  if (!('speechSynthesis' in window)) { nar.state = 'novoice'; return smNarPaint(); }
+  speechSynthesis.cancel();
+  const speech = langMeta(lang).speech, v = pickVoice(speech), key = nar.key;
+  const parts = text.match(/[^.!?。！？]+[.!?。！？]*\s*/g) || [text];   // short pieces: long ones stop half-way in some browsers
+  parts.forEach((p, i) => { const u = new SpeechSynthesisUtterance(p.trim()); u.lang = speech; if (v) u.voice = v;
+    if (i === parts.length - 1) u.onend = () => { if (nar.key === key) { nar.state = 'idle'; smNarPaint(); } };
+    speechSynthesis.speak(u); });
+  nar.state = 'playing'; smNarPaint();
+}
+function smNarToggle(id, text, restart) {
+  const key = `${id}:${lang}`;
+  if (!restart && nar.key === key && nar.state === 'playing') { if (nar.a) nar.a.pause(); else speechSynthesis.pause(); nar.state = 'paused'; return smNarPaint(); }
+  if (!restart && nar.key === key && nar.state === 'paused') { if (nar.a) nar.a.play(); else speechSynthesis.resume(); nar.state = 'playing'; return smNarPaint(); }
+  smNarStop(); stopAudio();
+  nar.key = key;
+  const rec = smRecording(id, text);
+  if (!rec) return smNarVoice(text);
+  const au = new Audio(`${rec.file}?v=${rec.textHash}`), fail = () => { if (nar.a === au) smNarVoice(text); };   // missing or broken file: the device voice reads instead
+  nar.a = au; nar.mode = 'rec'; nar.state = 'loading'; smNarPaint();
+  au.onended = () => { if (nar.a === au) { nar.state = 'idle'; smNarPaint(); } };
+  au.onerror = fail;
+  au.play().then(() => { if (nar.a === au) { nar.state = 'playing'; smNarPaint(); } }).catch(fail);
+}
+function smNarPaint() {
+  const box = document.getElementById('smAudio'); if (!box) return;
+  const on = nar.key === box.dataset.key, st = on ? nar.state : 'idle', b = box.querySelector('[data-nar="play"]');
+  b.innerHTML = `${st === 'playing' || st === 'loading' ? pauseIcon() : playIcon()}<span>${t(st === 'playing' || st === 'loading' ? 'smPause' : 'smListen')}</span>`;
+  const rec = on ? nar.mode === 'rec' : box.dataset.rec === '1';
+  box.querySelector('.sm-nar-note').textContent = st === 'novoice' ? t('smNoVoice') : t(rec ? 'smRec' : 'smVoice');
+  box.classList.toggle('playing', st === 'playing');
+}
+const smArrivedLabel = how => t(how === 'gps' ? 'smArrivedGps' : how === 'sim' ? 'smArrivedSim' : 'smArrivedManual');
+function smReveal(st, a, tx, demo) {
+  const c = st.coop, text = tx.reveal.story, rec = smRecording(a.id, text);
+  const imgs = [a.img, ...a.missions.map(m => stopById(m.stop).img)], P = window.WALKBCN_PHOTOS || {};
+  const credits = [...new Set(imgs)].map(f => P[f] ? `${escHtml(f.replace(/\.\w+$/, ''))} · ${escHtml(P[f].author)} · <a href="${P[f].licenceUrl}" target="_blank" rel="noopener">${escHtml(P[f].licence)}</a>` : '').filter(Boolean);
+  const srcs = [...new Set([...a.missions.flatMap(m => m.sources), ...a.sources])];
+  return `<div class="sm-hero"><img src="${photo(a.img, 900)}" alt="" style="object-position:${a.imgPos || 'center'}" onerror="chImgRetry(this)"><div><span>★ ${t('smSolvedTitle')}</span><h2>${escHtml(tx.reveal.title)}</h2></div></div>
+    <h2 class="ch-place">${t('smSolution')}</h2><p class="lead">${escHtml(tx.reveal.solution)}</p>
+    <h2 class="ch-place">${t('smConnect')}</h2><ol class="sm-connect">${a.missions.map((m, i) => { const s = stopById(m.stop);
+      return `<li><span class="ch-thumb"><img src="${photo(s.img, 300)}" alt="" loading="lazy" onerror="chImgRetry(this)"></span><div><b>${escHtml(s.name)}</b><p>${escHtml(tx.missions[i].explain)}</p><span class="hint">${smArrivedLabel(c.arrived?.[i])}</span></div></li>`; }).join('')}</ol>
+    <h2 class="ch-place">${t('smStory')}</h2>
+    <div class="sm-audio" id="smAudio" data-key="${a.id}:${lang}" data-rec="${rec ? 1 : 0}"><button type="button" class="book go" data-nar="play"></button><button type="button" class="ghost" data-nar="restart">${t('smRestart')}</button><span class="hint sm-nar-note"></span></div>
+    <div class="sm-story">${text.split(/\n\n+/).map(p => `<p>${escHtml(p)}</p>`).join('')}</div>
+    <h2 class="ch-place">${t('smFacts')}</h2><ul class="sm-facts">${tx.reveal.facts.map(f => `<li>${escHtml(f)}</li>`).join('')}</ul>
+    <p class="hint">${t('smFiction')}</p>
+    <p class="ch-src">${t('chSources')} ${srcs.map((u, i) => `<a href="${u}" target="_blank" rel="noopener">${i + 1}</a>`).join(' · ')}</p>
+    <p class="ch-src">${t('smPhotos')}: ${credits.join(' — ')}</p>`;
+}
+function renderSm(st, demo) {
+  const a = smById(st.challenge), tx = smTx(st.challenge), drv = smDriver(demo), c = st.coop || { step: 0, arrived: {}, shared: {}, solved: false };
+  const places = a.missions.length, k = Math.min(c.step, places), over = st.status === 'finished', loc = drv.local();
+  const active = st.players.filter(p => p.status !== 'left'), n = Math.max(1, active.length), seat = Math.max(0, active.findIndex(p => p.me)), me = st.players.find(p => p.me);
+  if (!over || (nar.key && nar.key !== `${a.id}:${lang}`)) smNarStop();
+  const demoBar = demo ? `<p class="ch-demo" role="status">${t('smDemoBanner')}</p>
+    <div class="sm-views"><span class="opt-label">${t('smViewAs')}</span><div class="chips">${st.players.map((p, i) => `<button type="button" class="chip" data-smview="${i}" aria-pressed="${p.me}">${escHtml(p.name)}${p.sim ? ` · ${t('taSim')}` : ''}</button>`).join('')}</div></div>
+    <div class="actions ta-demo-ctl">${over ? '' : `<button type="button" class="ghost" data-sm="allshare">${t('smAllShare')}</button>`}<button type="button" class="ghost" data-sm="restart">${t('taDemoRestart')}</button><button type="button" class="ghost" data-sm="exit">${t('taDemoExit')}</button></div>` : '';
+  const head = `${chModeSeg()}${demoBar}<p class="ch-kicker">Shared Mystery${demo ? '' : ` · ${t('mpCode')} ${st.code}`}</p><h1 class="ch-h1">${escHtml(tx.title)}</h1>
+    ${over ? '' : `<ol class="sm-steps">${[...Array(places + 1)].map((_, i) => `<li class="${i < k ? 'done' : i === k ? 'now' : ''}">${i < k ? '✓ ' : ''}${i < places ? escHtml(stopById(a.missions[i].stop).name) : t('smFinalStep')}</li>`).join('')}</ol>`}
+    ${demo ? '' : `<p class="adapt-warn" id="mpNet" hidden>${t('mpErrNet')}</p>`}`;
+  const team = `<div class="mp-board"><p class="ch-kicker">${t('smTeam')}</p><ul class="mp-list">${st.players.map(p => mpPlayerRow(p, `${p.status === 'left' ? t('smLeft') : ''}${p.sim ? ` <em>${t('taSim')}</em>` : ''}`)).join('')}</ul></div>`;
+  const notebook = k > 0 ? `<details class="sm-notebook" ${k >= places ? 'open' : ''}><summary>${t('smNotebook')} (${k}/${places})</summary><ol>${tx.missions.slice(0, k).map((m, i) => `<li><b>${escHtml(stopById(a.missions[i].stop).name)}</b> — ${escHtml(m.explain)}</li>`).join('')}</ol></details>` : '';
+  const question = (q, opts) => `<div class="ch-q sm-q"><p class="ch-kicker">${t('smQ')}</p><p class="ch-prompt">${escHtml(q)}</p>
+    <div class="sm-opts">${opts.map((o, i) => `<button type="button" class="sm-opt" data-smans="${i}">${escHtml(o)}</button>`).join('')}</div><p class="ch-feedback" role="status"></p><p class="hint">${t('smQHint')}</p></div>`;
+  let body = '';
+  if (over) body = c.solved ? smReveal(st, a, tx, demo) : `<div class="ch-done"><p class="ch-trophy" aria-hidden="true">?</p><h2>${t('smEndedUnsolved')}</h2></div>${notebook}`;
+  else if (k === 0 && !loc.intro) body = `<div class="sm-intro"><img src="${photo(a.img, 800)}" alt="" style="object-position:${a.imgPos || 'center'}" onerror="chImgRetry(this)">
+      <p class="sm-fiction">${t('smFictionTag')}</p><p class="lead">${escHtml(tx.intro)}</p><p class="hint">${t('smRules')}</p>
+      <button type="button" class="book go" data-sm="begin">${t('smBegin')}</button></div>`;
+  else if (k < places) {
+    const m = a.missions[k], mt = tx.missions[k], s = stopById(m.stop), arr = c.arrived[k];
+    const mine = [0, 1, 2, 3].filter(j => smSeatOf(k, j, n) === seat);
+    const others = demo ? [] : active.filter(p => !p.me && !p.online).map(p => ({ p, seat: active.indexOf(p) }));
+    const taken = others.filter(o => loc.take?.[`${k}-${o.seat}`]).flatMap(o => [0, 1, 2, 3].filter(j => smSeatOf(k, j, n) === o.seat).map(j => ({ j, from: o.p.name })));
+    const shared = Object.entries(c.shared).filter(([id]) => id.startsWith(`${k}-`));
+    const clue = (j, from) => { const id = `${k}-${j}`;
+      return `<li class="sm-clue"><span class="sm-kind">${t(`smKind_${m.kinds[j]}`)}</span>${from ? ` <span class="hint">${t('smTakenFrom', { name: escHtml(from) })}</span>` : ''}<p>${escHtml(mt.clues[j])}</p>
+        ${c.shared[id] ? `<span class="sm-shared">✓ ${t('smShared')}</span>` : `<button type="button" class="ghost" data-smshare="${id}">${t('smShare')}</button>`}</li>`; };
+    body = `${k > 0 ? `<div class="sm-new"><b>${t('smNew')}</b> ${escHtml(tx.missions[k - 1].explain)}</div>` : ''}
+      <div class="sm-place"><span class="ch-thumb"><img src="${photo(s.img, 500)}" alt="" loading="lazy" onerror="chImgRetry(this)"></span>
+        <div><p class="ch-kicker">${t('smStep', { n: k + 1, total: places })}</p><h2 class="ch-place">${escHtml(s.name)}</h2><p>${escHtml(mt.lead)}</p></div></div>
+      ${arr ? `<p class="sm-arrived">✓ ${smArrivedLabel(arr)}</p>` : `<div class="ch-gps">${demo ? `<button type="button" class="book go" data-sm="sim">${t('taSimArrive')}</button>` : `<button type="button" class="book go" data-sm="gps">${t('smArrive')}</button>`}
+        <a class="ghost" href="${directionsUrl(s)}" target="_blank" rel="noopener">${t('pauseGo')}</a><p class="ch-gps-msg" role="status"></p>
+        ${demo ? '' : `<button type="button" class="ghost" data-sm="manual" hidden>${t('smArriveManual')}</button>`}</div><p class="hint">${t(demo ? 'smSimNote' : 'smGpsNote')}</p>`}
+      <h2 class="ch-place">${t('smYourClues')}${demo ? ` · ${escHtml(me.name)}` : ''}</h2>
+      ${mine.length || taken.length ? `<ul class="sm-clues">${mine.map(j => clue(j)).join('')}${taken.map(x => clue(x.j, x.from)).join('')}</ul>` : `<p class="hint">${t('smNoClues')}</p>`}
+      ${others.filter(o => !loc.take?.[`${k}-${o.seat}`] && [0, 1, 2, 3].some(j => smSeatOf(k, j, n) === o.seat)).map(o => `<button type="button" class="ghost" data-smtake="${o.seat}">${t('smOffline', { name: escHtml(o.p.name) })}</button>`).join('')}
+      <h2 class="ch-place">${t('smBoard')}</h2>
+      ${shared.length ? `<ul class="sm-clues board">${shared.map(([id, who]) => { const j = +id.split('-')[1]; return `<li class="sm-clue"><span class="sm-kind">${t(`smKind_${m.kinds[j]}`)}</span> <span class="hint">${t('smSharedBy', { name: escHtml(who) })}</span><p>${escHtml(mt.clues[j])}</p></li>`; }).join('')}</ul>` : `<p class="hint">${t('smBoardEmpty')}</p>`}
+      ${arr ? question(mt.q, mt.options) : ''}
+      ${notebook}<p class="ch-src">${t('chSources')} ${m.sources.map((u, i) => `<a href="${u}" target="_blank" rel="noopener">${i + 1}</a>`).join(' · ')}</p>`;
+  } else body = `<div class="sm-new"><b>${t('smNew')}</b> ${escHtml(tx.missions[places - 1].explain)}</div>
+      <h2 class="ch-place">${t('smFinalStep')}</h2><p class="lead">${escHtml(tx.final.lead)}</p>${notebook}${question(tx.final.q, tx.final.options)}`;
+  chRoot().innerHTML = `${head}${body}${team}
+    ${demo ? '' : `<div class="actions"><button type="button" class="ghost" id="mpLeave">${t(over ? 'mpExit' : 'mpAbandon')}</button></div>`}`;
+  wireChModeSeg();
+  smNarPaint();
+  const root = chRoot(), rerender = () => renderMp();
+  const lv = document.getElementById('mpLeave'); if (lv) lv.onclick = () => { smNarStop(); mpLeave(); };
+  root.querySelectorAll('[data-smview]').forEach(b => b.onclick = () => { smDemo.view = +b.dataset.smview; rerender(); });
+  root.querySelectorAll('[data-nar]').forEach(b => b.onclick = () => smNarToggle(a.id, tx.reveal.story, b.dataset.nar === 'restart'));
+  root.querySelectorAll('[data-smtake]').forEach(b => b.onclick = () => { const l = drv.local(); l.take = { ...(l.take || {}), [`${k}-${b.dataset.smtake}`]: 1 }; drv.saveLocal(l); rerender(); });
+  const act = async (b, fn) => { b.disabled = true; try { await fn(); if (!demo) await mpRefresh(); rerender(); } catch (e) { b.disabled = false; const el = document.getElementById('mpNet'); if (el) { el.textContent = /not_playing/.test(e.message) ? t('bbOver') : t('mpErrNet'); el.hidden = false; } } };
+  root.querySelectorAll('[data-smshare]').forEach(b => b.onclick = () => act(b, () => drv.share(b.dataset.smshare, me.name)));
+  root.querySelectorAll('[data-sm]').forEach(b => b.onclick = async () => {
+    const x = b.dataset.sm;
+    if (x === 'begin') { const l = drv.local(); l.intro = true; drv.saveLocal(l); return rerender(); }
+    if (x === 'restart') return smDemoStart(smDemo.id, smDemo.n);
+    if (x === 'exit') { smDemo = null; smNarStop(); return renderCh(); }
+    if (x === 'allshare') { [0, 1, 2, 3].forEach(j => { const id = `${k}-${j}`; if (!c.shared[id]) c.shared[id] = st.players.filter(p => p.status !== 'left')[smSeatOf(k, j, n)].name; }); return rerender(); }
+    if (x === 'sim') return act(b, () => drv.arrive(k, 'sim'));
+    if (x === 'manual') return act(b, () => drv.arrive(k, 'manual'));
+    if (x === 'gps') {   // a fresh reading on this phone; only "arrived" goes to the server, never the position
+      const msg = root.querySelector('.ch-gps-msg'); b.disabled = true; msg.className = 'ch-gps-msg'; msg.textContent = t('chChecking');
+      const s = stopById(a.missions[k].stop), r = await chLocate(s, a.missions[k].r || 80); b.disabled = false;
+      if (r.ok) return act(b, () => drv.arrive(k, 'gps'));
+      msg.className = 'ch-gps-msg warn';
+      msg.textContent = r.why === 'far' ? t('chGpsFar', { m: r.m }) : r.why === 'imprecise' ? t('chGpsImprecise', { m: r.acc }) : r.why === 'denied' ? t('smGpsDenied') : t('chGpsError');
+      root.querySelector('[data-sm="manual"]').hidden = false;
+    }
+  });
+  root.querySelectorAll('[data-smans]').forEach(b => b.onclick = async () => {
+    const fb = b.closest('.sm-q').querySelector('.ch-feedback'), all = root.querySelectorAll('[data-smans]');
+    all.forEach(x => x.disabled = true);
+    try {
+      const r = await drv.solve(k, +b.dataset.smans);
+      if (!r.correct) { fb.textContent = t('smWrong'); fb.className = 'ch-feedback warn'; all.forEach(x => x.disabled = x === b || x.classList.contains('no')); b.classList.add('no'); return; }
+      fb.textContent = t('smRight'); fb.className = 'ch-feedback ok';
+      if (!demo) await mpRefresh();
+      setTimeout(() => { rerender(); window.scrollTo(0, 0); }, 700);
+    } catch (e) { fb.className = 'ch-feedback warn'; fb.textContent = /not_playing/.test(e.message) ? t('bbOver') : t('mpErrNet'); all.forEach(x => x.disabled = false); if (/not_playing|wrong_step|not_arrived/.test(e.message) && !demo) mpRefresh(); }
   });
 }
 
