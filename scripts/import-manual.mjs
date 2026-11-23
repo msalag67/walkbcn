@@ -131,7 +131,7 @@ for (const lang of LANGS) {
       continue;
     }
     const entry = { tip: m.tip[lang], stories: { base: { ...m.stories[lang] } } };
-    if (lang !== "en") { entry.srcHash = srcHash; entry.audio = prev.audio ?? {}; }
+    if (lang !== "en") { entry.srcHash = srcHash; entry.audio = prev.audio ?? {}; if (prev.audioLong) entry.audioLong = prev.audioLong; }
     data.stops[m.id] = entry;
   }
   for (const [id, t] of Object.entries(tips)) if (data.stops[id] && t[lang]) data.stops[id].tip = t[lang];

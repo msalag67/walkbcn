@@ -180,7 +180,7 @@ async function translateStops(lang, en, data) {
         if (!v?.short || !v?.normal || !v?.long) throw new Error(`missing translation for "${k}"`);
       }
       if (!json.tip) throw new Error("missing tip");
-      data.stops[stop.id] = { tip: json.tip, stories: json.stories, srcHash, audio: entry?.audio ?? {} };
+      data.stops[stop.id] = { tip: json.tip, stories: json.stories, srcHash, audio: entry?.audio ?? {}, ...(entry?.audioLong ? { audioLong: entry.audioLong } : {}) };
       save(lang, data);
       console.log(`  [${lang}] ✓ ${stop.name}`);
     } catch (err) {

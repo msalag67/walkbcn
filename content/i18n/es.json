@@ -33,6 +33,12 @@
           "file": "audio/es/recinte-modernista-de-sant-pau--history.mp3",
           "hash": "68fc650eca"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/recinte-modernista-de-sant-pau.mp3",
+          "hash": "c374cbadeb"
+        }
       }
     },
     "sagrada-familia": {
@@ -67,6 +73,12 @@
         "history": {
           "file": "audio/es/sagrada-familia--history.mp3",
           "hash": "b533e553f1"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/sagrada-familia.mp3",
+          "hash": "231b1543c0"
         }
       }
     },
@@ -103,6 +115,12 @@
           "file": "audio/es/casa-mila--art.mp3",
           "hash": "15dc524447"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/casa-mila.mp3",
+          "hash": "5408cdefeb"
+        }
       }
     },
     "casa-batllo": {
@@ -137,6 +155,12 @@
         "art": {
           "file": "audio/es/casa-batllo--art.mp3",
           "hash": "dbabc41aff"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/casa-batllo.mp3",
+          "hash": "a467e65379"
         }
       }
     },
@@ -173,6 +197,12 @@
           "file": "audio/es/mercat-de-la-llibertat--local.mp3",
           "hash": "941606a9d0"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/mercat-de-la-llibertat.mp3",
+          "hash": "1f57320087"
+        }
       }
     },
     "placa-del-sol": {
@@ -207,6 +237,12 @@
         "history": {
           "file": "audio/es/placa-del-sol--history.mp3",
           "hash": "783e6fd7ef"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/placa-del-sol.mp3",
+          "hash": "4675841b4a"
         }
       }
     },
@@ -252,6 +288,12 @@
           "file": "audio/es/palau-de-la-musica-catalana--culture.mp3",
           "hash": "d0f847c05c"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/palau-de-la-musica-catalana.mp3",
+          "hash": "f4d520be56"
+        }
       }
     },
     "mercat-de-santa-caterina": {
@@ -286,6 +328,12 @@
         "architecture": {
           "file": "audio/es/mercat-de-santa-caterina--architecture.mp3",
           "hash": "e7fb2ca1d8"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/mercat-de-santa-caterina.mp3",
+          "hash": "8777b35ce2"
         }
       }
     },
@@ -322,6 +370,12 @@
           "file": "audio/es/barcelona-cathedral--architecture.mp3",
           "hash": "b5b274aed2"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/barcelona-cathedral.mp3",
+          "hash": "7792af2c6c"
+        }
       }
     },
     "placa-del-rei": {
@@ -347,6 +401,12 @@
         "history": {
           "file": "audio/es/placa-del-rei--history.mp3",
           "hash": "907bfb8538"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/placa-del-rei.mp3",
+          "hash": "936f51226e"
         }
       }
     },
@@ -392,6 +452,12 @@
           "file": "audio/es/santa-maria-del-mar--culture.mp3",
           "hash": "28a0e5703d"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/santa-maria-del-mar.mp3",
+          "hash": "b8d6b084ee"
+        }
       }
     },
     "el-born-centre-de-cultura": {
@@ -417,6 +483,12 @@
         "history": {
           "file": "audio/es/el-born-centre-de-cultura--history.mp3",
           "hash": "83c55bb074"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/el-born-centre-de-cultura.mp3",
+          "hash": "24264056d8"
         }
       }
     },
@@ -453,6 +525,12 @@
           "file": "audio/es/museu-picasso--history.mp3",
           "hash": "d438314588"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/museu-picasso.mp3",
+          "hash": "f5a2efd4e6"
+        }
       }
     },
     "macba": {
@@ -487,6 +565,12 @@
         "local": {
           "file": "audio/es/macba--local.mp3",
           "hash": "2e6f813e86"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/macba.mp3",
+          "hash": "c0b4665c5b"
         }
       }
     },
@@ -523,6 +607,12 @@
           "file": "audio/es/carrer-de-blai--local.mp3",
           "hash": "1263f6cd88"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/carrer-de-blai.mp3",
+          "hash": "f24b5a4f8d"
+        }
       }
     },
     "mercat-de-sant-antoni": {
@@ -557,6 +647,12 @@
         "local": {
           "file": "audio/es/mercat-de-sant-antoni--local.mp3",
           "hash": "013684f333"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/mercat-de-sant-antoni.mp3",
+          "hash": "40d5f85ace"
         }
       }
     },
@@ -593,6 +689,12 @@
           "file": "audio/es/parc-de-la-ciutadella--history.mp3",
           "hash": "3394bf66d2"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/parc-de-la-ciutadella.mp3",
+          "hash": "59f2c440e0"
+        }
       }
     },
     "barceloneta-beach": {
@@ -627,6 +729,12 @@
         "local": {
           "file": "audio/es/barceloneta-beach--local.mp3",
           "hash": "58c544061d"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/barceloneta-beach.mp3",
+          "hash": "994d689812"
         }
       }
     },
@@ -672,6 +780,12 @@
           "file": "audio/es/park-guell--art.mp3",
           "hash": "ab40b68d6c"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/park-guell.mp3",
+          "hash": "7355c56e43"
+        }
       }
     },
     "placa-sant-felip-neri": {
@@ -706,6 +820,12 @@
         "culture": {
           "file": "audio/es/placa-sant-felip-neri--culture.mp3",
           "hash": "1012ca238d"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/placa-sant-felip-neri.mp3",
+          "hash": "679aa14eea"
         }
       }
     },
@@ -751,6 +871,12 @@
           "file": "audio/es/arc-de-triomf--outdoors.mp3",
           "hash": "638c56eed2"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/arc-de-triomf.mp3",
+          "hash": "255723a6cd"
+        }
       }
     },
     "placa-reial": {
@@ -795,6 +921,12 @@
           "file": "audio/es/placa-reial--history.mp3",
           "hash": "68106b5602"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/placa-reial.mp3",
+          "hash": "a9f9b10466"
+        }
       }
     },
     "temple-august": {
@@ -821,6 +953,12 @@
           "file": "audio/es/temple-august--history.mp3",
           "hash": "18df6c1721"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/temple-august.mp3",
+          "hash": "5faa871c63"
+        }
       }
     },
     "fossar-moreres": {
@@ -846,6 +984,12 @@
         "history": {
           "file": "audio/es/fossar-moreres--history.mp3",
           "hash": "b92ac81a51"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/fossar-moreres.mp3",
+          "hash": "ec2d3363e0"
         }
       }
     },
@@ -891,6 +1035,12 @@
           "file": "audio/es/placa-sant-jaume--sports.mp3",
           "hash": "99eea6a7dd"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/placa-sant-jaume.mp3",
+          "hash": "a95e1858f4"
+        }
       }
     },
     "refugi-307": {
@@ -916,6 +1066,12 @@
         "history": {
           "file": "audio/es/refugi-307--history.mp3",
           "hash": "3298fdc2ab"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/refugi-307.mp3",
+          "hash": "ce82c99752"
         }
       }
     },
@@ -961,6 +1117,12 @@
           "file": "audio/es/antic-hospital--outdoors.mp3",
           "hash": "5857e05dca"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/antic-hospital.mp3",
+          "hash": "86179b4df1"
+        }
       }
     },
     "palau-guell": {
@@ -995,6 +1157,12 @@
         "art": {
           "file": "audio/es/palau-guell--art.mp3",
           "hash": "9529eb5fbb"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/palau-guell.mp3",
+          "hash": "3c16ca816e"
         }
       }
     },
@@ -1031,6 +1199,12 @@
           "file": "audio/es/casa-vicens--art.mp3",
           "hash": "1481a25313"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/casa-vicens.mp3",
+          "hash": "9ee02e8519"
+        }
       }
     },
     "drassanes": {
@@ -1066,6 +1240,12 @@
           "file": "audio/es/drassanes--architecture.mp3",
           "hash": "b19e0c6ede"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/drassanes.mp3",
+          "hash": "1983541407"
+        }
       }
     },
     "casa-punxes": {
@@ -1091,6 +1271,12 @@
         "architecture": {
           "file": "audio/es/casa-punxes--architecture.mp3",
           "hash": "17e5ba160a"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/casa-punxes.mp3",
+          "hash": "36cc9357b2"
         }
       }
     },
@@ -1127,6 +1313,12 @@
           "file": "audio/es/fundacio-tapies--architecture.mp3",
           "hash": "d0cf1ded9d"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/fundacio-tapies.mp3",
+          "hash": "7a8639291c"
+        }
       }
     },
     "cccb": {
@@ -1161,6 +1353,12 @@
         "local": {
           "file": "audio/es/cccb--local.mp3",
           "hash": "3dd0fa766a"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/cccb.mp3",
+          "hash": "1010ec3762"
         }
       }
     },
@@ -1197,6 +1395,12 @@
           "file": "audio/es/rambla-raval--art.mp3",
           "hash": "832bc06602"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/rambla-raval.mp3",
+          "hash": "bf67cf3c24"
+        }
       }
     },
     "cap-barcelona": {
@@ -1231,6 +1435,12 @@
         "outdoors": {
           "file": "audio/es/cap-barcelona--outdoors.mp3",
           "hash": "9e4ef13387"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/cap-barcelona.mp3",
+          "hash": "1d2d5bdeb0"
         }
       }
     },
@@ -1276,6 +1486,12 @@
           "file": "audio/es/placa-vila-gracia--architecture.mp3",
           "hash": "c373b2be71"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/placa-vila-gracia.mp3",
+          "hash": "c17ec24125"
+        }
       }
     },
     "placa-virreina": {
@@ -1311,6 +1527,12 @@
           "file": "audio/es/placa-virreina--outdoors.mp3",
           "hash": "a86febbabe"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/placa-virreina.mp3",
+          "hash": "3c0c9e8c2a"
+        }
       }
     },
     "mercat-concepcio": {
@@ -1345,6 +1567,12 @@
         "local": {
           "file": "audio/es/mercat-concepcio--local.mp3",
           "hash": "904d952c56"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/mercat-concepcio.mp3",
+          "hash": "5cd901e940"
         }
       }
     },
@@ -1390,6 +1618,12 @@
           "file": "audio/es/mercat-barceloneta--architecture.mp3",
           "hash": "0c1fb97a70"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/mercat-barceloneta.mp3",
+          "hash": "a81ce90701"
+        }
       }
     },
     "mercat-abaceria": {
@@ -1425,6 +1659,12 @@
           "file": "audio/es/mercat-abaceria--local.mp3",
           "hash": "46a8c3a29a"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/mercat-abaceria.mp3",
+          "hash": "108981818b"
+        }
       }
     },
     "mercat-ninot": {
@@ -1450,6 +1690,12 @@
         "food": {
           "file": "audio/es/mercat-ninot--food.mp3",
           "hash": "8323bae142"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/mercat-ninot.mp3",
+          "hash": "d93351fd6d"
         }
       }
     },
@@ -1478,6 +1724,12 @@
           "file": "audio/es/bunkers-carmel--outdoors.mp3",
           "hash": "757747d53f"
         }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/bunkers-carmel.mp3",
+          "hash": "e89d0fef54"
+        }
       }
     },
     "port-vell": {
@@ -1503,6 +1755,12 @@
         "outdoors": {
           "file": "audio/es/port-vell--outdoors.mp3",
           "hash": "c2816a9159"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/port-vell.mp3",
+          "hash": "3926da2a87"
         }
       }
     },
@@ -1538,6 +1796,12 @@
         "art": {
           "file": "audio/es/parc-estacio-nord--art.mp3",
           "hash": "2c1217aa13"
+        }
+      },
+      "audioLong": {
+        "base": {
+          "file": "audio/es/long/parc-estacio-nord.mp3",
+          "hash": "e965ded44c"
         }
       }
     },

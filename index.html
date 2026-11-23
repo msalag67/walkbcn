@@ -1435,7 +1435,7 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha256-Hk4dIpcqOSb0hZjgyvFOP+cEmDXUKKNE/tT542ZbNQg=" crossorigin=""></script>
-<script src="data/versions.js?v=3b601293"></script>
+<script src="data/versions.js?v=363b5970"></script>
 <script src="data/stops.js?v=1061714f"></script>
 <script src="data/cards.js?v=3aa26f13"></script>
 <script src="data/activities.js?v=311590b9"></script>
@@ -1677,7 +1677,10 @@ function storyText(s, angle = null, length = plan.length) {
   if (lang !== 'en' && local?.stories?.[key]) {
     const v = local.stories[key];
     text = v[length] || v.normal;
-    audio = v[length] && length !== 'normal' ? null : withHash(local.audio?.[key]?.file, local.audio?.[key]?.hash);
+    // Recorded audio: the normal version in `audio`, the long one in `audioLong` (only some
+    // languages have it); a length without a recording uses the device voice.
+    const rec = !v[length] || length === 'normal' ? local.audio?.[key] : length === 'long' ? local.audioLong?.[key] : null;
+    audio = withHash(rec?.file, rec?.hash);
     tip = local.tip || tip;
     speech = langMeta(lang).speech;
   } else if (length !== 'normal') {
