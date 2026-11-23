@@ -13,7 +13,7 @@ await db.exec(fs.readFileSync(SQL, "utf8"));
 const tokens = new Map(), refresh = new Map();
 const session = (uid) => { const at = "at-" + crypto.randomUUID(), rt = "rt-" + crypto.randomUUID(); tokens.set(at, uid); refresh.set(rt, uid);
   return { access_token: at, refresh_token: rt, token_type: "bearer", expires_in: 3600, expires_at: Math.floor(Date.now() / 1000) + 3600, user: { id: uid, is_anonymous: true } }; };
-const ARGS = { mp_create_room: ["p_challenge", "p_mode", "p_name", "p_duration"], mp_ta_hint: ["p_code", "p_mission"], mp_ta_complete: ["p_code", "p_mission", "p_method"], mp_join_room: ["p_code", "p_name"], mp_set_ready: ["p_code", "p_ready"], mp_start: ["p_code"], mp_leave: ["p_code"], mp_state: ["p_code"], mp_hint: ["p_code", "p_mission", "p_n"], mp_complete: ["p_code", "p_mission", "p_method"] };
+const ARGS = { mp_create_room: ["p_challenge", "p_mode", "p_name", "p_duration"], mp_ta_hint: ["p_code", "p_mission"], mp_ta_complete: ["p_code", "p_mission", "p_method"], mp_bb_complete: ["p_code", "p_cell", "p_method"], mp_join_room: ["p_code", "p_name"], mp_set_ready: ["p_code", "p_ready"], mp_start: ["p_code"], mp_leave: ["p_code"], mp_state: ["p_code"], mp_hint: ["p_code", "p_mission", "p_n"], mp_complete: ["p_code", "p_mission", "p_method"] };
 const send = (res, code, body) => { res.writeHead(code, { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "*", "Access-Control-Allow-Methods": "POST, OPTIONS" }); res.end(body === undefined ? "" : JSON.stringify(body)); };
 http.createServer(async (req, res) => {
   if (req.method === "OPTIONS") return send(res, 204);

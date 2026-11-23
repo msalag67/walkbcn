@@ -119,6 +119,12 @@ for (const e of W.WALKBCN_DISCOVERIES || []) {
     if (m[4] !== ta.missions.map(x => x.points).join(',')) fail(`time attack ${m[1]}: points differ between SQL and data`);
     ta.missions.forEach((x, i) => { if (!ids.has(x.stop)) fail(`time attack ${m[1]} target ${i + 1}: unknown stop`); for (const l of langs) { if (!x.q?.prompt?.[l] || !x.hint?.[l]) fail(`time attack ${m[1]} target ${i + 1}: text missing in ${l}`); (x.q.options || []).forEach(o => { if (!o[l]) fail(`time attack ${m[1]} target ${i + 1}: option missing in ${l}`); }); } if (!(x.q.answer >= 0 && x.q.answer < x.q.options.length)) fail(`time attack ${m[1]} target ${i + 1}: answer out of range`); });
   }
+  for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'bingo_battle', null\)/g)) {
+    const b = (W.WALKBCN_BINGO_BATTLES || []).find(x => x.id === m[1]);
+    if (!b) { fail(`multiplayer: unknown bingo battle ${m[1]}`); continue; }
+    if (b.board.length !== +m[2] || b.board.length !== 9) fail(`bingo battle ${m[1]}: needs 9 squares in SQL and data`);
+    b.board.forEach((x, i) => { if (!x || !ids.has(x.stop)) fail(`bingo battle ${m[1]} square ${i + 1}: unknown square`); });
+  }
   for (const m of sql.matchAll(/\('([\w-]+)', (\d+), '\{([\d,]+)\}', 'speed_race', null\)/g)) {
     const c = (W.WALKBCN_CHALLENGES || []).find(x => x.id === m[1]);
     if (!c) { fail(`multiplayer: unknown challenge ${m[1]}`); continue; }

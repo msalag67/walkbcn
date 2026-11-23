@@ -20,7 +20,10 @@ insert into public.mp_modes (mode, config) values
   ('speed_race', '{"min_players": 2, "max_players": 5, "hint_penalty_s": 60}'),
   -- Time Attack: points per mission come from mp_challenges.points; an extra clue costs
   -- hint_cost points on that mission (never below min_points); the host picks a duration.
-  ('time_attack', '{"min_players": 2, "max_players": 5, "hint_cost": 50, "min_points": 50, "durations": [30, 60, 90]}')
+  ('time_attack', '{"min_players": 2, "max_players": 5, "hint_cost": 50, "min_points": 50, "durations": [30, 60, 90]}'),
+  -- Bingo Battle: the first player with a full line (row, column or diagonal of the 3 × 3 board)
+  -- wins; the game also ends when time runs out, then without a winner.
+  ('bingo_battle', '{"min_players": 2, "max_players": 5, "durations": [60], "win": "first_line"}')
 on conflict (mode) do update set config = excluded.config;
 
 -- Challenges that can be played in a room: how many missions and extra clues each has
@@ -34,7 +37,8 @@ alter table public.mp_challenges add column if not exists mode text not null def
 alter table public.mp_challenges add column if not exists points int[];   -- Time Attack: points per mission
 insert into public.mp_challenges (id, missions, clues, mode, points) values
   ('modernisme-hunt', 4, '{2,2,2,2}', 'speed_race', null),
-  ('modernist-hunter', 7, '{2,2,2,2,2,2,2}', 'time_attack', '{150,100,100,150,150,200,150}')
+  ('modernist-hunter', 7, '{2,2,2,2,2,2,2}', 'time_attack', '{150,100,100,150,150,200,150}'),
+  ('rambla-bingo-battle', 9, '{1,1,1,1,1,1,1,1,1}', 'bingo_battle', null)
 on conflict (id) do update set missions = excluded.missions, clues = excluded.clues, mode = excluded.mode, points = excluded.points;
 
 -- ---------- tables ----------
@@ -51,7 +55,9 @@ create table if not exists public.mp_rooms (
   finished_at timestamptz,
   expires_at timestamptz not null default now() + interval '24 hours'
 );
-alter table public.mp_rooms add column if not exists ends_at timestamptz;   -- Time Attack: scoring closes then
+alter table public.mp_rooms add column if not exists ends_at timestamptz;   -- Time Attack / Bingo Battle: scoring closes then
+alter table public.mp_rooms add column if not exists winner_id uuid;         -- Bingo Battle
+alter table public.mp_rooms add column if not exists winner_line int[];      -- Bingo Battle: the winning cells
 create table if not exists public.mp_players (
   room_id uuid not null references public.mp_rooms(id) on delete cascade,
   user_id uuid not null,
@@ -129,10 +135,11 @@ begin
   select config into cfg from mp_modes where mode = p_mode;
   if cfg is null then raise exception 'unknown_mode'; end if;
   if not exists (select 1 from mp_challenges where id = p_challenge and mode = p_mode) then raise exception 'unknown_challenge'; end if;
-  if p_mode = 'time_attack' then
+  if cfg ? 'durations' then   -- timed modes (Time Attack, Bingo Battle)
     if p_duration is null or not (cfg->'durations') @> to_jsonb(p_duration) then raise exception 'bad_duration'; end if;
-    cfg := cfg || jsonb_build_object('duration_min', p_duration, 'points', (select to_jsonb(points) from mp_challenges where id = p_challenge));
+    cfg := cfg || jsonb_build_object('duration_min', p_duration);
   end if;
+  if p_mode = 'time_attack' then cfg := cfg || jsonb_build_object('points', (select to_jsonb(points) from mp_challenges where id = p_challenge)); end if;
   delete from mp_rooms where expires_at < now() - interval '1 day';   -- lazy clean-up
   loop
     c := '';
@@ -187,7 +194,7 @@ begin
   if n < (r.config->>'min_players')::int then raise exception 'not_enough_players'; end if;
   if notready > 0 then raise exception 'not_all_ready'; end if;
   update mp_rooms set status = 'running', started_at = now(),
-    ends_at = case when r.mode = 'time_attack' then now() + make_interval(mins => (r.config->>'duration_min')::int) end where id = r.id;
+    ends_at = case when r.config ? 'duration_min' then now() + make_interval(mins => (r.config->>'duration_min')::int) end where id = r.id;
   update mp_players set status = 'playing' where room_id = r.id and status = 'waiting';
 end $$;
 
@@ -229,6 +236,7 @@ begin
     'host', r.host_id = auth.uid(), 'started_at', r.started_at, 'finished_at', r.finished_at, 'ends_at', r.ends_at, 'server_now', now(),
     'my_done', coalesce((select jsonb_agg(mission order by mission) from mp_events where room_id = r.id and user_id = auth.uid() and kind = 'complete'), '[]'::jsonb),
     'my_hints', coalesce((select jsonb_agg(distinct mission) from mp_events where room_id = r.id and user_id = auth.uid() and kind = 'hint'), '[]'::jsonb),
+    'winner', (select name from mp_players where room_id = r.id and user_id = r.winner_id), 'winner_me', r.winner_id = auth.uid(), 'winner_line', to_jsonb(r.winner_line),
     'players', coalesce((select jsonb_agg(jsonb_build_object(
       'me', p.user_id = auth.uid(), 'name', p.name, 'host', p.user_id = r.host_id, 'ready', p.ready, 'status', p.status,
       'online', p.last_seen > now() - interval '20 seconds', 'progress', p.progress, 'hints', p.hints, 'alt', p.alt,
@@ -317,13 +325,47 @@ begin
   return pts;
 end $$;
 
+-- ---------- Bingo Battle rules ----------
+-- Any square, any order, once each, only with a location check, while the game runs. The room
+-- row is locked while a square is counted, so two deciding squares at the same moment are
+-- settled one after the other: only the first full line wins and the game ends there.
+create or replace function public.mp_bb_lines() returns int[][] language sql immutable as $$
+  select '{{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}}'::int[][]
+$$;
+create or replace function public.mp_bb_complete(p_code text, p_cell int, p_method text)
+returns jsonb language plpgsql security definer set search_path = public as $$
+declare r public.mp_rooms; p public.mp_players; cells int[]; lines int[][] := mp_bb_lines(); i int; line int[];
+begin
+  r := mp_room_for(p_code);
+  select * into r from mp_rooms where id = r.id for update;           -- one square at a time per room
+  select * into p from mp_players where room_id = r.id and user_id = auth.uid();
+  if r.mode <> 'bingo_battle' then raise exception 'wrong_mode'; end if;
+  if r.status <> 'running' or p.status <> 'playing' then raise exception 'not_playing'; end if;
+  if now() >= r.ends_at then raise exception 'time_up'; end if;
+  if p_cell < 0 or p_cell >= (r.config->>'missions')::int then raise exception 'wrong_mission'; end if;
+  if p_method <> 'gps' then raise exception 'location_required'; end if;
+  insert into mp_events (room_id, user_id, mission, kind, method) values (r.id, auth.uid(), p_cell, 'complete', p_method) on conflict do nothing;
+  if not found then return jsonb_build_object('counted', false); end if;
+  update mp_players set progress = progress + 1, last_score_at = now(), last_seen = now() where room_id = r.id and user_id = auth.uid();
+  select array_agg(mission) into cells from mp_events where room_id = r.id and user_id = auth.uid() and kind = 'complete';
+  for i in 1..array_length(lines, 1) loop
+    line := array[lines[i][1], lines[i][2], lines[i][3]];
+    if line <@ cells then
+      update mp_rooms set status = 'finished', finished_at = now(), winner_id = auth.uid(), winner_line = line where id = r.id;
+      update mp_players set status = 'finished', finished_at = now() where room_id = r.id and status = 'playing';
+      return jsonb_build_object('counted', true, 'line', line);
+    end if;
+  end loop;
+  return jsonb_build_object('counted', true);
+end $$;
+
 -- ---------- rights ----------
 revoke all on function public.mp_room_for(text, boolean), public.mp_maybe_finish(uuid) from public, anon, authenticated;
 grant execute on function public.mp_create_room(text, text, text, int), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
   public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text),
-  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text)
+  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text), public.mp_bb_complete(text, int, text)
   to authenticated;
 revoke execute on function public.mp_create_room(text, text, text, int), public.mp_join_room(text, text), public.mp_set_ready(text, boolean),
   public.mp_start(text), public.mp_leave(text), public.mp_state(text), public.mp_hint(text, int, int), public.mp_complete(text, int, text),
-  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text)
+  public.mp_ta_hint(text, int), public.mp_ta_complete(text, int, text), public.mp_bb_complete(text, int, text)
   from public, anon;

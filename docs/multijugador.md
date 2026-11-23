@@ -38,3 +38,14 @@ El multijugador usa **Supabase** (plan gratuito). No hay servidor propio: la web
 - **DEMO** («Probar DEMO»): en un solo dispositivo, sin sala ni servidor; mismas misiones, preguntas y puntos, «Simular llegada», 3 rivales simulados con un horario fijo, +10 min, terminar y reiniciar. No envía ni guarda nada.
 - **Para activarlo** hay que volver a ejecutar `supabase/multiplayer.sql` en el SQL Editor (añade columnas y funciones; sustituye `mp_create_room` por una versión con duración, compatible con Speed Race). Hacerlo **antes** de publicar la web nueva.
 - Pruebas: `PGLITE=<carpeta> node evals/time-attack-e2e.mjs` (DEMO sin servidor + partida con dos navegadores contra el SQL en PGlite).
+
+## Bingo Battle (fase 3D)
+
+- De 2 a 5 jugadores. Mismas salas, invitaciones, sala de espera, reconexión, sincronización y GPS que los otros modos. Todos tienen el mismo tablero de 3 × 3 (las casillas de «Bingo de la Rambla y el Raval») y las hacen en el orden que quieran.
+- **Gana la primera línea confirmada** (fila, columna o diagonal). Lo decide el servidor en `mp_bb_complete`: bloquea la sala (`select … for update`), apunta la casilla y, si completa una línea, cierra la partida con `winner_id` y `winner_line`. Dos casillas decisivas a la vez se procesan una detrás de otra: nunca hay dos ganadores.
+- Solo cuentan las casillas con la ubicación comprobada y la respuesta correcta; una casilla repetida no cuenta dos veces.
+- Duración: 60 minutos (`ends_at`). Si nadie hace línea, la partida termina **sin ganador** y se conservan las casillas de cada uno.
+- Durante la partida solo se ve cuántas casillas lleva cada rival (nunca cuáles). Al terminar se muestra la línea ganadora.
+- **DEMO**: en un solo dispositivo, sin sala ni servidor; «Simular llegada», 3 rivales simulados, «Avanzar a los rivales», «Rival cerca de hacer línea», terminar, reiniciar y salir. No envía ni guarda nada.
+- **Para activarlo** hay que volver a ejecutar `supabase/multiplayer.sql` en el SQL Editor (añade el modo, el tablero, dos columnas en `mp_rooms` y la función `mp_bb_complete`; se puede ejecutar varias veces). Hacerlo **antes** de publicar la web nueva.
+- Pruebas: `PGLITE=<carpeta> node evals/bingo-battle-e2e.mjs` (DEMO sin servidor + partida real con dos navegadores, línea ganadora y fin de tiempo sin ganador). `REAL=1` usa el proyecto real (sin la parte del fin de tiempo).

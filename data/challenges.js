@@ -200,4 +200,19 @@
       ],
     },
   ];
+
+  // ---- Bingo Battle boards (Phase 3D): the solo Rambla & Raval bingo's checked squares, in a
+  // fixed layout shared by every player of a room. The layout was chosen so the 8 lines take a
+  // similar walk (about 13–17 min each), with no obviously best line. The solo bingo is unchanged.
+  const bingo = window.WALKBCN_CHALLENGES.find((c) => c.id === 'rambla-bingo').missions;
+  const sq = (id) => bingo.find((m) => m.stop === id);
+  window.WALKBCN_BINGO_BATTLES = [
+    {
+      id: 'rambla-bingo-battle', img: 'La Boquería vista frontal entrada.png',
+      title: L('Rambla & Raval Bingo Battle', 'Bingo Battle de la Rambla i el Raval', 'Bingo Battle de la Rambla y el Raval', 'Bingo Battle de la Rambla et du Raval', 'Rambla- und Raval-Bingo-Battle', 'Bingo Battle della Rambla e del Raval', '兰布拉与拉瓦尔宾果对战'),
+      start: { stop: 'liceu', label: L('La Rambla, in front of the Liceu', 'La Rambla, davant del Liceu', 'La Rambla, frente al Liceu', 'La Rambla, devant le Liceu', 'La Rambla, vor dem Liceu', 'La Rambla, davanti al Liceu', '兰布拉大道，利塞乌大剧院门前') },
+      duration: 60,
+      board: ['macba', 'mercat-boqueria', 'font-canaletes', 'sant-pau-del-camp', 'placa-reial', 'placa-orwell', 'antic-hospital', 'drassanes', 'liceu'].map(sq),
+    },
+  ];
 })();
