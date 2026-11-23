@@ -228,7 +228,7 @@ for (const [id, g] of Object.entries(W.WALKBCN_STORIES || {})) {
   for (const v of [g.base, ...Object.values(g.variants || {})]) if (v?.audio) { audioRefs++; if (!exists(v.audio)) fail(`audio missing: ${v.audio} (${id})`); }
 }
 for (const [l, d] of Object.entries(W.WALKBCN_I18N || {})) {
-  for (const [id, s] of Object.entries(d.stops || {})) for (const a of Object.values(s.audio || {})) { audioRefs++; if (!exists(a.file)) fail(`audio missing: ${a.file} (${l}/${id})`); }
+  for (const [id, s] of Object.entries(d.stops || {})) for (const a of [...Object.values(s.audio || {}), ...Object.values(s.audioLong || {})]) { audioRefs++; if (!exists(a.file)) fail(`audio missing: ${a.file} (${l}/${id})`); }
 }
 
 // Recordings that no longer match their text (audit F5/F6, 22 Nov 2026): each recording stores

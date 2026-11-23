@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Record the Spanish standard ("medium") stories with the ElevenLabs voice.
+"""Record the Spanish stories with the ElevenLabs voice.
 
 Python twin of `node scripts/translate.mjs --audio --lang=es`, for Macs without Node.
 Same voice (RxPoOxDaJiOdJGnMMaql), same model, same file names and same hashes,
@@ -8,6 +8,11 @@ so either script can pick up where the other left off.
     python3 scripts/record-es-elevenlabs.py            # records what is missing or out of date
     python3 scripts/record-es-elevenlabs.py --force    # re-records everything
     python3 scripts/record-es-elevenlabs.py --dry-run  # only counts stories and characters
+    python3 scripts/record-es-elevenlabs.py --long     # the long (~2 min) versions instead
+
+Standard ("normal") recordings go to entry.audio and audio/es/<id>.mp3, as in translate.mjs.
+Long ones go to entry.audioLong and audio/es/long/<id>.mp3. With --long the audio guide's
+stories (one per stop, "base") are recorded first, then the routes' interest versions.
 
 The key is read from ELEVENLABS_API_KEY or asked for (hidden) when the script starts.
 Progress is saved after every stop; if it stops, run the same command again.
@@ -21,6 +26,10 @@ MODEL = "eleven_multilingual_v2"
 I18N = os.path.join(ROOT, "content", "i18n")
 FORCE = "--force" in sys.argv
 DRY = "--dry-run" in sys.argv
+LONG = "--long" in sys.argv
+LENGTH = "long" if LONG else "normal"
+FIELD = "audioLong" if LONG else "audio"
+SUBDIR = f"audio/{LANG}/long" if LONG else f"audio/{LANG}"
 
 
 def h(text):
@@ -95,16 +104,22 @@ def main():
         if not entry:
             continue
         for k, v in entry["stories"].items():
-            spoken = f"{name}. {v['normal']}"
-            rel = f"audio/{LANG}/{sid if k == 'base' else f'{sid}--{k}'}.mp3"
+            if not v.get(LENGTH):
+                continue
+            spoken = f"{name}. {v[LENGTH]}"
+            rel = f"{SUBDIR}/{sid if k == 'base' else f'{sid}--{k}'}.mp3"
             hh = h(f"{VOICE}|{spoken}")
-            prev = (entry.get("audio") or {}).get(k)
+            prev = (entry.get(FIELD) or {}).get(k)
             if not FORCE and prev and prev.get("file") == rel and prev.get("hash") == hh and os.path.exists(os.path.join(ROOT, rel)):
                 continue
             todo.append((sid, name, k, spoken, rel, hh))
 
+    todo.sort(key=lambda t: t[2] != "base")  # one per stop first: that is what the audio guide plays
     chars = sum(len(t[3]) for t in todo)
-    print(f"Spanish, ElevenLabs voice {VOICE}: {len(todo)} stories to record, {chars:,} characters.")
+    print(f"Spanish {LENGTH}, ElevenLabs voice {VOICE}: {len(todo)} stories to record, {chars:,} characters.")
+    if LONG:
+        guide = [t for t in todo if t[2] == "base"]
+        print(f"  first the audio guide: {len(guide)} stories, {sum(len(t[3]) for t in guide):,} characters")
     if DRY or not todo:
         return
     key = os.environ.get("ELEVENLABS_API_KEY") or getpass.getpass("ElevenLabs API key (hidden): ").strip()
@@ -115,23 +130,24 @@ def main():
     for sid, name, k, spoken, rel, hh in todo:
         entry = data["stops"][sid]
         try:
+            os.makedirs(os.path.dirname(os.path.join(ROOT, rel)), exist_ok=True)
             record(key, spoken, os.path.join(ROOT, rel))
         except RuntimeError as e:
             save(data)
             stamp_versions()
             sys.exit(f"\nStopped at {name} ({k}): {e}\n{done} recorded and saved. Run the same command again to continue.")
-        prev = (entry.get("audio") or {}).get(k)
+        prev = (entry.get(FIELD) or {}).get(k)
         if prev and prev.get("file") and prev["file"] != rel:
             try:
                 os.remove(os.path.join(ROOT, prev["file"]))
             except FileNotFoundError:
                 pass
-        entry.setdefault("audio", {})[k] = {"file": rel, "hash": hh}
+        entry.setdefault(FIELD, {})[k] = {"file": rel, "hash": hh}
         done += 1
         save(data)
         print(f"  [{done}/{len(todo)}] {name} ({k})")
     stamp_versions()
-    print(f"Done: {done} Spanish stories recorded.")
+    print(f"Done: {done} Spanish {LENGTH} stories recorded.")
 
 
 if __name__ == "__main__":
