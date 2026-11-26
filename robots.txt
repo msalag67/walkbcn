@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://msalag67.github.io/walkbcn/sitemap.xml
