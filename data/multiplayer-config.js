@@ -5,4 +5,8 @@
 window.WALKBCN_MP = {
   url: 'https://bbeeuykvrmpixztjtvod.supabase.co',
   anonKey: 'sb_publishable_rzmMM9GGOyZd5Lbwd3_3Gg_FOm0K5Mv',    // Project Settings → API → anon public key
+  // Accounts (optional, supabase/accounts.sql): email code and password always work once the
+  // SQL has run. Add 'google' and/or 'apple' here only after enabling them in Supabase →
+  // Authentication → Providers; until then their buttons stay hidden. Guide: docs/cuentas.md
+  providers: [],
 };

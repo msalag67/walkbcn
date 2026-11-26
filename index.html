@@ -64,8 +64,13 @@
   .head-actions { display: flex; align-items: center; gap: 8px; }
   .head-about { padding: 7px 14px 7px 10px; white-space: nowrap; }
   @media (max-width: 640px) { .head-about { width: 44px; padding: 0; justify-content: center; } .head-about svg { width: 22px; height: 22px; } .head-about span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
-  @media (max-width: 359px) { .head-actions { gap: 6px; } #langCode { display: none; } #langBtn { padding: 7px 10px; } }
+  @media (max-width: 439px) { .head-actions { gap: 6px; } #langCode { display: none; } #langBtn { padding: 7px 10px; } }
   .head-about svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+  .head-acc { padding: 7px 14px 7px 10px; white-space: nowrap; }
+  .head-acc svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+  .head-acc.signed { border-color: var(--accent); }
+  .head-acc.signed svg { stroke: var(--accent); }
+  @media (max-width: 640px) { .head-acc { width: 44px; padding: 0; justify-content: center; } .head-acc svg { width: 22px; height: 22px; } .head-acc span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
   .lang-btn { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 999px; padding: 7px 14px 7px 9px; font: 500 14px var(--sans); cursor: pointer; }
   .lang-btn img, .lang-menu img { width: 22px; height: 16px; border-radius: 2px; object-fit: cover; }
   .lang-menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 1000; background: var(--panel); border: 1px solid var(--line); padding: 6px; min-width: 180px; box-shadow: 0 10px 30px rgba(0,0,0,.6); }
@@ -253,6 +258,22 @@
   .privacy-actions .close { background: #000; color: #fff; }
   .privacy-actions .about-write { border: 1px solid #000; color: #000; border-radius: 999px; padding: 10px 16px; font: 500 15px var(--sans); text-decoration: none; }
   #about:not([data-form]) .about-write { display: none; }
+  .acc .acc-col { display: grid; gap: 10px; margin-top: 14px; }
+  .acc .acc-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; border: 1px solid currentColor; background: transparent; color: inherit; border-radius: 999px; padding: 12px 16px; font: 600 15px var(--sans); cursor: pointer; }
+  .acc .acc-btn.acc-main { background: var(--paper-ink); color: var(--paper); border-color: var(--paper-ink); }
+  .acc .acc-btn svg { width: 18px; height: 18px; flex: none; }
+  .acc .acc-btn:disabled { opacity: .55; cursor: progress; }
+  .acc .acc-or { display: flex; align-items: center; gap: 10px; font-size: 13px; opacity: .7; margin: 6px 0 0; }
+  .acc .acc-or::before, .acc .acc-or::after { content: ""; flex: 1; border-top: 1px solid currentColor; opacity: .35; }
+  .acc label.acc-field { display: grid; gap: 4px; margin: 0; font-size: 14px; }
+  .acc input[type=email], .acc input[type=password], .acc input[type=text] { height: auto; min-height: 0; line-height: 1.3; width: 100%; box-sizing: border-box; font: 16px var(--sans); padding: 11px 12px; border: 1px solid currentColor; border-radius: 10px; background: transparent; color: inherit; }
+  .acc input:focus-visible, .acc .acc-btn:focus-visible, .acc .acc-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .acc .acc-link { background: none; border: 0; padding: 4px 0; color: inherit; text-decoration: underline; font: 500 14px var(--sans); cursor: pointer; justify-self: start; }
+  .acc .acc-msg { padding: 10px 12px; border-radius: 10px; background: rgba(0,38,184,.08); font-size: 14px; margin: 12px 0 0; }
+  .acc .acc-err { padding: 10px 12px; border-radius: 10px; background: rgba(180,35,24,.1); color: #9b1c12; font-size: 14px; margin: 12px 0 0; }
+  .acc .acc-note { font-size: 13px; opacity: .75; }
+  .acc .acc-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-top: 14px; }
+  .acc .acc-row .acc-btn { width: auto; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
   /* ===== Character layer: Barcelona at night ===== */
@@ -1153,6 +1174,7 @@
       <div class="tag" data-i18n="tagline">Your personal walking guide</div>
     </div>
     <div class="head-actions">
+    <button type="button" class="lang-btn head-acc" id="accOpen" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 19.5c1.3-3.3 4-5 7.2-5s5.9 1.7 7.2 5"/></svg><span id="accBtnText" data-i18n="accBtn">Sign in</span></button>
     <button type="button" class="lang-btn head-about" id="aboutHeadOpen"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span data-i18n="aboutShort">About</span></button>
     <div class="lang">
       <button type="button" class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
@@ -1443,6 +1465,12 @@
     </div>
   </dialog>
 
+  <!-- Optional account: sign in to keep progress on any device (supabase/accounts.sql) -->
+  <dialog id="account" class="acc" aria-labelledby="accTitle">
+    <h2 id="accTitle" data-i18n="accTitle">Your WalkBCN account</h2>
+    <div id="accBody"></div>
+  </dialog>
+
   <!-- Report a problem with a stop or a place: opens the team's form, already filled in -->
   <!-- "Adapt my walk": a provisional proposal; the walk on screen only changes on "Apply". -->
   <dialog id="adapt" class="report adapt" aria-labelledby="adaptTitle">
@@ -1476,13 +1504,13 @@
 <script src="data/stops.js?v=1061714f"></script>
 <script src="data/cards.js?v=3aa26f13"></script>
 <script src="data/activities.js?v=311590b9"></script>
-<script src="data/ui.js?v=5067b7db"></script>
+<script src="data/ui.js?v=13552fd4"></script>
 <script src="data/tips.js?v=4dbc081d"></script>
 <script src="data/discoveries.js?v=c47d191e"></script>
 <script src="data/challenges.js?v=7666f843"></script>
 <script src="data/shared-mysteries.js?v=fff6ff01"></script>
 <script src="data/shared-mystery-audio.js?v=f23aead8"></script>
-<script src="data/multiplayer-config.js?v=47d9a49c"></script>
+<script src="data/multiplayer-config.js?v=8fbd0cbb"></script>
 <!-- Pre-generated by scripts/generate.mjs (AI-written story versions + audio). Optional. -->
 <script src="content/stories.js?v=afdf06e4"></script>
 <script>
@@ -1637,6 +1665,7 @@ function loadLearning() {
 let learning = loadLearning();
 function saveLearning() {
   try { localStorage.setItem(LEARNING_KEY, JSON.stringify(learning)); } catch (e) {}
+  accDirty();
 }
 const storyKey = (stopId, angle) => `${stopId}|${angle || 'base'}`;
 function storyRecord(stopId, angle) {
@@ -3208,7 +3237,7 @@ function pickVoice(speech) {
 // Stops listened to the end, remembered in this browser (shown as ✓ on the route).
 const LISTENED_KEY = 'walkbcn_listened_v1';
 let listened = (() => { try { const v = JSON.parse(localStorage.getItem(LISTENED_KEY)); return v && typeof v === 'object' ? v : {}; } catch (e) { return {}; } })();
-function saveListened() { try { localStorage.setItem(LISTENED_KEY, JSON.stringify(listened)); } catch (e) {} }
+function saveListened() { try { localStorage.setItem(LISTENED_KEY, JSON.stringify(listened)); } catch (e) {} accDirty(); }
 const isListened = id => !!listened[id];
 function renderListened() {
   const tag = pl('listenedTag');
@@ -4182,7 +4211,7 @@ const chL = o => (o && typeof o === 'object' ? o[lang] || o.en : o);
 let chSaved = (() => { try { return JSON.parse(localStorage.getItem(CH_KEY)) || {}; } catch (e) { return {}; } })();
 let chDemo = false, chDemoState = {}, chView = { id: null };
 const chStore = () => (chDemo ? chDemoState : chSaved);
-const chSave = () => { if (!chDemo) try { localStorage.setItem(CH_KEY, JSON.stringify(chSaved)); } catch (e) {} };
+const chSave = () => { if (!chDemo) { try { localStorage.setItem(CH_KEY, JSON.stringify(chSaved)); } catch (e) {} accDirty(); } };
 const chById = id => CHALLENGES.find(c => c.id === id);
 const chState = c => (chStore()[c.id] ||= { i: 0, stage: 'start', clues: 1, done: {}, notes: [], finished: false });
 // Each game gets its own variant from a seed (saved with the progress, so "Continue" keeps it;
@@ -4453,6 +4482,278 @@ async function mpSession() {
 const mpRpc = async (fn, args) => mpFetch(`/rest/v1/rpc/${fn}`, args, (await mpSession()).access_token);
 // Server error codes → messages players understand.
 const mpErr = e => { const k = String(e?.message || e).match(/room_not_found|room_full|room_started|not_host|not_enough_players|not_all_ready|name_required|not_in_room/)?.[0]; return k ? t(`mpErr_${k}`) : t('mpErrNet'); };
+
+// ---- Account (optional) ----
+// Signing in keeps what this browser already remembers (stories heard, the learning loop,
+// challenge progress, language) in one row of supabase/accounts.sql, so it follows the visitor
+// to another phone or computer. Everything works without it. Sign-in: an email code, a
+// password, or Google / Apple when they are listed in data/multiplayer-config.js (providers).
+// Uses the same Supabase project as "Play with friends", but its own session: a game room's
+// anonymous player never sees anyone's progress.
+const ACC_KEY = 'walkbcn_account';
+const accReady = () => mpReady();
+const accProviders = () => (Array.isArray(MP.providers) ? MP.providers : []).filter(p => p === 'google' || p === 'apple');
+const accHome = () => location.origin + location.pathname;
+let acc = { s: lsGet(ACC_KEY), view: 'start', usePass: false, email: '', msg: '', err: '', busy: false, syncing: false, syncErr: false, timer: null, pushing: null };
+async function accFetch(path, { method = 'POST', body, token, headers = {} } = {}) {
+  const r = await fetch(MP.url.replace(/\/$/, '') + path, { method, headers: { apikey: MP.anonKey, 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}), ...headers }, body: body === undefined ? undefined : JSON.stringify(body) });
+  const txt = await r.text(); let j = null; try { j = txt ? JSON.parse(txt) : null; } catch (e) {}
+  if (!r.ok) throw Object.assign(new Error(j?.msg || j?.message || j?.error_description || j?.error || `HTTP ${r.status}`), { status: r.status, code: j?.error_code || j?.code || '' });
+  return j;
+}
+function accStore(s) {
+  if (s && !s.expires_at && s.expires_in) s.expires_at = Math.floor(Date.now() / 1000) + Number(s.expires_in);
+  acc.s = s && s.access_token ? s : null;
+  lsSet(ACC_KEY, acc.s);
+  renderAccBtn();
+}
+async function accToken() {
+  const s = acc.s;
+  if (!s) return null;
+  if (s.expires_at * 1000 > Date.now() + 60000) return s.access_token;
+  try { accStore({ ...(await accFetch('/auth/v1/token?grant_type=refresh_token', { body: { refresh_token: s.refresh_token } })) }); return acc.s?.access_token || null; }
+  catch (e) { if (e.status >= 400 && e.status < 500) accStore(null); return null; }
+}
+async function accLoadUser() {
+  const tok = await accToken();
+  if (!tok) return;
+  try { const u = await accFetch('/auth/v1/user', { method: 'GET', token: tok }); acc.s.user = u; lsSet(ACC_KEY, acc.s); } catch (e) {}
+}
+const accEmail = () => acc.s?.user?.email || acc.s?.user?.user_metadata?.email || '';
+function accErrText(e) {
+  const m = String(e?.message || e), c = e?.code || '';
+  if (e instanceof TypeError || /Failed to fetch|NetworkError|Load failed/i.test(m)) return t('accErrNet');
+  if (e?.status === 429 || /rate limit|too many|security purposes/i.test(m) || c === 'over_email_send_rate_limit') return t('accErrRate');
+  if (/invalid login credentials/i.test(m) || c === 'invalid_credentials') return t('accErrLogin');
+  if (/token has expired|otp_expired|invalid otp|token.*invalid/i.test(m) || c === 'otp_expired') return t('accErrCode');
+  if (/at least|weak_password|password should/i.test(m) || c === 'weak_password') return t('accErrShort');
+  if (/already registered|already been registered|user_already_exists/i.test(m) || c === 'user_already_exists') return t('accErrExists');
+  if (/provider is not enabled|unsupported provider|validation_failed.*provider/i.test(m)) return t('accErrProvider');
+  if (/invalid.*email|email.*invalid|email_address_invalid/i.test(m)) return t('accErrEmail');
+  return t('accErrOther', { m: escHtml(m) });
+}
+const accValidEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+
+// What is kept with the account, and how two copies are joined: nothing is ever lost by
+// signing in on a second device; the furthest progress wins.
+const accPayload = () => ({ v: 1, listened, learning: { picks: learning.picks, stories: learning.stories, optOut: learning.optOut }, challenges: chSaved, lang });
+function accMerge(d) {
+  if (!d || typeof d !== 'object') return;
+  for (const [k, v] of Object.entries(d.listened || {})) if (!(listened[k] >= v)) listened[k] = v;
+  const L = d.learning || {};
+  for (const [k, v] of Object.entries(L.picks || {})) learning.picks[k] = Math.max(learning.picks[k] || 0, Number(v) || 0);
+  for (const [k, v] of Object.entries(L.stories || {})) {
+    const r = (learning.stories[k] ||= { played: 0, finished: 0, rating: 0 });
+    r.played = Math.max(r.played || 0, v.played || 0);
+    r.finished = Math.max(r.finished || 0, v.finished || 0);
+    if (!r.rating && v.rating) r.rating = v.rating;
+  }
+  if (L.optOut) learning.optOut = true;
+  for (const [k, v] of Object.entries(d.challenges || {})) {
+    const a = chSaved[k];
+    if (!a || (v?.finished && !a.finished) || (!!v?.finished === !!a.finished && (v?.i || 0) > (a.i || 0))) chSaved[k] = v;
+  }
+  try { localStorage.setItem(LISTENED_KEY, JSON.stringify(listened)); localStorage.setItem(LEARNING_KEY, JSON.stringify(learning)); localStorage.setItem(CH_KEY, JSON.stringify(chSaved)); } catch (e) {}
+  try { renderListened(); } catch (e) {}
+  try { if (!document.getElementById('chalView').hidden) renderCh(); } catch (e) {}
+}
+function accDirty() {
+  // Saves can happen while the page is still starting, before `acc` exists.
+  try { if (!acc.s) return; } catch (e) { return; }
+  clearTimeout(acc.timer);
+  acc.timer = setTimeout(accPush, 1500);
+}
+async function accPush() {
+  const tok = await accToken();
+  if (!tok) return;
+  if (!acc.s.user?.id) await accLoadUser();
+  if (!acc.s?.user?.id) return;
+  acc.syncing = true; renderAccSync();
+  try {
+    await accFetch('/rest/v1/user_progress?on_conflict=user_id', { token: tok, headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
+      body: { user_id: acc.s.user.id, data: accPayload(), updated_at: new Date().toISOString() } });
+    acc.syncErr = false;
+  } catch (e) { acc.syncErr = true; }
+  acc.syncing = false; renderAccSync();
+}
+async function accPull() {
+  const tok = await accToken();
+  if (!tok) return null;
+  const rows = await accFetch('/rest/v1/user_progress?select=data', { method: 'GET', token: tok });
+  return rows?.[0]?.data || null;
+}
+// After signing in, and once each time the app opens: bring in the other devices' progress,
+// then save the joined copy.
+async function accSync() {
+  if (!acc.s) return;
+  try { accMerge(await accPull()); } catch (e) {}
+  await accPush();
+}
+async function accSignedIn(s, msg = 'accWelcome') {
+  accStore(s);
+  if (!acc.s?.user) await accLoadUser();
+  acc.view = 'in'; acc.err = ''; acc.msg = t(msg);
+  track('Account signed in');
+  renderAccount();
+  accSync();
+}
+
+// Google, Apple and the links in emails (sign-in link, confirm account, new password) come back
+// to this page with the session in the address (#access_token=…), or with #error=….
+function accFromRedirect() {
+  const h = location.hash;
+  if (!/(^#|&)(access_token|error_description|error)=/.test(h)) return false;
+  const q = new URLSearchParams(h.slice(1));
+  history.replaceState(null, '', location.pathname);
+  if (!accReady()) return true;
+  if (!q.get('access_token')) {
+    acc.view = 'start'; acc.msg = '';
+    acc.err = /expired|otp_expired/i.test(q.get('error_code') + q.get('error_description')) ? t('accErrCode') : t('accErrOther', { m: escHtml(q.get('error_description') || q.get('error') || '') });
+    openAccount();
+    return true;
+  }
+  const s = { access_token: q.get('access_token'), refresh_token: q.get('refresh_token'), expires_in: q.get('expires_in'), expires_at: Number(q.get('expires_at')) || undefined, token_type: 'bearer' };
+  if (q.get('type') === 'recovery') {
+    accStore(s);
+    acc.view = 'recovery'; acc.msg = ''; acc.err = '';
+    accLoadUser().then(openAccount);
+  } else {
+    accSignedIn(s).then(openAccount);
+  }
+  return true;
+}
+
+const ACC_ICON = {
+  google: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h6.5a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.5-5.1 3.5-8.7z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg>',
+  apple: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9a4.8 4.8 0 0 0-3.8-2c-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9a5 5 0 0 0-4.2 2.6c-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.5 1.3 0 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5a11 11 0 0 0 1.4-2.9 4.5 4.5 0 0 1-2.6-4zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.2.7-2.9 1.6-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>',
+};
+function renderAccBtn() {
+  const b = document.getElementById('accOpen');
+  if (!b) return;
+  b.hidden = !accReady();
+  const txt = document.getElementById('accBtnText');
+  txt.dataset.i18n = acc.s ? 'accBtnIn' : 'accBtn';
+  txt.textContent = t(txt.dataset.i18n);
+  b.setAttribute('aria-label', txt.textContent);
+  b.classList.toggle('signed', !!acc.s);
+}
+function renderAccSync() {
+  const el = document.getElementById('accSync');
+  if (el) el.textContent = acc.syncing ? t('accSyncing') : acc.syncErr ? t('accSyncErr') : t('accSynced');
+}
+function renderAccount() {
+  const body = document.getElementById('accBody');
+  if (!body) return;
+  const note = (acc.msg ? `<p class="acc-msg" role="status">${acc.msg}</p>` : '') + (acc.err ? `<p class="acc-err" role="alert">${acc.err}</p>` : '');
+  const dis = acc.busy ? 'disabled' : '';
+  const emailField = `<label class="acc-field" for="accEmailIn">${t('accEmail')}<input type="email" id="accEmailIn" autocomplete="email" inputmode="email" value="${escHtml(acc.email)}" required></label>`;
+  let h = '';
+  if (acc.view === 'in') {
+    h = `<p>${t('accSignedAs', { email: `<b>${escHtml(accEmail() || '…')}</b>` })}</p>
+      <p class="acc-note" id="accSync" role="status"></p>${note}
+      <div class="acc-row"><button type="button" class="acc-btn" id="accOut" ${dis}>${t('accSignOut')}</button>
+      <button type="button" class="acc-btn acc-main" id="accDone">${t('close')}</button></div>
+      <div class="acc-col"><button type="button" class="acc-link" id="accDel">${t('accDelete')}</button></div>`;
+  } else if (acc.view === 'delete') {
+    h = `<p>${t('accDeleteAsk')}</p>${note}
+      <div class="acc-row"><button type="button" class="acc-btn" id="accBackBtn">${t('accBack')}</button>
+      <button type="button" class="acc-btn acc-main" id="accDelYes" ${dis}>${t('accDeleteYes')}</button></div>`;
+  } else if (acc.view === 'code') {
+    h = `${note}<form class="acc-col" id="accCodeForm" novalidate>
+        <label class="acc-field" for="accCodeIn">${t('accCode')}<input type="text" id="accCodeIn" inputmode="numeric" autocomplete="one-time-code" maxlength="10" required></label>
+        <button type="submit" class="acc-btn acc-main" ${dis}>${t('accVerify')}</button>
+        <button type="button" class="acc-link" id="accBackBtn">${t('accBack')}</button></form>`;
+  } else if (acc.view === 'recovery') {
+    h = `<p><b>${t('accNewTitle')}</b></p>${note}<form class="acc-col" id="accNewForm" novalidate>
+        <label class="acc-field" for="accNewIn">${t('accNewPassword')}<input type="password" id="accNewIn" autocomplete="new-password" minlength="8" required></label>
+        <button type="submit" class="acc-btn acc-main" ${dis}>${t('accSavePassword')}</button></form>`;
+  } else {
+    const prov = accProviders().map(p => `<button type="button" class="acc-btn" data-provider="${p}" ${dis}>${ACC_ICON[p]}${t(p === 'google' ? 'accGoogle' : 'accApple')}</button>`).join('');
+    h = `<p>${t('accIntro')}</p>${note}
+      ${prov ? `<div class="acc-col">${prov}</div><p class="acc-or">${t('accOr')}</p>` : ''}
+      <form class="acc-col" id="accForm" novalidate>${emailField}
+        ${acc.usePass ? `<label class="acc-field" for="accPassIn">${t('accPassword')}<input type="password" id="accPassIn" autocomplete="current-password" minlength="8" required></label>
+          <button type="submit" class="acc-btn acc-main" data-act="login" ${dis}>${t('accSignIn')}</button>
+          <button type="button" class="acc-btn" id="accSignUpBtn" ${dis}>${t('accSignUp')}</button>
+          <button type="button" class="acc-link" id="accForgotBtn">${t('accForgot')}</button>`
+        : `<button type="submit" class="acc-btn acc-main" data-act="code" ${dis}>${t('accSendCode')}</button>`}
+        <button type="button" class="acc-link" id="accToggle">${t(acc.usePass ? 'accUseCode' : 'accUsePassword')}</button>
+      </form>
+      <p class="acc-note">${t('accPrivacy')}</p>
+      <div class="acc-row"><span></span><button type="button" class="acc-btn" id="accDone">${t('close')}</button></div>`;
+  }
+  body.innerHTML = h;
+  renderAccSync();
+  const $ = id => document.getElementById(id);
+  const run = async fn => { acc.busy = true; acc.err = ''; renderAccount(); try { await fn(); } catch (e) { acc.err = accErrText(e); } acc.busy = false; renderAccount(); };
+  const readEmail = () => { acc.email = ($('accEmailIn')?.value || '').trim(); if (!accValidEmail(acc.email)) { acc.err = t('accErrEmail'); acc.msg = ''; renderAccount(); $('accEmailIn')?.focus(); return false; } return true; };
+  const rt = `?redirect_to=${encodeURIComponent(accHome())}`;
+  $('accDone')?.addEventListener('click', () => document.getElementById('account').close());
+  $('accBackBtn')?.addEventListener('click', () => { acc.view = acc.s ? 'in' : 'start'; acc.msg = acc.err = ''; renderAccount(); });
+  $('accToggle')?.addEventListener('click', () => { acc.email = ($('accEmailIn')?.value || acc.email).trim(); acc.usePass = !acc.usePass; acc.msg = acc.err = ''; renderAccount(); });
+  body.querySelectorAll('[data-provider]').forEach(b => b.addEventListener('click', () => {
+    track('Account provider chosen', { provider: b.dataset.provider });
+    location.href = `${MP.url.replace(/\/$/, '')}/auth/v1/authorize?provider=${b.dataset.provider}&redirect_to=${encodeURIComponent(accHome())}`;
+  }));
+  $('accForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!readEmail()) return;
+    if (!acc.usePass) return run(async () => {
+      await accFetch(`/auth/v1/otp${rt}`, { body: { email: acc.email, create_user: true } });
+      acc.view = 'code'; acc.msg = t('accCodeSent', { email: `<b>${escHtml(acc.email)}</b>` });
+    });
+    const password = $('accPassIn').value;
+    run(async () => accSignedIn(await accFetch('/auth/v1/token?grant_type=password', { body: { email: acc.email, password } }), 'accWelcome'));
+  });
+  $('accSignUpBtn')?.addEventListener('click', () => {
+    if (!readEmail()) return;
+    const password = $('accPassIn').value;
+    if (password.length < 8) { acc.err = t('accErrShort'); renderAccount(); return; }
+    run(async () => {
+      const r = await accFetch(`/auth/v1/signup${rt}`, { body: { email: acc.email, password } });
+      if (r?.access_token) return accSignedIn(r);
+      acc.msg = t('accConfirmSent', { email: `<b>${escHtml(acc.email)}</b>` });
+    });
+  });
+  $('accForgotBtn')?.addEventListener('click', () => {
+    if (!readEmail()) return;
+    run(async () => { await accFetch(`/auth/v1/recover${rt}`, { body: { email: acc.email } }); acc.msg = t('accResetSent', { email: `<b>${escHtml(acc.email)}</b>` }); });
+  });
+  $('accCodeForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const token = $('accCodeIn').value.replace(/\s/g, '');
+    if (!token) return;
+    run(async () => accSignedIn(await accFetch('/auth/v1/verify', { body: { type: 'email', email: acc.email, token } })));
+  });
+  $('accNewForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const password = $('accNewIn').value;
+    if (password.length < 8) { acc.err = t('accErrShort'); renderAccount(); return; }
+    run(async () => { await accFetch('/auth/v1/user', { method: 'PUT', token: await accToken(), body: { password } }); acc.view = 'in'; acc.msg = t('accPasswordSaved'); accSync(); });
+  });
+  $('accOut')?.addEventListener('click', () => run(async () => {
+    const tok = acc.s?.access_token;
+    accStore(null);
+    try { if (tok) await accFetch('/auth/v1/logout', { token: tok }); } catch (e) {}
+    acc.view = 'start'; acc.msg = '';
+  }));
+  $('accDel')?.addEventListener('click', () => { acc.view = 'delete'; acc.msg = acc.err = ''; renderAccount(); });
+  $('accDelYes')?.addEventListener('click', () => run(async () => {
+    await accFetch('/rest/v1/rpc/delete_my_account', { token: await accToken(), body: {} });
+    accStore(null);
+    acc.view = 'start'; acc.msg = t('accDeleted');
+    track('Account deleted');
+  }));
+}
+function openAccount() {
+  const dlg = document.getElementById('account');
+  if (!dlg || !accReady()) return;
+  if (acc.view !== 'recovery' && acc.view !== 'delete') acc.view = acc.s ? 'in' : (acc.view === 'code' ? 'code' : 'start');
+  renderAccount();
+  if (!dlg.open) dlg.showModal();
+}
+document.getElementById('accOpen').onclick = () => { acc.msg = ''; acc.err = ''; openAccount(); };
+renderAccBtn();
 
 // Room view state (not the game result: that is always the server's).
 let mp = { code: lsGet(MP_ROOM), state: null, err: '', offset: 0, poll: null, tick: null };
@@ -5149,6 +5450,7 @@ document.getElementById('learningErase').onclick = () => {
   learning = { ...emptyLearning(), optOut: learning.optOut };
   try { localStorage.removeItem(LEARNING_KEY); } catch (e) {}
   if (learning.optOut) saveLearning();
+  accDirty();   // signed in: the copy kept with the account is erased too
   renderPrivacy();
   refreshStoryCard();
 };
@@ -5175,6 +5477,7 @@ function applyLang() {
   document.documentElement.lang = lang;
   const stopsLink = document.querySelector('[data-stops-link]');
   if (stopsLink) { stopsLink.href = `${STOPS_LINK[lang] ? lang : 'en'}/`; stopsLink.textContent = STOPS_LINK[lang] || STOPS_LINK.en; }
+  try { renderAccBtn(); if (document.getElementById('account').open) renderAccount(); } catch (e) {}
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll('[data-i18n-alt]').forEach(el => { el.alt = t(el.dataset.i18nAlt); });
   document.querySelectorAll('#interests .tile').forEach(b => { b.querySelector('span').textContent = interestLabel(b.dataset.id); });
@@ -5237,7 +5540,8 @@ document.getElementById('resumeBtn').onclick = () => {
 // Opening the page: back to the route if it was open (reload, locked phone), else offer it.
 // A shared link opens that walk; otherwise back to the route if it was open (reload, locked
 // phone, coming back from Google Maps), else offer it.
-if (location.hash.startsWith('#walk=')) { if (!routeFromLink()) history.replaceState(null, '', location.pathname); }
+if (accFromRedirect()) { /* back from Google, Apple or a link in a WalkBCN email */ }
+else if (location.hash.startsWith('#walk=')) { if (!routeFromLink()) history.replaceState(null, '', location.pathname); }
 else if (location.hash.startsWith('#room=')) mpFromLink();
 // From a stop's own page (<lang>/<id>/, "Listen in WalkBCN"): that stop in the audio guide, in that language.
 else if (location.hash.startsWith('#stop=')) {
@@ -5268,6 +5572,7 @@ else if (mp.code && mpReady()) { showTab('chal'); chView.mode = 'friends'; rende
 else if (location.hash === '#ruta' && !restoreRoute()) history.replaceState(null, '', location.pathname);
 renderResume();
 loadAnalytics();
+if (acc.s) accSync();   // bring in progress from the visitor's other devices
 
 // ---- Offline use ----
 // A service worker keeps copies of what the page has used. "Save for offline use" fetches,
