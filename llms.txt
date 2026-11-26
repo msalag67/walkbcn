@@ -20,4 +20,5 @@ Ciutadella, Eixample, El Born, El Carmel, El Clot, El Guinardó, El Raval, Gothi
 
 - App: https://msalag67.github.io/walkbcn/
 - All stops, one page each with its story: https://msalag67.github.io/walkbcn/en/ (also https://msalag67.github.io/walkbcn/es/, https://msalag67.github.io/walkbcn/ca/, https://msalag67.github.io/walkbcn/fr/, https://msalag67.github.io/walkbcn/de/, https://msalag67.github.io/walkbcn/it/, https://msalag67.github.io/walkbcn/zh/)
+- Suggested walks: First day in Barcelona (https://msalag67.github.io/walkbcn/en/routes/first-day/); Where Barça began (https://msalag67.github.io/walkbcn/en/routes/barca/); Gràcia, like a local (https://msalag67.github.io/walkbcn/en/routes/gracia/); Modernisme: Gaudí and friends (https://msalag67.github.io/walkbcn/en/routes/modernisme/); Factories turned culture (https://msalag67.github.io/walkbcn/en/routes/poblenou/)
 - Contact: the form in "About WalkBCN" inside the app.

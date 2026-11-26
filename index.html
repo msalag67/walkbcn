@@ -5251,6 +5251,18 @@ else if (location.hash.startsWith('#stop=')) {
     track('Stop opened from its page', { stop: s.id });
   }
 }
+// From a suggested walk's page (<lang>/routes/<id>/, "Start this walk"): that theme picked, ready to create.
+else if (location.hash.startsWith('#theme=')) {
+  const q = new URLSearchParams(location.hash.slice(1));
+  const id = q.get('theme'), l = q.get('lang');
+  history.replaceState(null, '', location.pathname);
+  if (THEMES[id]) {
+    if (l && l !== lang && LANGS.some(x => x.code === l)) setLang(l);
+    showTab('walk');
+    applyTheme(id);
+    track('Walk opened from its page', { theme: id });
+  }
+}
 // Back in a room after a reload or reopening the app: go straight to it (the server says where you are).
 else if (mp.code && mpReady()) { showTab('chal'); chView.mode = 'friends'; renderCh(); }
 else if (location.hash === '#ruta' && !restoreRoute()) history.replaceState(null, '', location.pathname);
