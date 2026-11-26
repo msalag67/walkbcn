@@ -1,0 +1,23 @@
+# WalkBCN
+
+> Free audio walks in Barcelona. Pick what you like and WalkBCN builds a short walking route through the city centre and Poblenou–Clot, with an audio story at every stop.
+
+- Free, no account, no ads. Nobody pays to appear.
+- 71 stops, each with its own story.
+- Stories in 7 languages: English, Spanish, Catalan, French, German, Italian and Chinese.
+- Walks from 30 minutes to 3 hours, planned by stops, time or distance.
+- Interests: architecture, history, food and markets, art, local life, parks and sea, sports, film, books and theatre.
+- Audio guide: a map of all stops; tap one to hear its story, or let it show the nearest.
+- Works offline once a walk is saved.
+- Restaurants and places recommended are local, family-run or independent.
+- Made by two students from Barcelona. Still in development.
+
+## Areas
+
+Ciutadella, Eixample, El Born, El Carmel, El Clot, El Guinardó, El Raval, Gothic Quarter, Gràcia, La Barceloneta, La Rambla, Poble-sec, Poblenou, Port Vell, Sant Antoni, Sant Pere, Vila Olímpica.
+
+## Pages
+
+- App: https://msalag67.github.io/walkbcn/
+- All stops, one page each with its story: https://msalag67.github.io/walkbcn/en/ (also https://msalag67.github.io/walkbcn/es/, https://msalag67.github.io/walkbcn/ca/, https://msalag67.github.io/walkbcn/fr/, https://msalag67.github.io/walkbcn/de/, https://msalag67.github.io/walkbcn/it/, https://msalag67.github.io/walkbcn/zh/)
+- Contact: the form in "About WalkBCN" inside the app.
