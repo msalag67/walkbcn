@@ -47,6 +47,20 @@ W = {
                   "de": "{n} Orte im Zentrum von Barcelona und in Poblenou–Clot, jeder mit seiner Geschichte. Hier lesen oder vor Ort in der App anhören.",
                   "it": "{n} luoghi del centro di Barcellona e del Poblenou–Clot, ognuno con la sua storia. Leggila qui o ascoltala nell’app quando sei lì.",
                   "zh": "巴塞罗那市中心和 Poblenou–Clot 的 {n} 个地点，每处都有自己的故事。可以在这里阅读，到了现场再在应用里收听。"},
+    "routes": {"en": "Suggested walks", "es": "Rutas sugeridas", "ca": "Rutes suggerides", "fr": "Balades suggérées", "de": "Vorgeschlagene Spaziergänge", "it": "Passeggiate suggerite", "zh": "推荐路线"},
+    "routeStops": {"en": "Stops on this walk", "es": "Paradas de esta ruta", "ca": "Parades d’aquesta ruta", "fr": "Les arrêts de cette balade", "de": "Stopps auf diesem Spaziergang", "it": "Le tappe di questa passeggiata", "zh": "这条路线的站点"},
+    "routePick": {"en": "The app picks the order, and how many of these stops fit, from your time and starting point.",
+                  "es": "La app elige el orden y cuántas de estas paradas caben según tu tiempo y desde dónde sales.",
+                  "ca": "L’app tria l’ordre i quantes d’aquestes parades hi caben segons el teu temps i des d’on surts.",
+                  "fr": "L’app choisit l’ordre, et combien de ces arrêts tiennent, selon ton temps et ton point de départ.",
+                  "de": "Die App wählt die Reihenfolge und wie viele dieser Stopps passen, je nach Zeit und Startpunkt.",
+                  "it": "L’app sceglie l’ordine, e quante di queste tappe ci stanno, in base al tuo tempo e al punto di partenza.",
+                  "zh": "应用会根据你的时间和出发点，决定顺序以及能走其中多少个站点。"},
+    "routeStart": {"en": "Start this walk in WalkBCN", "es": "Empieza esta ruta en WalkBCN", "ca": "Comença aquesta ruta a WalkBCN", "fr": "Commencer cette balade dans WalkBCN", "de": "Diesen Spaziergang in WalkBCN starten", "it": "Inizia questa passeggiata su WalkBCN", "zh": "在 WalkBCN 中开始这条路线"},
+    "routeSub": {"en": "Free, no account, an audio story at every stop", "es": "Gratis, sin registro, con una historia en audio en cada parada", "ca": "Gratis, sense registre, amb una història en àudio a cada parada", "fr": "Gratuit, sans compte, une histoire audio à chaque arrêt", "de": "Kostenlos, ohne Konto, an jedem Stopp eine Audiogeschichte", "it": "Gratis, senza account, una storia audio a ogni tappa", "zh": "免费，无需注册，每个站点都有音频故事"},
+    "onRoutes": {"en": "On these walks", "es": "En estas rutas", "ca": "En aquestes rutes", "fr": "Dans ces balades", "de": "Auf diesen Spaziergängen", "it": "In queste passeggiate", "zh": "所在路线"},
+    "walkTail": {"en": "walking route", "es": "ruta a pie", "ca": "ruta a peu", "fr": "balade à pied", "de": "Spaziergang", "it": "percorso a piedi", "zh": "步行路线"},
+    "walkWord": {"en": "Walk", "es": "Ruta", "ca": "Ruta", "fr": "Balade", "de": "Spaziergang", "it": "Passeggiata", "zh": "路线"},
     "areaWord": {"en": "Neighbourhood", "es": "Barrio", "ca": "Barri", "fr": "Quartier", "de": "Viertel", "it": "Quartiere", "zh": "街区"},
 }
 LANG_NAME = {"en": "English", "es": "Español", "ca": "Català", "fr": "Français", "de": "Deutsch", "it": "Italiano", "zh": "中文"}
@@ -57,13 +71,25 @@ ObjC.import('Foundation');
 function read(p){ var s = $.NSString.stringWithContentsOfFileEncodingError(p, $.NSUTF8StringEncoding, null); if (!s) throw new Error('cannot read ' + p); return s.js; }
 var window = {};
 ['data/stops.js', 'data/cards.js', 'data/ui.js'].forEach(function (f) { eval(read(f)); });
-JSON.stringify({ stops: window.WALKBCN_STOPS, cards: window.WALKBCN_CARDS || {}, photos: window.WALKBCN_PHOTOS || {}, ui: window.WALKBCN_UI });
+var THEMES = {};
+/*THEMES*/
+JSON.stringify({ stops: window.WALKBCN_STOPS, cards: window.WALKBCN_CARDS || {}, photos: window.WALKBCN_PHOTOS || {}, ui: window.WALKBCN_UI, themes: THEMES });
 """
+
+
+def themes_source():
+    """The app's suggested walks (const THEMES in index.html), as JavaScript source."""
+    src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
+    start = src.find("const THEMES = {")
+    if start < 0:
+        return ""
+    end = src.find("\n};", start)
+    return "THEMES = " + src[start + len("const THEMES = "):end + 2] + ";"
 
 
 def load_js_data():
     with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as f:
-        f.write(JXA)
+        f.write(JXA.replace("/*THEMES*/", themes_source()))
         tmp = f.name
     try:
         out = subprocess.run(["osascript", "-l", "JavaScript", tmp], cwd=ROOT, capture_output=True, text=True, check=True).stdout
@@ -220,6 +246,18 @@ def main():
 
     urls = []  # (path, {lang: path})
     available = {s["id"]: [l for l in LANGS if text_for(s, l)] for s in stops}
+    by_id = {s["id"]: s for s in stops}
+    themes = {k: v for k, v in (d.get("themes") or {}).items() if ui["en"].get(f"theme_{k}")}
+    on_themes = {}
+    for tid, th in themes.items():
+        for sid in th.get("pool", []):
+            on_themes.setdefault(sid, []).append(tid)
+    slug = lambda tid: re.sub(r"(?<!^)([A-Z])", r"-\1", tid).lower()  # firstDay -> first-day
+    route_path = lambda l, tid: f"{l}/routes/{slug(tid)}/"
+
+    def routes_links(l, ids):
+        return "".join(f'<li><a href="{BASE}{route_path(l, tid)}">{esc(t(l, f"theme_{tid}"))}</a> <small>· {esc(t(l, f"theme_{tid}_sub"))}</small></li>' for tid in ids)
+
     for s in stops:
         langs = available[s["id"]]
         alts = {l: f"{l}/{s['id']}/" for l in langs}
@@ -261,6 +299,7 @@ def main():
   <article class="story">{paragraphs(long_text)}</article>
   {f'<section class="box"><div><b>{esc(t(l, "tip"))}</b> {esc(tip)}</div></section>' if tip else ''}
   {practical}
+  {f'<section class="cols"><h2>{esc(W["onRoutes"][l])}</h2><ul class="near">{routes_links(l, on_themes[s["id"]])}</ul></section>' if on_themes.get(s["id"]) else ''}
   {f'<section class="cols"><h2>{esc(W["near"][l])}</h2><ul class="near">{near_html}</ul></section>' if near_html else ''}
 </main>
 """ + footer(l, ui, alts)
@@ -275,6 +314,44 @@ def main():
             os.makedirs(os.path.dirname(out), exist_ok=True)
             with open(out, "w", encoding="utf-8") as f:
                 f.write(page(l, title, desc, path, alts, body, ld, photo(s["img"], 1200)))
+
+    # One page per suggested walk and language.
+    for tid, th in themes.items():
+        alts = {l: route_path(l, tid) for l in LANGS}
+        urls.append((alts["en"], alts))
+        pool = [by_id[i] for i in th.get("pool", []) if i in by_id]
+        for l in LANGS:
+            name, sub, cover = t(l, f"theme_{tid}"), t(l, f"theme_{tid}_sub"), t(l, f"theme_{tid}_cover")
+            items = ""
+            for s in pool:
+                if l not in available[s["id"]]:
+                    continue
+                summary = describe(text_for(s, l)[1], 140)
+                items += f'<li><a href="{BASE}{l}/{s["id"]}/"><b>{esc(s["name"])}</b></a> <small>· {esc(area_name(s["area"], l))}</small><br>{esc(summary)}</li>'
+            pick = "" if th.get("mode") == "stops" and th.get("n") == len(pool) else f'<p class="area">{esc(W["routePick"][l])}</p>'
+            others = [x for x in themes if x != tid]
+            app_link = f"{BASE}#theme={tid}&lang={l}"
+            body = header(l, ui) + f"""
+<main>
+  <div><div class="area">{esc(W['walkWord'][l])} · {esc(sub)}</div><h1>{esc(name)}</h1></div>
+  <figure><img src="{esc(photo(th['img'], 960))}" srcset="{esc(photo(th['img'], 500))} 500w, {esc(photo(th['img'], 960))} 960w" sizes="(max-width: 760px) 100vw, 728px" alt="{esc(name)}" width="960" height="640"></figure>
+  <p>{esc(cover)}</p>
+  <a class="cta" href="{esc(app_link)}">▶ {esc(W['routeStart'][l])}<span>{esc(W['routeSub'][l])}</span></a>
+  <section class="cols"><h2>{esc(W['routeStops'][l])}</h2>{pick}<ul class="list">{items}</ul></section>
+  <section class="cols"><h2>{esc(W['routes'][l])}</h2><ul class="near">{routes_links(l, others)}</ul></section>
+</main>
+""" + footer(l, ui, alts)
+            desc = describe(f"{sub}. {cover}")
+            ld = {"@context": "https://schema.org", "@type": "TouristTrip", "name": name, "description": desc, "url": f"{BASE}{route_path(l, tid)}",
+                  "inLanguage": l, "image": photo(th["img"], 960), "isAccessibleForFree": True,
+                  "itinerary": {"@type": "ItemList", "itemListElement": [
+                      {"@type": "ListItem", "position": i + 1, "item": {"@type": "TouristAttraction", "name": s["name"], "url": f"{BASE}{l}/{s['id']}/"}}
+                      for i, s in enumerate(pool)]},
+                  "isPartOf": {"@type": "WebSite", "name": "WalkBCN", "url": BASE}}
+            out = os.path.join(ROOT, route_path(l, tid), "index.html")
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            with open(out, "w", encoding="utf-8") as f:
+                f.write(page(l, f"{name}: {W['walkTail'][l]} · WalkBCN", desc, route_path(l, tid), alts, body, ld, photo(th["img"], 1200)))
 
     # One list per language, by neighbourhood.
     list_alts = {l: f"{l}/" for l in LANGS}
@@ -293,6 +370,7 @@ def main():
   <h1>{esc(W['all'][l])}</h1>
   <p>{esc(intro)}</p>
   <a class="cta" href="{BASE}">{esc(W['plan'][l])}<span>{esc(W['listenSub'][l])}</span></a>
+  {f'<section class="cols"><h2>{esc(W["routes"][l])}</h2><ul class="near">{routes_links(l, themes)}</ul></section>' if themes else ''}
   {sections}
 </main>
 """ + footer(l, ui, list_alts)
@@ -342,6 +420,7 @@ def main():
 
 - App: {BASE}
 - All stops, one page each with its story: {BASE}en/ (also {", ".join(f"{BASE}{l}/" for l in LANGS if l != "en")})
+- Suggested walks: {"; ".join(f"{ui['en'][f'theme_{tid}']} ({BASE}{route_path('en', tid)})" for tid in themes)}
 - Contact: the form in "About WalkBCN" inside the app.
 """
     open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write(llms)
@@ -380,8 +459,9 @@ def main():
                           'data-i18n="privacyLink">Your data &amp; privacy</button>' + link + "</footer>", 1)
     open(idx_file, "w", encoding="utf-8").write(idx)
 
-    n = sum(len(a) for _, a in urls) - len(LANGS)
-    print(f"Wrote {n} stop pages, {len(LANGS)} stop lists, sitemap.xml ({n + len(LANGS) + 1} addresses), robots.txt, llms.txt; updated index.html. Base: {BASE}")
+    total = sum(len(a) for _, a in urls)
+    n_routes = len(themes) * len(LANGS)
+    print(f"Wrote {total - len(LANGS) - n_routes} stop pages, {n_routes} walk pages, {len(LANGS)} stop lists, sitemap.xml ({total + 1} addresses), robots.txt, llms.txt; updated index.html. Base: {BASE}")
 
 
 if __name__ == "__main__":
